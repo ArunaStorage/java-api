@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+package models;
+option go_package = "github.com/ScienceObjectsDB/go-api/models";
+option java_multiple_files = true;
+option java_package = "com.github.ScienceObjectsDB.java_api.models";
+option java_outer_classname = "CommonModels";
+
+enum Status {
+    Initiating = 0;
+    Available = 1;
+    Updating = 2;
+    Archived = 3;
+    Deleting = 4;
+}
+
+enum Right {
+    Read = 0;
+    Write = 1;
+}
+
+enum Resource {
+    ProjectResource = 0;
+    DatasetResource = 1;
+    DatasetVersionResource = 2;
+    ObjectResource = 3;
+    ObjectGroupResource = 4;
+    ObjectGroupVersionResource = 5;
+}
+
+
+message Location {
+    oneof location {
+        ObjectLocation object_location = 1;
+        IndexedObjectLocation object_index_location = 2;
+    }
+}
+
+// A location in S3
+message ObjectLocation {
+    string bucket = 1;
+    string key = 2;
+    string url = 3; // Object storage endpoint
+}
+
+// A location in S3
+message IndexedObjectLocation {
+    string bucket = 1;
+    string key = 2;
+    string url = 3; // Object storage endpoint
+    Index index = 4;
+}
+
+message Index {
+    int64 start_byte = 1;
+    int64 end_byte = 2;
+}
+
+message Origin {
+    string link = 1;
+    oneof location {
+        ObjectLocation object_location = 2;
+    };
+    OriginTypeEnum origin_type = 3;
+
+    enum OriginTypeEnum {
+        ObjectStorage = 0;
+        OriginLink = 1;
+    }
+}
+
+message Version {
+    int32 major = 1;
+    int32 minor = 2;
+    int32 patch = 3;
+    int32 revision = 4;
+    VersionStage stage = 5;
+
+    enum VersionStage {
+        Stable = 0;
+        ReleaseCandidate = 1;
+        Beta = 2;
+        Alpha = 3;
+    }
+}
+
+message Label {
+    string key = 1;
+    string value = 2;
+}
+
+message ID {
+    string id = 1; // An arbitrary ID
+}
+
+message UpdateFieldsRequest {
+    string id = 1;
+    map<string, string> updated_string_fields = 2;
+}
+
+message User {
+    string user_id = 1;
+    repeated Right rights = 2;
+    Resource resource = 3;
+}
+
+message Metadata {
+    string key = 1;
+    repeated Label labels = 2;
+    bytes metadata = 3;
+    oneof schema {
+        string simple_schema = 4;
+    }
+}
+
+message VersionTag {
+    string name = 1;
+    string version_id = 2;
+}
+
+message Empty{}
