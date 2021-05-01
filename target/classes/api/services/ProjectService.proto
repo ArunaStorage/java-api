@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package services;
+option go_package = "github.com/ScienceObjectsDB/go-api/services";
+option java_multiple_files = true;
+option java_package = "com.github.ScienceObjectsDB.java_api.services";
+option java_outer_classname = "ProjectAPIServices";
+
+import "api/models/CommonModels.proto";
+import "api/services/ProjectServiceModels.proto";
+import "api/models/Projects.proto";
+import "google/api/annotations.proto";
+
+
+service ProjectAPI {
+    //CreateProject creates a new projects
+    rpc CreateProject (CreateProjectRequest) returns (models.Project) {
+        option (google.api.http) = {
+            post: "/api/v1/project/createproject"
+            body: "*"
+        };
+    }
+
+    //AddUserToProject Adds a new user to a given project
+    rpc AddUserToProject (AddUserToProjectRequest) returns (models.Project) {
+        option (google.api.http) = {
+            post: "/api/v1/project/addusertoproject"
+            body: "*"
+        };
+    }
+
+    //GetProjectDatasets Returns all datasets that belong to a certain project
+    rpc GetProjectDatasets(models.ID) returns (DatasetList) {
+        option (google.api.http) = {
+            post: "/api/v1/project/projectdatasets"
+            body: "*"
+        };
+    }
+
+    //GetUserProjects Returns all projects that a specified user has access to
+    rpc GetUserProjects(models.Empty) returns (ProjectList) {
+        option (google.api.http) = {
+            get: "/api/v1/projects"
+        };
+    }
+
+    //DeleteProject Deletes a specific project
+    //Will also delete all associated resources (Datasets/Objects/etc...) both from objects storage and the database
+    rpc DeleteProject(models.ID) returns (models.Empty) {
+        option (google.api.http) = {
+            post: "/api/v1/project/delete"
+            body: "*"
+        };
+    }
+}
