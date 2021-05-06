@@ -30,7 +30,6 @@
             <artifactId>grpc-stub</artifactId>
             <version>1.37.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
@@ -98,7 +97,6 @@
             </plugin>
         </plugins>
     </build>
-
     <distributionManagement>
         <repository>
         <id>github</id>

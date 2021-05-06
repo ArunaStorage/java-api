@@ -19,10 +19,11 @@ message ObjectGroup {
     repeated Metadata metadata = 5;
     Status status = 6;
     string head_id = 7;
+    int64 current_revision = 8;
 }
 
 
-message ObjectGroupVersion {
+message ObjectGroupRevision {
     string id = 1;
     string dataset_id = 4;
     Version version = 5;
@@ -31,6 +32,7 @@ message ObjectGroupVersion {
     repeated Metadata metadata = 8;
     repeated Object objects = 9;
     string object_group_id = 10;
+    int64 revision = 11;
 }
 
 message Object {
