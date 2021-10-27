@@ -2,4 +2,4 @@ version: v1
 
 plugins:
   - name: java
-    out: src/main
+    out: src/main/java
