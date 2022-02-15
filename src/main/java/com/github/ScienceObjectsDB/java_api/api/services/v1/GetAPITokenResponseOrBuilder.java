@@ -8,25 +8,25 @@ public interface GetAPITokenResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.models.v1.APIToken token = 1 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken> 
       getTokenList();
   /**
-   * <code>repeated .api.models.v1.APIToken token = 1 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken getToken(int index);
   /**
-   * <code>repeated .api.models.v1.APIToken token = 1 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   int getTokenCount();
   /**
-   * <code>repeated .api.models.v1.APIToken token = 1 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.APITokenOrBuilder> 
       getTokenOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.APIToken token = 1 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.APITokenOrBuilder getTokenOrBuilder(
       int index);

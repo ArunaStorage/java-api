@@ -8,17 +8,15 @@ public interface StartMultipartUploadResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.Object object = 1 [json_name = "object"];</code>
-   * @return Whether the object field is set.
+   * <code>.api.models.v1.Object object = 1[json_name = "object"];</code>
    */
   boolean hasObject();
   /**
-   * <code>.api.models.v1.Object object = 1 [json_name = "object"];</code>
-   * @return The object.
+   * <code>.api.models.v1.Object object = 1[json_name = "object"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Object getObject();
   /**
-   * <code>.api.models.v1.Object object = 1 [json_name = "object"];</code>
+   * <code>.api.models.v1.Object object = 1[json_name = "object"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder getObjectOrBuilder();
 }

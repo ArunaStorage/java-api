@@ -8,17 +8,15 @@ public interface GetDatasetVersionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
-   * @return Whether the datasetVersion field is set.
+   * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
    */
   boolean hasDatasetVersion();
   /**
-   * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
-   * @return The datasetVersion.
+   * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion getDatasetVersion();
   /**
-   * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+   * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder getDatasetVersionOrBuilder();
 }

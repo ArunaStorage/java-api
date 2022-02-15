@@ -8,52 +8,44 @@ public interface TokenEntryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
-   * @return Whether the userId field is set.
+   * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
    */
   boolean hasUserId();
   /**
-   * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.User getUserId();
   /**
-   * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+   * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.UserOrBuilder getUserIdOrBuilder();
 
   /**
-   * <code>string token = 3 [json_name = "token"];</code>
-   * @return The token.
+   * <code>string token = 3[json_name = "token"];</code>
    */
   java.lang.String getToken();
   /**
-   * <code>string token = 3 [json_name = "token"];</code>
-   * @return The bytes for token.
+   * <code>string token = 3[json_name = "token"];</code>
    */
   com.google.protobuf.ByteString
       getTokenBytes();
 
   /**
-   * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-   * @return The enum numeric value on the wire for resource.
+   * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
    */
   int getResourceValue();
   /**
-   * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-   * @return The resource.
+   * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Resource getResource();
 
@@ -62,8 +54,7 @@ public interface TokenEntryOrBuilder extends
    * When the token was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
-   * @return Whether the created field is set.
+   * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
    */
   boolean hasCreated();
   /**
@@ -71,8 +62,7 @@ public interface TokenEntryOrBuilder extends
    * When the token was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
-   * @return The created.
+   * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
    */
   com.google.protobuf.Timestamp getCreated();
   /**
@@ -80,7 +70,7 @@ public interface TokenEntryOrBuilder extends
    * When the token was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+   * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 
@@ -89,8 +79,7 @@ public interface TokenEntryOrBuilder extends
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
-   * @return Whether the expires field is set.
+   * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
    */
   boolean hasExpires();
   /**
@@ -98,8 +87,7 @@ public interface TokenEntryOrBuilder extends
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
-   * @return The expires.
+   * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
    */
   com.google.protobuf.Timestamp getExpires();
   /**
@@ -107,7 +95,7 @@ public interface TokenEntryOrBuilder extends
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+   * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpiresOrBuilder();
 }

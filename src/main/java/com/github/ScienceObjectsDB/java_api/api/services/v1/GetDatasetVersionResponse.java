@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetDatasetVersionResponse}
  */
-public final class GetDatasetVersionResponse extends
+public  final class GetDatasetVersionResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetDatasetVersionResponse)
     GetDatasetVersionResponseOrBuilder {
@@ -16,13 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetDatasetVersionResponse() {
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetDatasetVersionResponse();
   }
 
   @java.lang.Override
@@ -38,6 +31,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -62,7 +56,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -96,25 +90,20 @@ private static final long serialVersionUID = 0L;
   public static final int DATASET_VERSION_FIELD_NUMBER = 1;
   private com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion datasetVersion_;
   /**
-   * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
-   * @return Whether the datasetVersion field is set.
+   * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
    */
-  @java.lang.Override
   public boolean hasDatasetVersion() {
     return datasetVersion_ != null;
   }
   /**
-   * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
-   * @return The datasetVersion.
+   * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion getDatasetVersion() {
     return datasetVersion_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion.getDefaultInstance() : datasetVersion_;
   }
   /**
-   * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+   * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder getDatasetVersionOrBuilder() {
     return getDatasetVersion();
   }
@@ -164,13 +153,14 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionResponse) obj;
 
-    if (hasDatasetVersion() != other.hasDatasetVersion()) return false;
+    boolean result = true;
+    result = result && (hasDatasetVersion() == other.hasDatasetVersion());
     if (hasDatasetVersion()) {
-      if (!getDatasetVersion()
-          .equals(other.getDatasetVersion())) return false;
+      result = result && getDatasetVersion()
+          .equals(other.getDatasetVersion());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -360,35 +350,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -434,19 +424,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion datasetVersion_;
+    private com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion datasetVersion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion, com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder> datasetVersionBuilder_;
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
-     * @return Whether the datasetVersion field is set.
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public boolean hasDatasetVersion() {
       return datasetVersionBuilder_ != null || datasetVersion_ != null;
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
-     * @return The datasetVersion.
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion getDatasetVersion() {
       if (datasetVersionBuilder_ == null) {
@@ -456,7 +444,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public Builder setDatasetVersion(com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion value) {
       if (datasetVersionBuilder_ == null) {
@@ -472,7 +460,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public Builder setDatasetVersion(
         com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion.Builder builderForValue) {
@@ -486,7 +474,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public Builder mergeDatasetVersion(com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion value) {
       if (datasetVersionBuilder_ == null) {
@@ -504,7 +492,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public Builder clearDatasetVersion() {
       if (datasetVersionBuilder_ == null) {
@@ -518,7 +506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion.Builder getDatasetVersionBuilder() {
       
@@ -526,7 +514,7 @@ private static final long serialVersionUID = 0L;
       return getDatasetVersionFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder getDatasetVersionOrBuilder() {
       if (datasetVersionBuilder_ != null) {
@@ -537,7 +525,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.DatasetVersion dataset_version = 1 [json_name = "datasetVersion"];</code>
+     * <code>.api.models.v1.DatasetVersion dataset_version = 1[json_name = "datasetVersion"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion, com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder> 
@@ -555,7 +543,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

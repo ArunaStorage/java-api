@@ -8,17 +8,15 @@ public interface CreateAPITokenResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.APIToken token = 1 [json_name = "token"];</code>
-   * @return Whether the token field is set.
+   * <code>.api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   boolean hasToken();
   /**
-   * <code>.api.models.v1.APIToken token = 1 [json_name = "token"];</code>
-   * @return The token.
+   * <code>.api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken getToken();
   /**
-   * <code>.api.models.v1.APIToken token = 1 [json_name = "token"];</code>
+   * <code>.api.models.v1.APIToken token = 1[json_name = "token"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.APITokenOrBuilder getTokenOrBuilder();
 }

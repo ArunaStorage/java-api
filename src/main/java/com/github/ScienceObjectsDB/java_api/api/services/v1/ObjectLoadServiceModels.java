@@ -195,12 +195,20 @@ public final class ObjectLoadServiceModels {
       "ithub.com/ScienceObjectsDB/go-api/api/se" +
       "rvices/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectModels.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_services_v1_CreateUploadLink_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_services_v1_CreateUploadLink_fieldAccessorTable = new

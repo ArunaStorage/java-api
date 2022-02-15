@@ -180,81 +180,92 @@ public final class DatasetServiceModels {
       "tDatasetVersionsRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
       "f\n\032GetDatasetVersionsResponse\022H\n\020dataset" +
       "_versions\030\001 \003(\0132\035.api.models.v1.DatasetV" +
-      "ersionR\017datasetVersions\"/\n\035GetDatasetObj" +
-      "ectGroupsRequest\022\016\n\002id\030\001 \001(\tR\002id\"a\n\036GetD" +
-      "atasetObjectGroupsResponse\022?\n\robject_gro" +
-      "ups\030\001 \003(\0132\032.api.models.v1.ObjectGroupR\014o" +
-      "bjectGroups\"\223\001\n!GetObjectGroupsInDateRan" +
-      "geRequest\022\016\n\002id\030\001 \001(\tR\002id\0220\n\005start\030\002 \001(\013" +
-      "2\032.google.protobuf.TimestampR\005start\022,\n\003e" +
-      "nd\030\003 \001(\0132\032.google.protobuf.TimestampR\003en" +
-      "d\"e\n\"GetObjectGroupsInDateRangeResponse\022" +
-      "?\n\robject_groups\030\001 \003(\0132\032.api.models.v1.O" +
-      "bjectGroupR\014objectGroups\"\242\010\n GetObjectGr" +
-      "oupsStreamLinkRequest\022]\n\013stream_type\030\003 \001" +
-      "(\0162<.api.services.v1.GetObjectGroupsStre" +
-      "amLinkRequest.StreamTypeR\nstreamType\022^\n\t" +
-      "group_ids\030\004 \001(\0132?.api.services.v1.GetObj" +
-      "ectGroupsStreamLinkRequest.GroupIDsQuery" +
-      "H\000R\010groupIds\022a\n\ndate_range\030\005 \001(\0132@.api.s" +
-      "ervices.v1.GetObjectGroupsStreamLinkRequ" +
-      "est.DateRangeQueryH\000R\tdateRange\022Z\n\007datas" +
-      "et\030\006 \001(\0132>.api.services.v1.GetObjectGrou" +
-      "psStreamLinkRequest.DatasetQueryH\000R\007data" +
-      "set\022p\n\017dataset_version\030\007 \001(\0132E.api.servi" +
-      "ces.v1.GetObjectGroupsStreamLinkRequest." +
-      "DatasetVersionQueryH\000R\016datasetVersion\0222\n" +
-      "\006expiry\030\010 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\006expiry\032\217\001\n\016DateRangeQuery\022\035\n\ndataset_" +
-      "id\030\003 \001(\tR\tdatasetId\0220\n\005start\030\001 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\005start\022,\n\003end\030\002 \001" +
-      "(\0132\032.google.protobuf.TimestampR\003end\032S\n\rG" +
-      "roupIDsQuery\022\035\n\ndataset_id\030\002 \001(\tR\tdatase" +
-      "tId\022#\n\robject_groups\030\001 \003(\tR\014objectGroups" +
-      "\032-\n\014DatasetQuery\022\035\n\ndataset_id\030\001 \001(\tR\tda" +
-      "tasetId\032b\n\023DatasetVersionQuery\022\035\n\ndatase" +
-      "t_id\030\001 \001(\tR\tdatasetId\022,\n\022dataset_version" +
-      "_id\030\002 \001(\tR\020datasetVersionId\"W\n\nStreamTyp" +
-      "e\022\035\n\031STREAM_TYPE_BASE64NEWLINE\020\000\022\023\n\017STRE" +
-      "AM_TYPE_ZIP\020\001\022\025\n\021STREAM_TYPE_TARGZ\020\002B\007\n\005" +
-      "query\"5\n!GetObjectGroupsStreamLinkRespon" +
-      "se\022\020\n\003url\030\001 \001(\tR\003url\"f\n\031UpdateDatasetFie" +
-      "ldRequest\022I\n\016update_request\030\001 \001(\0132\".api." +
-      "models.v1.UpdateFieldsRequestR\rupdateReq" +
-      "uest\"\034\n\032UpdateDatasetFieldResponse\"&\n\024De" +
-      "leteDatasetRequest\022\016\n\002id\030\001 \001(\tR\002id\"\027\n\025De" +
-      "leteDatasetResponse\"\262\002\n\034ReleaseDatasetVe" +
-      "rsionRequest\022\022\n\004name\030\001 \001(\tR\004name\022\035\n\ndata" +
-      "set_id\030\002 \001(\tR\tdatasetId\0220\n\007version\030\003 \001(\013" +
-      "2\026.api.models.v1.VersionR\007version\022,\n\006lab" +
-      "els\030\005 \003(\0132\024.api.models.v1.LabelR\006labels\022" +
-      "3\n\010metadata\030\006 \003(\0132\027.api.models.v1.Metada" +
-      "taR\010metadata\022(\n\020object_group_ids\030\007 \003(\tR\016" +
-      "objectGroupIds\022 \n\013description\030\010 \001(\tR\013des" +
-      "cription\"/\n\035ReleaseDatasetVersionRespons" +
-      "e\022\016\n\002id\030\001 \001(\tR\002id\"*\n\030GetDatasetVersionRe" +
-      "quest\022\016\n\002id\030\001 \001(\tR\002id\"c\n\031GetDatasetVersi" +
-      "onResponse\022F\n\017dataset_version\030\001 \001(\0132\035.ap" +
-      "i.models.v1.DatasetVersionR\016datasetVersi" +
-      "on\"6\n$GetDatasetVersionObjectGroupsReque" +
-      "st\022\016\n\002id\030\001 \001(\tR\002id\"f\n%GetDatasetVersionO" +
-      "bjectGroupsResponse\022=\n\014object_group\030\001 \003(" +
-      "\0132\032.api.models.v1.ObjectGroupR\013objectGro" +
-      "up\"-\n\033DeleteDatasetVersionRequest\022\016\n\002id\030" +
-      "\001 \001(\tR\002id\"\036\n\034DeleteDatasetVersionRespons" +
-      "eB\202\001\n4com.github.ScienceObjectsDB.java_a" +
-      "pi.api.services.v1B\024DatasetServiceModels" +
-      "P\001Z2github.com/ScienceObjectsDB/go-api/a" +
-      "pi/services/v1b\006proto3"
+      "ersionR\017datasetVersions\"n\n\035GetDatasetObj" +
+      "ectGroupsRequest\022\016\n\002id\030\001 \001(\tR\002id\022=\n\014page" +
+      "_request\030\002 \001(\0132\032.api.models.v1.PageReque" +
+      "stR\013pageRequest\"a\n\036GetDatasetObjectGroup" +
+      "sResponse\022?\n\robject_groups\030\001 \003(\0132\032.api.m" +
+      "odels.v1.ObjectGroupR\014objectGroups\"\223\001\n!G" +
+      "etObjectGroupsInDateRangeRequest\022\016\n\002id\030\001" +
+      " \001(\tR\002id\0220\n\005start\030\002 \001(\0132\032.google.protobu" +
+      "f.TimestampR\005start\022,\n\003end\030\003 \001(\0132\032.google" +
+      ".protobuf.TimestampR\003end\"e\n\"GetObjectGro" +
+      "upsInDateRangeResponse\022?\n\robject_groups\030" +
+      "\001 \003(\0132\032.api.models.v1.ObjectGroupR\014objec" +
+      "tGroups\"\242\010\n GetObjectGroupsStreamLinkReq" +
+      "uest\022]\n\013stream_type\030\003 \001(\0162<.api.services" +
+      ".v1.GetObjectGroupsStreamLinkRequest.Str" +
+      "eamTypeR\nstreamType\022^\n\tgroup_ids\030\004 \001(\0132?" +
+      ".api.services.v1.GetObjectGroupsStreamLi" +
+      "nkRequest.GroupIDsQueryH\000R\010groupIds\022a\n\nd" +
+      "ate_range\030\005 \001(\0132@.api.services.v1.GetObj" +
+      "ectGroupsStreamLinkRequest.DateRangeQuer" +
+      "yH\000R\tdateRange\022Z\n\007dataset\030\006 \001(\0132>.api.se" +
+      "rvices.v1.GetObjectGroupsStreamLinkReque" +
+      "st.DatasetQueryH\000R\007dataset\022p\n\017dataset_ve" +
+      "rsion\030\007 \001(\0132E.api.services.v1.GetObjectG" +
+      "roupsStreamLinkRequest.DatasetVersionQue" +
+      "ryH\000R\016datasetVersion\0222\n\006expiry\030\010 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\006expiry\032\217\001\n\016Dat" +
+      "eRangeQuery\022\035\n\ndataset_id\030\003 \001(\tR\tdataset" +
+      "Id\0220\n\005start\030\001 \001(\0132\032.google.protobuf.Time" +
+      "stampR\005start\022,\n\003end\030\002 \001(\0132\032.google.proto" +
+      "buf.TimestampR\003end\032S\n\rGroupIDsQuery\022\035\n\nd" +
+      "ataset_id\030\002 \001(\tR\tdatasetId\022#\n\robject_gro" +
+      "ups\030\001 \003(\tR\014objectGroups\032-\n\014DatasetQuery\022" +
+      "\035\n\ndataset_id\030\001 \001(\tR\tdatasetId\032b\n\023Datase" +
+      "tVersionQuery\022\035\n\ndataset_id\030\001 \001(\tR\tdatas" +
+      "etId\022,\n\022dataset_version_id\030\002 \001(\tR\020datase" +
+      "tVersionId\"W\n\nStreamType\022\035\n\031STREAM_TYPE_" +
+      "BASE64NEWLINE\020\000\022\023\n\017STREAM_TYPE_ZIP\020\001\022\025\n\021" +
+      "STREAM_TYPE_TARGZ\020\002B\007\n\005query\"5\n!GetObjec" +
+      "tGroupsStreamLinkResponse\022\020\n\003url\030\001 \001(\tR\003" +
+      "url\"f\n\031UpdateDatasetFieldRequest\022I\n\016upda" +
+      "te_request\030\001 \001(\0132\".api.models.v1.UpdateF" +
+      "ieldsRequestR\rupdateRequest\"\034\n\032UpdateDat" +
+      "asetFieldResponse\"&\n\024DeleteDatasetReques" +
+      "t\022\016\n\002id\030\001 \001(\tR\002id\"\027\n\025DeleteDatasetRespon" +
+      "se\"\262\002\n\034ReleaseDatasetVersionRequest\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\022\035\n\ndataset_id\030\002 \001(\tR\tdat" +
+      "asetId\0220\n\007version\030\003 \001(\0132\026.api.models.v1." +
+      "VersionR\007version\022,\n\006labels\030\005 \003(\0132\024.api.m" +
+      "odels.v1.LabelR\006labels\0223\n\010metadata\030\006 \003(\013" +
+      "2\027.api.models.v1.MetadataR\010metadata\022(\n\020o" +
+      "bject_group_ids\030\007 \003(\tR\016objectGroupIds\022 \n" +
+      "\013description\030\010 \001(\tR\013description\"/\n\035Relea" +
+      "seDatasetVersionResponse\022\016\n\002id\030\001 \001(\tR\002id" +
+      "\"*\n\030GetDatasetVersionRequest\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\"c\n\031GetDatasetVersionResponse\022F\n\017dat" +
+      "aset_version\030\001 \001(\0132\035.api.models.v1.Datas" +
+      "etVersionR\016datasetVersion\"u\n$GetDatasetV" +
+      "ersionObjectGroupsRequest\022\016\n\002id\030\001 \001(\tR\002i" +
+      "d\022=\n\014page_request\030\002 \001(\0132\032.api.models.v1." +
+      "PageRequestR\013pageRequest\"f\n%GetDatasetVe" +
+      "rsionObjectGroupsResponse\022=\n\014object_grou" +
+      "p\030\001 \003(\0132\032.api.models.v1.ObjectGroupR\013obj" +
+      "ectGroup\"-\n\033DeleteDatasetVersionRequest\022" +
+      "\016\n\002id\030\001 \001(\tR\002id\"\036\n\034DeleteDatasetVersionR" +
+      "esponseB\202\001\n4com.github.ScienceObjectsDB." +
+      "java_api.api.services.v1B\024DatasetService" +
+      "ModelsP\001Z2github.com/ScienceObjectsDB/go" +
+      "-api/api/services/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetModels.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectModels.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_services_v1_CreateDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_services_v1_CreateDatasetRequest_fieldAccessorTable = new
@@ -296,7 +307,7 @@ public final class DatasetServiceModels {
     internal_static_api_services_v1_GetDatasetObjectGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_services_v1_GetDatasetObjectGroupsRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "PageRequest", });
     internal_static_api_services_v1_GetDatasetObjectGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_api_services_v1_GetDatasetObjectGroupsResponse_fieldAccessorTable = new
@@ -404,7 +415,7 @@ public final class DatasetServiceModels {
     internal_static_api_services_v1_GetDatasetVersionObjectGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_services_v1_GetDatasetVersionObjectGroupsRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "PageRequest", });
     internal_static_api_services_v1_GetDatasetVersionObjectGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_api_services_v1_GetDatasetVersionObjectGroupsResponse_fieldAccessorTable = new

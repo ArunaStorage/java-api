@@ -148,13 +148,21 @@ public final class ProjectAPIServiceModels {
       "viceModelsP\001Z2github.com/ScienceObjectsD" +
       "B/go-api/api/services/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetModels.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectModels.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_services_v1_CreateProjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_services_v1_CreateProjectRequest_fieldAccessorTable = new

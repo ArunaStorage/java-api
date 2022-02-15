@@ -8,47 +8,41 @@ public interface CreateDownloadLinkStreamRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
-   * @return Whether the dataset field is set.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
    */
   boolean hasDataset();
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
-   * @return The dataset.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery getDataset();
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQueryOrBuilder getDatasetOrBuilder();
 
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
-   * @return Whether the datasetVersion field is set.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
    */
   boolean hasDatasetVersion();
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
-   * @return The datasetVersion.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery getDatasetVersion();
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQueryOrBuilder getDatasetVersionOrBuilder();
 
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
-   * @return Whether the dateRange field is set.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
    */
   boolean hasDateRange();
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
-   * @return The dateRange.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery getDateRange();
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQueryOrBuilder getDateRangeOrBuilder();
 

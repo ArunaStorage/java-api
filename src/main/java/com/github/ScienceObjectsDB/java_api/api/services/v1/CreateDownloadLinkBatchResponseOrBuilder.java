@@ -8,25 +8,25 @@ public interface CreateDownloadLinkBatchResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1 [json_name = "links"];</code>
+   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1[json_name = "links"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkResponse> 
       getLinksList();
   /**
-   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1 [json_name = "links"];</code>
+   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1[json_name = "links"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkResponse getLinks(int index);
   /**
-   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1 [json_name = "links"];</code>
+   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1[json_name = "links"];</code>
    */
   int getLinksCount();
   /**
-   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1 [json_name = "links"];</code>
+   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1[json_name = "links"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkResponseOrBuilder> 
       getLinksOrBuilderList();
   /**
-   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1 [json_name = "links"];</code>
+   * <code>repeated .api.services.v1.CreateDownloadLinkResponse links = 1[json_name = "links"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkResponseOrBuilder getLinksOrBuilder(
       int index);

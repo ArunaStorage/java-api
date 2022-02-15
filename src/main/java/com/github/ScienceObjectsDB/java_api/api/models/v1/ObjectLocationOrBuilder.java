@@ -8,25 +8,21 @@ public interface ObjectLocationOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string bucket = 1 [json_name = "bucket"];</code>
-   * @return The bucket.
+   * <code>string bucket = 1[json_name = "bucket"];</code>
    */
   java.lang.String getBucket();
   /**
-   * <code>string bucket = 1 [json_name = "bucket"];</code>
-   * @return The bytes for bucket.
+   * <code>string bucket = 1[json_name = "bucket"];</code>
    */
   com.google.protobuf.ByteString
       getBucketBytes();
 
   /**
-   * <code>string key = 2 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string key = 2[json_name = "key"];</code>
    */
   java.lang.String getKey();
   /**
-   * <code>string key = 2 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string key = 2[json_name = "key"];</code>
    */
   com.google.protobuf.ByteString
       getKeyBytes();
@@ -36,8 +32,7 @@ public interface ObjectLocationOrBuilder extends
    * Object storage endpoint
    * </pre>
    *
-   * <code>string url = 3 [json_name = "url"];</code>
-   * @return The url.
+   * <code>string url = 3[json_name = "url"];</code>
    */
   java.lang.String getUrl();
   /**
@@ -45,8 +40,7 @@ public interface ObjectLocationOrBuilder extends
    * Object storage endpoint
    * </pre>
    *
-   * <code>string url = 3 [json_name = "url"];</code>
-   * @return The bytes for url.
+   * <code>string url = 3[json_name = "url"];</code>
    */
   com.google.protobuf.ByteString
       getUrlBytes();

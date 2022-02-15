@@ -8,25 +8,21 @@ public interface VersionTagOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string version_id = 2 [json_name = "versionId"];</code>
-   * @return The versionId.
+   * <code>string version_id = 2[json_name = "versionId"];</code>
    */
   java.lang.String getVersionId();
   /**
-   * <code>string version_id = 2 [json_name = "versionId"];</code>
-   * @return The bytes for versionId.
+   * <code>string version_id = 2[json_name = "versionId"];</code>
    */
   com.google.protobuf.ByteString
       getVersionIdBytes();

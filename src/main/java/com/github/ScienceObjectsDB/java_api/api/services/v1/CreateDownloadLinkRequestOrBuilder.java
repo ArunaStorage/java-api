@@ -12,8 +12,7 @@ public interface CreateDownloadLinkRequestOrBuilder extends
    *Object id the download is requested for
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
@@ -21,8 +20,7 @@ public interface CreateDownloadLinkRequestOrBuilder extends
    *Object id the download is requested for
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
@@ -32,8 +30,7 @@ public interface CreateDownloadLinkRequestOrBuilder extends
    *Optional; Byte range of the data object
    * </pre>
    *
-   * <code>.api.services.v1.CreateDownloadLinkRequest.Range range = 2 [json_name = "range"];</code>
-   * @return Whether the range field is set.
+   * <code>.api.services.v1.CreateDownloadLinkRequest.Range range = 2[json_name = "range"];</code>
    */
   boolean hasRange();
   /**
@@ -41,8 +38,7 @@ public interface CreateDownloadLinkRequestOrBuilder extends
    *Optional; Byte range of the data object
    * </pre>
    *
-   * <code>.api.services.v1.CreateDownloadLinkRequest.Range range = 2 [json_name = "range"];</code>
-   * @return The range.
+   * <code>.api.services.v1.CreateDownloadLinkRequest.Range range = 2[json_name = "range"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkRequest.Range getRange();
   /**
@@ -50,7 +46,7 @@ public interface CreateDownloadLinkRequestOrBuilder extends
    *Optional; Byte range of the data object
    * </pre>
    *
-   * <code>.api.services.v1.CreateDownloadLinkRequest.Range range = 2 [json_name = "range"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkRequest.Range range = 2[json_name = "range"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkRequest.RangeOrBuilder getRangeOrBuilder();
 }

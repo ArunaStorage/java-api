@@ -12,8 +12,7 @@ public interface ObjectOrBuilder extends
    *ID of the entity
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
@@ -21,8 +20,7 @@ public interface ObjectOrBuilder extends
    *ID of the entity
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
@@ -32,8 +30,7 @@ public interface ObjectOrBuilder extends
    * Filename: Name of the original file e.g.: mydata.json
    * </pre>
    *
-   * <code>string filename = 2 [json_name = "filename"];</code>
-   * @return The filename.
+   * <code>string filename = 2[json_name = "filename"];</code>
    */
   java.lang.String getFilename();
   /**
@@ -41,8 +38,7 @@ public interface ObjectOrBuilder extends
    * Filename: Name of the original file e.g.: mydata.json
    * </pre>
    *
-   * <code>string filename = 2 [json_name = "filename"];</code>
-   * @return The bytes for filename.
+   * <code>string filename = 2[json_name = "filename"];</code>
    */
   com.google.protobuf.ByteString
       getFilenameBytes();
@@ -52,8 +48,7 @@ public interface ObjectOrBuilder extends
    * Filetype: Type of the stored file, e.g.: json, gbff,...
    * </pre>
    *
-   * <code>string filetype = 3 [json_name = "filetype"];</code>
-   * @return The filetype.
+   * <code>string filetype = 3[json_name = "filetype"];</code>
    */
   java.lang.String getFiletype();
   /**
@@ -61,56 +56,55 @@ public interface ObjectOrBuilder extends
    * Filetype: Type of the stored file, e.g.: json, gbff,...
    * </pre>
    *
-   * <code>string filetype = 3 [json_name = "filetype"];</code>
-   * @return The bytes for filetype.
+   * <code>string filetype = 3[json_name = "filetype"];</code>
    */
   com.google.protobuf.ByteString
       getFiletypeBytes();
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata> 
       getMetadataList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata getMetadata(int index);
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   int getMetadataCount();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder> 
       getMetadataOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder getMetadataOrBuilder(
       int index);
@@ -120,8 +114,7 @@ public interface ObjectOrBuilder extends
    * When the data object was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 6 [json_name = "created"];</code>
-   * @return Whether the created field is set.
+   * <code>.google.protobuf.Timestamp created = 6[json_name = "created"];</code>
    */
   boolean hasCreated();
   /**
@@ -129,8 +122,7 @@ public interface ObjectOrBuilder extends
    * When the data object was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 6 [json_name = "created"];</code>
-   * @return The created.
+   * <code>.google.protobuf.Timestamp created = 6[json_name = "created"];</code>
    */
   com.google.protobuf.Timestamp getCreated();
   /**
@@ -138,7 +130,7 @@ public interface ObjectOrBuilder extends
    * When the data object was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 6 [json_name = "created"];</code>
+   * <code>.google.protobuf.Timestamp created = 6[json_name = "created"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 
@@ -147,8 +139,7 @@ public interface ObjectOrBuilder extends
    * Location: Location of the data
    * </pre>
    *
-   * <code>.api.models.v1.Location location = 7 [json_name = "location"];</code>
-   * @return Whether the location field is set.
+   * <code>.api.models.v1.Location location = 7[json_name = "location"];</code>
    */
   boolean hasLocation();
   /**
@@ -156,8 +147,7 @@ public interface ObjectOrBuilder extends
    * Location: Location of the data
    * </pre>
    *
-   * <code>.api.models.v1.Location location = 7 [json_name = "location"];</code>
-   * @return The location.
+   * <code>.api.models.v1.Location location = 7[json_name = "location"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Location getLocation();
   /**
@@ -165,7 +155,7 @@ public interface ObjectOrBuilder extends
    * Location: Location of the data
    * </pre>
    *
-   * <code>.api.models.v1.Location location = 7 [json_name = "location"];</code>
+   * <code>.api.models.v1.Location location = 7[json_name = "location"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LocationOrBuilder getLocationOrBuilder();
 
@@ -174,8 +164,7 @@ public interface ObjectOrBuilder extends
    * Origin: Source of the dataset
    * </pre>
    *
-   * <code>.api.models.v1.Origin origin = 8 [json_name = "origin"];</code>
-   * @return Whether the origin field is set.
+   * <code>.api.models.v1.Origin origin = 8[json_name = "origin"];</code>
    */
   boolean hasOrigin();
   /**
@@ -183,8 +172,7 @@ public interface ObjectOrBuilder extends
    * Origin: Source of the dataset
    * </pre>
    *
-   * <code>.api.models.v1.Origin origin = 8 [json_name = "origin"];</code>
-   * @return The origin.
+   * <code>.api.models.v1.Origin origin = 8[json_name = "origin"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Origin getOrigin();
   /**
@@ -192,7 +180,7 @@ public interface ObjectOrBuilder extends
    * Origin: Source of the dataset
    * </pre>
    *
-   * <code>.api.models.v1.Origin origin = 8 [json_name = "origin"];</code>
+   * <code>.api.models.v1.Origin origin = 8[json_name = "origin"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.OriginOrBuilder getOriginOrBuilder();
 
@@ -201,70 +189,59 @@ public interface ObjectOrBuilder extends
    * ContentLen: Lenght of the stored dataset
    * </pre>
    *
-   * <code>int64 content_len = 9 [json_name = "contentLen"];</code>
-   * @return The contentLen.
+   * <code>int64 content_len = 9[json_name = "contentLen"];</code>
    */
   long getContentLen();
 
   /**
-   * <code>string upload_id = 10 [json_name = "uploadId"];</code>
-   * @return The uploadId.
+   * <code>string upload_id = 10[json_name = "uploadId"];</code>
    */
   java.lang.String getUploadId();
   /**
-   * <code>string upload_id = 10 [json_name = "uploadId"];</code>
-   * @return The bytes for uploadId.
+   * <code>string upload_id = 10[json_name = "uploadId"];</code>
    */
   com.google.protobuf.ByteString
       getUploadIdBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp generated = 11 [json_name = "generated"];</code>
-   * @return Whether the generated field is set.
+   * <code>.google.protobuf.Timestamp generated = 11[json_name = "generated"];</code>
    */
   boolean hasGenerated();
   /**
-   * <code>.google.protobuf.Timestamp generated = 11 [json_name = "generated"];</code>
-   * @return The generated.
+   * <code>.google.protobuf.Timestamp generated = 11[json_name = "generated"];</code>
    */
   com.google.protobuf.Timestamp getGenerated();
   /**
-   * <code>.google.protobuf.Timestamp generated = 11 [json_name = "generated"];</code>
+   * <code>.google.protobuf.Timestamp generated = 11[json_name = "generated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getGeneratedOrBuilder();
 
   /**
-   * <code>string object_group_id = 12 [json_name = "objectGroupId"];</code>
-   * @return The objectGroupId.
+   * <code>string object_group_id = 12[json_name = "objectGroupId"];</code>
    */
   java.lang.String getObjectGroupId();
   /**
-   * <code>string object_group_id = 12 [json_name = "objectGroupId"];</code>
-   * @return The bytes for objectGroupId.
+   * <code>string object_group_id = 12[json_name = "objectGroupId"];</code>
    */
   com.google.protobuf.ByteString
       getObjectGroupIdBytes();
 
   /**
-   * <code>string dataset_id = 13 [json_name = "datasetId"];</code>
-   * @return The datasetId.
+   * <code>string dataset_id = 13[json_name = "datasetId"];</code>
    */
   java.lang.String getDatasetId();
   /**
-   * <code>string dataset_id = 13 [json_name = "datasetId"];</code>
-   * @return The bytes for datasetId.
+   * <code>string dataset_id = 13[json_name = "datasetId"];</code>
    */
   com.google.protobuf.ByteString
       getDatasetIdBytes();
 
   /**
-   * <code>string project_id = 14 [json_name = "projectId"];</code>
-   * @return The projectId.
+   * <code>string project_id = 14[json_name = "projectId"];</code>
    */
   java.lang.String getProjectId();
   /**
-   * <code>string project_id = 14 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
+   * <code>string project_id = 14[json_name = "projectId"];</code>
    */
   com.google.protobuf.ByteString
       getProjectIdBytes();

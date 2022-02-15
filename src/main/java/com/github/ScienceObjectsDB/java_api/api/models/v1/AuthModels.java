@@ -59,12 +59,20 @@ public final class AuthModels {
       "ls.v1B\nAuthModelsP\001Z0github.com/ScienceO" +
       "bjectsDB/go-api/api/models/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_models_v1_TokenList_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_models_v1_TokenList_fieldAccessorTable = new

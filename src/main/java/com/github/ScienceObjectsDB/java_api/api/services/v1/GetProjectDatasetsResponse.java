@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetProjectDatasetsResponse}
  */
-public final class GetProjectDatasetsResponse extends
+public  final class GetProjectDatasetsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetProjectDatasetsResponse)
     GetProjectDatasetsResponseOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private GetProjectDatasetsResponse() {
     dataset_ = java.util.Collections.emptyList();
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetProjectDatasetsResponse();
   }
 
   @java.lang.Override
@@ -51,7 +44,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               dataset_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset>();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -60,7 +53,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -74,7 +67,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
         dataset_ = java.util.Collections.unmodifiableList(dataset_);
       }
       this.unknownFields = unknownFields.build();
@@ -97,38 +90,33 @@ private static final long serialVersionUID = 0L;
   public static final int DATASET_FIELD_NUMBER = 1;
   private java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset> dataset_;
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset> getDatasetList() {
     return dataset_;
   }
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder> 
       getDatasetOrBuilderList() {
     return dataset_;
   }
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public int getDatasetCount() {
     return dataset_.size();
   }
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset getDataset(int index) {
     return dataset_.get(index);
   }
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder getDatasetOrBuilder(
       int index) {
     return dataset_.get(index);
@@ -179,10 +167,11 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetProjectDatasetsResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetProjectDatasetsResponse) obj;
 
-    if (!getDatasetList()
-        .equals(other.getDatasetList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getDatasetList()
+        .equals(other.getDatasetList());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -364,7 +353,7 @@ private static final long serialVersionUID = 0L;
       com.github.ScienceObjectsDB.java_api.api.services.v1.GetProjectDatasetsResponse result = new com.github.ScienceObjectsDB.java_api.api.services.v1.GetProjectDatasetsResponse(this);
       int from_bitField0_ = bitField0_;
       if (datasetBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
           dataset_ = java.util.Collections.unmodifiableList(dataset_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -378,35 +367,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -479,7 +468,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset> dataset_ =
       java.util.Collections.emptyList();
     private void ensureDatasetIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
         dataset_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset>(dataset_);
         bitField0_ |= 0x00000001;
        }
@@ -489,7 +478,7 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder> datasetBuilder_;
 
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset> getDatasetList() {
       if (datasetBuilder_ == null) {
@@ -499,7 +488,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public int getDatasetCount() {
       if (datasetBuilder_ == null) {
@@ -509,7 +498,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset getDataset(int index) {
       if (datasetBuilder_ == null) {
@@ -519,7 +508,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder setDataset(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset value) {
@@ -536,7 +525,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder setDataset(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder builderForValue) {
@@ -550,7 +539,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder addDataset(com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset value) {
       if (datasetBuilder_ == null) {
@@ -566,7 +555,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder addDataset(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset value) {
@@ -583,7 +572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder addDataset(
         com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder builderForValue) {
@@ -597,7 +586,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder addDataset(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder builderForValue) {
@@ -611,7 +600,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder addAllDataset(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset> values) {
@@ -626,7 +615,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder clearDataset() {
       if (datasetBuilder_ == null) {
@@ -639,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public Builder removeDataset(int index) {
       if (datasetBuilder_ == null) {
@@ -652,14 +641,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder getDatasetBuilder(
         int index) {
       return getDatasetFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder getDatasetOrBuilder(
         int index) {
@@ -669,7 +658,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder> 
          getDatasetOrBuilderList() {
@@ -680,14 +669,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder addDatasetBuilder() {
       return getDatasetFieldBuilder().addBuilder(
           com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder addDatasetBuilder(
         int index) {
@@ -695,7 +684,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+     * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder> 
          getDatasetBuilderList() {
@@ -708,7 +697,7 @@ private static final long serialVersionUID = 0L;
         datasetBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset, com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder>(
                 dataset_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
                 isClean());
         dataset_ = null;
@@ -718,7 +707,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

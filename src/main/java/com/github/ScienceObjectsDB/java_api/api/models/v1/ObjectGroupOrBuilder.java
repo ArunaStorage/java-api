@@ -8,163 +8,159 @@ public interface ObjectGroupOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The name.
+   * <code>string name = 2[json_name = "name"];</code>
    */
   java.lang.String getName();
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>string name = 2[json_name = "name"];</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string description = 3 [json_name = "description"];</code>
-   * @return The description.
+   * <code>string description = 3[json_name = "description"];</code>
    */
   java.lang.String getDescription();
   /**
-   * <code>string description = 3 [json_name = "description"];</code>
-   * @return The bytes for description.
+   * <code>string description = 3[json_name = "description"];</code>
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
 
   /**
-   * <code>string dataset_id = 4 [json_name = "datasetId"];</code>
-   * @return The datasetId.
+   * <code>string dataset_id = 4[json_name = "datasetId"];</code>
    */
   java.lang.String getDatasetId();
   /**
-   * <code>string dataset_id = 4 [json_name = "datasetId"];</code>
-   * @return The bytes for datasetId.
+   * <code>string dataset_id = 4[json_name = "datasetId"];</code>
    */
   com.google.protobuf.ByteString
       getDatasetIdBytes();
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>string project_id = 5[json_name = "projectId"];</code>
+   */
+  java.lang.String getProjectId();
+  /**
+   * <code>string project_id = 5[json_name = "projectId"];</code>
+   */
+  com.google.protobuf.ByteString
+      getProjectIdBytes();
+
+  /**
+   * <code>repeated .api.models.v1.Label labels = 6[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 6[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 6[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 6[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 6[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 7[json_name = "metadata"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata> 
       getMetadataList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 7[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata getMetadata(int index);
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 7[json_name = "metadata"];</code>
    */
   int getMetadataCount();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 7[json_name = "metadata"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder> 
       getMetadataOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 7[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder getMetadataOrBuilder(
       int index);
 
   /**
-   * <code>.api.models.v1.Status status = 7 [json_name = "status"];</code>
-   * @return The enum numeric value on the wire for status.
+   * <code>.api.models.v1.Status status = 8[json_name = "status"];</code>
    */
   int getStatusValue();
   /**
-   * <code>.api.models.v1.Status status = 7 [json_name = "status"];</code>
-   * @return The status.
+   * <code>.api.models.v1.Status status = 8[json_name = "status"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Status getStatus();
 
   /**
-   * <code>repeated .api.models.v1.Object objects = 8 [json_name = "objects"];</code>
+   * <code>repeated .api.models.v1.Object objects = 9[json_name = "objects"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Object> 
       getObjectsList();
   /**
-   * <code>repeated .api.models.v1.Object objects = 8 [json_name = "objects"];</code>
+   * <code>repeated .api.models.v1.Object objects = 9[json_name = "objects"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Object getObjects(int index);
   /**
-   * <code>repeated .api.models.v1.Object objects = 8 [json_name = "objects"];</code>
+   * <code>repeated .api.models.v1.Object objects = 9[json_name = "objects"];</code>
    */
   int getObjectsCount();
   /**
-   * <code>repeated .api.models.v1.Object objects = 8 [json_name = "objects"];</code>
+   * <code>repeated .api.models.v1.Object objects = 9[json_name = "objects"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder> 
       getObjectsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Object objects = 8 [json_name = "objects"];</code>
+   * <code>repeated .api.models.v1.Object objects = 9[json_name = "objects"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder getObjectsOrBuilder(
       int index);
 
   /**
-   * <code>.google.protobuf.Timestamp generated = 9 [json_name = "generated"];</code>
-   * @return Whether the generated field is set.
+   * <code>.google.protobuf.Timestamp generated = 10[json_name = "generated"];</code>
    */
   boolean hasGenerated();
   /**
-   * <code>.google.protobuf.Timestamp generated = 9 [json_name = "generated"];</code>
-   * @return The generated.
+   * <code>.google.protobuf.Timestamp generated = 10[json_name = "generated"];</code>
    */
   com.google.protobuf.Timestamp getGenerated();
   /**
-   * <code>.google.protobuf.Timestamp generated = 9 [json_name = "generated"];</code>
+   * <code>.google.protobuf.Timestamp generated = 10[json_name = "generated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getGeneratedOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp created = 10 [json_name = "created"];</code>
-   * @return Whether the created field is set.
+   * <code>.google.protobuf.Timestamp created = 11[json_name = "created"];</code>
    */
   boolean hasCreated();
   /**
-   * <code>.google.protobuf.Timestamp created = 10 [json_name = "created"];</code>
-   * @return The created.
+   * <code>.google.protobuf.Timestamp created = 11[json_name = "created"];</code>
    */
   com.google.protobuf.Timestamp getCreated();
   /**
-   * <code>.google.protobuf.Timestamp created = 10 [json_name = "created"];</code>
+   * <code>.google.protobuf.Timestamp created = 11[json_name = "created"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 }

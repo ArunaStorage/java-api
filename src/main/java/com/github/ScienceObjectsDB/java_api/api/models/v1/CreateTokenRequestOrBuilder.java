@@ -8,54 +8,43 @@ public interface CreateTokenRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string resource_id = 1 [json_name = "resourceId"];</code>
-   * @return The resourceId.
+   * <code>string resource_id = 1[json_name = "resourceId"];</code>
    */
   java.lang.String getResourceId();
   /**
-   * <code>string resource_id = 1 [json_name = "resourceId"];</code>
-   * @return The bytes for resourceId.
+   * <code>string resource_id = 1[json_name = "resourceId"];</code>
    */
   com.google.protobuf.ByteString
       getResourceIdBytes();
 
   /**
-   * <code>repeated .api.models.v1.Right rights = 2 [json_name = "rights"];</code>
-   * @return A list containing the rights.
+   * <code>repeated .api.models.v1.Right rights = 2[json_name = "rights"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getRightsList();
   /**
-   * <code>repeated .api.models.v1.Right rights = 2 [json_name = "rights"];</code>
-   * @return The count of rights.
+   * <code>repeated .api.models.v1.Right rights = 2[json_name = "rights"];</code>
    */
   int getRightsCount();
   /**
-   * <code>repeated .api.models.v1.Right rights = 2 [json_name = "rights"];</code>
-   * @param index The index of the element to return.
-   * @return The rights at the given index.
+   * <code>repeated .api.models.v1.Right rights = 2[json_name = "rights"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Right getRights(int index);
   /**
-   * <code>repeated .api.models.v1.Right rights = 2 [json_name = "rights"];</code>
-   * @return A list containing the enum numeric values on the wire for rights.
+   * <code>repeated .api.models.v1.Right rights = 2[json_name = "rights"];</code>
    */
   java.util.List<java.lang.Integer>
   getRightsValueList();
   /**
-   * <code>repeated .api.models.v1.Right rights = 2 [json_name = "rights"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of rights at the given index.
+   * <code>repeated .api.models.v1.Right rights = 2[json_name = "rights"];</code>
    */
   int getRightsValue(int index);
 
   /**
-   * <code>.api.models.v1.Resource resource = 3 [json_name = "resource"];</code>
-   * @return The enum numeric value on the wire for resource.
+   * <code>.api.models.v1.Resource resource = 3[json_name = "resource"];</code>
    */
   int getResourceValue();
   /**
-   * <code>.api.models.v1.Resource resource = 3 [json_name = "resource"];</code>
-   * @return The resource.
+   * <code>.api.models.v1.Resource resource = 3[json_name = "resource"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Resource getResource();
 
@@ -64,8 +53,7 @@ public interface CreateTokenRequestOrBuilder extends
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 4 [json_name = "expires"];</code>
-   * @return Whether the expires field is set.
+   * <code>.google.protobuf.Timestamp expires = 4[json_name = "expires"];</code>
    */
   boolean hasExpires();
   /**
@@ -73,8 +61,7 @@ public interface CreateTokenRequestOrBuilder extends
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 4 [json_name = "expires"];</code>
-   * @return The expires.
+   * <code>.google.protobuf.Timestamp expires = 4[json_name = "expires"];</code>
    */
   com.google.protobuf.Timestamp getExpires();
   /**
@@ -82,7 +69,7 @@ public interface CreateTokenRequestOrBuilder extends
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 4 [json_name = "expires"];</code>
+   * <code>.google.protobuf.Timestamp expires = 4[json_name = "expires"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpiresOrBuilder();
 }

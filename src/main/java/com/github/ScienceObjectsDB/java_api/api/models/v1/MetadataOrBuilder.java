@@ -8,60 +8,50 @@ public interface MetadataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
   java.lang.String getKey();
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
   com.google.protobuf.ByteString
       getKeyBytes();
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
-   * <code>bytes metadata = 3 [json_name = "metadata"];</code>
-   * @return The metadata.
+   * <code>bytes metadata = 3[json_name = "metadata"];</code>
    */
   com.google.protobuf.ByteString getMetadata();
 
   /**
-   * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-   * @return Whether the simpleSchema field is set.
-   */
-  boolean hasSimpleSchema();
-  /**
-   * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-   * @return The simpleSchema.
+   * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
    */
   java.lang.String getSimpleSchema();
   /**
-   * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-   * @return The bytes for simpleSchema.
+   * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
    */
   com.google.protobuf.ByteString
       getSimpleSchemaBytes();

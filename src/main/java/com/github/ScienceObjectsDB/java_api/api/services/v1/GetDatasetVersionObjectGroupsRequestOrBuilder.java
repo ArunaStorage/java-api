@@ -8,14 +8,25 @@ public interface GetDatasetVersionObjectGroupsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
+
+  /**
+   * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+   */
+  boolean hasPageRequest();
+  /**
+   * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+   */
+  com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest getPageRequest();
+  /**
+   * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+   */
+  com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequestOrBuilder getPageRequestOrBuilder();
 }

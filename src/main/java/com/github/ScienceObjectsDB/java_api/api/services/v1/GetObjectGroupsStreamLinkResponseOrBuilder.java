@@ -8,13 +8,11 @@ public interface GetObjectGroupsStreamLinkResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The url.
+   * <code>string url = 1[json_name = "url"];</code>
    */
   java.lang.String getUrl();
   /**
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The bytes for url.
+   * <code>string url = 1[json_name = "url"];</code>
    */
   com.google.protobuf.ByteString
       getUrlBytes();

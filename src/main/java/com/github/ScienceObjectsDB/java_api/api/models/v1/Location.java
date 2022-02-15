@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.Location}
  */
-public final class Location extends
+public  final class Location extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.Location)
     LocationOrBuilder {
@@ -16,13 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Location() {
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new Location();
   }
 
   @java.lang.Override
@@ -38,6 +31,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -77,7 +71,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -111,8 +105,7 @@ private static final long serialVersionUID = 0L;
   private int locationCase_ = 0;
   private java.lang.Object location_;
   public enum LocationCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     OBJECT_LOCATION(1),
     OBJECT_INDEX_LOCATION(2),
     LOCATION_NOT_SET(0);
@@ -121,8 +114,6 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -151,18 +142,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int OBJECT_LOCATION_FIELD_NUMBER = 1;
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
-   * @return Whether the objectLocation field is set.
+   * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
    */
-  @java.lang.Override
   public boolean hasObjectLocation() {
     return locationCase_ == 1;
   }
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
-   * @return The objectLocation.
+   * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation getObjectLocation() {
     if (locationCase_ == 1) {
        return (com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation) location_;
@@ -170,9 +157,8 @@ private static final long serialVersionUID = 0L;
     return com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation.getDefaultInstance();
   }
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+   * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocationOrBuilder getObjectLocationOrBuilder() {
     if (locationCase_ == 1) {
        return (com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation) location_;
@@ -182,18 +168,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int OBJECT_INDEX_LOCATION_FIELD_NUMBER = 2;
   /**
-   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
-   * @return Whether the objectIndexLocation field is set.
+   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
    */
-  @java.lang.Override
   public boolean hasObjectIndexLocation() {
     return locationCase_ == 2;
   }
   /**
-   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
-   * @return The objectIndexLocation.
+   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation getObjectIndexLocation() {
     if (locationCase_ == 2) {
        return (com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation) location_;
@@ -201,9 +183,8 @@ private static final long serialVersionUID = 0L;
     return com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation.getDefaultInstance();
   }
   /**
-   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocationOrBuilder getObjectIndexLocationOrBuilder() {
     if (locationCase_ == 2) {
        return (com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation) location_;
@@ -263,21 +244,24 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.Location other = (com.github.ScienceObjectsDB.java_api.api.models.v1.Location) obj;
 
-    if (!getLocationCase().equals(other.getLocationCase())) return false;
+    boolean result = true;
+    result = result && getLocationCase().equals(
+        other.getLocationCase());
+    if (!result) return false;
     switch (locationCase_) {
       case 1:
-        if (!getObjectLocation()
-            .equals(other.getObjectLocation())) return false;
+        result = result && getObjectLocation()
+            .equals(other.getObjectLocation());
         break;
       case 2:
-        if (!getObjectIndexLocation()
-            .equals(other.getObjectIndexLocation())) return false;
+        result = result && getObjectIndexLocation()
+            .equals(other.getObjectIndexLocation());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -481,35 +465,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -583,18 +567,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocationOrBuilder> objectLocationBuilder_;
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
-     * @return Whether the objectLocation field is set.
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
-    @java.lang.Override
     public boolean hasObjectLocation() {
       return locationCase_ == 1;
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
-     * @return The objectLocation.
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation getObjectLocation() {
       if (objectLocationBuilder_ == null) {
         if (locationCase_ == 1) {
@@ -609,7 +589,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
     public Builder setObjectLocation(com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation value) {
       if (objectLocationBuilder_ == null) {
@@ -625,7 +605,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
     public Builder setObjectLocation(
         com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation.Builder builderForValue) {
@@ -639,7 +619,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
     public Builder mergeObjectLocation(com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation value) {
       if (objectLocationBuilder_ == null) {
@@ -661,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
     public Builder clearObjectLocation() {
       if (objectLocationBuilder_ == null) {
@@ -680,15 +660,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation.Builder getObjectLocationBuilder() {
       return getObjectLocationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocationOrBuilder getObjectLocationOrBuilder() {
       if ((locationCase_ == 1) && (objectLocationBuilder_ != null)) {
         return objectLocationBuilder_.getMessageOrBuilder();
@@ -700,7 +679,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocationOrBuilder> 
@@ -724,18 +703,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation, com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocationOrBuilder> objectIndexLocationBuilder_;
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
-     * @return Whether the objectIndexLocation field is set.
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
-    @java.lang.Override
     public boolean hasObjectIndexLocation() {
       return locationCase_ == 2;
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
-     * @return The objectIndexLocation.
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation getObjectIndexLocation() {
       if (objectIndexLocationBuilder_ == null) {
         if (locationCase_ == 2) {
@@ -750,7 +725,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
     public Builder setObjectIndexLocation(com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation value) {
       if (objectIndexLocationBuilder_ == null) {
@@ -766,7 +741,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
     public Builder setObjectIndexLocation(
         com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation.Builder builderForValue) {
@@ -780,7 +755,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
     public Builder mergeObjectIndexLocation(com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation value) {
       if (objectIndexLocationBuilder_ == null) {
@@ -802,7 +777,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
     public Builder clearObjectIndexLocation() {
       if (objectIndexLocationBuilder_ == null) {
@@ -821,15 +796,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation.Builder getObjectIndexLocationBuilder() {
       return getObjectIndexLocationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocationOrBuilder getObjectIndexLocationOrBuilder() {
       if ((locationCase_ == 2) && (objectIndexLocationBuilder_ != null)) {
         return objectIndexLocationBuilder_.getMessageOrBuilder();
@@ -841,7 +815,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+     * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation, com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocationOrBuilder> 
@@ -864,7 +838,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

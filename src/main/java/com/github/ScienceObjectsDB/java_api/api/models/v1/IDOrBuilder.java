@@ -12,8 +12,7 @@ public interface IDOrBuilder extends
    * An arbitrary ID
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
@@ -21,8 +20,7 @@ public interface IDOrBuilder extends
    * An arbitrary ID
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();

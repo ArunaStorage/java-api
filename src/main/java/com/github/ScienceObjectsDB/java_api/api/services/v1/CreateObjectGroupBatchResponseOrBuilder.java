@@ -8,25 +8,25 @@ public interface CreateObjectGroupBatchResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1 [json_name = "responses"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1[json_name = "responses"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse> 
       getResponsesList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1 [json_name = "responses"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1[json_name = "responses"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse getResponses(int index);
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1 [json_name = "responses"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1[json_name = "responses"];</code>
    */
   int getResponsesCount();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1 [json_name = "responses"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1[json_name = "responses"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponseOrBuilder> 
       getResponsesOrBuilderList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1 [json_name = "responses"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse responses = 1[json_name = "responses"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponseOrBuilder getResponsesOrBuilder(
       int index);

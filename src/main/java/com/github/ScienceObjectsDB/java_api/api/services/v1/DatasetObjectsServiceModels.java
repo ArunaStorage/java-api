@@ -103,40 +103,49 @@ public final class DatasetObjectsServiceModels {
       "s\022.\n\023include_object_link\030\002 \001(\010R\021includeO" +
       "bjectLink\"j\n\036CreateObjectGroupBatchRespo" +
       "nse\022H\n\tresponses\030\001 \003(\0132*.api.services.v1" +
-      ".CreateObjectGroupResponseR\tresponses\"\235\002" +
+      ".CreateObjectGroupResponseR\tresponses\"\320\002" +
       "\n\031CreateObjectGroupResponse\022&\n\017object_gr" +
       "oup_id\030\001 \001(\tR\robjectGroupId\022Y\n\014object_li" +
       "nks\030\002 \003(\01326.api.services.v1.CreateObject" +
       "GroupResponse.ObjectLinksR\013objectLinks\022*" +
       "\n\021object_group_name\030\003 \001(\tR\017objectGroupNa" +
-      "me\022\022\n\004uuid\030\004 \001(\tR\004uuid\032=\n\013ObjectLinks\022\032\n" +
+      "me\022\022\n\004uuid\030\004 \001(\tR\004uuid\032p\n\013ObjectLinks\022\032\n" +
       "\010filename\030\001 \001(\tR\010filename\022\022\n\004link\030\002 \001(\tR" +
-      "\004link\"\200\002\n\023CreateObjectRequest\022\032\n\010filenam" +
-      "e\030\001 \001(\tR\010filename\022\032\n\010filetype\030\002 \001(\tR\010fil" +
-      "etype\022,\n\006labels\030\003 \003(\0132\024.api.models.v1.La" +
-      "belR\006labels\0223\n\010metadata\030\004 \003(\0132\027.api.mode" +
-      "ls.v1.MetadataR\010metadata\022\037\n\013content_len\030" +
-      "\005 \001(\003R\ncontentLen\022-\n\006origin\030\006 \001(\0132\025.api." +
-      "models.v1.OriginR\006origin\"\'\n\025GetObjectGro" +
-      "upRequest\022\016\n\002id\030\001 \001(\tR\002id\"W\n\026GetObjectGr" +
-      "oupResponse\022=\n\014object_group\030\001 \001(\0132\032.api." +
-      "models.v1.ObjectGroupR\013objectGroup\"+\n\031Fi" +
-      "nishObjectUploadRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
-      "\034\n\032FinishObjectUploadResponse\"*\n\030DeleteO" +
-      "bjectGroupRequest\022\016\n\002id\030\001 \001(\tR\002id\"\033\n\031Del" +
-      "eteObjectGroupResponseB\211\001\n4com.github.Sc" +
-      "ienceObjectsDB.java_api.api.services.v1B" +
-      "\033DatasetObjectsServiceModelsP\001Z2github.c" +
-      "om/ScienceObjectsDB/go-api/api/services/" +
-      "v1b\006proto3"
+      "\004link\022\033\n\tobject_id\030\003 \001(\tR\010objectId\022\024\n\005in" +
+      "dex\030\004 \001(\003R\005index\"\200\002\n\023CreateObjectRequest" +
+      "\022\032\n\010filename\030\001 \001(\tR\010filename\022\032\n\010filetype" +
+      "\030\002 \001(\tR\010filetype\022,\n\006labels\030\003 \003(\0132\024.api.m" +
+      "odels.v1.LabelR\006labels\0223\n\010metadata\030\004 \003(\013" +
+      "2\027.api.models.v1.MetadataR\010metadata\022\037\n\013c" +
+      "ontent_len\030\005 \001(\003R\ncontentLen\022-\n\006origin\030\006" +
+      " \001(\0132\025.api.models.v1.OriginR\006origin\"\'\n\025G" +
+      "etObjectGroupRequest\022\016\n\002id\030\001 \001(\tR\002id\"W\n\026" +
+      "GetObjectGroupResponse\022=\n\014object_group\030\001" +
+      " \001(\0132\032.api.models.v1.ObjectGroupR\013object" +
+      "Group\"+\n\031FinishObjectUploadRequest\022\016\n\002id" +
+      "\030\001 \001(\tR\002id\"\034\n\032FinishObjectUploadResponse" +
+      "\"*\n\030DeleteObjectGroupRequest\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\"\033\n\031DeleteObjectGroupResponseB\211\001\n4co" +
+      "m.github.ScienceObjectsDB.java_api.api.s" +
+      "ervices.v1B\033DatasetObjectsServiceModelsP" +
+      "\001Z2github.com/ScienceObjectsDB/go-api/ap" +
+      "i/services/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor(),
           com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectModels.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_services_v1_CreateObjectGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_services_v1_CreateObjectGroupRequest_fieldAccessorTable = new
@@ -166,7 +175,7 @@ public final class DatasetObjectsServiceModels {
     internal_static_api_services_v1_CreateObjectGroupResponse_ObjectLinks_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_services_v1_CreateObjectGroupResponse_ObjectLinks_descriptor,
-        new java.lang.String[] { "Filename", "Link", });
+        new java.lang.String[] { "Filename", "Link", "ObjectId", "Index", });
     internal_static_api_services_v1_CreateObjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_api_services_v1_CreateObjectRequest_fieldAccessorTable = new

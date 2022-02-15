@@ -8,14 +8,12 @@ public interface IndexOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 start_byte = 1 [json_name = "startByte"];</code>
-   * @return The startByte.
+   * <code>int64 start_byte = 1[json_name = "startByte"];</code>
    */
   long getStartByte();
 
   /**
-   * <code>int64 end_byte = 2 [json_name = "endByte"];</code>
-   * @return The endByte.
+   * <code>int64 end_byte = 2[json_name = "endByte"];</code>
    */
   long getEndByte();
 }

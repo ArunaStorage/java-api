@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetObjectGroupsInDateRangeRequest}
  */
-public final class GetObjectGroupsInDateRangeRequest extends
+public  final class GetObjectGroupsInDateRangeRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetObjectGroupsInDateRangeRequest)
     GetObjectGroupsInDateRangeRequestOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private GetObjectGroupsInDateRangeRequest() {
     id_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetObjectGroupsInDateRangeRequest();
   }
 
   @java.lang.Override
@@ -39,6 +32,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -82,7 +76,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -116,10 +110,8 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public java.lang.String getId() {
     java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
@@ -133,10 +125,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getIdBytes() {
     java.lang.Object ref = id_;
@@ -154,25 +144,20 @@ private static final long serialVersionUID = 0L;
   public static final int START_FIELD_NUMBER = 2;
   private com.google.protobuf.Timestamp start_;
   /**
-   * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
-   * @return Whether the start field is set.
+   * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
    */
-  @java.lang.Override
   public boolean hasStart() {
     return start_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
-   * @return The start.
+   * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.Timestamp getStart() {
     return start_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : start_;
   }
   /**
-   * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+   * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartOrBuilder() {
     return getStart();
   }
@@ -180,25 +165,20 @@ private static final long serialVersionUID = 0L;
   public static final int END_FIELD_NUMBER = 3;
   private com.google.protobuf.Timestamp end_;
   /**
-   * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
-   * @return Whether the end field is set.
+   * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
    */
-  @java.lang.Override
   public boolean hasEnd() {
     return end_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
-   * @return The end.
+   * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.Timestamp getEnd() {
     return end_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : end_;
   }
   /**
-   * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+   * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getEndOrBuilder() {
     return getEnd();
   }
@@ -261,20 +241,21 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsInDateRangeRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsInDateRangeRequest) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (hasStart() != other.hasStart()) return false;
+    boolean result = true;
+    result = result && getId()
+        .equals(other.getId());
+    result = result && (hasStart() == other.hasStart());
     if (hasStart()) {
-      if (!getStart()
-          .equals(other.getStart())) return false;
+      result = result && getStart()
+          .equals(other.getStart());
     }
-    if (hasEnd() != other.hasEnd()) return false;
+    result = result && (hasEnd() == other.hasEnd());
     if (hasEnd()) {
-      if (!getEnd()
-          .equals(other.getEnd())) return false;
+      result = result && getEnd()
+          .equals(other.getEnd());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -484,35 +465,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -567,8 +548,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -583,8 +563,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -600,9 +579,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setId(
         java.lang.String value) {
@@ -615,8 +592,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder clearId() {
       
@@ -625,9 +601,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -641,19 +615,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp start_;
+    private com.google.protobuf.Timestamp start_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
-     * @return Whether the start field is set.
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public boolean hasStart() {
       return startBuilder_ != null || start_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
-     * @return The start.
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public com.google.protobuf.Timestamp getStart() {
       if (startBuilder_ == null) {
@@ -663,7 +635,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public Builder setStart(com.google.protobuf.Timestamp value) {
       if (startBuilder_ == null) {
@@ -679,7 +651,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public Builder setStart(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -693,7 +665,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public Builder mergeStart(com.google.protobuf.Timestamp value) {
       if (startBuilder_ == null) {
@@ -711,7 +683,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public Builder clearStart() {
       if (startBuilder_ == null) {
@@ -725,7 +697,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartBuilder() {
       
@@ -733,7 +705,7 @@ private static final long serialVersionUID = 0L;
       return getStartFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getStartOrBuilder() {
       if (startBuilder_ != null) {
@@ -744,7 +716,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -760,19 +732,17 @@ private static final long serialVersionUID = 0L;
       return startBuilder_;
     }
 
-    private com.google.protobuf.Timestamp end_;
+    private com.google.protobuf.Timestamp end_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
-     * @return Whether the end field is set.
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public boolean hasEnd() {
       return endBuilder_ != null || end_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
-     * @return The end.
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public com.google.protobuf.Timestamp getEnd() {
       if (endBuilder_ == null) {
@@ -782,7 +752,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public Builder setEnd(com.google.protobuf.Timestamp value) {
       if (endBuilder_ == null) {
@@ -798,7 +768,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public Builder setEnd(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -812,7 +782,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public Builder mergeEnd(com.google.protobuf.Timestamp value) {
       if (endBuilder_ == null) {
@@ -830,7 +800,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public Builder clearEnd() {
       if (endBuilder_ == null) {
@@ -844,7 +814,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndBuilder() {
       
@@ -852,7 +822,7 @@ private static final long serialVersionUID = 0L;
       return getEndFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getEndOrBuilder() {
       if (endBuilder_ != null) {
@@ -863,7 +833,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -881,7 +851,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

@@ -8,32 +8,31 @@ public interface CreateObjectGroupBatchRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest> 
       getRequestsList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest getRequests(int index);
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
   int getRequestsCount();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder> 
       getRequestsOrBuilderList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder getRequestsOrBuilder(
       int index);
 
   /**
-   * <code>bool include_object_link = 2 [json_name = "includeObjectLink"];</code>
-   * @return The includeObjectLink.
+   * <code>bool include_object_link = 2[json_name = "includeObjectLink"];</code>
    */
   boolean getIncludeObjectLink();
 }

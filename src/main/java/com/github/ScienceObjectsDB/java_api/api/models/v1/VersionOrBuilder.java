@@ -8,37 +8,31 @@ public interface VersionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 major = 1 [json_name = "major"];</code>
-   * @return The major.
+   * <code>int32 major = 1[json_name = "major"];</code>
    */
   int getMajor();
 
   /**
-   * <code>int32 minor = 2 [json_name = "minor"];</code>
-   * @return The minor.
+   * <code>int32 minor = 2[json_name = "minor"];</code>
    */
   int getMinor();
 
   /**
-   * <code>int32 patch = 3 [json_name = "patch"];</code>
-   * @return The patch.
+   * <code>int32 patch = 3[json_name = "patch"];</code>
    */
   int getPatch();
 
   /**
-   * <code>int32 revision = 4 [json_name = "revision"];</code>
-   * @return The revision.
+   * <code>int32 revision = 4[json_name = "revision"];</code>
    */
   int getRevision();
 
   /**
-   * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-   * @return The enum numeric value on the wire for stage.
+   * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
    */
   int getStageValue();
   /**
-   * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-   * @return The stage.
+   * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage getStage();
 }

@@ -8,37 +8,35 @@ public interface TokenListOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string project_id = 1 [json_name = "projectId"];</code>
-   * @return The projectId.
+   * <code>string project_id = 1[json_name = "projectId"];</code>
    */
   java.lang.String getProjectId();
   /**
-   * <code>string project_id = 1 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
+   * <code>string project_id = 1[json_name = "projectId"];</code>
    */
   com.google.protobuf.ByteString
       getProjectIdBytes();
 
   /**
-   * <code>repeated .api.models.v1.TokenEntry token = 2 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.TokenEntry token = 2[json_name = "token"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.TokenEntry> 
       getTokenList();
   /**
-   * <code>repeated .api.models.v1.TokenEntry token = 2 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.TokenEntry token = 2[json_name = "token"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.TokenEntry getToken(int index);
   /**
-   * <code>repeated .api.models.v1.TokenEntry token = 2 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.TokenEntry token = 2[json_name = "token"];</code>
    */
   int getTokenCount();
   /**
-   * <code>repeated .api.models.v1.TokenEntry token = 2 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.TokenEntry token = 2[json_name = "token"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.TokenEntryOrBuilder> 
       getTokenOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.TokenEntry token = 2 [json_name = "token"];</code>
+   * <code>repeated .api.models.v1.TokenEntry token = 2[json_name = "token"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.TokenEntryOrBuilder getTokenOrBuilder(
       int index);

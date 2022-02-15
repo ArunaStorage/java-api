@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.AddUserToProjectRequest}
  */
-public final class AddUserToProjectRequest extends
+public  final class AddUserToProjectRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.AddUserToProjectRequest)
     AddUserToProjectRequestOrBuilder {
@@ -19,13 +19,6 @@ private static final long serialVersionUID = 0L;
     userId_ = "";
     scope_ = java.util.Collections.emptyList();
     projectId_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new AddUserToProjectRequest();
   }
 
   @java.lang.Override
@@ -60,9 +53,9 @@ private static final long serialVersionUID = 0L;
           }
           case 16: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               scope_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             scope_.add(rawValue);
             break;
@@ -72,9 +65,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 scope_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               scope_.add(rawValue);
             }
@@ -88,7 +81,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -102,7 +95,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         scope_ = java.util.Collections.unmodifiableList(scope_);
       }
       this.unknownFields = unknownFields.build();
@@ -122,13 +115,12 @@ private static final long serialVersionUID = 0L;
             com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest.class, com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int USER_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object userId_;
   /**
-   * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>string user_id = 1[json_name = "userId"];</code>
    */
-  @java.lang.Override
   public java.lang.String getUserId() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
@@ -142,10 +134,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return The bytes for userId.
+   * <code>string user_id = 1[json_name = "userId"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getUserIdBytes() {
     java.lang.Object ref = userId_;
@@ -173,46 +163,34 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @return A list containing the scope.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getScopeList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.github.ScienceObjectsDB.java_api.api.models.v1.Right>(scope_, scope_converter_);
   }
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @return The count of scope.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
-  @java.lang.Override
   public int getScopeCount() {
     return scope_.size();
   }
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @param index The index of the element to return.
-   * @return The scope at the given index.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Right getScope(int index) {
     return scope_converter_.convert(scope_.get(index));
   }
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @return A list containing the enum numeric values on the wire for scope.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
-  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getScopeValueList() {
     return scope_;
   }
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of scope at the given index.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
-  @java.lang.Override
   public int getScopeValue(int index) {
     return scope_.get(index);
   }
@@ -221,10 +199,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROJECT_ID_FIELD_NUMBER = 3;
   private volatile java.lang.Object projectId_;
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The projectId.
+   * <code>string project_id = 3[json_name = "projectId"];</code>
    */
-  @java.lang.Override
   public java.lang.String getProjectId() {
     java.lang.Object ref = projectId_;
     if (ref instanceof java.lang.String) {
@@ -238,10 +214,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
+   * <code>string project_id = 3[json_name = "projectId"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getProjectIdBytes() {
     java.lang.Object ref = projectId_;
@@ -326,13 +300,14 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest) obj;
 
-    if (!getUserId()
-        .equals(other.getUserId())) return false;
-    if (!scope_.equals(other.scope_)) return false;
-    if (!getProjectId()
-        .equals(other.getProjectId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getUserId()
+        .equals(other.getUserId());
+    result = result && scope_.equals(other.scope_);
+    result = result && getProjectId()
+        .equals(other.getProjectId());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -486,7 +461,7 @@ private static final long serialVersionUID = 0L;
       userId_ = "";
 
       scope_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       projectId_ = "";
 
       return this;
@@ -516,48 +491,50 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest result = new com.github.ScienceObjectsDB.java_api.api.services.v1.AddUserToProjectRequest(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.userId_ = userId_;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         scope_ = java.util.Collections.unmodifiableList(scope_);
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.scope_ = scope_;
       result.projectId_ = projectId_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -578,7 +555,7 @@ private static final long serialVersionUID = 0L;
       if (!other.scope_.isEmpty()) {
         if (scope_.isEmpty()) {
           scope_ = other.scope_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureScopeIsMutable();
           scope_.addAll(other.scope_);
@@ -621,8 +598,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object userId_ = "";
     /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return The userId.
+     * <code>string user_id = 1[json_name = "userId"];</code>
      */
     public java.lang.String getUserId() {
       java.lang.Object ref = userId_;
@@ -637,8 +613,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return The bytes for userId.
+     * <code>string user_id = 1[json_name = "userId"];</code>
      */
     public com.google.protobuf.ByteString
         getUserIdBytes() {
@@ -654,9 +629,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @param value The userId to set.
-     * @return This builder for chaining.
+     * <code>string user_id = 1[json_name = "userId"];</code>
      */
     public Builder setUserId(
         java.lang.String value) {
@@ -669,8 +642,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return This builder for chaining.
+     * <code>string user_id = 1[json_name = "userId"];</code>
      */
     public Builder clearUserId() {
       
@@ -679,9 +651,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @param value The bytes for userId to set.
-     * @return This builder for chaining.
+     * <code>string user_id = 1[json_name = "userId"];</code>
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
@@ -698,39 +668,32 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> scope_ =
       java.util.Collections.emptyList();
     private void ensureScopeIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         scope_ = new java.util.ArrayList<java.lang.Integer>(scope_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @return A list containing the scope.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getScopeList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, com.github.ScienceObjectsDB.java_api.api.models.v1.Right>(scope_, scope_converter_);
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @return The count of scope.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public int getScopeCount() {
       return scope_.size();
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param index The index of the element to return.
-     * @return The scope at the given index.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Right getScope(int index) {
       return scope_converter_.convert(scope_.get(index));
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param index The index to set the value at.
-     * @param value The scope to set.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder setScope(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Right value) {
@@ -743,9 +706,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param value The scope to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder addScope(com.github.ScienceObjectsDB.java_api.api.models.v1.Right value) {
       if (value == null) {
@@ -757,9 +718,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param values The scope to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder addAllScope(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.Right> values) {
@@ -771,36 +730,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder clearScope() {
       scope_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @return A list containing the enum numeric values on the wire for scope.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public java.util.List<java.lang.Integer>
     getScopeValueList() {
       return java.util.Collections.unmodifiableList(scope_);
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of scope at the given index.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public int getScopeValue(int index) {
       return scope_.get(index);
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of scope at the given index.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder setScopeValue(
         int index, int value) {
@@ -810,9 +762,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param value The enum numeric value on the wire for scope to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder addScopeValue(int value) {
       ensureScopeIsMutable();
@@ -821,9 +771,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-     * @param values The enum numeric values on the wire for scope to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
      */
     public Builder addAllScopeValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -837,8 +785,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object projectId_ = "";
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @return The projectId.
+     * <code>string project_id = 3[json_name = "projectId"];</code>
      */
     public java.lang.String getProjectId() {
       java.lang.Object ref = projectId_;
@@ -853,8 +800,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
+     * <code>string project_id = 3[json_name = "projectId"];</code>
      */
     public com.google.protobuf.ByteString
         getProjectIdBytes() {
@@ -870,9 +816,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @param value The projectId to set.
-     * @return This builder for chaining.
+     * <code>string project_id = 3[json_name = "projectId"];</code>
      */
     public Builder setProjectId(
         java.lang.String value) {
@@ -885,8 +829,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @return This builder for chaining.
+     * <code>string project_id = 3[json_name = "projectId"];</code>
      */
     public Builder clearProjectId() {
       
@@ -895,9 +838,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
-     * @param value The bytes for projectId to set.
-     * @return This builder for chaining.
+     * <code>string project_id = 3[json_name = "projectId"];</code>
      */
     public Builder setProjectIdBytes(
         com.google.protobuf.ByteString value) {
@@ -913,7 +854,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

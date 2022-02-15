@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.CreateObjectGroupResponse}
  */
-public final class CreateObjectGroupResponse extends
+public  final class CreateObjectGroupResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.CreateObjectGroupResponse)
     CreateObjectGroupResponseOrBuilder {
@@ -20,13 +20,6 @@ private static final long serialVersionUID = 0L;
     objectLinks_ = java.util.Collections.emptyList();
     objectGroupName_ = "";
     uuid_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new CreateObjectGroupResponse();
   }
 
   @java.lang.Override
@@ -60,9 +53,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               objectLinks_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             objectLinks_.add(
                 input.readMessage(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.parser(), extensionRegistry));
@@ -81,7 +74,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -95,7 +88,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         objectLinks_ = java.util.Collections.unmodifiableList(objectLinks_);
       }
       this.unknownFields = unknownFields.build();
@@ -120,33 +113,44 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string filename = 1 [json_name = "filename"];</code>
-     * @return The filename.
+     * <code>string filename = 1[json_name = "filename"];</code>
      */
     java.lang.String getFilename();
     /**
-     * <code>string filename = 1 [json_name = "filename"];</code>
-     * @return The bytes for filename.
+     * <code>string filename = 1[json_name = "filename"];</code>
      */
     com.google.protobuf.ByteString
         getFilenameBytes();
 
     /**
-     * <code>string link = 2 [json_name = "link"];</code>
-     * @return The link.
+     * <code>string link = 2[json_name = "link"];</code>
      */
     java.lang.String getLink();
     /**
-     * <code>string link = 2 [json_name = "link"];</code>
-     * @return The bytes for link.
+     * <code>string link = 2[json_name = "link"];</code>
      */
     com.google.protobuf.ByteString
         getLinkBytes();
+
+    /**
+     * <code>string object_id = 3[json_name = "objectId"];</code>
+     */
+    java.lang.String getObjectId();
+    /**
+     * <code>string object_id = 3[json_name = "objectId"];</code>
+     */
+    com.google.protobuf.ByteString
+        getObjectIdBytes();
+
+    /**
+     * <code>int64 index = 4[json_name = "index"];</code>
+     */
+    long getIndex();
   }
   /**
    * Protobuf type {@code api.services.v1.CreateObjectGroupResponse.ObjectLinks}
    */
-  public static final class ObjectLinks extends
+  public  static final class ObjectLinks extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:api.services.v1.CreateObjectGroupResponse.ObjectLinks)
       ObjectLinksOrBuilder {
@@ -158,13 +162,8 @@ private static final long serialVersionUID = 0L;
     private ObjectLinks() {
       filename_ = "";
       link_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ObjectLinks();
+      objectId_ = "";
+      index_ = 0L;
     }
 
     @java.lang.Override
@@ -180,6 +179,7 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -202,8 +202,19 @@ private static final long serialVersionUID = 0L;
               link_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              objectId_ = s;
+              break;
+            }
+            case 32: {
+
+              index_ = input.readInt64();
+              break;
+            }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -237,10 +248,8 @@ private static final long serialVersionUID = 0L;
     public static final int FILENAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object filename_;
     /**
-     * <code>string filename = 1 [json_name = "filename"];</code>
-     * @return The filename.
+     * <code>string filename = 1[json_name = "filename"];</code>
      */
-    @java.lang.Override
     public java.lang.String getFilename() {
       java.lang.Object ref = filename_;
       if (ref instanceof java.lang.String) {
@@ -254,10 +263,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string filename = 1 [json_name = "filename"];</code>
-     * @return The bytes for filename.
+     * <code>string filename = 1[json_name = "filename"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilenameBytes() {
       java.lang.Object ref = filename_;
@@ -275,10 +282,8 @@ private static final long serialVersionUID = 0L;
     public static final int LINK_FIELD_NUMBER = 2;
     private volatile java.lang.Object link_;
     /**
-     * <code>string link = 2 [json_name = "link"];</code>
-     * @return The link.
+     * <code>string link = 2[json_name = "link"];</code>
      */
-    @java.lang.Override
     public java.lang.String getLink() {
       java.lang.Object ref = link_;
       if (ref instanceof java.lang.String) {
@@ -292,10 +297,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string link = 2 [json_name = "link"];</code>
-     * @return The bytes for link.
+     * <code>string link = 2[json_name = "link"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getLinkBytes() {
       java.lang.Object ref = link_;
@@ -308,6 +311,49 @@ private static final long serialVersionUID = 0L;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int OBJECT_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object objectId_;
+    /**
+     * <code>string object_id = 3[json_name = "objectId"];</code>
+     */
+    public java.lang.String getObjectId() {
+      java.lang.Object ref = objectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        objectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string object_id = 3[json_name = "objectId"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getObjectIdBytes() {
+      java.lang.Object ref = objectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 4;
+    private long index_;
+    /**
+     * <code>int64 index = 4[json_name = "index"];</code>
+     */
+    public long getIndex() {
+      return index_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -330,6 +376,12 @@ private static final long serialVersionUID = 0L;
       if (!getLinkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, link_);
       }
+      if (!getObjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, objectId_);
+      }
+      if (index_ != 0L) {
+        output.writeInt64(4, index_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -344,6 +396,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!getLinkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, link_);
+      }
+      if (!getObjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, objectId_);
+      }
+      if (index_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, index_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -360,12 +419,17 @@ private static final long serialVersionUID = 0L;
       }
       com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks) obj;
 
-      if (!getFilename()
-          .equals(other.getFilename())) return false;
-      if (!getLink()
-          .equals(other.getLink())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getFilename()
+          .equals(other.getFilename());
+      result = result && getLink()
+          .equals(other.getLink());
+      result = result && getObjectId()
+          .equals(other.getObjectId());
+      result = result && (getIndex()
+          == other.getIndex());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -379,6 +443,11 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getFilename().hashCode();
       hash = (37 * hash) + LINK_FIELD_NUMBER;
       hash = (53 * hash) + getLink().hashCode();
+      hash = (37 * hash) + OBJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getObjectId().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIndex());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -516,6 +585,10 @@ private static final long serialVersionUID = 0L;
 
         link_ = "";
 
+        objectId_ = "";
+
+        index_ = 0L;
+
         return this;
       }
 
@@ -544,41 +617,43 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks result = new com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks(this);
         result.filename_ = filename_;
         result.link_ = link_;
+        result.objectId_ = objectId_;
+        result.index_ = index_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -599,6 +674,13 @@ private static final long serialVersionUID = 0L;
         if (!other.getLink().isEmpty()) {
           link_ = other.link_;
           onChanged();
+        }
+        if (!other.getObjectId().isEmpty()) {
+          objectId_ = other.objectId_;
+          onChanged();
+        }
+        if (other.getIndex() != 0L) {
+          setIndex(other.getIndex());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -631,8 +713,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object filename_ = "";
       /**
-       * <code>string filename = 1 [json_name = "filename"];</code>
-       * @return The filename.
+       * <code>string filename = 1[json_name = "filename"];</code>
        */
       public java.lang.String getFilename() {
         java.lang.Object ref = filename_;
@@ -647,8 +728,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string filename = 1 [json_name = "filename"];</code>
-       * @return The bytes for filename.
+       * <code>string filename = 1[json_name = "filename"];</code>
        */
       public com.google.protobuf.ByteString
           getFilenameBytes() {
@@ -664,9 +744,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string filename = 1 [json_name = "filename"];</code>
-       * @param value The filename to set.
-       * @return This builder for chaining.
+       * <code>string filename = 1[json_name = "filename"];</code>
        */
       public Builder setFilename(
           java.lang.String value) {
@@ -679,8 +757,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string filename = 1 [json_name = "filename"];</code>
-       * @return This builder for chaining.
+       * <code>string filename = 1[json_name = "filename"];</code>
        */
       public Builder clearFilename() {
         
@@ -689,9 +766,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string filename = 1 [json_name = "filename"];</code>
-       * @param value The bytes for filename to set.
-       * @return This builder for chaining.
+       * <code>string filename = 1[json_name = "filename"];</code>
        */
       public Builder setFilenameBytes(
           com.google.protobuf.ByteString value) {
@@ -707,8 +782,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object link_ = "";
       /**
-       * <code>string link = 2 [json_name = "link"];</code>
-       * @return The link.
+       * <code>string link = 2[json_name = "link"];</code>
        */
       public java.lang.String getLink() {
         java.lang.Object ref = link_;
@@ -723,8 +797,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string link = 2 [json_name = "link"];</code>
-       * @return The bytes for link.
+       * <code>string link = 2[json_name = "link"];</code>
        */
       public com.google.protobuf.ByteString
           getLinkBytes() {
@@ -740,9 +813,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string link = 2 [json_name = "link"];</code>
-       * @param value The link to set.
-       * @return This builder for chaining.
+       * <code>string link = 2[json_name = "link"];</code>
        */
       public Builder setLink(
           java.lang.String value) {
@@ -755,8 +826,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string link = 2 [json_name = "link"];</code>
-       * @return This builder for chaining.
+       * <code>string link = 2[json_name = "link"];</code>
        */
       public Builder clearLink() {
         
@@ -765,9 +835,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string link = 2 [json_name = "link"];</code>
-       * @param value The bytes for link to set.
-       * @return This builder for chaining.
+       * <code>string link = 2[json_name = "link"];</code>
        */
       public Builder setLinkBytes(
           com.google.protobuf.ByteString value) {
@@ -780,10 +848,105 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.lang.Object objectId_ = "";
+      /**
+       * <code>string object_id = 3[json_name = "objectId"];</code>
+       */
+      public java.lang.String getObjectId() {
+        java.lang.Object ref = objectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string object_id = 3[json_name = "objectId"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getObjectIdBytes() {
+        java.lang.Object ref = objectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string object_id = 3[json_name = "objectId"];</code>
+       */
+      public Builder setObjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string object_id = 3[json_name = "objectId"];</code>
+       */
+      public Builder clearObjectId() {
+        
+        objectId_ = getDefaultInstance().getObjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string object_id = 3[json_name = "objectId"];</code>
+       */
+      public Builder setObjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        objectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long index_ ;
+      /**
+       * <code>int64 index = 4[json_name = "index"];</code>
+       */
+      public long getIndex() {
+        return index_;
+      }
+      /**
+       * <code>int64 index = 4[json_name = "index"];</code>
+       */
+      public Builder setIndex(long value) {
+        
+        index_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 index = 4[json_name = "index"];</code>
+       */
+      public Builder clearIndex() {
+        
+        index_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -833,13 +996,12 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int OBJECT_GROUP_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object objectGroupId_;
   /**
-   * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-   * @return The objectGroupId.
+   * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
    */
-  @java.lang.Override
   public java.lang.String getObjectGroupId() {
     java.lang.Object ref = objectGroupId_;
     if (ref instanceof java.lang.String) {
@@ -853,10 +1015,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-   * @return The bytes for objectGroupId.
+   * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getObjectGroupIdBytes() {
     java.lang.Object ref = objectGroupId_;
@@ -874,38 +1034,33 @@ private static final long serialVersionUID = 0L;
   public static final int OBJECT_LINKS_FIELD_NUMBER = 2;
   private java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks> objectLinks_;
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks> getObjectLinksList() {
     return objectLinks_;
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder> 
       getObjectLinksOrBuilderList() {
     return objectLinks_;
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
-  @java.lang.Override
   public int getObjectLinksCount() {
     return objectLinks_.size();
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks getObjectLinks(int index) {
     return objectLinks_.get(index);
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder getObjectLinksOrBuilder(
       int index) {
     return objectLinks_.get(index);
@@ -914,10 +1069,8 @@ private static final long serialVersionUID = 0L;
   public static final int OBJECT_GROUP_NAME_FIELD_NUMBER = 3;
   private volatile java.lang.Object objectGroupName_;
   /**
-   * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-   * @return The objectGroupName.
+   * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
    */
-  @java.lang.Override
   public java.lang.String getObjectGroupName() {
     java.lang.Object ref = objectGroupName_;
     if (ref instanceof java.lang.String) {
@@ -931,10 +1084,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-   * @return The bytes for objectGroupName.
+   * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getObjectGroupNameBytes() {
     java.lang.Object ref = objectGroupName_;
@@ -956,10 +1107,8 @@ private static final long serialVersionUID = 0L;
    * A user defined uuid that is used to identify requests in chunked/streamed workloads
    * </pre>
    *
-   * <code>string uuid = 4 [json_name = "uuid"];</code>
-   * @return The uuid.
+   * <code>string uuid = 4[json_name = "uuid"];</code>
    */
-  @java.lang.Override
   public java.lang.String getUuid() {
     java.lang.Object ref = uuid_;
     if (ref instanceof java.lang.String) {
@@ -977,10 +1126,8 @@ private static final long serialVersionUID = 0L;
    * A user defined uuid that is used to identify requests in chunked/streamed workloads
    * </pre>
    *
-   * <code>string uuid = 4 [json_name = "uuid"];</code>
-   * @return The bytes for uuid.
+   * <code>string uuid = 4[json_name = "uuid"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getUuidBytes() {
     java.lang.Object ref = uuid_;
@@ -1058,16 +1205,17 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse) obj;
 
-    if (!getObjectGroupId()
-        .equals(other.getObjectGroupId())) return false;
-    if (!getObjectLinksList()
-        .equals(other.getObjectLinksList())) return false;
-    if (!getObjectGroupName()
-        .equals(other.getObjectGroupName())) return false;
-    if (!getUuid()
-        .equals(other.getUuid())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getObjectGroupId()
+        .equals(other.getObjectGroupId());
+    result = result && getObjectLinksList()
+        .equals(other.getObjectLinksList());
+    result = result && getObjectGroupName()
+        .equals(other.getObjectGroupName());
+    result = result && getUuid()
+        .equals(other.getUuid());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -1225,7 +1373,7 @@ private static final long serialVersionUID = 0L;
 
       if (objectLinksBuilder_ == null) {
         objectLinks_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         objectLinksBuilder_.clear();
       }
@@ -1260,11 +1408,12 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse result = new com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.objectGroupId_ = objectGroupId_;
       if (objectLinksBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           objectLinks_ = java.util.Collections.unmodifiableList(objectLinks_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.objectLinks_ = objectLinks_;
       } else {
@@ -1272,41 +1421,42 @@ private static final long serialVersionUID = 0L;
       }
       result.objectGroupName_ = objectGroupName_;
       result.uuid_ = uuid_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1328,7 +1478,7 @@ private static final long serialVersionUID = 0L;
         if (!other.objectLinks_.isEmpty()) {
           if (objectLinks_.isEmpty()) {
             objectLinks_ = other.objectLinks_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureObjectLinksIsMutable();
             objectLinks_.addAll(other.objectLinks_);
@@ -1341,7 +1491,7 @@ private static final long serialVersionUID = 0L;
             objectLinksBuilder_.dispose();
             objectLinksBuilder_ = null;
             objectLinks_ = other.objectLinks_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             objectLinksBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getObjectLinksFieldBuilder() : null;
@@ -1390,8 +1540,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object objectGroupId_ = "";
     /**
-     * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-     * @return The objectGroupId.
+     * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
      */
     public java.lang.String getObjectGroupId() {
       java.lang.Object ref = objectGroupId_;
@@ -1406,8 +1555,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-     * @return The bytes for objectGroupId.
+     * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
      */
     public com.google.protobuf.ByteString
         getObjectGroupIdBytes() {
@@ -1423,9 +1571,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-     * @param value The objectGroupId to set.
-     * @return This builder for chaining.
+     * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
      */
     public Builder setObjectGroupId(
         java.lang.String value) {
@@ -1438,8 +1584,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-     * @return This builder for chaining.
+     * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
      */
     public Builder clearObjectGroupId() {
       
@@ -1448,9 +1593,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-     * @param value The bytes for objectGroupId to set.
-     * @return This builder for chaining.
+     * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
      */
     public Builder setObjectGroupIdBytes(
         com.google.protobuf.ByteString value) {
@@ -1467,9 +1610,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks> objectLinks_ =
       java.util.Collections.emptyList();
     private void ensureObjectLinksIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         objectLinks_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks>(objectLinks_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1477,7 +1620,7 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder> objectLinksBuilder_;
 
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks> getObjectLinksList() {
       if (objectLinksBuilder_ == null) {
@@ -1487,7 +1630,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public int getObjectLinksCount() {
       if (objectLinksBuilder_ == null) {
@@ -1497,7 +1640,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks getObjectLinks(int index) {
       if (objectLinksBuilder_ == null) {
@@ -1507,7 +1650,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder setObjectLinks(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks value) {
@@ -1524,7 +1667,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder setObjectLinks(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder builderForValue) {
@@ -1538,7 +1681,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder addObjectLinks(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks value) {
       if (objectLinksBuilder_ == null) {
@@ -1554,7 +1697,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder addObjectLinks(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks value) {
@@ -1571,7 +1714,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder addObjectLinks(
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder builderForValue) {
@@ -1585,7 +1728,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder addObjectLinks(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder builderForValue) {
@@ -1599,7 +1742,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder addAllObjectLinks(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks> values) {
@@ -1614,12 +1757,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder clearObjectLinks() {
       if (objectLinksBuilder_ == null) {
         objectLinks_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         objectLinksBuilder_.clear();
@@ -1627,7 +1770,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public Builder removeObjectLinks(int index) {
       if (objectLinksBuilder_ == null) {
@@ -1640,14 +1783,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder getObjectLinksBuilder(
         int index) {
       return getObjectLinksFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder getObjectLinksOrBuilder(
         int index) {
@@ -1657,7 +1800,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder> 
          getObjectLinksOrBuilderList() {
@@ -1668,14 +1811,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder addObjectLinksBuilder() {
       return getObjectLinksFieldBuilder().addBuilder(
           com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder addObjectLinksBuilder(
         int index) {
@@ -1683,7 +1826,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder> 
          getObjectLinksBuilderList() {
@@ -1696,7 +1839,7 @@ private static final long serialVersionUID = 0L;
         objectLinksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder>(
                 objectLinks_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         objectLinks_ = null;
@@ -1706,8 +1849,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object objectGroupName_ = "";
     /**
-     * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-     * @return The objectGroupName.
+     * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
      */
     public java.lang.String getObjectGroupName() {
       java.lang.Object ref = objectGroupName_;
@@ -1722,8 +1864,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-     * @return The bytes for objectGroupName.
+     * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
      */
     public com.google.protobuf.ByteString
         getObjectGroupNameBytes() {
@@ -1739,9 +1880,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-     * @param value The objectGroupName to set.
-     * @return This builder for chaining.
+     * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
      */
     public Builder setObjectGroupName(
         java.lang.String value) {
@@ -1754,8 +1893,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-     * @return This builder for chaining.
+     * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
      */
     public Builder clearObjectGroupName() {
       
@@ -1764,9 +1902,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-     * @param value The bytes for objectGroupName to set.
-     * @return This builder for chaining.
+     * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
      */
     public Builder setObjectGroupNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1786,8 +1922,7 @@ private static final long serialVersionUID = 0L;
      * A user defined uuid that is used to identify requests in chunked/streamed workloads
      * </pre>
      *
-     * <code>string uuid = 4 [json_name = "uuid"];</code>
-     * @return The uuid.
+     * <code>string uuid = 4[json_name = "uuid"];</code>
      */
     public java.lang.String getUuid() {
       java.lang.Object ref = uuid_;
@@ -1806,8 +1941,7 @@ private static final long serialVersionUID = 0L;
      * A user defined uuid that is used to identify requests in chunked/streamed workloads
      * </pre>
      *
-     * <code>string uuid = 4 [json_name = "uuid"];</code>
-     * @return The bytes for uuid.
+     * <code>string uuid = 4[json_name = "uuid"];</code>
      */
     public com.google.protobuf.ByteString
         getUuidBytes() {
@@ -1827,9 +1961,7 @@ private static final long serialVersionUID = 0L;
      * A user defined uuid that is used to identify requests in chunked/streamed workloads
      * </pre>
      *
-     * <code>string uuid = 4 [json_name = "uuid"];</code>
-     * @param value The uuid to set.
-     * @return This builder for chaining.
+     * <code>string uuid = 4[json_name = "uuid"];</code>
      */
     public Builder setUuid(
         java.lang.String value) {
@@ -1846,8 +1978,7 @@ private static final long serialVersionUID = 0L;
      * A user defined uuid that is used to identify requests in chunked/streamed workloads
      * </pre>
      *
-     * <code>string uuid = 4 [json_name = "uuid"];</code>
-     * @return This builder for chaining.
+     * <code>string uuid = 4[json_name = "uuid"];</code>
      */
     public Builder clearUuid() {
       
@@ -1860,9 +1991,7 @@ private static final long serialVersionUID = 0L;
      * A user defined uuid that is used to identify requests in chunked/streamed workloads
      * </pre>
      *
-     * <code>string uuid = 4 [json_name = "uuid"];</code>
-     * @param value The bytes for uuid to set.
-     * @return This builder for chaining.
+     * <code>string uuid = 4[json_name = "uuid"];</code>
      */
     public Builder setUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1878,7 +2007,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

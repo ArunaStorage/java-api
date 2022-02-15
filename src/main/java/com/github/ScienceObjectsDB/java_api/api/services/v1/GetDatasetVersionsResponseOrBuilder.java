@@ -8,25 +8,25 @@ public interface GetDatasetVersionsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1 [json_name = "datasetVersions"];</code>
+   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1[json_name = "datasetVersions"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion> 
       getDatasetVersionsList();
   /**
-   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1 [json_name = "datasetVersions"];</code>
+   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1[json_name = "datasetVersions"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersion getDatasetVersions(int index);
   /**
-   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1 [json_name = "datasetVersions"];</code>
+   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1[json_name = "datasetVersions"];</code>
    */
   int getDatasetVersionsCount();
   /**
-   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1 [json_name = "datasetVersions"];</code>
+   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1[json_name = "datasetVersions"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder> 
       getDatasetVersionsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1 [json_name = "datasetVersions"];</code>
+   * <code>repeated .api.models.v1.DatasetVersion dataset_versions = 1[json_name = "datasetVersions"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetVersionOrBuilder getDatasetVersionsOrBuilder(
       int index);

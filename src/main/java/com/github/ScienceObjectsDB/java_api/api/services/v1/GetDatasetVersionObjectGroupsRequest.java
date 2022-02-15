@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetDatasetVersionObjectGroupsRequest}
  */
-public final class GetDatasetVersionObjectGroupsRequest extends
+public  final class GetDatasetVersionObjectGroupsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetDatasetVersionObjectGroupsRequest)
     GetDatasetVersionObjectGroupsRequestOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private GetDatasetVersionObjectGroupsRequest() {
     id_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetDatasetVersionObjectGroupsRequest();
   }
 
   @java.lang.Override
@@ -39,6 +32,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -55,8 +49,21 @@ private static final long serialVersionUID = 0L;
             id_ = s;
             break;
           }
+          case 18: {
+            com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.Builder subBuilder = null;
+            if (pageRequest_ != null) {
+              subBuilder = pageRequest_.toBuilder();
+            }
+            pageRequest_ = input.readMessage(com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(pageRequest_);
+              pageRequest_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -90,10 +97,8 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public java.lang.String getId() {
     java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
@@ -107,10 +112,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getIdBytes() {
     java.lang.Object ref = id_;
@@ -123,6 +126,27 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int PAGE_REQUEST_FIELD_NUMBER = 2;
+  private com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest pageRequest_;
+  /**
+   * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+   */
+  public boolean hasPageRequest() {
+    return pageRequest_ != null;
+  }
+  /**
+   * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+   */
+  public com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest getPageRequest() {
+    return pageRequest_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.getDefaultInstance() : pageRequest_;
+  }
+  /**
+   * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+   */
+  public com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequestOrBuilder getPageRequestOrBuilder() {
+    return getPageRequest();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -142,6 +166,9 @@ private static final long serialVersionUID = 0L;
     if (!getIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
+    if (pageRequest_ != null) {
+      output.writeMessage(2, getPageRequest());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -153,6 +180,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+    }
+    if (pageRequest_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getPageRequest());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -169,10 +200,16 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionObjectGroupsRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionObjectGroupsRequest) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getId()
+        .equals(other.getId());
+    result = result && (hasPageRequest() == other.hasPageRequest());
+    if (hasPageRequest()) {
+      result = result && getPageRequest()
+          .equals(other.getPageRequest());
+    }
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -184,6 +221,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
+    if (hasPageRequest()) {
+      hash = (37 * hash) + PAGE_REQUEST_FIELD_NUMBER;
+      hash = (53 * hash) + getPageRequest().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -319,6 +360,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       id_ = "";
 
+      if (pageRequestBuilder_ == null) {
+        pageRequest_ = null;
+      } else {
+        pageRequest_ = null;
+        pageRequestBuilder_ = null;
+      }
       return this;
     }
 
@@ -346,41 +393,46 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionObjectGroupsRequest buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionObjectGroupsRequest result = new com.github.ScienceObjectsDB.java_api.api.services.v1.GetDatasetVersionObjectGroupsRequest(this);
       result.id_ = id_;
+      if (pageRequestBuilder_ == null) {
+        result.pageRequest_ = pageRequest_;
+      } else {
+        result.pageRequest_ = pageRequestBuilder_.build();
+      }
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -397,6 +449,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         onChanged();
+      }
+      if (other.hasPageRequest()) {
+        mergePageRequest(other.getPageRequest());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -429,8 +484,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -445,8 +499,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -462,9 +515,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setId(
         java.lang.String value) {
@@ -477,8 +528,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder clearId() {
       
@@ -487,9 +537,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -502,10 +550,127 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
+    private com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest pageRequest_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest, com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequestOrBuilder> pageRequestBuilder_;
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public boolean hasPageRequest() {
+      return pageRequestBuilder_ != null || pageRequest_ != null;
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest getPageRequest() {
+      if (pageRequestBuilder_ == null) {
+        return pageRequest_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.getDefaultInstance() : pageRequest_;
+      } else {
+        return pageRequestBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public Builder setPageRequest(com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest value) {
+      if (pageRequestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        pageRequest_ = value;
+        onChanged();
+      } else {
+        pageRequestBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public Builder setPageRequest(
+        com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.Builder builderForValue) {
+      if (pageRequestBuilder_ == null) {
+        pageRequest_ = builderForValue.build();
+        onChanged();
+      } else {
+        pageRequestBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public Builder mergePageRequest(com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest value) {
+      if (pageRequestBuilder_ == null) {
+        if (pageRequest_ != null) {
+          pageRequest_ =
+            com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.newBuilder(pageRequest_).mergeFrom(value).buildPartial();
+        } else {
+          pageRequest_ = value;
+        }
+        onChanged();
+      } else {
+        pageRequestBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public Builder clearPageRequest() {
+      if (pageRequestBuilder_ == null) {
+        pageRequest_ = null;
+        onChanged();
+      } else {
+        pageRequest_ = null;
+        pageRequestBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.Builder getPageRequestBuilder() {
+      
+      onChanged();
+      return getPageRequestFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    public com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequestOrBuilder getPageRequestOrBuilder() {
+      if (pageRequestBuilder_ != null) {
+        return pageRequestBuilder_.getMessageOrBuilder();
+      } else {
+        return pageRequest_ == null ?
+            com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.getDefaultInstance() : pageRequest_;
+      }
+    }
+    /**
+     * <code>.api.models.v1.PageRequest page_request = 2[json_name = "pageRequest"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest, com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequestOrBuilder> 
+        getPageRequestFieldBuilder() {
+      if (pageRequestBuilder_ == null) {
+        pageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest, com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequest.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.PageRequestOrBuilder>(
+                getPageRequest(),
+                getParentForChildren(),
+                isClean());
+        pageRequest_ = null;
+      }
+      return pageRequestBuilder_;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

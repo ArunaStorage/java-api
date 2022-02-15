@@ -8,17 +8,15 @@ public interface UpdateDatasetFieldRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.UpdateFieldsRequest update_request = 1 [json_name = "updateRequest"];</code>
-   * @return Whether the updateRequest field is set.
+   * <code>.api.models.v1.UpdateFieldsRequest update_request = 1[json_name = "updateRequest"];</code>
    */
   boolean hasUpdateRequest();
   /**
-   * <code>.api.models.v1.UpdateFieldsRequest update_request = 1 [json_name = "updateRequest"];</code>
-   * @return The updateRequest.
+   * <code>.api.models.v1.UpdateFieldsRequest update_request = 1[json_name = "updateRequest"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest getUpdateRequest();
   /**
-   * <code>.api.models.v1.UpdateFieldsRequest update_request = 1 [json_name = "updateRequest"];</code>
+   * <code>.api.models.v1.UpdateFieldsRequest update_request = 1[json_name = "updateRequest"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequestOrBuilder getUpdateRequestOrBuilder();
 }

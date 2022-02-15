@@ -8,20 +8,17 @@ public interface GetMultipartUploadLinkRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
   java.lang.String getObjectId();
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The bytes for objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
   com.google.protobuf.ByteString
       getObjectIdBytes();
 
   /**
-   * <code>int64 upload_part = 2 [json_name = "uploadPart"];</code>
-   * @return The uploadPart.
+   * <code>int64 upload_part = 2[json_name = "uploadPart"];</code>
    */
   long getUploadPart();
 }

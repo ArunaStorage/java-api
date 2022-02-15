@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetObjectGroupResponse}
  */
-public final class GetObjectGroupResponse extends
+public  final class GetObjectGroupResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetObjectGroupResponse)
     GetObjectGroupResponseOrBuilder {
@@ -16,13 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetObjectGroupResponse() {
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetObjectGroupResponse();
   }
 
   @java.lang.Override
@@ -38,6 +31,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -62,7 +56,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -96,25 +90,20 @@ private static final long serialVersionUID = 0L;
   public static final int OBJECT_GROUP_FIELD_NUMBER = 1;
   private com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup objectGroup_;
   /**
-   * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
-   * @return Whether the objectGroup field is set.
+   * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
-  @java.lang.Override
   public boolean hasObjectGroup() {
     return objectGroup_ != null;
   }
   /**
-   * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
-   * @return The objectGroup.
+   * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup getObjectGroup() {
     return objectGroup_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup.getDefaultInstance() : objectGroup_;
   }
   /**
-   * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder getObjectGroupOrBuilder() {
     return getObjectGroup();
   }
@@ -164,13 +153,14 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupResponse) obj;
 
-    if (hasObjectGroup() != other.hasObjectGroup()) return false;
+    boolean result = true;
+    result = result && (hasObjectGroup() == other.hasObjectGroup());
     if (hasObjectGroup()) {
-      if (!getObjectGroup()
-          .equals(other.getObjectGroup())) return false;
+      result = result && getObjectGroup()
+          .equals(other.getObjectGroup());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -360,35 +350,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -434,19 +424,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup objectGroup_;
+    private com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup objectGroup_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder> objectGroupBuilder_;
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
-     * @return Whether the objectGroup field is set.
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public boolean hasObjectGroup() {
       return objectGroupBuilder_ != null || objectGroup_ != null;
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
-     * @return The objectGroup.
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup getObjectGroup() {
       if (objectGroupBuilder_ == null) {
@@ -456,7 +444,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public Builder setObjectGroup(com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup value) {
       if (objectGroupBuilder_ == null) {
@@ -472,7 +460,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public Builder setObjectGroup(
         com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup.Builder builderForValue) {
@@ -486,7 +474,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public Builder mergeObjectGroup(com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup value) {
       if (objectGroupBuilder_ == null) {
@@ -504,7 +492,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public Builder clearObjectGroup() {
       if (objectGroupBuilder_ == null) {
@@ -518,7 +506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup.Builder getObjectGroupBuilder() {
       
@@ -526,7 +514,7 @@ private static final long serialVersionUID = 0L;
       return getObjectGroupFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder getObjectGroupOrBuilder() {
       if (objectGroupBuilder_ != null) {
@@ -537,7 +525,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+     * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder> 
@@ -555,7 +543,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

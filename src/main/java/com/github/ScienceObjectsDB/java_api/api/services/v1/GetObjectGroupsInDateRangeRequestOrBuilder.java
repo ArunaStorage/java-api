@@ -8,44 +8,38 @@ public interface GetObjectGroupsInDateRangeRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
-   * @return Whether the start field is set.
+   * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
    */
   boolean hasStart();
   /**
-   * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
-   * @return The start.
+   * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
    */
   com.google.protobuf.Timestamp getStart();
   /**
-   * <code>.google.protobuf.Timestamp start = 2 [json_name = "start"];</code>
+   * <code>.google.protobuf.Timestamp start = 2[json_name = "start"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getStartOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
-   * @return Whether the end field is set.
+   * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
    */
   boolean hasEnd();
   /**
-   * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
-   * @return The end.
+   * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
    */
   com.google.protobuf.Timestamp getEnd();
   /**
-   * <code>.google.protobuf.Timestamp end = 3 [json_name = "end"];</code>
+   * <code>.google.protobuf.Timestamp end = 3[json_name = "end"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getEndOrBuilder();
 }

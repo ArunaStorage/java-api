@@ -89,6 +89,11 @@ public final class CommonModels {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_models_v1_Empty_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_models_v1_PageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_models_v1_PageRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -142,22 +147,32 @@ public final class CommonModels {
       "\022\016\n\002id\030\001 \001(\tR\002id\022\024\n\005token\030\002 \001(\tR\005token\022," +
       "\n\006rights\030\003 \003(\0162\024.api.models.v1.RightR\006ri" +
       "ghts\022\035\n\nproject_id\030\004 \001(\tR\tprojectId\"\007\n\005E" +
-      "mpty*Q\n\006Status\022\016\n\nINITIATING\020\000\022\r\n\tAVAILA" +
-      "BLE\020\001\022\014\n\010UPDATING\020\002\022\014\n\010ARCHIVED\020\003\022\014\n\010DEL" +
-      "ETING\020\004*\034\n\005Right\022\010\n\004READ\020\000\022\t\n\005WRITE\020\001*\250\001" +
-      "\n\010Resource\022\024\n\020PROJECT_RESOURCE\020\000\022\024\n\020DATA" +
-      "SET_RESOURCE\020\001\022\034\n\030DATASET_VERSION_RESOUR" +
-      "CE\020\002\022\023\n\017OBJECT_RESOURCE\020\003\022\031\n\025OBJECT_GROU" +
-      "P_RESOURCE\020\004\022\"\n\036OBJECT_GROUP_REVISION_RE" +
-      "SOURCE\020\005Bv\n2com.github.ScienceObjectsDB." +
-      "java_api.api.models.v1B\014CommonModelsP\001Z0" +
-      "github.com/ScienceObjectsDB/go-api/api/m" +
-      "odels/v1b\006proto3"
+      "mpty\"G\n\013PageRequest\022\033\n\tlast_uuid\030\001 \001(\tR\010" +
+      "lastUuid\022\033\n\tpage_size\030\002 \001(\004R\010pageSize*Q\n" +
+      "\006Status\022\016\n\nINITIATING\020\000\022\r\n\tAVAILABLE\020\001\022\014" +
+      "\n\010UPDATING\020\002\022\014\n\010ARCHIVED\020\003\022\014\n\010DELETING\020\004" +
+      "*\034\n\005Right\022\010\n\004READ\020\000\022\t\n\005WRITE\020\001*\250\001\n\010Resou" +
+      "rce\022\024\n\020PROJECT_RESOURCE\020\000\022\024\n\020DATASET_RES" +
+      "OURCE\020\001\022\034\n\030DATASET_VERSION_RESOURCE\020\002\022\023\n" +
+      "\017OBJECT_RESOURCE\020\003\022\031\n\025OBJECT_GROUP_RESOU" +
+      "RCE\020\004\022\"\n\036OBJECT_GROUP_REVISION_RESOURCE\020" +
+      "\005Bv\n2com.github.ScienceObjectsDB.java_ap" +
+      "i.api.models.v1B\014CommonModelsP\001Z0github." +
+      "com/ScienceObjectsDB/go-api/api/models/v" +
+      "1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_api_models_v1_Location_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_models_v1_Location_fieldAccessorTable = new
@@ -248,6 +263,12 @@ public final class CommonModels {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_models_v1_Empty_descriptor,
         new java.lang.String[] { });
+    internal_static_api_models_v1_PageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_api_models_v1_PageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_models_v1_PageRequest_descriptor,
+        new java.lang.String[] { "LastUuid", "PageSize", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -8,125 +8,111 @@ public interface ReleaseDatasetVersionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string dataset_id = 2 [json_name = "datasetId"];</code>
-   * @return The datasetId.
+   * <code>string dataset_id = 2[json_name = "datasetId"];</code>
    */
   java.lang.String getDatasetId();
   /**
-   * <code>string dataset_id = 2 [json_name = "datasetId"];</code>
-   * @return The bytes for datasetId.
+   * <code>string dataset_id = 2[json_name = "datasetId"];</code>
    */
   com.google.protobuf.ByteString
       getDatasetIdBytes();
 
   /**
-   * <code>.api.models.v1.Version version = 3 [json_name = "version"];</code>
-   * @return Whether the version field is set.
+   * <code>.api.models.v1.Version version = 3[json_name = "version"];</code>
    */
   boolean hasVersion();
   /**
-   * <code>.api.models.v1.Version version = 3 [json_name = "version"];</code>
-   * @return The version.
+   * <code>.api.models.v1.Version version = 3[json_name = "version"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Version getVersion();
   /**
-   * <code>.api.models.v1.Version version = 3 [json_name = "version"];</code>
+   * <code>.api.models.v1.Version version = 3[json_name = "version"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.VersionOrBuilder getVersionOrBuilder();
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 5[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 5[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 5[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 5[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 5[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 6[json_name = "metadata"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata> 
       getMetadataList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 6[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata getMetadata(int index);
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 6[json_name = "metadata"];</code>
    */
   int getMetadataCount();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 6[json_name = "metadata"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder> 
       getMetadataOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 6 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 6[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder getMetadataOrBuilder(
       int index);
 
   /**
-   * <code>repeated string object_group_ids = 7 [json_name = "objectGroupIds"];</code>
-   * @return A list containing the objectGroupIds.
+   * <code>repeated string object_group_ids = 7[json_name = "objectGroupIds"];</code>
    */
   java.util.List<java.lang.String>
       getObjectGroupIdsList();
   /**
-   * <code>repeated string object_group_ids = 7 [json_name = "objectGroupIds"];</code>
-   * @return The count of objectGroupIds.
+   * <code>repeated string object_group_ids = 7[json_name = "objectGroupIds"];</code>
    */
   int getObjectGroupIdsCount();
   /**
-   * <code>repeated string object_group_ids = 7 [json_name = "objectGroupIds"];</code>
-   * @param index The index of the element to return.
-   * @return The objectGroupIds at the given index.
+   * <code>repeated string object_group_ids = 7[json_name = "objectGroupIds"];</code>
    */
   java.lang.String getObjectGroupIds(int index);
   /**
-   * <code>repeated string object_group_ids = 7 [json_name = "objectGroupIds"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the objectGroupIds at the given index.
+   * <code>repeated string object_group_ids = 7[json_name = "objectGroupIds"];</code>
    */
   com.google.protobuf.ByteString
       getObjectGroupIdsBytes(int index);
 
   /**
-   * <code>string description = 8 [json_name = "description"];</code>
-   * @return The description.
+   * <code>string description = 8[json_name = "description"];</code>
    */
   java.lang.String getDescription();
   /**
-   * <code>string description = 8 [json_name = "description"];</code>
-   * @return The bytes for description.
+   * <code>string description = 8[json_name = "description"];</code>
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();

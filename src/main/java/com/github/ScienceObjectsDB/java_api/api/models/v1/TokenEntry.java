@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.TokenEntry}
  */
-public final class TokenEntry extends
+public  final class TokenEntry extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.TokenEntry)
     TokenEntryOrBuilder {
@@ -22,13 +22,6 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new TokenEntry();
-  }
-
-  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -41,6 +34,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -109,7 +103,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -143,10 +137,8 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public java.lang.String getId() {
     java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
@@ -160,10 +152,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getIdBytes() {
     java.lang.Object ref = id_;
@@ -181,25 +171,20 @@ private static final long serialVersionUID = 0L;
   public static final int USER_ID_FIELD_NUMBER = 2;
   private com.github.ScienceObjectsDB.java_api.api.models.v1.User userId_;
   /**
-   * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
-   * @return Whether the userId field is set.
+   * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
    */
-  @java.lang.Override
   public boolean hasUserId() {
     return userId_ != null;
   }
   /**
-   * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.User getUserId() {
     return userId_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.User.getDefaultInstance() : userId_;
   }
   /**
-   * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+   * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.UserOrBuilder getUserIdOrBuilder() {
     return getUserId();
   }
@@ -207,10 +192,8 @@ private static final long serialVersionUID = 0L;
   public static final int TOKEN_FIELD_NUMBER = 3;
   private volatile java.lang.Object token_;
   /**
-   * <code>string token = 3 [json_name = "token"];</code>
-   * @return The token.
+   * <code>string token = 3[json_name = "token"];</code>
    */
-  @java.lang.Override
   public java.lang.String getToken() {
     java.lang.Object ref = token_;
     if (ref instanceof java.lang.String) {
@@ -224,10 +207,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string token = 3 [json_name = "token"];</code>
-   * @return The bytes for token.
+   * <code>string token = 3[json_name = "token"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getTokenBytes() {
     java.lang.Object ref = token_;
@@ -245,17 +226,15 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_FIELD_NUMBER = 4;
   private int resource_;
   /**
-   * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-   * @return The enum numeric value on the wire for resource.
+   * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
    */
-  @java.lang.Override public int getResourceValue() {
+  public int getResourceValue() {
     return resource_;
   }
   /**
-   * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-   * @return The resource.
+   * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
    */
-  @java.lang.Override public com.github.ScienceObjectsDB.java_api.api.models.v1.Resource getResource() {
+  public com.github.ScienceObjectsDB.java_api.api.models.v1.Resource getResource() {
     @SuppressWarnings("deprecation")
     com.github.ScienceObjectsDB.java_api.api.models.v1.Resource result = com.github.ScienceObjectsDB.java_api.api.models.v1.Resource.valueOf(resource_);
     return result == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.Resource.UNRECOGNIZED : result;
@@ -268,10 +247,8 @@ private static final long serialVersionUID = 0L;
    * When the token was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
-   * @return Whether the created field is set.
+   * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
    */
-  @java.lang.Override
   public boolean hasCreated() {
     return created_ != null;
   }
@@ -280,10 +257,8 @@ private static final long serialVersionUID = 0L;
    * When the token was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
-   * @return The created.
+   * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.Timestamp getCreated() {
     return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
   }
@@ -292,9 +267,8 @@ private static final long serialVersionUID = 0L;
    * When the token was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+   * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
     return getCreated();
   }
@@ -306,10 +280,8 @@ private static final long serialVersionUID = 0L;
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
-   * @return Whether the expires field is set.
+   * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
    */
-  @java.lang.Override
   public boolean hasExpires() {
     return expires_ != null;
   }
@@ -318,10 +290,8 @@ private static final long serialVersionUID = 0L;
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
-   * @return The expires.
+   * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.Timestamp getExpires() {
     return expires_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expires_;
   }
@@ -330,9 +300,8 @@ private static final long serialVersionUID = 0L;
    * When the token expires
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+   * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getExpiresOrBuilder() {
     return getExpires();
   }
@@ -415,28 +384,29 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.TokenEntry other = (com.github.ScienceObjectsDB.java_api.api.models.v1.TokenEntry) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (hasUserId() != other.hasUserId()) return false;
+    boolean result = true;
+    result = result && getId()
+        .equals(other.getId());
+    result = result && (hasUserId() == other.hasUserId());
     if (hasUserId()) {
-      if (!getUserId()
-          .equals(other.getUserId())) return false;
+      result = result && getUserId()
+          .equals(other.getUserId());
     }
-    if (!getToken()
-        .equals(other.getToken())) return false;
-    if (resource_ != other.resource_) return false;
-    if (hasCreated() != other.hasCreated()) return false;
+    result = result && getToken()
+        .equals(other.getToken());
+    result = result && resource_ == other.resource_;
+    result = result && (hasCreated() == other.hasCreated());
     if (hasCreated()) {
-      if (!getCreated()
-          .equals(other.getCreated())) return false;
+      result = result && getCreated()
+          .equals(other.getCreated());
     }
-    if (hasExpires() != other.hasExpires()) return false;
+    result = result && (hasExpires() == other.hasExpires());
     if (hasExpires()) {
-      if (!getExpires()
-          .equals(other.getExpires())) return false;
+      result = result && getExpires()
+          .equals(other.getExpires());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -671,35 +641,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -764,8 +734,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -780,8 +749,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -797,9 +765,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setId(
         java.lang.String value) {
@@ -812,8 +778,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder clearId() {
       
@@ -822,9 +787,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -838,19 +801,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.github.ScienceObjectsDB.java_api.api.models.v1.User userId_;
+    private com.github.ScienceObjectsDB.java_api.api.models.v1.User userId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.User, com.github.ScienceObjectsDB.java_api.api.models.v1.User.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.UserOrBuilder> userIdBuilder_;
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
-     * @return Whether the userId field is set.
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public boolean hasUserId() {
       return userIdBuilder_ != null || userId_ != null;
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
-     * @return The userId.
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.User getUserId() {
       if (userIdBuilder_ == null) {
@@ -860,7 +821,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public Builder setUserId(com.github.ScienceObjectsDB.java_api.api.models.v1.User value) {
       if (userIdBuilder_ == null) {
@@ -876,7 +837,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public Builder setUserId(
         com.github.ScienceObjectsDB.java_api.api.models.v1.User.Builder builderForValue) {
@@ -890,7 +851,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public Builder mergeUserId(com.github.ScienceObjectsDB.java_api.api.models.v1.User value) {
       if (userIdBuilder_ == null) {
@@ -908,7 +869,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public Builder clearUserId() {
       if (userIdBuilder_ == null) {
@@ -922,7 +883,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.User.Builder getUserIdBuilder() {
       
@@ -930,7 +891,7 @@ private static final long serialVersionUID = 0L;
       return getUserIdFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.UserOrBuilder getUserIdOrBuilder() {
       if (userIdBuilder_ != null) {
@@ -941,7 +902,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.User user_id = 2 [json_name = "userId"];</code>
+     * <code>.api.models.v1.User user_id = 2[json_name = "userId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.User, com.github.ScienceObjectsDB.java_api.api.models.v1.User.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.UserOrBuilder> 
@@ -959,8 +920,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object token_ = "";
     /**
-     * <code>string token = 3 [json_name = "token"];</code>
-     * @return The token.
+     * <code>string token = 3[json_name = "token"];</code>
      */
     public java.lang.String getToken() {
       java.lang.Object ref = token_;
@@ -975,8 +935,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string token = 3 [json_name = "token"];</code>
-     * @return The bytes for token.
+     * <code>string token = 3[json_name = "token"];</code>
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
@@ -992,9 +951,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string token = 3 [json_name = "token"];</code>
-     * @param value The token to set.
-     * @return This builder for chaining.
+     * <code>string token = 3[json_name = "token"];</code>
      */
     public Builder setToken(
         java.lang.String value) {
@@ -1007,8 +964,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string token = 3 [json_name = "token"];</code>
-     * @return This builder for chaining.
+     * <code>string token = 3[json_name = "token"];</code>
      */
     public Builder clearToken() {
       
@@ -1017,9 +973,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string token = 3 [json_name = "token"];</code>
-     * @param value The bytes for token to set.
-     * @return This builder for chaining.
+     * <code>string token = 3[json_name = "token"];</code>
      */
     public Builder setTokenBytes(
         com.google.protobuf.ByteString value) {
@@ -1035,37 +989,29 @@ private static final long serialVersionUID = 0L;
 
     private int resource_ = 0;
     /**
-     * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-     * @return The enum numeric value on the wire for resource.
+     * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
      */
-    @java.lang.Override public int getResourceValue() {
+    public int getResourceValue() {
       return resource_;
     }
     /**
-     * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-     * @param value The enum numeric value on the wire for resource to set.
-     * @return This builder for chaining.
+     * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
      */
     public Builder setResourceValue(int value) {
-      
       resource_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-     * @return The resource.
+     * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Resource getResource() {
       @SuppressWarnings("deprecation")
       com.github.ScienceObjectsDB.java_api.api.models.v1.Resource result = com.github.ScienceObjectsDB.java_api.api.models.v1.Resource.valueOf(resource_);
       return result == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.Resource.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-     * @param value The resource to set.
-     * @return This builder for chaining.
+     * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
      */
     public Builder setResource(com.github.ScienceObjectsDB.java_api.api.models.v1.Resource value) {
       if (value == null) {
@@ -1077,8 +1023,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Resource resource = 4 [json_name = "resource"];</code>
-     * @return This builder for chaining.
+     * <code>.api.models.v1.Resource resource = 4[json_name = "resource"];</code>
      */
     public Builder clearResource() {
       
@@ -1087,7 +1032,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp created_;
+    private com.google.protobuf.Timestamp created_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdBuilder_;
     /**
@@ -1095,8 +1040,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
-     * @return Whether the created field is set.
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public boolean hasCreated() {
       return createdBuilder_ != null || created_ != null;
@@ -1106,8 +1050,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
-     * @return The created.
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public com.google.protobuf.Timestamp getCreated() {
       if (createdBuilder_ == null) {
@@ -1121,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public Builder setCreated(com.google.protobuf.Timestamp value) {
       if (createdBuilder_ == null) {
@@ -1141,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public Builder setCreated(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1159,7 +1102,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public Builder mergeCreated(com.google.protobuf.Timestamp value) {
       if (createdBuilder_ == null) {
@@ -1181,7 +1124,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public Builder clearCreated() {
       if (createdBuilder_ == null) {
@@ -1199,7 +1142,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
       
@@ -1211,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
       if (createdBuilder_ != null) {
@@ -1226,7 +1169,7 @@ private static final long serialVersionUID = 0L;
      * When the token was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 5 [json_name = "created"];</code>
+     * <code>.google.protobuf.Timestamp created = 5[json_name = "created"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1242,7 +1185,7 @@ private static final long serialVersionUID = 0L;
       return createdBuilder_;
     }
 
-    private com.google.protobuf.Timestamp expires_;
+    private com.google.protobuf.Timestamp expires_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresBuilder_;
     /**
@@ -1250,8 +1193,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
-     * @return Whether the expires field is set.
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public boolean hasExpires() {
       return expiresBuilder_ != null || expires_ != null;
@@ -1261,8 +1203,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
-     * @return The expires.
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public com.google.protobuf.Timestamp getExpires() {
       if (expiresBuilder_ == null) {
@@ -1276,7 +1217,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public Builder setExpires(com.google.protobuf.Timestamp value) {
       if (expiresBuilder_ == null) {
@@ -1296,7 +1237,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public Builder setExpires(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1314,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public Builder mergeExpires(com.google.protobuf.Timestamp value) {
       if (expiresBuilder_ == null) {
@@ -1336,7 +1277,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public Builder clearExpires() {
       if (expiresBuilder_ == null) {
@@ -1354,7 +1295,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getExpiresBuilder() {
       
@@ -1366,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getExpiresOrBuilder() {
       if (expiresBuilder_ != null) {
@@ -1381,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * When the token expires
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires = 6 [json_name = "expires"];</code>
+     * <code>.google.protobuf.Timestamp expires = 6[json_name = "expires"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1399,7 +1340,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

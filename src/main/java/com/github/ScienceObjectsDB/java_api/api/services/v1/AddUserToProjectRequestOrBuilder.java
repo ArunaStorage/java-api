@@ -8,54 +8,43 @@ public interface AddUserToProjectRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>string user_id = 1[json_name = "userId"];</code>
    */
   java.lang.String getUserId();
   /**
-   * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return The bytes for userId.
+   * <code>string user_id = 1[json_name = "userId"];</code>
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
 
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @return A list containing the scope.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getScopeList();
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @return The count of scope.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
   int getScopeCount();
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @param index The index of the element to return.
-   * @return The scope at the given index.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Right getScope(int index);
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @return A list containing the enum numeric values on the wire for scope.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
   java.util.List<java.lang.Integer>
   getScopeValueList();
   /**
-   * <code>repeated .api.models.v1.Right scope = 2 [json_name = "scope"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of scope at the given index.
+   * <code>repeated .api.models.v1.Right scope = 2[json_name = "scope"];</code>
    */
   int getScopeValue(int index);
 
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The projectId.
+   * <code>string project_id = 3[json_name = "projectId"];</code>
    */
   java.lang.String getProjectId();
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
+   * <code>string project_id = 3[json_name = "projectId"];</code>
    */
   com.google.protobuf.ByteString
       getProjectIdBytes();

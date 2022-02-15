@@ -8,25 +8,25 @@ public interface GetProjectDatasetsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset> 
       getDatasetList();
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset getDataset(int index);
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   int getDatasetCount();
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder> 
       getDatasetOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>repeated .api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder getDatasetOrBuilder(
       int index);

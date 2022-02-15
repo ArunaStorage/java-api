@@ -35,48 +35,57 @@ public final class ObjectModels {
     java.lang.String[] descriptorData = {
       "\n!api/models/v1/object_models.proto\022\rapi" +
       ".models.v1\032!api/models/v1/common_models." +
-      "proto\032\037google/protobuf/timestamp.proto\"\245" +
+      "proto\032\037google/protobuf/timestamp.proto\"\304" +
       "\003\n\013ObjectGroup\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002" +
       " \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descrip" +
-      "tion\022\035\n\ndataset_id\030\004 \001(\tR\tdatasetId\022,\n\006l" +
-      "abels\030\005 \003(\0132\024.api.models.v1.LabelR\006label" +
-      "s\0223\n\010metadata\030\006 \003(\0132\027.api.models.v1.Meta" +
-      "dataR\010metadata\022-\n\006status\030\007 \001(\0162\025.api.mod" +
-      "els.v1.StatusR\006status\022/\n\007objects\030\010 \003(\0132\025" +
-      ".api.models.v1.ObjectR\007objects\0228\n\tgenera" +
-      "ted\030\t \001(\0132\032.google.protobuf.TimestampR\tg" +
-      "enerated\0224\n\007created\030\n \001(\0132\032.google.proto" +
-      "buf.TimestampR\007created\"\253\004\n\006Object\022\016\n\002id\030" +
-      "\001 \001(\tR\002id\022\032\n\010filename\030\002 \001(\tR\010filename\022\032\n" +
-      "\010filetype\030\003 \001(\tR\010filetype\022,\n\006labels\030\004 \003(" +
-      "\0132\024.api.models.v1.LabelR\006labels\0223\n\010metad" +
-      "ata\030\005 \003(\0132\027.api.models.v1.MetadataR\010meta" +
-      "data\0224\n\007created\030\006 \001(\0132\032.google.protobuf." +
-      "TimestampR\007created\0223\n\010location\030\007 \001(\0132\027.a" +
-      "pi.models.v1.LocationR\010location\022-\n\006origi" +
-      "n\030\010 \001(\0132\025.api.models.v1.OriginR\006origin\022\037" +
-      "\n\013content_len\030\t \001(\003R\ncontentLen\022\033\n\tuploa" +
-      "d_id\030\n \001(\tR\010uploadId\0228\n\tgenerated\030\013 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tgenerated\022&" +
-      "\n\017object_group_id\030\014 \001(\tR\robjectGroupId\022\035" +
-      "\n\ndataset_id\030\r \001(\tR\tdatasetId\022\035\n\nproject" +
-      "_id\030\016 \001(\tR\tprojectIdBv\n2com.github.Scien" +
-      "ceObjectsDB.java_api.api.models.v1B\014Obje" +
-      "ctModelsP\001Z0github.com/ScienceObjectsDB/" +
-      "go-api/api/models/v1b\006proto3"
+      "tion\022\035\n\ndataset_id\030\004 \001(\tR\tdatasetId\022\035\n\np" +
+      "roject_id\030\005 \001(\tR\tprojectId\022,\n\006labels\030\006 \003" +
+      "(\0132\024.api.models.v1.LabelR\006labels\0223\n\010meta" +
+      "data\030\007 \003(\0132\027.api.models.v1.MetadataR\010met" +
+      "adata\022-\n\006status\030\010 \001(\0162\025.api.models.v1.St" +
+      "atusR\006status\022/\n\007objects\030\t \003(\0132\025.api.mode" +
+      "ls.v1.ObjectR\007objects\0228\n\tgenerated\030\n \001(\013" +
+      "2\032.google.protobuf.TimestampR\tgenerated\022" +
+      "4\n\007created\030\013 \001(\0132\032.google.protobuf.Times" +
+      "tampR\007created\"\253\004\n\006Object\022\016\n\002id\030\001 \001(\tR\002id" +
+      "\022\032\n\010filename\030\002 \001(\tR\010filename\022\032\n\010filetype" +
+      "\030\003 \001(\tR\010filetype\022,\n\006labels\030\004 \003(\0132\024.api.m" +
+      "odels.v1.LabelR\006labels\0223\n\010metadata\030\005 \003(\013" +
+      "2\027.api.models.v1.MetadataR\010metadata\0224\n\007c" +
+      "reated\030\006 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\007created\0223\n\010location\030\007 \001(\0132\027.api.models" +
+      ".v1.LocationR\010location\022-\n\006origin\030\010 \001(\0132\025" +
+      ".api.models.v1.OriginR\006origin\022\037\n\013content" +
+      "_len\030\t \001(\003R\ncontentLen\022\033\n\tupload_id\030\n \001(" +
+      "\tR\010uploadId\0228\n\tgenerated\030\013 \001(\0132\032.google." +
+      "protobuf.TimestampR\tgenerated\022&\n\017object_" +
+      "group_id\030\014 \001(\tR\robjectGroupId\022\035\n\ndataset" +
+      "_id\030\r \001(\tR\tdatasetId\022\035\n\nproject_id\030\016 \001(\t" +
+      "R\tprojectIdBv\n2com.github.ScienceObjects" +
+      "DB.java_api.api.models.v1B\014ObjectModelsP" +
+      "\001Z0github.com/ScienceObjectsDB/go-api/ap" +
+      "i/models/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_models_v1_ObjectGroup_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_models_v1_ObjectGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_models_v1_ObjectGroup_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "DatasetId", "Labels", "Metadata", "Status", "Objects", "Generated", "Created", });
+        new java.lang.String[] { "Id", "Name", "Description", "DatasetId", "ProjectId", "Labels", "Metadata", "Status", "Objects", "Generated", "Created", });
     internal_static_api_models_v1_Object_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_models_v1_Object_fieldAccessorTable = new

@@ -10,7 +10,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
  *
  * Protobuf type {@code api.models.v1.IndexedObjectLocation}
  */
-public final class IndexedObjectLocation extends
+public  final class IndexedObjectLocation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.IndexedObjectLocation)
     IndexedObjectLocationOrBuilder {
@@ -26,13 +26,6 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new IndexedObjectLocation();
-  }
-
-  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -45,6 +38,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -87,7 +81,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -121,10 +115,8 @@ private static final long serialVersionUID = 0L;
   public static final int BUCKET_FIELD_NUMBER = 1;
   private volatile java.lang.Object bucket_;
   /**
-   * <code>string bucket = 1 [json_name = "bucket"];</code>
-   * @return The bucket.
+   * <code>string bucket = 1[json_name = "bucket"];</code>
    */
-  @java.lang.Override
   public java.lang.String getBucket() {
     java.lang.Object ref = bucket_;
     if (ref instanceof java.lang.String) {
@@ -138,10 +130,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string bucket = 1 [json_name = "bucket"];</code>
-   * @return The bytes for bucket.
+   * <code>string bucket = 1[json_name = "bucket"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getBucketBytes() {
     java.lang.Object ref = bucket_;
@@ -159,10 +149,8 @@ private static final long serialVersionUID = 0L;
   public static final int KEY_FIELD_NUMBER = 2;
   private volatile java.lang.Object key_;
   /**
-   * <code>string key = 2 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string key = 2[json_name = "key"];</code>
    */
-  @java.lang.Override
   public java.lang.String getKey() {
     java.lang.Object ref = key_;
     if (ref instanceof java.lang.String) {
@@ -176,10 +164,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string key = 2 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string key = 2[json_name = "key"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getKeyBytes() {
     java.lang.Object ref = key_;
@@ -201,10 +187,8 @@ private static final long serialVersionUID = 0L;
    * Object storage endpoint
    * </pre>
    *
-   * <code>string url = 3 [json_name = "url"];</code>
-   * @return The url.
+   * <code>string url = 3[json_name = "url"];</code>
    */
-  @java.lang.Override
   public java.lang.String getUrl() {
     java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
@@ -222,10 +206,8 @@ private static final long serialVersionUID = 0L;
    * Object storage endpoint
    * </pre>
    *
-   * <code>string url = 3 [json_name = "url"];</code>
-   * @return The bytes for url.
+   * <code>string url = 3[json_name = "url"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getUrlBytes() {
     java.lang.Object ref = url_;
@@ -243,25 +225,20 @@ private static final long serialVersionUID = 0L;
   public static final int INDEX_FIELD_NUMBER = 4;
   private com.github.ScienceObjectsDB.java_api.api.models.v1.Index index_;
   /**
-   * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
-   * @return Whether the index field is set.
+   * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
    */
-  @java.lang.Override
   public boolean hasIndex() {
     return index_ != null;
   }
   /**
-   * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
-   * @return The index.
+   * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Index getIndex() {
     return index_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.Index.getDefaultInstance() : index_;
   }
   /**
-   * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+   * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexOrBuilder getIndexOrBuilder() {
     return getIndex();
   }
@@ -329,19 +306,20 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation other = (com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation) obj;
 
-    if (!getBucket()
-        .equals(other.getBucket())) return false;
-    if (!getKey()
-        .equals(other.getKey())) return false;
-    if (!getUrl()
-        .equals(other.getUrl())) return false;
-    if (hasIndex() != other.hasIndex()) return false;
+    boolean result = true;
+    result = result && getBucket()
+        .equals(other.getBucket());
+    result = result && getKey()
+        .equals(other.getKey());
+    result = result && getUrl()
+        .equals(other.getUrl());
+    result = result && (hasIndex() == other.hasIndex());
     if (hasIndex()) {
-      if (!getIndex()
-          .equals(other.getIndex())) return false;
+      result = result && getIndex()
+          .equals(other.getIndex());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -550,35 +528,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -638,8 +616,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object bucket_ = "";
     /**
-     * <code>string bucket = 1 [json_name = "bucket"];</code>
-     * @return The bucket.
+     * <code>string bucket = 1[json_name = "bucket"];</code>
      */
     public java.lang.String getBucket() {
       java.lang.Object ref = bucket_;
@@ -654,8 +631,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bucket = 1 [json_name = "bucket"];</code>
-     * @return The bytes for bucket.
+     * <code>string bucket = 1[json_name = "bucket"];</code>
      */
     public com.google.protobuf.ByteString
         getBucketBytes() {
@@ -671,9 +647,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bucket = 1 [json_name = "bucket"];</code>
-     * @param value The bucket to set.
-     * @return This builder for chaining.
+     * <code>string bucket = 1[json_name = "bucket"];</code>
      */
     public Builder setBucket(
         java.lang.String value) {
@@ -686,8 +660,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string bucket = 1 [json_name = "bucket"];</code>
-     * @return This builder for chaining.
+     * <code>string bucket = 1[json_name = "bucket"];</code>
      */
     public Builder clearBucket() {
       
@@ -696,9 +669,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string bucket = 1 [json_name = "bucket"];</code>
-     * @param value The bytes for bucket to set.
-     * @return This builder for chaining.
+     * <code>string bucket = 1[json_name = "bucket"];</code>
      */
     public Builder setBucketBytes(
         com.google.protobuf.ByteString value) {
@@ -714,8 +685,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object key_ = "";
     /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return The key.
+     * <code>string key = 2[json_name = "key"];</code>
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -730,8 +700,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return The bytes for key.
+     * <code>string key = 2[json_name = "key"];</code>
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -747,9 +716,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @param value The key to set.
-     * @return This builder for chaining.
+     * <code>string key = 2[json_name = "key"];</code>
      */
     public Builder setKey(
         java.lang.String value) {
@@ -762,8 +729,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return This builder for chaining.
+     * <code>string key = 2[json_name = "key"];</code>
      */
     public Builder clearKey() {
       
@@ -772,9 +738,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @param value The bytes for key to set.
-     * @return This builder for chaining.
+     * <code>string key = 2[json_name = "key"];</code>
      */
     public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
@@ -794,8 +758,7 @@ private static final long serialVersionUID = 0L;
      * Object storage endpoint
      * </pre>
      *
-     * <code>string url = 3 [json_name = "url"];</code>
-     * @return The url.
+     * <code>string url = 3[json_name = "url"];</code>
      */
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
@@ -814,8 +777,7 @@ private static final long serialVersionUID = 0L;
      * Object storage endpoint
      * </pre>
      *
-     * <code>string url = 3 [json_name = "url"];</code>
-     * @return The bytes for url.
+     * <code>string url = 3[json_name = "url"];</code>
      */
     public com.google.protobuf.ByteString
         getUrlBytes() {
@@ -835,9 +797,7 @@ private static final long serialVersionUID = 0L;
      * Object storage endpoint
      * </pre>
      *
-     * <code>string url = 3 [json_name = "url"];</code>
-     * @param value The url to set.
-     * @return This builder for chaining.
+     * <code>string url = 3[json_name = "url"];</code>
      */
     public Builder setUrl(
         java.lang.String value) {
@@ -854,8 +814,7 @@ private static final long serialVersionUID = 0L;
      * Object storage endpoint
      * </pre>
      *
-     * <code>string url = 3 [json_name = "url"];</code>
-     * @return This builder for chaining.
+     * <code>string url = 3[json_name = "url"];</code>
      */
     public Builder clearUrl() {
       
@@ -868,9 +827,7 @@ private static final long serialVersionUID = 0L;
      * Object storage endpoint
      * </pre>
      *
-     * <code>string url = 3 [json_name = "url"];</code>
-     * @param value The bytes for url to set.
-     * @return This builder for chaining.
+     * <code>string url = 3[json_name = "url"];</code>
      */
     public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
@@ -884,19 +841,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.github.ScienceObjectsDB.java_api.api.models.v1.Index index_;
+    private com.github.ScienceObjectsDB.java_api.api.models.v1.Index index_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.Index, com.github.ScienceObjectsDB.java_api.api.models.v1.Index.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.IndexOrBuilder> indexBuilder_;
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
-     * @return Whether the index field is set.
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public boolean hasIndex() {
       return indexBuilder_ != null || index_ != null;
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
-     * @return The index.
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Index getIndex() {
       if (indexBuilder_ == null) {
@@ -906,7 +861,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public Builder setIndex(com.github.ScienceObjectsDB.java_api.api.models.v1.Index value) {
       if (indexBuilder_ == null) {
@@ -922,7 +877,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public Builder setIndex(
         com.github.ScienceObjectsDB.java_api.api.models.v1.Index.Builder builderForValue) {
@@ -936,7 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public Builder mergeIndex(com.github.ScienceObjectsDB.java_api.api.models.v1.Index value) {
       if (indexBuilder_ == null) {
@@ -954,7 +909,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public Builder clearIndex() {
       if (indexBuilder_ == null) {
@@ -968,7 +923,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Index.Builder getIndexBuilder() {
       
@@ -976,7 +931,7 @@ private static final long serialVersionUID = 0L;
       return getIndexFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.IndexOrBuilder getIndexOrBuilder() {
       if (indexBuilder_ != null) {
@@ -987,7 +942,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.Index index = 4 [json_name = "index"];</code>
+     * <code>.api.models.v1.Index index = 4[json_name = "index"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.Index, com.github.ScienceObjectsDB.java_api.api.models.v1.Index.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.IndexOrBuilder> 
@@ -1005,7 +960,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

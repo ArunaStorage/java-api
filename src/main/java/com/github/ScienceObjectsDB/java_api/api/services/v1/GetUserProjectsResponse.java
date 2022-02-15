@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetUserProjectsResponse}
  */
-public final class GetUserProjectsResponse extends
+public  final class GetUserProjectsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetUserProjectsResponse)
     GetUserProjectsResponseOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private GetUserProjectsResponse() {
     projects_ = java.util.Collections.emptyList();
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetUserProjectsResponse();
   }
 
   @java.lang.Override
@@ -51,7 +44,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               projects_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.models.v1.Project>();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -60,7 +53,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -74,7 +67,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
         projects_ = java.util.Collections.unmodifiableList(projects_);
       }
       this.unknownFields = unknownFields.build();
@@ -97,38 +90,33 @@ private static final long serialVersionUID = 0L;
   public static final int PROJECTS_FIELD_NUMBER = 1;
   private java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Project> projects_;
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Project> getProjectsList() {
     return projects_;
   }
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder> 
       getProjectsOrBuilderList() {
     return projects_;
   }
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
-  @java.lang.Override
   public int getProjectsCount() {
     return projects_.size();
   }
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Project getProjects(int index) {
     return projects_.get(index);
   }
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder getProjectsOrBuilder(
       int index) {
     return projects_.get(index);
@@ -179,10 +167,11 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetUserProjectsResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetUserProjectsResponse) obj;
 
-    if (!getProjectsList()
-        .equals(other.getProjectsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getProjectsList()
+        .equals(other.getProjectsList());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -364,7 +353,7 @@ private static final long serialVersionUID = 0L;
       com.github.ScienceObjectsDB.java_api.api.services.v1.GetUserProjectsResponse result = new com.github.ScienceObjectsDB.java_api.api.services.v1.GetUserProjectsResponse(this);
       int from_bitField0_ = bitField0_;
       if (projectsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
           projects_ = java.util.Collections.unmodifiableList(projects_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -378,35 +367,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -479,7 +468,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Project> projects_ =
       java.util.Collections.emptyList();
     private void ensureProjectsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
         projects_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.models.v1.Project>(projects_);
         bitField0_ |= 0x00000001;
        }
@@ -489,7 +478,7 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.models.v1.Project, com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder> projectsBuilder_;
 
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Project> getProjectsList() {
       if (projectsBuilder_ == null) {
@@ -499,7 +488,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public int getProjectsCount() {
       if (projectsBuilder_ == null) {
@@ -509,7 +498,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Project getProjects(int index) {
       if (projectsBuilder_ == null) {
@@ -519,7 +508,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder setProjects(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Project value) {
@@ -536,7 +525,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder setProjects(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder builderForValue) {
@@ -550,7 +539,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder addProjects(com.github.ScienceObjectsDB.java_api.api.models.v1.Project value) {
       if (projectsBuilder_ == null) {
@@ -566,7 +555,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder addProjects(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Project value) {
@@ -583,7 +572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder addProjects(
         com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder builderForValue) {
@@ -597,7 +586,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder addProjects(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder builderForValue) {
@@ -611,7 +600,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder addAllProjects(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.Project> values) {
@@ -626,7 +615,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder clearProjects() {
       if (projectsBuilder_ == null) {
@@ -639,7 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public Builder removeProjects(int index) {
       if (projectsBuilder_ == null) {
@@ -652,14 +641,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder getProjectsBuilder(
         int index) {
       return getProjectsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder getProjectsOrBuilder(
         int index) {
@@ -669,7 +658,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder> 
          getProjectsOrBuilderList() {
@@ -680,14 +669,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder addProjectsBuilder() {
       return getProjectsFieldBuilder().addBuilder(
           com.github.ScienceObjectsDB.java_api.api.models.v1.Project.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder addProjectsBuilder(
         int index) {
@@ -695,7 +684,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.ScienceObjectsDB.java_api.api.models.v1.Project.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+     * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder> 
          getProjectsBuilderList() {
@@ -708,7 +697,7 @@ private static final long serialVersionUID = 0L;
         projectsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.ScienceObjectsDB.java_api.api.models.v1.Project, com.github.ScienceObjectsDB.java_api.api.models.v1.Project.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder>(
                 projects_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
                 isClean());
         projects_ = null;
@@ -718,7 +707,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

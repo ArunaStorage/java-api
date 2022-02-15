@@ -8,25 +8,25 @@ public interface GetDatasetVersionObjectGroupsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>repeated .api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup> 
       getObjectGroupList();
   /**
-   * <code>repeated .api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>repeated .api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup getObjectGroup(int index);
   /**
-   * <code>repeated .api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>repeated .api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   int getObjectGroupCount();
   /**
-   * <code>repeated .api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>repeated .api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder> 
       getObjectGroupOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>repeated .api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder getObjectGroupOrBuilder(
       int index);

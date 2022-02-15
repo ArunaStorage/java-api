@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.CreateDownloadLinkStreamRequest}
  */
-public final class CreateDownloadLinkStreamRequest extends
+public  final class CreateDownloadLinkStreamRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.CreateDownloadLinkStreamRequest)
     CreateDownloadLinkStreamRequestOrBuilder {
@@ -16,13 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateDownloadLinkStreamRequest() {
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new CreateDownloadLinkStreamRequest();
   }
 
   @java.lang.Override
@@ -38,6 +31,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -91,7 +85,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -127,51 +121,45 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-     * @return The datasetId.
+     * <code>string dataset_id = 3[json_name = "datasetId"];</code>
      */
     java.lang.String getDatasetId();
     /**
-     * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-     * @return The bytes for datasetId.
+     * <code>string dataset_id = 3[json_name = "datasetId"];</code>
      */
     com.google.protobuf.ByteString
         getDatasetIdBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     * @return Whether the start field is set.
+     * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
      */
     boolean hasStart();
     /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     * @return The start.
+     * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
      */
     com.google.protobuf.Timestamp getStart();
     /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     * @return Whether the end field is set.
+     * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
      */
     boolean hasEnd();
     /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     * @return The end.
+     * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
      */
     com.google.protobuf.Timestamp getEnd();
     /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getEndOrBuilder();
   }
   /**
    * Protobuf type {@code api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery}
    */
-  public static final class DateRangeQuery extends
+  public  static final class DateRangeQuery extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery)
       DateRangeQueryOrBuilder {
@@ -182,13 +170,6 @@ private static final long serialVersionUID = 0L;
     }
     private DateRangeQuery() {
       datasetId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DateRangeQuery();
     }
 
     @java.lang.Override
@@ -204,6 +185,7 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -247,7 +229,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -281,10 +263,8 @@ private static final long serialVersionUID = 0L;
     public static final int DATASET_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object datasetId_;
     /**
-     * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-     * @return The datasetId.
+     * <code>string dataset_id = 3[json_name = "datasetId"];</code>
      */
-    @java.lang.Override
     public java.lang.String getDatasetId() {
       java.lang.Object ref = datasetId_;
       if (ref instanceof java.lang.String) {
@@ -298,10 +278,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-     * @return The bytes for datasetId.
+     * <code>string dataset_id = 3[json_name = "datasetId"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetIdBytes() {
       java.lang.Object ref = datasetId_;
@@ -319,25 +297,20 @@ private static final long serialVersionUID = 0L;
     public static final int START_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp start_;
     /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     * @return Whether the start field is set.
+     * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
      */
-    @java.lang.Override
     public boolean hasStart() {
       return start_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     * @return The start.
+     * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getStart() {
       return start_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : start_;
     }
     /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+     * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartOrBuilder() {
       return getStart();
     }
@@ -345,25 +318,20 @@ private static final long serialVersionUID = 0L;
     public static final int END_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp end_;
     /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     * @return Whether the end field is set.
+     * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
      */
-    @java.lang.Override
     public boolean hasEnd() {
       return end_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     * @return The end.
+     * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getEnd() {
       return end_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : end_;
     }
     /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+     * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEndOrBuilder() {
       return getEnd();
     }
@@ -426,20 +394,21 @@ private static final long serialVersionUID = 0L;
       }
       com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery) obj;
 
-      if (!getDatasetId()
-          .equals(other.getDatasetId())) return false;
-      if (hasStart() != other.hasStart()) return false;
+      boolean result = true;
+      result = result && getDatasetId()
+          .equals(other.getDatasetId());
+      result = result && (hasStart() == other.hasStart());
       if (hasStart()) {
-        if (!getStart()
-            .equals(other.getStart())) return false;
+        result = result && getStart()
+            .equals(other.getStart());
       }
-      if (hasEnd() != other.hasEnd()) return false;
+      result = result && (hasEnd() == other.hasEnd());
       if (hasEnd()) {
-        if (!getEnd()
-            .equals(other.getEnd())) return false;
+        result = result && getEnd()
+            .equals(other.getEnd());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -649,35 +618,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -732,8 +701,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object datasetId_ = "";
       /**
-       * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-       * @return The datasetId.
+       * <code>string dataset_id = 3[json_name = "datasetId"];</code>
        */
       public java.lang.String getDatasetId() {
         java.lang.Object ref = datasetId_;
@@ -748,8 +716,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-       * @return The bytes for datasetId.
+       * <code>string dataset_id = 3[json_name = "datasetId"];</code>
        */
       public com.google.protobuf.ByteString
           getDatasetIdBytes() {
@@ -765,9 +732,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-       * @param value The datasetId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_id = 3[json_name = "datasetId"];</code>
        */
       public Builder setDatasetId(
           java.lang.String value) {
@@ -780,8 +745,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-       * @return This builder for chaining.
+       * <code>string dataset_id = 3[json_name = "datasetId"];</code>
        */
       public Builder clearDatasetId() {
         
@@ -790,9 +754,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-       * @param value The bytes for datasetId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_id = 3[json_name = "datasetId"];</code>
        */
       public Builder setDatasetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -806,19 +768,17 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.Timestamp start_;
+      private com.google.protobuf.Timestamp start_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       * @return Whether the start field is set.
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public boolean hasStart() {
         return startBuilder_ != null || start_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       * @return The start.
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public com.google.protobuf.Timestamp getStart() {
         if (startBuilder_ == null) {
@@ -828,7 +788,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public Builder setStart(com.google.protobuf.Timestamp value) {
         if (startBuilder_ == null) {
@@ -844,7 +804,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public Builder setStart(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -858,7 +818,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public Builder mergeStart(com.google.protobuf.Timestamp value) {
         if (startBuilder_ == null) {
@@ -876,7 +836,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public Builder clearStart() {
         if (startBuilder_ == null) {
@@ -890,7 +850,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartBuilder() {
         
@@ -898,7 +858,7 @@ private static final long serialVersionUID = 0L;
         return getStartFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartOrBuilder() {
         if (startBuilder_ != null) {
@@ -909,7 +869,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+       * <code>.google.protobuf.Timestamp start = 1[json_name = "start"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -925,19 +885,17 @@ private static final long serialVersionUID = 0L;
         return startBuilder_;
       }
 
-      private com.google.protobuf.Timestamp end_;
+      private com.google.protobuf.Timestamp end_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       * @return Whether the end field is set.
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public boolean hasEnd() {
         return endBuilder_ != null || end_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       * @return The end.
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public com.google.protobuf.Timestamp getEnd() {
         if (endBuilder_ == null) {
@@ -947,7 +905,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public Builder setEnd(com.google.protobuf.Timestamp value) {
         if (endBuilder_ == null) {
@@ -963,7 +921,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public Builder setEnd(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -977,7 +935,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public Builder mergeEnd(com.google.protobuf.Timestamp value) {
         if (endBuilder_ == null) {
@@ -995,7 +953,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public Builder clearEnd() {
         if (endBuilder_ == null) {
@@ -1009,7 +967,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getEndBuilder() {
         
@@ -1017,7 +975,7 @@ private static final long serialVersionUID = 0L;
         return getEndFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getEndOrBuilder() {
         if (endBuilder_ != null) {
@@ -1028,7 +986,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+       * <code>.google.protobuf.Timestamp end = 2[json_name = "end"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1046,7 +1004,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1101,13 +1059,11 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
     java.lang.String getDatasetId();
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The bytes for datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
     com.google.protobuf.ByteString
         getDatasetIdBytes();
@@ -1115,7 +1071,7 @@ private static final long serialVersionUID = 0L;
   /**
    * Protobuf type {@code api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery}
    */
-  public static final class DatasetQuery extends
+  public  static final class DatasetQuery extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery)
       DatasetQueryOrBuilder {
@@ -1126,13 +1082,6 @@ private static final long serialVersionUID = 0L;
     }
     private DatasetQuery() {
       datasetId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DatasetQuery();
     }
 
     @java.lang.Override
@@ -1148,6 +1097,7 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1165,7 +1115,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1199,10 +1149,8 @@ private static final long serialVersionUID = 0L;
     public static final int DATASET_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object datasetId_;
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
-    @java.lang.Override
     public java.lang.String getDatasetId() {
       java.lang.Object ref = datasetId_;
       if (ref instanceof java.lang.String) {
@@ -1216,10 +1164,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The bytes for datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetIdBytes() {
       java.lang.Object ref = datasetId_;
@@ -1278,10 +1224,11 @@ private static final long serialVersionUID = 0L;
       }
       com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery) obj;
 
-      if (!getDatasetId()
-          .equals(other.getDatasetId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getDatasetId()
+          .equals(other.getDatasetId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1461,35 +1408,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1538,8 +1485,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object datasetId_ = "";
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @return The datasetId.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public java.lang.String getDatasetId() {
         java.lang.Object ref = datasetId_;
@@ -1554,8 +1500,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @return The bytes for datasetId.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public com.google.protobuf.ByteString
           getDatasetIdBytes() {
@@ -1571,9 +1516,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @param value The datasetId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public Builder setDatasetId(
           java.lang.String value) {
@@ -1586,8 +1529,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @return This builder for chaining.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public Builder clearDatasetId() {
         
@@ -1596,9 +1538,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @param value The bytes for datasetId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public Builder setDatasetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1614,7 +1554,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1669,25 +1609,21 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
     java.lang.String getDatasetId();
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The bytes for datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
     com.google.protobuf.ByteString
         getDatasetIdBytes();
 
     /**
-     * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-     * @return The datasetVersionId.
+     * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
      */
     java.lang.String getDatasetVersionId();
     /**
-     * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-     * @return The bytes for datasetVersionId.
+     * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
      */
     com.google.protobuf.ByteString
         getDatasetVersionIdBytes();
@@ -1695,7 +1631,7 @@ private static final long serialVersionUID = 0L;
   /**
    * Protobuf type {@code api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery}
    */
-  public static final class DatasetVersionQuery extends
+  public  static final class DatasetVersionQuery extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery)
       DatasetVersionQueryOrBuilder {
@@ -1707,13 +1643,6 @@ private static final long serialVersionUID = 0L;
     private DatasetVersionQuery() {
       datasetId_ = "";
       datasetVersionId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DatasetVersionQuery();
     }
 
     @java.lang.Override
@@ -1729,6 +1658,7 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1752,7 +1682,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1786,10 +1716,8 @@ private static final long serialVersionUID = 0L;
     public static final int DATASET_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object datasetId_;
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
-    @java.lang.Override
     public java.lang.String getDatasetId() {
       java.lang.Object ref = datasetId_;
       if (ref instanceof java.lang.String) {
@@ -1803,10 +1731,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-     * @return The bytes for datasetId.
+     * <code>string dataset_id = 1[json_name = "datasetId"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetIdBytes() {
       java.lang.Object ref = datasetId_;
@@ -1824,10 +1750,8 @@ private static final long serialVersionUID = 0L;
     public static final int DATASET_VERSION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object datasetVersionId_;
     /**
-     * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-     * @return The datasetVersionId.
+     * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
      */
-    @java.lang.Override
     public java.lang.String getDatasetVersionId() {
       java.lang.Object ref = datasetVersionId_;
       if (ref instanceof java.lang.String) {
@@ -1841,10 +1765,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-     * @return The bytes for datasetVersionId.
+     * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetVersionIdBytes() {
       java.lang.Object ref = datasetVersionId_;
@@ -1909,12 +1831,13 @@ private static final long serialVersionUID = 0L;
       }
       com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery) obj;
 
-      if (!getDatasetId()
-          .equals(other.getDatasetId())) return false;
-      if (!getDatasetVersionId()
-          .equals(other.getDatasetVersionId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getDatasetId()
+          .equals(other.getDatasetId());
+      result = result && getDatasetVersionId()
+          .equals(other.getDatasetVersionId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -2099,35 +2022,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2180,8 +2103,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object datasetId_ = "";
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @return The datasetId.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public java.lang.String getDatasetId() {
         java.lang.Object ref = datasetId_;
@@ -2196,8 +2118,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @return The bytes for datasetId.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public com.google.protobuf.ByteString
           getDatasetIdBytes() {
@@ -2213,9 +2134,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @param value The datasetId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public Builder setDatasetId(
           java.lang.String value) {
@@ -2228,8 +2147,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @return This builder for chaining.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public Builder clearDatasetId() {
         
@@ -2238,9 +2156,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
-       * @param value The bytes for datasetId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_id = 1[json_name = "datasetId"];</code>
        */
       public Builder setDatasetIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2256,8 +2172,7 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object datasetVersionId_ = "";
       /**
-       * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-       * @return The datasetVersionId.
+       * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
        */
       public java.lang.String getDatasetVersionId() {
         java.lang.Object ref = datasetVersionId_;
@@ -2272,8 +2187,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-       * @return The bytes for datasetVersionId.
+       * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
        */
       public com.google.protobuf.ByteString
           getDatasetVersionIdBytes() {
@@ -2289,9 +2203,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-       * @param value The datasetVersionId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
        */
       public Builder setDatasetVersionId(
           java.lang.String value) {
@@ -2304,8 +2216,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-       * @return This builder for chaining.
+       * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
        */
       public Builder clearDatasetVersionId() {
         
@@ -2314,9 +2225,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>string dataset_version_id = 2 [json_name = "datasetVersionId"];</code>
-       * @param value The bytes for datasetVersionId to set.
-       * @return This builder for chaining.
+       * <code>string dataset_version_id = 2[json_name = "datasetVersionId"];</code>
        */
       public Builder setDatasetVersionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2332,7 +2241,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2385,8 +2294,7 @@ private static final long serialVersionUID = 0L;
   private int queryCase_ = 0;
   private java.lang.Object query_;
   public enum QueryCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     DATASET(1),
     DATASET_VERSION(3),
     DATE_RANGE(4),
@@ -2396,8 +2304,6 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -2427,18 +2333,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int DATASET_FIELD_NUMBER = 1;
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
-   * @return Whether the dataset field is set.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public boolean hasDataset() {
     return queryCase_ == 1;
   }
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
-   * @return The dataset.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery getDataset() {
     if (queryCase_ == 1) {
        return (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery) query_;
@@ -2446,9 +2348,8 @@ private static final long serialVersionUID = 0L;
     return com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery.getDefaultInstance();
   }
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQueryOrBuilder getDatasetOrBuilder() {
     if (queryCase_ == 1) {
        return (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery) query_;
@@ -2458,18 +2359,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int DATASET_VERSION_FIELD_NUMBER = 3;
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
-   * @return Whether the datasetVersion field is set.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
    */
-  @java.lang.Override
   public boolean hasDatasetVersion() {
     return queryCase_ == 3;
   }
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
-   * @return The datasetVersion.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery getDatasetVersion() {
     if (queryCase_ == 3) {
        return (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery) query_;
@@ -2477,9 +2374,8 @@ private static final long serialVersionUID = 0L;
     return com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery.getDefaultInstance();
   }
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQueryOrBuilder getDatasetVersionOrBuilder() {
     if (queryCase_ == 3) {
        return (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery) query_;
@@ -2489,18 +2385,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int DATE_RANGE_FIELD_NUMBER = 4;
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
-   * @return Whether the dateRange field is set.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
    */
-  @java.lang.Override
   public boolean hasDateRange() {
     return queryCase_ == 4;
   }
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
-   * @return The dateRange.
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery getDateRange() {
     if (queryCase_ == 4) {
        return (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery) query_;
@@ -2508,9 +2400,8 @@ private static final long serialVersionUID = 0L;
     return com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery.getDefaultInstance();
   }
   /**
-   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+   * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQueryOrBuilder getDateRangeOrBuilder() {
     if (queryCase_ == 4) {
        return (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery) query_;
@@ -2577,25 +2468,28 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest) obj;
 
-    if (!getQueryCase().equals(other.getQueryCase())) return false;
+    boolean result = true;
+    result = result && getQueryCase().equals(
+        other.getQueryCase());
+    if (!result) return false;
     switch (queryCase_) {
       case 1:
-        if (!getDataset()
-            .equals(other.getDataset())) return false;
+        result = result && getDataset()
+            .equals(other.getDataset());
         break;
       case 3:
-        if (!getDatasetVersion()
-            .equals(other.getDatasetVersion())) return false;
+        result = result && getDatasetVersion()
+            .equals(other.getDatasetVersion());
         break;
       case 4:
-        if (!getDateRange()
-            .equals(other.getDateRange())) return false;
+        result = result && getDateRange()
+            .equals(other.getDateRange());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -2810,35 +2704,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2916,18 +2810,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQueryOrBuilder> datasetBuilder_;
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
-     * @return Whether the dataset field is set.
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
-    @java.lang.Override
     public boolean hasDataset() {
       return queryCase_ == 1;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
-     * @return The dataset.
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery getDataset() {
       if (datasetBuilder_ == null) {
         if (queryCase_ == 1) {
@@ -2942,7 +2832,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
     public Builder setDataset(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery value) {
       if (datasetBuilder_ == null) {
@@ -2958,7 +2848,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
     public Builder setDataset(
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery.Builder builderForValue) {
@@ -2972,7 +2862,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
     public Builder mergeDataset(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery value) {
       if (datasetBuilder_ == null) {
@@ -2994,7 +2884,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
     public Builder clearDataset() {
       if (datasetBuilder_ == null) {
@@ -3013,15 +2903,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery.Builder getDatasetBuilder() {
       return getDatasetFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQueryOrBuilder getDatasetOrBuilder() {
       if ((queryCase_ == 1) && (datasetBuilder_ != null)) {
         return datasetBuilder_.getMessageOrBuilder();
@@ -3033,7 +2922,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1 [json_name = "dataset"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery dataset = 1[json_name = "dataset"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQuery.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetQueryOrBuilder> 
@@ -3057,18 +2946,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQueryOrBuilder> datasetVersionBuilder_;
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
-     * @return Whether the datasetVersion field is set.
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
-    @java.lang.Override
     public boolean hasDatasetVersion() {
       return queryCase_ == 3;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
-     * @return The datasetVersion.
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery getDatasetVersion() {
       if (datasetVersionBuilder_ == null) {
         if (queryCase_ == 3) {
@@ -3083,7 +2968,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
     public Builder setDatasetVersion(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery value) {
       if (datasetVersionBuilder_ == null) {
@@ -3099,7 +2984,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
     public Builder setDatasetVersion(
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery.Builder builderForValue) {
@@ -3113,7 +2998,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
     public Builder mergeDatasetVersion(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery value) {
       if (datasetVersionBuilder_ == null) {
@@ -3135,7 +3020,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
     public Builder clearDatasetVersion() {
       if (datasetVersionBuilder_ == null) {
@@ -3154,15 +3039,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery.Builder getDatasetVersionBuilder() {
       return getDatasetVersionFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQueryOrBuilder getDatasetVersionOrBuilder() {
       if ((queryCase_ == 3) && (datasetVersionBuilder_ != null)) {
         return datasetVersionBuilder_.getMessageOrBuilder();
@@ -3174,7 +3058,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3 [json_name = "datasetVersion"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery dataset_version = 3[json_name = "datasetVersion"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQuery.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DatasetVersionQueryOrBuilder> 
@@ -3198,18 +3082,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQueryOrBuilder> dateRangeBuilder_;
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
-     * @return Whether the dateRange field is set.
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
-    @java.lang.Override
     public boolean hasDateRange() {
       return queryCase_ == 4;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
-     * @return The dateRange.
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery getDateRange() {
       if (dateRangeBuilder_ == null) {
         if (queryCase_ == 4) {
@@ -3224,7 +3104,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
     public Builder setDateRange(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery value) {
       if (dateRangeBuilder_ == null) {
@@ -3240,7 +3120,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
     public Builder setDateRange(
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery.Builder builderForValue) {
@@ -3254,7 +3134,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
     public Builder mergeDateRange(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery value) {
       if (dateRangeBuilder_ == null) {
@@ -3276,7 +3156,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
     public Builder clearDateRange() {
       if (dateRangeBuilder_ == null) {
@@ -3295,15 +3175,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery.Builder getDateRangeBuilder() {
       return getDateRangeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQueryOrBuilder getDateRangeOrBuilder() {
       if ((queryCase_ == 4) && (dateRangeBuilder_ != null)) {
         return dateRangeBuilder_.getMessageOrBuilder();
@@ -3315,7 +3194,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4 [json_name = "dateRange"];</code>
+     * <code>.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery date_range = 4[json_name = "dateRange"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQuery.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkStreamRequest.DateRangeQueryOrBuilder> 
@@ -3338,7 +3217,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

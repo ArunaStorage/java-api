@@ -8,66 +8,53 @@ public interface APITokenOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>string token = 2 [json_name = "token"];</code>
-   * @return The token.
+   * <code>string token = 2[json_name = "token"];</code>
    */
   java.lang.String getToken();
   /**
-   * <code>string token = 2 [json_name = "token"];</code>
-   * @return The bytes for token.
+   * <code>string token = 2[json_name = "token"];</code>
    */
   com.google.protobuf.ByteString
       getTokenBytes();
 
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @return A list containing the rights.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getRightsList();
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @return The count of rights.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
   int getRightsCount();
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @param index The index of the element to return.
-   * @return The rights at the given index.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Right getRights(int index);
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @return A list containing the enum numeric values on the wire for rights.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
   java.util.List<java.lang.Integer>
   getRightsValueList();
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of rights at the given index.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
   int getRightsValue(int index);
 
   /**
-   * <code>string project_id = 4 [json_name = "projectId"];</code>
-   * @return The projectId.
+   * <code>string project_id = 4[json_name = "projectId"];</code>
    */
   java.lang.String getProjectId();
   /**
-   * <code>string project_id = 4 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
+   * <code>string project_id = 4[json_name = "projectId"];</code>
    */
   com.google.protobuf.ByteString
       getProjectIdBytes();

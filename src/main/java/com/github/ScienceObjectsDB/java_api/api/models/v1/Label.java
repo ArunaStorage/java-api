@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.Label}
  */
-public final class Label extends
+public  final class Label extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.Label)
     LabelOrBuilder {
@@ -18,13 +18,6 @@ private static final long serialVersionUID = 0L;
   private Label() {
     key_ = "";
     value_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new Label();
   }
 
   @java.lang.Override
@@ -40,6 +33,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -63,7 +57,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -97,10 +91,8 @@ private static final long serialVersionUID = 0L;
   public static final int KEY_FIELD_NUMBER = 1;
   private volatile java.lang.Object key_;
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
-  @java.lang.Override
   public java.lang.String getKey() {
     java.lang.Object ref = key_;
     if (ref instanceof java.lang.String) {
@@ -114,10 +106,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getKeyBytes() {
     java.lang.Object ref = key_;
@@ -135,10 +125,8 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_FIELD_NUMBER = 2;
   private volatile java.lang.Object value_;
   /**
-   * <code>string value = 2 [json_name = "value"];</code>
-   * @return The value.
+   * <code>string value = 2[json_name = "value"];</code>
    */
-  @java.lang.Override
   public java.lang.String getValue() {
     java.lang.Object ref = value_;
     if (ref instanceof java.lang.String) {
@@ -152,10 +140,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value = 2 [json_name = "value"];</code>
-   * @return The bytes for value.
+   * <code>string value = 2[json_name = "value"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getValueBytes() {
     java.lang.Object ref = value_;
@@ -220,12 +206,13 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.Label other = (com.github.ScienceObjectsDB.java_api.api.models.v1.Label) obj;
 
-    if (!getKey()
-        .equals(other.getKey())) return false;
-    if (!getValue()
-        .equals(other.getValue())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getKey()
+        .equals(other.getKey());
+    result = result && getValue()
+        .equals(other.getValue());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -410,35 +397,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -491,8 +478,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object key_ = "";
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return The key.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -507,8 +493,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return The bytes for key.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -524,9 +509,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @param value The key to set.
-     * @return This builder for chaining.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public Builder setKey(
         java.lang.String value) {
@@ -539,8 +522,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return This builder for chaining.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public Builder clearKey() {
       
@@ -549,9 +531,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @param value The bytes for key to set.
-     * @return This builder for chaining.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
@@ -567,8 +547,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object value_ = "";
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
-     * @return The value.
+     * <code>string value = 2[json_name = "value"];</code>
      */
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
@@ -583,8 +562,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
-     * @return The bytes for value.
+     * <code>string value = 2[json_name = "value"];</code>
      */
     public com.google.protobuf.ByteString
         getValueBytes() {
@@ -600,9 +578,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
-     * @param value The value to set.
-     * @return This builder for chaining.
+     * <code>string value = 2[json_name = "value"];</code>
      */
     public Builder setValue(
         java.lang.String value) {
@@ -615,8 +591,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
-     * @return This builder for chaining.
+     * <code>string value = 2[json_name = "value"];</code>
      */
     public Builder clearValue() {
       
@@ -625,9 +600,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
-     * @param value The bytes for value to set.
-     * @return This builder for chaining.
+     * <code>string value = 2[json_name = "value"];</code>
      */
     public Builder setValueBytes(
         com.google.protobuf.ByteString value) {
@@ -643,7 +616,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

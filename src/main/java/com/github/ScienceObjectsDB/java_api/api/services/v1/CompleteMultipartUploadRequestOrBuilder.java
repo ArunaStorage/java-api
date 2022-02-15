@@ -8,37 +8,35 @@ public interface CompleteMultipartUploadRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
   java.lang.String getObjectId();
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The bytes for objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
   com.google.protobuf.ByteString
       getObjectIdBytes();
 
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts> 
       getPartsList();
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts getParts(int index);
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
   int getPartsCount();
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder> 
       getPartsOrBuilderList();
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder getPartsOrBuilder(
       int index);

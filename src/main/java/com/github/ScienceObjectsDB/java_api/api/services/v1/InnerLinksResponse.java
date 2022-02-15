@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.InnerLinksResponse}
  */
-public final class InnerLinksResponse extends
+public  final class InnerLinksResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.InnerLinksResponse)
     InnerLinksResponseOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private InnerLinksResponse() {
     objectLinks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new InnerLinksResponse();
   }
 
   @java.lang.Override
@@ -52,7 +45,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               objectLinks_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -60,7 +53,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -74,7 +67,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
         objectLinks_ = objectLinks_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -97,32 +90,26 @@ private static final long serialVersionUID = 0L;
   public static final int OBJECT_LINKS_FIELD_NUMBER = 1;
   private com.google.protobuf.LazyStringList objectLinks_;
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @return A list containing the objectLinks.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   public com.google.protobuf.ProtocolStringList
       getObjectLinksList() {
     return objectLinks_;
   }
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @return The count of objectLinks.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   public int getObjectLinksCount() {
     return objectLinks_.size();
   }
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @param index The index of the element to return.
-   * @return The objectLinks at the given index.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   public java.lang.String getObjectLinks(int index) {
     return objectLinks_.get(index);
   }
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the objectLinks at the given index.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   public com.google.protobuf.ByteString
       getObjectLinksBytes(int index) {
@@ -178,10 +165,11 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.InnerLinksResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.InnerLinksResponse) obj;
 
-    if (!getObjectLinksList()
-        .equals(other.getObjectLinksList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getObjectLinksList()
+        .equals(other.getObjectLinksList());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -357,7 +345,7 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.services.v1.InnerLinksResponse buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.services.v1.InnerLinksResponse result = new com.github.ScienceObjectsDB.java_api.api.services.v1.InnerLinksResponse(this);
       int from_bitField0_ = bitField0_;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         objectLinks_ = objectLinks_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
@@ -368,35 +356,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -452,48 +440,39 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList objectLinks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureObjectLinksIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
         objectLinks_ = new com.google.protobuf.LazyStringArrayList(objectLinks_);
         bitField0_ |= 0x00000001;
        }
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @return A list containing the objectLinks.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getObjectLinksList() {
       return objectLinks_.getUnmodifiableView();
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @return The count of objectLinks.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public int getObjectLinksCount() {
       return objectLinks_.size();
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @param index The index of the element to return.
-     * @return The objectLinks at the given index.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public java.lang.String getObjectLinks(int index) {
       return objectLinks_.get(index);
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the objectLinks at the given index.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public com.google.protobuf.ByteString
         getObjectLinksBytes(int index) {
       return objectLinks_.getByteString(index);
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @param index The index to set the value at.
-     * @param value The objectLinks to set.
-     * @return This builder for chaining.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public Builder setObjectLinks(
         int index, java.lang.String value) {
@@ -506,9 +485,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @param value The objectLinks to add.
-     * @return This builder for chaining.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public Builder addObjectLinks(
         java.lang.String value) {
@@ -521,9 +498,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @param values The objectLinks to add.
-     * @return This builder for chaining.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public Builder addAllObjectLinks(
         java.lang.Iterable<java.lang.String> values) {
@@ -534,8 +509,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @return This builder for chaining.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public Builder clearObjectLinks() {
       objectLinks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -544,9 +518,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-     * @param value The bytes of the objectLinks to add.
-     * @return This builder for chaining.
+     * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
      */
     public Builder addObjectLinksBytes(
         com.google.protobuf.ByteString value) {
@@ -562,7 +534,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

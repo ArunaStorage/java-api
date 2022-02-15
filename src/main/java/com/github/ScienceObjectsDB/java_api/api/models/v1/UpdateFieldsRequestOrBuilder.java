@@ -8,23 +8,21 @@ public interface UpdateFieldsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
   int getUpdatedStringFieldsCount();
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
   boolean containsUpdatedStringFields(
       java.lang.String key);
@@ -35,19 +33,19 @@ public interface UpdateFieldsRequestOrBuilder extends
   java.util.Map<java.lang.String, java.lang.String>
   getUpdatedStringFields();
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
   getUpdatedStringFieldsMap();
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
 
   java.lang.String getUpdatedStringFieldsOrDefault(
       java.lang.String key,
       java.lang.String defaultValue);
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
 
   java.lang.String getUpdatedStringFieldsOrThrow(

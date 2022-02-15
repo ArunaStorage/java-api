@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.GetMultipartUploadLinkRequest}
  */
-public final class GetMultipartUploadLinkRequest extends
+public  final class GetMultipartUploadLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.GetMultipartUploadLinkRequest)
     GetMultipartUploadLinkRequestOrBuilder {
@@ -17,13 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetMultipartUploadLinkRequest() {
     objectId_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new GetMultipartUploadLinkRequest();
+    uploadPart_ = 0L;
   }
 
   @java.lang.Override
@@ -39,6 +33,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -61,7 +56,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -95,10 +90,8 @@ private static final long serialVersionUID = 0L;
   public static final int OBJECT_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object objectId_;
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
-  @java.lang.Override
   public java.lang.String getObjectId() {
     java.lang.Object ref = objectId_;
     if (ref instanceof java.lang.String) {
@@ -112,10 +105,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The bytes for objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getObjectIdBytes() {
     java.lang.Object ref = objectId_;
@@ -133,10 +124,8 @@ private static final long serialVersionUID = 0L;
   public static final int UPLOAD_PART_FIELD_NUMBER = 2;
   private long uploadPart_;
   /**
-   * <code>int64 upload_part = 2 [json_name = "uploadPart"];</code>
-   * @return The uploadPart.
+   * <code>int64 upload_part = 2[json_name = "uploadPart"];</code>
    */
-  @java.lang.Override
   public long getUploadPart() {
     return uploadPart_;
   }
@@ -192,12 +181,13 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.GetMultipartUploadLinkRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.GetMultipartUploadLinkRequest) obj;
 
-    if (!getObjectId()
-        .equals(other.getObjectId())) return false;
-    if (getUploadPart()
-        != other.getUploadPart()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getObjectId()
+        .equals(other.getObjectId());
+    result = result && (getUploadPart()
+        == other.getUploadPart());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -383,35 +373,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -463,8 +453,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object objectId_ = "";
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @return The objectId.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public java.lang.String getObjectId() {
       java.lang.Object ref = objectId_;
@@ -479,8 +468,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @return The bytes for objectId.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public com.google.protobuf.ByteString
         getObjectIdBytes() {
@@ -496,9 +484,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @param value The objectId to set.
-     * @return This builder for chaining.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public Builder setObjectId(
         java.lang.String value) {
@@ -511,8 +497,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @return This builder for chaining.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public Builder clearObjectId() {
       
@@ -521,9 +506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @param value The bytes for objectId to set.
-     * @return This builder for chaining.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public Builder setObjectIdBytes(
         com.google.protobuf.ByteString value) {
@@ -539,17 +522,13 @@ private static final long serialVersionUID = 0L;
 
     private long uploadPart_ ;
     /**
-     * <code>int64 upload_part = 2 [json_name = "uploadPart"];</code>
-     * @return The uploadPart.
+     * <code>int64 upload_part = 2[json_name = "uploadPart"];</code>
      */
-    @java.lang.Override
     public long getUploadPart() {
       return uploadPart_;
     }
     /**
-     * <code>int64 upload_part = 2 [json_name = "uploadPart"];</code>
-     * @param value The uploadPart to set.
-     * @return This builder for chaining.
+     * <code>int64 upload_part = 2[json_name = "uploadPart"];</code>
      */
     public Builder setUploadPart(long value) {
       
@@ -558,8 +537,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 upload_part = 2 [json_name = "uploadPart"];</code>
-     * @return This builder for chaining.
+     * <code>int64 upload_part = 2[json_name = "uploadPart"];</code>
      */
     public Builder clearUploadPart() {
       
@@ -570,7 +548,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.CreateDownloadLinkResponse}
  */
-public final class CreateDownloadLinkResponse extends
+public  final class CreateDownloadLinkResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.CreateDownloadLinkResponse)
     CreateDownloadLinkResponseOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private CreateDownloadLinkResponse() {
     downloadLink_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new CreateDownloadLinkResponse();
   }
 
   @java.lang.Override
@@ -39,6 +32,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -69,7 +63,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -103,10 +97,8 @@ private static final long serialVersionUID = 0L;
   public static final int DOWNLOAD_LINK_FIELD_NUMBER = 1;
   private volatile java.lang.Object downloadLink_;
   /**
-   * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-   * @return The downloadLink.
+   * <code>string download_link = 1[json_name = "downloadLink"];</code>
    */
-  @java.lang.Override
   public java.lang.String getDownloadLink() {
     java.lang.Object ref = downloadLink_;
     if (ref instanceof java.lang.String) {
@@ -120,10 +112,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-   * @return The bytes for downloadLink.
+   * <code>string download_link = 1[json_name = "downloadLink"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getDownloadLinkBytes() {
     java.lang.Object ref = downloadLink_;
@@ -141,25 +131,20 @@ private static final long serialVersionUID = 0L;
   public static final int OBJECT_FIELD_NUMBER = 2;
   private com.github.ScienceObjectsDB.java_api.api.models.v1.Object object_;
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-   * @return Whether the object field is set.
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
-  @java.lang.Override
   public boolean hasObject() {
     return object_ != null;
   }
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-   * @return The object.
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Object getObject() {
     return object_ == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.Object.getDefaultInstance() : object_;
   }
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder getObjectOrBuilder() {
     return getObject();
   }
@@ -215,15 +200,16 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkResponse other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateDownloadLinkResponse) obj;
 
-    if (!getDownloadLink()
-        .equals(other.getDownloadLink())) return false;
-    if (hasObject() != other.hasObject()) return false;
+    boolean result = true;
+    result = result && getDownloadLink()
+        .equals(other.getDownloadLink());
+    result = result && (hasObject() == other.hasObject());
     if (hasObject()) {
-      if (!getObject()
-          .equals(other.getObject())) return false;
+      result = result && getObject()
+          .equals(other.getObject());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -418,35 +404,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -498,8 +484,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object downloadLink_ = "";
     /**
-     * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-     * @return The downloadLink.
+     * <code>string download_link = 1[json_name = "downloadLink"];</code>
      */
     public java.lang.String getDownloadLink() {
       java.lang.Object ref = downloadLink_;
@@ -514,8 +499,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-     * @return The bytes for downloadLink.
+     * <code>string download_link = 1[json_name = "downloadLink"];</code>
      */
     public com.google.protobuf.ByteString
         getDownloadLinkBytes() {
@@ -531,9 +515,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-     * @param value The downloadLink to set.
-     * @return This builder for chaining.
+     * <code>string download_link = 1[json_name = "downloadLink"];</code>
      */
     public Builder setDownloadLink(
         java.lang.String value) {
@@ -546,8 +528,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-     * @return This builder for chaining.
+     * <code>string download_link = 1[json_name = "downloadLink"];</code>
      */
     public Builder clearDownloadLink() {
       
@@ -556,9 +537,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-     * @param value The bytes for downloadLink to set.
-     * @return This builder for chaining.
+     * <code>string download_link = 1[json_name = "downloadLink"];</code>
      */
     public Builder setDownloadLinkBytes(
         com.google.protobuf.ByteString value) {
@@ -572,19 +551,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.github.ScienceObjectsDB.java_api.api.models.v1.Object object_;
+    private com.github.ScienceObjectsDB.java_api.api.models.v1.Object object_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.Object, com.github.ScienceObjectsDB.java_api.api.models.v1.Object.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder> objectBuilder_;
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-     * @return Whether the object field is set.
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public boolean hasObject() {
       return objectBuilder_ != null || object_ != null;
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-     * @return The object.
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Object getObject() {
       if (objectBuilder_ == null) {
@@ -594,7 +571,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public Builder setObject(com.github.ScienceObjectsDB.java_api.api.models.v1.Object value) {
       if (objectBuilder_ == null) {
@@ -610,7 +587,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public Builder setObject(
         com.github.ScienceObjectsDB.java_api.api.models.v1.Object.Builder builderForValue) {
@@ -624,7 +601,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public Builder mergeObject(com.github.ScienceObjectsDB.java_api.api.models.v1.Object value) {
       if (objectBuilder_ == null) {
@@ -642,7 +619,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public Builder clearObject() {
       if (objectBuilder_ == null) {
@@ -656,7 +633,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Object.Builder getObjectBuilder() {
       
@@ -664,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return getObjectFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder getObjectOrBuilder() {
       if (objectBuilder_ != null) {
@@ -675,7 +652,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+     * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.ScienceObjectsDB.java_api.api.models.v1.Object, com.github.ScienceObjectsDB.java_api.api.models.v1.Object.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder> 
@@ -693,7 +670,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

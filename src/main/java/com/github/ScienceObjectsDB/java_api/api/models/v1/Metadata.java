@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.Metadata}
  */
-public final class Metadata extends
+public  final class Metadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.Metadata)
     MetadataOrBuilder {
@@ -19,13 +19,6 @@ private static final long serialVersionUID = 0L;
     key_ = "";
     labels_ = java.util.Collections.emptyList();
     metadata_ = com.google.protobuf.ByteString.EMPTY;
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new Metadata();
   }
 
   @java.lang.Override
@@ -59,9 +52,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               labels_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.models.v1.Label>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             labels_.add(
                 input.readMessage(com.github.ScienceObjectsDB.java_api.api.models.v1.Label.parser(), extensionRegistry));
@@ -79,7 +72,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -93,7 +86,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
       }
       this.unknownFields = unknownFields.build();
@@ -113,11 +106,11 @@ private static final long serialVersionUID = 0L;
             com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata.class, com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata.Builder.class);
   }
 
+  private int bitField0_;
   private int schemaCase_ = 0;
   private java.lang.Object schema_;
   public enum SchemaCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     SIMPLE_SCHEMA(4),
     SCHEMA_NOT_SET(0);
     private final int value;
@@ -125,8 +118,6 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -155,10 +146,8 @@ private static final long serialVersionUID = 0L;
   public static final int KEY_FIELD_NUMBER = 1;
   private volatile java.lang.Object key_;
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
-  @java.lang.Override
   public java.lang.String getKey() {
     java.lang.Object ref = key_;
     if (ref instanceof java.lang.String) {
@@ -172,10 +161,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getKeyBytes() {
     java.lang.Object ref = key_;
@@ -193,38 +180,33 @@ private static final long serialVersionUID = 0L;
   public static final int LABELS_FIELD_NUMBER = 2;
   private java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> labels_;
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> getLabelsList() {
     return labels_;
   }
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList() {
     return labels_;
   }
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
-  @java.lang.Override
   public int getLabelsCount() {
     return labels_.size();
   }
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index) {
     return labels_.get(index);
   }
   /**
-   * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index) {
     return labels_.get(index);
@@ -233,25 +215,15 @@ private static final long serialVersionUID = 0L;
   public static final int METADATA_FIELD_NUMBER = 3;
   private com.google.protobuf.ByteString metadata_;
   /**
-   * <code>bytes metadata = 3 [json_name = "metadata"];</code>
-   * @return The metadata.
+   * <code>bytes metadata = 3[json_name = "metadata"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString getMetadata() {
     return metadata_;
   }
 
   public static final int SIMPLE_SCHEMA_FIELD_NUMBER = 4;
   /**
-   * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-   * @return Whether the simpleSchema field is set.
-   */
-  public boolean hasSimpleSchema() {
-    return schemaCase_ == 4;
-  }
-  /**
-   * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-   * @return The simpleSchema.
+   * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
    */
   public java.lang.String getSimpleSchema() {
     java.lang.Object ref = "";
@@ -271,8 +243,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-   * @return The bytes for simpleSchema.
+   * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
    */
   public com.google.protobuf.ByteString
       getSimpleSchemaBytes() {
@@ -357,23 +328,26 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata other = (com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata) obj;
 
-    if (!getKey()
-        .equals(other.getKey())) return false;
-    if (!getLabelsList()
-        .equals(other.getLabelsList())) return false;
-    if (!getMetadata()
-        .equals(other.getMetadata())) return false;
-    if (!getSchemaCase().equals(other.getSchemaCase())) return false;
+    boolean result = true;
+    result = result && getKey()
+        .equals(other.getKey());
+    result = result && getLabelsList()
+        .equals(other.getLabelsList());
+    result = result && getMetadata()
+        .equals(other.getMetadata());
+    result = result && getSchemaCase().equals(
+        other.getSchemaCase());
+    if (!result) return false;
     switch (schemaCase_) {
       case 4:
-        if (!getSimpleSchema()
-            .equals(other.getSimpleSchema())) return false;
+        result = result && getSimpleSchema()
+            .equals(other.getSimpleSchema());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -537,7 +511,7 @@ private static final long serialVersionUID = 0L;
 
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         labelsBuilder_.clear();
       }
@@ -572,11 +546,12 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata result = new com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.key_ = key_;
       if (labelsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.labels_ = labels_;
       } else {
@@ -586,6 +561,7 @@ private static final long serialVersionUID = 0L;
       if (schemaCase_ == 4) {
         result.schema_ = schema_;
       }
+      result.bitField0_ = to_bitField0_;
       result.schemaCase_ = schemaCase_;
       onBuilt();
       return result;
@@ -593,35 +569,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -643,7 +619,7 @@ private static final long serialVersionUID = 0L;
         if (!other.labels_.isEmpty()) {
           if (labels_.isEmpty()) {
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
@@ -656,7 +632,7 @@ private static final long serialVersionUID = 0L;
             labelsBuilder_.dispose();
             labelsBuilder_ = null;
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             labelsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLabelsFieldBuilder() : null;
@@ -726,8 +702,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object key_ = "";
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return The key.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -742,8 +717,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return The bytes for key.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -759,9 +733,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @param value The key to set.
-     * @return This builder for chaining.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public Builder setKey(
         java.lang.String value) {
@@ -774,8 +746,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return This builder for chaining.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public Builder clearKey() {
       
@@ -784,9 +755,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @param value The bytes for key to set.
-     * @return This builder for chaining.
+     * <code>string key = 1[json_name = "key"];</code>
      */
     public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
@@ -803,9 +772,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         labels_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.models.v1.Label>(labels_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -813,7 +782,7 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.models.v1.Label, com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> labelsBuilder_;
 
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> getLabelsList() {
       if (labelsBuilder_ == null) {
@@ -823,7 +792,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public int getLabelsCount() {
       if (labelsBuilder_ == null) {
@@ -833,7 +802,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -843,7 +812,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder setLabels(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Label value) {
@@ -860,7 +829,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder setLabels(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder builderForValue) {
@@ -874,7 +843,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder addLabels(com.github.ScienceObjectsDB.java_api.api.models.v1.Label value) {
       if (labelsBuilder_ == null) {
@@ -890,7 +859,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder addLabels(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Label value) {
@@ -907,7 +876,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder addLabels(
         com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder builderForValue) {
@@ -921,7 +890,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder addLabels(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder builderForValue) {
@@ -935,7 +904,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder addAllLabels(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.Label> values) {
@@ -950,12 +919,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         labelsBuilder_.clear();
@@ -963,7 +932,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public Builder removeLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -976,14 +945,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder getLabelsBuilder(
         int index) {
       return getLabelsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
         int index) {
@@ -993,7 +962,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
          getLabelsOrBuilderList() {
@@ -1004,14 +973,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder addLabelsBuilder() {
       return getLabelsFieldBuilder().addBuilder(
           com.github.ScienceObjectsDB.java_api.api.models.v1.Label.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder addLabelsBuilder(
         int index) {
@@ -1019,7 +988,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.ScienceObjectsDB.java_api.api.models.v1.Label.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.models.v1.Label labels = 2 [json_name = "labels"];</code>
+     * <code>repeated .api.models.v1.Label labels = 2[json_name = "labels"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder> 
          getLabelsBuilderList() {
@@ -1032,7 +1001,7 @@ private static final long serialVersionUID = 0L;
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.ScienceObjectsDB.java_api.api.models.v1.Label, com.github.ScienceObjectsDB.java_api.api.models.v1.Label.Builder, com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         labels_ = null;
@@ -1042,17 +1011,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
-     * @return The metadata.
+     * <code>bytes metadata = 3[json_name = "metadata"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString getMetadata() {
       return metadata_;
     }
     /**
-     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
-     * @param value The metadata to set.
-     * @return This builder for chaining.
+     * <code>bytes metadata = 3[json_name = "metadata"];</code>
      */
     public Builder setMetadata(com.google.protobuf.ByteString value) {
       if (value == null) {
@@ -1064,8 +1029,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
-     * @return This builder for chaining.
+     * <code>bytes metadata = 3[json_name = "metadata"];</code>
      */
     public Builder clearMetadata() {
       
@@ -1075,18 +1039,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-     * @return Whether the simpleSchema field is set.
+     * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
      */
-    @java.lang.Override
-    public boolean hasSimpleSchema() {
-      return schemaCase_ == 4;
-    }
-    /**
-     * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-     * @return The simpleSchema.
-     */
-    @java.lang.Override
     public java.lang.String getSimpleSchema() {
       java.lang.Object ref = "";
       if (schemaCase_ == 4) {
@@ -1105,10 +1059,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-     * @return The bytes for simpleSchema.
+     * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getSimpleSchemaBytes() {
       java.lang.Object ref = "";
@@ -1128,9 +1080,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-     * @param value The simpleSchema to set.
-     * @return This builder for chaining.
+     * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
      */
     public Builder setSimpleSchema(
         java.lang.String value) {
@@ -1143,8 +1093,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-     * @return This builder for chaining.
+     * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
      */
     public Builder clearSimpleSchema() {
       if (schemaCase_ == 4) {
@@ -1155,9 +1104,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string simple_schema = 4 [json_name = "simpleSchema"];</code>
-     * @param value The bytes for simpleSchema to set.
-     * @return This builder for chaining.
+     * <code>string simple_schema = 4[json_name = "simpleSchema"];</code>
      */
     public Builder setSimpleSchemaBytes(
         com.google.protobuf.ByteString value) {
@@ -1173,7 +1120,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

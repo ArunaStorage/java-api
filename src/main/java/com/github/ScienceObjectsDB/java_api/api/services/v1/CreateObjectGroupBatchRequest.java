@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.CreateObjectGroupBatchRequest}
  */
-public final class CreateObjectGroupBatchRequest extends
+public  final class CreateObjectGroupBatchRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.CreateObjectGroupBatchRequest)
     CreateObjectGroupBatchRequestOrBuilder {
@@ -17,13 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private CreateObjectGroupBatchRequest() {
     requests_ = java.util.Collections.emptyList();
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new CreateObjectGroupBatchRequest();
+    includeObjectLink_ = false;
   }
 
   @java.lang.Override
@@ -51,7 +45,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               requests_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest>();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -65,7 +59,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -79,7 +73,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
         requests_ = java.util.Collections.unmodifiableList(requests_);
       }
       this.unknownFields = unknownFields.build();
@@ -99,41 +93,37 @@ private static final long serialVersionUID = 0L;
             com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest.class, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int REQUESTS_FIELD_NUMBER = 1;
   private java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest> requests_;
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest> getRequestsList() {
     return requests_;
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder> 
       getRequestsOrBuilderList() {
     return requests_;
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
-  @java.lang.Override
   public int getRequestsCount() {
     return requests_.size();
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest getRequests(int index) {
     return requests_.get(index);
   }
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder getRequestsOrBuilder(
       int index) {
     return requests_.get(index);
@@ -142,10 +132,8 @@ private static final long serialVersionUID = 0L;
   public static final int INCLUDE_OBJECT_LINK_FIELD_NUMBER = 2;
   private boolean includeObjectLink_;
   /**
-   * <code>bool include_object_link = 2 [json_name = "includeObjectLink"];</code>
-   * @return The includeObjectLink.
+   * <code>bool include_object_link = 2[json_name = "includeObjectLink"];</code>
    */
-  @java.lang.Override
   public boolean getIncludeObjectLink() {
     return includeObjectLink_;
   }
@@ -202,12 +190,13 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest) obj;
 
-    if (!getRequestsList()
-        .equals(other.getRequestsList())) return false;
-    if (getIncludeObjectLink()
-        != other.getIncludeObjectLink()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getRequestsList()
+        .equals(other.getRequestsList());
+    result = result && (getIncludeObjectLink()
+        == other.getIncludeObjectLink());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -393,8 +382,9 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest result = new com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupBatchRequest(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (requestsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
           requests_ = java.util.Collections.unmodifiableList(requests_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -403,41 +393,42 @@ private static final long serialVersionUID = 0L;
         result.requests_ = requestsBuilder_.build();
       }
       result.includeObjectLink_ = includeObjectLink_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -513,7 +504,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest> requests_ =
       java.util.Collections.emptyList();
     private void ensureRequestsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
         requests_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest>(requests_);
         bitField0_ |= 0x00000001;
        }
@@ -523,7 +514,7 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder> requestsBuilder_;
 
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest> getRequestsList() {
       if (requestsBuilder_ == null) {
@@ -533,7 +524,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public int getRequestsCount() {
       if (requestsBuilder_ == null) {
@@ -543,7 +534,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest getRequests(int index) {
       if (requestsBuilder_ == null) {
@@ -553,7 +544,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder setRequests(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest value) {
@@ -570,7 +561,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder setRequests(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder builderForValue) {
@@ -584,7 +575,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder addRequests(com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest value) {
       if (requestsBuilder_ == null) {
@@ -600,7 +591,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder addRequests(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest value) {
@@ -617,7 +608,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder addRequests(
         com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder builderForValue) {
@@ -631,7 +622,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder addRequests(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder builderForValue) {
@@ -645,7 +636,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder addAllRequests(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest> values) {
@@ -660,7 +651,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder clearRequests() {
       if (requestsBuilder_ == null) {
@@ -673,7 +664,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public Builder removeRequests(int index) {
       if (requestsBuilder_ == null) {
@@ -686,14 +677,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder getRequestsBuilder(
         int index) {
       return getRequestsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder getRequestsOrBuilder(
         int index) {
@@ -703,7 +694,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder> 
          getRequestsOrBuilderList() {
@@ -714,14 +705,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder addRequestsBuilder() {
       return getRequestsFieldBuilder().addBuilder(
           com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder addRequestsBuilder(
         int index) {
@@ -729,7 +720,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1 [json_name = "requests"];</code>
+     * <code>repeated .api.services.v1.CreateObjectGroupRequest requests = 1[json_name = "requests"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder> 
          getRequestsBuilderList() {
@@ -742,7 +733,7 @@ private static final long serialVersionUID = 0L;
         requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequest.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupRequestOrBuilder>(
                 requests_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
                 isClean());
         requests_ = null;
@@ -752,17 +743,13 @@ private static final long serialVersionUID = 0L;
 
     private boolean includeObjectLink_ ;
     /**
-     * <code>bool include_object_link = 2 [json_name = "includeObjectLink"];</code>
-     * @return The includeObjectLink.
+     * <code>bool include_object_link = 2[json_name = "includeObjectLink"];</code>
      */
-    @java.lang.Override
     public boolean getIncludeObjectLink() {
       return includeObjectLink_;
     }
     /**
-     * <code>bool include_object_link = 2 [json_name = "includeObjectLink"];</code>
-     * @param value The includeObjectLink to set.
-     * @return This builder for chaining.
+     * <code>bool include_object_link = 2[json_name = "includeObjectLink"];</code>
      */
     public Builder setIncludeObjectLink(boolean value) {
       
@@ -771,8 +758,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool include_object_link = 2 [json_name = "includeObjectLink"];</code>
-     * @return This builder for chaining.
+     * <code>bool include_object_link = 2[json_name = "includeObjectLink"];</code>
      */
     public Builder clearIncludeObjectLink() {
       
@@ -783,7 +769,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

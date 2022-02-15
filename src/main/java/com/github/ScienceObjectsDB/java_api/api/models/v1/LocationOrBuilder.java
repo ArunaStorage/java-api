@@ -8,32 +8,28 @@ public interface LocationOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
-   * @return Whether the objectLocation field is set.
+   * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
    */
   boolean hasObjectLocation();
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
-   * @return The objectLocation.
+   * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation getObjectLocation();
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 1 [json_name = "objectLocation"];</code>
+   * <code>.api.models.v1.ObjectLocation object_location = 1[json_name = "objectLocation"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocationOrBuilder getObjectLocationOrBuilder();
 
   /**
-   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
-   * @return Whether the objectIndexLocation field is set.
+   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
    */
   boolean hasObjectIndexLocation();
   /**
-   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
-   * @return The objectIndexLocation.
+   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocation getObjectIndexLocation();
   /**
-   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2 [json_name = "objectIndexLocation"];</code>
+   * <code>.api.models.v1.IndexedObjectLocation object_index_location = 2[json_name = "objectIndexLocation"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.IndexedObjectLocationOrBuilder getObjectIndexLocationOrBuilder();
 

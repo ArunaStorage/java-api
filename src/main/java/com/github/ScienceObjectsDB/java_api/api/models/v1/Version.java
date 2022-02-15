@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.Version}
  */
-public final class Version extends
+public  final class Version extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.Version)
     VersionOrBuilder {
@@ -16,14 +16,11 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Version() {
+    major_ = 0;
+    minor_ = 0;
+    patch_ = 0;
+    revision_ = 0;
     stage_ = 0;
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new Version();
   }
 
   @java.lang.Override
@@ -39,6 +36,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -76,7 +74,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -158,8 +156,6 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -167,10 +163,6 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static VersionStage forNumber(int value) {
       switch (value) {
         case 0: return STABLE;
@@ -195,10 +187,6 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -236,10 +224,8 @@ private static final long serialVersionUID = 0L;
   public static final int MAJOR_FIELD_NUMBER = 1;
   private int major_;
   /**
-   * <code>int32 major = 1 [json_name = "major"];</code>
-   * @return The major.
+   * <code>int32 major = 1[json_name = "major"];</code>
    */
-  @java.lang.Override
   public int getMajor() {
     return major_;
   }
@@ -247,10 +233,8 @@ private static final long serialVersionUID = 0L;
   public static final int MINOR_FIELD_NUMBER = 2;
   private int minor_;
   /**
-   * <code>int32 minor = 2 [json_name = "minor"];</code>
-   * @return The minor.
+   * <code>int32 minor = 2[json_name = "minor"];</code>
    */
-  @java.lang.Override
   public int getMinor() {
     return minor_;
   }
@@ -258,10 +242,8 @@ private static final long serialVersionUID = 0L;
   public static final int PATCH_FIELD_NUMBER = 3;
   private int patch_;
   /**
-   * <code>int32 patch = 3 [json_name = "patch"];</code>
-   * @return The patch.
+   * <code>int32 patch = 3[json_name = "patch"];</code>
    */
-  @java.lang.Override
   public int getPatch() {
     return patch_;
   }
@@ -269,10 +251,8 @@ private static final long serialVersionUID = 0L;
   public static final int REVISION_FIELD_NUMBER = 4;
   private int revision_;
   /**
-   * <code>int32 revision = 4 [json_name = "revision"];</code>
-   * @return The revision.
+   * <code>int32 revision = 4[json_name = "revision"];</code>
    */
-  @java.lang.Override
   public int getRevision() {
     return revision_;
   }
@@ -280,17 +260,15 @@ private static final long serialVersionUID = 0L;
   public static final int STAGE_FIELD_NUMBER = 5;
   private int stage_;
   /**
-   * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-   * @return The enum numeric value on the wire for stage.
+   * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
    */
-  @java.lang.Override public int getStageValue() {
+  public int getStageValue() {
     return stage_;
   }
   /**
-   * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-   * @return The stage.
+   * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
    */
-  @java.lang.Override public com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage getStage() {
+  public com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage getStage() {
     @SuppressWarnings("deprecation")
     com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage result = com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage.valueOf(stage_);
     return result == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage.UNRECOGNIZED : result;
@@ -369,17 +347,18 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.Version other = (com.github.ScienceObjectsDB.java_api.api.models.v1.Version) obj;
 
-    if (getMajor()
-        != other.getMajor()) return false;
-    if (getMinor()
-        != other.getMinor()) return false;
-    if (getPatch()
-        != other.getPatch()) return false;
-    if (getRevision()
-        != other.getRevision()) return false;
-    if (stage_ != other.stage_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && (getMajor()
+        == other.getMajor());
+    result = result && (getMinor()
+        == other.getMinor());
+    result = result && (getPatch()
+        == other.getPatch());
+    result = result && (getRevision()
+        == other.getRevision());
+    result = result && stage_ == other.stage_;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -579,35 +558,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -667,17 +646,13 @@ private static final long serialVersionUID = 0L;
 
     private int major_ ;
     /**
-     * <code>int32 major = 1 [json_name = "major"];</code>
-     * @return The major.
+     * <code>int32 major = 1[json_name = "major"];</code>
      */
-    @java.lang.Override
     public int getMajor() {
       return major_;
     }
     /**
-     * <code>int32 major = 1 [json_name = "major"];</code>
-     * @param value The major to set.
-     * @return This builder for chaining.
+     * <code>int32 major = 1[json_name = "major"];</code>
      */
     public Builder setMajor(int value) {
       
@@ -686,8 +661,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 major = 1 [json_name = "major"];</code>
-     * @return This builder for chaining.
+     * <code>int32 major = 1[json_name = "major"];</code>
      */
     public Builder clearMajor() {
       
@@ -698,17 +672,13 @@ private static final long serialVersionUID = 0L;
 
     private int minor_ ;
     /**
-     * <code>int32 minor = 2 [json_name = "minor"];</code>
-     * @return The minor.
+     * <code>int32 minor = 2[json_name = "minor"];</code>
      */
-    @java.lang.Override
     public int getMinor() {
       return minor_;
     }
     /**
-     * <code>int32 minor = 2 [json_name = "minor"];</code>
-     * @param value The minor to set.
-     * @return This builder for chaining.
+     * <code>int32 minor = 2[json_name = "minor"];</code>
      */
     public Builder setMinor(int value) {
       
@@ -717,8 +687,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 minor = 2 [json_name = "minor"];</code>
-     * @return This builder for chaining.
+     * <code>int32 minor = 2[json_name = "minor"];</code>
      */
     public Builder clearMinor() {
       
@@ -729,17 +698,13 @@ private static final long serialVersionUID = 0L;
 
     private int patch_ ;
     /**
-     * <code>int32 patch = 3 [json_name = "patch"];</code>
-     * @return The patch.
+     * <code>int32 patch = 3[json_name = "patch"];</code>
      */
-    @java.lang.Override
     public int getPatch() {
       return patch_;
     }
     /**
-     * <code>int32 patch = 3 [json_name = "patch"];</code>
-     * @param value The patch to set.
-     * @return This builder for chaining.
+     * <code>int32 patch = 3[json_name = "patch"];</code>
      */
     public Builder setPatch(int value) {
       
@@ -748,8 +713,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 patch = 3 [json_name = "patch"];</code>
-     * @return This builder for chaining.
+     * <code>int32 patch = 3[json_name = "patch"];</code>
      */
     public Builder clearPatch() {
       
@@ -760,17 +724,13 @@ private static final long serialVersionUID = 0L;
 
     private int revision_ ;
     /**
-     * <code>int32 revision = 4 [json_name = "revision"];</code>
-     * @return The revision.
+     * <code>int32 revision = 4[json_name = "revision"];</code>
      */
-    @java.lang.Override
     public int getRevision() {
       return revision_;
     }
     /**
-     * <code>int32 revision = 4 [json_name = "revision"];</code>
-     * @param value The revision to set.
-     * @return This builder for chaining.
+     * <code>int32 revision = 4[json_name = "revision"];</code>
      */
     public Builder setRevision(int value) {
       
@@ -779,8 +739,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 revision = 4 [json_name = "revision"];</code>
-     * @return This builder for chaining.
+     * <code>int32 revision = 4[json_name = "revision"];</code>
      */
     public Builder clearRevision() {
       
@@ -791,37 +750,29 @@ private static final long serialVersionUID = 0L;
 
     private int stage_ = 0;
     /**
-     * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-     * @return The enum numeric value on the wire for stage.
+     * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
      */
-    @java.lang.Override public int getStageValue() {
+    public int getStageValue() {
       return stage_;
     }
     /**
-     * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-     * @param value The enum numeric value on the wire for stage to set.
-     * @return This builder for chaining.
+     * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
      */
     public Builder setStageValue(int value) {
-      
       stage_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-     * @return The stage.
+     * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
      */
-    @java.lang.Override
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage getStage() {
       @SuppressWarnings("deprecation")
       com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage result = com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage.valueOf(stage_);
       return result == null ? com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-     * @param value The stage to set.
-     * @return This builder for chaining.
+     * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
      */
     public Builder setStage(com.github.ScienceObjectsDB.java_api.api.models.v1.Version.VersionStage value) {
       if (value == null) {
@@ -833,8 +784,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.models.v1.Version.VersionStage stage = 5 [json_name = "stage"];</code>
-     * @return This builder for chaining.
+     * <code>.api.models.v1.Version.VersionStage stage = 5[json_name = "stage"];</code>
      */
     public Builder clearStage() {
       
@@ -845,7 +795,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

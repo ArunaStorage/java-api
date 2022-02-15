@@ -8,17 +8,15 @@ public interface GetObjectGroupResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
-   * @return Whether the objectGroup field is set.
+   * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   boolean hasObjectGroup();
   /**
-   * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
-   * @return The objectGroup.
+   * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroup getObjectGroup();
   /**
-   * <code>.api.models.v1.ObjectGroup object_group = 1 [json_name = "objectGroup"];</code>
+   * <code>.api.models.v1.ObjectGroup object_group = 1[json_name = "objectGroup"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectGroupOrBuilder getObjectGroupOrBuilder();
 }

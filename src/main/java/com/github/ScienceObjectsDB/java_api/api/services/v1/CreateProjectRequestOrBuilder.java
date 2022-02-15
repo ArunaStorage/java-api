@@ -8,73 +8,69 @@ public interface CreateProjectRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The description.
+   * <code>string description = 2[json_name = "description"];</code>
    */
   java.lang.String getDescription();
   /**
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The bytes for description.
+   * <code>string description = 2[json_name = "description"];</code>
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
 
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 3 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 3[json_name = "metadata"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata> 
       getMetadataList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 3 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 3[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata getMetadata(int index);
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 3 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 3[json_name = "metadata"];</code>
    */
   int getMetadataCount();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 3 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 3[json_name = "metadata"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder> 
       getMetadataOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 3 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 3[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder getMetadataOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);

@@ -8,26 +8,20 @@ public interface InnerLinksResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @return A list containing the objectLinks.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   java.util.List<java.lang.String>
       getObjectLinksList();
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @return The count of objectLinks.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   int getObjectLinksCount();
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @param index The index of the element to return.
-   * @return The objectLinks at the given index.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   java.lang.String getObjectLinks(int index);
   /**
-   * <code>repeated string object_links = 1 [json_name = "objectLinks"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the objectLinks at the given index.
+   * <code>repeated string object_links = 1[json_name = "objectLinks"];</code>
    */
   com.google.protobuf.ByteString
       getObjectLinksBytes(int index);

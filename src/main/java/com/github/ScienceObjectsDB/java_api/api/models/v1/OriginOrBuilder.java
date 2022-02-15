@@ -8,40 +8,34 @@ public interface OriginOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string link = 1 [json_name = "link"];</code>
-   * @return The link.
+   * <code>string link = 1[json_name = "link"];</code>
    */
   java.lang.String getLink();
   /**
-   * <code>string link = 1 [json_name = "link"];</code>
-   * @return The bytes for link.
+   * <code>string link = 1[json_name = "link"];</code>
    */
   com.google.protobuf.ByteString
       getLinkBytes();
 
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 2 [json_name = "objectLocation"];</code>
-   * @return Whether the objectLocation field is set.
+   * <code>.api.models.v1.ObjectLocation object_location = 2[json_name = "objectLocation"];</code>
    */
   boolean hasObjectLocation();
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 2 [json_name = "objectLocation"];</code>
-   * @return The objectLocation.
+   * <code>.api.models.v1.ObjectLocation object_location = 2[json_name = "objectLocation"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocation getObjectLocation();
   /**
-   * <code>.api.models.v1.ObjectLocation object_location = 2 [json_name = "objectLocation"];</code>
+   * <code>.api.models.v1.ObjectLocation object_location = 2[json_name = "objectLocation"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectLocationOrBuilder getObjectLocationOrBuilder();
 
   /**
-   * <code>.api.models.v1.Origin.OriginTypeEnum origin_type = 3 [json_name = "originType"];</code>
-   * @return The enum numeric value on the wire for originType.
+   * <code>.api.models.v1.Origin.OriginTypeEnum origin_type = 3[json_name = "originType"];</code>
    */
   int getOriginTypeValue();
   /**
-   * <code>.api.models.v1.Origin.OriginTypeEnum origin_type = 3 [json_name = "originType"];</code>
-   * @return The originType.
+   * <code>.api.models.v1.Origin.OriginTypeEnum origin_type = 3[json_name = "originType"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Origin.OriginTypeEnum getOriginType();
 

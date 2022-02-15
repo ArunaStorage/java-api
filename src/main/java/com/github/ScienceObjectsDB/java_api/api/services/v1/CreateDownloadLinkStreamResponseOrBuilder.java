@@ -8,17 +8,15 @@ public interface CreateDownloadLinkStreamResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.services.v1.LinksResponse links = 1 [json_name = "links"];</code>
-   * @return Whether the links field is set.
+   * <code>.api.services.v1.LinksResponse links = 1[json_name = "links"];</code>
    */
   boolean hasLinks();
   /**
-   * <code>.api.services.v1.LinksResponse links = 1 [json_name = "links"];</code>
-   * @return The links.
+   * <code>.api.services.v1.LinksResponse links = 1[json_name = "links"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.LinksResponse getLinks();
   /**
-   * <code>.api.services.v1.LinksResponse links = 1 [json_name = "links"];</code>
+   * <code>.api.services.v1.LinksResponse links = 1[json_name = "links"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.LinksResponseOrBuilder getLinksOrBuilder();
 }

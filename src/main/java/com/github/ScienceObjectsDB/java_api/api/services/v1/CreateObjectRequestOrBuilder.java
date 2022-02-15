@@ -8,73 +8,69 @@ public interface CreateObjectRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string filename = 1 [json_name = "filename"];</code>
-   * @return The filename.
+   * <code>string filename = 1[json_name = "filename"];</code>
    */
   java.lang.String getFilename();
   /**
-   * <code>string filename = 1 [json_name = "filename"];</code>
-   * @return The bytes for filename.
+   * <code>string filename = 1[json_name = "filename"];</code>
    */
   com.google.protobuf.ByteString
       getFilenameBytes();
 
   /**
-   * <code>string filetype = 2 [json_name = "filetype"];</code>
-   * @return The filetype.
+   * <code>string filetype = 2[json_name = "filetype"];</code>
    */
   java.lang.String getFiletype();
   /**
-   * <code>string filetype = 2 [json_name = "filetype"];</code>
-   * @return The bytes for filetype.
+   * <code>string filetype = 2[json_name = "filetype"];</code>
    */
   com.google.protobuf.ByteString
       getFiletypeBytes();
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 3 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 3[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 3 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 3[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 3 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 3[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 3 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 3[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 3 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 3[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 4 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 4[json_name = "metadata"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata> 
       getMetadataList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 4 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 4[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata getMetadata(int index);
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 4 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 4[json_name = "metadata"];</code>
    */
   int getMetadataCount();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 4 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 4[json_name = "metadata"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder> 
       getMetadataOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 4 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 4[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder getMetadataOrBuilder(
       int index);
@@ -84,8 +80,7 @@ public interface CreateObjectRequestOrBuilder extends
    * ContentLen: Lenght of the stored dataset
    * </pre>
    *
-   * <code>int64 content_len = 5 [json_name = "contentLen"];</code>
-   * @return The contentLen.
+   * <code>int64 content_len = 5[json_name = "contentLen"];</code>
    */
   long getContentLen();
 
@@ -94,8 +89,7 @@ public interface CreateObjectRequestOrBuilder extends
    * Origin: Source of the dataset
    * </pre>
    *
-   * <code>.api.models.v1.Origin origin = 6 [json_name = "origin"];</code>
-   * @return Whether the origin field is set.
+   * <code>.api.models.v1.Origin origin = 6[json_name = "origin"];</code>
    */
   boolean hasOrigin();
   /**
@@ -103,8 +97,7 @@ public interface CreateObjectRequestOrBuilder extends
    * Origin: Source of the dataset
    * </pre>
    *
-   * <code>.api.models.v1.Origin origin = 6 [json_name = "origin"];</code>
-   * @return The origin.
+   * <code>.api.models.v1.Origin origin = 6[json_name = "origin"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Origin getOrigin();
   /**
@@ -112,7 +105,7 @@ public interface CreateObjectRequestOrBuilder extends
    * Origin: Source of the dataset
    * </pre>
    *
-   * <code>.api.models.v1.Origin origin = 6 [json_name = "origin"];</code>
+   * <code>.api.models.v1.Origin origin = 6[json_name = "origin"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.OriginOrBuilder getOriginOrBuilder();
 }

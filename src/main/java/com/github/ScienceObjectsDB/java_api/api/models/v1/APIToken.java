@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.APIToken}
  */
-public final class APIToken extends
+public  final class APIToken extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.APIToken)
     APITokenOrBuilder {
@@ -20,13 +20,6 @@ private static final long serialVersionUID = 0L;
     token_ = "";
     rights_ = java.util.Collections.emptyList();
     projectId_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new APIToken();
   }
 
   @java.lang.Override
@@ -67,9 +60,9 @@ private static final long serialVersionUID = 0L;
           }
           case 24: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               rights_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000004;
             }
             rights_.add(rawValue);
             break;
@@ -79,9 +72,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 rights_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               rights_.add(rawValue);
             }
@@ -95,7 +88,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -109,7 +102,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
         rights_ = java.util.Collections.unmodifiableList(rights_);
       }
       this.unknownFields = unknownFields.build();
@@ -129,13 +122,12 @@ private static final long serialVersionUID = 0L;
             com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken.class, com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public java.lang.String getId() {
     java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
@@ -149,10 +141,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getIdBytes() {
     java.lang.Object ref = id_;
@@ -170,10 +160,8 @@ private static final long serialVersionUID = 0L;
   public static final int TOKEN_FIELD_NUMBER = 2;
   private volatile java.lang.Object token_;
   /**
-   * <code>string token = 2 [json_name = "token"];</code>
-   * @return The token.
+   * <code>string token = 2[json_name = "token"];</code>
    */
-  @java.lang.Override
   public java.lang.String getToken() {
     java.lang.Object ref = token_;
     if (ref instanceof java.lang.String) {
@@ -187,10 +175,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string token = 2 [json_name = "token"];</code>
-   * @return The bytes for token.
+   * <code>string token = 2[json_name = "token"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getTokenBytes() {
     java.lang.Object ref = token_;
@@ -218,46 +204,34 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @return A list containing the rights.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getRightsList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.github.ScienceObjectsDB.java_api.api.models.v1.Right>(rights_, rights_converter_);
   }
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @return The count of rights.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
-  @java.lang.Override
   public int getRightsCount() {
     return rights_.size();
   }
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @param index The index of the element to return.
-   * @return The rights at the given index.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.models.v1.Right getRights(int index) {
     return rights_converter_.convert(rights_.get(index));
   }
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @return A list containing the enum numeric values on the wire for rights.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
-  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getRightsValueList() {
     return rights_;
   }
   /**
-   * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of rights at the given index.
+   * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
    */
-  @java.lang.Override
   public int getRightsValue(int index) {
     return rights_.get(index);
   }
@@ -266,10 +240,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROJECT_ID_FIELD_NUMBER = 4;
   private volatile java.lang.Object projectId_;
   /**
-   * <code>string project_id = 4 [json_name = "projectId"];</code>
-   * @return The projectId.
+   * <code>string project_id = 4[json_name = "projectId"];</code>
    */
-  @java.lang.Override
   public java.lang.String getProjectId() {
     java.lang.Object ref = projectId_;
     if (ref instanceof java.lang.String) {
@@ -283,10 +255,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string project_id = 4 [json_name = "projectId"];</code>
-   * @return The bytes for projectId.
+   * <code>string project_id = 4[json_name = "projectId"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getProjectIdBytes() {
     java.lang.Object ref = projectId_;
@@ -377,15 +347,16 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken other = (com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (!getToken()
-        .equals(other.getToken())) return false;
-    if (!rights_.equals(other.rights_)) return false;
-    if (!getProjectId()
-        .equals(other.getProjectId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getId()
+        .equals(other.getId());
+    result = result && getToken()
+        .equals(other.getToken());
+    result = result && rights_.equals(other.rights_);
+    result = result && getProjectId()
+        .equals(other.getProjectId());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -543,7 +514,7 @@ private static final long serialVersionUID = 0L;
       token_ = "";
 
       rights_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       projectId_ = "";
 
       return this;
@@ -573,49 +544,51 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken result = new com.github.ScienceObjectsDB.java_api.api.models.v1.APIToken(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.id_ = id_;
       result.token_ = token_;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         rights_ = java.util.Collections.unmodifiableList(rights_);
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.rights_ = rights_;
       result.projectId_ = projectId_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -640,7 +613,7 @@ private static final long serialVersionUID = 0L;
       if (!other.rights_.isEmpty()) {
         if (rights_.isEmpty()) {
           rights_ = other.rights_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureRightsIsMutable();
           rights_.addAll(other.rights_);
@@ -683,8 +656,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -699,8 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -716,9 +687,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setId(
         java.lang.String value) {
@@ -731,8 +700,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder clearId() {
       
@@ -741,9 +709,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -759,8 +725,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object token_ = "";
     /**
-     * <code>string token = 2 [json_name = "token"];</code>
-     * @return The token.
+     * <code>string token = 2[json_name = "token"];</code>
      */
     public java.lang.String getToken() {
       java.lang.Object ref = token_;
@@ -775,8 +740,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string token = 2 [json_name = "token"];</code>
-     * @return The bytes for token.
+     * <code>string token = 2[json_name = "token"];</code>
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
@@ -792,9 +756,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string token = 2 [json_name = "token"];</code>
-     * @param value The token to set.
-     * @return This builder for chaining.
+     * <code>string token = 2[json_name = "token"];</code>
      */
     public Builder setToken(
         java.lang.String value) {
@@ -807,8 +769,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string token = 2 [json_name = "token"];</code>
-     * @return This builder for chaining.
+     * <code>string token = 2[json_name = "token"];</code>
      */
     public Builder clearToken() {
       
@@ -817,9 +778,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string token = 2 [json_name = "token"];</code>
-     * @param value The bytes for token to set.
-     * @return This builder for chaining.
+     * <code>string token = 2[json_name = "token"];</code>
      */
     public Builder setTokenBytes(
         com.google.protobuf.ByteString value) {
@@ -836,39 +795,32 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> rights_ =
       java.util.Collections.emptyList();
     private void ensureRightsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
         rights_ = new java.util.ArrayList<java.lang.Integer>(rights_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
       }
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @return A list containing the rights.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Right> getRightsList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, com.github.ScienceObjectsDB.java_api.api.models.v1.Right>(rights_, rights_converter_);
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @return The count of rights.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public int getRightsCount() {
       return rights_.size();
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param index The index of the element to return.
-     * @return The rights at the given index.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.models.v1.Right getRights(int index) {
       return rights_converter_.convert(rights_.get(index));
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param index The index to set the value at.
-     * @param value The rights to set.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder setRights(
         int index, com.github.ScienceObjectsDB.java_api.api.models.v1.Right value) {
@@ -881,9 +833,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param value The rights to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder addRights(com.github.ScienceObjectsDB.java_api.api.models.v1.Right value) {
       if (value == null) {
@@ -895,9 +845,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param values The rights to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder addAllRights(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.Right> values) {
@@ -909,36 +857,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder clearRights() {
       rights_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @return A list containing the enum numeric values on the wire for rights.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public java.util.List<java.lang.Integer>
     getRightsValueList() {
       return java.util.Collections.unmodifiableList(rights_);
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of rights at the given index.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public int getRightsValue(int index) {
       return rights_.get(index);
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of rights at the given index.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder setRightsValue(
         int index, int value) {
@@ -948,9 +889,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param value The enum numeric value on the wire for rights to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder addRightsValue(int value) {
       ensureRightsIsMutable();
@@ -959,9 +898,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.models.v1.Right rights = 3 [json_name = "rights"];</code>
-     * @param values The enum numeric values on the wire for rights to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.models.v1.Right rights = 3[json_name = "rights"];</code>
      */
     public Builder addAllRightsValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -975,8 +912,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object projectId_ = "";
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return The projectId.
+     * <code>string project_id = 4[json_name = "projectId"];</code>
      */
     public java.lang.String getProjectId() {
       java.lang.Object ref = projectId_;
@@ -991,8 +927,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
+     * <code>string project_id = 4[json_name = "projectId"];</code>
      */
     public com.google.protobuf.ByteString
         getProjectIdBytes() {
@@ -1008,9 +943,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @param value The projectId to set.
-     * @return This builder for chaining.
+     * <code>string project_id = 4[json_name = "projectId"];</code>
      */
     public Builder setProjectId(
         java.lang.String value) {
@@ -1023,8 +956,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return This builder for chaining.
+     * <code>string project_id = 4[json_name = "projectId"];</code>
      */
     public Builder clearProjectId() {
       
@@ -1033,9 +965,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @param value The bytes for projectId to set.
-     * @return This builder for chaining.
+     * <code>string project_id = 4[json_name = "projectId"];</code>
      */
     public Builder setProjectIdBytes(
         com.google.protobuf.ByteString value) {
@@ -1051,7 +981,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

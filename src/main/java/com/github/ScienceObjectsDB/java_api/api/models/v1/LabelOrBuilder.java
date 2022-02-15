@@ -8,25 +8,21 @@ public interface LabelOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
   java.lang.String getKey();
   /**
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string key = 1[json_name = "key"];</code>
    */
   com.google.protobuf.ByteString
       getKeyBytes();
 
   /**
-   * <code>string value = 2 [json_name = "value"];</code>
-   * @return The value.
+   * <code>string value = 2[json_name = "value"];</code>
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 2 [json_name = "value"];</code>
-   * @return The bytes for value.
+   * <code>string value = 2[json_name = "value"];</code>
    */
   com.google.protobuf.ByteString
       getValueBytes();

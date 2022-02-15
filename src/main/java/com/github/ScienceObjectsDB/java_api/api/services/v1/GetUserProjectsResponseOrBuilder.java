@@ -8,25 +8,25 @@ public interface GetUserProjectsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Project> 
       getProjectsList();
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Project getProjects(int index);
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
   int getProjectsCount();
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder> 
       getProjectsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Project projects = 1 [json_name = "projects"];</code>
+   * <code>repeated .api.models.v1.Project projects = 1[json_name = "projects"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder getProjectsOrBuilder(
       int index);

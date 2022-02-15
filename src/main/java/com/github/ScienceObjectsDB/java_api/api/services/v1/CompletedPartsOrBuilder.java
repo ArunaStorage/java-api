@@ -8,20 +8,17 @@ public interface CompletedPartsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string etag = 1 [json_name = "etag"];</code>
-   * @return The etag.
+   * <code>string etag = 1[json_name = "etag"];</code>
    */
   java.lang.String getEtag();
   /**
-   * <code>string etag = 1 [json_name = "etag"];</code>
-   * @return The bytes for etag.
+   * <code>string etag = 1[json_name = "etag"];</code>
    */
   com.google.protobuf.ByteString
       getEtagBytes();
 
   /**
-   * <code>int64 part = 2 [json_name = "part"];</code>
-   * @return The part.
+   * <code>int64 part = 2[json_name = "part"];</code>
    */
   long getPart();
 }

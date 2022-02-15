@@ -137,12 +137,20 @@ public final class Annotations {
       "/grpc-gateway/v2/protoc-gen-openapiv2/op" +
       "tionsb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.getDescriptor(),
-        });
+        }, assigner);
     openapiv2Swagger.internalInit(descriptor.getExtensions().get(0));
     openapiv2Operation.internalInit(descriptor.getExtensions().get(1));
     openapiv2Schema.internalInit(descriptor.getExtensions().get(2));

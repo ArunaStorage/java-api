@@ -30,27 +30,36 @@ public final class ProjectModels {
     java.lang.String[] descriptorData = {
       "\n\034api/models/v1/projects.proto\022\rapi.mode" +
       "ls.v1\032!api/models/v1/common_models.proto" +
-      "\"\335\001\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001" +
+      "\"\365\001\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001" +
       "(\tR\004name\022 \n\013description\030\003 \001(\tR\013descripti" +
       "on\022,\n\006labels\030\004 \003(\0132\024.api.models.v1.Label" +
       "R\006labels\0223\n\010metadata\030\005 \003(\0132\027.api.models." +
       "v1.MetadataR\010metadata\022)\n\005users\030\006 \003(\0132\023.a" +
-      "pi.models.v1.UserR\005usersBw\n2com.github.S" +
-      "cienceObjectsDB.java_api.api.models.v1B\r" +
-      "ProjectModelsP\001Z0github.com/ScienceObjec" +
-      "tsDB/go-api/api/models/v1b\006proto3"
+      "pi.models.v1.UserR\005users\022\026\n\006bucket\030\007 \001(\t" +
+      "R\006bucketBw\n2com.github.ScienceObjectsDB." +
+      "java_api.api.models.v1B\rProjectModelsP\001Z" +
+      "0github.com/ScienceObjectsDB/go-api/api/" +
+      "models/v1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor(),
-        });
+        }, assigner);
     internal_static_api_models_v1_Project_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_models_v1_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_models_v1_Project_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "Labels", "Metadata", "Users", });
+        new java.lang.String[] { "Id", "Name", "Description", "Labels", "Metadata", "Users", "Bucket", });
     com.github.ScienceObjectsDB.java_api.api.models.v1.CommonModels.getDescriptor();
   }
 

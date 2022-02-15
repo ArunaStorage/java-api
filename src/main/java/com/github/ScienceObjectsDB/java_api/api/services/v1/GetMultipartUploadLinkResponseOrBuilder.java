@@ -8,29 +8,25 @@ public interface GetMultipartUploadLinkResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string upload_link = 1 [json_name = "uploadLink"];</code>
-   * @return The uploadLink.
+   * <code>string upload_link = 1[json_name = "uploadLink"];</code>
    */
   java.lang.String getUploadLink();
   /**
-   * <code>string upload_link = 1 [json_name = "uploadLink"];</code>
-   * @return The bytes for uploadLink.
+   * <code>string upload_link = 1[json_name = "uploadLink"];</code>
    */
   com.google.protobuf.ByteString
       getUploadLinkBytes();
 
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-   * @return Whether the object field is set.
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
   boolean hasObject();
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-   * @return The object.
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Object getObject();
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder getObjectOrBuilder();
 }

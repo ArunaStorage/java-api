@@ -8,13 +8,11 @@ public interface CreateUploadLinkResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string upload_link = 1 [json_name = "uploadLink"];</code>
-   * @return The uploadLink.
+   * <code>string upload_link = 1[json_name = "uploadLink"];</code>
    */
   java.lang.String getUploadLink();
   /**
-   * <code>string upload_link = 1 [json_name = "uploadLink"];</code>
-   * @return The bytes for uploadLink.
+   * <code>string upload_link = 1[json_name = "uploadLink"];</code>
    */
   com.google.protobuf.ByteString
       getUploadLinkBytes();

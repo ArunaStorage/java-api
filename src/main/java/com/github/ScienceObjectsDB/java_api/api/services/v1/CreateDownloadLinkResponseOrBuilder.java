@@ -8,29 +8,25 @@ public interface CreateDownloadLinkResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-   * @return The downloadLink.
+   * <code>string download_link = 1[json_name = "downloadLink"];</code>
    */
   java.lang.String getDownloadLink();
   /**
-   * <code>string download_link = 1 [json_name = "downloadLink"];</code>
-   * @return The bytes for downloadLink.
+   * <code>string download_link = 1[json_name = "downloadLink"];</code>
    */
   com.google.protobuf.ByteString
       getDownloadLinkBytes();
 
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-   * @return Whether the object field is set.
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
   boolean hasObject();
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
-   * @return The object.
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Object getObject();
   /**
-   * <code>.api.models.v1.Object object = 2 [json_name = "object"];</code>
+   * <code>.api.models.v1.Object object = 2[json_name = "object"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ObjectOrBuilder getObjectOrBuilder();
 }

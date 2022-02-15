@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.services.v1;
 /**
  * Protobuf type {@code api.services.v1.CompleteMultipartUploadRequest}
  */
-public final class CompleteMultipartUploadRequest extends
+public  final class CompleteMultipartUploadRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.services.v1.CompleteMultipartUploadRequest)
     CompleteMultipartUploadRequestOrBuilder {
@@ -18,13 +18,6 @@ private static final long serialVersionUID = 0L;
   private CompleteMultipartUploadRequest() {
     objectId_ = "";
     parts_ = java.util.Collections.emptyList();
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new CompleteMultipartUploadRequest();
   }
 
   @java.lang.Override
@@ -58,16 +51,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               parts_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             parts_.add(
                 input.readMessage(com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -81,7 +74,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         parts_ = java.util.Collections.unmodifiableList(parts_);
       }
       this.unknownFields = unknownFields.build();
@@ -101,13 +94,12 @@ private static final long serialVersionUID = 0L;
             com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest.class, com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int OBJECT_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object objectId_;
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
-  @java.lang.Override
   public java.lang.String getObjectId() {
     java.lang.Object ref = objectId_;
     if (ref instanceof java.lang.String) {
@@ -121,10 +113,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string object_id = 1 [json_name = "objectId"];</code>
-   * @return The bytes for objectId.
+   * <code>string object_id = 1[json_name = "objectId"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getObjectIdBytes() {
     java.lang.Object ref = objectId_;
@@ -142,38 +132,33 @@ private static final long serialVersionUID = 0L;
   public static final int PARTS_FIELD_NUMBER = 2;
   private java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts> parts_;
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
-  @java.lang.Override
   public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts> getPartsList() {
     return parts_;
   }
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
-  @java.lang.Override
   public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder> 
       getPartsOrBuilderList() {
     return parts_;
   }
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
-  @java.lang.Override
   public int getPartsCount() {
     return parts_.size();
   }
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts getParts(int index) {
     return parts_.get(index);
   }
   /**
-   * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+   * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
    */
-  @java.lang.Override
   public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder getPartsOrBuilder(
       int index) {
     return parts_.get(index);
@@ -230,12 +215,13 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest other = (com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest) obj;
 
-    if (!getObjectId()
-        .equals(other.getObjectId())) return false;
-    if (!getPartsList()
-        .equals(other.getPartsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getObjectId()
+        .equals(other.getObjectId());
+    result = result && getPartsList()
+        .equals(other.getPartsList());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -389,7 +375,7 @@ private static final long serialVersionUID = 0L;
 
       if (partsBuilder_ == null) {
         parts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         partsBuilder_.clear();
       }
@@ -420,51 +406,53 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest result = new com.github.ScienceObjectsDB.java_api.api.services.v1.CompleteMultipartUploadRequest(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.objectId_ = objectId_;
       if (partsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           parts_ = java.util.Collections.unmodifiableList(parts_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.parts_ = parts_;
       } else {
         result.parts_ = partsBuilder_.build();
       }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -486,7 +474,7 @@ private static final long serialVersionUID = 0L;
         if (!other.parts_.isEmpty()) {
           if (parts_.isEmpty()) {
             parts_ = other.parts_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensurePartsIsMutable();
             parts_.addAll(other.parts_);
@@ -499,7 +487,7 @@ private static final long serialVersionUID = 0L;
             partsBuilder_.dispose();
             partsBuilder_ = null;
             parts_ = other.parts_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             partsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPartsFieldBuilder() : null;
@@ -540,8 +528,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object objectId_ = "";
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @return The objectId.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public java.lang.String getObjectId() {
       java.lang.Object ref = objectId_;
@@ -556,8 +543,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @return The bytes for objectId.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public com.google.protobuf.ByteString
         getObjectIdBytes() {
@@ -573,9 +559,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @param value The objectId to set.
-     * @return This builder for chaining.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public Builder setObjectId(
         java.lang.String value) {
@@ -588,8 +572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @return This builder for chaining.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public Builder clearObjectId() {
       
@@ -598,9 +581,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string object_id = 1 [json_name = "objectId"];</code>
-     * @param value The bytes for objectId to set.
-     * @return This builder for chaining.
+     * <code>string object_id = 1[json_name = "objectId"];</code>
      */
     public Builder setObjectIdBytes(
         com.google.protobuf.ByteString value) {
@@ -617,9 +598,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts> parts_ =
       java.util.Collections.emptyList();
     private void ensurePartsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         parts_ = new java.util.ArrayList<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts>(parts_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -627,7 +608,7 @@ private static final long serialVersionUID = 0L;
         com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder> partsBuilder_;
 
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts> getPartsList() {
       if (partsBuilder_ == null) {
@@ -637,7 +618,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public int getPartsCount() {
       if (partsBuilder_ == null) {
@@ -647,7 +628,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts getParts(int index) {
       if (partsBuilder_ == null) {
@@ -657,7 +638,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder setParts(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts value) {
@@ -674,7 +655,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder setParts(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder builderForValue) {
@@ -688,7 +669,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder addParts(com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts value) {
       if (partsBuilder_ == null) {
@@ -704,7 +685,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder addParts(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts value) {
@@ -721,7 +702,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder addParts(
         com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder builderForValue) {
@@ -735,7 +716,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder addParts(
         int index, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder builderForValue) {
@@ -749,7 +730,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder addAllParts(
         java.lang.Iterable<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts> values) {
@@ -764,12 +745,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder clearParts() {
       if (partsBuilder_ == null) {
         parts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         partsBuilder_.clear();
@@ -777,7 +758,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public Builder removeParts(int index) {
       if (partsBuilder_ == null) {
@@ -790,14 +771,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder getPartsBuilder(
         int index) {
       return getPartsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder getPartsOrBuilder(
         int index) {
@@ -807,7 +788,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder> 
          getPartsOrBuilderList() {
@@ -818,14 +799,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder addPartsBuilder() {
       return getPartsFieldBuilder().addBuilder(
           com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder addPartsBuilder(
         int index) {
@@ -833,7 +814,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.services.v1.CompletedParts parts = 2 [json_name = "parts"];</code>
+     * <code>repeated .api.services.v1.CompletedParts parts = 2[json_name = "parts"];</code>
      */
     public java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder> 
          getPartsBuilderList() {
@@ -846,7 +827,7 @@ private static final long serialVersionUID = 0L;
         partsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedParts.Builder, com.github.ScienceObjectsDB.java_api.api.services.v1.CompletedPartsOrBuilder>(
                 parts_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         parts_ = null;
@@ -856,7 +837,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

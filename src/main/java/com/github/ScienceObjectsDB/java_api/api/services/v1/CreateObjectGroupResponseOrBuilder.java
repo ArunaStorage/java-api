@@ -8,49 +8,45 @@ public interface CreateObjectGroupResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-   * @return The objectGroupId.
+   * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
    */
   java.lang.String getObjectGroupId();
   /**
-   * <code>string object_group_id = 1 [json_name = "objectGroupId"];</code>
-   * @return The bytes for objectGroupId.
+   * <code>string object_group_id = 1[json_name = "objectGroupId"];</code>
    */
   com.google.protobuf.ByteString
       getObjectGroupIdBytes();
 
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks> 
       getObjectLinksList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinks getObjectLinks(int index);
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
   int getObjectLinksCount();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder> 
       getObjectLinksOrBuilderList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2 [json_name = "objectLinks"];</code>
+   * <code>repeated .api.services.v1.CreateObjectGroupResponse.ObjectLinks object_links = 2[json_name = "objectLinks"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectGroupResponse.ObjectLinksOrBuilder getObjectLinksOrBuilder(
       int index);
 
   /**
-   * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-   * @return The objectGroupName.
+   * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
    */
   java.lang.String getObjectGroupName();
   /**
-   * <code>string object_group_name = 3 [json_name = "objectGroupName"];</code>
-   * @return The bytes for objectGroupName.
+   * <code>string object_group_name = 3[json_name = "objectGroupName"];</code>
    */
   com.google.protobuf.ByteString
       getObjectGroupNameBytes();
@@ -60,8 +56,7 @@ public interface CreateObjectGroupResponseOrBuilder extends
    * A user defined uuid that is used to identify requests in chunked/streamed workloads
    * </pre>
    *
-   * <code>string uuid = 4 [json_name = "uuid"];</code>
-   * @return The uuid.
+   * <code>string uuid = 4[json_name = "uuid"];</code>
    */
   java.lang.String getUuid();
   /**
@@ -69,8 +64,7 @@ public interface CreateObjectGroupResponseOrBuilder extends
    * A user defined uuid that is used to identify requests in chunked/streamed workloads
    * </pre>
    *
-   * <code>string uuid = 4 [json_name = "uuid"];</code>
-   * @return The bytes for uuid.
+   * <code>string uuid = 4[json_name = "uuid"];</code>
    */
   com.google.protobuf.ByteString
       getUuidBytes();

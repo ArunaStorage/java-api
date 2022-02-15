@@ -8,73 +8,63 @@ public interface GetObjectGroupsStreamLinkRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.StreamType stream_type = 3 [json_name = "streamType"];</code>
-   * @return The enum numeric value on the wire for streamType.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.StreamType stream_type = 3[json_name = "streamType"];</code>
    */
   int getStreamTypeValue();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.StreamType stream_type = 3 [json_name = "streamType"];</code>
-   * @return The streamType.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.StreamType stream_type = 3[json_name = "streamType"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.StreamType getStreamType();
 
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery group_ids = 4 [json_name = "groupIds"];</code>
-   * @return Whether the groupIds field is set.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery group_ids = 4[json_name = "groupIds"];</code>
    */
   boolean hasGroupIds();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery group_ids = 4 [json_name = "groupIds"];</code>
-   * @return The groupIds.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery group_ids = 4[json_name = "groupIds"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery getGroupIds();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery group_ids = 4 [json_name = "groupIds"];</code>
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQuery group_ids = 4[json_name = "groupIds"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.GroupIDsQueryOrBuilder getGroupIdsOrBuilder();
 
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery date_range = 5 [json_name = "dateRange"];</code>
-   * @return Whether the dateRange field is set.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery date_range = 5[json_name = "dateRange"];</code>
    */
   boolean hasDateRange();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery date_range = 5 [json_name = "dateRange"];</code>
-   * @return The dateRange.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery date_range = 5[json_name = "dateRange"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery getDateRange();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery date_range = 5 [json_name = "dateRange"];</code>
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQuery date_range = 5[json_name = "dateRange"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.DateRangeQueryOrBuilder getDateRangeOrBuilder();
 
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery dataset = 6 [json_name = "dataset"];</code>
-   * @return Whether the dataset field is set.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery dataset = 6[json_name = "dataset"];</code>
    */
   boolean hasDataset();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery dataset = 6 [json_name = "dataset"];</code>
-   * @return The dataset.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery dataset = 6[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery getDataset();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery dataset = 6 [json_name = "dataset"];</code>
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQuery dataset = 6[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetQueryOrBuilder getDatasetOrBuilder();
 
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery dataset_version = 7 [json_name = "datasetVersion"];</code>
-   * @return Whether the datasetVersion field is set.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery dataset_version = 7[json_name = "datasetVersion"];</code>
    */
   boolean hasDatasetVersion();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery dataset_version = 7 [json_name = "datasetVersion"];</code>
-   * @return The datasetVersion.
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery dataset_version = 7[json_name = "datasetVersion"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery getDatasetVersion();
   /**
-   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery dataset_version = 7 [json_name = "datasetVersion"];</code>
+   * <code>.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQuery dataset_version = 7[json_name = "datasetVersion"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.GetObjectGroupsStreamLinkRequest.DatasetVersionQueryOrBuilder getDatasetVersionOrBuilder();
 
@@ -84,8 +74,7 @@ public interface GetObjectGroupsStreamLinkRequestOrBuilder extends
    * This is the maximum expiry time, implementations can set maximum durations that can be shorter than this
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry = 8 [json_name = "expiry"];</code>
-   * @return Whether the expiry field is set.
+   * <code>.google.protobuf.Timestamp expiry = 8[json_name = "expiry"];</code>
    */
   boolean hasExpiry();
   /**
@@ -94,8 +83,7 @@ public interface GetObjectGroupsStreamLinkRequestOrBuilder extends
    * This is the maximum expiry time, implementations can set maximum durations that can be shorter than this
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry = 8 [json_name = "expiry"];</code>
-   * @return The expiry.
+   * <code>.google.protobuf.Timestamp expiry = 8[json_name = "expiry"];</code>
    */
   com.google.protobuf.Timestamp getExpiry();
   /**
@@ -104,7 +92,7 @@ public interface GetObjectGroupsStreamLinkRequestOrBuilder extends
    * This is the maximum expiry time, implementations can set maximum durations that can be shorter than this
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry = 8 [json_name = "expiry"];</code>
+   * <code>.google.protobuf.Timestamp expiry = 8[json_name = "expiry"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder();
 

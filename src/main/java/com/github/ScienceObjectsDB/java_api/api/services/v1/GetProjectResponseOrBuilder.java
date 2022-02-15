@@ -8,17 +8,15 @@ public interface GetProjectResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.Project project = 1 [json_name = "project"];</code>
-   * @return Whether the project field is set.
+   * <code>.api.models.v1.Project project = 1[json_name = "project"];</code>
    */
   boolean hasProject();
   /**
-   * <code>.api.models.v1.Project project = 1 [json_name = "project"];</code>
-   * @return The project.
+   * <code>.api.models.v1.Project project = 1[json_name = "project"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Project getProject();
   /**
-   * <code>.api.models.v1.Project project = 1 [json_name = "project"];</code>
+   * <code>.api.models.v1.Project project = 1[json_name = "project"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.ProjectOrBuilder getProjectOrBuilder();
 }

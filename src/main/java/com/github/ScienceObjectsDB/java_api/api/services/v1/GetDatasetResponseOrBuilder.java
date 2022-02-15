@@ -8,17 +8,15 @@ public interface GetDatasetResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
-   * @return Whether the dataset field is set.
+   * <code>.api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   boolean hasDataset();
   /**
-   * <code>.api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
-   * @return The dataset.
+   * <code>.api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Dataset getDataset();
   /**
-   * <code>.api.models.v1.Dataset dataset = 1 [json_name = "dataset"];</code>
+   * <code>.api.models.v1.Dataset dataset = 1[json_name = "dataset"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.DatasetOrBuilder getDatasetOrBuilder();
 }

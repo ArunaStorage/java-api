@@ -8,131 +8,122 @@ public interface CreateObjectGroupRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>string name = 1[json_name = "name"];</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The description.
+   * <code>string description = 2[json_name = "description"];</code>
    */
   java.lang.String getDescription();
   /**
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The bytes for description.
+   * <code>string description = 2[json_name = "description"];</code>
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
 
   /**
-   * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-   * @return The datasetId.
+   * <code>string dataset_id = 3[json_name = "datasetId"];</code>
    */
   java.lang.String getDatasetId();
   /**
-   * <code>string dataset_id = 3 [json_name = "datasetId"];</code>
-   * @return The bytes for datasetId.
+   * <code>string dataset_id = 3[json_name = "datasetId"];</code>
    */
   com.google.protobuf.ByteString
       getDatasetIdBytes();
 
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Label> 
       getLabelsList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Label getLabels(int index);
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Label labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .api.models.v1.Label labels = 4[json_name = "labels"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.LabelOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata> 
       getMetadataList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.Metadata getMetadata(int index);
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   int getMetadataCount();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder> 
       getMetadataOrBuilderList();
   /**
-   * <code>repeated .api.models.v1.Metadata metadata = 5 [json_name = "metadata"];</code>
+   * <code>repeated .api.models.v1.Metadata metadata = 5[json_name = "metadata"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.models.v1.MetadataOrBuilder getMetadataOrBuilder(
       int index);
 
   /**
-   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6 [json_name = "objects"];</code>
+   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6[json_name = "objects"];</code>
    */
   java.util.List<com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectRequest> 
       getObjectsList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6 [json_name = "objects"];</code>
+   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6[json_name = "objects"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectRequest getObjects(int index);
   /**
-   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6 [json_name = "objects"];</code>
+   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6[json_name = "objects"];</code>
    */
   int getObjectsCount();
   /**
-   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6 [json_name = "objects"];</code>
+   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6[json_name = "objects"];</code>
    */
   java.util.List<? extends com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectRequestOrBuilder> 
       getObjectsOrBuilderList();
   /**
-   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6 [json_name = "objects"];</code>
+   * <code>repeated .api.services.v1.CreateObjectRequest objects = 6[json_name = "objects"];</code>
    */
   com.github.ScienceObjectsDB.java_api.api.services.v1.CreateObjectRequestOrBuilder getObjectsOrBuilder(
       int index);
 
   /**
-   * <code>bool include_object_link = 8 [json_name = "includeObjectLink"];</code>
-   * @return The includeObjectLink.
+   * <code>bool include_object_link = 8[json_name = "includeObjectLink"];</code>
    */
   boolean getIncludeObjectLink();
 
   /**
-   * <code>.google.protobuf.Timestamp generated = 10 [json_name = "generated"];</code>
-   * @return Whether the generated field is set.
+   * <code>.google.protobuf.Timestamp generated = 10[json_name = "generated"];</code>
    */
   boolean hasGenerated();
   /**
-   * <code>.google.protobuf.Timestamp generated = 10 [json_name = "generated"];</code>
-   * @return The generated.
+   * <code>.google.protobuf.Timestamp generated = 10[json_name = "generated"];</code>
    */
   com.google.protobuf.Timestamp getGenerated();
   /**
-   * <code>.google.protobuf.Timestamp generated = 10 [json_name = "generated"];</code>
+   * <code>.google.protobuf.Timestamp generated = 10[json_name = "generated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getGeneratedOrBuilder();
 
@@ -141,8 +132,7 @@ public interface CreateObjectGroupRequestOrBuilder extends
    * A user defined uuid that is used to identify requests in chunked workloads
    * </pre>
    *
-   * <code>string uuid = 11 [json_name = "uuid"];</code>
-   * @return The uuid.
+   * <code>string uuid = 11[json_name = "uuid"];</code>
    */
   java.lang.String getUuid();
   /**
@@ -150,8 +140,7 @@ public interface CreateObjectGroupRequestOrBuilder extends
    * A user defined uuid that is used to identify requests in chunked workloads
    * </pre>
    *
-   * <code>string uuid = 11 [json_name = "uuid"];</code>
-   * @return The bytes for uuid.
+   * <code>string uuid = 11[json_name = "uuid"];</code>
    */
   com.google.protobuf.ByteString
       getUuidBytes();

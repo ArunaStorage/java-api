@@ -6,7 +6,7 @@ package com.github.ScienceObjectsDB.java_api.api.models.v1;
 /**
  * Protobuf type {@code api.models.v1.UpdateFieldsRequest}
  */
-public final class UpdateFieldsRequest extends
+public  final class UpdateFieldsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.models.v1.UpdateFieldsRequest)
     UpdateFieldsRequestOrBuilder {
@@ -17,13 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private UpdateFieldsRequest() {
     id_ = "";
-  }
-
-  @java.lang.Override
-  @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
-    return new UpdateFieldsRequest();
   }
 
   @java.lang.Override
@@ -57,10 +50,10 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               updatedStringFields_ = com.google.protobuf.MapField.newMapField(
                   UpdatedStringFieldsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
             updatedStringFields__ = input.readMessage(
@@ -70,7 +63,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -113,13 +106,12 @@ private static final long serialVersionUID = 0L;
             com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest.class, com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public java.lang.String getId() {
     java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
@@ -133,10 +125,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string id = 1[json_name = "id"];</code>
    */
-  @java.lang.Override
   public com.google.protobuf.ByteString
       getIdBytes() {
     java.lang.Object ref = id_;
@@ -178,10 +168,9 @@ private static final long serialVersionUID = 0L;
     return internalGetUpdatedStringFields().getMap().size();
   }
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
 
-  @java.lang.Override
   public boolean containsUpdatedStringFields(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
@@ -190,23 +179,20 @@ private static final long serialVersionUID = 0L;
   /**
    * Use {@link #getUpdatedStringFieldsMap()} instead.
    */
-  @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.String> getUpdatedStringFields() {
     return getUpdatedStringFieldsMap();
   }
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
-  @java.lang.Override
 
   public java.util.Map<java.lang.String, java.lang.String> getUpdatedStringFieldsMap() {
     return internalGetUpdatedStringFields().getMap();
   }
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
-  @java.lang.Override
 
   public java.lang.String getUpdatedStringFieldsOrDefault(
       java.lang.String key,
@@ -217,9 +203,8 @@ private static final long serialVersionUID = 0L;
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+   * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
    */
-  @java.lang.Override
 
   public java.lang.String getUpdatedStringFieldsOrThrow(
       java.lang.String key) {
@@ -292,12 +277,13 @@ private static final long serialVersionUID = 0L;
     }
     com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest other = (com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (!internalGetUpdatedStringFields().equals(
-        other.internalGetUpdatedStringFields())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getId()
+        .equals(other.getId());
+    result = result && internalGetUpdatedStringFields().equals(
+        other.internalGetUpdatedStringFields());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -498,44 +484,46 @@ private static final long serialVersionUID = 0L;
     public com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest buildPartial() {
       com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest result = new com.github.ScienceObjectsDB.java_api.api.models.v1.UpdateFieldsRequest(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.id_ = id_;
       result.updatedStringFields_ = internalGetUpdatedStringFields();
       result.updatedStringFields_.makeImmutable();
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -587,8 +575,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -603,8 +590,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -620,9 +606,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setId(
         java.lang.String value) {
@@ -635,8 +619,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder clearId() {
       
@@ -645,9 +628,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
+     * <code>string id = 1[json_name = "id"];</code>
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -688,10 +669,9 @@ private static final long serialVersionUID = 0L;
       return internalGetUpdatedStringFields().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
 
-    @java.lang.Override
     public boolean containsUpdatedStringFields(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -700,23 +680,20 @@ private static final long serialVersionUID = 0L;
     /**
      * Use {@link #getUpdatedStringFieldsMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getUpdatedStringFields() {
       return getUpdatedStringFieldsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getUpdatedStringFieldsMap() {
       return internalGetUpdatedStringFields().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
-    @java.lang.Override
 
     public java.lang.String getUpdatedStringFieldsOrDefault(
         java.lang.String key,
@@ -727,9 +704,8 @@ private static final long serialVersionUID = 0L;
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
-    @java.lang.Override
 
     public java.lang.String getUpdatedStringFieldsOrThrow(
         java.lang.String key) {
@@ -748,7 +724,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
 
     public Builder removeUpdatedStringFields(
@@ -767,7 +743,7 @@ private static final long serialVersionUID = 0L;
       return internalGetMutableUpdatedStringFields().getMutableMap();
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
     public Builder putUpdatedStringFields(
         java.lang.String key,
@@ -779,7 +755,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; updated_string_fields = 2 [json_name = "updatedStringFields"];</code>
+     * <code>map&lt;string, string&gt; updated_string_fields = 2[json_name = "updatedStringFields"];</code>
      */
 
     public Builder putAllUpdatedStringFields(
@@ -791,7 +767,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override
