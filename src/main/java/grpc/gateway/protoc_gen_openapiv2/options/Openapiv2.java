@@ -78,6 +78,8 @@ public final class Openapiv2 {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -85,6 +87,10 @@ public final class Openapiv2 {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static Scheme forNumber(int value) {
       switch (value) {
         case 0: return UNKNOWN;
@@ -110,6 +116,10 @@ public final class Openapiv2 {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -151,73 +161,79 @@ public final class Openapiv2 {
     /**
      * <pre>
      * Specifies the OpenAPI Specification version being used. It can be
-     * used by the OpenAPI UI and other clients to interpret the API listing. The 
+     * used by the OpenAPI UI and other clients to interpret the API listing. The
      * value MUST be "2.0".
      * </pre>
      *
-     * <code>string swagger = 1[json_name = "swagger"];</code>
+     * <code>string swagger = 1 [json_name = "swagger"];</code>
+     * @return The swagger.
      */
     java.lang.String getSwagger();
     /**
      * <pre>
      * Specifies the OpenAPI Specification version being used. It can be
-     * used by the OpenAPI UI and other clients to interpret the API listing. The 
+     * used by the OpenAPI UI and other clients to interpret the API listing. The
      * value MUST be "2.0".
      * </pre>
      *
-     * <code>string swagger = 1[json_name = "swagger"];</code>
+     * <code>string swagger = 1 [json_name = "swagger"];</code>
+     * @return The bytes for swagger.
      */
     com.google.protobuf.ByteString
         getSwaggerBytes();
 
     /**
      * <pre>
-     * Provides metadata about the API. The metadata can be used by the 
+     * Provides metadata about the API. The metadata can be used by the
      * clients if needed.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
+     * @return Whether the info field is set.
      */
     boolean hasInfo();
     /**
      * <pre>
-     * Provides metadata about the API. The metadata can be used by the 
+     * Provides metadata about the API. The metadata can be used by the
      * clients if needed.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
+     * @return The info.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info getInfo();
     /**
      * <pre>
-     * Provides metadata about the API. The metadata can be used by the 
+     * Provides metadata about the API. The metadata can be used by the
      * clients if needed.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.InfoOrBuilder getInfoOrBuilder();
 
     /**
      * <pre>
-     * The host (name or ip) serving the API. This MUST be the host only and does 
+     * The host (name or ip) serving the API. This MUST be the host only and does
      * not include the scheme nor sub-paths. It MAY include a port. If the host is
      * not included, the host serving the documentation is to be used (including
      * the port). The host does not support path templating.
      * </pre>
      *
-     * <code>string host = 3[json_name = "host"];</code>
+     * <code>string host = 3 [json_name = "host"];</code>
+     * @return The host.
      */
     java.lang.String getHost();
     /**
      * <pre>
-     * The host (name or ip) serving the API. This MUST be the host only and does 
+     * The host (name or ip) serving the API. This MUST be the host only and does
      * not include the scheme nor sub-paths. It MAY include a port. If the host is
      * not included, the host serving the documentation is to be used (including
      * the port). The host does not support path templating.
      * </pre>
      *
-     * <code>string host = 3[json_name = "host"];</code>
+     * <code>string host = 3 [json_name = "host"];</code>
+     * @return The bytes for host.
      */
     com.google.protobuf.ByteString
         getHostBytes();
@@ -225,33 +241,35 @@ public final class Openapiv2 {
     /**
      * <pre>
      * The base path on which the API is served, which is relative to the host. If
-     * it is not included, the API is served directly under the host. The value 
+     * it is not included, the API is served directly under the host. The value
      * MUST start with a leading slash (/). The basePath does not support path
      * templating.
-     * Note that using `base_path` does not change the endpoint paths that are 
+     * Note that using `base_path` does not change the endpoint paths that are
      * generated in the resulting OpenAPI file. If you wish to use `base_path`
-     * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-     * manually removed from your `google.api.http` paths and your code changed to 
+     * with relatively generated OpenAPI paths, the `base_path` prefix must be
+     * manually removed from your `google.api.http` paths and your code changed to
      * serve the API from the `base_path`.
      * </pre>
      *
-     * <code>string base_path = 4[json_name = "basePath"];</code>
+     * <code>string base_path = 4 [json_name = "basePath"];</code>
+     * @return The basePath.
      */
     java.lang.String getBasePath();
     /**
      * <pre>
      * The base path on which the API is served, which is relative to the host. If
-     * it is not included, the API is served directly under the host. The value 
+     * it is not included, the API is served directly under the host. The value
      * MUST start with a leading slash (/). The basePath does not support path
      * templating.
-     * Note that using `base_path` does not change the endpoint paths that are 
+     * Note that using `base_path` does not change the endpoint paths that are
      * generated in the resulting OpenAPI file. If you wish to use `base_path`
-     * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-     * manually removed from your `google.api.http` paths and your code changed to 
+     * with relatively generated OpenAPI paths, the `base_path` prefix must be
+     * manually removed from your `google.api.http` paths and your code changed to
      * serve the API from the `base_path`.
      * </pre>
      *
-     * <code>string base_path = 4[json_name = "basePath"];</code>
+     * <code>string base_path = 4 [json_name = "basePath"];</code>
+     * @return The bytes for basePath.
      */
     com.google.protobuf.ByteString
         getBasePathBytes();
@@ -263,7 +281,8 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @return A list containing the schemes.
      */
     java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> getSchemesList();
     /**
@@ -273,7 +292,8 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @return The count of schemes.
      */
     int getSchemesCount();
     /**
@@ -283,7 +303,9 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @param index The index of the element to return.
+     * @return The schemes at the given index.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme getSchemes(int index);
     /**
@@ -293,7 +315,8 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @return A list containing the enum numeric values on the wire for schemes.
      */
     java.util.List<java.lang.Integer>
     getSchemesValueList();
@@ -304,49 +327,57 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of schemes at the given index.
      */
     int getSchemesValue(int index);
 
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return A list containing the consumes.
      */
     java.util.List<java.lang.String>
         getConsumesList();
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return The count of consumes.
      */
     int getConsumesCount();
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the element to return.
+     * @return The consumes at the given index.
      */
     java.lang.String getConsumes(int index);
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the consumes at the given index.
      */
     com.google.protobuf.ByteString
         getConsumesBytes(int index);
@@ -358,7 +389,8 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return A list containing the produces.
      */
     java.util.List<java.lang.String>
         getProducesList();
@@ -369,7 +401,8 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return The count of produces.
      */
     int getProducesCount();
     /**
@@ -379,7 +412,9 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the element to return.
+     * @return The produces at the given index.
      */
     java.lang.String getProduces(int index);
     /**
@@ -389,7 +424,9 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the produces at the given index.
      */
     com.google.protobuf.ByteString
         getProducesBytes(int index);
@@ -400,7 +437,7 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
     int getResponsesCount();
     /**
@@ -409,7 +446,7 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
     boolean containsResponses(
         java.lang.String key);
@@ -425,7 +462,7 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
     java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response>
     getResponsesMap();
@@ -435,19 +472,21 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
 
-    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
+    /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
         java.lang.String key,
-        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue);
+        /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue);
     /**
      * <pre>
      * An object to hold responses that can be used across operations. This
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
 
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrThrow(
@@ -458,7 +497,8 @@ public final class Openapiv2 {
      * Security scheme definitions that can be used across the specification.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
+     * @return Whether the securityDefinitions field is set.
      */
     boolean hasSecurityDefinitions();
     /**
@@ -466,7 +506,8 @@ public final class Openapiv2 {
      * Security scheme definitions that can be used across the specification.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
+     * @return The securityDefinitions.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions getSecurityDefinitions();
     /**
@@ -474,65 +515,65 @@ public final class Openapiv2 {
      * Security scheme definitions that can be used across the specification.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitionsOrBuilder getSecurityDefinitionsOrBuilder();
 
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> 
         getSecurityList();
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement getSecurity(int index);
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     int getSecurityCount();
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     java.util.List<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder> 
         getSecurityOrBuilderList();
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder getSecurityOrBuilder(
         int index);
@@ -542,7 +583,8 @@ public final class Openapiv2 {
      * Additional external documentation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
     boolean hasExternalDocs();
     /**
@@ -550,7 +592,8 @@ public final class Openapiv2 {
      * Additional external documentation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs();
     /**
@@ -558,16 +601,16 @@ public final class Openapiv2 {
      * Additional external documentation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     int getExtensionsCount();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     boolean containsExtensions(
         java.lang.String key);
@@ -578,19 +621,21 @@ public final class Openapiv2 {
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensions();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensionsMap();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
 
-    com.google.protobuf.Value getExtensionsOrDefault(
+    /* nullable */
+com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
-        com.google.protobuf.Value defaultValue);
+        /* nullable */
+com.google.protobuf.Value defaultValue);
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
 
     com.google.protobuf.Value getExtensionsOrThrow(
@@ -624,7 +669,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Swagger}
    */
-  public  static final class Swagger extends
+  public static final class Swagger extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Swagger)
       SwaggerOrBuilder {
@@ -641,6 +686,13 @@ public final class Openapiv2 {
       consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       security_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Swagger();
     }
 
     @java.lang.Override
@@ -700,9 +752,9 @@ public final class Openapiv2 {
             }
             case 40: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 schemes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               schemes_.add(rawValue);
               break;
@@ -712,9 +764,9 @@ public final class Openapiv2 {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   schemes_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000010;
+                  mutable_bitField0_ |= 0x00000001;
                 }
                 schemes_.add(rawValue);
               }
@@ -723,27 +775,27 @@ public final class Openapiv2 {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 consumes_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               consumes_.add(s);
               break;
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 produces_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000004;
               }
               produces_.add(s);
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 responses_ = com.google.protobuf.MapField.newMapField(
                     ResponsesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000008;
               }
               com.google.protobuf.MapEntry<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response>
               responses__ = input.readMessage(
@@ -766,9 +818,9 @@ public final class Openapiv2 {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 security_ = new java.util.ArrayList<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement>();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000010;
               }
               security_.add(
                   input.readMessage(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.parser(), extensionRegistry));
@@ -788,10 +840,10 @@ public final class Openapiv2 {
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 extensions_ = com.google.protobuf.MapField.newMapField(
                     ExtensionsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00000020;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
               extensions__ = input.readMessage(
@@ -801,7 +853,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -811,20 +863,22 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           schemes_ = java.util.Collections.unmodifiableList(schemes_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           consumes_ = consumes_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           produces_ = produces_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           security_ = java.util.Collections.unmodifiableList(security_);
         }
         this.unknownFields = unknownFields.build();
@@ -858,18 +912,19 @@ public final class Openapiv2 {
               grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SWAGGER_FIELD_NUMBER = 1;
     private volatile java.lang.Object swagger_;
     /**
      * <pre>
      * Specifies the OpenAPI Specification version being used. It can be
-     * used by the OpenAPI UI and other clients to interpret the API listing. The 
+     * used by the OpenAPI UI and other clients to interpret the API listing. The
      * value MUST be "2.0".
      * </pre>
      *
-     * <code>string swagger = 1[json_name = "swagger"];</code>
+     * <code>string swagger = 1 [json_name = "swagger"];</code>
+     * @return The swagger.
      */
+    @java.lang.Override
     public java.lang.String getSwagger() {
       java.lang.Object ref = swagger_;
       if (ref instanceof java.lang.String) {
@@ -885,12 +940,14 @@ public final class Openapiv2 {
     /**
      * <pre>
      * Specifies the OpenAPI Specification version being used. It can be
-     * used by the OpenAPI UI and other clients to interpret the API listing. The 
+     * used by the OpenAPI UI and other clients to interpret the API listing. The
      * value MUST be "2.0".
      * </pre>
      *
-     * <code>string swagger = 1[json_name = "swagger"];</code>
+     * <code>string swagger = 1 [json_name = "swagger"];</code>
+     * @return The bytes for swagger.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSwaggerBytes() {
       java.lang.Object ref = swagger_;
@@ -909,34 +966,39 @@ public final class Openapiv2 {
     private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info info_;
     /**
      * <pre>
-     * Provides metadata about the API. The metadata can be used by the 
+     * Provides metadata about the API. The metadata can be used by the
      * clients if needed.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
+     * @return Whether the info field is set.
      */
+    @java.lang.Override
     public boolean hasInfo() {
       return info_ != null;
     }
     /**
      * <pre>
-     * Provides metadata about the API. The metadata can be used by the 
+     * Provides metadata about the API. The metadata can be used by the
      * clients if needed.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
+     * @return The info.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info getInfo() {
       return info_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.getDefaultInstance() : info_;
     }
     /**
      * <pre>
-     * Provides metadata about the API. The metadata can be used by the 
+     * Provides metadata about the API. The metadata can be used by the
      * clients if needed.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.InfoOrBuilder getInfoOrBuilder() {
       return getInfo();
     }
@@ -945,14 +1007,16 @@ public final class Openapiv2 {
     private volatile java.lang.Object host_;
     /**
      * <pre>
-     * The host (name or ip) serving the API. This MUST be the host only and does 
+     * The host (name or ip) serving the API. This MUST be the host only and does
      * not include the scheme nor sub-paths. It MAY include a port. If the host is
      * not included, the host serving the documentation is to be used (including
      * the port). The host does not support path templating.
      * </pre>
      *
-     * <code>string host = 3[json_name = "host"];</code>
+     * <code>string host = 3 [json_name = "host"];</code>
+     * @return The host.
      */
+    @java.lang.Override
     public java.lang.String getHost() {
       java.lang.Object ref = host_;
       if (ref instanceof java.lang.String) {
@@ -967,14 +1031,16 @@ public final class Openapiv2 {
     }
     /**
      * <pre>
-     * The host (name or ip) serving the API. This MUST be the host only and does 
+     * The host (name or ip) serving the API. This MUST be the host only and does
      * not include the scheme nor sub-paths. It MAY include a port. If the host is
      * not included, the host serving the documentation is to be used (including
      * the port). The host does not support path templating.
      * </pre>
      *
-     * <code>string host = 3[json_name = "host"];</code>
+     * <code>string host = 3 [json_name = "host"];</code>
+     * @return The bytes for host.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHostBytes() {
       java.lang.Object ref = host_;
@@ -994,18 +1060,20 @@ public final class Openapiv2 {
     /**
      * <pre>
      * The base path on which the API is served, which is relative to the host. If
-     * it is not included, the API is served directly under the host. The value 
+     * it is not included, the API is served directly under the host. The value
      * MUST start with a leading slash (/). The basePath does not support path
      * templating.
-     * Note that using `base_path` does not change the endpoint paths that are 
+     * Note that using `base_path` does not change the endpoint paths that are
      * generated in the resulting OpenAPI file. If you wish to use `base_path`
-     * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-     * manually removed from your `google.api.http` paths and your code changed to 
+     * with relatively generated OpenAPI paths, the `base_path` prefix must be
+     * manually removed from your `google.api.http` paths and your code changed to
      * serve the API from the `base_path`.
      * </pre>
      *
-     * <code>string base_path = 4[json_name = "basePath"];</code>
+     * <code>string base_path = 4 [json_name = "basePath"];</code>
+     * @return The basePath.
      */
+    @java.lang.Override
     public java.lang.String getBasePath() {
       java.lang.Object ref = basePath_;
       if (ref instanceof java.lang.String) {
@@ -1021,18 +1089,20 @@ public final class Openapiv2 {
     /**
      * <pre>
      * The base path on which the API is served, which is relative to the host. If
-     * it is not included, the API is served directly under the host. The value 
+     * it is not included, the API is served directly under the host. The value
      * MUST start with a leading slash (/). The basePath does not support path
      * templating.
-     * Note that using `base_path` does not change the endpoint paths that are 
+     * Note that using `base_path` does not change the endpoint paths that are
      * generated in the resulting OpenAPI file. If you wish to use `base_path`
-     * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-     * manually removed from your `google.api.http` paths and your code changed to 
+     * with relatively generated OpenAPI paths, the `base_path` prefix must be
+     * manually removed from your `google.api.http` paths and your code changed to
      * serve the API from the `base_path`.
      * </pre>
      *
-     * <code>string base_path = 4[json_name = "basePath"];</code>
+     * <code>string base_path = 4 [json_name = "basePath"];</code>
+     * @return The bytes for basePath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBasePathBytes() {
       java.lang.Object ref = basePath_;
@@ -1066,8 +1136,10 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @return A list containing the schemes.
      */
+    @java.lang.Override
     public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> getSchemesList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme>(schemes_, schemes_converter_);
@@ -1079,8 +1151,10 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @return The count of schemes.
      */
+    @java.lang.Override
     public int getSchemesCount() {
       return schemes_.size();
     }
@@ -1091,8 +1165,11 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @param index The index of the element to return.
+     * @return The schemes at the given index.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme getSchemes(int index) {
       return schemes_converter_.convert(schemes_.get(index));
     }
@@ -1103,8 +1180,10 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @return A list containing the enum numeric values on the wire for schemes.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getSchemesValueList() {
       return schemes_;
@@ -1116,8 +1195,11 @@ public final class Openapiv2 {
      * be used is the one used to access the OpenAPI definition itself.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of schemes at the given index.
      */
+    @java.lang.Override
     public int getSchemesValue(int index) {
       return schemes_.get(index);
     }
@@ -1127,12 +1209,13 @@ public final class Openapiv2 {
     private com.google.protobuf.LazyStringList consumes_;
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return A list containing the consumes.
      */
     public com.google.protobuf.ProtocolStringList
         getConsumesList() {
@@ -1140,36 +1223,41 @@ public final class Openapiv2 {
     }
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return The count of consumes.
      */
     public int getConsumesCount() {
       return consumes_.size();
     }
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the element to return.
+     * @return The consumes at the given index.
      */
     public java.lang.String getConsumes(int index) {
       return consumes_.get(index);
     }
     /**
      * <pre>
-     * A list of MIME types the APIs can consume. This is global to all APIs but 
+     * A list of MIME types the APIs can consume. This is global to all APIs but
      * can be overridden on specific API calls. Value MUST be as described under
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the consumes at the given index.
      */
     public com.google.protobuf.ByteString
         getConsumesBytes(int index) {
@@ -1185,7 +1273,8 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return A list containing the produces.
      */
     public com.google.protobuf.ProtocolStringList
         getProducesList() {
@@ -1198,7 +1287,8 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return The count of produces.
      */
     public int getProducesCount() {
       return produces_.size();
@@ -1210,7 +1300,9 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the element to return.
+     * @return The produces at the given index.
      */
     public java.lang.String getProduces(int index) {
       return produces_.get(index);
@@ -1222,7 +1314,9 @@ public final class Openapiv2 {
      * Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the produces at the given index.
      */
     public com.google.protobuf.ByteString
         getProducesBytes(int index) {
@@ -1261,17 +1355,19 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
 
+    @java.lang.Override
     public boolean containsResponses(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetResponses().getMap().containsKey(key);
     }
     /**
      * Use {@link #getResponsesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponses() {
       return getResponsesMap();
@@ -1282,8 +1378,9 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponsesMap() {
       return internalGetResponses().getMap();
@@ -1294,13 +1391,14 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
         java.lang.String key,
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
           internalGetResponses().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1311,12 +1409,13 @@ public final class Openapiv2 {
      * property does not define global responses for all operations.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
           internalGetResponses().getMap();
       if (!map.containsKey(key)) {
@@ -1332,8 +1431,10 @@ public final class Openapiv2 {
      * Security scheme definitions that can be used across the specification.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
+     * @return Whether the securityDefinitions field is set.
      */
+    @java.lang.Override
     public boolean hasSecurityDefinitions() {
       return securityDefinitions_ != null;
     }
@@ -1342,8 +1443,10 @@ public final class Openapiv2 {
      * Security scheme definitions that can be used across the specification.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
+     * @return The securityDefinitions.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions getSecurityDefinitions() {
       return securityDefinitions_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions.getDefaultInstance() : securityDefinitions_;
     }
@@ -1352,8 +1455,9 @@ public final class Openapiv2 {
      * Security scheme definitions that can be used across the specification.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitionsOrBuilder getSecurityDefinitionsOrBuilder() {
       return getSecurityDefinitions();
     }
@@ -1363,26 +1467,28 @@ public final class Openapiv2 {
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> getSecurityList() {
       return security_;
     }
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder> 
         getSecurityOrBuilderList() {
       return security_;
@@ -1390,39 +1496,42 @@ public final class Openapiv2 {
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public int getSecurityCount() {
       return security_.size();
     }
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement getSecurity(int index) {
       return security_.get(index);
     }
     /**
      * <pre>
      * A declaration of which security schemes are applied for the API as a whole.
-     * The list of values describes alternative security schemes that can be used 
-     * (that is, there is a logical OR between the security requirements). 
+     * The list of values describes alternative security schemes that can be used
+     * (that is, there is a logical OR between the security requirements).
      * Individual operations can override this definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder getSecurityOrBuilder(
         int index) {
       return security_.get(index);
@@ -1435,8 +1544,10 @@ public final class Openapiv2 {
      * Additional external documentation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
+    @java.lang.Override
     public boolean hasExternalDocs() {
       return externalDocs_ != null;
     }
@@ -1445,8 +1556,10 @@ public final class Openapiv2 {
      * Additional external documentation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
       return externalDocs_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.getDefaultInstance() : externalDocs_;
     }
@@ -1455,8 +1568,9 @@ public final class Openapiv2 {
      * Additional external documentation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
       return getExternalDocs();
     }
@@ -1488,47 +1602,52 @@ public final class Openapiv2 {
       return internalGetExtensions().getMap().size();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
 
+    @java.lang.Override
     public boolean containsExtensions(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetExtensions().getMap().containsKey(key);
     }
     /**
      * Use {@link #getExtensionsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
       return getExtensionsMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
       return internalGetExtensions().getMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
         com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       if (!map.containsKey(key)) {
@@ -1552,16 +1671,16 @@ public final class Openapiv2 {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getSwaggerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swagger_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, swagger_);
       }
       if (info_ != null) {
         output.writeMessage(2, getInfo());
       }
-      if (!getHostBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, host_);
       }
-      if (!getBasePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(basePath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, basePath_);
       }
       if (getSchemesList().size() > 0) {
@@ -1607,17 +1726,17 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSwaggerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swagger_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, swagger_);
       }
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInfo());
       }
-      if (!getHostBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, host_);
       }
-      if (!getBasePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(basePath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, basePath_);
       }
       {
@@ -1695,41 +1814,40 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger) obj;
 
-      boolean result = true;
-      result = result && getSwagger()
-          .equals(other.getSwagger());
-      result = result && (hasInfo() == other.hasInfo());
+      if (!getSwagger()
+          .equals(other.getSwagger())) return false;
+      if (hasInfo() != other.hasInfo()) return false;
       if (hasInfo()) {
-        result = result && getInfo()
-            .equals(other.getInfo());
+        if (!getInfo()
+            .equals(other.getInfo())) return false;
       }
-      result = result && getHost()
-          .equals(other.getHost());
-      result = result && getBasePath()
-          .equals(other.getBasePath());
-      result = result && schemes_.equals(other.schemes_);
-      result = result && getConsumesList()
-          .equals(other.getConsumesList());
-      result = result && getProducesList()
-          .equals(other.getProducesList());
-      result = result && internalGetResponses().equals(
-          other.internalGetResponses());
-      result = result && (hasSecurityDefinitions() == other.hasSecurityDefinitions());
+      if (!getHost()
+          .equals(other.getHost())) return false;
+      if (!getBasePath()
+          .equals(other.getBasePath())) return false;
+      if (!schemes_.equals(other.schemes_)) return false;
+      if (!getConsumesList()
+          .equals(other.getConsumesList())) return false;
+      if (!getProducesList()
+          .equals(other.getProducesList())) return false;
+      if (!internalGetResponses().equals(
+          other.internalGetResponses())) return false;
+      if (hasSecurityDefinitions() != other.hasSecurityDefinitions()) return false;
       if (hasSecurityDefinitions()) {
-        result = result && getSecurityDefinitions()
-            .equals(other.getSecurityDefinitions());
+        if (!getSecurityDefinitions()
+            .equals(other.getSecurityDefinitions())) return false;
       }
-      result = result && getSecurityList()
-          .equals(other.getSecurityList());
-      result = result && (hasExternalDocs() == other.hasExternalDocs());
+      if (!getSecurityList()
+          .equals(other.getSecurityList())) return false;
+      if (hasExternalDocs() != other.hasExternalDocs()) return false;
       if (hasExternalDocs()) {
-        result = result && getExternalDocs()
-            .equals(other.getExternalDocs());
+        if (!getExternalDocs()
+            .equals(other.getExternalDocs())) return false;
       }
-      result = result && internalGetExtensions().equals(
-          other.internalGetExtensions());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetExtensions().equals(
+          other.internalGetExtensions())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1979,11 +2097,11 @@ public final class Openapiv2 {
         basePath_ = "";
 
         schemes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableResponses().clear();
         if (securityDefinitionsBuilder_ == null) {
           securityDefinitions_ = null;
@@ -1993,7 +2111,7 @@ public final class Openapiv2 {
         }
         if (securityBuilder_ == null) {
           security_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           securityBuilder_.clear();
         }
@@ -2031,7 +2149,6 @@ public final class Openapiv2 {
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger buildPartial() {
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Swagger(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.swagger_ = swagger_;
         if (infoBuilder_ == null) {
           result.info_ = info_;
@@ -2040,19 +2157,19 @@ public final class Openapiv2 {
         }
         result.host_ = host_;
         result.basePath_ = basePath_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           schemes_ = java.util.Collections.unmodifiableList(schemes_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.schemes_ = schemes_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           consumes_ = consumes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.consumes_ = consumes_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           produces_ = produces_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.produces_ = produces_;
         result.responses_ = internalGetResponses();
@@ -2063,9 +2180,9 @@ public final class Openapiv2 {
           result.securityDefinitions_ = securityDefinitionsBuilder_.build();
         }
         if (securityBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             security_ = java.util.Collections.unmodifiableList(security_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.security_ = security_;
         } else {
@@ -2078,42 +2195,41 @@ public final class Openapiv2 {
         }
         result.extensions_ = internalGetExtensions();
         result.extensions_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2145,7 +2261,7 @@ public final class Openapiv2 {
         if (!other.schemes_.isEmpty()) {
           if (schemes_.isEmpty()) {
             schemes_ = other.schemes_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSchemesIsMutable();
             schemes_.addAll(other.schemes_);
@@ -2155,7 +2271,7 @@ public final class Openapiv2 {
         if (!other.consumes_.isEmpty()) {
           if (consumes_.isEmpty()) {
             consumes_ = other.consumes_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureConsumesIsMutable();
             consumes_.addAll(other.consumes_);
@@ -2165,7 +2281,7 @@ public final class Openapiv2 {
         if (!other.produces_.isEmpty()) {
           if (produces_.isEmpty()) {
             produces_ = other.produces_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureProducesIsMutable();
             produces_.addAll(other.produces_);
@@ -2181,7 +2297,7 @@ public final class Openapiv2 {
           if (!other.security_.isEmpty()) {
             if (security_.isEmpty()) {
               security_ = other.security_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureSecurityIsMutable();
               security_.addAll(other.security_);
@@ -2194,7 +2310,7 @@ public final class Openapiv2 {
               securityBuilder_.dispose();
               securityBuilder_ = null;
               security_ = other.security_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000010);
               securityBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSecurityFieldBuilder() : null;
@@ -2242,11 +2358,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * Specifies the OpenAPI Specification version being used. It can be
-       * used by the OpenAPI UI and other clients to interpret the API listing. The 
+       * used by the OpenAPI UI and other clients to interpret the API listing. The
        * value MUST be "2.0".
        * </pre>
        *
-       * <code>string swagger = 1[json_name = "swagger"];</code>
+       * <code>string swagger = 1 [json_name = "swagger"];</code>
+       * @return The swagger.
        */
       public java.lang.String getSwagger() {
         java.lang.Object ref = swagger_;
@@ -2263,11 +2380,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * Specifies the OpenAPI Specification version being used. It can be
-       * used by the OpenAPI UI and other clients to interpret the API listing. The 
+       * used by the OpenAPI UI and other clients to interpret the API listing. The
        * value MUST be "2.0".
        * </pre>
        *
-       * <code>string swagger = 1[json_name = "swagger"];</code>
+       * <code>string swagger = 1 [json_name = "swagger"];</code>
+       * @return The bytes for swagger.
        */
       public com.google.protobuf.ByteString
           getSwaggerBytes() {
@@ -2285,11 +2403,13 @@ public final class Openapiv2 {
       /**
        * <pre>
        * Specifies the OpenAPI Specification version being used. It can be
-       * used by the OpenAPI UI and other clients to interpret the API listing. The 
+       * used by the OpenAPI UI and other clients to interpret the API listing. The
        * value MUST be "2.0".
        * </pre>
        *
-       * <code>string swagger = 1[json_name = "swagger"];</code>
+       * <code>string swagger = 1 [json_name = "swagger"];</code>
+       * @param value The swagger to set.
+       * @return This builder for chaining.
        */
       public Builder setSwagger(
           java.lang.String value) {
@@ -2304,11 +2424,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * Specifies the OpenAPI Specification version being used. It can be
-       * used by the OpenAPI UI and other clients to interpret the API listing. The 
+       * used by the OpenAPI UI and other clients to interpret the API listing. The
        * value MUST be "2.0".
        * </pre>
        *
-       * <code>string swagger = 1[json_name = "swagger"];</code>
+       * <code>string swagger = 1 [json_name = "swagger"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSwagger() {
         
@@ -2319,11 +2440,13 @@ public final class Openapiv2 {
       /**
        * <pre>
        * Specifies the OpenAPI Specification version being used. It can be
-       * used by the OpenAPI UI and other clients to interpret the API listing. The 
+       * used by the OpenAPI UI and other clients to interpret the API listing. The
        * value MUST be "2.0".
        * </pre>
        *
-       * <code>string swagger = 1[json_name = "swagger"];</code>
+       * <code>string swagger = 1 [json_name = "swagger"];</code>
+       * @param value The bytes for swagger to set.
+       * @return This builder for chaining.
        */
       public Builder setSwaggerBytes(
           com.google.protobuf.ByteString value) {
@@ -2337,27 +2460,29 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info info_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info info_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.InfoOrBuilder> infoBuilder_;
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
+       * @return Whether the info field is set.
        */
       public boolean hasInfo() {
         return infoBuilder_ != null || info_ != null;
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
+       * @return The info.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info getInfo() {
         if (infoBuilder_ == null) {
@@ -2368,11 +2493,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       public Builder setInfo(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info value) {
         if (infoBuilder_ == null) {
@@ -2389,11 +2514,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       public Builder setInfo(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.Builder builderForValue) {
@@ -2408,11 +2533,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       public Builder mergeInfo(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info value) {
         if (infoBuilder_ == null) {
@@ -2431,11 +2556,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       public Builder clearInfo() {
         if (infoBuilder_ == null) {
@@ -2450,11 +2575,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.Builder getInfoBuilder() {
         
@@ -2463,11 +2588,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.InfoOrBuilder getInfoOrBuilder() {
         if (infoBuilder_ != null) {
@@ -2479,11 +2604,11 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Provides metadata about the API. The metadata can be used by the 
+       * Provides metadata about the API. The metadata can be used by the
        * clients if needed.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2[json_name = "info"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Info info = 2 [json_name = "info"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.InfoOrBuilder> 
@@ -2502,13 +2627,14 @@ public final class Openapiv2 {
       private java.lang.Object host_ = "";
       /**
        * <pre>
-       * The host (name or ip) serving the API. This MUST be the host only and does 
+       * The host (name or ip) serving the API. This MUST be the host only and does
        * not include the scheme nor sub-paths. It MAY include a port. If the host is
        * not included, the host serving the documentation is to be used (including
        * the port). The host does not support path templating.
        * </pre>
        *
-       * <code>string host = 3[json_name = "host"];</code>
+       * <code>string host = 3 [json_name = "host"];</code>
+       * @return The host.
        */
       public java.lang.String getHost() {
         java.lang.Object ref = host_;
@@ -2524,13 +2650,14 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * The host (name or ip) serving the API. This MUST be the host only and does 
+       * The host (name or ip) serving the API. This MUST be the host only and does
        * not include the scheme nor sub-paths. It MAY include a port. If the host is
        * not included, the host serving the documentation is to be used (including
        * the port). The host does not support path templating.
        * </pre>
        *
-       * <code>string host = 3[json_name = "host"];</code>
+       * <code>string host = 3 [json_name = "host"];</code>
+       * @return The bytes for host.
        */
       public com.google.protobuf.ByteString
           getHostBytes() {
@@ -2547,13 +2674,15 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * The host (name or ip) serving the API. This MUST be the host only and does 
+       * The host (name or ip) serving the API. This MUST be the host only and does
        * not include the scheme nor sub-paths. It MAY include a port. If the host is
        * not included, the host serving the documentation is to be used (including
        * the port). The host does not support path templating.
        * </pre>
        *
-       * <code>string host = 3[json_name = "host"];</code>
+       * <code>string host = 3 [json_name = "host"];</code>
+       * @param value The host to set.
+       * @return This builder for chaining.
        */
       public Builder setHost(
           java.lang.String value) {
@@ -2567,13 +2696,14 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * The host (name or ip) serving the API. This MUST be the host only and does 
+       * The host (name or ip) serving the API. This MUST be the host only and does
        * not include the scheme nor sub-paths. It MAY include a port. If the host is
        * not included, the host serving the documentation is to be used (including
        * the port). The host does not support path templating.
        * </pre>
        *
-       * <code>string host = 3[json_name = "host"];</code>
+       * <code>string host = 3 [json_name = "host"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearHost() {
         
@@ -2583,13 +2713,15 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * The host (name or ip) serving the API. This MUST be the host only and does 
+       * The host (name or ip) serving the API. This MUST be the host only and does
        * not include the scheme nor sub-paths. It MAY include a port. If the host is
        * not included, the host serving the documentation is to be used (including
        * the port). The host does not support path templating.
        * </pre>
        *
-       * <code>string host = 3[json_name = "host"];</code>
+       * <code>string host = 3 [json_name = "host"];</code>
+       * @param value The bytes for host to set.
+       * @return This builder for chaining.
        */
       public Builder setHostBytes(
           com.google.protobuf.ByteString value) {
@@ -2607,17 +2739,18 @@ public final class Openapiv2 {
       /**
        * <pre>
        * The base path on which the API is served, which is relative to the host. If
-       * it is not included, the API is served directly under the host. The value 
+       * it is not included, the API is served directly under the host. The value
        * MUST start with a leading slash (/). The basePath does not support path
        * templating.
-       * Note that using `base_path` does not change the endpoint paths that are 
+       * Note that using `base_path` does not change the endpoint paths that are
        * generated in the resulting OpenAPI file. If you wish to use `base_path`
-       * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-       * manually removed from your `google.api.http` paths and your code changed to 
+       * with relatively generated OpenAPI paths, the `base_path` prefix must be
+       * manually removed from your `google.api.http` paths and your code changed to
        * serve the API from the `base_path`.
        * </pre>
        *
-       * <code>string base_path = 4[json_name = "basePath"];</code>
+       * <code>string base_path = 4 [json_name = "basePath"];</code>
+       * @return The basePath.
        */
       public java.lang.String getBasePath() {
         java.lang.Object ref = basePath_;
@@ -2634,17 +2767,18 @@ public final class Openapiv2 {
       /**
        * <pre>
        * The base path on which the API is served, which is relative to the host. If
-       * it is not included, the API is served directly under the host. The value 
+       * it is not included, the API is served directly under the host. The value
        * MUST start with a leading slash (/). The basePath does not support path
        * templating.
-       * Note that using `base_path` does not change the endpoint paths that are 
+       * Note that using `base_path` does not change the endpoint paths that are
        * generated in the resulting OpenAPI file. If you wish to use `base_path`
-       * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-       * manually removed from your `google.api.http` paths and your code changed to 
+       * with relatively generated OpenAPI paths, the `base_path` prefix must be
+       * manually removed from your `google.api.http` paths and your code changed to
        * serve the API from the `base_path`.
        * </pre>
        *
-       * <code>string base_path = 4[json_name = "basePath"];</code>
+       * <code>string base_path = 4 [json_name = "basePath"];</code>
+       * @return The bytes for basePath.
        */
       public com.google.protobuf.ByteString
           getBasePathBytes() {
@@ -2662,17 +2796,19 @@ public final class Openapiv2 {
       /**
        * <pre>
        * The base path on which the API is served, which is relative to the host. If
-       * it is not included, the API is served directly under the host. The value 
+       * it is not included, the API is served directly under the host. The value
        * MUST start with a leading slash (/). The basePath does not support path
        * templating.
-       * Note that using `base_path` does not change the endpoint paths that are 
+       * Note that using `base_path` does not change the endpoint paths that are
        * generated in the resulting OpenAPI file. If you wish to use `base_path`
-       * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-       * manually removed from your `google.api.http` paths and your code changed to 
+       * with relatively generated OpenAPI paths, the `base_path` prefix must be
+       * manually removed from your `google.api.http` paths and your code changed to
        * serve the API from the `base_path`.
        * </pre>
        *
-       * <code>string base_path = 4[json_name = "basePath"];</code>
+       * <code>string base_path = 4 [json_name = "basePath"];</code>
+       * @param value The basePath to set.
+       * @return This builder for chaining.
        */
       public Builder setBasePath(
           java.lang.String value) {
@@ -2687,17 +2823,18 @@ public final class Openapiv2 {
       /**
        * <pre>
        * The base path on which the API is served, which is relative to the host. If
-       * it is not included, the API is served directly under the host. The value 
+       * it is not included, the API is served directly under the host. The value
        * MUST start with a leading slash (/). The basePath does not support path
        * templating.
-       * Note that using `base_path` does not change the endpoint paths that are 
+       * Note that using `base_path` does not change the endpoint paths that are
        * generated in the resulting OpenAPI file. If you wish to use `base_path`
-       * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-       * manually removed from your `google.api.http` paths and your code changed to 
+       * with relatively generated OpenAPI paths, the `base_path` prefix must be
+       * manually removed from your `google.api.http` paths and your code changed to
        * serve the API from the `base_path`.
        * </pre>
        *
-       * <code>string base_path = 4[json_name = "basePath"];</code>
+       * <code>string base_path = 4 [json_name = "basePath"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearBasePath() {
         
@@ -2708,17 +2845,19 @@ public final class Openapiv2 {
       /**
        * <pre>
        * The base path on which the API is served, which is relative to the host. If
-       * it is not included, the API is served directly under the host. The value 
+       * it is not included, the API is served directly under the host. The value
        * MUST start with a leading slash (/). The basePath does not support path
        * templating.
-       * Note that using `base_path` does not change the endpoint paths that are 
+       * Note that using `base_path` does not change the endpoint paths that are
        * generated in the resulting OpenAPI file. If you wish to use `base_path`
-       * with relatively generated OpenAPI paths, the `base_path` prefix must be 
-       * manually removed from your `google.api.http` paths and your code changed to 
+       * with relatively generated OpenAPI paths, the `base_path` prefix must be
+       * manually removed from your `google.api.http` paths and your code changed to
        * serve the API from the `base_path`.
        * </pre>
        *
-       * <code>string base_path = 4[json_name = "basePath"];</code>
+       * <code>string base_path = 4 [json_name = "basePath"];</code>
+       * @param value The bytes for basePath to set.
+       * @return This builder for chaining.
        */
       public Builder setBasePathBytes(
           com.google.protobuf.ByteString value) {
@@ -2735,9 +2874,9 @@ public final class Openapiv2 {
       private java.util.List<java.lang.Integer> schemes_ =
         java.util.Collections.emptyList();
       private void ensureSchemesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           schemes_ = new java.util.ArrayList<java.lang.Integer>(schemes_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
         }
       }
       /**
@@ -2747,7 +2886,8 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @return A list containing the schemes.
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> getSchemesList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -2760,7 +2900,8 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @return The count of schemes.
        */
       public int getSchemesCount() {
         return schemes_.size();
@@ -2772,7 +2913,9 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param index The index of the element to return.
+       * @return The schemes at the given index.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme getSchemes(int index) {
         return schemes_converter_.convert(schemes_.get(index));
@@ -2784,7 +2927,10 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param index The index to set the value at.
+       * @param value The schemes to set.
+       * @return This builder for chaining.
        */
       public Builder setSchemes(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme value) {
@@ -2803,7 +2949,9 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param value The schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addSchemes(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme value) {
         if (value == null) {
@@ -2821,7 +2969,9 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param values The schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSchemes(
           java.lang.Iterable<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> values) {
@@ -2839,11 +2989,12 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSchemes() {
         schemes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2854,7 +3005,8 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @return A list containing the enum numeric values on the wire for schemes.
        */
       public java.util.List<java.lang.Integer>
       getSchemesValueList() {
@@ -2867,7 +3019,9 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of schemes at the given index.
        */
       public int getSchemesValue(int index) {
         return schemes_.get(index);
@@ -2879,7 +3033,10 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of schemes at the given index.
+       * @return This builder for chaining.
        */
       public Builder setSchemesValue(
           int index, int value) {
@@ -2895,7 +3052,9 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param value The enum numeric value on the wire for schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addSchemesValue(int value) {
         ensureSchemesIsMutable();
@@ -2910,7 +3069,9 @@ public final class Openapiv2 {
        * be used is the one used to access the OpenAPI definition itself.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 5 [json_name = "schemes"];</code>
+       * @param values The enum numeric values on the wire for schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSchemesValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -2924,19 +3085,20 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureConsumesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           consumes_ = new com.google.protobuf.LazyStringArrayList(consumes_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @return A list containing the consumes.
        */
       public com.google.protobuf.ProtocolStringList
           getConsumesList() {
@@ -2944,36 +3106,41 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @return The count of consumes.
        */
       public int getConsumesCount() {
         return consumes_.size();
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param index The index of the element to return.
+       * @return The consumes at the given index.
        */
       public java.lang.String getConsumes(int index) {
         return consumes_.get(index);
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the consumes at the given index.
        */
       public com.google.protobuf.ByteString
           getConsumesBytes(int index) {
@@ -2981,12 +3148,15 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param index The index to set the value at.
+       * @param value The consumes to set.
+       * @return This builder for chaining.
        */
       public Builder setConsumes(
           int index, java.lang.String value) {
@@ -3000,12 +3170,14 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param value The consumes to add.
+       * @return This builder for chaining.
        */
       public Builder addConsumes(
           java.lang.String value) {
@@ -3019,12 +3191,14 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param values The consumes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllConsumes(
           java.lang.Iterable<java.lang.String> values) {
@@ -3036,27 +3210,30 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearConsumes() {
         consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * A list of MIME types the APIs can consume. This is global to all APIs but 
+       * A list of MIME types the APIs can consume. This is global to all APIs but
        * can be overridden on specific API calls. Value MUST be as described under
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param value The bytes of the consumes to add.
+       * @return This builder for chaining.
        */
       public Builder addConsumesBytes(
           com.google.protobuf.ByteString value) {
@@ -3072,9 +3249,9 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProducesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           produces_ = new com.google.protobuf.LazyStringArrayList(produces_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -3084,7 +3261,8 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @return A list containing the produces.
        */
       public com.google.protobuf.ProtocolStringList
           getProducesList() {
@@ -3097,7 +3275,8 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @return The count of produces.
        */
       public int getProducesCount() {
         return produces_.size();
@@ -3109,7 +3288,9 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param index The index of the element to return.
+       * @return The produces at the given index.
        */
       public java.lang.String getProduces(int index) {
         return produces_.get(index);
@@ -3121,7 +3302,9 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the produces at the given index.
        */
       public com.google.protobuf.ByteString
           getProducesBytes(int index) {
@@ -3134,7 +3317,10 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param index The index to set the value at.
+       * @param value The produces to set.
+       * @return This builder for chaining.
        */
       public Builder setProduces(
           int index, java.lang.String value) {
@@ -3153,7 +3339,9 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param value The produces to add.
+       * @return This builder for chaining.
        */
       public Builder addProduces(
           java.lang.String value) {
@@ -3172,7 +3360,9 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param values The produces to add.
+       * @return This builder for chaining.
        */
       public Builder addAllProduces(
           java.lang.Iterable<java.lang.String> values) {
@@ -3189,11 +3379,12 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearProduces() {
         produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3204,7 +3395,9 @@ public final class Openapiv2 {
        * Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param value The bytes of the produces to add.
+       * @return This builder for chaining.
        */
       public Builder addProducesBytes(
           com.google.protobuf.ByteString value) {
@@ -3250,17 +3443,19 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
 
+      @java.lang.Override
       public boolean containsResponses(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetResponses().getMap().containsKey(key);
       }
       /**
        * Use {@link #getResponsesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponses() {
         return getResponsesMap();
@@ -3271,8 +3466,9 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponsesMap() {
         return internalGetResponses().getMap();
@@ -3283,13 +3479,14 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
             internalGetResponses().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3300,12 +3497,13 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
             internalGetResponses().getMap();
         if (!map.containsKey(key)) {
@@ -3325,12 +3523,12 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
 
       public Builder removeResponses(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableResponses().getMutableMap()
             .remove(key);
         return this;
@@ -3349,13 +3547,16 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
       public Builder putResponses(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableResponses().getMutableMap()
             .put(key, value);
         return this;
@@ -3366,7 +3567,7 @@ public final class Openapiv2 {
        * property does not define global responses for all operations.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 10 [json_name = "responses"];</code>
        */
 
       public Builder putAllResponses(
@@ -3376,7 +3577,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions securityDefinitions_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions securityDefinitions_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitionsOrBuilder> securityDefinitionsBuilder_;
       /**
@@ -3384,7 +3585,8 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
+       * @return Whether the securityDefinitions field is set.
        */
       public boolean hasSecurityDefinitions() {
         return securityDefinitionsBuilder_ != null || securityDefinitions_ != null;
@@ -3394,7 +3596,8 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
+       * @return The securityDefinitions.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions getSecurityDefinitions() {
         if (securityDefinitionsBuilder_ == null) {
@@ -3408,7 +3611,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       public Builder setSecurityDefinitions(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions value) {
         if (securityDefinitionsBuilder_ == null) {
@@ -3428,7 +3631,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       public Builder setSecurityDefinitions(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions.Builder builderForValue) {
@@ -3446,7 +3649,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       public Builder mergeSecurityDefinitions(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions value) {
         if (securityDefinitionsBuilder_ == null) {
@@ -3468,7 +3671,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       public Builder clearSecurityDefinitions() {
         if (securityDefinitionsBuilder_ == null) {
@@ -3486,7 +3689,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions.Builder getSecurityDefinitionsBuilder() {
         
@@ -3498,7 +3701,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitionsOrBuilder getSecurityDefinitionsOrBuilder() {
         if (securityDefinitionsBuilder_ != null) {
@@ -3513,7 +3716,7 @@ public final class Openapiv2 {
        * Security scheme definitions that can be used across the specification.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11[json_name = "securityDefinitions"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions security_definitions = 11 [json_name = "securityDefinitions"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitionsOrBuilder> 
@@ -3532,9 +3735,9 @@ public final class Openapiv2 {
       private java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> security_ =
         java.util.Collections.emptyList();
       private void ensureSecurityIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           security_ = new java.util.ArrayList<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement>(security_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -3544,12 +3747,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> getSecurityList() {
         if (securityBuilder_ == null) {
@@ -3561,12 +3764,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public int getSecurityCount() {
         if (securityBuilder_ == null) {
@@ -3578,12 +3781,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement getSecurity(int index) {
         if (securityBuilder_ == null) {
@@ -3595,12 +3798,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder setSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement value) {
@@ -3619,12 +3822,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder setSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder builderForValue) {
@@ -3640,12 +3843,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement value) {
         if (securityBuilder_ == null) {
@@ -3663,12 +3866,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement value) {
@@ -3687,12 +3890,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder builderForValue) {
@@ -3708,12 +3911,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder builderForValue) {
@@ -3729,12 +3932,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addAllSecurity(
           java.lang.Iterable<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> values) {
@@ -3751,17 +3954,17 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder clearSecurity() {
         if (securityBuilder_ == null) {
           security_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           securityBuilder_.clear();
@@ -3771,12 +3974,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder removeSecurity(int index) {
         if (securityBuilder_ == null) {
@@ -3791,12 +3994,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder getSecurityBuilder(
           int index) {
@@ -3805,12 +4008,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder getSecurityOrBuilder(
           int index) {
@@ -3822,12 +4025,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public java.util.List<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder> 
            getSecurityOrBuilderList() {
@@ -3840,12 +4043,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder addSecurityBuilder() {
         return getSecurityFieldBuilder().addBuilder(
@@ -3854,12 +4057,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder addSecurityBuilder(
           int index) {
@@ -3869,12 +4072,12 @@ public final class Openapiv2 {
       /**
        * <pre>
        * A declaration of which security schemes are applied for the API as a whole.
-       * The list of values describes alternative security schemes that can be used 
-       * (that is, there is a logical OR between the security requirements). 
+       * The list of values describes alternative security schemes that can be used
+       * (that is, there is a logical OR between the security requirements).
        * Individual operations can override this definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder> 
            getSecurityBuilderList() {
@@ -3887,7 +4090,7 @@ public final class Openapiv2 {
           securityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder>(
                   security_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           security_ = null;
@@ -3895,7 +4098,7 @@ public final class Openapiv2 {
         return securityBuilder_;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> externalDocsBuilder_;
       /**
@@ -3903,7 +4106,8 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
+       * @return Whether the externalDocs field is set.
        */
       public boolean hasExternalDocs() {
         return externalDocsBuilder_ != null || externalDocs_ != null;
@@ -3913,7 +4117,8 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
+       * @return The externalDocs.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -3927,7 +4132,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -3947,7 +4152,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder builderForValue) {
@@ -3965,7 +4170,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       public Builder mergeExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -3987,7 +4192,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       public Builder clearExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -4005,7 +4210,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder getExternalDocsBuilder() {
         
@@ -4017,7 +4222,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
         if (externalDocsBuilder_ != null) {
@@ -4032,7 +4237,7 @@ public final class Openapiv2 {
        * Additional external documentation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> 
@@ -4075,47 +4280,52 @@ public final class Openapiv2 {
         return internalGetExtensions().getMap().size();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
 
+      @java.lang.Override
       public boolean containsExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetExtensions().getMap().containsKey(key);
       }
       /**
        * Use {@link #getExtensionsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
         return getExtensionsMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
         return internalGetExtensions().getMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrDefault(
           java.lang.String key,
           com.google.protobuf.Value defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         if (!map.containsKey(key)) {
@@ -4130,12 +4340,12 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
 
       public Builder removeExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableExtensions().getMutableMap()
             .remove(key);
         return this;
@@ -4149,19 +4359,22 @@ public final class Openapiv2 {
         return internalGetMutableExtensions().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
       public Builder putExtensions(
           java.lang.String key,
           com.google.protobuf.Value value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExtensions().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
        */
 
       public Builder putAllExtensions(
@@ -4173,7 +4386,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4233,7 +4446,8 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
@@ -4243,7 +4457,8 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
@@ -4252,7 +4467,9 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
@@ -4261,7 +4478,9 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -4272,7 +4491,8 @@ public final class Openapiv2 {
      * swagger-ui, this field SHOULD be less than 120 characters.
      * </pre>
      *
-     * <code>string summary = 2[json_name = "summary"];</code>
+     * <code>string summary = 2 [json_name = "summary"];</code>
+     * @return The summary.
      */
     java.lang.String getSummary();
     /**
@@ -4281,7 +4501,8 @@ public final class Openapiv2 {
      * swagger-ui, this field SHOULD be less than 120 characters.
      * </pre>
      *
-     * <code>string summary = 2[json_name = "summary"];</code>
+     * <code>string summary = 2 [json_name = "summary"];</code>
+     * @return The bytes for summary.
      */
     com.google.protobuf.ByteString
         getSummaryBytes();
@@ -4292,7 +4513,8 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 3[json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -4301,7 +4523,8 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 3[json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -4311,7 +4534,8 @@ public final class Openapiv2 {
      * Additional external documentation for this operation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
     boolean hasExternalDocs();
     /**
@@ -4319,7 +4543,8 @@ public final class Openapiv2 {
      * Additional external documentation for this operation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs();
     /**
@@ -4327,7 +4552,7 @@ public final class Openapiv2 {
      * Additional external documentation for this operation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder();
 
@@ -4339,7 +4564,8 @@ public final class Openapiv2 {
      * to follow common programming naming conventions.
      * </pre>
      *
-     * <code>string operation_id = 5[json_name = "operationId"];</code>
+     * <code>string operation_id = 5 [json_name = "operationId"];</code>
+     * @return The operationId.
      */
     java.lang.String getOperationId();
     /**
@@ -4350,7 +4576,8 @@ public final class Openapiv2 {
      * to follow common programming naming conventions.
      * </pre>
      *
-     * <code>string operation_id = 5[json_name = "operationId"];</code>
+     * <code>string operation_id = 5 [json_name = "operationId"];</code>
+     * @return The bytes for operationId.
      */
     com.google.protobuf.ByteString
         getOperationIdBytes();
@@ -4362,7 +4589,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return A list containing the consumes.
      */
     java.util.List<java.lang.String>
         getConsumesList();
@@ -4373,7 +4601,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return The count of consumes.
      */
     int getConsumesCount();
     /**
@@ -4383,7 +4612,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the element to return.
+     * @return The consumes at the given index.
      */
     java.lang.String getConsumes(int index);
     /**
@@ -4393,7 +4624,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the consumes at the given index.
      */
     com.google.protobuf.ByteString
         getConsumesBytes(int index);
@@ -4405,7 +4638,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return A list containing the produces.
      */
     java.util.List<java.lang.String>
         getProducesList();
@@ -4416,7 +4650,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return The count of produces.
      */
     int getProducesCount();
     /**
@@ -4426,7 +4661,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the element to return.
+     * @return The produces at the given index.
      */
     java.lang.String getProduces(int index);
     /**
@@ -4436,7 +4673,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the produces at the given index.
      */
     com.google.protobuf.ByteString
         getProducesBytes(int index);
@@ -4447,7 +4686,7 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
     int getResponsesCount();
     /**
@@ -4456,7 +4695,7 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
     boolean containsResponses(
         java.lang.String key);
@@ -4472,7 +4711,7 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
     java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response>
     getResponsesMap();
@@ -4482,19 +4721,21 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
 
-    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
+    /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
         java.lang.String key,
-        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue);
+        /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue);
     /**
      * <pre>
      * The list of possible responses as they are returned from executing this
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
 
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrThrow(
@@ -4507,7 +4748,8 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @return A list containing the schemes.
      */
     java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> getSchemesList();
     /**
@@ -4517,7 +4759,8 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @return The count of schemes.
      */
     int getSchemesCount();
     /**
@@ -4527,7 +4770,9 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @param index The index of the element to return.
+     * @return The schemes at the given index.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme getSchemes(int index);
     /**
@@ -4537,7 +4782,8 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @return A list containing the enum numeric values on the wire for schemes.
      */
     java.util.List<java.lang.Integer>
     getSchemesValueList();
@@ -4548,7 +4794,9 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of schemes at the given index.
      */
     int getSchemesValue(int index);
 
@@ -4558,7 +4806,8 @@ public final class Openapiv2 {
      * should be refrained. Default value is false.
      * </pre>
      *
-     * <code>bool deprecated = 11[json_name = "deprecated"];</code>
+     * <code>bool deprecated = 11 [json_name = "deprecated"];</code>
+     * @return The deprecated.
      */
     boolean getDeprecated();
 
@@ -4571,7 +4820,7 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> 
         getSecurityList();
@@ -4584,7 +4833,7 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement getSecurity(int index);
     /**
@@ -4596,7 +4845,7 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     int getSecurityCount();
     /**
@@ -4608,7 +4857,7 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     java.util.List<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder> 
         getSecurityOrBuilderList();
@@ -4621,17 +4870,17 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder getSecurityOrBuilder(
         int index);
 
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     int getExtensionsCount();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     boolean containsExtensions(
         java.lang.String key);
@@ -4642,19 +4891,21 @@ public final class Openapiv2 {
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensions();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensionsMap();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
 
-    com.google.protobuf.Value getExtensionsOrDefault(
+    /* nullable */
+com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
-        com.google.protobuf.Value defaultValue);
+        /* nullable */
+com.google.protobuf.Value defaultValue);
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
 
     com.google.protobuf.Value getExtensionsOrThrow(
@@ -4687,7 +4938,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Operation}
    */
-  public  static final class Operation extends
+  public static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Operation)
       OperationOrBuilder {
@@ -4704,8 +4955,14 @@ public final class Openapiv2 {
       consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       schemes_ = java.util.Collections.emptyList();
-      deprecated_ = false;
       security_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Operation();
     }
 
     @java.lang.Override
@@ -4734,7 +4991,7 @@ public final class Openapiv2 {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4774,27 +5031,27 @@ public final class Openapiv2 {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 consumes_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000002;
               }
               consumes_.add(s);
               break;
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 produces_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000004;
               }
               produces_.add(s);
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 responses_ = com.google.protobuf.MapField.newMapField(
                     ResponsesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000008;
               }
               com.google.protobuf.MapEntry<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response>
               responses__ = input.readMessage(
@@ -4805,9 +5062,9 @@ public final class Openapiv2 {
             }
             case 80: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 schemes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000010;
               }
               schemes_.add(rawValue);
               break;
@@ -4817,9 +5074,9 @@ public final class Openapiv2 {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                   schemes_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000100;
+                  mutable_bitField0_ |= 0x00000010;
                 }
                 schemes_.add(rawValue);
               }
@@ -4832,19 +5089,19 @@ public final class Openapiv2 {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 security_ = new java.util.ArrayList<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000020;
               }
               security_.add(
                   input.readMessage(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.parser(), extensionRegistry));
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 extensions_ = com.google.protobuf.MapField.newMapField(
                     ExtensionsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00000040;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
               extensions__ = input.readMessage(
@@ -4854,7 +5111,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4864,23 +5121,25 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           consumes_ = consumes_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           produces_ = produces_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           schemes_ = java.util.Collections.unmodifiableList(schemes_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           security_ = java.util.Collections.unmodifiableList(security_);
         }
         this.unknownFields = unknownFields.build();
@@ -4914,7 +5173,6 @@ public final class Openapiv2 {
               grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TAGS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList tags_;
     /**
@@ -4923,7 +5181,8 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -4935,7 +5194,8 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
@@ -4946,7 +5206,9 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
@@ -4957,7 +5219,9 @@ public final class Openapiv2 {
      * grouping of operations by resources or any other qualifier.
      * </pre>
      *
-     * <code>repeated string tags = 1[json_name = "tags"];</code>
+     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -4972,8 +5236,10 @@ public final class Openapiv2 {
      * swagger-ui, this field SHOULD be less than 120 characters.
      * </pre>
      *
-     * <code>string summary = 2[json_name = "summary"];</code>
+     * <code>string summary = 2 [json_name = "summary"];</code>
+     * @return The summary.
      */
+    @java.lang.Override
     public java.lang.String getSummary() {
       java.lang.Object ref = summary_;
       if (ref instanceof java.lang.String) {
@@ -4992,8 +5258,10 @@ public final class Openapiv2 {
      * swagger-ui, this field SHOULD be less than 120 characters.
      * </pre>
      *
-     * <code>string summary = 2[json_name = "summary"];</code>
+     * <code>string summary = 2 [json_name = "summary"];</code>
+     * @return The bytes for summary.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSummaryBytes() {
       java.lang.Object ref = summary_;
@@ -5016,8 +5284,10 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 3[json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -5036,8 +5306,10 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 3[json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -5059,8 +5331,10 @@ public final class Openapiv2 {
      * Additional external documentation for this operation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
+    @java.lang.Override
     public boolean hasExternalDocs() {
       return externalDocs_ != null;
     }
@@ -5069,8 +5343,10 @@ public final class Openapiv2 {
      * Additional external documentation for this operation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
       return externalDocs_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.getDefaultInstance() : externalDocs_;
     }
@@ -5079,8 +5355,9 @@ public final class Openapiv2 {
      * Additional external documentation for this operation.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
       return getExternalDocs();
     }
@@ -5095,8 +5372,10 @@ public final class Openapiv2 {
      * to follow common programming naming conventions.
      * </pre>
      *
-     * <code>string operation_id = 5[json_name = "operationId"];</code>
+     * <code>string operation_id = 5 [json_name = "operationId"];</code>
+     * @return The operationId.
      */
+    @java.lang.Override
     public java.lang.String getOperationId() {
       java.lang.Object ref = operationId_;
       if (ref instanceof java.lang.String) {
@@ -5117,8 +5396,10 @@ public final class Openapiv2 {
      * to follow common programming naming conventions.
      * </pre>
      *
-     * <code>string operation_id = 5[json_name = "operationId"];</code>
+     * <code>string operation_id = 5 [json_name = "operationId"];</code>
+     * @return The bytes for operationId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOperationIdBytes() {
       java.lang.Object ref = operationId_;
@@ -5142,7 +5423,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return A list containing the consumes.
      */
     public com.google.protobuf.ProtocolStringList
         getConsumesList() {
@@ -5155,7 +5437,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @return The count of consumes.
      */
     public int getConsumesCount() {
       return consumes_.size();
@@ -5167,7 +5450,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the element to return.
+     * @return The consumes at the given index.
      */
     public java.lang.String getConsumes(int index) {
       return consumes_.get(index);
@@ -5179,7 +5464,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+     * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the consumes at the given index.
      */
     public com.google.protobuf.ByteString
         getConsumesBytes(int index) {
@@ -5195,7 +5482,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return A list containing the produces.
      */
     public com.google.protobuf.ProtocolStringList
         getProducesList() {
@@ -5208,7 +5496,8 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @return The count of produces.
      */
     public int getProducesCount() {
       return produces_.size();
@@ -5220,7 +5509,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the element to return.
+     * @return The produces at the given index.
      */
     public java.lang.String getProduces(int index) {
       return produces_.get(index);
@@ -5232,7 +5523,9 @@ public final class Openapiv2 {
      * global definition. Value MUST be as described under Mime Types.
      * </pre>
      *
-     * <code>repeated string produces = 7[json_name = "produces"];</code>
+     * <code>repeated string produces = 7 [json_name = "produces"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the produces at the given index.
      */
     public com.google.protobuf.ByteString
         getProducesBytes(int index) {
@@ -5271,17 +5564,19 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
 
+    @java.lang.Override
     public boolean containsResponses(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetResponses().getMap().containsKey(key);
     }
     /**
      * Use {@link #getResponsesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponses() {
       return getResponsesMap();
@@ -5292,8 +5587,9 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponsesMap() {
       return internalGetResponses().getMap();
@@ -5304,13 +5600,14 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
         java.lang.String key,
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
           internalGetResponses().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5321,12 +5618,13 @@ public final class Openapiv2 {
      * operation.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
           internalGetResponses().getMap();
       if (!map.containsKey(key)) {
@@ -5354,8 +5652,10 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @return A list containing the schemes.
      */
+    @java.lang.Override
     public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> getSchemesList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme>(schemes_, schemes_converter_);
@@ -5367,8 +5667,10 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @return The count of schemes.
      */
+    @java.lang.Override
     public int getSchemesCount() {
       return schemes_.size();
     }
@@ -5379,8 +5681,11 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @param index The index of the element to return.
+     * @return The schemes at the given index.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme getSchemes(int index) {
       return schemes_converter_.convert(schemes_.get(index));
     }
@@ -5391,8 +5696,10 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @return A list containing the enum numeric values on the wire for schemes.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getSchemesValueList() {
       return schemes_;
@@ -5404,8 +5711,11 @@ public final class Openapiv2 {
      * schemes definition.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of schemes at the given index.
      */
+    @java.lang.Override
     public int getSchemesValue(int index) {
       return schemes_.get(index);
     }
@@ -5419,8 +5729,10 @@ public final class Openapiv2 {
      * should be refrained. Default value is false.
      * </pre>
      *
-     * <code>bool deprecated = 11[json_name = "deprecated"];</code>
+     * <code>bool deprecated = 11 [json_name = "deprecated"];</code>
+     * @return The deprecated.
      */
+    @java.lang.Override
     public boolean getDeprecated() {
       return deprecated_;
     }
@@ -5436,8 +5748,9 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> getSecurityList() {
       return security_;
     }
@@ -5450,8 +5763,9 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public java.util.List<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder> 
         getSecurityOrBuilderList() {
       return security_;
@@ -5465,8 +5779,9 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public int getSecurityCount() {
       return security_.size();
     }
@@ -5479,8 +5794,9 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement getSecurity(int index) {
       return security_.get(index);
     }
@@ -5493,8 +5809,9 @@ public final class Openapiv2 {
      * security declaration, an empty array can be used.
      * </pre>
      *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder getSecurityOrBuilder(
         int index) {
       return security_.get(index);
@@ -5527,47 +5844,52 @@ public final class Openapiv2 {
       return internalGetExtensions().getMap().size();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
 
+    @java.lang.Override
     public boolean containsExtensions(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetExtensions().getMap().containsKey(key);
     }
     /**
      * Use {@link #getExtensionsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
       return getExtensionsMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
       return internalGetExtensions().getMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
         com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       if (!map.containsKey(key)) {
@@ -5594,16 +5916,16 @@ public final class Openapiv2 {
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tags_.getRaw(i));
       }
-      if (!getSummaryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(summary_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, summary_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       if (externalDocs_ != null) {
         output.writeMessage(4, getExternalDocs());
       }
-      if (!getOperationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, operationId_);
       }
       for (int i = 0; i < consumes_.size(); i++) {
@@ -5654,17 +5976,17 @@ public final class Openapiv2 {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      if (!getSummaryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(summary_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, summary_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       if (externalDocs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExternalDocs());
       }
-      if (!getOperationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, operationId_);
       }
       {
@@ -5738,35 +6060,34 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation) obj;
 
-      boolean result = true;
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && getSummary()
-          .equals(other.getSummary());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasExternalDocs() == other.hasExternalDocs());
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!getSummary()
+          .equals(other.getSummary())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasExternalDocs() != other.hasExternalDocs()) return false;
       if (hasExternalDocs()) {
-        result = result && getExternalDocs()
-            .equals(other.getExternalDocs());
+        if (!getExternalDocs()
+            .equals(other.getExternalDocs())) return false;
       }
-      result = result && getOperationId()
-          .equals(other.getOperationId());
-      result = result && getConsumesList()
-          .equals(other.getConsumesList());
-      result = result && getProducesList()
-          .equals(other.getProducesList());
-      result = result && internalGetResponses().equals(
-          other.internalGetResponses());
-      result = result && schemes_.equals(other.schemes_);
-      result = result && (getDeprecated()
-          == other.getDeprecated());
-      result = result && getSecurityList()
-          .equals(other.getSecurityList());
-      result = result && internalGetExtensions().equals(
-          other.internalGetExtensions());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOperationId()
+          .equals(other.getOperationId())) return false;
+      if (!getConsumesList()
+          .equals(other.getConsumesList())) return false;
+      if (!getProducesList()
+          .equals(other.getProducesList())) return false;
+      if (!internalGetResponses().equals(
+          other.internalGetResponses())) return false;
+      if (!schemes_.equals(other.schemes_)) return false;
+      if (getDeprecated()
+          != other.getDeprecated()) return false;
+      if (!getSecurityList()
+          .equals(other.getSecurityList())) return false;
+      if (!internalGetExtensions().equals(
+          other.internalGetExtensions())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6016,17 +6337,17 @@ public final class Openapiv2 {
         operationId_ = "";
 
         consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableResponses().clear();
         schemes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000010);
         deprecated_ = false;
 
         if (securityBuilder_ == null) {
           security_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           securityBuilder_.clear();
         }
@@ -6058,8 +6379,7 @@ public final class Openapiv2 {
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation buildPartial() {
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Operation(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -6072,28 +6392,28 @@ public final class Openapiv2 {
           result.externalDocs_ = externalDocsBuilder_.build();
         }
         result.operationId_ = operationId_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           consumes_ = consumes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.consumes_ = consumes_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           produces_ = produces_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.produces_ = produces_;
         result.responses_ = internalGetResponses();
         result.responses_.makeImmutable();
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           schemes_ = java.util.Collections.unmodifiableList(schemes_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.schemes_ = schemes_;
         result.deprecated_ = deprecated_;
         if (securityBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             security_ = java.util.Collections.unmodifiableList(security_);
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.security_ = security_;
         } else {
@@ -6101,42 +6421,41 @@ public final class Openapiv2 {
         }
         result.extensions_ = internalGetExtensions();
         result.extensions_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6178,7 +6497,7 @@ public final class Openapiv2 {
         if (!other.consumes_.isEmpty()) {
           if (consumes_.isEmpty()) {
             consumes_ = other.consumes_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureConsumesIsMutable();
             consumes_.addAll(other.consumes_);
@@ -6188,7 +6507,7 @@ public final class Openapiv2 {
         if (!other.produces_.isEmpty()) {
           if (produces_.isEmpty()) {
             produces_ = other.produces_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureProducesIsMutable();
             produces_.addAll(other.produces_);
@@ -6200,7 +6519,7 @@ public final class Openapiv2 {
         if (!other.schemes_.isEmpty()) {
           if (schemes_.isEmpty()) {
             schemes_ = other.schemes_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureSchemesIsMutable();
             schemes_.addAll(other.schemes_);
@@ -6214,7 +6533,7 @@ public final class Openapiv2 {
           if (!other.security_.isEmpty()) {
             if (security_.isEmpty()) {
               security_ = other.security_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureSecurityIsMutable();
               security_.addAll(other.security_);
@@ -6227,7 +6546,7 @@ public final class Openapiv2 {
               securityBuilder_.dispose();
               securityBuilder_ = null;
               security_ = other.security_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000020);
               securityBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSecurityFieldBuilder() : null;
@@ -6270,7 +6589,7 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
           bitField0_ |= 0x00000001;
          }
@@ -6281,7 +6600,8 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -6293,7 +6613,8 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
@@ -6304,7 +6625,9 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
@@ -6315,7 +6638,9 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -6327,7 +6652,10 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -6345,7 +6673,9 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -6363,7 +6693,9 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -6379,7 +6711,8 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -6393,7 +6726,9 @@ public final class Openapiv2 {
        * grouping of operations by resources or any other qualifier.
        * </pre>
        *
-       * <code>repeated string tags = 1[json_name = "tags"];</code>
+       * <code>repeated string tags = 1 [json_name = "tags"];</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -6414,7 +6749,8 @@ public final class Openapiv2 {
        * swagger-ui, this field SHOULD be less than 120 characters.
        * </pre>
        *
-       * <code>string summary = 2[json_name = "summary"];</code>
+       * <code>string summary = 2 [json_name = "summary"];</code>
+       * @return The summary.
        */
       public java.lang.String getSummary() {
         java.lang.Object ref = summary_;
@@ -6434,7 +6770,8 @@ public final class Openapiv2 {
        * swagger-ui, this field SHOULD be less than 120 characters.
        * </pre>
        *
-       * <code>string summary = 2[json_name = "summary"];</code>
+       * <code>string summary = 2 [json_name = "summary"];</code>
+       * @return The bytes for summary.
        */
       public com.google.protobuf.ByteString
           getSummaryBytes() {
@@ -6455,7 +6792,9 @@ public final class Openapiv2 {
        * swagger-ui, this field SHOULD be less than 120 characters.
        * </pre>
        *
-       * <code>string summary = 2[json_name = "summary"];</code>
+       * <code>string summary = 2 [json_name = "summary"];</code>
+       * @param value The summary to set.
+       * @return This builder for chaining.
        */
       public Builder setSummary(
           java.lang.String value) {
@@ -6473,7 +6812,8 @@ public final class Openapiv2 {
        * swagger-ui, this field SHOULD be less than 120 characters.
        * </pre>
        *
-       * <code>string summary = 2[json_name = "summary"];</code>
+       * <code>string summary = 2 [json_name = "summary"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSummary() {
         
@@ -6487,7 +6827,9 @@ public final class Openapiv2 {
        * swagger-ui, this field SHOULD be less than 120 characters.
        * </pre>
        *
-       * <code>string summary = 2[json_name = "summary"];</code>
+       * <code>string summary = 2 [json_name = "summary"];</code>
+       * @param value The bytes for summary to set.
+       * @return This builder for chaining.
        */
       public Builder setSummaryBytes(
           com.google.protobuf.ByteString value) {
@@ -6508,7 +6850,8 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 3[json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -6528,7 +6871,8 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 3[json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -6549,7 +6893,9 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 3[json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -6567,7 +6913,8 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 3[json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -6581,7 +6928,9 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 3[json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -6595,7 +6944,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> externalDocsBuilder_;
       /**
@@ -6603,7 +6952,8 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
+       * @return Whether the externalDocs field is set.
        */
       public boolean hasExternalDocs() {
         return externalDocsBuilder_ != null || externalDocs_ != null;
@@ -6613,7 +6963,8 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
+       * @return The externalDocs.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -6627,7 +6978,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -6647,7 +6998,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder builderForValue) {
@@ -6665,7 +7016,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       public Builder mergeExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -6687,7 +7038,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       public Builder clearExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -6705,7 +7056,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder getExternalDocsBuilder() {
         
@@ -6717,7 +7068,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
         if (externalDocsBuilder_ != null) {
@@ -6732,7 +7083,7 @@ public final class Openapiv2 {
        * Additional external documentation for this operation.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 4 [json_name = "externalDocs"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> 
@@ -6757,7 +7108,8 @@ public final class Openapiv2 {
        * to follow common programming naming conventions.
        * </pre>
        *
-       * <code>string operation_id = 5[json_name = "operationId"];</code>
+       * <code>string operation_id = 5 [json_name = "operationId"];</code>
+       * @return The operationId.
        */
       public java.lang.String getOperationId() {
         java.lang.Object ref = operationId_;
@@ -6779,7 +7131,8 @@ public final class Openapiv2 {
        * to follow common programming naming conventions.
        * </pre>
        *
-       * <code>string operation_id = 5[json_name = "operationId"];</code>
+       * <code>string operation_id = 5 [json_name = "operationId"];</code>
+       * @return The bytes for operationId.
        */
       public com.google.protobuf.ByteString
           getOperationIdBytes() {
@@ -6802,7 +7155,9 @@ public final class Openapiv2 {
        * to follow common programming naming conventions.
        * </pre>
        *
-       * <code>string operation_id = 5[json_name = "operationId"];</code>
+       * <code>string operation_id = 5 [json_name = "operationId"];</code>
+       * @param value The operationId to set.
+       * @return This builder for chaining.
        */
       public Builder setOperationId(
           java.lang.String value) {
@@ -6822,7 +7177,8 @@ public final class Openapiv2 {
        * to follow common programming naming conventions.
        * </pre>
        *
-       * <code>string operation_id = 5[json_name = "operationId"];</code>
+       * <code>string operation_id = 5 [json_name = "operationId"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearOperationId() {
         
@@ -6838,7 +7194,9 @@ public final class Openapiv2 {
        * to follow common programming naming conventions.
        * </pre>
        *
-       * <code>string operation_id = 5[json_name = "operationId"];</code>
+       * <code>string operation_id = 5 [json_name = "operationId"];</code>
+       * @param value The bytes for operationId to set.
+       * @return This builder for chaining.
        */
       public Builder setOperationIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6854,9 +7212,9 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureConsumesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           consumes_ = new com.google.protobuf.LazyStringArrayList(consumes_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -6866,7 +7224,8 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @return A list containing the consumes.
        */
       public com.google.protobuf.ProtocolStringList
           getConsumesList() {
@@ -6879,7 +7238,8 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @return The count of consumes.
        */
       public int getConsumesCount() {
         return consumes_.size();
@@ -6891,7 +7251,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param index The index of the element to return.
+       * @return The consumes at the given index.
        */
       public java.lang.String getConsumes(int index) {
         return consumes_.get(index);
@@ -6903,7 +7265,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the consumes at the given index.
        */
       public com.google.protobuf.ByteString
           getConsumesBytes(int index) {
@@ -6916,7 +7280,10 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param index The index to set the value at.
+       * @param value The consumes to set.
+       * @return This builder for chaining.
        */
       public Builder setConsumes(
           int index, java.lang.String value) {
@@ -6935,7 +7302,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param value The consumes to add.
+       * @return This builder for chaining.
        */
       public Builder addConsumes(
           java.lang.String value) {
@@ -6954,7 +7323,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param values The consumes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllConsumes(
           java.lang.Iterable<java.lang.String> values) {
@@ -6971,11 +7342,12 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearConsumes() {
         consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6986,7 +7358,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string consumes = 6[json_name = "consumes"];</code>
+       * <code>repeated string consumes = 6 [json_name = "consumes"];</code>
+       * @param value The bytes of the consumes to add.
+       * @return This builder for chaining.
        */
       public Builder addConsumesBytes(
           com.google.protobuf.ByteString value) {
@@ -7002,9 +7376,9 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProducesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           produces_ = new com.google.protobuf.LazyStringArrayList(produces_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -7014,7 +7388,8 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @return A list containing the produces.
        */
       public com.google.protobuf.ProtocolStringList
           getProducesList() {
@@ -7027,7 +7402,8 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @return The count of produces.
        */
       public int getProducesCount() {
         return produces_.size();
@@ -7039,7 +7415,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param index The index of the element to return.
+       * @return The produces at the given index.
        */
       public java.lang.String getProduces(int index) {
         return produces_.get(index);
@@ -7051,7 +7429,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the produces at the given index.
        */
       public com.google.protobuf.ByteString
           getProducesBytes(int index) {
@@ -7064,7 +7444,10 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param index The index to set the value at.
+       * @param value The produces to set.
+       * @return This builder for chaining.
        */
       public Builder setProduces(
           int index, java.lang.String value) {
@@ -7083,7 +7466,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param value The produces to add.
+       * @return This builder for chaining.
        */
       public Builder addProduces(
           java.lang.String value) {
@@ -7102,7 +7487,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param values The produces to add.
+       * @return This builder for chaining.
        */
       public Builder addAllProduces(
           java.lang.Iterable<java.lang.String> values) {
@@ -7119,11 +7506,12 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearProduces() {
         produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -7134,7 +7522,9 @@ public final class Openapiv2 {
        * global definition. Value MUST be as described under Mime Types.
        * </pre>
        *
-       * <code>repeated string produces = 7[json_name = "produces"];</code>
+       * <code>repeated string produces = 7 [json_name = "produces"];</code>
+       * @param value The bytes of the produces to add.
+       * @return This builder for chaining.
        */
       public Builder addProducesBytes(
           com.google.protobuf.ByteString value) {
@@ -7180,17 +7570,19 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
 
+      @java.lang.Override
       public boolean containsResponses(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetResponses().getMap().containsKey(key);
       }
       /**
        * Use {@link #getResponsesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponses() {
         return getResponsesMap();
@@ -7201,8 +7593,9 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> getResponsesMap() {
         return internalGetResponses().getMap();
@@ -7213,13 +7606,14 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrDefault(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
             internalGetResponses().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7230,12 +7624,13 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response getResponsesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response> map =
             internalGetResponses().getMap();
         if (!map.containsKey(key)) {
@@ -7255,12 +7650,12 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
 
       public Builder removeResponses(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableResponses().getMutableMap()
             .remove(key);
         return this;
@@ -7279,13 +7674,16 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
       public Builder putResponses(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableResponses().getMutableMap()
             .put(key, value);
         return this;
@@ -7296,7 +7694,7 @@ public final class Openapiv2 {
        * operation.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9[json_name = "responses"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Response&gt; responses = 9 [json_name = "responses"];</code>
        */
 
       public Builder putAllResponses(
@@ -7309,9 +7707,9 @@ public final class Openapiv2 {
       private java.util.List<java.lang.Integer> schemes_ =
         java.util.Collections.emptyList();
       private void ensureSchemesIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           schemes_ = new java.util.ArrayList<java.lang.Integer>(schemes_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000010;
         }
       }
       /**
@@ -7321,7 +7719,8 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @return A list containing the schemes.
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> getSchemesList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -7334,7 +7733,8 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @return The count of schemes.
        */
       public int getSchemesCount() {
         return schemes_.size();
@@ -7346,7 +7746,9 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param index The index of the element to return.
+       * @return The schemes at the given index.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme getSchemes(int index) {
         return schemes_converter_.convert(schemes_.get(index));
@@ -7358,7 +7760,10 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param index The index to set the value at.
+       * @param value The schemes to set.
+       * @return This builder for chaining.
        */
       public Builder setSchemes(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme value) {
@@ -7377,7 +7782,9 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param value The schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addSchemes(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme value) {
         if (value == null) {
@@ -7395,7 +7802,9 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param values The schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSchemes(
           java.lang.Iterable<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scheme> values) {
@@ -7413,11 +7822,12 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearSchemes() {
         schemes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -7428,7 +7838,8 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @return A list containing the enum numeric values on the wire for schemes.
        */
       public java.util.List<java.lang.Integer>
       getSchemesValueList() {
@@ -7441,7 +7852,9 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of schemes at the given index.
        */
       public int getSchemesValue(int index) {
         return schemes_.get(index);
@@ -7453,7 +7866,10 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of schemes at the given index.
+       * @return This builder for chaining.
        */
       public Builder setSchemesValue(
           int index, int value) {
@@ -7469,7 +7885,9 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param value The enum numeric value on the wire for schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addSchemesValue(int value) {
         ensureSchemesIsMutable();
@@ -7484,7 +7902,9 @@ public final class Openapiv2 {
        * schemes definition.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10[json_name = "schemes"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Scheme schemes = 10 [json_name = "schemes"];</code>
+       * @param values The enum numeric values on the wire for schemes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllSchemesValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -7503,8 +7923,10 @@ public final class Openapiv2 {
        * should be refrained. Default value is false.
        * </pre>
        *
-       * <code>bool deprecated = 11[json_name = "deprecated"];</code>
+       * <code>bool deprecated = 11 [json_name = "deprecated"];</code>
+       * @return The deprecated.
        */
+      @java.lang.Override
       public boolean getDeprecated() {
         return deprecated_;
       }
@@ -7514,7 +7936,9 @@ public final class Openapiv2 {
        * should be refrained. Default value is false.
        * </pre>
        *
-       * <code>bool deprecated = 11[json_name = "deprecated"];</code>
+       * <code>bool deprecated = 11 [json_name = "deprecated"];</code>
+       * @param value The deprecated to set.
+       * @return This builder for chaining.
        */
       public Builder setDeprecated(boolean value) {
         
@@ -7528,7 +7952,8 @@ public final class Openapiv2 {
        * should be refrained. Default value is false.
        * </pre>
        *
-       * <code>bool deprecated = 11[json_name = "deprecated"];</code>
+       * <code>bool deprecated = 11 [json_name = "deprecated"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeprecated() {
         
@@ -7540,9 +7965,9 @@ public final class Openapiv2 {
       private java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> security_ =
         java.util.Collections.emptyList();
       private void ensureSecurityIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           security_ = new java.util.ArrayList<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement>(security_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -7558,7 +7983,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> getSecurityList() {
         if (securityBuilder_ == null) {
@@ -7576,7 +8001,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public int getSecurityCount() {
         if (securityBuilder_ == null) {
@@ -7594,7 +8019,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement getSecurity(int index) {
         if (securityBuilder_ == null) {
@@ -7612,7 +8037,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder setSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement value) {
@@ -7637,7 +8062,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder setSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder builderForValue) {
@@ -7659,7 +8084,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement value) {
         if (securityBuilder_ == null) {
@@ -7683,7 +8108,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement value) {
@@ -7708,7 +8133,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder builderForValue) {
@@ -7730,7 +8155,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addSecurity(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder builderForValue) {
@@ -7752,7 +8177,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder addAllSecurity(
           java.lang.Iterable<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement> values) {
@@ -7775,12 +8200,12 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder clearSecurity() {
         if (securityBuilder_ == null) {
           security_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           securityBuilder_.clear();
@@ -7796,7 +8221,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public Builder removeSecurity(int index) {
         if (securityBuilder_ == null) {
@@ -7817,7 +8242,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder getSecurityBuilder(
           int index) {
@@ -7832,7 +8257,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder getSecurityOrBuilder(
           int index) {
@@ -7850,7 +8275,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public java.util.List<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder> 
            getSecurityOrBuilderList() {
@@ -7869,7 +8294,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder addSecurityBuilder() {
         return getSecurityFieldBuilder().addBuilder(
@@ -7884,7 +8309,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder addSecurityBuilder(
           int index) {
@@ -7900,7 +8325,7 @@ public final class Openapiv2 {
        * security declaration, an empty array can be used.
        * </pre>
        *
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12[json_name = "security"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement security = 12 [json_name = "security"];</code>
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder> 
            getSecurityBuilderList() {
@@ -7913,7 +8338,7 @@ public final class Openapiv2 {
           securityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirementOrBuilder>(
                   security_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           security_ = null;
@@ -7948,47 +8373,52 @@ public final class Openapiv2 {
         return internalGetExtensions().getMap().size();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
 
+      @java.lang.Override
       public boolean containsExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetExtensions().getMap().containsKey(key);
       }
       /**
        * Use {@link #getExtensionsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
         return getExtensionsMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
         return internalGetExtensions().getMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrDefault(
           java.lang.String key,
           com.google.protobuf.Value defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         if (!map.containsKey(key)) {
@@ -8003,12 +8433,12 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
 
       public Builder removeExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableExtensions().getMutableMap()
             .remove(key);
         return this;
@@ -8022,19 +8452,22 @@ public final class Openapiv2 {
         return internalGetMutableExtensions().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
       public Builder putExtensions(
           java.lang.String key,
           com.google.protobuf.Value value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExtensions().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
        */
 
       public Builder putAllExtensions(
@@ -8046,7 +8479,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8105,7 +8538,8 @@ public final class Openapiv2 {
      * `Description` is a short description of the header.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -8113,7 +8547,8 @@ public final class Openapiv2 {
      * `Description` is a short description of the header.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -8123,7 +8558,8 @@ public final class Openapiv2 {
      * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
      * </pre>
      *
-     * <code>string type = 2[json_name = "type"];</code>
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -8131,7 +8567,8 @@ public final class Openapiv2 {
      * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
      * </pre>
      *
-     * <code>string type = 2[json_name = "type"];</code>
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -8141,7 +8578,8 @@ public final class Openapiv2 {
      * `Format` The extending format for the previously mentioned type.
      * </pre>
      *
-     * <code>string format = 3[json_name = "format"];</code>
+     * <code>string format = 3 [json_name = "format"];</code>
+     * @return The format.
      */
     java.lang.String getFormat();
     /**
@@ -8149,7 +8587,8 @@ public final class Openapiv2 {
      * `Format` The extending format for the previously mentioned type.
      * </pre>
      *
-     * <code>string format = 3[json_name = "format"];</code>
+     * <code>string format = 3 [json_name = "format"];</code>
+     * @return The bytes for format.
      */
     com.google.protobuf.ByteString
         getFormatBytes();
@@ -8161,7 +8600,8 @@ public final class Openapiv2 {
      * Unlike JSON Schema this value MUST conform to the defined type for the header.
      * </pre>
      *
-     * <code>string default = 6[json_name = "default"];</code>
+     * <code>string default = 6 [json_name = "default"];</code>
+     * @return The default.
      */
     java.lang.String getDefault();
     /**
@@ -8171,7 +8611,8 @@ public final class Openapiv2 {
      * Unlike JSON Schema this value MUST conform to the defined type for the header.
      * </pre>
      *
-     * <code>string default = 6[json_name = "default"];</code>
+     * <code>string default = 6 [json_name = "default"];</code>
+     * @return The bytes for default.
      */
     com.google.protobuf.ByteString
         getDefaultBytes();
@@ -8181,7 +8622,8 @@ public final class Openapiv2 {
      * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
      * </pre>
      *
-     * <code>string pattern = 13[json_name = "pattern"];</code>
+     * <code>string pattern = 13 [json_name = "pattern"];</code>
+     * @return The pattern.
      */
     java.lang.String getPattern();
     /**
@@ -8189,7 +8631,8 @@ public final class Openapiv2 {
      * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
      * </pre>
      *
-     * <code>string pattern = 13[json_name = "pattern"];</code>
+     * <code>string pattern = 13 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
      */
     com.google.protobuf.ByteString
         getPatternBytes();
@@ -8202,7 +8645,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Header}
    */
-  public  static final class Header extends
+  public static final class Header extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Header)
       HeaderOrBuilder {
@@ -8220,6 +8663,13 @@ public final class Openapiv2 {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Header();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8232,7 +8682,6 @@ public final class Openapiv2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8274,7 +8723,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8284,6 +8733,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8312,8 +8763,10 @@ public final class Openapiv2 {
      * `Description` is a short description of the header.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -8331,8 +8784,10 @@ public final class Openapiv2 {
      * `Description` is a short description of the header.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -8354,8 +8809,10 @@ public final class Openapiv2 {
      * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
      * </pre>
      *
-     * <code>string type = 2[json_name = "type"];</code>
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -8373,8 +8830,10 @@ public final class Openapiv2 {
      * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
      * </pre>
      *
-     * <code>string type = 2[json_name = "type"];</code>
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -8396,8 +8855,10 @@ public final class Openapiv2 {
      * `Format` The extending format for the previously mentioned type.
      * </pre>
      *
-     * <code>string format = 3[json_name = "format"];</code>
+     * <code>string format = 3 [json_name = "format"];</code>
+     * @return The format.
      */
+    @java.lang.Override
     public java.lang.String getFormat() {
       java.lang.Object ref = format_;
       if (ref instanceof java.lang.String) {
@@ -8415,8 +8876,10 @@ public final class Openapiv2 {
      * `Format` The extending format for the previously mentioned type.
      * </pre>
      *
-     * <code>string format = 3[json_name = "format"];</code>
+     * <code>string format = 3 [json_name = "format"];</code>
+     * @return The bytes for format.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatBytes() {
       java.lang.Object ref = format_;
@@ -8440,8 +8903,10 @@ public final class Openapiv2 {
      * Unlike JSON Schema this value MUST conform to the defined type for the header.
      * </pre>
      *
-     * <code>string default = 6[json_name = "default"];</code>
+     * <code>string default = 6 [json_name = "default"];</code>
+     * @return The default.
      */
+    @java.lang.Override
     public java.lang.String getDefault() {
       java.lang.Object ref = default_;
       if (ref instanceof java.lang.String) {
@@ -8461,8 +8926,10 @@ public final class Openapiv2 {
      * Unlike JSON Schema this value MUST conform to the defined type for the header.
      * </pre>
      *
-     * <code>string default = 6[json_name = "default"];</code>
+     * <code>string default = 6 [json_name = "default"];</code>
+     * @return The bytes for default.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDefaultBytes() {
       java.lang.Object ref = default_;
@@ -8484,8 +8951,10 @@ public final class Openapiv2 {
      * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
      * </pre>
      *
-     * <code>string pattern = 13[json_name = "pattern"];</code>
+     * <code>string pattern = 13 [json_name = "pattern"];</code>
+     * @return The pattern.
      */
+    @java.lang.Override
     public java.lang.String getPattern() {
       java.lang.Object ref = pattern_;
       if (ref instanceof java.lang.String) {
@@ -8503,8 +8972,10 @@ public final class Openapiv2 {
      * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
      * </pre>
      *
-     * <code>string pattern = 13[json_name = "pattern"];</code>
+     * <code>string pattern = 13 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPatternBytes() {
       java.lang.Object ref = pattern_;
@@ -8533,19 +9004,19 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
-      if (!getFormatBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, format_);
       }
-      if (!getDefaultBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, default_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, pattern_);
       }
       unknownFields.writeTo(output);
@@ -8557,19 +9028,19 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
-      if (!getTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
-      if (!getFormatBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, format_);
       }
-      if (!getDefaultBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, default_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, pattern_);
       }
       size += unknownFields.getSerializedSize();
@@ -8587,19 +9058,18 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header) obj;
 
-      boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getFormat()
-          .equals(other.getFormat());
-      result = result && getDefault()
-          .equals(other.getDefault());
-      result = result && getPattern()
-          .equals(other.getPattern());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getFormat()
+          .equals(other.getFormat())) return false;
+      if (!getDefault()
+          .equals(other.getDefault())) return false;
+      if (!getPattern()
+          .equals(other.getPattern())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8804,35 +9274,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8901,7 +9371,8 @@ public final class Openapiv2 {
        * `Description` is a short description of the header.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8920,7 +9391,8 @@ public final class Openapiv2 {
        * `Description` is a short description of the header.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8940,7 +9412,9 @@ public final class Openapiv2 {
        * `Description` is a short description of the header.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8957,7 +9431,8 @@ public final class Openapiv2 {
        * `Description` is a short description of the header.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -8970,7 +9445,9 @@ public final class Openapiv2 {
        * `Description` is a short description of the header.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8990,7 +9467,8 @@ public final class Openapiv2 {
        * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
        * </pre>
        *
-       * <code>string type = 2[json_name = "type"];</code>
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -9009,7 +9487,8 @@ public final class Openapiv2 {
        * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
        * </pre>
        *
-       * <code>string type = 2[json_name = "type"];</code>
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -9029,7 +9508,9 @@ public final class Openapiv2 {
        * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
        * </pre>
        *
-       * <code>string type = 2[json_name = "type"];</code>
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -9046,7 +9527,8 @@ public final class Openapiv2 {
        * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
        * </pre>
        *
-       * <code>string type = 2[json_name = "type"];</code>
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -9059,7 +9541,9 @@ public final class Openapiv2 {
        * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
        * </pre>
        *
-       * <code>string type = 2[json_name = "type"];</code>
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -9079,7 +9563,8 @@ public final class Openapiv2 {
        * `Format` The extending format for the previously mentioned type.
        * </pre>
        *
-       * <code>string format = 3[json_name = "format"];</code>
+       * <code>string format = 3 [json_name = "format"];</code>
+       * @return The format.
        */
       public java.lang.String getFormat() {
         java.lang.Object ref = format_;
@@ -9098,7 +9583,8 @@ public final class Openapiv2 {
        * `Format` The extending format for the previously mentioned type.
        * </pre>
        *
-       * <code>string format = 3[json_name = "format"];</code>
+       * <code>string format = 3 [json_name = "format"];</code>
+       * @return The bytes for format.
        */
       public com.google.protobuf.ByteString
           getFormatBytes() {
@@ -9118,7 +9604,9 @@ public final class Openapiv2 {
        * `Format` The extending format for the previously mentioned type.
        * </pre>
        *
-       * <code>string format = 3[json_name = "format"];</code>
+       * <code>string format = 3 [json_name = "format"];</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormat(
           java.lang.String value) {
@@ -9135,7 +9623,8 @@ public final class Openapiv2 {
        * `Format` The extending format for the previously mentioned type.
        * </pre>
        *
-       * <code>string format = 3[json_name = "format"];</code>
+       * <code>string format = 3 [json_name = "format"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormat() {
         
@@ -9148,7 +9637,9 @@ public final class Openapiv2 {
        * `Format` The extending format for the previously mentioned type.
        * </pre>
        *
-       * <code>string format = 3[json_name = "format"];</code>
+       * <code>string format = 3 [json_name = "format"];</code>
+       * @param value The bytes for format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatBytes(
           com.google.protobuf.ByteString value) {
@@ -9170,7 +9661,8 @@ public final class Openapiv2 {
        * Unlike JSON Schema this value MUST conform to the defined type for the header.
        * </pre>
        *
-       * <code>string default = 6[json_name = "default"];</code>
+       * <code>string default = 6 [json_name = "default"];</code>
+       * @return The default.
        */
       public java.lang.String getDefault() {
         java.lang.Object ref = default_;
@@ -9191,7 +9683,8 @@ public final class Openapiv2 {
        * Unlike JSON Schema this value MUST conform to the defined type for the header.
        * </pre>
        *
-       * <code>string default = 6[json_name = "default"];</code>
+       * <code>string default = 6 [json_name = "default"];</code>
+       * @return The bytes for default.
        */
       public com.google.protobuf.ByteString
           getDefaultBytes() {
@@ -9213,7 +9706,9 @@ public final class Openapiv2 {
        * Unlike JSON Schema this value MUST conform to the defined type for the header.
        * </pre>
        *
-       * <code>string default = 6[json_name = "default"];</code>
+       * <code>string default = 6 [json_name = "default"];</code>
+       * @param value The default to set.
+       * @return This builder for chaining.
        */
       public Builder setDefault(
           java.lang.String value) {
@@ -9232,7 +9727,8 @@ public final class Openapiv2 {
        * Unlike JSON Schema this value MUST conform to the defined type for the header.
        * </pre>
        *
-       * <code>string default = 6[json_name = "default"];</code>
+       * <code>string default = 6 [json_name = "default"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefault() {
         
@@ -9247,7 +9743,9 @@ public final class Openapiv2 {
        * Unlike JSON Schema this value MUST conform to the defined type for the header.
        * </pre>
        *
-       * <code>string default = 6[json_name = "default"];</code>
+       * <code>string default = 6 [json_name = "default"];</code>
+       * @param value The bytes for default to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultBytes(
           com.google.protobuf.ByteString value) {
@@ -9267,7 +9765,8 @@ public final class Openapiv2 {
        * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
        * </pre>
        *
-       * <code>string pattern = 13[json_name = "pattern"];</code>
+       * <code>string pattern = 13 [json_name = "pattern"];</code>
+       * @return The pattern.
        */
       public java.lang.String getPattern() {
         java.lang.Object ref = pattern_;
@@ -9286,7 +9785,8 @@ public final class Openapiv2 {
        * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
        * </pre>
        *
-       * <code>string pattern = 13[json_name = "pattern"];</code>
+       * <code>string pattern = 13 [json_name = "pattern"];</code>
+       * @return The bytes for pattern.
        */
       public com.google.protobuf.ByteString
           getPatternBytes() {
@@ -9306,7 +9806,9 @@ public final class Openapiv2 {
        * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
        * </pre>
        *
-       * <code>string pattern = 13[json_name = "pattern"];</code>
+       * <code>string pattern = 13 [json_name = "pattern"];</code>
+       * @param value The pattern to set.
+       * @return This builder for chaining.
        */
       public Builder setPattern(
           java.lang.String value) {
@@ -9323,7 +9825,8 @@ public final class Openapiv2 {
        * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
        * </pre>
        *
-       * <code>string pattern = 13[json_name = "pattern"];</code>
+       * <code>string pattern = 13 [json_name = "pattern"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPattern() {
         
@@ -9336,7 +9839,9 @@ public final class Openapiv2 {
        * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
        * </pre>
        *
-       * <code>string pattern = 13[json_name = "pattern"];</code>
+       * <code>string pattern = 13 [json_name = "pattern"];</code>
+       * @param value The bytes for pattern to set.
+       * @return This builder for chaining.
        */
       public Builder setPatternBytes(
           com.google.protobuf.ByteString value) {
@@ -9352,7 +9857,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9412,7 +9917,8 @@ public final class Openapiv2 {
      * GFM syntax can be used for rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -9421,7 +9927,8 @@ public final class Openapiv2 {
      * GFM syntax can be used for rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -9432,7 +9939,8 @@ public final class Openapiv2 {
      * If `Schema` is not provided, it means there is no content to the response.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
+     * @return Whether the schema field is set.
      */
     boolean hasSchema();
     /**
@@ -9441,7 +9949,8 @@ public final class Openapiv2 {
      * If `Schema` is not provided, it means there is no content to the response.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
+     * @return The schema.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema getSchema();
     /**
@@ -9450,7 +9959,7 @@ public final class Openapiv2 {
      * If `Schema` is not provided, it means there is no content to the response.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder getSchemaOrBuilder();
 
@@ -9461,7 +9970,7 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
     int getHeadersCount();
     /**
@@ -9471,7 +9980,7 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
     boolean containsHeaders(
         java.lang.String key);
@@ -9488,7 +9997,7 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
     java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
     getHeadersMap();
@@ -9499,12 +10008,14 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
 
-    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
+    /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
         java.lang.String key,
-        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue);
+        /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue);
     /**
      * <pre>
      * `Headers` A list of headers that are sent with the response.
@@ -9512,7 +10023,7 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
 
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrThrow(
@@ -9524,7 +10035,7 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
     int getExamplesCount();
     /**
@@ -9533,7 +10044,7 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
     boolean containsExamples(
         java.lang.String key);
@@ -9549,7 +10060,7 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getExamplesMap();
@@ -9559,30 +10070,32 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
 
-    java.lang.String getExamplesOrDefault(
+    /* nullable */
+java.lang.String getExamplesOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * `Examples` gives per-mimetype response examples.
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
 
     java.lang.String getExamplesOrThrow(
         java.lang.String key);
 
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     int getExtensionsCount();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     boolean containsExtensions(
         java.lang.String key);
@@ -9593,19 +10106,21 @@ public final class Openapiv2 {
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensions();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensionsMap();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
 
-    com.google.protobuf.Value getExtensionsOrDefault(
+    /* nullable */
+com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
-        com.google.protobuf.Value defaultValue);
+        /* nullable */
+com.google.protobuf.Value defaultValue);
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
 
     com.google.protobuf.Value getExtensionsOrThrow(
@@ -9619,7 +10134,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Response}
    */
-  public  static final class Response extends
+  public static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Response)
       ResponseOrBuilder {
@@ -9630,6 +10145,13 @@ public final class Openapiv2 {
     }
     private Response() {
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Response();
     }
 
     @java.lang.Override
@@ -9676,10 +10198,10 @@ public final class Openapiv2 {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 headers_ = com.google.protobuf.MapField.newMapField(
                     HeadersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
               headers__ = input.readMessage(
@@ -9689,10 +10211,10 @@ public final class Openapiv2 {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 examples_ = com.google.protobuf.MapField.newMapField(
                     ExamplesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               examples__ = input.readMessage(
@@ -9702,10 +10224,10 @@ public final class Openapiv2 {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 extensions_ = com.google.protobuf.MapField.newMapField(
                     ExtensionsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
               extensions__ = input.readMessage(
@@ -9715,7 +10237,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9725,6 +10247,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9762,7 +10286,6 @@ public final class Openapiv2 {
               grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object description_;
     /**
@@ -9771,8 +10294,10 @@ public final class Openapiv2 {
      * GFM syntax can be used for rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -9791,8 +10316,10 @@ public final class Openapiv2 {
      * GFM syntax can be used for rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -9815,8 +10342,10 @@ public final class Openapiv2 {
      * If `Schema` is not provided, it means there is no content to the response.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
+     * @return Whether the schema field is set.
      */
+    @java.lang.Override
     public boolean hasSchema() {
       return schema_ != null;
     }
@@ -9826,8 +10355,10 @@ public final class Openapiv2 {
      * If `Schema` is not provided, it means there is no content to the response.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
+     * @return The schema.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema getSchema() {
       return schema_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema.getDefaultInstance() : schema_;
     }
@@ -9837,8 +10368,9 @@ public final class Openapiv2 {
      * If `Schema` is not provided, it means there is no content to the response.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder getSchemaOrBuilder() {
       return getSchema();
     }
@@ -9876,17 +10408,19 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
 
+    @java.lang.Override
     public boolean containsHeaders(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetHeaders().getMap().containsKey(key);
     }
     /**
      * Use {@link #getHeadersMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeaders() {
       return getHeadersMap();
@@ -9898,8 +10432,9 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeadersMap() {
       return internalGetHeaders().getMap();
@@ -9911,13 +10446,14 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
         java.lang.String key,
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
           internalGetHeaders().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -9929,12 +10465,13 @@ public final class Openapiv2 {
      * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
           internalGetHeaders().getMap();
       if (!map.containsKey(key)) {
@@ -9975,17 +10512,19 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
 
+    @java.lang.Override
     public boolean containsExamples(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetExamples().getMap().containsKey(key);
     }
     /**
      * Use {@link #getExamplesMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getExamples() {
       return getExamplesMap();
@@ -9996,8 +10535,9 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getExamplesMap() {
       return internalGetExamples().getMap();
@@ -10008,13 +10548,14 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
+    @java.lang.Override
 
     public java.lang.String getExamplesOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExamples().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10025,12 +10566,13 @@ public final class Openapiv2 {
      * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
      * </pre>
      *
-     * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+     * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
      */
+    @java.lang.Override
 
     public java.lang.String getExamplesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExamples().getMap();
       if (!map.containsKey(key)) {
@@ -10066,47 +10608,52 @@ public final class Openapiv2 {
       return internalGetExtensions().getMap().size();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
 
+    @java.lang.Override
     public boolean containsExtensions(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetExtensions().getMap().containsKey(key);
     }
     /**
      * Use {@link #getExtensionsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
       return getExtensionsMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
       return internalGetExtensions().getMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
         com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       if (!map.containsKey(key)) {
@@ -10129,7 +10676,7 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
       if (schema_ != null) {
@@ -10162,7 +10709,7 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
       if (schema_ != null) {
@@ -10214,22 +10761,21 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response) obj;
 
-      boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasSchema() == other.hasSchema());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasSchema() != other.hasSchema()) return false;
       if (hasSchema()) {
-        result = result && getSchema()
-            .equals(other.getSchema());
+        if (!getSchema()
+            .equals(other.getSchema())) return false;
       }
-      result = result && internalGetHeaders().equals(
-          other.internalGetHeaders());
-      result = result && internalGetExamples().equals(
-          other.internalGetExamples());
-      result = result && internalGetExtensions().equals(
-          other.internalGetExtensions());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetHeaders().equals(
+          other.internalGetHeaders())) return false;
+      if (!internalGetExamples().equals(
+          other.internalGetExamples())) return false;
+      if (!internalGetExtensions().equals(
+          other.internalGetExtensions())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10463,7 +11009,6 @@ public final class Openapiv2 {
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response buildPartial() {
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Response(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.description_ = description_;
         if (schemaBuilder_ == null) {
           result.schema_ = schema_;
@@ -10476,42 +11021,41 @@ public final class Openapiv2 {
         result.examples_.makeImmutable();
         result.extensions_ = internalGetExtensions();
         result.extensions_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10575,7 +11119,8 @@ public final class Openapiv2 {
        * GFM syntax can be used for rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -10595,7 +11140,8 @@ public final class Openapiv2 {
        * GFM syntax can be used for rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -10616,7 +11162,9 @@ public final class Openapiv2 {
        * GFM syntax can be used for rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -10634,7 +11182,8 @@ public final class Openapiv2 {
        * GFM syntax can be used for rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -10648,7 +11197,9 @@ public final class Openapiv2 {
        * GFM syntax can be used for rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -10662,7 +11213,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema schema_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema schema_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder> schemaBuilder_;
       /**
@@ -10671,7 +11222,8 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
+       * @return Whether the schema field is set.
        */
       public boolean hasSchema() {
         return schemaBuilder_ != null || schema_ != null;
@@ -10682,7 +11234,8 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
+       * @return The schema.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema getSchema() {
         if (schemaBuilder_ == null) {
@@ -10697,7 +11250,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       public Builder setSchema(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema value) {
         if (schemaBuilder_ == null) {
@@ -10718,7 +11271,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       public Builder setSchema(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema.Builder builderForValue) {
@@ -10737,7 +11290,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       public Builder mergeSchema(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema value) {
         if (schemaBuilder_ == null) {
@@ -10760,7 +11313,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       public Builder clearSchema() {
         if (schemaBuilder_ == null) {
@@ -10779,7 +11332,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema.Builder getSchemaBuilder() {
         
@@ -10792,7 +11345,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder getSchemaOrBuilder() {
         if (schemaBuilder_ != null) {
@@ -10808,7 +11361,7 @@ public final class Openapiv2 {
        * If `Schema` is not provided, it means there is no content to the response.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2[json_name = "schema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2 [json_name = "schema"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder> 
@@ -10857,17 +11410,19 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
 
+      @java.lang.Override
       public boolean containsHeaders(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetHeaders().getMap().containsKey(key);
       }
       /**
        * Use {@link #getHeadersMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeaders() {
         return getHeadersMap();
@@ -10879,8 +11434,9 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeadersMap() {
         return internalGetHeaders().getMap();
@@ -10892,13 +11448,14 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
             internalGetHeaders().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10910,12 +11467,13 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
             internalGetHeaders().getMap();
         if (!map.containsKey(key)) {
@@ -10936,12 +11494,12 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
 
       public Builder removeHeaders(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableHeaders().getMutableMap()
             .remove(key);
         return this;
@@ -10961,13 +11519,16 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
       public Builder putHeaders(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableHeaders().getMutableMap()
             .put(key, value);
         return this;
@@ -10979,7 +11540,7 @@ public final class Openapiv2 {
        * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3[json_name = "headers"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3 [json_name = "headers"];</code>
        */
 
       public Builder putAllHeaders(
@@ -11021,17 +11582,19 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
 
+      @java.lang.Override
       public boolean containsExamples(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetExamples().getMap().containsKey(key);
       }
       /**
        * Use {@link #getExamplesMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getExamples() {
         return getExamplesMap();
@@ -11042,8 +11605,9 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getExamplesMap() {
         return internalGetExamples().getMap();
@@ -11054,13 +11618,14 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
+      @java.lang.Override
 
       public java.lang.String getExamplesOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExamples().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11071,12 +11636,13 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
+      @java.lang.Override
 
       public java.lang.String getExamplesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExamples().getMap();
         if (!map.containsKey(key)) {
@@ -11096,12 +11662,12 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
 
       public Builder removeExamples(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableExamples().getMutableMap()
             .remove(key);
         return this;
@@ -11120,13 +11686,16 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
       public Builder putExamples(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExamples().getMutableMap()
             .put(key, value);
         return this;
@@ -11137,7 +11706,7 @@ public final class Openapiv2 {
        * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#example-object
        * </pre>
        *
-       * <code>map&lt;string, string&gt; examples = 4[json_name = "examples"];</code>
+       * <code>map&lt;string, string&gt; examples = 4 [json_name = "examples"];</code>
        */
 
       public Builder putAllExamples(
@@ -11174,47 +11743,52 @@ public final class Openapiv2 {
         return internalGetExtensions().getMap().size();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
 
+      @java.lang.Override
       public boolean containsExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetExtensions().getMap().containsKey(key);
       }
       /**
        * Use {@link #getExtensionsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
         return getExtensionsMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
         return internalGetExtensions().getMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrDefault(
           java.lang.String key,
           com.google.protobuf.Value defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         if (!map.containsKey(key)) {
@@ -11229,12 +11803,12 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
 
       public Builder removeExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableExtensions().getMutableMap()
             .remove(key);
         return this;
@@ -11248,19 +11822,22 @@ public final class Openapiv2 {
         return internalGetMutableExtensions().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
       public Builder putExtensions(
           java.lang.String key,
           com.google.protobuf.Value value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExtensions().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
        */
 
       public Builder putAllExtensions(
@@ -11272,7 +11849,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11331,7 +11908,8 @@ public final class Openapiv2 {
      * The title of the application.
      * </pre>
      *
-     * <code>string title = 1[json_name = "title"];</code>
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
      */
     java.lang.String getTitle();
     /**
@@ -11339,7 +11917,8 @@ public final class Openapiv2 {
      * The title of the application.
      * </pre>
      *
-     * <code>string title = 1[json_name = "title"];</code>
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
     com.google.protobuf.ByteString
         getTitleBytes();
@@ -11350,7 +11929,8 @@ public final class Openapiv2 {
      * text representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -11359,7 +11939,8 @@ public final class Openapiv2 {
      * text representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -11369,7 +11950,8 @@ public final class Openapiv2 {
      * The Terms of Service for the API.
      * </pre>
      *
-     * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+     * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+     * @return The termsOfService.
      */
     java.lang.String getTermsOfService();
     /**
@@ -11377,7 +11959,8 @@ public final class Openapiv2 {
      * The Terms of Service for the API.
      * </pre>
      *
-     * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+     * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+     * @return The bytes for termsOfService.
      */
     com.google.protobuf.ByteString
         getTermsOfServiceBytes();
@@ -11387,7 +11970,8 @@ public final class Openapiv2 {
      * The contact information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
+     * @return Whether the contact field is set.
      */
     boolean hasContact();
     /**
@@ -11395,7 +11979,8 @@ public final class Openapiv2 {
      * The contact information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
+     * @return The contact.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact getContact();
     /**
@@ -11403,7 +11988,7 @@ public final class Openapiv2 {
      * The contact information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ContactOrBuilder getContactOrBuilder();
 
@@ -11412,7 +11997,8 @@ public final class Openapiv2 {
      * The license information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
+     * @return Whether the license field is set.
      */
     boolean hasLicense();
     /**
@@ -11420,7 +12006,8 @@ public final class Openapiv2 {
      * The license information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
+     * @return The license.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License getLicense();
     /**
@@ -11428,7 +12015,7 @@ public final class Openapiv2 {
      * The license information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.LicenseOrBuilder getLicenseOrBuilder();
 
@@ -11438,7 +12025,8 @@ public final class Openapiv2 {
      * with the specification version).
      * </pre>
      *
-     * <code>string version = 6[json_name = "version"];</code>
+     * <code>string version = 6 [json_name = "version"];</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
@@ -11447,17 +12035,18 @@ public final class Openapiv2 {
      * with the specification version).
      * </pre>
      *
-     * <code>string version = 6[json_name = "version"];</code>
+     * <code>string version = 6 [json_name = "version"];</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
     int getExtensionsCount();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
     boolean containsExtensions(
         java.lang.String key);
@@ -11468,19 +12057,21 @@ public final class Openapiv2 {
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensions();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensionsMap();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
 
-    com.google.protobuf.Value getExtensionsOrDefault(
+    /* nullable */
+com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
-        com.google.protobuf.Value defaultValue);
+        /* nullable */
+com.google.protobuf.Value defaultValue);
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
 
     com.google.protobuf.Value getExtensionsOrThrow(
@@ -11512,7 +12103,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Info}
    */
-  public  static final class Info extends
+  public static final class Info extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Info)
       InfoOrBuilder {
@@ -11526,6 +12117,13 @@ public final class Openapiv2 {
       description_ = "";
       termsOfService_ = "";
       version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Info();
     }
 
     @java.lang.Override
@@ -11603,10 +12201,10 @@ public final class Openapiv2 {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 extensions_ = com.google.protobuf.MapField.newMapField(
                     ExtensionsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
               extensions__ = input.readMessage(
@@ -11616,7 +12214,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11626,6 +12224,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11659,7 +12259,6 @@ public final class Openapiv2 {
               grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     private volatile java.lang.Object title_;
     /**
@@ -11667,8 +12266,10 @@ public final class Openapiv2 {
      * The title of the application.
      * </pre>
      *
-     * <code>string title = 1[json_name = "title"];</code>
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
      */
+    @java.lang.Override
     public java.lang.String getTitle() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
@@ -11686,8 +12287,10 @@ public final class Openapiv2 {
      * The title of the application.
      * </pre>
      *
-     * <code>string title = 1[json_name = "title"];</code>
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTitleBytes() {
       java.lang.Object ref = title_;
@@ -11710,8 +12313,10 @@ public final class Openapiv2 {
      * text representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -11730,8 +12335,10 @@ public final class Openapiv2 {
      * text representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -11753,8 +12360,10 @@ public final class Openapiv2 {
      * The Terms of Service for the API.
      * </pre>
      *
-     * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+     * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+     * @return The termsOfService.
      */
+    @java.lang.Override
     public java.lang.String getTermsOfService() {
       java.lang.Object ref = termsOfService_;
       if (ref instanceof java.lang.String) {
@@ -11772,8 +12381,10 @@ public final class Openapiv2 {
      * The Terms of Service for the API.
      * </pre>
      *
-     * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+     * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+     * @return The bytes for termsOfService.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTermsOfServiceBytes() {
       java.lang.Object ref = termsOfService_;
@@ -11795,8 +12406,10 @@ public final class Openapiv2 {
      * The contact information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
+     * @return Whether the contact field is set.
      */
+    @java.lang.Override
     public boolean hasContact() {
       return contact_ != null;
     }
@@ -11805,8 +12418,10 @@ public final class Openapiv2 {
      * The contact information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
+     * @return The contact.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact getContact() {
       return contact_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact.getDefaultInstance() : contact_;
     }
@@ -11815,8 +12430,9 @@ public final class Openapiv2 {
      * The contact information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ContactOrBuilder getContactOrBuilder() {
       return getContact();
     }
@@ -11828,8 +12444,10 @@ public final class Openapiv2 {
      * The license information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
+     * @return Whether the license field is set.
      */
+    @java.lang.Override
     public boolean hasLicense() {
       return license_ != null;
     }
@@ -11838,8 +12456,10 @@ public final class Openapiv2 {
      * The license information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
+     * @return The license.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License getLicense() {
       return license_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License.getDefaultInstance() : license_;
     }
@@ -11848,8 +12468,9 @@ public final class Openapiv2 {
      * The license information for the exposed API.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.LicenseOrBuilder getLicenseOrBuilder() {
       return getLicense();
     }
@@ -11862,8 +12483,10 @@ public final class Openapiv2 {
      * with the specification version).
      * </pre>
      *
-     * <code>string version = 6[json_name = "version"];</code>
+     * <code>string version = 6 [json_name = "version"];</code>
+     * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -11882,8 +12505,10 @@ public final class Openapiv2 {
      * with the specification version).
      * </pre>
      *
-     * <code>string version = 6[json_name = "version"];</code>
+     * <code>string version = 6 [json_name = "version"];</code>
+     * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -11925,47 +12550,52 @@ public final class Openapiv2 {
       return internalGetExtensions().getMap().size();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
 
+    @java.lang.Override
     public boolean containsExtensions(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetExtensions().getMap().containsKey(key);
     }
     /**
      * Use {@link #getExtensionsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
       return getExtensionsMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
       return internalGetExtensions().getMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
         com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       if (!map.containsKey(key)) {
@@ -11988,13 +12618,13 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getTermsOfServiceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(termsOfService_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, termsOfService_);
       }
       if (contact_ != null) {
@@ -12003,7 +12633,7 @@ public final class Openapiv2 {
       if (license_ != null) {
         output.writeMessage(5, getLicense());
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, version_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -12021,13 +12651,13 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getTermsOfServiceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(termsOfService_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, termsOfService_);
       }
       if (contact_ != null) {
@@ -12038,7 +12668,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLicense());
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, version_);
       }
       for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
@@ -12066,29 +12696,28 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info) obj;
 
-      boolean result = true;
-      result = result && getTitle()
-          .equals(other.getTitle());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getTermsOfService()
-          .equals(other.getTermsOfService());
-      result = result && (hasContact() == other.hasContact());
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getTermsOfService()
+          .equals(other.getTermsOfService())) return false;
+      if (hasContact() != other.hasContact()) return false;
       if (hasContact()) {
-        result = result && getContact()
-            .equals(other.getContact());
+        if (!getContact()
+            .equals(other.getContact())) return false;
       }
-      result = result && (hasLicense() == other.hasLicense());
+      if (hasLicense() != other.hasLicense()) return false;
       if (hasLicense()) {
-        result = result && getLicense()
-            .equals(other.getLicense());
+        if (!getLicense()
+            .equals(other.getLicense())) return false;
       }
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && internalGetExtensions().equals(
-          other.internalGetExtensions());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!internalGetExtensions().equals(
+          other.internalGetExtensions())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12344,7 +12973,6 @@ public final class Openapiv2 {
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info buildPartial() {
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Info(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.title_ = title_;
         result.description_ = description_;
         result.termsOfService_ = termsOfService_;
@@ -12361,42 +12989,41 @@ public final class Openapiv2 {
         result.version_ = version_;
         result.extensions_ = internalGetExtensions();
         result.extensions_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12470,7 +13097,8 @@ public final class Openapiv2 {
        * The title of the application.
        * </pre>
        *
-       * <code>string title = 1[json_name = "title"];</code>
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
        */
       public java.lang.String getTitle() {
         java.lang.Object ref = title_;
@@ -12489,7 +13117,8 @@ public final class Openapiv2 {
        * The title of the application.
        * </pre>
        *
-       * <code>string title = 1[json_name = "title"];</code>
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
           getTitleBytes() {
@@ -12509,7 +13138,9 @@ public final class Openapiv2 {
        * The title of the application.
        * </pre>
        *
-       * <code>string title = 1[json_name = "title"];</code>
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
        */
       public Builder setTitle(
           java.lang.String value) {
@@ -12526,7 +13157,8 @@ public final class Openapiv2 {
        * The title of the application.
        * </pre>
        *
-       * <code>string title = 1[json_name = "title"];</code>
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTitle() {
         
@@ -12539,7 +13171,9 @@ public final class Openapiv2 {
        * The title of the application.
        * </pre>
        *
-       * <code>string title = 1[json_name = "title"];</code>
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
@@ -12560,7 +13194,8 @@ public final class Openapiv2 {
        * text representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -12580,7 +13215,8 @@ public final class Openapiv2 {
        * text representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -12601,7 +13237,9 @@ public final class Openapiv2 {
        * text representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -12619,7 +13257,8 @@ public final class Openapiv2 {
        * text representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -12633,7 +13272,9 @@ public final class Openapiv2 {
        * text representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -12653,7 +13294,8 @@ public final class Openapiv2 {
        * The Terms of Service for the API.
        * </pre>
        *
-       * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+       * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+       * @return The termsOfService.
        */
       public java.lang.String getTermsOfService() {
         java.lang.Object ref = termsOfService_;
@@ -12672,7 +13314,8 @@ public final class Openapiv2 {
        * The Terms of Service for the API.
        * </pre>
        *
-       * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+       * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+       * @return The bytes for termsOfService.
        */
       public com.google.protobuf.ByteString
           getTermsOfServiceBytes() {
@@ -12692,7 +13335,9 @@ public final class Openapiv2 {
        * The Terms of Service for the API.
        * </pre>
        *
-       * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+       * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+       * @param value The termsOfService to set.
+       * @return This builder for chaining.
        */
       public Builder setTermsOfService(
           java.lang.String value) {
@@ -12709,7 +13354,8 @@ public final class Openapiv2 {
        * The Terms of Service for the API.
        * </pre>
        *
-       * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+       * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTermsOfService() {
         
@@ -12722,7 +13368,9 @@ public final class Openapiv2 {
        * The Terms of Service for the API.
        * </pre>
        *
-       * <code>string terms_of_service = 3[json_name = "termsOfService"];</code>
+       * <code>string terms_of_service = 3 [json_name = "termsOfService"];</code>
+       * @param value The bytes for termsOfService to set.
+       * @return This builder for chaining.
        */
       public Builder setTermsOfServiceBytes(
           com.google.protobuf.ByteString value) {
@@ -12736,7 +13384,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact contact_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact contact_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ContactOrBuilder> contactBuilder_;
       /**
@@ -12744,7 +13392,8 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
+       * @return Whether the contact field is set.
        */
       public boolean hasContact() {
         return contactBuilder_ != null || contact_ != null;
@@ -12754,7 +13403,8 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
+       * @return The contact.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact getContact() {
         if (contactBuilder_ == null) {
@@ -12768,7 +13418,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       public Builder setContact(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact value) {
         if (contactBuilder_ == null) {
@@ -12788,7 +13438,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       public Builder setContact(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact.Builder builderForValue) {
@@ -12806,7 +13456,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       public Builder mergeContact(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact value) {
         if (contactBuilder_ == null) {
@@ -12828,7 +13478,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       public Builder clearContact() {
         if (contactBuilder_ == null) {
@@ -12846,7 +13496,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact.Builder getContactBuilder() {
         
@@ -12858,7 +13508,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ContactOrBuilder getContactOrBuilder() {
         if (contactBuilder_ != null) {
@@ -12873,7 +13523,7 @@ public final class Openapiv2 {
        * The contact information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4[json_name = "contact"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Contact contact = 4 [json_name = "contact"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ContactOrBuilder> 
@@ -12889,7 +13539,7 @@ public final class Openapiv2 {
         return contactBuilder_;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License license_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License license_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.LicenseOrBuilder> licenseBuilder_;
       /**
@@ -12897,7 +13547,8 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
+       * @return Whether the license field is set.
        */
       public boolean hasLicense() {
         return licenseBuilder_ != null || license_ != null;
@@ -12907,7 +13558,8 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
+       * @return The license.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License getLicense() {
         if (licenseBuilder_ == null) {
@@ -12921,7 +13573,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       public Builder setLicense(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License value) {
         if (licenseBuilder_ == null) {
@@ -12941,7 +13593,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       public Builder setLicense(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License.Builder builderForValue) {
@@ -12959,7 +13611,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       public Builder mergeLicense(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License value) {
         if (licenseBuilder_ == null) {
@@ -12981,7 +13633,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       public Builder clearLicense() {
         if (licenseBuilder_ == null) {
@@ -12999,7 +13651,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License.Builder getLicenseBuilder() {
         
@@ -13011,7 +13663,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.LicenseOrBuilder getLicenseOrBuilder() {
         if (licenseBuilder_ != null) {
@@ -13026,7 +13678,7 @@ public final class Openapiv2 {
        * The license information for the exposed API.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5[json_name = "license"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.License license = 5 [json_name = "license"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.LicenseOrBuilder> 
@@ -13049,7 +13701,8 @@ public final class Openapiv2 {
        * with the specification version).
        * </pre>
        *
-       * <code>string version = 6[json_name = "version"];</code>
+       * <code>string version = 6 [json_name = "version"];</code>
+       * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -13069,7 +13722,8 @@ public final class Openapiv2 {
        * with the specification version).
        * </pre>
        *
-       * <code>string version = 6[json_name = "version"];</code>
+       * <code>string version = 6 [json_name = "version"];</code>
+       * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -13090,7 +13744,9 @@ public final class Openapiv2 {
        * with the specification version).
        * </pre>
        *
-       * <code>string version = 6[json_name = "version"];</code>
+       * <code>string version = 6 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -13108,7 +13764,8 @@ public final class Openapiv2 {
        * with the specification version).
        * </pre>
        *
-       * <code>string version = 6[json_name = "version"];</code>
+       * <code>string version = 6 [json_name = "version"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -13122,7 +13779,9 @@ public final class Openapiv2 {
        * with the specification version).
        * </pre>
        *
-       * <code>string version = 6[json_name = "version"];</code>
+       * <code>string version = 6 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -13163,47 +13822,52 @@ public final class Openapiv2 {
         return internalGetExtensions().getMap().size();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
 
+      @java.lang.Override
       public boolean containsExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetExtensions().getMap().containsKey(key);
       }
       /**
        * Use {@link #getExtensionsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
         return getExtensionsMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
         return internalGetExtensions().getMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrDefault(
           java.lang.String key,
           com.google.protobuf.Value defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         if (!map.containsKey(key)) {
@@ -13218,12 +13882,12 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
 
       public Builder removeExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableExtensions().getMutableMap()
             .remove(key);
         return this;
@@ -13237,19 +13901,22 @@ public final class Openapiv2 {
         return internalGetMutableExtensions().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
       public Builder putExtensions(
           java.lang.String key,
           com.google.protobuf.Value value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExtensions().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 7 [json_name = "extensions"];</code>
        */
 
       public Builder putAllExtensions(
@@ -13261,7 +13928,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13320,7 +13987,8 @@ public final class Openapiv2 {
      * The identifying name of the contact person/organization.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -13328,7 +13996,8 @@ public final class Openapiv2 {
      * The identifying name of the contact person/organization.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -13339,7 +14008,8 @@ public final class Openapiv2 {
      * URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The url.
      */
     java.lang.String getUrl();
     /**
@@ -13348,7 +14018,8 @@ public final class Openapiv2 {
      * URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
@@ -13359,7 +14030,8 @@ public final class Openapiv2 {
      * of an email address.
      * </pre>
      *
-     * <code>string email = 3[json_name = "email"];</code>
+     * <code>string email = 3 [json_name = "email"];</code>
+     * @return The email.
      */
     java.lang.String getEmail();
     /**
@@ -13368,7 +14040,8 @@ public final class Openapiv2 {
      * of an email address.
      * </pre>
      *
-     * <code>string email = 3[json_name = "email"];</code>
+     * <code>string email = 3 [json_name = "email"];</code>
+     * @return The bytes for email.
      */
     com.google.protobuf.ByteString
         getEmailBytes();
@@ -13394,7 +14067,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Contact}
    */
-  public  static final class Contact extends
+  public static final class Contact extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Contact)
       ContactOrBuilder {
@@ -13410,6 +14083,13 @@ public final class Openapiv2 {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Contact();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -13422,7 +14102,6 @@ public final class Openapiv2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13452,7 +14131,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13462,6 +14141,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -13490,8 +14171,10 @@ public final class Openapiv2 {
      * The identifying name of the contact person/organization.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -13509,8 +14192,10 @@ public final class Openapiv2 {
      * The identifying name of the contact person/organization.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -13533,8 +14218,10 @@ public final class Openapiv2 {
      * URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The url.
      */
+    @java.lang.Override
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
       if (ref instanceof java.lang.String) {
@@ -13553,8 +14240,10 @@ public final class Openapiv2 {
      * URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
       java.lang.Object ref = url_;
@@ -13577,8 +14266,10 @@ public final class Openapiv2 {
      * of an email address.
      * </pre>
      *
-     * <code>string email = 3[json_name = "email"];</code>
+     * <code>string email = 3 [json_name = "email"];</code>
+     * @return The email.
      */
+    @java.lang.Override
     public java.lang.String getEmail() {
       java.lang.Object ref = email_;
       if (ref instanceof java.lang.String) {
@@ -13597,8 +14288,10 @@ public final class Openapiv2 {
      * of an email address.
      * </pre>
      *
-     * <code>string email = 3[json_name = "email"];</code>
+     * <code>string email = 3 [json_name = "email"];</code>
+     * @return The bytes for email.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getEmailBytes() {
       java.lang.Object ref = email_;
@@ -13627,13 +14320,13 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
       }
       unknownFields.writeTo(output);
@@ -13645,13 +14338,13 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
       }
       size += unknownFields.getSerializedSize();
@@ -13669,15 +14362,14 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Contact) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && getEmail()
-          .equals(other.getEmail());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13885,35 +14577,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13974,7 +14666,8 @@ public final class Openapiv2 {
        * The identifying name of the contact person/organization.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -13993,7 +14686,8 @@ public final class Openapiv2 {
        * The identifying name of the contact person/organization.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -14013,7 +14707,9 @@ public final class Openapiv2 {
        * The identifying name of the contact person/organization.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -14030,7 +14726,8 @@ public final class Openapiv2 {
        * The identifying name of the contact person/organization.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -14043,7 +14740,9 @@ public final class Openapiv2 {
        * The identifying name of the contact person/organization.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14064,7 +14763,8 @@ public final class Openapiv2 {
        * URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return The url.
        */
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
@@ -14084,7 +14784,8 @@ public final class Openapiv2 {
        * URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
@@ -14105,7 +14806,9 @@ public final class Openapiv2 {
        * URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrl(
           java.lang.String value) {
@@ -14123,7 +14826,8 @@ public final class Openapiv2 {
        * URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrl() {
         
@@ -14137,7 +14841,9 @@ public final class Openapiv2 {
        * URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -14158,7 +14864,8 @@ public final class Openapiv2 {
        * of an email address.
        * </pre>
        *
-       * <code>string email = 3[json_name = "email"];</code>
+       * <code>string email = 3 [json_name = "email"];</code>
+       * @return The email.
        */
       public java.lang.String getEmail() {
         java.lang.Object ref = email_;
@@ -14178,7 +14885,8 @@ public final class Openapiv2 {
        * of an email address.
        * </pre>
        *
-       * <code>string email = 3[json_name = "email"];</code>
+       * <code>string email = 3 [json_name = "email"];</code>
+       * @return The bytes for email.
        */
       public com.google.protobuf.ByteString
           getEmailBytes() {
@@ -14199,7 +14907,9 @@ public final class Openapiv2 {
        * of an email address.
        * </pre>
        *
-       * <code>string email = 3[json_name = "email"];</code>
+       * <code>string email = 3 [json_name = "email"];</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmail(
           java.lang.String value) {
@@ -14217,7 +14927,8 @@ public final class Openapiv2 {
        * of an email address.
        * </pre>
        *
-       * <code>string email = 3[json_name = "email"];</code>
+       * <code>string email = 3 [json_name = "email"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearEmail() {
         
@@ -14231,7 +14942,9 @@ public final class Openapiv2 {
        * of an email address.
        * </pre>
        *
-       * <code>string email = 3[json_name = "email"];</code>
+       * <code>string email = 3 [json_name = "email"];</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
        */
       public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -14247,7 +14960,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14306,7 +15019,8 @@ public final class Openapiv2 {
      * The license name used for the API.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -14314,7 +15028,8 @@ public final class Openapiv2 {
      * The license name used for the API.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -14324,7 +15039,8 @@ public final class Openapiv2 {
      * A URL to the license used for the API. MUST be in the format of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The url.
      */
     java.lang.String getUrl();
     /**
@@ -14332,7 +15048,8 @@ public final class Openapiv2 {
      * A URL to the license used for the API. MUST be in the format of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
@@ -14357,7 +15074,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.License}
    */
-  public  static final class License extends
+  public static final class License extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.License)
       LicenseOrBuilder {
@@ -14369,6 +15086,13 @@ public final class Openapiv2 {
     private License() {
       name_ = "";
       url_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new License();
     }
 
     @java.lang.Override
@@ -14384,7 +15108,6 @@ public final class Openapiv2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14408,7 +15131,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14418,6 +15141,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14446,8 +15171,10 @@ public final class Openapiv2 {
      * The license name used for the API.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -14465,8 +15192,10 @@ public final class Openapiv2 {
      * The license name used for the API.
      * </pre>
      *
-     * <code>string name = 1[json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -14488,8 +15217,10 @@ public final class Openapiv2 {
      * A URL to the license used for the API. MUST be in the format of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The url.
      */
+    @java.lang.Override
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
       if (ref instanceof java.lang.String) {
@@ -14507,8 +15238,10 @@ public final class Openapiv2 {
      * A URL to the license used for the API. MUST be in the format of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
       java.lang.Object ref = url_;
@@ -14537,10 +15270,10 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
       unknownFields.writeTo(output);
@@ -14552,10 +15285,10 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
       size += unknownFields.getSerializedSize();
@@ -14573,13 +15306,12 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.License) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14781,35 +15513,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14866,7 +15598,8 @@ public final class Openapiv2 {
        * The license name used for the API.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -14885,7 +15618,8 @@ public final class Openapiv2 {
        * The license name used for the API.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -14905,7 +15639,9 @@ public final class Openapiv2 {
        * The license name used for the API.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -14922,7 +15658,8 @@ public final class Openapiv2 {
        * The license name used for the API.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -14935,7 +15672,9 @@ public final class Openapiv2 {
        * The license name used for the API.
        * </pre>
        *
-       * <code>string name = 1[json_name = "name"];</code>
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14955,7 +15694,8 @@ public final class Openapiv2 {
        * A URL to the license used for the API. MUST be in the format of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return The url.
        */
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
@@ -14974,7 +15714,8 @@ public final class Openapiv2 {
        * A URL to the license used for the API. MUST be in the format of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
@@ -14994,7 +15735,9 @@ public final class Openapiv2 {
        * A URL to the license used for the API. MUST be in the format of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrl(
           java.lang.String value) {
@@ -15011,7 +15754,8 @@ public final class Openapiv2 {
        * A URL to the license used for the API. MUST be in the format of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrl() {
         
@@ -15024,7 +15768,9 @@ public final class Openapiv2 {
        * A URL to the license used for the API. MUST be in the format of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -15040,7 +15786,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15100,7 +15846,8 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -15109,7 +15856,8 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -15120,7 +15868,8 @@ public final class Openapiv2 {
      * of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The url.
      */
     java.lang.String getUrl();
     /**
@@ -15129,7 +15878,8 @@ public final class Openapiv2 {
      * of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
@@ -15152,7 +15902,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation}
    */
-  public  static final class ExternalDocumentation extends
+  public static final class ExternalDocumentation extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation)
       ExternalDocumentationOrBuilder {
@@ -15164,6 +15914,13 @@ public final class Openapiv2 {
     private ExternalDocumentation() {
       description_ = "";
       url_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExternalDocumentation();
     }
 
     @java.lang.Override
@@ -15179,7 +15936,6 @@ public final class Openapiv2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -15203,7 +15959,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15213,6 +15969,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -15242,8 +16000,10 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -15262,8 +16022,10 @@ public final class Openapiv2 {
      * rich text representation.
      * </pre>
      *
-     * <code>string description = 1[json_name = "description"];</code>
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -15286,8 +16048,10 @@ public final class Openapiv2 {
      * of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The url.
      */
+    @java.lang.Override
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
       if (ref instanceof java.lang.String) {
@@ -15306,8 +16070,10 @@ public final class Openapiv2 {
      * of a URL.
      * </pre>
      *
-     * <code>string url = 2[json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
       java.lang.Object ref = url_;
@@ -15336,10 +16102,10 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
       unknownFields.writeTo(output);
@@ -15351,10 +16117,10 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
       size += unknownFields.getSerializedSize();
@@ -15372,13 +16138,12 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation) obj;
 
-      boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15578,35 +16343,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15664,7 +16429,8 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -15684,7 +16450,8 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -15705,7 +16472,9 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -15723,7 +16492,8 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -15737,7 +16507,9 @@ public final class Openapiv2 {
        * rich text representation.
        * </pre>
        *
-       * <code>string description = 1[json_name = "description"];</code>
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -15758,7 +16530,8 @@ public final class Openapiv2 {
        * of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return The url.
        */
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
@@ -15778,7 +16551,8 @@ public final class Openapiv2 {
        * of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
@@ -15799,7 +16573,9 @@ public final class Openapiv2 {
        * of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrl(
           java.lang.String value) {
@@ -15817,7 +16593,8 @@ public final class Openapiv2 {
        * of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrl() {
         
@@ -15831,7 +16608,9 @@ public final class Openapiv2 {
        * of a URL.
        * </pre>
        *
-       * <code>string url = 2[json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -15847,7 +16626,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15902,15 +16681,17 @@ public final class Openapiv2 {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
+     * @return Whether the jsonSchema field is set.
      */
     boolean hasJsonSchema();
     /**
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
+     * @return The jsonSchema.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema getJsonSchema();
     /**
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchemaOrBuilder getJsonSchemaOrBuilder();
 
@@ -15923,7 +16704,8 @@ public final class Openapiv2 {
      * this schema or any schema that inherits it.
      * </pre>
      *
-     * <code>string discriminator = 2[json_name = "discriminator"];</code>
+     * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+     * @return The discriminator.
      */
     java.lang.String getDiscriminator();
     /**
@@ -15935,7 +16717,8 @@ public final class Openapiv2 {
      * this schema or any schema that inherits it.
      * </pre>
      *
-     * <code>string discriminator = 2[json_name = "discriminator"];</code>
+     * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+     * @return The bytes for discriminator.
      */
     com.google.protobuf.ByteString
         getDiscriminatorBytes();
@@ -15949,7 +16732,8 @@ public final class Openapiv2 {
      * value is false.
      * </pre>
      *
-     * <code>bool read_only = 3[json_name = "readOnly"];</code>
+     * <code>bool read_only = 3 [json_name = "readOnly"];</code>
+     * @return The readOnly.
      */
     boolean getReadOnly();
 
@@ -15958,7 +16742,8 @@ public final class Openapiv2 {
      * Additional external documentation for this schema.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
     boolean hasExternalDocs();
     /**
@@ -15966,7 +16751,8 @@ public final class Openapiv2 {
      * Additional external documentation for this schema.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs();
     /**
@@ -15974,7 +16760,7 @@ public final class Openapiv2 {
      * Additional external documentation for this schema.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder();
 
@@ -15984,7 +16770,8 @@ public final class Openapiv2 {
      * This is copied verbatim to the output.
      * </pre>
      *
-     * <code>string example = 6[json_name = "example"];</code>
+     * <code>string example = 6 [json_name = "example"];</code>
+     * @return The example.
      */
     java.lang.String getExample();
     /**
@@ -15993,7 +16780,8 @@ public final class Openapiv2 {
      * This is copied verbatim to the output.
      * </pre>
      *
-     * <code>string example = 6[json_name = "example"];</code>
+     * <code>string example = 6 [json_name = "example"];</code>
+     * @return The bytes for example.
      */
     com.google.protobuf.ByteString
         getExampleBytes();
@@ -16006,7 +16794,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Schema}
    */
-  public  static final class Schema extends
+  public static final class Schema extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Schema)
       SchemaOrBuilder {
@@ -16017,8 +16805,14 @@ public final class Openapiv2 {
     }
     private Schema() {
       discriminator_ = "";
-      readOnly_ = false;
       example_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Schema();
     }
 
     @java.lang.Override
@@ -16034,7 +16828,6 @@ public final class Openapiv2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16089,7 +16882,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16099,6 +16892,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -16123,20 +16918,25 @@ public final class Openapiv2 {
     public static final int JSON_SCHEMA_FIELD_NUMBER = 1;
     private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema jsonSchema_;
     /**
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
+     * @return Whether the jsonSchema field is set.
      */
+    @java.lang.Override
     public boolean hasJsonSchema() {
       return jsonSchema_ != null;
     }
     /**
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
+     * @return The jsonSchema.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema getJsonSchema() {
       return jsonSchema_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.getDefaultInstance() : jsonSchema_;
     }
     /**
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchemaOrBuilder getJsonSchemaOrBuilder() {
       return getJsonSchema();
     }
@@ -16152,8 +16952,10 @@ public final class Openapiv2 {
      * this schema or any schema that inherits it.
      * </pre>
      *
-     * <code>string discriminator = 2[json_name = "discriminator"];</code>
+     * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+     * @return The discriminator.
      */
+    @java.lang.Override
     public java.lang.String getDiscriminator() {
       java.lang.Object ref = discriminator_;
       if (ref instanceof java.lang.String) {
@@ -16175,8 +16977,10 @@ public final class Openapiv2 {
      * this schema or any schema that inherits it.
      * </pre>
      *
-     * <code>string discriminator = 2[json_name = "discriminator"];</code>
+     * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+     * @return The bytes for discriminator.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDiscriminatorBytes() {
       java.lang.Object ref = discriminator_;
@@ -16202,8 +17006,10 @@ public final class Openapiv2 {
      * value is false.
      * </pre>
      *
-     * <code>bool read_only = 3[json_name = "readOnly"];</code>
+     * <code>bool read_only = 3 [json_name = "readOnly"];</code>
+     * @return The readOnly.
      */
+    @java.lang.Override
     public boolean getReadOnly() {
       return readOnly_;
     }
@@ -16215,8 +17021,10 @@ public final class Openapiv2 {
      * Additional external documentation for this schema.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
+    @java.lang.Override
     public boolean hasExternalDocs() {
       return externalDocs_ != null;
     }
@@ -16225,8 +17033,10 @@ public final class Openapiv2 {
      * Additional external documentation for this schema.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
       return externalDocs_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.getDefaultInstance() : externalDocs_;
     }
@@ -16235,8 +17045,9 @@ public final class Openapiv2 {
      * Additional external documentation for this schema.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
       return getExternalDocs();
     }
@@ -16249,8 +17060,10 @@ public final class Openapiv2 {
      * This is copied verbatim to the output.
      * </pre>
      *
-     * <code>string example = 6[json_name = "example"];</code>
+     * <code>string example = 6 [json_name = "example"];</code>
+     * @return The example.
      */
+    @java.lang.Override
     public java.lang.String getExample() {
       java.lang.Object ref = example_;
       if (ref instanceof java.lang.String) {
@@ -16269,8 +17082,10 @@ public final class Openapiv2 {
      * This is copied verbatim to the output.
      * </pre>
      *
-     * <code>string example = 6[json_name = "example"];</code>
+     * <code>string example = 6 [json_name = "example"];</code>
+     * @return The bytes for example.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExampleBytes() {
       java.lang.Object ref = example_;
@@ -16302,7 +17117,7 @@ public final class Openapiv2 {
       if (jsonSchema_ != null) {
         output.writeMessage(1, getJsonSchema());
       }
-      if (!getDiscriminatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discriminator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, discriminator_);
       }
       if (readOnly_ != false) {
@@ -16311,7 +17126,7 @@ public final class Openapiv2 {
       if (externalDocs_ != null) {
         output.writeMessage(5, getExternalDocs());
       }
-      if (!getExampleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, example_);
       }
       unknownFields.writeTo(output);
@@ -16327,7 +17142,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getJsonSchema());
       }
-      if (!getDiscriminatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discriminator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, discriminator_);
       }
       if (readOnly_ != false) {
@@ -16338,7 +17153,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExternalDocs());
       }
-      if (!getExampleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, example_);
       }
       size += unknownFields.getSerializedSize();
@@ -16356,25 +17171,24 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Schema) obj;
 
-      boolean result = true;
-      result = result && (hasJsonSchema() == other.hasJsonSchema());
+      if (hasJsonSchema() != other.hasJsonSchema()) return false;
       if (hasJsonSchema()) {
-        result = result && getJsonSchema()
-            .equals(other.getJsonSchema());
+        if (!getJsonSchema()
+            .equals(other.getJsonSchema())) return false;
       }
-      result = result && getDiscriminator()
-          .equals(other.getDiscriminator());
-      result = result && (getReadOnly()
-          == other.getReadOnly());
-      result = result && (hasExternalDocs() == other.hasExternalDocs());
+      if (!getDiscriminator()
+          .equals(other.getDiscriminator())) return false;
+      if (getReadOnly()
+          != other.getReadOnly()) return false;
+      if (hasExternalDocs() != other.hasExternalDocs()) return false;
       if (hasExternalDocs()) {
-        result = result && getExternalDocs()
-            .equals(other.getExternalDocs());
+        if (!getExternalDocs()
+            .equals(other.getExternalDocs())) return false;
       }
-      result = result && getExample()
-          .equals(other.getExample());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getExample()
+          .equals(other.getExample())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16600,35 +17414,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16688,17 +17502,19 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema jsonSchema_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema jsonSchema_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchemaOrBuilder> jsonSchemaBuilder_;
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
+       * @return Whether the jsonSchema field is set.
        */
       public boolean hasJsonSchema() {
         return jsonSchemaBuilder_ != null || jsonSchema_ != null;
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
+       * @return The jsonSchema.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema getJsonSchema() {
         if (jsonSchemaBuilder_ == null) {
@@ -16708,7 +17524,7 @@ public final class Openapiv2 {
         }
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       public Builder setJsonSchema(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema value) {
         if (jsonSchemaBuilder_ == null) {
@@ -16724,7 +17540,7 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       public Builder setJsonSchema(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.Builder builderForValue) {
@@ -16738,7 +17554,7 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       public Builder mergeJsonSchema(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema value) {
         if (jsonSchemaBuilder_ == null) {
@@ -16756,7 +17572,7 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       public Builder clearJsonSchema() {
         if (jsonSchemaBuilder_ == null) {
@@ -16770,7 +17586,7 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.Builder getJsonSchemaBuilder() {
         
@@ -16778,7 +17594,7 @@ public final class Openapiv2 {
         return getJsonSchemaFieldBuilder().getBuilder();
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchemaOrBuilder getJsonSchemaOrBuilder() {
         if (jsonSchemaBuilder_ != null) {
@@ -16789,7 +17605,7 @@ public final class Openapiv2 {
         }
       }
       /**
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1[json_name = "jsonSchema"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema json_schema = 1 [json_name = "jsonSchema"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchemaOrBuilder> 
@@ -16815,7 +17631,8 @@ public final class Openapiv2 {
        * this schema or any schema that inherits it.
        * </pre>
        *
-       * <code>string discriminator = 2[json_name = "discriminator"];</code>
+       * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+       * @return The discriminator.
        */
       public java.lang.String getDiscriminator() {
         java.lang.Object ref = discriminator_;
@@ -16838,7 +17655,8 @@ public final class Openapiv2 {
        * this schema or any schema that inherits it.
        * </pre>
        *
-       * <code>string discriminator = 2[json_name = "discriminator"];</code>
+       * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+       * @return The bytes for discriminator.
        */
       public com.google.protobuf.ByteString
           getDiscriminatorBytes() {
@@ -16862,7 +17680,9 @@ public final class Openapiv2 {
        * this schema or any schema that inherits it.
        * </pre>
        *
-       * <code>string discriminator = 2[json_name = "discriminator"];</code>
+       * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+       * @param value The discriminator to set.
+       * @return This builder for chaining.
        */
       public Builder setDiscriminator(
           java.lang.String value) {
@@ -16883,7 +17703,8 @@ public final class Openapiv2 {
        * this schema or any schema that inherits it.
        * </pre>
        *
-       * <code>string discriminator = 2[json_name = "discriminator"];</code>
+       * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDiscriminator() {
         
@@ -16900,7 +17721,9 @@ public final class Openapiv2 {
        * this schema or any schema that inherits it.
        * </pre>
        *
-       * <code>string discriminator = 2[json_name = "discriminator"];</code>
+       * <code>string discriminator = 2 [json_name = "discriminator"];</code>
+       * @param value The bytes for discriminator to set.
+       * @return This builder for chaining.
        */
       public Builder setDiscriminatorBytes(
           com.google.protobuf.ByteString value) {
@@ -16924,8 +17747,10 @@ public final class Openapiv2 {
        * value is false.
        * </pre>
        *
-       * <code>bool read_only = 3[json_name = "readOnly"];</code>
+       * <code>bool read_only = 3 [json_name = "readOnly"];</code>
+       * @return The readOnly.
        */
+      @java.lang.Override
       public boolean getReadOnly() {
         return readOnly_;
       }
@@ -16938,7 +17763,9 @@ public final class Openapiv2 {
        * value is false.
        * </pre>
        *
-       * <code>bool read_only = 3[json_name = "readOnly"];</code>
+       * <code>bool read_only = 3 [json_name = "readOnly"];</code>
+       * @param value The readOnly to set.
+       * @return This builder for chaining.
        */
       public Builder setReadOnly(boolean value) {
         
@@ -16955,7 +17782,8 @@ public final class Openapiv2 {
        * value is false.
        * </pre>
        *
-       * <code>bool read_only = 3[json_name = "readOnly"];</code>
+       * <code>bool read_only = 3 [json_name = "readOnly"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearReadOnly() {
         
@@ -16964,7 +17792,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> externalDocsBuilder_;
       /**
@@ -16972,7 +17800,8 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
+       * @return Whether the externalDocs field is set.
        */
       public boolean hasExternalDocs() {
         return externalDocsBuilder_ != null || externalDocs_ != null;
@@ -16982,7 +17811,8 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
+       * @return The externalDocs.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -16996,7 +17826,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -17016,7 +17846,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder builderForValue) {
@@ -17034,7 +17864,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       public Builder mergeExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -17056,7 +17886,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       public Builder clearExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -17074,7 +17904,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder getExternalDocsBuilder() {
         
@@ -17086,7 +17916,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
         if (externalDocsBuilder_ != null) {
@@ -17101,7 +17931,7 @@ public final class Openapiv2 {
        * Additional external documentation for this schema.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 5 [json_name = "externalDocs"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> 
@@ -17124,7 +17954,8 @@ public final class Openapiv2 {
        * This is copied verbatim to the output.
        * </pre>
        *
-       * <code>string example = 6[json_name = "example"];</code>
+       * <code>string example = 6 [json_name = "example"];</code>
+       * @return The example.
        */
       public java.lang.String getExample() {
         java.lang.Object ref = example_;
@@ -17144,7 +17975,8 @@ public final class Openapiv2 {
        * This is copied verbatim to the output.
        * </pre>
        *
-       * <code>string example = 6[json_name = "example"];</code>
+       * <code>string example = 6 [json_name = "example"];</code>
+       * @return The bytes for example.
        */
       public com.google.protobuf.ByteString
           getExampleBytes() {
@@ -17165,7 +17997,9 @@ public final class Openapiv2 {
        * This is copied verbatim to the output.
        * </pre>
        *
-       * <code>string example = 6[json_name = "example"];</code>
+       * <code>string example = 6 [json_name = "example"];</code>
+       * @param value The example to set.
+       * @return This builder for chaining.
        */
       public Builder setExample(
           java.lang.String value) {
@@ -17183,7 +18017,8 @@ public final class Openapiv2 {
        * This is copied verbatim to the output.
        * </pre>
        *
-       * <code>string example = 6[json_name = "example"];</code>
+       * <code>string example = 6 [json_name = "example"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExample() {
         
@@ -17197,7 +18032,9 @@ public final class Openapiv2 {
        * This is copied verbatim to the output.
        * </pre>
        *
-       * <code>string example = 6[json_name = "example"];</code>
+       * <code>string example = 6 [json_name = "example"];</code>
+       * @param value The bytes for example to set.
+       * @return This builder for chaining.
        */
       public Builder setExampleBytes(
           com.google.protobuf.ByteString value) {
@@ -17213,7 +18050,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17277,7 +18114,8 @@ public final class Openapiv2 {
      *  `ref: ".google.protobuf.Timestamp"`.
      * </pre>
      *
-     * <code>string ref = 3[json_name = "ref"];</code>
+     * <code>string ref = 3 [json_name = "ref"];</code>
+     * @return The ref.
      */
     java.lang.String getRef();
     /**
@@ -17290,7 +18128,8 @@ public final class Openapiv2 {
      *  `ref: ".google.protobuf.Timestamp"`.
      * </pre>
      *
-     * <code>string ref = 3[json_name = "ref"];</code>
+     * <code>string ref = 3 [json_name = "ref"];</code>
+     * @return The bytes for ref.
      */
     com.google.protobuf.ByteString
         getRefBytes();
@@ -17300,7 +18139,8 @@ public final class Openapiv2 {
      * The title of the schema.
      * </pre>
      *
-     * <code>string title = 5[json_name = "title"];</code>
+     * <code>string title = 5 [json_name = "title"];</code>
+     * @return The title.
      */
     java.lang.String getTitle();
     /**
@@ -17308,7 +18148,8 @@ public final class Openapiv2 {
      * The title of the schema.
      * </pre>
      *
-     * <code>string title = 5[json_name = "title"];</code>
+     * <code>string title = 5 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
     com.google.protobuf.ByteString
         getTitleBytes();
@@ -17318,7 +18159,8 @@ public final class Openapiv2 {
      * A short description of the schema.
      * </pre>
      *
-     * <code>string description = 6[json_name = "description"];</code>
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -17326,23 +18168,27 @@ public final class Openapiv2 {
      * A short description of the schema.
      * </pre>
      *
-     * <code>string description = 6[json_name = "description"];</code>
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>string default = 7[json_name = "default"];</code>
+     * <code>string default = 7 [json_name = "default"];</code>
+     * @return The default.
      */
     java.lang.String getDefault();
     /**
-     * <code>string default = 7[json_name = "default"];</code>
+     * <code>string default = 7 [json_name = "default"];</code>
+     * @return The bytes for default.
      */
     com.google.protobuf.ByteString
         getDefaultBytes();
 
     /**
-     * <code>bool read_only = 8[json_name = "readOnly"];</code>
+     * <code>bool read_only = 8 [json_name = "readOnly"];</code>
+     * @return The readOnly.
      */
     boolean getReadOnly();
 
@@ -17353,7 +18199,8 @@ public final class Openapiv2 {
      * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
      * </pre>
      *
-     * <code>string example = 9[json_name = "example"];</code>
+     * <code>string example = 9 [json_name = "example"];</code>
+     * @return The example.
      */
     java.lang.String getExample();
     /**
@@ -17363,106 +18210,127 @@ public final class Openapiv2 {
      * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
      * </pre>
      *
-     * <code>string example = 9[json_name = "example"];</code>
+     * <code>string example = 9 [json_name = "example"];</code>
+     * @return The bytes for example.
      */
     com.google.protobuf.ByteString
         getExampleBytes();
 
     /**
-     * <code>double multiple_of = 10[json_name = "multipleOf"];</code>
+     * <code>double multiple_of = 10 [json_name = "multipleOf"];</code>
+     * @return The multipleOf.
      */
     double getMultipleOf();
 
     /**
      * <pre>
-     * Maximum represents an inclusive upper limit for a numeric instance. The 
-     * value of MUST be a number, 
+     * Maximum represents an inclusive upper limit for a numeric instance. The
+     * value of MUST be a number,
      * </pre>
      *
-     * <code>double maximum = 11[json_name = "maximum"];</code>
+     * <code>double maximum = 11 [json_name = "maximum"];</code>
+     * @return The maximum.
      */
     double getMaximum();
 
     /**
-     * <code>bool exclusive_maximum = 12[json_name = "exclusiveMaximum"];</code>
+     * <code>bool exclusive_maximum = 12 [json_name = "exclusiveMaximum"];</code>
+     * @return The exclusiveMaximum.
      */
     boolean getExclusiveMaximum();
 
     /**
      * <pre>
-     * minimum represents an inclusive lower limit for a numeric instance. The 
-     * value of MUST be a number, 
+     * minimum represents an inclusive lower limit for a numeric instance. The
+     * value of MUST be a number,
      * </pre>
      *
-     * <code>double minimum = 13[json_name = "minimum"];</code>
+     * <code>double minimum = 13 [json_name = "minimum"];</code>
+     * @return The minimum.
      */
     double getMinimum();
 
     /**
-     * <code>bool exclusive_minimum = 14[json_name = "exclusiveMinimum"];</code>
+     * <code>bool exclusive_minimum = 14 [json_name = "exclusiveMinimum"];</code>
+     * @return The exclusiveMinimum.
      */
     boolean getExclusiveMinimum();
 
     /**
-     * <code>uint64 max_length = 15[json_name = "maxLength"];</code>
+     * <code>uint64 max_length = 15 [json_name = "maxLength"];</code>
+     * @return The maxLength.
      */
     long getMaxLength();
 
     /**
-     * <code>uint64 min_length = 16[json_name = "minLength"];</code>
+     * <code>uint64 min_length = 16 [json_name = "minLength"];</code>
+     * @return The minLength.
      */
     long getMinLength();
 
     /**
-     * <code>string pattern = 17[json_name = "pattern"];</code>
+     * <code>string pattern = 17 [json_name = "pattern"];</code>
+     * @return The pattern.
      */
     java.lang.String getPattern();
     /**
-     * <code>string pattern = 17[json_name = "pattern"];</code>
+     * <code>string pattern = 17 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
      */
     com.google.protobuf.ByteString
         getPatternBytes();
 
     /**
-     * <code>uint64 max_items = 20[json_name = "maxItems"];</code>
+     * <code>uint64 max_items = 20 [json_name = "maxItems"];</code>
+     * @return The maxItems.
      */
     long getMaxItems();
 
     /**
-     * <code>uint64 min_items = 21[json_name = "minItems"];</code>
+     * <code>uint64 min_items = 21 [json_name = "minItems"];</code>
+     * @return The minItems.
      */
     long getMinItems();
 
     /**
-     * <code>bool unique_items = 22[json_name = "uniqueItems"];</code>
+     * <code>bool unique_items = 22 [json_name = "uniqueItems"];</code>
+     * @return The uniqueItems.
      */
     boolean getUniqueItems();
 
     /**
-     * <code>uint64 max_properties = 24[json_name = "maxProperties"];</code>
+     * <code>uint64 max_properties = 24 [json_name = "maxProperties"];</code>
+     * @return The maxProperties.
      */
     long getMaxProperties();
 
     /**
-     * <code>uint64 min_properties = 25[json_name = "minProperties"];</code>
+     * <code>uint64 min_properties = 25 [json_name = "minProperties"];</code>
+     * @return The minProperties.
      */
     long getMinProperties();
 
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @return A list containing the required.
      */
     java.util.List<java.lang.String>
         getRequiredList();
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @return The count of required.
      */
     int getRequiredCount();
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @param index The index of the element to return.
+     * @return The required at the given index.
      */
     java.lang.String getRequired(int index);
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the required at the given index.
      */
     com.google.protobuf.ByteString
         getRequiredBytes(int index);
@@ -17472,7 +18340,8 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @return A list containing the array.
      */
     java.util.List<java.lang.String>
         getArrayList();
@@ -17481,7 +18350,8 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @return The count of array.
      */
     int getArrayCount();
     /**
@@ -17489,7 +18359,9 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @param index The index of the element to return.
+     * @return The array at the given index.
      */
     java.lang.String getArray(int index);
     /**
@@ -17497,30 +18369,39 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the array at the given index.
      */
     com.google.protobuf.ByteString
         getArrayBytes(int index);
 
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @return A list containing the type.
      */
     java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes> getTypeList();
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @return The count of type.
      */
     int getTypeCount();
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @param index The index of the element to return.
+     * @return The type at the given index.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes getType(int index);
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @return A list containing the enum numeric values on the wire for type.
      */
     java.util.List<java.lang.Integer>
     getTypeValueList();
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of type at the given index.
      */
     int getTypeValue(int index);
 
@@ -17529,7 +18410,8 @@ public final class Openapiv2 {
      * `Format`
      * </pre>
      *
-     * <code>string format = 36[json_name = "format"];</code>
+     * <code>string format = 36 [json_name = "format"];</code>
+     * @return The format.
      */
     java.lang.String getFormat();
     /**
@@ -17537,7 +18419,8 @@ public final class Openapiv2 {
      * `Format`
      * </pre>
      *
-     * <code>string format = 36[json_name = "format"];</code>
+     * <code>string format = 36 [json_name = "format"];</code>
+     * @return The bytes for format.
      */
     com.google.protobuf.ByteString
         getFormatBytes();
@@ -17547,7 +18430,8 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @return A list containing the enum.
      */
     java.util.List<java.lang.String>
         getEnumList();
@@ -17556,7 +18440,8 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @return The count of enum.
      */
     int getEnumCount();
     /**
@@ -17564,7 +18449,9 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @param index The index of the element to return.
+     * @return The enum at the given index.
      */
     java.lang.String getEnum(int index);
     /**
@@ -17572,10 +18459,75 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the enum at the given index.
      */
     com.google.protobuf.ByteString
         getEnumBytes(int index);
+
+    /**
+     * <pre>
+     * Additional field level properties used when generating the OpenAPI v2 file.
+     * </pre>
+     *
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+     * @return Whether the fieldConfiguration field is set.
+     */
+    boolean hasFieldConfiguration();
+    /**
+     * <pre>
+     * Additional field level properties used when generating the OpenAPI v2 file.
+     * </pre>
+     *
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+     * @return The fieldConfiguration.
+     */
+    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration getFieldConfiguration();
+    /**
+     * <pre>
+     * Additional field level properties used when generating the OpenAPI v2 file.
+     * </pre>
+     *
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+     */
+    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder getFieldConfigurationOrBuilder();
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+    int getExtensionsCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+    boolean containsExtensions(
+        java.lang.String key);
+    /**
+     * Use {@link #getExtensionsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Value>
+    getExtensions();
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Value>
+    getExtensionsMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Value getExtensionsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Value defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+
+    com.google.protobuf.Value getExtensionsOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -17604,7 +18556,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.JSONSchema}
    */
-  public  static final class JSONSchema extends
+  public static final class JSONSchema extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema)
       JSONSchemaOrBuilder {
@@ -17618,26 +18570,20 @@ public final class Openapiv2 {
       title_ = "";
       description_ = "";
       default_ = "";
-      readOnly_ = false;
       example_ = "";
-      multipleOf_ = 0D;
-      maximum_ = 0D;
-      exclusiveMaximum_ = false;
-      minimum_ = 0D;
-      exclusiveMinimum_ = false;
-      maxLength_ = 0L;
-      minLength_ = 0L;
       pattern_ = "";
-      maxItems_ = 0L;
-      minItems_ = 0L;
-      uniqueItems_ = false;
-      maxProperties_ = 0L;
-      minProperties_ = 0L;
       required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       type_ = java.util.Collections.emptyList();
       format_ = "";
       enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JSONSchema();
     }
 
     @java.lang.Override
@@ -17767,27 +18713,27 @@ public final class Openapiv2 {
             }
             case 210: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 required_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00080000;
+                mutable_bitField0_ |= 0x00000001;
               }
               required_.add(s);
               break;
             }
             case 274: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 array_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00100000;
+                mutable_bitField0_ |= 0x00000002;
               }
               array_.add(s);
               break;
             }
             case 280: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 type_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00200000;
+                mutable_bitField0_ |= 0x00000004;
               }
               type_.add(rawValue);
               break;
@@ -17797,9 +18743,9 @@ public final class Openapiv2 {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   type_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00200000;
+                  mutable_bitField0_ |= 0x00000004;
                 }
                 type_.add(rawValue);
               }
@@ -17814,15 +18760,41 @@ public final class Openapiv2 {
             }
             case 370: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 enum_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00800000;
+                mutable_bitField0_ |= 0x00000008;
               }
               enum_.add(s);
               break;
             }
+            case 386: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                extensions_ = com.google.protobuf.MapField.newMapField(
+                    ExtensionsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000010;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+              extensions__ = input.readMessage(
+                  ExtensionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              extensions_.getMutableMap().put(
+                  extensions__.getKey(), extensions__.getValue());
+              break;
+            }
+            case 8010: {
+              grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder subBuilder = null;
+              if (fieldConfiguration_ != null) {
+                subBuilder = fieldConfiguration_.toBuilder();
+              }
+              fieldConfiguration_ = input.readMessage(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fieldConfiguration_);
+                fieldConfiguration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17832,20 +18804,22 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           required_ = required_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           array_ = array_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           type_ = java.util.Collections.unmodifiableList(type_);
         }
-        if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           enum_ = enum_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -17857,6 +18831,18 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 48:
+          return internalGetExtensions();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -17948,6 +18934,8 @@ public final class Openapiv2 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -17955,6 +18943,10 @@ public final class Openapiv2 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static JSONSchemaSimpleTypes forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -17983,6 +18975,10 @@ public final class Openapiv2 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -18017,7 +19013,649 @@ public final class Openapiv2 {
       // @@protoc_insertion_point(enum_scope:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes)
     }
 
-    private int bitField0_;
+    public interface FieldConfigurationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Alternative parameter name when used as path parameter. If set, this will
+       * be used as the complete parameter name when this field is used as a path
+       * parameter. Use this to avoid having auto generated path parameter names
+       * for overlapping paths.
+       * </pre>
+       *
+       * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+       * @return The pathParamName.
+       */
+      java.lang.String getPathParamName();
+      /**
+       * <pre>
+       * Alternative parameter name when used as path parameter. If set, this will
+       * be used as the complete parameter name when this field is used as a path
+       * parameter. Use this to avoid having auto generated path parameter names
+       * for overlapping paths.
+       * </pre>
+       *
+       * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+       * @return The bytes for pathParamName.
+       */
+      com.google.protobuf.ByteString
+          getPathParamNameBytes();
+    }
+    /**
+     * <pre>
+     * 'FieldConfiguration' provides additional field level properties used when generating the OpenAPI v2 file.
+     * These properties are not defined by OpenAPIv2, but they are used to control the generation.
+     * </pre>
+     *
+     * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration}
+     */
+    public static final class FieldConfiguration extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration)
+        FieldConfigurationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use FieldConfiguration.newBuilder() to construct.
+      private FieldConfiguration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private FieldConfiguration() {
+        pathParamName_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FieldConfiguration();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private FieldConfiguration(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 378: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                pathParamName_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder.class);
+      }
+
+      public static final int PATH_PARAM_NAME_FIELD_NUMBER = 47;
+      private volatile java.lang.Object pathParamName_;
+      /**
+       * <pre>
+       * Alternative parameter name when used as path parameter. If set, this will
+       * be used as the complete parameter name when this field is used as a path
+       * parameter. Use this to avoid having auto generated path parameter names
+       * for overlapping paths.
+       * </pre>
+       *
+       * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+       * @return The pathParamName.
+       */
+      @java.lang.Override
+      public java.lang.String getPathParamName() {
+        java.lang.Object ref = pathParamName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pathParamName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Alternative parameter name when used as path parameter. If set, this will
+       * be used as the complete parameter name when this field is used as a path
+       * parameter. Use this to avoid having auto generated path parameter names
+       * for overlapping paths.
+       * </pre>
+       *
+       * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+       * @return The bytes for pathParamName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathParamNameBytes() {
+        java.lang.Object ref = pathParamName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pathParamName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pathParamName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 47, pathParamName_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pathParamName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, pathParamName_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration)) {
+          return super.equals(obj);
+        }
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration) obj;
+
+        if (!getPathParamName()
+            .equals(other.getPathParamName())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PATH_PARAM_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getPathParamName().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * 'FieldConfiguration' provides additional field level properties used when generating the OpenAPI v2 file.
+       * These properties are not defined by OpenAPIv2, but they are used to control the generation.
+       * </pre>
+       *
+       * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration)
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder.class);
+        }
+
+        // Construct using grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          pathParamName_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor;
+        }
+
+        @java.lang.Override
+        public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration getDefaultInstanceForType() {
+          return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration build() {
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration buildPartial() {
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration(this);
+          result.pathParamName_ = pathParamName_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration) {
+            return mergeFrom((grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration other) {
+          if (other == grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.getDefaultInstance()) return this;
+          if (!other.getPathParamName().isEmpty()) {
+            pathParamName_ = other.pathParamName_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object pathParamName_ = "";
+        /**
+         * <pre>
+         * Alternative parameter name when used as path parameter. If set, this will
+         * be used as the complete parameter name when this field is used as a path
+         * parameter. Use this to avoid having auto generated path parameter names
+         * for overlapping paths.
+         * </pre>
+         *
+         * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+         * @return The pathParamName.
+         */
+        public java.lang.String getPathParamName() {
+          java.lang.Object ref = pathParamName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            pathParamName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Alternative parameter name when used as path parameter. If set, this will
+         * be used as the complete parameter name when this field is used as a path
+         * parameter. Use this to avoid having auto generated path parameter names
+         * for overlapping paths.
+         * </pre>
+         *
+         * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+         * @return The bytes for pathParamName.
+         */
+        public com.google.protobuf.ByteString
+            getPathParamNameBytes() {
+          java.lang.Object ref = pathParamName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            pathParamName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Alternative parameter name when used as path parameter. If set, this will
+         * be used as the complete parameter name when this field is used as a path
+         * parameter. Use this to avoid having auto generated path parameter names
+         * for overlapping paths.
+         * </pre>
+         *
+         * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+         * @param value The pathParamName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPathParamName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          pathParamName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Alternative parameter name when used as path parameter. If set, this will
+         * be used as the complete parameter name when this field is used as a path
+         * parameter. Use this to avoid having auto generated path parameter names
+         * for overlapping paths.
+         * </pre>
+         *
+         * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPathParamName() {
+          
+          pathParamName_ = getDefaultInstance().getPathParamName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Alternative parameter name when used as path parameter. If set, this will
+         * be used as the complete parameter name when this field is used as a path
+         * parameter. Use this to avoid having auto generated path parameter names
+         * for overlapping paths.
+         * </pre>
+         *
+         * <code>string path_param_name = 47 [json_name = "pathParamName"];</code>
+         * @param value The bytes for pathParamName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPathParamNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          pathParamName_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration)
+      }
+
+      // @@protoc_insertion_point(class_scope:grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration)
+      private static final grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration();
+      }
+
+      public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<FieldConfiguration>
+          PARSER = new com.google.protobuf.AbstractParser<FieldConfiguration>() {
+        @java.lang.Override
+        public FieldConfiguration parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FieldConfiguration(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<FieldConfiguration> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<FieldConfiguration> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int REF_FIELD_NUMBER = 3;
     private volatile java.lang.Object ref_;
     /**
@@ -18030,8 +19668,10 @@ public final class Openapiv2 {
      *  `ref: ".google.protobuf.Timestamp"`.
      * </pre>
      *
-     * <code>string ref = 3[json_name = "ref"];</code>
+     * <code>string ref = 3 [json_name = "ref"];</code>
+     * @return The ref.
      */
+    @java.lang.Override
     public java.lang.String getRef() {
       java.lang.Object ref = ref_;
       if (ref instanceof java.lang.String) {
@@ -18054,8 +19694,10 @@ public final class Openapiv2 {
      *  `ref: ".google.protobuf.Timestamp"`.
      * </pre>
      *
-     * <code>string ref = 3[json_name = "ref"];</code>
+     * <code>string ref = 3 [json_name = "ref"];</code>
+     * @return The bytes for ref.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRefBytes() {
       java.lang.Object ref = ref_;
@@ -18077,8 +19719,10 @@ public final class Openapiv2 {
      * The title of the schema.
      * </pre>
      *
-     * <code>string title = 5[json_name = "title"];</code>
+     * <code>string title = 5 [json_name = "title"];</code>
+     * @return The title.
      */
+    @java.lang.Override
     public java.lang.String getTitle() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
@@ -18096,8 +19740,10 @@ public final class Openapiv2 {
      * The title of the schema.
      * </pre>
      *
-     * <code>string title = 5[json_name = "title"];</code>
+     * <code>string title = 5 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTitleBytes() {
       java.lang.Object ref = title_;
@@ -18119,8 +19765,10 @@ public final class Openapiv2 {
      * A short description of the schema.
      * </pre>
      *
-     * <code>string description = 6[json_name = "description"];</code>
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -18138,8 +19786,10 @@ public final class Openapiv2 {
      * A short description of the schema.
      * </pre>
      *
-     * <code>string description = 6[json_name = "description"];</code>
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -18157,8 +19807,10 @@ public final class Openapiv2 {
     public static final int DEFAULT_FIELD_NUMBER = 7;
     private volatile java.lang.Object default_;
     /**
-     * <code>string default = 7[json_name = "default"];</code>
+     * <code>string default = 7 [json_name = "default"];</code>
+     * @return The default.
      */
+    @java.lang.Override
     public java.lang.String getDefault() {
       java.lang.Object ref = default_;
       if (ref instanceof java.lang.String) {
@@ -18172,8 +19824,10 @@ public final class Openapiv2 {
       }
     }
     /**
-     * <code>string default = 7[json_name = "default"];</code>
+     * <code>string default = 7 [json_name = "default"];</code>
+     * @return The bytes for default.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDefaultBytes() {
       java.lang.Object ref = default_;
@@ -18191,8 +19845,10 @@ public final class Openapiv2 {
     public static final int READ_ONLY_FIELD_NUMBER = 8;
     private boolean readOnly_;
     /**
-     * <code>bool read_only = 8[json_name = "readOnly"];</code>
+     * <code>bool read_only = 8 [json_name = "readOnly"];</code>
+     * @return The readOnly.
      */
+    @java.lang.Override
     public boolean getReadOnly() {
       return readOnly_;
     }
@@ -18206,8 +19862,10 @@ public final class Openapiv2 {
      * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
      * </pre>
      *
-     * <code>string example = 9[json_name = "example"];</code>
+     * <code>string example = 9 [json_name = "example"];</code>
+     * @return The example.
      */
+    @java.lang.Override
     public java.lang.String getExample() {
       java.lang.Object ref = example_;
       if (ref instanceof java.lang.String) {
@@ -18227,8 +19885,10 @@ public final class Openapiv2 {
      * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
      * </pre>
      *
-     * <code>string example = 9[json_name = "example"];</code>
+     * <code>string example = 9 [json_name = "example"];</code>
+     * @return The bytes for example.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExampleBytes() {
       java.lang.Object ref = example_;
@@ -18246,8 +19906,10 @@ public final class Openapiv2 {
     public static final int MULTIPLE_OF_FIELD_NUMBER = 10;
     private double multipleOf_;
     /**
-     * <code>double multiple_of = 10[json_name = "multipleOf"];</code>
+     * <code>double multiple_of = 10 [json_name = "multipleOf"];</code>
+     * @return The multipleOf.
      */
+    @java.lang.Override
     public double getMultipleOf() {
       return multipleOf_;
     }
@@ -18256,12 +19918,14 @@ public final class Openapiv2 {
     private double maximum_;
     /**
      * <pre>
-     * Maximum represents an inclusive upper limit for a numeric instance. The 
-     * value of MUST be a number, 
+     * Maximum represents an inclusive upper limit for a numeric instance. The
+     * value of MUST be a number,
      * </pre>
      *
-     * <code>double maximum = 11[json_name = "maximum"];</code>
+     * <code>double maximum = 11 [json_name = "maximum"];</code>
+     * @return The maximum.
      */
+    @java.lang.Override
     public double getMaximum() {
       return maximum_;
     }
@@ -18269,8 +19933,10 @@ public final class Openapiv2 {
     public static final int EXCLUSIVE_MAXIMUM_FIELD_NUMBER = 12;
     private boolean exclusiveMaximum_;
     /**
-     * <code>bool exclusive_maximum = 12[json_name = "exclusiveMaximum"];</code>
+     * <code>bool exclusive_maximum = 12 [json_name = "exclusiveMaximum"];</code>
+     * @return The exclusiveMaximum.
      */
+    @java.lang.Override
     public boolean getExclusiveMaximum() {
       return exclusiveMaximum_;
     }
@@ -18279,12 +19945,14 @@ public final class Openapiv2 {
     private double minimum_;
     /**
      * <pre>
-     * minimum represents an inclusive lower limit for a numeric instance. The 
-     * value of MUST be a number, 
+     * minimum represents an inclusive lower limit for a numeric instance. The
+     * value of MUST be a number,
      * </pre>
      *
-     * <code>double minimum = 13[json_name = "minimum"];</code>
+     * <code>double minimum = 13 [json_name = "minimum"];</code>
+     * @return The minimum.
      */
+    @java.lang.Override
     public double getMinimum() {
       return minimum_;
     }
@@ -18292,8 +19960,10 @@ public final class Openapiv2 {
     public static final int EXCLUSIVE_MINIMUM_FIELD_NUMBER = 14;
     private boolean exclusiveMinimum_;
     /**
-     * <code>bool exclusive_minimum = 14[json_name = "exclusiveMinimum"];</code>
+     * <code>bool exclusive_minimum = 14 [json_name = "exclusiveMinimum"];</code>
+     * @return The exclusiveMinimum.
      */
+    @java.lang.Override
     public boolean getExclusiveMinimum() {
       return exclusiveMinimum_;
     }
@@ -18301,8 +19971,10 @@ public final class Openapiv2 {
     public static final int MAX_LENGTH_FIELD_NUMBER = 15;
     private long maxLength_;
     /**
-     * <code>uint64 max_length = 15[json_name = "maxLength"];</code>
+     * <code>uint64 max_length = 15 [json_name = "maxLength"];</code>
+     * @return The maxLength.
      */
+    @java.lang.Override
     public long getMaxLength() {
       return maxLength_;
     }
@@ -18310,8 +19982,10 @@ public final class Openapiv2 {
     public static final int MIN_LENGTH_FIELD_NUMBER = 16;
     private long minLength_;
     /**
-     * <code>uint64 min_length = 16[json_name = "minLength"];</code>
+     * <code>uint64 min_length = 16 [json_name = "minLength"];</code>
+     * @return The minLength.
      */
+    @java.lang.Override
     public long getMinLength() {
       return minLength_;
     }
@@ -18319,8 +19993,10 @@ public final class Openapiv2 {
     public static final int PATTERN_FIELD_NUMBER = 17;
     private volatile java.lang.Object pattern_;
     /**
-     * <code>string pattern = 17[json_name = "pattern"];</code>
+     * <code>string pattern = 17 [json_name = "pattern"];</code>
+     * @return The pattern.
      */
+    @java.lang.Override
     public java.lang.String getPattern() {
       java.lang.Object ref = pattern_;
       if (ref instanceof java.lang.String) {
@@ -18334,8 +20010,10 @@ public final class Openapiv2 {
       }
     }
     /**
-     * <code>string pattern = 17[json_name = "pattern"];</code>
+     * <code>string pattern = 17 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPatternBytes() {
       java.lang.Object ref = pattern_;
@@ -18353,8 +20031,10 @@ public final class Openapiv2 {
     public static final int MAX_ITEMS_FIELD_NUMBER = 20;
     private long maxItems_;
     /**
-     * <code>uint64 max_items = 20[json_name = "maxItems"];</code>
+     * <code>uint64 max_items = 20 [json_name = "maxItems"];</code>
+     * @return The maxItems.
      */
+    @java.lang.Override
     public long getMaxItems() {
       return maxItems_;
     }
@@ -18362,8 +20042,10 @@ public final class Openapiv2 {
     public static final int MIN_ITEMS_FIELD_NUMBER = 21;
     private long minItems_;
     /**
-     * <code>uint64 min_items = 21[json_name = "minItems"];</code>
+     * <code>uint64 min_items = 21 [json_name = "minItems"];</code>
+     * @return The minItems.
      */
+    @java.lang.Override
     public long getMinItems() {
       return minItems_;
     }
@@ -18371,8 +20053,10 @@ public final class Openapiv2 {
     public static final int UNIQUE_ITEMS_FIELD_NUMBER = 22;
     private boolean uniqueItems_;
     /**
-     * <code>bool unique_items = 22[json_name = "uniqueItems"];</code>
+     * <code>bool unique_items = 22 [json_name = "uniqueItems"];</code>
+     * @return The uniqueItems.
      */
+    @java.lang.Override
     public boolean getUniqueItems() {
       return uniqueItems_;
     }
@@ -18380,8 +20064,10 @@ public final class Openapiv2 {
     public static final int MAX_PROPERTIES_FIELD_NUMBER = 24;
     private long maxProperties_;
     /**
-     * <code>uint64 max_properties = 24[json_name = "maxProperties"];</code>
+     * <code>uint64 max_properties = 24 [json_name = "maxProperties"];</code>
+     * @return The maxProperties.
      */
+    @java.lang.Override
     public long getMaxProperties() {
       return maxProperties_;
     }
@@ -18389,8 +20075,10 @@ public final class Openapiv2 {
     public static final int MIN_PROPERTIES_FIELD_NUMBER = 25;
     private long minProperties_;
     /**
-     * <code>uint64 min_properties = 25[json_name = "minProperties"];</code>
+     * <code>uint64 min_properties = 25 [json_name = "minProperties"];</code>
+     * @return The minProperties.
      */
+    @java.lang.Override
     public long getMinProperties() {
       return minProperties_;
     }
@@ -18398,26 +20086,32 @@ public final class Openapiv2 {
     public static final int REQUIRED_FIELD_NUMBER = 26;
     private com.google.protobuf.LazyStringList required_;
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @return A list containing the required.
      */
     public com.google.protobuf.ProtocolStringList
         getRequiredList() {
       return required_;
     }
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @return The count of required.
      */
     public int getRequiredCount() {
       return required_.size();
     }
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @param index The index of the element to return.
+     * @return The required at the given index.
      */
     public java.lang.String getRequired(int index) {
       return required_.get(index);
     }
     /**
-     * <code>repeated string required = 26[json_name = "required"];</code>
+     * <code>repeated string required = 26 [json_name = "required"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the required at the given index.
      */
     public com.google.protobuf.ByteString
         getRequiredBytes(int index) {
@@ -18431,7 +20125,8 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @return A list containing the array.
      */
     public com.google.protobuf.ProtocolStringList
         getArrayList() {
@@ -18442,7 +20137,8 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @return The count of array.
      */
     public int getArrayCount() {
       return array_.size();
@@ -18452,7 +20148,9 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @param index The index of the element to return.
+     * @return The array at the given index.
      */
     public java.lang.String getArray(int index) {
       return array_.get(index);
@@ -18462,7 +20160,9 @@ public final class Openapiv2 {
      * Items in 'array' must be unique.
      * </pre>
      *
-     * <code>repeated string array = 34[json_name = "array"];</code>
+     * <code>repeated string array = 34 [json_name = "array"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the array at the given index.
      */
     public com.google.protobuf.ByteString
         getArrayBytes(int index) {
@@ -18482,34 +20182,46 @@ public final class Openapiv2 {
               }
             };
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @return A list containing the type.
      */
+    @java.lang.Override
     public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes> getTypeList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes>(type_, type_converter_);
     }
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @return The count of type.
      */
+    @java.lang.Override
     public int getTypeCount() {
       return type_.size();
     }
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @param index The index of the element to return.
+     * @return The type at the given index.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes getType(int index) {
       return type_converter_.convert(type_.get(index));
     }
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @return A list containing the enum numeric values on the wire for type.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Integer>
     getTypeValueList() {
       return type_;
     }
     /**
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of type at the given index.
      */
+    @java.lang.Override
     public int getTypeValue(int index) {
       return type_.get(index);
     }
@@ -18522,8 +20234,10 @@ public final class Openapiv2 {
      * `Format`
      * </pre>
      *
-     * <code>string format = 36[json_name = "format"];</code>
+     * <code>string format = 36 [json_name = "format"];</code>
+     * @return The format.
      */
+    @java.lang.Override
     public java.lang.String getFormat() {
       java.lang.Object ref = format_;
       if (ref instanceof java.lang.String) {
@@ -18541,8 +20255,10 @@ public final class Openapiv2 {
      * `Format`
      * </pre>
      *
-     * <code>string format = 36[json_name = "format"];</code>
+     * <code>string format = 36 [json_name = "format"];</code>
+     * @return The bytes for format.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFormatBytes() {
       java.lang.Object ref = format_;
@@ -18564,7 +20280,8 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @return A list containing the enum.
      */
     public com.google.protobuf.ProtocolStringList
         getEnumList() {
@@ -18575,7 +20292,8 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @return The count of enum.
      */
     public int getEnumCount() {
       return enum_.size();
@@ -18585,7 +20303,9 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @param index The index of the element to return.
+     * @return The enum at the given index.
      */
     public java.lang.String getEnum(int index) {
       return enum_.get(index);
@@ -18595,11 +20315,132 @@ public final class Openapiv2 {
      * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
      * </pre>
      *
-     * <code>repeated string enum = 46[json_name = "enum"];</code>
+     * <code>repeated string enum = 46 [json_name = "enum"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the enum at the given index.
      */
     public com.google.protobuf.ByteString
         getEnumBytes(int index) {
       return enum_.getByteString(index);
+    }
+
+    public static final int FIELD_CONFIGURATION_FIELD_NUMBER = 1001;
+    private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration fieldConfiguration_;
+    /**
+     * <pre>
+     * Additional field level properties used when generating the OpenAPI v2 file.
+     * </pre>
+     *
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+     * @return Whether the fieldConfiguration field is set.
+     */
+    @java.lang.Override
+    public boolean hasFieldConfiguration() {
+      return fieldConfiguration_ != null;
+    }
+    /**
+     * <pre>
+     * Additional field level properties used when generating the OpenAPI v2 file.
+     * </pre>
+     *
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+     * @return The fieldConfiguration.
+     */
+    @java.lang.Override
+    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration getFieldConfiguration() {
+      return fieldConfiguration_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.getDefaultInstance() : fieldConfiguration_;
+    }
+    /**
+     * <pre>
+     * Additional field level properties used when generating the OpenAPI v2 file.
+     * </pre>
+     *
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+     */
+    @java.lang.Override
+    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder getFieldConfigurationOrBuilder() {
+      return getFieldConfiguration();
+    }
+
+    public static final int EXTENSIONS_FIELD_NUMBER = 48;
+    private static final class ExtensionsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.Value> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.Value>newDefaultInstance(
+                  grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_ExtensionsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Value.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.Value> extensions_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+    internalGetExtensions() {
+      if (extensions_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ExtensionsDefaultEntryHolder.defaultEntry);
+      }
+      return extensions_;
+    }
+
+    public int getExtensionsCount() {
+      return internalGetExtensions().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+
+    @java.lang.Override
+    public boolean containsExtensions(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetExtensions().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getExtensionsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
+      return getExtensionsMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
+      return internalGetExtensions().getMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Value getExtensionsOrDefault(
+        java.lang.String key,
+        com.google.protobuf.Value defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+          internalGetExtensions().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Value getExtensionsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+          internalGetExtensions().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18617,34 +20458,34 @@ public final class Openapiv2 {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ref_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ref_);
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
       }
-      if (!getDefaultBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, default_);
       }
       if (readOnly_ != false) {
         output.writeBool(8, readOnly_);
       }
-      if (!getExampleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, example_);
       }
-      if (multipleOf_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(multipleOf_) != 0) {
         output.writeDouble(10, multipleOf_);
       }
-      if (maximum_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(maximum_) != 0) {
         output.writeDouble(11, maximum_);
       }
       if (exclusiveMaximum_ != false) {
         output.writeBool(12, exclusiveMaximum_);
       }
-      if (minimum_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(minimum_) != 0) {
         output.writeDouble(13, minimum_);
       }
       if (exclusiveMinimum_ != false) {
@@ -18656,7 +20497,7 @@ public final class Openapiv2 {
       if (minLength_ != 0L) {
         output.writeUInt64(16, minLength_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, pattern_);
       }
       if (maxItems_ != 0L) {
@@ -18687,11 +20528,20 @@ public final class Openapiv2 {
       for (int i = 0; i < type_.size(); i++) {
         output.writeEnumNoTag(type_.get(i));
       }
-      if (!getFormatBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 36, format_);
       }
       for (int i = 0; i < enum_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 46, enum_.getRaw(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetExtensions(),
+          ExtensionsDefaultEntryHolder.defaultEntry,
+          48);
+      if (fieldConfiguration_ != null) {
+        output.writeMessage(1001, getFieldConfiguration());
       }
       unknownFields.writeTo(output);
     }
@@ -18702,30 +20552,30 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ref_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ref_);
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
       }
-      if (!getDefaultBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, default_);
       }
       if (readOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, readOnly_);
       }
-      if (!getExampleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, example_);
       }
-      if (multipleOf_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(multipleOf_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(10, multipleOf_);
       }
-      if (maximum_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(maximum_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(11, maximum_);
       }
@@ -18733,7 +20583,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, exclusiveMaximum_);
       }
-      if (minimum_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(minimum_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(13, minimum_);
       }
@@ -18749,7 +20599,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(16, minLength_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, pattern_);
       }
       if (maxItems_ != 0L) {
@@ -18800,7 +20650,7 @@ public final class Openapiv2 {
             .computeUInt32SizeNoTag(dataSize);
         }typeMemoizedSerializedSize = dataSize;
       }
-      if (!getFormatBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, format_);
       }
       {
@@ -18810,6 +20660,20 @@ public final class Openapiv2 {
         }
         size += dataSize;
         size += 2 * getEnumList().size();
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
+           : internalGetExtensions().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+        extensions__ = ExtensionsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(48, extensions__);
+      }
+      if (fieldConfiguration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1001, getFieldConfiguration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18826,62 +20690,65 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema) obj;
 
-      boolean result = true;
-      result = result && getRef()
-          .equals(other.getRef());
-      result = result && getTitle()
-          .equals(other.getTitle());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getDefault()
-          .equals(other.getDefault());
-      result = result && (getReadOnly()
-          == other.getReadOnly());
-      result = result && getExample()
-          .equals(other.getExample());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getMultipleOf())
-          == java.lang.Double.doubleToLongBits(
-              other.getMultipleOf()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getMaximum())
-          == java.lang.Double.doubleToLongBits(
-              other.getMaximum()));
-      result = result && (getExclusiveMaximum()
-          == other.getExclusiveMaximum());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getMinimum())
-          == java.lang.Double.doubleToLongBits(
-              other.getMinimum()));
-      result = result && (getExclusiveMinimum()
-          == other.getExclusiveMinimum());
-      result = result && (getMaxLength()
-          == other.getMaxLength());
-      result = result && (getMinLength()
-          == other.getMinLength());
-      result = result && getPattern()
-          .equals(other.getPattern());
-      result = result && (getMaxItems()
-          == other.getMaxItems());
-      result = result && (getMinItems()
-          == other.getMinItems());
-      result = result && (getUniqueItems()
-          == other.getUniqueItems());
-      result = result && (getMaxProperties()
-          == other.getMaxProperties());
-      result = result && (getMinProperties()
-          == other.getMinProperties());
-      result = result && getRequiredList()
-          .equals(other.getRequiredList());
-      result = result && getArrayList()
-          .equals(other.getArrayList());
-      result = result && type_.equals(other.type_);
-      result = result && getFormat()
-          .equals(other.getFormat());
-      result = result && getEnumList()
-          .equals(other.getEnumList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRef()
+          .equals(other.getRef())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDefault()
+          .equals(other.getDefault())) return false;
+      if (getReadOnly()
+          != other.getReadOnly()) return false;
+      if (!getExample()
+          .equals(other.getExample())) return false;
+      if (java.lang.Double.doubleToLongBits(getMultipleOf())
+          != java.lang.Double.doubleToLongBits(
+              other.getMultipleOf())) return false;
+      if (java.lang.Double.doubleToLongBits(getMaximum())
+          != java.lang.Double.doubleToLongBits(
+              other.getMaximum())) return false;
+      if (getExclusiveMaximum()
+          != other.getExclusiveMaximum()) return false;
+      if (java.lang.Double.doubleToLongBits(getMinimum())
+          != java.lang.Double.doubleToLongBits(
+              other.getMinimum())) return false;
+      if (getExclusiveMinimum()
+          != other.getExclusiveMinimum()) return false;
+      if (getMaxLength()
+          != other.getMaxLength()) return false;
+      if (getMinLength()
+          != other.getMinLength()) return false;
+      if (!getPattern()
+          .equals(other.getPattern())) return false;
+      if (getMaxItems()
+          != other.getMaxItems()) return false;
+      if (getMinItems()
+          != other.getMinItems()) return false;
+      if (getUniqueItems()
+          != other.getUniqueItems()) return false;
+      if (getMaxProperties()
+          != other.getMaxProperties()) return false;
+      if (getMinProperties()
+          != other.getMinProperties()) return false;
+      if (!getRequiredList()
+          .equals(other.getRequiredList())) return false;
+      if (!getArrayList()
+          .equals(other.getArrayList())) return false;
+      if (!type_.equals(other.type_)) return false;
+      if (!getFormat()
+          .equals(other.getFormat())) return false;
+      if (!getEnumList()
+          .equals(other.getEnumList())) return false;
+      if (hasFieldConfiguration() != other.hasFieldConfiguration()) return false;
+      if (hasFieldConfiguration()) {
+        if (!getFieldConfiguration()
+            .equals(other.getFieldConfiguration())) return false;
+      }
+      if (!internalGetExtensions().equals(
+          other.internalGetExtensions())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18959,6 +20826,14 @@ public final class Openapiv2 {
       if (getEnumCount() > 0) {
         hash = (37 * hash) + ENUM_FIELD_NUMBER;
         hash = (53 * hash) + getEnumList().hashCode();
+      }
+      if (hasFieldConfiguration()) {
+        hash = (37 * hash) + FIELD_CONFIGURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldConfiguration().hashCode();
+      }
+      if (!internalGetExtensions().getMap().isEmpty()) {
+        hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetExtensions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19091,6 +20966,28 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 48:
+            return internalGetExtensions();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 48:
+            return internalGetMutableExtensions();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -19156,15 +21053,22 @@ public final class Openapiv2 {
         minProperties_ = 0L;
 
         required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00000001);
         array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         type_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         format_ = "";
 
         enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (fieldConfigurationBuilder_ == null) {
+          fieldConfiguration_ = null;
+        } else {
+          fieldConfiguration_ = null;
+          fieldConfigurationBuilder_ = null;
+        }
+        internalGetMutableExtensions().clear();
         return this;
       }
 
@@ -19192,7 +21096,6 @@ public final class Openapiv2 {
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema buildPartial() {
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.ref_ = ref_;
         result.title_ = title_;
         result.description_ = description_;
@@ -19212,63 +21115,69 @@ public final class Openapiv2 {
         result.uniqueItems_ = uniqueItems_;
         result.maxProperties_ = maxProperties_;
         result.minProperties_ = minProperties_;
-        if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           required_ = required_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.required_ = required_;
-        if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           array_ = array_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.array_ = array_;
-        if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           type_ = java.util.Collections.unmodifiableList(type_);
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.type_ = type_;
         result.format_ = format_;
-        if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           enum_ = enum_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.enum_ = enum_;
-        result.bitField0_ = to_bitField0_;
+        if (fieldConfigurationBuilder_ == null) {
+          result.fieldConfiguration_ = fieldConfiguration_;
+        } else {
+          result.fieldConfiguration_ = fieldConfigurationBuilder_.build();
+        }
+        result.extensions_ = internalGetExtensions();
+        result.extensions_.makeImmutable();
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19348,7 +21257,7 @@ public final class Openapiv2 {
         if (!other.required_.isEmpty()) {
           if (required_.isEmpty()) {
             required_ = other.required_;
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureRequiredIsMutable();
             required_.addAll(other.required_);
@@ -19358,7 +21267,7 @@ public final class Openapiv2 {
         if (!other.array_.isEmpty()) {
           if (array_.isEmpty()) {
             array_ = other.array_;
-            bitField0_ = (bitField0_ & ~0x00100000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureArrayIsMutable();
             array_.addAll(other.array_);
@@ -19368,7 +21277,7 @@ public final class Openapiv2 {
         if (!other.type_.isEmpty()) {
           if (type_.isEmpty()) {
             type_ = other.type_;
-            bitField0_ = (bitField0_ & ~0x00200000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTypeIsMutable();
             type_.addAll(other.type_);
@@ -19382,13 +21291,18 @@ public final class Openapiv2 {
         if (!other.enum_.isEmpty()) {
           if (enum_.isEmpty()) {
             enum_ = other.enum_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureEnumIsMutable();
             enum_.addAll(other.enum_);
           }
           onChanged();
         }
+        if (other.hasFieldConfiguration()) {
+          mergeFieldConfiguration(other.getFieldConfiguration());
+        }
+        internalGetMutableExtensions().mergeFrom(
+            other.internalGetExtensions());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -19430,7 +21344,8 @@ public final class Openapiv2 {
        *  `ref: ".google.protobuf.Timestamp"`.
        * </pre>
        *
-       * <code>string ref = 3[json_name = "ref"];</code>
+       * <code>string ref = 3 [json_name = "ref"];</code>
+       * @return The ref.
        */
       public java.lang.String getRef() {
         java.lang.Object ref = ref_;
@@ -19454,7 +21369,8 @@ public final class Openapiv2 {
        *  `ref: ".google.protobuf.Timestamp"`.
        * </pre>
        *
-       * <code>string ref = 3[json_name = "ref"];</code>
+       * <code>string ref = 3 [json_name = "ref"];</code>
+       * @return The bytes for ref.
        */
       public com.google.protobuf.ByteString
           getRefBytes() {
@@ -19479,7 +21395,9 @@ public final class Openapiv2 {
        *  `ref: ".google.protobuf.Timestamp"`.
        * </pre>
        *
-       * <code>string ref = 3[json_name = "ref"];</code>
+       * <code>string ref = 3 [json_name = "ref"];</code>
+       * @param value The ref to set.
+       * @return This builder for chaining.
        */
       public Builder setRef(
           java.lang.String value) {
@@ -19501,7 +21419,8 @@ public final class Openapiv2 {
        *  `ref: ".google.protobuf.Timestamp"`.
        * </pre>
        *
-       * <code>string ref = 3[json_name = "ref"];</code>
+       * <code>string ref = 3 [json_name = "ref"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRef() {
         
@@ -19519,7 +21438,9 @@ public final class Openapiv2 {
        *  `ref: ".google.protobuf.Timestamp"`.
        * </pre>
        *
-       * <code>string ref = 3[json_name = "ref"];</code>
+       * <code>string ref = 3 [json_name = "ref"];</code>
+       * @param value The bytes for ref to set.
+       * @return This builder for chaining.
        */
       public Builder setRefBytes(
           com.google.protobuf.ByteString value) {
@@ -19539,7 +21460,8 @@ public final class Openapiv2 {
        * The title of the schema.
        * </pre>
        *
-       * <code>string title = 5[json_name = "title"];</code>
+       * <code>string title = 5 [json_name = "title"];</code>
+       * @return The title.
        */
       public java.lang.String getTitle() {
         java.lang.Object ref = title_;
@@ -19558,7 +21480,8 @@ public final class Openapiv2 {
        * The title of the schema.
        * </pre>
        *
-       * <code>string title = 5[json_name = "title"];</code>
+       * <code>string title = 5 [json_name = "title"];</code>
+       * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
           getTitleBytes() {
@@ -19578,7 +21501,9 @@ public final class Openapiv2 {
        * The title of the schema.
        * </pre>
        *
-       * <code>string title = 5[json_name = "title"];</code>
+       * <code>string title = 5 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
        */
       public Builder setTitle(
           java.lang.String value) {
@@ -19595,7 +21520,8 @@ public final class Openapiv2 {
        * The title of the schema.
        * </pre>
        *
-       * <code>string title = 5[json_name = "title"];</code>
+       * <code>string title = 5 [json_name = "title"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTitle() {
         
@@ -19608,7 +21534,9 @@ public final class Openapiv2 {
        * The title of the schema.
        * </pre>
        *
-       * <code>string title = 5[json_name = "title"];</code>
+       * <code>string title = 5 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
@@ -19628,7 +21556,8 @@ public final class Openapiv2 {
        * A short description of the schema.
        * </pre>
        *
-       * <code>string description = 6[json_name = "description"];</code>
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -19647,7 +21576,8 @@ public final class Openapiv2 {
        * A short description of the schema.
        * </pre>
        *
-       * <code>string description = 6[json_name = "description"];</code>
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -19667,7 +21597,9 @@ public final class Openapiv2 {
        * A short description of the schema.
        * </pre>
        *
-       * <code>string description = 6[json_name = "description"];</code>
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -19684,7 +21616,8 @@ public final class Openapiv2 {
        * A short description of the schema.
        * </pre>
        *
-       * <code>string description = 6[json_name = "description"];</code>
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -19697,7 +21630,9 @@ public final class Openapiv2 {
        * A short description of the schema.
        * </pre>
        *
-       * <code>string description = 6[json_name = "description"];</code>
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -19713,7 +21648,8 @@ public final class Openapiv2 {
 
       private java.lang.Object default_ = "";
       /**
-       * <code>string default = 7[json_name = "default"];</code>
+       * <code>string default = 7 [json_name = "default"];</code>
+       * @return The default.
        */
       public java.lang.String getDefault() {
         java.lang.Object ref = default_;
@@ -19728,7 +21664,8 @@ public final class Openapiv2 {
         }
       }
       /**
-       * <code>string default = 7[json_name = "default"];</code>
+       * <code>string default = 7 [json_name = "default"];</code>
+       * @return The bytes for default.
        */
       public com.google.protobuf.ByteString
           getDefaultBytes() {
@@ -19744,7 +21681,9 @@ public final class Openapiv2 {
         }
       }
       /**
-       * <code>string default = 7[json_name = "default"];</code>
+       * <code>string default = 7 [json_name = "default"];</code>
+       * @param value The default to set.
+       * @return This builder for chaining.
        */
       public Builder setDefault(
           java.lang.String value) {
@@ -19757,7 +21696,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>string default = 7[json_name = "default"];</code>
+       * <code>string default = 7 [json_name = "default"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDefault() {
         
@@ -19766,7 +21706,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>string default = 7[json_name = "default"];</code>
+       * <code>string default = 7 [json_name = "default"];</code>
+       * @param value The bytes for default to set.
+       * @return This builder for chaining.
        */
       public Builder setDefaultBytes(
           com.google.protobuf.ByteString value) {
@@ -19782,13 +21724,17 @@ public final class Openapiv2 {
 
       private boolean readOnly_ ;
       /**
-       * <code>bool read_only = 8[json_name = "readOnly"];</code>
+       * <code>bool read_only = 8 [json_name = "readOnly"];</code>
+       * @return The readOnly.
        */
+      @java.lang.Override
       public boolean getReadOnly() {
         return readOnly_;
       }
       /**
-       * <code>bool read_only = 8[json_name = "readOnly"];</code>
+       * <code>bool read_only = 8 [json_name = "readOnly"];</code>
+       * @param value The readOnly to set.
+       * @return This builder for chaining.
        */
       public Builder setReadOnly(boolean value) {
         
@@ -19797,7 +21743,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>bool read_only = 8[json_name = "readOnly"];</code>
+       * <code>bool read_only = 8 [json_name = "readOnly"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearReadOnly() {
         
@@ -19814,7 +21761,8 @@ public final class Openapiv2 {
        * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
        * </pre>
        *
-       * <code>string example = 9[json_name = "example"];</code>
+       * <code>string example = 9 [json_name = "example"];</code>
+       * @return The example.
        */
       public java.lang.String getExample() {
         java.lang.Object ref = example_;
@@ -19835,7 +21783,8 @@ public final class Openapiv2 {
        * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
        * </pre>
        *
-       * <code>string example = 9[json_name = "example"];</code>
+       * <code>string example = 9 [json_name = "example"];</code>
+       * @return The bytes for example.
        */
       public com.google.protobuf.ByteString
           getExampleBytes() {
@@ -19857,7 +21806,9 @@ public final class Openapiv2 {
        * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
        * </pre>
        *
-       * <code>string example = 9[json_name = "example"];</code>
+       * <code>string example = 9 [json_name = "example"];</code>
+       * @param value The example to set.
+       * @return This builder for chaining.
        */
       public Builder setExample(
           java.lang.String value) {
@@ -19876,7 +21827,8 @@ public final class Openapiv2 {
        * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
        * </pre>
        *
-       * <code>string example = 9[json_name = "example"];</code>
+       * <code>string example = 9 [json_name = "example"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExample() {
         
@@ -19891,7 +21843,9 @@ public final class Openapiv2 {
        * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
        * </pre>
        *
-       * <code>string example = 9[json_name = "example"];</code>
+       * <code>string example = 9 [json_name = "example"];</code>
+       * @param value The bytes for example to set.
+       * @return This builder for chaining.
        */
       public Builder setExampleBytes(
           com.google.protobuf.ByteString value) {
@@ -19907,13 +21861,17 @@ public final class Openapiv2 {
 
       private double multipleOf_ ;
       /**
-       * <code>double multiple_of = 10[json_name = "multipleOf"];</code>
+       * <code>double multiple_of = 10 [json_name = "multipleOf"];</code>
+       * @return The multipleOf.
        */
+      @java.lang.Override
       public double getMultipleOf() {
         return multipleOf_;
       }
       /**
-       * <code>double multiple_of = 10[json_name = "multipleOf"];</code>
+       * <code>double multiple_of = 10 [json_name = "multipleOf"];</code>
+       * @param value The multipleOf to set.
+       * @return This builder for chaining.
        */
       public Builder setMultipleOf(double value) {
         
@@ -19922,7 +21880,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>double multiple_of = 10[json_name = "multipleOf"];</code>
+       * <code>double multiple_of = 10 [json_name = "multipleOf"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMultipleOf() {
         
@@ -19934,22 +21893,26 @@ public final class Openapiv2 {
       private double maximum_ ;
       /**
        * <pre>
-       * Maximum represents an inclusive upper limit for a numeric instance. The 
-       * value of MUST be a number, 
+       * Maximum represents an inclusive upper limit for a numeric instance. The
+       * value of MUST be a number,
        * </pre>
        *
-       * <code>double maximum = 11[json_name = "maximum"];</code>
+       * <code>double maximum = 11 [json_name = "maximum"];</code>
+       * @return The maximum.
        */
+      @java.lang.Override
       public double getMaximum() {
         return maximum_;
       }
       /**
        * <pre>
-       * Maximum represents an inclusive upper limit for a numeric instance. The 
-       * value of MUST be a number, 
+       * Maximum represents an inclusive upper limit for a numeric instance. The
+       * value of MUST be a number,
        * </pre>
        *
-       * <code>double maximum = 11[json_name = "maximum"];</code>
+       * <code>double maximum = 11 [json_name = "maximum"];</code>
+       * @param value The maximum to set.
+       * @return This builder for chaining.
        */
       public Builder setMaximum(double value) {
         
@@ -19959,11 +21922,12 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * Maximum represents an inclusive upper limit for a numeric instance. The 
-       * value of MUST be a number, 
+       * Maximum represents an inclusive upper limit for a numeric instance. The
+       * value of MUST be a number,
        * </pre>
        *
-       * <code>double maximum = 11[json_name = "maximum"];</code>
+       * <code>double maximum = 11 [json_name = "maximum"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaximum() {
         
@@ -19974,13 +21938,17 @@ public final class Openapiv2 {
 
       private boolean exclusiveMaximum_ ;
       /**
-       * <code>bool exclusive_maximum = 12[json_name = "exclusiveMaximum"];</code>
+       * <code>bool exclusive_maximum = 12 [json_name = "exclusiveMaximum"];</code>
+       * @return The exclusiveMaximum.
        */
+      @java.lang.Override
       public boolean getExclusiveMaximum() {
         return exclusiveMaximum_;
       }
       /**
-       * <code>bool exclusive_maximum = 12[json_name = "exclusiveMaximum"];</code>
+       * <code>bool exclusive_maximum = 12 [json_name = "exclusiveMaximum"];</code>
+       * @param value The exclusiveMaximum to set.
+       * @return This builder for chaining.
        */
       public Builder setExclusiveMaximum(boolean value) {
         
@@ -19989,7 +21957,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>bool exclusive_maximum = 12[json_name = "exclusiveMaximum"];</code>
+       * <code>bool exclusive_maximum = 12 [json_name = "exclusiveMaximum"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExclusiveMaximum() {
         
@@ -20001,22 +21970,26 @@ public final class Openapiv2 {
       private double minimum_ ;
       /**
        * <pre>
-       * minimum represents an inclusive lower limit for a numeric instance. The 
-       * value of MUST be a number, 
+       * minimum represents an inclusive lower limit for a numeric instance. The
+       * value of MUST be a number,
        * </pre>
        *
-       * <code>double minimum = 13[json_name = "minimum"];</code>
+       * <code>double minimum = 13 [json_name = "minimum"];</code>
+       * @return The minimum.
        */
+      @java.lang.Override
       public double getMinimum() {
         return minimum_;
       }
       /**
        * <pre>
-       * minimum represents an inclusive lower limit for a numeric instance. The 
-       * value of MUST be a number, 
+       * minimum represents an inclusive lower limit for a numeric instance. The
+       * value of MUST be a number,
        * </pre>
        *
-       * <code>double minimum = 13[json_name = "minimum"];</code>
+       * <code>double minimum = 13 [json_name = "minimum"];</code>
+       * @param value The minimum to set.
+       * @return This builder for chaining.
        */
       public Builder setMinimum(double value) {
         
@@ -20026,11 +21999,12 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * minimum represents an inclusive lower limit for a numeric instance. The 
-       * value of MUST be a number, 
+       * minimum represents an inclusive lower limit for a numeric instance. The
+       * value of MUST be a number,
        * </pre>
        *
-       * <code>double minimum = 13[json_name = "minimum"];</code>
+       * <code>double minimum = 13 [json_name = "minimum"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinimum() {
         
@@ -20041,13 +22015,17 @@ public final class Openapiv2 {
 
       private boolean exclusiveMinimum_ ;
       /**
-       * <code>bool exclusive_minimum = 14[json_name = "exclusiveMinimum"];</code>
+       * <code>bool exclusive_minimum = 14 [json_name = "exclusiveMinimum"];</code>
+       * @return The exclusiveMinimum.
        */
+      @java.lang.Override
       public boolean getExclusiveMinimum() {
         return exclusiveMinimum_;
       }
       /**
-       * <code>bool exclusive_minimum = 14[json_name = "exclusiveMinimum"];</code>
+       * <code>bool exclusive_minimum = 14 [json_name = "exclusiveMinimum"];</code>
+       * @param value The exclusiveMinimum to set.
+       * @return This builder for chaining.
        */
       public Builder setExclusiveMinimum(boolean value) {
         
@@ -20056,7 +22034,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>bool exclusive_minimum = 14[json_name = "exclusiveMinimum"];</code>
+       * <code>bool exclusive_minimum = 14 [json_name = "exclusiveMinimum"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearExclusiveMinimum() {
         
@@ -20067,13 +22046,17 @@ public final class Openapiv2 {
 
       private long maxLength_ ;
       /**
-       * <code>uint64 max_length = 15[json_name = "maxLength"];</code>
+       * <code>uint64 max_length = 15 [json_name = "maxLength"];</code>
+       * @return The maxLength.
        */
+      @java.lang.Override
       public long getMaxLength() {
         return maxLength_;
       }
       /**
-       * <code>uint64 max_length = 15[json_name = "maxLength"];</code>
+       * <code>uint64 max_length = 15 [json_name = "maxLength"];</code>
+       * @param value The maxLength to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxLength(long value) {
         
@@ -20082,7 +22065,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>uint64 max_length = 15[json_name = "maxLength"];</code>
+       * <code>uint64 max_length = 15 [json_name = "maxLength"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxLength() {
         
@@ -20093,13 +22077,17 @@ public final class Openapiv2 {
 
       private long minLength_ ;
       /**
-       * <code>uint64 min_length = 16[json_name = "minLength"];</code>
+       * <code>uint64 min_length = 16 [json_name = "minLength"];</code>
+       * @return The minLength.
        */
+      @java.lang.Override
       public long getMinLength() {
         return minLength_;
       }
       /**
-       * <code>uint64 min_length = 16[json_name = "minLength"];</code>
+       * <code>uint64 min_length = 16 [json_name = "minLength"];</code>
+       * @param value The minLength to set.
+       * @return This builder for chaining.
        */
       public Builder setMinLength(long value) {
         
@@ -20108,7 +22096,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>uint64 min_length = 16[json_name = "minLength"];</code>
+       * <code>uint64 min_length = 16 [json_name = "minLength"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinLength() {
         
@@ -20119,7 +22108,8 @@ public final class Openapiv2 {
 
       private java.lang.Object pattern_ = "";
       /**
-       * <code>string pattern = 17[json_name = "pattern"];</code>
+       * <code>string pattern = 17 [json_name = "pattern"];</code>
+       * @return The pattern.
        */
       public java.lang.String getPattern() {
         java.lang.Object ref = pattern_;
@@ -20134,7 +22124,8 @@ public final class Openapiv2 {
         }
       }
       /**
-       * <code>string pattern = 17[json_name = "pattern"];</code>
+       * <code>string pattern = 17 [json_name = "pattern"];</code>
+       * @return The bytes for pattern.
        */
       public com.google.protobuf.ByteString
           getPatternBytes() {
@@ -20150,7 +22141,9 @@ public final class Openapiv2 {
         }
       }
       /**
-       * <code>string pattern = 17[json_name = "pattern"];</code>
+       * <code>string pattern = 17 [json_name = "pattern"];</code>
+       * @param value The pattern to set.
+       * @return This builder for chaining.
        */
       public Builder setPattern(
           java.lang.String value) {
@@ -20163,7 +22156,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>string pattern = 17[json_name = "pattern"];</code>
+       * <code>string pattern = 17 [json_name = "pattern"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearPattern() {
         
@@ -20172,7 +22166,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>string pattern = 17[json_name = "pattern"];</code>
+       * <code>string pattern = 17 [json_name = "pattern"];</code>
+       * @param value The bytes for pattern to set.
+       * @return This builder for chaining.
        */
       public Builder setPatternBytes(
           com.google.protobuf.ByteString value) {
@@ -20188,13 +22184,17 @@ public final class Openapiv2 {
 
       private long maxItems_ ;
       /**
-       * <code>uint64 max_items = 20[json_name = "maxItems"];</code>
+       * <code>uint64 max_items = 20 [json_name = "maxItems"];</code>
+       * @return The maxItems.
        */
+      @java.lang.Override
       public long getMaxItems() {
         return maxItems_;
       }
       /**
-       * <code>uint64 max_items = 20[json_name = "maxItems"];</code>
+       * <code>uint64 max_items = 20 [json_name = "maxItems"];</code>
+       * @param value The maxItems to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxItems(long value) {
         
@@ -20203,7 +22203,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>uint64 max_items = 20[json_name = "maxItems"];</code>
+       * <code>uint64 max_items = 20 [json_name = "maxItems"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxItems() {
         
@@ -20214,13 +22215,17 @@ public final class Openapiv2 {
 
       private long minItems_ ;
       /**
-       * <code>uint64 min_items = 21[json_name = "minItems"];</code>
+       * <code>uint64 min_items = 21 [json_name = "minItems"];</code>
+       * @return The minItems.
        */
+      @java.lang.Override
       public long getMinItems() {
         return minItems_;
       }
       /**
-       * <code>uint64 min_items = 21[json_name = "minItems"];</code>
+       * <code>uint64 min_items = 21 [json_name = "minItems"];</code>
+       * @param value The minItems to set.
+       * @return This builder for chaining.
        */
       public Builder setMinItems(long value) {
         
@@ -20229,7 +22234,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>uint64 min_items = 21[json_name = "minItems"];</code>
+       * <code>uint64 min_items = 21 [json_name = "minItems"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinItems() {
         
@@ -20240,13 +22246,17 @@ public final class Openapiv2 {
 
       private boolean uniqueItems_ ;
       /**
-       * <code>bool unique_items = 22[json_name = "uniqueItems"];</code>
+       * <code>bool unique_items = 22 [json_name = "uniqueItems"];</code>
+       * @return The uniqueItems.
        */
+      @java.lang.Override
       public boolean getUniqueItems() {
         return uniqueItems_;
       }
       /**
-       * <code>bool unique_items = 22[json_name = "uniqueItems"];</code>
+       * <code>bool unique_items = 22 [json_name = "uniqueItems"];</code>
+       * @param value The uniqueItems to set.
+       * @return This builder for chaining.
        */
       public Builder setUniqueItems(boolean value) {
         
@@ -20255,7 +22265,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>bool unique_items = 22[json_name = "uniqueItems"];</code>
+       * <code>bool unique_items = 22 [json_name = "uniqueItems"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearUniqueItems() {
         
@@ -20266,13 +22277,17 @@ public final class Openapiv2 {
 
       private long maxProperties_ ;
       /**
-       * <code>uint64 max_properties = 24[json_name = "maxProperties"];</code>
+       * <code>uint64 max_properties = 24 [json_name = "maxProperties"];</code>
+       * @return The maxProperties.
        */
+      @java.lang.Override
       public long getMaxProperties() {
         return maxProperties_;
       }
       /**
-       * <code>uint64 max_properties = 24[json_name = "maxProperties"];</code>
+       * <code>uint64 max_properties = 24 [json_name = "maxProperties"];</code>
+       * @param value The maxProperties to set.
+       * @return This builder for chaining.
        */
       public Builder setMaxProperties(long value) {
         
@@ -20281,7 +22296,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>uint64 max_properties = 24[json_name = "maxProperties"];</code>
+       * <code>uint64 max_properties = 24 [json_name = "maxProperties"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaxProperties() {
         
@@ -20292,13 +22308,17 @@ public final class Openapiv2 {
 
       private long minProperties_ ;
       /**
-       * <code>uint64 min_properties = 25[json_name = "minProperties"];</code>
+       * <code>uint64 min_properties = 25 [json_name = "minProperties"];</code>
+       * @return The minProperties.
        */
+      @java.lang.Override
       public long getMinProperties() {
         return minProperties_;
       }
       /**
-       * <code>uint64 min_properties = 25[json_name = "minProperties"];</code>
+       * <code>uint64 min_properties = 25 [json_name = "minProperties"];</code>
+       * @param value The minProperties to set.
+       * @return This builder for chaining.
        */
       public Builder setMinProperties(long value) {
         
@@ -20307,7 +22327,8 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>uint64 min_properties = 25[json_name = "minProperties"];</code>
+       * <code>uint64 min_properties = 25 [json_name = "minProperties"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinProperties() {
         
@@ -20318,39 +22339,48 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRequiredIsMutable() {
-        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           required_ = new com.google.protobuf.LazyStringArrayList(required_);
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @return A list containing the required.
        */
       public com.google.protobuf.ProtocolStringList
           getRequiredList() {
         return required_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @return The count of required.
        */
       public int getRequiredCount() {
         return required_.size();
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @param index The index of the element to return.
+       * @return The required at the given index.
        */
       public java.lang.String getRequired(int index) {
         return required_.get(index);
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the required at the given index.
        */
       public com.google.protobuf.ByteString
           getRequiredBytes(int index) {
         return required_.getByteString(index);
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @param index The index to set the value at.
+       * @param value The required to set.
+       * @return This builder for chaining.
        */
       public Builder setRequired(
           int index, java.lang.String value) {
@@ -20363,7 +22393,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @param value The required to add.
+       * @return This builder for chaining.
        */
       public Builder addRequired(
           java.lang.String value) {
@@ -20376,7 +22408,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @param values The required to add.
+       * @return This builder for chaining.
        */
       public Builder addAllRequired(
           java.lang.Iterable<java.lang.String> values) {
@@ -20387,16 +22421,19 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequired() {
         required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string required = 26[json_name = "required"];</code>
+       * <code>repeated string required = 26 [json_name = "required"];</code>
+       * @param value The bytes of the required to add.
+       * @return This builder for chaining.
        */
       public Builder addRequiredBytes(
           com.google.protobuf.ByteString value) {
@@ -20412,9 +22449,9 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureArrayIsMutable() {
-        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           array_ = new com.google.protobuf.LazyStringArrayList(array_);
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -20422,7 +22459,8 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @return A list containing the array.
        */
       public com.google.protobuf.ProtocolStringList
           getArrayList() {
@@ -20433,7 +22471,8 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @return The count of array.
        */
       public int getArrayCount() {
         return array_.size();
@@ -20443,7 +22482,9 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @param index The index of the element to return.
+       * @return The array at the given index.
        */
       public java.lang.String getArray(int index) {
         return array_.get(index);
@@ -20453,7 +22494,9 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the array at the given index.
        */
       public com.google.protobuf.ByteString
           getArrayBytes(int index) {
@@ -20464,7 +22507,10 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @param index The index to set the value at.
+       * @param value The array to set.
+       * @return This builder for chaining.
        */
       public Builder setArray(
           int index, java.lang.String value) {
@@ -20481,7 +22527,9 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @param value The array to add.
+       * @return This builder for chaining.
        */
       public Builder addArray(
           java.lang.String value) {
@@ -20498,7 +22546,9 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @param values The array to add.
+       * @return This builder for chaining.
        */
       public Builder addAllArray(
           java.lang.Iterable<java.lang.String> values) {
@@ -20513,11 +22563,12 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearArray() {
         array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -20526,7 +22577,9 @@ public final class Openapiv2 {
        * Items in 'array' must be unique.
        * </pre>
        *
-       * <code>repeated string array = 34[json_name = "array"];</code>
+       * <code>repeated string array = 34 [json_name = "array"];</code>
+       * @param value The bytes of the array to add.
+       * @return This builder for chaining.
        */
       public Builder addArrayBytes(
           com.google.protobuf.ByteString value) {
@@ -20543,32 +22596,39 @@ public final class Openapiv2 {
       private java.util.List<java.lang.Integer> type_ =
         java.util.Collections.emptyList();
       private void ensureTypeIsMutable() {
-        if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           type_ = new java.util.ArrayList<java.lang.Integer>(type_);
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00000004;
         }
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @return A list containing the type.
        */
       public java.util.List<grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes> getTypeList() {
         return new com.google.protobuf.Internal.ListAdapter<
             java.lang.Integer, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes>(type_, type_converter_);
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @return The count of type.
        */
       public int getTypeCount() {
         return type_.size();
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param index The index of the element to return.
+       * @return The type at the given index.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes getType(int index) {
         return type_converter_.convert(type_.get(index));
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param index The index to set the value at.
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           int index, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes value) {
@@ -20581,7 +22641,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param value The type to add.
+       * @return This builder for chaining.
        */
       public Builder addType(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes value) {
         if (value == null) {
@@ -20593,7 +22655,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param values The type to add.
+       * @return This builder for chaining.
        */
       public Builder addAllType(
           java.lang.Iterable<? extends grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes> values) {
@@ -20605,29 +22669,36 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         type_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @return A list containing the enum numeric values on the wire for type.
        */
       public java.util.List<java.lang.Integer>
       getTypeValueList() {
         return java.util.Collections.unmodifiableList(type_);
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of type at the given index.
        */
       public int getTypeValue(int index) {
         return type_.get(index);
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of type at the given index.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(
           int index, int value) {
@@ -20637,7 +22708,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to add.
+       * @return This builder for chaining.
        */
       public Builder addTypeValue(int value) {
         ensureTypeIsMutable();
@@ -20646,7 +22719,9 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35[json_name = "type"];</code>
+       * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes type = 35 [json_name = "type"];</code>
+       * @param values The enum numeric values on the wire for type to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTypeValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -20664,7 +22739,8 @@ public final class Openapiv2 {
        * `Format`
        * </pre>
        *
-       * <code>string format = 36[json_name = "format"];</code>
+       * <code>string format = 36 [json_name = "format"];</code>
+       * @return The format.
        */
       public java.lang.String getFormat() {
         java.lang.Object ref = format_;
@@ -20683,7 +22759,8 @@ public final class Openapiv2 {
        * `Format`
        * </pre>
        *
-       * <code>string format = 36[json_name = "format"];</code>
+       * <code>string format = 36 [json_name = "format"];</code>
+       * @return The bytes for format.
        */
       public com.google.protobuf.ByteString
           getFormatBytes() {
@@ -20703,7 +22780,9 @@ public final class Openapiv2 {
        * `Format`
        * </pre>
        *
-       * <code>string format = 36[json_name = "format"];</code>
+       * <code>string format = 36 [json_name = "format"];</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormat(
           java.lang.String value) {
@@ -20720,7 +22799,8 @@ public final class Openapiv2 {
        * `Format`
        * </pre>
        *
-       * <code>string format = 36[json_name = "format"];</code>
+       * <code>string format = 36 [json_name = "format"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFormat() {
         
@@ -20733,7 +22813,9 @@ public final class Openapiv2 {
        * `Format`
        * </pre>
        *
-       * <code>string format = 36[json_name = "format"];</code>
+       * <code>string format = 36 [json_name = "format"];</code>
+       * @param value The bytes for format to set.
+       * @return This builder for chaining.
        */
       public Builder setFormatBytes(
           com.google.protobuf.ByteString value) {
@@ -20749,9 +22831,9 @@ public final class Openapiv2 {
 
       private com.google.protobuf.LazyStringList enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureEnumIsMutable() {
-        if (!((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           enum_ = new com.google.protobuf.LazyStringArrayList(enum_);
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -20759,7 +22841,8 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @return A list containing the enum.
        */
       public com.google.protobuf.ProtocolStringList
           getEnumList() {
@@ -20770,7 +22853,8 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @return The count of enum.
        */
       public int getEnumCount() {
         return enum_.size();
@@ -20780,7 +22864,9 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @param index The index of the element to return.
+       * @return The enum at the given index.
        */
       public java.lang.String getEnum(int index) {
         return enum_.get(index);
@@ -20790,7 +22876,9 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the enum at the given index.
        */
       public com.google.protobuf.ByteString
           getEnumBytes(int index) {
@@ -20801,7 +22889,10 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum to set.
+       * @return This builder for chaining.
        */
       public Builder setEnum(
           int index, java.lang.String value) {
@@ -20818,7 +22909,9 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @param value The enum to add.
+       * @return This builder for chaining.
        */
       public Builder addEnum(
           java.lang.String value) {
@@ -20835,7 +22928,9 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @param values The enum to add.
+       * @return This builder for chaining.
        */
       public Builder addAllEnum(
           java.lang.Iterable<java.lang.String> values) {
@@ -20850,11 +22945,12 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearEnum() {
         enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -20863,7 +22959,9 @@ public final class Openapiv2 {
        * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
        * </pre>
        *
-       * <code>repeated string enum = 46[json_name = "enum"];</code>
+       * <code>repeated string enum = 46 [json_name = "enum"];</code>
+       * @param value The bytes of the enum to add.
+       * @return This builder for chaining.
        */
       public Builder addEnumBytes(
           com.google.protobuf.ByteString value) {
@@ -20876,10 +22974,296 @@ public final class Openapiv2 {
         onChanged();
         return this;
       }
+
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration fieldConfiguration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder> fieldConfigurationBuilder_;
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       * @return Whether the fieldConfiguration field is set.
+       */
+      public boolean hasFieldConfiguration() {
+        return fieldConfigurationBuilder_ != null || fieldConfiguration_ != null;
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       * @return The fieldConfiguration.
+       */
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration getFieldConfiguration() {
+        if (fieldConfigurationBuilder_ == null) {
+          return fieldConfiguration_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.getDefaultInstance() : fieldConfiguration_;
+        } else {
+          return fieldConfigurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      public Builder setFieldConfiguration(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration value) {
+        if (fieldConfigurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fieldConfiguration_ = value;
+          onChanged();
+        } else {
+          fieldConfigurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      public Builder setFieldConfiguration(
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder builderForValue) {
+        if (fieldConfigurationBuilder_ == null) {
+          fieldConfiguration_ = builderForValue.build();
+          onChanged();
+        } else {
+          fieldConfigurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      public Builder mergeFieldConfiguration(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration value) {
+        if (fieldConfigurationBuilder_ == null) {
+          if (fieldConfiguration_ != null) {
+            fieldConfiguration_ =
+              grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.newBuilder(fieldConfiguration_).mergeFrom(value).buildPartial();
+          } else {
+            fieldConfiguration_ = value;
+          }
+          onChanged();
+        } else {
+          fieldConfigurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      public Builder clearFieldConfiguration() {
+        if (fieldConfigurationBuilder_ == null) {
+          fieldConfiguration_ = null;
+          onChanged();
+        } else {
+          fieldConfiguration_ = null;
+          fieldConfigurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder getFieldConfigurationBuilder() {
+        
+        onChanged();
+        return getFieldConfigurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder getFieldConfigurationOrBuilder() {
+        if (fieldConfigurationBuilder_ != null) {
+          return fieldConfigurationBuilder_.getMessageOrBuilder();
+        } else {
+          return fieldConfiguration_ == null ?
+              grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.getDefaultInstance() : fieldConfiguration_;
+        }
+      }
+      /**
+       * <pre>
+       * Additional field level properties used when generating the OpenAPI v2 file.
+       * </pre>
+       *
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration field_configuration = 1001 [json_name = "fieldConfiguration"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder> 
+          getFieldConfigurationFieldBuilder() {
+        if (fieldConfigurationBuilder_ == null) {
+          fieldConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfiguration.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.JSONSchema.FieldConfigurationOrBuilder>(
+                  getFieldConfiguration(),
+                  getParentForChildren(),
+                  isClean());
+          fieldConfiguration_ = null;
+        }
+        return fieldConfigurationBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.Value> extensions_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+      internalGetExtensions() {
+        if (extensions_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ExtensionsDefaultEntryHolder.defaultEntry);
+        }
+        return extensions_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+      internalGetMutableExtensions() {
+        onChanged();;
+        if (extensions_ == null) {
+          extensions_ = com.google.protobuf.MapField.newMapField(
+              ExtensionsDefaultEntryHolder.defaultEntry);
+        }
+        if (!extensions_.isMutable()) {
+          extensions_ = extensions_.copy();
+        }
+        return extensions_;
+      }
+
+      public int getExtensionsCount() {
+        return internalGetExtensions().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+
+      @java.lang.Override
+      public boolean containsExtensions(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetExtensions().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getExtensionsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
+        return getExtensionsMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
+        return internalGetExtensions().getMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Value getExtensionsOrDefault(
+          java.lang.String key,
+          com.google.protobuf.Value defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+            internalGetExtensions().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Value getExtensionsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+            internalGetExtensions().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearExtensions() {
+        internalGetMutableExtensions().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+
+      public Builder removeExtensions(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableExtensions().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Value>
+      getMutableExtensions() {
+        return internalGetMutableExtensions().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+      public Builder putExtensions(
+          java.lang.String key,
+          com.google.protobuf.Value value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableExtensions().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
+       */
+
+      public Builder putAllExtensions(
+          java.util.Map<java.lang.String, com.google.protobuf.Value> values) {
+        internalGetMutableExtensions().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20935,20 +23319,22 @@ public final class Openapiv2 {
 
     /**
      * <pre>
-     * A short description for the tag. GFM syntax can be used for rich text 
+     * A short description for the tag. GFM syntax can be used for rich text
      * representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * A short description for the tag. GFM syntax can be used for rich text 
+     * A short description for the tag. GFM syntax can be used for rich text
      * representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -20958,7 +23344,8 @@ public final class Openapiv2 {
      * Additional external documentation for this tag.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
     boolean hasExternalDocs();
     /**
@@ -20966,7 +23353,8 @@ public final class Openapiv2 {
      * Additional external documentation for this tag.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs();
     /**
@@ -20974,7 +23362,7 @@ public final class Openapiv2 {
      * Additional external documentation for this tag.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder();
   }
@@ -20986,7 +23374,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Tag}
    */
-  public  static final class Tag extends
+  public static final class Tag extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Tag)
       TagOrBuilder {
@@ -20997,6 +23385,13 @@ public final class Openapiv2 {
     }
     private Tag() {
       description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tag();
     }
 
     @java.lang.Override
@@ -21012,7 +23407,6 @@ public final class Openapiv2 {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21043,7 +23437,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21053,6 +23447,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -21078,12 +23474,14 @@ public final class Openapiv2 {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * A short description for the tag. GFM syntax can be used for rich text 
+     * A short description for the tag. GFM syntax can be used for rich text
      * representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -21098,12 +23496,14 @@ public final class Openapiv2 {
     }
     /**
      * <pre>
-     * A short description for the tag. GFM syntax can be used for rich text 
+     * A short description for the tag. GFM syntax can be used for rich text
      * representation.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -21125,8 +23525,10 @@ public final class Openapiv2 {
      * Additional external documentation for this tag.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
+     * @return Whether the externalDocs field is set.
      */
+    @java.lang.Override
     public boolean hasExternalDocs() {
       return externalDocs_ != null;
     }
@@ -21135,8 +23537,10 @@ public final class Openapiv2 {
      * Additional external documentation for this tag.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
+     * @return The externalDocs.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
       return externalDocs_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.getDefaultInstance() : externalDocs_;
     }
@@ -21145,8 +23549,9 @@ public final class Openapiv2 {
      * Additional external documentation for this tag.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
       return getExternalDocs();
     }
@@ -21165,7 +23570,7 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       if (externalDocs_ != null) {
@@ -21180,7 +23585,7 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       if (externalDocs_ != null) {
@@ -21202,16 +23607,15 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Tag other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Tag) obj;
 
-      boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasExternalDocs() == other.hasExternalDocs());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasExternalDocs() != other.hasExternalDocs()) return false;
       if (hasExternalDocs()) {
-        result = result && getExternalDocs()
-            .equals(other.getExternalDocs());
+        if (!getExternalDocs()
+            .equals(other.getExternalDocs())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21411,35 +23815,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21492,11 +23896,12 @@ public final class Openapiv2 {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * A short description for the tag. GFM syntax can be used for rich text 
+       * A short description for the tag. GFM syntax can be used for rich text
        * representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -21512,11 +23917,12 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A short description for the tag. GFM syntax can be used for rich text 
+       * A short description for the tag. GFM syntax can be used for rich text
        * representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -21533,11 +23939,13 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A short description for the tag. GFM syntax can be used for rich text 
+       * A short description for the tag. GFM syntax can be used for rich text
        * representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -21551,11 +23959,12 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A short description for the tag. GFM syntax can be used for rich text 
+       * A short description for the tag. GFM syntax can be used for rich text
        * representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -21565,11 +23974,13 @@ public final class Openapiv2 {
       }
       /**
        * <pre>
-       * A short description for the tag. GFM syntax can be used for rich text 
+       * A short description for the tag. GFM syntax can be used for rich text
        * representation.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -21583,7 +23994,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation externalDocs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> externalDocsBuilder_;
       /**
@@ -21591,7 +24002,8 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
+       * @return Whether the externalDocs field is set.
        */
       public boolean hasExternalDocs() {
         return externalDocsBuilder_ != null || externalDocs_ != null;
@@ -21601,7 +24013,8 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
+       * @return The externalDocs.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation getExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -21615,7 +24028,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -21635,7 +24048,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       public Builder setExternalDocs(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder builderForValue) {
@@ -21653,7 +24066,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       public Builder mergeExternalDocs(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation value) {
         if (externalDocsBuilder_ == null) {
@@ -21675,7 +24088,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       public Builder clearExternalDocs() {
         if (externalDocsBuilder_ == null) {
@@ -21693,7 +24106,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder getExternalDocsBuilder() {
         
@@ -21705,7 +24118,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder getExternalDocsOrBuilder() {
         if (externalDocsBuilder_ != null) {
@@ -21720,7 +24133,7 @@ public final class Openapiv2 {
        * Additional external documentation for this tag.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3[json_name = "externalDocs"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentation.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ExternalDocumentationOrBuilder> 
@@ -21738,7 +24151,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21798,7 +24211,7 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
     int getSecurityCount();
     /**
@@ -21807,7 +24220,7 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
     boolean containsSecurity(
         java.lang.String key);
@@ -21823,7 +24236,7 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
     java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme>
     getSecurityMap();
@@ -21833,19 +24246,21 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
 
-    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrDefault(
+    /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrDefault(
         java.lang.String key,
-        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme defaultValue);
+        /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme defaultValue);
     /**
      * <pre>
      * A single security scheme definition, mapping a "name" to the scheme it
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
 
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrThrow(
@@ -21863,7 +24278,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions}
    */
-  public  static final class SecurityDefinitions extends
+  public static final class SecurityDefinitions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions)
       SecurityDefinitionsOrBuilder {
@@ -21873,6 +24288,13 @@ public final class Openapiv2 {
       super(builder);
     }
     private SecurityDefinitions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecurityDefinitions();
     }
 
     @java.lang.Override
@@ -21900,7 +24322,7 @@ public final class Openapiv2 {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 security_ = com.google.protobuf.MapField.newMapField(
                     SecurityDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
@@ -21913,7 +24335,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21923,6 +24345,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -21988,17 +24412,19 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
 
+    @java.lang.Override
     public boolean containsSecurity(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetSecurity().getMap().containsKey(key);
     }
     /**
      * Use {@link #getSecurityMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> getSecurity() {
       return getSecurityMap();
@@ -22009,8 +24435,9 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> getSecurityMap() {
       return internalGetSecurity().getMap();
@@ -22021,13 +24448,14 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrDefault(
         java.lang.String key,
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> map =
           internalGetSecurity().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -22038,12 +24466,13 @@ public final class Openapiv2 {
      * defines.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> map =
           internalGetSecurity().getMap();
       if (!map.containsKey(key)) {
@@ -22106,11 +24535,10 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityDefinitions) obj;
 
-      boolean result = true;
-      result = result && internalGetSecurity().equals(
-          other.internalGetSecurity());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetSecurity().equals(
+          other.internalGetSecurity())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22324,35 +24752,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22430,17 +24858,19 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
 
+      @java.lang.Override
       public boolean containsSecurity(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetSecurity().getMap().containsKey(key);
       }
       /**
        * Use {@link #getSecurityMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> getSecurity() {
         return getSecurityMap();
@@ -22451,8 +24881,9 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> getSecurityMap() {
         return internalGetSecurity().getMap();
@@ -22463,13 +24894,14 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrDefault(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> map =
             internalGetSecurity().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -22480,12 +24912,13 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme getSecurityOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme> map =
             internalGetSecurity().getMap();
         if (!map.containsKey(key)) {
@@ -22505,12 +24938,12 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
 
       public Builder removeSecurity(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableSecurity().getMutableMap()
             .remove(key);
         return this;
@@ -22529,13 +24962,16 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
       public Builder putSecurity(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableSecurity().getMutableMap()
             .put(key, value);
         return this;
@@ -22546,7 +24982,7 @@ public final class Openapiv2 {
        * defines.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1[json_name = "security"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme&gt; security = 1 [json_name = "security"];</code>
        */
 
       public Builder putAllSecurity(
@@ -22558,7 +24994,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22618,7 +25054,8 @@ public final class Openapiv2 {
      * "apiKey" or "oauth2".
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
@@ -22627,7 +25064,8 @@ public final class Openapiv2 {
      * "apiKey" or "oauth2".
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+     * @return The type.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type getType();
 
@@ -22636,7 +25074,8 @@ public final class Openapiv2 {
      * A short description for security scheme.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
      */
     java.lang.String getDescription();
     /**
@@ -22644,7 +25083,8 @@ public final class Openapiv2 {
      * A short description for security scheme.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
@@ -22655,7 +25095,8 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>string name = 3[json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -22664,7 +25105,8 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>string name = 3[json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -22676,7 +25118,8 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+     * @return The enum numeric value on the wire for in.
      */
     int getInValue();
     /**
@@ -22686,7 +25129,8 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+     * @return The in.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In getIn();
 
@@ -22697,7 +25141,8 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+     * @return The enum numeric value on the wire for flow.
      */
     int getFlowValue();
     /**
@@ -22707,7 +25152,8 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+     * @return The flow.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow getFlow();
 
@@ -22718,7 +25164,8 @@ public final class Openapiv2 {
      * Valid for oauth2/implicit and oauth2/accessCode.
      * </pre>
      *
-     * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+     * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+     * @return The authorizationUrl.
      */
     java.lang.String getAuthorizationUrl();
     /**
@@ -22728,7 +25175,8 @@ public final class Openapiv2 {
      * Valid for oauth2/implicit and oauth2/accessCode.
      * </pre>
      *
-     * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+     * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+     * @return The bytes for authorizationUrl.
      */
     com.google.protobuf.ByteString
         getAuthorizationUrlBytes();
@@ -22740,7 +25188,8 @@ public final class Openapiv2 {
      * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
      * </pre>
      *
-     * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+     * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+     * @return The tokenUrl.
      */
     java.lang.String getTokenUrl();
     /**
@@ -22750,7 +25199,8 @@ public final class Openapiv2 {
      * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
      * </pre>
      *
-     * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+     * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+     * @return The bytes for tokenUrl.
      */
     com.google.protobuf.ByteString
         getTokenUrlBytes();
@@ -22761,7 +25211,8 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
+     * @return Whether the scopes field is set.
      */
     boolean hasScopes();
     /**
@@ -22770,7 +25221,8 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
+     * @return The scopes.
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes getScopes();
     /**
@@ -22779,16 +25231,16 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ScopesOrBuilder getScopesOrBuilder();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
     int getExtensionsCount();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
     boolean containsExtensions(
         java.lang.String key);
@@ -22799,19 +25251,21 @@ public final class Openapiv2 {
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensions();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.Value>
     getExtensionsMap();
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
 
-    com.google.protobuf.Value getExtensionsOrDefault(
+    /* nullable */
+com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
-        com.google.protobuf.Value defaultValue);
+        /* nullable */
+com.google.protobuf.Value defaultValue);
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
 
     com.google.protobuf.Value getExtensionsOrThrow(
@@ -22830,7 +25284,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme}
    */
-  public  static final class SecurityScheme extends
+  public static final class SecurityScheme extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme)
       SecuritySchemeOrBuilder {
@@ -22847,6 +25301,13 @@ public final class Openapiv2 {
       flow_ = 0;
       authorizationUrl_ = "";
       tokenUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecurityScheme();
     }
 
     @java.lang.Override
@@ -22929,10 +25390,10 @@ public final class Openapiv2 {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 extensions_ = com.google.protobuf.MapField.newMapField(
                     ExtensionsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
               extensions__ = input.readMessage(
@@ -22942,7 +25403,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22952,6 +25413,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -23041,6 +25504,8 @@ public final class Openapiv2 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -23048,6 +25513,10 @@ public final class Openapiv2 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Type forNumber(int value) {
         switch (value) {
           case 0: return TYPE_INVALID;
@@ -23072,6 +25541,10 @@ public final class Openapiv2 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -23153,6 +25626,8 @@ public final class Openapiv2 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -23160,6 +25635,10 @@ public final class Openapiv2 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static In forNumber(int value) {
         switch (value) {
           case 0: return IN_INVALID;
@@ -23183,6 +25662,10 @@ public final class Openapiv2 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -23281,6 +25764,8 @@ public final class Openapiv2 {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -23288,6 +25773,10 @@ public final class Openapiv2 {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static Flow forNumber(int value) {
         switch (value) {
           case 0: return FLOW_INVALID;
@@ -23313,6 +25802,10 @@ public final class Openapiv2 {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -23347,7 +25840,6 @@ public final class Openapiv2 {
       // @@protoc_insertion_point(enum_scope:grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow)
     }
 
-    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
@@ -23356,9 +25848,10 @@ public final class Openapiv2 {
      * "apiKey" or "oauth2".
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -23367,9 +25860,10 @@ public final class Openapiv2 {
      * "apiKey" or "oauth2".
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+     * @return The type.
      */
-    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type getType() {
+    @java.lang.Override public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type getType() {
       @SuppressWarnings("deprecation")
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type result = grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type.valueOf(type_);
       return result == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type.UNRECOGNIZED : result;
@@ -23382,8 +25876,10 @@ public final class Openapiv2 {
      * A short description for security scheme.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
      */
+    @java.lang.Override
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
@@ -23401,8 +25897,10 @@ public final class Openapiv2 {
      * A short description for security scheme.
      * </pre>
      *
-     * <code>string description = 2[json_name = "description"];</code>
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
@@ -23425,8 +25923,10 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>string name = 3[json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -23445,8 +25945,10 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>string name = 3[json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -23470,9 +25972,10 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+     * @return The enum numeric value on the wire for in.
      */
-    public int getInValue() {
+    @java.lang.Override public int getInValue() {
       return in_;
     }
     /**
@@ -23482,9 +25985,10 @@ public final class Openapiv2 {
      * Valid for apiKey.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+     * @return The in.
      */
-    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In getIn() {
+    @java.lang.Override public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In getIn() {
       @SuppressWarnings("deprecation")
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In result = grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.valueOf(in_);
       return result == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.UNRECOGNIZED : result;
@@ -23499,9 +26003,10 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+     * @return The enum numeric value on the wire for flow.
      */
-    public int getFlowValue() {
+    @java.lang.Override public int getFlowValue() {
       return flow_;
     }
     /**
@@ -23511,9 +26016,10 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+     * @return The flow.
      */
-    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow getFlow() {
+    @java.lang.Override public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow getFlow() {
       @SuppressWarnings("deprecation")
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow result = grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow.valueOf(flow_);
       return result == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow.UNRECOGNIZED : result;
@@ -23528,8 +26034,10 @@ public final class Openapiv2 {
      * Valid for oauth2/implicit and oauth2/accessCode.
      * </pre>
      *
-     * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+     * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+     * @return The authorizationUrl.
      */
+    @java.lang.Override
     public java.lang.String getAuthorizationUrl() {
       java.lang.Object ref = authorizationUrl_;
       if (ref instanceof java.lang.String) {
@@ -23549,8 +26057,10 @@ public final class Openapiv2 {
      * Valid for oauth2/implicit and oauth2/accessCode.
      * </pre>
      *
-     * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+     * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+     * @return The bytes for authorizationUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAuthorizationUrlBytes() {
       java.lang.Object ref = authorizationUrl_;
@@ -23574,8 +26084,10 @@ public final class Openapiv2 {
      * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
      * </pre>
      *
-     * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+     * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+     * @return The tokenUrl.
      */
+    @java.lang.Override
     public java.lang.String getTokenUrl() {
       java.lang.Object ref = tokenUrl_;
       if (ref instanceof java.lang.String) {
@@ -23595,8 +26107,10 @@ public final class Openapiv2 {
      * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
      * </pre>
      *
-     * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+     * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+     * @return The bytes for tokenUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTokenUrlBytes() {
       java.lang.Object ref = tokenUrl_;
@@ -23619,8 +26133,10 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
+     * @return Whether the scopes field is set.
      */
+    @java.lang.Override
     public boolean hasScopes() {
       return scopes_ != null;
     }
@@ -23630,8 +26146,10 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
+     * @return The scopes.
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes getScopes() {
       return scopes_ == null ? grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes.getDefaultInstance() : scopes_;
     }
@@ -23641,8 +26159,9 @@ public final class Openapiv2 {
      * Valid for oauth2.
      * </pre>
      *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
      */
+    @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ScopesOrBuilder getScopesOrBuilder() {
       return getScopes();
     }
@@ -23674,47 +26193,52 @@ public final class Openapiv2 {
       return internalGetExtensions().getMap().size();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
 
+    @java.lang.Override
     public boolean containsExtensions(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetExtensions().getMap().containsKey(key);
     }
     /**
      * Use {@link #getExtensionsMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
       return getExtensionsMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
       return internalGetExtensions().getMap();
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrDefault(
         java.lang.String key,
         com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.Value getExtensionsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
           internalGetExtensions().getMap();
       if (!map.containsKey(key)) {
@@ -23740,10 +26264,10 @@ public final class Openapiv2 {
       if (type_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type.TYPE_INVALID.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (in_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.IN_INVALID.getNumber()) {
@@ -23752,10 +26276,10 @@ public final class Openapiv2 {
       if (flow_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow.FLOW_INVALID.getNumber()) {
         output.writeEnum(5, flow_);
       }
-      if (!getAuthorizationUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorizationUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, authorizationUrl_);
       }
-      if (!getTokenUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, tokenUrl_);
       }
       if (scopes_ != null) {
@@ -23780,10 +26304,10 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (in_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.IN_INVALID.getNumber()) {
@@ -23794,10 +26318,10 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, flow_);
       }
-      if (!getAuthorizationUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorizationUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, authorizationUrl_);
       }
-      if (!getTokenUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, tokenUrl_);
       }
       if (scopes_ != null) {
@@ -23829,27 +26353,26 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && in_ == other.in_;
-      result = result && flow_ == other.flow_;
-      result = result && getAuthorizationUrl()
-          .equals(other.getAuthorizationUrl());
-      result = result && getTokenUrl()
-          .equals(other.getTokenUrl());
-      result = result && (hasScopes() == other.hasScopes());
+      if (type_ != other.type_) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (in_ != other.in_) return false;
+      if (flow_ != other.flow_) return false;
+      if (!getAuthorizationUrl()
+          .equals(other.getAuthorizationUrl())) return false;
+      if (!getTokenUrl()
+          .equals(other.getTokenUrl())) return false;
+      if (hasScopes() != other.hasScopes()) return false;
       if (hasScopes()) {
-        result = result && getScopes()
-            .equals(other.getScopes());
+        if (!getScopes()
+            .equals(other.getScopes())) return false;
       }
-      result = result && internalGetExtensions().equals(
-          other.internalGetExtensions());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetExtensions().equals(
+          other.internalGetExtensions())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -24094,7 +26617,6 @@ public final class Openapiv2 {
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme buildPartial() {
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.type_ = type_;
         result.description_ = description_;
         result.name_ = name_;
@@ -24109,42 +26631,41 @@ public final class Openapiv2 {
         }
         result.extensions_ = internalGetExtensions();
         result.extensions_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24225,9 +26746,10 @@ public final class Openapiv2 {
        * "apiKey" or "oauth2".
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
        */
-      public int getTypeValue() {
+      @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
@@ -24236,9 +26758,12 @@ public final class Openapiv2 {
        * "apiKey" or "oauth2".
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
+        
         type_ = value;
         onChanged();
         return this;
@@ -24249,8 +26774,10 @@ public final class Openapiv2 {
        * "apiKey" or "oauth2".
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+       * @return The type.
        */
+      @java.lang.Override
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type getType() {
         @SuppressWarnings("deprecation")
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type result = grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type.valueOf(type_);
@@ -24262,7 +26789,9 @@ public final class Openapiv2 {
        * "apiKey" or "oauth2".
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type value) {
         if (value == null) {
@@ -24279,7 +26808,8 @@ public final class Openapiv2 {
        * "apiKey" or "oauth2".
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1[json_name = "type"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -24294,7 +26824,8 @@ public final class Openapiv2 {
        * A short description for security scheme.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -24313,7 +26844,8 @@ public final class Openapiv2 {
        * A short description for security scheme.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -24333,7 +26865,9 @@ public final class Openapiv2 {
        * A short description for security scheme.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -24350,7 +26884,8 @@ public final class Openapiv2 {
        * A short description for security scheme.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
         
@@ -24363,7 +26898,9 @@ public final class Openapiv2 {
        * A short description for security scheme.
        * </pre>
        *
-       * <code>string description = 2[json_name = "description"];</code>
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -24384,7 +26921,8 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>string name = 3[json_name = "name"];</code>
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -24404,7 +26942,8 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>string name = 3[json_name = "name"];</code>
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -24425,7 +26964,9 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>string name = 3[json_name = "name"];</code>
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -24443,7 +26984,8 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>string name = 3[json_name = "name"];</code>
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -24457,7 +26999,9 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>string name = 3[json_name = "name"];</code>
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -24479,9 +27023,10 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+       * @return The enum numeric value on the wire for in.
        */
-      public int getInValue() {
+      @java.lang.Override public int getInValue() {
         return in_;
       }
       /**
@@ -24491,9 +27036,12 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+       * @param value The enum numeric value on the wire for in to set.
+       * @return This builder for chaining.
        */
       public Builder setInValue(int value) {
+        
         in_ = value;
         onChanged();
         return this;
@@ -24505,8 +27053,10 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+       * @return The in.
        */
+      @java.lang.Override
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In getIn() {
         @SuppressWarnings("deprecation")
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In result = grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.valueOf(in_);
@@ -24519,7 +27069,9 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+       * @param value The in to set.
+       * @return This builder for chaining.
        */
       public Builder setIn(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In value) {
         if (value == null) {
@@ -24537,7 +27089,8 @@ public final class Openapiv2 {
        * Valid for apiKey.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4[json_name = "in"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.In in = 4 [json_name = "in"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearIn() {
         
@@ -24554,9 +27107,10 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+       * @return The enum numeric value on the wire for flow.
        */
-      public int getFlowValue() {
+      @java.lang.Override public int getFlowValue() {
         return flow_;
       }
       /**
@@ -24566,9 +27120,12 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+       * @param value The enum numeric value on the wire for flow to set.
+       * @return This builder for chaining.
        */
       public Builder setFlowValue(int value) {
+        
         flow_ = value;
         onChanged();
         return this;
@@ -24580,8 +27137,10 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+       * @return The flow.
        */
+      @java.lang.Override
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow getFlow() {
         @SuppressWarnings("deprecation")
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow result = grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow.valueOf(flow_);
@@ -24594,7 +27153,9 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+       * @param value The flow to set.
+       * @return This builder for chaining.
        */
       public Builder setFlow(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow value) {
         if (value == null) {
@@ -24612,7 +27173,8 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5[json_name = "flow"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Flow flow = 5 [json_name = "flow"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearFlow() {
         
@@ -24629,7 +27191,8 @@ public final class Openapiv2 {
        * Valid for oauth2/implicit and oauth2/accessCode.
        * </pre>
        *
-       * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+       * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+       * @return The authorizationUrl.
        */
       public java.lang.String getAuthorizationUrl() {
         java.lang.Object ref = authorizationUrl_;
@@ -24650,7 +27213,8 @@ public final class Openapiv2 {
        * Valid for oauth2/implicit and oauth2/accessCode.
        * </pre>
        *
-       * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+       * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+       * @return The bytes for authorizationUrl.
        */
       public com.google.protobuf.ByteString
           getAuthorizationUrlBytes() {
@@ -24672,7 +27236,9 @@ public final class Openapiv2 {
        * Valid for oauth2/implicit and oauth2/accessCode.
        * </pre>
        *
-       * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+       * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+       * @param value The authorizationUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setAuthorizationUrl(
           java.lang.String value) {
@@ -24691,7 +27257,8 @@ public final class Openapiv2 {
        * Valid for oauth2/implicit and oauth2/accessCode.
        * </pre>
        *
-       * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+       * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearAuthorizationUrl() {
         
@@ -24706,7 +27273,9 @@ public final class Openapiv2 {
        * Valid for oauth2/implicit and oauth2/accessCode.
        * </pre>
        *
-       * <code>string authorization_url = 6[json_name = "authorizationUrl"];</code>
+       * <code>string authorization_url = 6 [json_name = "authorizationUrl"];</code>
+       * @param value The bytes for authorizationUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setAuthorizationUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -24728,7 +27297,8 @@ public final class Openapiv2 {
        * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
        * </pre>
        *
-       * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+       * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+       * @return The tokenUrl.
        */
       public java.lang.String getTokenUrl() {
         java.lang.Object ref = tokenUrl_;
@@ -24749,7 +27319,8 @@ public final class Openapiv2 {
        * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
        * </pre>
        *
-       * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+       * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+       * @return The bytes for tokenUrl.
        */
       public com.google.protobuf.ByteString
           getTokenUrlBytes() {
@@ -24771,7 +27342,9 @@ public final class Openapiv2 {
        * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
        * </pre>
        *
-       * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+       * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+       * @param value The tokenUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setTokenUrl(
           java.lang.String value) {
@@ -24790,7 +27363,8 @@ public final class Openapiv2 {
        * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
        * </pre>
        *
-       * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+       * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearTokenUrl() {
         
@@ -24805,7 +27379,9 @@ public final class Openapiv2 {
        * Valid for oauth2/password, oauth2/application and oauth2/accessCode.
        * </pre>
        *
-       * <code>string token_url = 7[json_name = "tokenUrl"];</code>
+       * <code>string token_url = 7 [json_name = "tokenUrl"];</code>
+       * @param value The bytes for tokenUrl to set.
+       * @return This builder for chaining.
        */
       public Builder setTokenUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -24819,7 +27395,7 @@ public final class Openapiv2 {
         return this;
       }
 
-      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes scopes_ = null;
+      private grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes scopes_;
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ScopesOrBuilder> scopesBuilder_;
       /**
@@ -24828,7 +27404,8 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
+       * @return Whether the scopes field is set.
        */
       public boolean hasScopes() {
         return scopesBuilder_ != null || scopes_ != null;
@@ -24839,7 +27416,8 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
+       * @return The scopes.
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes getScopes() {
         if (scopesBuilder_ == null) {
@@ -24854,7 +27432,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       public Builder setScopes(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes value) {
         if (scopesBuilder_ == null) {
@@ -24875,7 +27453,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       public Builder setScopes(
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes.Builder builderForValue) {
@@ -24894,7 +27472,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       public Builder mergeScopes(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes value) {
         if (scopesBuilder_ == null) {
@@ -24917,7 +27495,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       public Builder clearScopes() {
         if (scopesBuilder_ == null) {
@@ -24936,7 +27514,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes.Builder getScopesBuilder() {
         
@@ -24949,7 +27527,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ScopesOrBuilder getScopesOrBuilder() {
         if (scopesBuilder_ != null) {
@@ -24965,7 +27543,7 @@ public final class Openapiv2 {
        * Valid for oauth2.
        * </pre>
        *
-       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8[json_name = "scopes"];</code>
+       * <code>.grpc.gateway.protoc_gen_openapiv2.options.Scopes scopes = 8 [json_name = "scopes"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes.Builder, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.ScopesOrBuilder> 
@@ -25008,47 +27586,52 @@ public final class Openapiv2 {
         return internalGetExtensions().getMap().size();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
 
+      @java.lang.Override
       public boolean containsExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetExtensions().getMap().containsKey(key);
       }
       /**
        * Use {@link #getExtensionsMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
         return getExtensionsMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
         return internalGetExtensions().getMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrDefault(
           java.lang.String key,
           com.google.protobuf.Value defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.Value getExtensionsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, com.google.protobuf.Value> map =
             internalGetExtensions().getMap();
         if (!map.containsKey(key)) {
@@ -25063,12 +27646,12 @@ public final class Openapiv2 {
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
 
       public Builder removeExtensions(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableExtensions().getMutableMap()
             .remove(key);
         return this;
@@ -25082,19 +27665,22 @@ public final class Openapiv2 {
         return internalGetMutableExtensions().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
       public Builder putExtensions(
           java.lang.String key,
           com.google.protobuf.Value value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExtensions().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9[json_name = "extensions"];</code>
+       * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
        */
 
       public Builder putAllExtensions(
@@ -25106,7 +27692,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -25168,7 +27754,7 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
     int getSecurityRequirementCount();
     /**
@@ -25179,7 +27765,7 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
     boolean containsSecurityRequirement(
         java.lang.String key);
@@ -25197,7 +27783,7 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
     java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue>
     getSecurityRequirementMap();
@@ -25209,12 +27795,14 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
 
-    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrDefault(
+    /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrDefault(
         java.lang.String key,
-        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue defaultValue);
+        /* nullable */
+grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue defaultValue);
     /**
      * <pre>
      * Each name must correspond to a security scheme which is declared in
@@ -25223,7 +27811,7 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
 
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrThrow(
@@ -25243,7 +27831,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement}
    */
-  public  static final class SecurityRequirement extends
+  public static final class SecurityRequirement extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement)
       SecurityRequirementOrBuilder {
@@ -25253,6 +27841,13 @@ public final class Openapiv2 {
       super(builder);
     }
     private SecurityRequirement() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecurityRequirement();
     }
 
     @java.lang.Override
@@ -25280,7 +27875,7 @@ public final class Openapiv2 {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 securityRequirement_ = com.google.protobuf.MapField.newMapField(
                     SecurityRequirementDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
@@ -25293,7 +27888,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -25303,6 +27898,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -25341,20 +27938,26 @@ public final class Openapiv2 {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @return A list containing the scope.
        */
       java.util.List<java.lang.String>
           getScopeList();
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @return The count of scope.
        */
       int getScopeCount();
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @param index The index of the element to return.
+       * @return The scope at the given index.
        */
       java.lang.String getScope(int index);
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scope at the given index.
        */
       com.google.protobuf.ByteString
           getScopeBytes(int index);
@@ -25368,7 +27971,7 @@ public final class Openapiv2 {
      *
      * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue}
      */
-    public  static final class SecurityRequirementValue extends
+    public static final class SecurityRequirementValue extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue)
         SecurityRequirementValueOrBuilder {
@@ -25379,6 +27982,13 @@ public final class Openapiv2 {
       }
       private SecurityRequirementValue() {
         scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SecurityRequirementValue();
       }
 
       @java.lang.Override
@@ -25407,7 +28017,7 @@ public final class Openapiv2 {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   scope_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -25415,7 +28025,7 @@ public final class Openapiv2 {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -25425,11 +28035,13 @@ public final class Openapiv2 {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             scope_ = scope_.getUnmodifiableView();
           }
           this.unknownFields = unknownFields.build();
@@ -25452,26 +28064,32 @@ public final class Openapiv2 {
       public static final int SCOPE_FIELD_NUMBER = 1;
       private com.google.protobuf.LazyStringList scope_;
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @return A list containing the scope.
        */
       public com.google.protobuf.ProtocolStringList
           getScopeList() {
         return scope_;
       }
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @return The count of scope.
        */
       public int getScopeCount() {
         return scope_.size();
       }
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @param index The index of the element to return.
+       * @return The scope at the given index.
        */
       public java.lang.String getScope(int index) {
         return scope_.get(index);
       }
       /**
-       * <code>repeated string scope = 1[json_name = "scope"];</code>
+       * <code>repeated string scope = 1 [json_name = "scope"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scope at the given index.
        */
       public com.google.protobuf.ByteString
           getScopeBytes(int index) {
@@ -25527,11 +28145,10 @@ public final class Openapiv2 {
         }
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue) obj;
 
-        boolean result = true;
-        result = result && getScopeList()
-            .equals(other.getScopeList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getScopeList()
+            .equals(other.getScopeList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -25713,7 +28330,7 @@ public final class Openapiv2 {
         public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue buildPartial() {
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue(this);
           int from_bitField0_ = bitField0_;
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             scope_ = scope_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -25724,35 +28341,35 @@ public final class Openapiv2 {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25808,39 +28425,48 @@ public final class Openapiv2 {
 
         private com.google.protobuf.LazyStringList scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         private void ensureScopeIsMutable() {
-          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             scope_ = new com.google.protobuf.LazyStringArrayList(scope_);
             bitField0_ |= 0x00000001;
            }
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @return A list containing the scope.
          */
         public com.google.protobuf.ProtocolStringList
             getScopeList() {
           return scope_.getUnmodifiableView();
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @return The count of scope.
          */
         public int getScopeCount() {
           return scope_.size();
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @param index The index of the element to return.
+         * @return The scope at the given index.
          */
         public java.lang.String getScope(int index) {
           return scope_.get(index);
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the scope at the given index.
          */
         public com.google.protobuf.ByteString
             getScopeBytes(int index) {
           return scope_.getByteString(index);
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @param index The index to set the value at.
+         * @param value The scope to set.
+         * @return This builder for chaining.
          */
         public Builder setScope(
             int index, java.lang.String value) {
@@ -25853,7 +28479,9 @@ public final class Openapiv2 {
           return this;
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @param value The scope to add.
+         * @return This builder for chaining.
          */
         public Builder addScope(
             java.lang.String value) {
@@ -25866,7 +28494,9 @@ public final class Openapiv2 {
           return this;
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @param values The scope to add.
+         * @return This builder for chaining.
          */
         public Builder addAllScope(
             java.lang.Iterable<java.lang.String> values) {
@@ -25877,7 +28507,8 @@ public final class Openapiv2 {
           return this;
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @return This builder for chaining.
          */
         public Builder clearScope() {
           scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -25886,7 +28517,9 @@ public final class Openapiv2 {
           return this;
         }
         /**
-         * <code>repeated string scope = 1[json_name = "scope"];</code>
+         * <code>repeated string scope = 1 [json_name = "scope"];</code>
+         * @param value The bytes of the scope to add.
+         * @return This builder for chaining.
          */
         public Builder addScopeBytes(
             com.google.protobuf.ByteString value) {
@@ -25902,7 +28535,7 @@ public final class Openapiv2 {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -25986,17 +28619,19 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
 
+    @java.lang.Override
     public boolean containsSecurityRequirement(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetSecurityRequirement().getMap().containsKey(key);
     }
     /**
      * Use {@link #getSecurityRequirementMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> getSecurityRequirement() {
       return getSecurityRequirementMap();
@@ -26009,8 +28644,9 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> getSecurityRequirementMap() {
       return internalGetSecurityRequirement().getMap();
@@ -26023,13 +28659,14 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrDefault(
         java.lang.String key,
         grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> map =
           internalGetSecurityRequirement().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -26042,12 +28679,13 @@ public final class Openapiv2 {
      * For other security scheme types, the array MUST be empty.
      * </pre>
      *
-     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
      */
+    @java.lang.Override
 
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> map =
           internalGetSecurityRequirement().getMap();
       if (!map.containsKey(key)) {
@@ -26110,11 +28748,10 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement) obj;
 
-      boolean result = true;
-      result = result && internalGetSecurityRequirement().equals(
-          other.internalGetSecurityRequirement());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetSecurityRequirement().equals(
+          other.internalGetSecurityRequirement())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26330,35 +28967,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26438,17 +29075,19 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
 
+      @java.lang.Override
       public boolean containsSecurityRequirement(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetSecurityRequirement().getMap().containsKey(key);
       }
       /**
        * Use {@link #getSecurityRequirementMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> getSecurityRequirement() {
         return getSecurityRequirementMap();
@@ -26461,8 +29100,9 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> getSecurityRequirementMap() {
         return internalGetSecurityRequirement().getMap();
@@ -26475,13 +29115,14 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrDefault(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> map =
             internalGetSecurityRequirement().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -26494,12 +29135,13 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
+      @java.lang.Override
 
       public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getSecurityRequirementOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue> map =
             internalGetSecurityRequirement().getMap();
         if (!map.containsKey(key)) {
@@ -26521,12 +29163,12 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
 
       public Builder removeSecurityRequirement(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableSecurityRequirement().getMutableMap()
             .remove(key);
         return this;
@@ -26547,13 +29189,16 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
       public Builder putSecurityRequirement(
           java.lang.String key,
           grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityRequirement.SecurityRequirementValue value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableSecurityRequirement().getMutableMap()
             .put(key, value);
         return this;
@@ -26566,7 +29211,7 @@ public final class Openapiv2 {
        * For other security scheme types, the array MUST be empty.
        * </pre>
        *
-       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1[json_name = "securityRequirement"];</code>
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue&gt; security_requirement = 1 [json_name = "securityRequirement"];</code>
        */
 
       public Builder putAllSecurityRequirement(
@@ -26578,7 +29223,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26638,7 +29283,7 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
     int getScopeCount();
     /**
@@ -26647,7 +29292,7 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
     boolean containsScope(
         java.lang.String key);
@@ -26663,7 +29308,7 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getScopeMap();
@@ -26673,19 +29318,21 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
 
-    java.lang.String getScopeOrDefault(
+    /* nullable */
+java.lang.String getScopeOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Maps between a name of a scope to a short description of it (as the value
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
 
     java.lang.String getScopeOrThrow(
@@ -26700,7 +29347,7 @@ public final class Openapiv2 {
    *
    * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Scopes}
    */
-  public  static final class Scopes extends
+  public static final class Scopes extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Scopes)
       ScopesOrBuilder {
@@ -26710,6 +29357,13 @@ public final class Openapiv2 {
       super(builder);
     }
     private Scopes() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Scopes();
     }
 
     @java.lang.Override
@@ -26737,7 +29391,7 @@ public final class Openapiv2 {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 scope_ = com.google.protobuf.MapField.newMapField(
                     ScopeDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
@@ -26750,7 +29404,7 @@ public final class Openapiv2 {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26760,6 +29414,8 @@ public final class Openapiv2 {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -26825,17 +29481,19 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
 
+    @java.lang.Override
     public boolean containsScope(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetScope().getMap().containsKey(key);
     }
     /**
      * Use {@link #getScopeMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getScope() {
       return getScopeMap();
@@ -26846,8 +29504,9 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getScopeMap() {
       return internalGetScope().getMap();
@@ -26858,13 +29517,14 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
+    @java.lang.Override
 
     public java.lang.String getScopeOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetScope().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -26875,12 +29535,13 @@ public final class Openapiv2 {
      * of the property).
      * </pre>
      *
-     * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+     * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
      */
+    @java.lang.Override
 
     public java.lang.String getScopeOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetScope().getMap();
       if (!map.containsKey(key)) {
@@ -26943,11 +29604,10 @@ public final class Openapiv2 {
       }
       grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Scopes) obj;
 
-      boolean result = true;
-      result = result && internalGetScope().equals(
-          other.internalGetScope());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetScope().equals(
+          other.internalGetScope())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27158,35 +29818,35 @@ public final class Openapiv2 {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27264,17 +29924,19 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
 
+      @java.lang.Override
       public boolean containsScope(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetScope().getMap().containsKey(key);
       }
       /**
        * Use {@link #getScopeMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getScope() {
         return getScopeMap();
@@ -27285,8 +29947,9 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getScopeMap() {
         return internalGetScope().getMap();
@@ -27297,13 +29960,14 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
+      @java.lang.Override
 
       public java.lang.String getScopeOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetScope().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -27314,12 +29978,13 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
+      @java.lang.Override
 
       public java.lang.String getScopeOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetScope().getMap();
         if (!map.containsKey(key)) {
@@ -27339,12 +30004,12 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
 
       public Builder removeScope(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableScope().getMutableMap()
             .remove(key);
         return this;
@@ -27363,13 +30028,16 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
       public Builder putScope(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableScope().getMutableMap()
             .put(key, value);
         return this;
@@ -27380,7 +30048,7 @@ public final class Openapiv2 {
        * of the property).
        * </pre>
        *
-       * <code>map&lt;string, string&gt; scope = 1[json_name = "scope"];</code>
+       * <code>map&lt;string, string&gt; scope = 1 [json_name = "scope"];</code>
        */
 
       public Builder putAllScope(
@@ -27392,7 +30060,7 @@ public final class Openapiv2 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27532,6 +30200,16 @@ public final class Openapiv2 {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_ExtensionsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_ExtensionsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_descriptor;
   private static final 
@@ -27688,7 +30366,7 @@ public final class Openapiv2 {
       "\rexternal_docs\030\005 \001(\0132@.grpc.gateway.prot" +
       "oc_gen_openapiv2.options.ExternalDocumen" +
       "tationR\014externalDocs\022\030\n\007example\030\006 \001(\tR\007e" +
-      "xampleJ\004\010\004\020\005\"\337\007\n\nJSONSchema\022\020\n\003ref\030\003 \001(\t" +
+      "xampleJ\004\010\004\020\005\"\327\n\n\nJSONSchema\022\020\n\003ref\030\003 \001(\t" +
       "R\003ref\022\024\n\005title\030\005 \001(\tR\005title\022 \n\013descripti" +
       "on\030\006 \001(\tR\013description\022\030\n\007default\030\007 \001(\tR\007" +
       "default\022\033\n\tread_only\030\010 \001(\010R\010readOnly\022\030\n\007" +
@@ -27708,75 +30386,76 @@ public final class Openapiv2 {
       "2K.grpc.gateway.protoc_gen_openapiv2.opt" +
       "ions.JSONSchema.JSONSchemaSimpleTypesR\004t" +
       "ype\022\026\n\006format\030$ \001(\tR\006format\022\022\n\004enum\030. \003(" +
-      "\tR\004enum\"w\n\025JSONSchemaSimpleTypes\022\013\n\007UNKN" +
-      "OWN\020\000\022\t\n\005ARRAY\020\001\022\013\n\007BOOLEAN\020\002\022\013\n\007INTEGER" +
-      "\020\003\022\010\n\004NULL\020\004\022\n\n\006NUMBER\020\005\022\n\n\006OBJECT\020\006\022\n\n\006" +
-      "STRING\020\007J\004\010\001\020\002J\004\010\002\020\003J\004\010\004\020\005J\004\010\022\020\023J\004\010\023\020\024J\004" +
-      "\010\027\020\030J\004\010\033\020\034J\004\010\034\020\035J\004\010\035\020\036J\004\010\036\020\"J\004\010%\020*J\004\010*\020+" +
-      "J\004\010+\020.\"\224\001\n\003Tag\022 \n\013description\030\002 \001(\tR\013des" +
-      "cription\022e\n\rexternal_docs\030\003 \001(\0132@.grpc.g" +
-      "ateway.protoc_gen_openapiv2.options.Exte" +
-      "rnalDocumentationR\014externalDocsJ\004\010\001\020\002\"\367\001" +
-      "\n\023SecurityDefinitions\022h\n\010security\030\001 \003(\0132" +
-      "L.grpc.gateway.protoc_gen_openapiv2.opti" +
-      "ons.SecurityDefinitions.SecurityEntryR\010s" +
-      "ecurity\032v\n\rSecurityEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022O\n\005value\030\002 \001(\01329.grpc.gateway.protoc_" +
-      "gen_openapiv2.options.SecuritySchemeR\005va" +
-      "lue:\0028\001\"\377\006\n\016SecurityScheme\022R\n\004type\030\001 \001(\016" +
-      "2>.grpc.gateway.protoc_gen_openapiv2.opt" +
-      "ions.SecurityScheme.TypeR\004type\022 \n\013descri" +
-      "ption\030\002 \001(\tR\013description\022\022\n\004name\030\003 \001(\tR\004" +
-      "name\022L\n\002in\030\004 \001(\0162<.grpc.gateway.protoc_g" +
-      "en_openapiv2.options.SecurityScheme.InR\002" +
-      "in\022R\n\004flow\030\005 \001(\0162>.grpc.gateway.protoc_g" +
-      "en_openapiv2.options.SecurityScheme.Flow" +
-      "R\004flow\022+\n\021authorization_url\030\006 \001(\tR\020autho" +
-      "rizationUrl\022\033\n\ttoken_url\030\007 \001(\tR\010tokenUrl" +
-      "\022I\n\006scopes\030\010 \001(\01321.grpc.gateway.protoc_g" +
-      "en_openapiv2.options.ScopesR\006scopes\022i\n\ne" +
-      "xtensions\030\t \003(\0132I.grpc.gateway.protoc_ge" +
-      "n_openapiv2.options.SecurityScheme.Exten" +
-      "sionsEntryR\nextensions\032U\n\017ExtensionsEntr" +
-      "y\022\020\n\003key\030\001 \001(\tR\003key\022,\n\005value\030\002 \001(\0132\026.goo" +
-      "gle.protobuf.ValueR\005value:\0028\001\"K\n\004Type\022\020\n" +
-      "\014TYPE_INVALID\020\000\022\016\n\nTYPE_BASIC\020\001\022\020\n\014TYPE_" +
-      "API_KEY\020\002\022\017\n\013TYPE_OAUTH2\020\003\"1\n\002In\022\016\n\nIN_I" +
-      "NVALID\020\000\022\014\n\010IN_QUERY\020\001\022\r\n\tIN_HEADER\020\002\"j\n" +
-      "\004Flow\022\020\n\014FLOW_INVALID\020\000\022\021\n\rFLOW_IMPLICIT" +
-      "\020\001\022\021\n\rFLOW_PASSWORD\020\002\022\024\n\020FLOW_APPLICATIO" +
-      "N\020\003\022\024\n\020FLOW_ACCESS_CODE\020\004\"\366\002\n\023SecurityRe" +
-      "quirement\022\212\001\n\024security_requirement\030\001 \003(\013" +
-      "2W.grpc.gateway.protoc_gen_openapiv2.opt" +
-      "ions.SecurityRequirement.SecurityRequire" +
-      "mentEntryR\023securityRequirement\0320\n\030Securi" +
-      "tyRequirementValue\022\024\n\005scope\030\001 \003(\tR\005scope" +
-      "\032\237\001\n\030SecurityRequirementEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022m\n\005value\030\002 \001(\0132W.grpc.gateway.pr" +
-      "otoc_gen_openapiv2.options.SecurityRequi" +
-      "rement.SecurityRequirementValueR\005value:\002" +
-      "8\001\"\226\001\n\006Scopes\022R\n\005scope\030\001 \003(\0132<.grpc.gate" +
-      "way.protoc_gen_openapiv2.options.Scopes." +
-      "ScopeEntryR\005scope\0328\n\nScopeEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001*;\n\006S" +
-      "cheme\022\013\n\007UNKNOWN\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020\002\022" +
-      "\006\n\002WS\020\003\022\007\n\003WSS\020\004BHZFgithub.com/grpc-ecos" +
-      "ystem/grpc-gateway/v2/protoc-gen-openapi" +
-      "v2/optionsb\006proto3"
+      "\tR\004enum\022z\n\023field_configuration\030\351\007 \001(\0132H." +
+      "grpc.gateway.protoc_gen_openapiv2.option" +
+      "s.JSONSchema.FieldConfigurationR\022fieldCo" +
+      "nfiguration\022e\n\nextensions\0300 \003(\0132E.grpc.g" +
+      "ateway.protoc_gen_openapiv2.options.JSON" +
+      "Schema.ExtensionsEntryR\nextensions\032<\n\022Fi" +
+      "eldConfiguration\022&\n\017path_param_name\030/ \001(" +
+      "\tR\rpathParamName\032U\n\017ExtensionsEntry\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022,\n\005value\030\002 \001(\0132\026.google.pr" +
+      "otobuf.ValueR\005value:\0028\001\"w\n\025JSONSchemaSim" +
+      "pleTypes\022\013\n\007UNKNOWN\020\000\022\t\n\005ARRAY\020\001\022\013\n\007BOOL" +
+      "EAN\020\002\022\013\n\007INTEGER\020\003\022\010\n\004NULL\020\004\022\n\n\006NUMBER\020\005" +
+      "\022\n\n\006OBJECT\020\006\022\n\n\006STRING\020\007J\004\010\001\020\002J\004\010\002\020\003J\004\010\004" +
+      "\020\005J\004\010\022\020\023J\004\010\023\020\024J\004\010\027\020\030J\004\010\033\020\034J\004\010\034\020\035J\004\010\035\020\036J\004" +
+      "\010\036\020\"J\004\010%\020*J\004\010*\020+J\004\010+\020.\"\224\001\n\003Tag\022 \n\013descri" +
+      "ption\030\002 \001(\tR\013description\022e\n\rexternal_doc" +
+      "s\030\003 \001(\0132@.grpc.gateway.protoc_gen_openap" +
+      "iv2.options.ExternalDocumentationR\014exter" +
+      "nalDocsJ\004\010\001\020\002\"\367\001\n\023SecurityDefinitions\022h\n" +
+      "\010security\030\001 \003(\0132L.grpc.gateway.protoc_ge" +
+      "n_openapiv2.options.SecurityDefinitions." +
+      "SecurityEntryR\010security\032v\n\rSecurityEntry" +
+      "\022\020\n\003key\030\001 \001(\tR\003key\022O\n\005value\030\002 \001(\01329.grpc" +
+      ".gateway.protoc_gen_openapiv2.options.Se" +
+      "curitySchemeR\005value:\0028\001\"\377\006\n\016SecuritySche" +
+      "me\022R\n\004type\030\001 \001(\0162>.grpc.gateway.protoc_g" +
+      "en_openapiv2.options.SecurityScheme.Type" +
+      "R\004type\022 \n\013description\030\002 \001(\tR\013description" +
+      "\022\022\n\004name\030\003 \001(\tR\004name\022L\n\002in\030\004 \001(\0162<.grpc." +
+      "gateway.protoc_gen_openapiv2.options.Sec" +
+      "urityScheme.InR\002in\022R\n\004flow\030\005 \001(\0162>.grpc." +
+      "gateway.protoc_gen_openapiv2.options.Sec" +
+      "urityScheme.FlowR\004flow\022+\n\021authorization_" +
+      "url\030\006 \001(\tR\020authorizationUrl\022\033\n\ttoken_url" +
+      "\030\007 \001(\tR\010tokenUrl\022I\n\006scopes\030\010 \001(\01321.grpc." +
+      "gateway.protoc_gen_openapiv2.options.Sco" +
+      "pesR\006scopes\022i\n\nextensions\030\t \003(\0132I.grpc.g" +
+      "ateway.protoc_gen_openapiv2.options.Secu" +
+      "rityScheme.ExtensionsEntryR\nextensions\032U" +
+      "\n\017ExtensionsEntry\022\020\n\003key\030\001 \001(\tR\003key\022,\n\005v" +
+      "alue\030\002 \001(\0132\026.google.protobuf.ValueR\005valu" +
+      "e:\0028\001\"K\n\004Type\022\020\n\014TYPE_INVALID\020\000\022\016\n\nTYPE_" +
+      "BASIC\020\001\022\020\n\014TYPE_API_KEY\020\002\022\017\n\013TYPE_OAUTH2" +
+      "\020\003\"1\n\002In\022\016\n\nIN_INVALID\020\000\022\014\n\010IN_QUERY\020\001\022\r" +
+      "\n\tIN_HEADER\020\002\"j\n\004Flow\022\020\n\014FLOW_INVALID\020\000\022" +
+      "\021\n\rFLOW_IMPLICIT\020\001\022\021\n\rFLOW_PASSWORD\020\002\022\024\n" +
+      "\020FLOW_APPLICATION\020\003\022\024\n\020FLOW_ACCESS_CODE\020" +
+      "\004\"\366\002\n\023SecurityRequirement\022\212\001\n\024security_r" +
+      "equirement\030\001 \003(\0132W.grpc.gateway.protoc_g" +
+      "en_openapiv2.options.SecurityRequirement" +
+      ".SecurityRequirementEntryR\023securityRequi" +
+      "rement\0320\n\030SecurityRequirementValue\022\024\n\005sc" +
+      "ope\030\001 \003(\tR\005scope\032\237\001\n\030SecurityRequirement" +
+      "Entry\022\020\n\003key\030\001 \001(\tR\003key\022m\n\005value\030\002 \001(\0132W" +
+      ".grpc.gateway.protoc_gen_openapiv2.optio" +
+      "ns.SecurityRequirement.SecurityRequireme" +
+      "ntValueR\005value:\0028\001\"\226\001\n\006Scopes\022R\n\005scope\030\001" +
+      " \003(\0132<.grpc.gateway.protoc_gen_openapiv2" +
+      ".options.Scopes.ScopeEntryR\005scope\0328\n\nSco" +
+      "peEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
+      "R\005value:\0028\001*;\n\006Scheme\022\013\n\007UNKNOWN\020\000\022\010\n\004HT" +
+      "TP\020\001\022\t\n\005HTTPS\020\002\022\006\n\002WS\020\003\022\007\n\003WSS\020\004BHZFgith" +
+      "ub.com/grpc-ecosystem/grpc-gateway/v2/pr" +
+      "otoc-gen-openapiv2/optionsb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.StructProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Swagger_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Swagger_fieldAccessorTable = new
@@ -27884,7 +30563,19 @@ public final class Openapiv2 {
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor,
-        new java.lang.String[] { "Ref", "Title", "Description", "Default", "ReadOnly", "Example", "MultipleOf", "Maximum", "ExclusiveMaximum", "Minimum", "ExclusiveMinimum", "MaxLength", "MinLength", "Pattern", "MaxItems", "MinItems", "UniqueItems", "MaxProperties", "MinProperties", "Required", "Array", "Type", "Format", "Enum", });
+        new java.lang.String[] { "Ref", "Title", "Description", "Default", "ReadOnly", "Example", "MultipleOf", "Maximum", "ExclusiveMaximum", "Minimum", "ExclusiveMinimum", "MaxLength", "MinLength", "Pattern", "MaxItems", "MinItems", "UniqueItems", "MaxProperties", "MinProperties", "Required", "Array", "Type", "Format", "Enum", "FieldConfiguration", "Extensions", });
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor =
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor.getNestedTypes().get(0);
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor,
+        new java.lang.String[] { "PathParamName", });
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_ExtensionsEntry_descriptor =
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor.getNestedTypes().get(1);
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_ExtensionsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_ExtensionsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_fieldAccessorTable = new
