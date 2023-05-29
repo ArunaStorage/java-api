@@ -1,0 +1,66 @@
+name: Build API stubs and publish package to GitHub Packages
+on: repository_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup Java environment 
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+
+      - name: Git Submodule Update
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --recursive
+          git submodule update --remote --recursive
+
+      - name: Setup buf
+        uses: bufbuild/buf-setup-action@v1
+
+      - name: Lint protofiles with buf
+        uses: bufbuild/buf-lint-action@v1
+
+      - name: Generate buf files
+        run: buf generate --include-imports
+
+      - name: Update version in pom.xml
+        run: | 
+          sed -i '1,/<version>/ s/<version>.*<\/version>/<version>${{ github.event.client_payload.version }}<\/version>/g' ./pom.xml
+
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Update version to ${{ github.event.client_payload.version }}" -a
+          git tag -a v${{ github.event.client_payload.version }} -m "Published new version: ${{ github.event.client_payload.version }}, see API for detailed changelog."
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tags: true
+          force: true
+
+      - name: Try delete (old) release if exists
+        run: gh release delete v${{ github.event.client_payload.version }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create release
+        run: gh release create v${{ github.event.client_payload.version }} --title "v${{ github.event.client_payload.version }}" --notes "${{ github.event.client_payload.message }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish package
+        run: mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
