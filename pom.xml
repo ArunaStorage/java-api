@@ -6,7 +6,7 @@
     
     <groupId>com.github.ArunaStorage</groupId>
     <artifactId>java-api</artifactId>
-    <version>1.0.0-rc.1</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>AOS Java API</name>
