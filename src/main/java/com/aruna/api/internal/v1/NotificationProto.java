@@ -7370,6 +7370,26 @@ public final class NotificationProto {
      * @return The notifyOnSubResource.
      */
     boolean getNotifyOnSubResource();
+
+    /**
+     * <pre>
+     * Subject derived from a resource hierarchy
+     * </pre>
+     *
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The subject.
+     */
+    java.lang.String getSubject();
+    /**
+     * <pre>
+     * Subject derived from a resource hierarchy
+     * </pre>
+     *
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The bytes for subject.
+     */
+    com.google.protobuf.ByteString
+        getSubjectBytes();
   }
   /**
    * Protobuf type {@code aruna.api.internal.v1.CreateStreamGroupRequest}
@@ -7388,6 +7408,7 @@ public final class NotificationProto {
       eventType_ = 0;
       resourceType_ = 0;
       resourceId_ = "";
+      subject_ = "";
     }
 
     @java.lang.Override
@@ -7571,6 +7592,53 @@ public final class NotificationProto {
       return notifyOnSubResource_;
     }
 
+    public static final int SUBJECT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subject_ = "";
+    /**
+     * <pre>
+     * Subject derived from a resource hierarchy
+     * </pre>
+     *
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The subject.
+     */
+    @java.lang.Override
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subject_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Subject derived from a resource hierarchy
+     * </pre>
+     *
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The bytes for subject.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7600,6 +7668,9 @@ public final class NotificationProto {
       if (notifyOnSubResource_ != false) {
         output.writeBool(5, notifyOnSubResource_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subject_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7627,6 +7698,9 @@ public final class NotificationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, notifyOnSubResource_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subject_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7650,6 +7724,8 @@ public final class NotificationProto {
           .equals(other.getResourceId())) return false;
       if (getNotifyOnSubResource()
           != other.getNotifyOnSubResource()) return false;
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7672,6 +7748,8 @@ public final class NotificationProto {
       hash = (37 * hash) + NOTIFY_ON_SUB_RESOURCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNotifyOnSubResource());
+      hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubject().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7808,6 +7886,7 @@ public final class NotificationProto {
         resourceType_ = 0;
         resourceId_ = "";
         notifyOnSubResource_ = false;
+        subject_ = "";
         return this;
       }
 
@@ -7856,6 +7935,9 @@ public final class NotificationProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.notifyOnSubResource_ = notifyOnSubResource_;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.subject_ = subject_;
+        }
       }
 
       @java.lang.Override
@@ -7888,6 +7970,11 @@ public final class NotificationProto {
         }
         if (other.getNotifyOnSubResource() != false) {
           setNotifyOnSubResource(other.getNotifyOnSubResource());
+        }
+        if (!other.getSubject().isEmpty()) {
+          subject_ = other.subject_;
+          bitField0_ |= 0x00000020;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7940,6 +8027,11 @@ public final class NotificationProto {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
+              case 50: {
+                subject_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8327,6 +8419,98 @@ public final class NotificationProto {
       public Builder clearNotifyOnSubResource() {
         bitField0_ = (bitField0_ & ~0x00000010);
         notifyOnSubResource_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subject_ = "";
+      /**
+       * <pre>
+       * Subject derived from a resource hierarchy
+       * </pre>
+       *
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @return The subject.
+       */
+      public java.lang.String getSubject() {
+        java.lang.Object ref = subject_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subject_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Subject derived from a resource hierarchy
+       * </pre>
+       *
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @return The bytes for subject.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectBytes() {
+        java.lang.Object ref = subject_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subject_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Subject derived from a resource hierarchy
+       * </pre>
+       *
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @param value The subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubject(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subject_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Subject derived from a resource hierarchy
+       * </pre>
+       *
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubject() {
+        subject_ = getDefaultInstance().getSubject();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Subject derived from a resource hierarchy
+       * </pre>
+       *
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @param value The bytes for subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subject_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -12876,7 +13060,7 @@ public final class NotificationProto {
       "\001(\0162).aruna.api.storage.models.v1.Resour" +
       "ceTypeR\014resourceType\022\037\n\013resource_id\030\004 \001(" +
       "\tR\nresourceId\0223\n\026notify_on_sub_resource\030" +
-      "\005 \001(\010R\023notifyOnSubResource\"\244\002\n\030CreateStr" +
+      "\005 \001(\010R\023notifyOnSubResource\"\276\002\n\030CreateStr" +
       "eamGroupRequest\022\024\n\005token\030\001 \001(\tR\005token\022L\n" +
       "\nevent_type\030\002 \001(\0162-.aruna.api.notificati" +
       "on.services.v1.EventTypeR\teventType\022N\n\rr" +
@@ -12884,44 +13068,45 @@ public final class NotificationProto {
       "odels.v1.ResourceTypeR\014resourceType\022\037\n\013r" +
       "esource_id\030\004 \001(\tR\nresourceId\0223\n\026notify_o" +
       "n_sub_resource\030\005 \001(\010R\023notifyOnSubResourc" +
-      "e\"b\n\031CreateStreamGroupResponse\022E\n\014stream" +
-      "_group\030\001 \001(\0132\".aruna.api.internal.v1.Str" +
-      "eamGroupR\013streamGroup\"U\n\025GetStreamGroupR" +
-      "equest\022\024\n\005token\030\001 \001(\tR\005token\022&\n\017stream_g" +
-      "roup_id\030\002 \001(\tR\rstreamGroupId\"_\n\026GetStrea" +
-      "mGroupResponse\022E\n\014stream_group\030\001 \001(\0132\".a" +
-      "runa.api.internal.v1.StreamGroupR\013stream" +
-      "Group\"X\n\030DeleteStreamGroupRequest\022\024\n\005tok" +
-      "en\030\001 \001(\tR\005token\022&\n\017stream_group_id\030\002 \001(\t" +
-      "R\rstreamGroupId\"\033\n\031DeleteStreamGroupResp" +
-      "onse\"\213\001\n\030GetSharedRevisionRequest\022N\n\rres" +
-      "ource_type\030\001 \001(\0162).aruna.api.storage.mod" +
-      "els.v1.ResourceTypeR\014resourceType\022\037\n\013res" +
-      "ource_id\030\002 \001(\tR\nresourceId\"I\n\031GetSharedR" +
-      "evisionResponse\022,\n\022shared_revision_id\030\001 " +
-      "\001(\tR\020sharedRevisionId2\221\001\n\033InternalEventE" +
-      "mitterService\022`\n\tEmitEvent\022\'.aruna.api.i" +
-      "nternal.v1.EmitEventRequest\032(.aruna.api." +
-      "internal.v1.EmitEventResponse\"\000\032\020\372\322\344\223\002\n\022" +
-      "\010INTERNAL2\207\004\n\024InternalEventService\022x\n\021Cr" +
-      "eateStreamGroup\022/.aruna.api.internal.v1." +
-      "CreateStreamGroupRequest\0320.aruna.api.int" +
-      "ernal.v1.CreateStreamGroupResponse\"\000\022o\n\016" +
-      "GetStreamGroup\022,.aruna.api.internal.v1.G" +
-      "etStreamGroupRequest\032-.aruna.api.interna" +
-      "l.v1.GetStreamGroupResponse\"\000\022x\n\021DeleteS" +
-      "treamGroup\022/.aruna.api.internal.v1.Delet" +
-      "eStreamGroupRequest\0320.aruna.api.internal" +
-      ".v1.DeleteStreamGroupResponse\"\000\022x\n\021GetSh" +
-      "aredRevision\022/.aruna.api.internal.v1.Get" +
-      "SharedRevisionRequest\0320.aruna.api.intern" +
-      "al.v1.GetSharedRevisionResponse\"\000\032\020\372\322\344\223\002" +
-      "\n\022\010INTERNALB\331\001\n\031com.aruna.api.internal.v" +
-      "1B\021NotificationProtoZ4github.com/ArunaSt" +
-      "orage/go-api/aruna/api/internal/v1\242\002\003AAI" +
-      "\252\002\025Aruna.Api.Internal.V1\312\002\025Aruna\\Api\\Int" +
-      "ernal\\V1\342\002!Aruna\\Api\\Internal\\V1\\GPBMeta" +
-      "data\352\002\030Aruna::Api::Internal::V1b\006proto3"
+      "e\022\030\n\007subject\030\006 \001(\tR\007subject\"b\n\031CreateStr" +
+      "eamGroupResponse\022E\n\014stream_group\030\001 \001(\0132\"" +
+      ".aruna.api.internal.v1.StreamGroupR\013stre" +
+      "amGroup\"U\n\025GetStreamGroupRequest\022\024\n\005toke" +
+      "n\030\001 \001(\tR\005token\022&\n\017stream_group_id\030\002 \001(\tR" +
+      "\rstreamGroupId\"_\n\026GetStreamGroupResponse" +
+      "\022E\n\014stream_group\030\001 \001(\0132\".aruna.api.inter" +
+      "nal.v1.StreamGroupR\013streamGroup\"X\n\030Delet" +
+      "eStreamGroupRequest\022\024\n\005token\030\001 \001(\tR\005toke" +
+      "n\022&\n\017stream_group_id\030\002 \001(\tR\rstreamGroupI" +
+      "d\"\033\n\031DeleteStreamGroupResponse\"\213\001\n\030GetSh" +
+      "aredRevisionRequest\022N\n\rresource_type\030\001 \001" +
+      "(\0162).aruna.api.storage.models.v1.Resourc" +
+      "eTypeR\014resourceType\022\037\n\013resource_id\030\002 \001(\t" +
+      "R\nresourceId\"I\n\031GetSharedRevisionRespons" +
+      "e\022,\n\022shared_revision_id\030\001 \001(\tR\020sharedRev" +
+      "isionId2\221\001\n\033InternalEventEmitterService\022" +
+      "`\n\tEmitEvent\022\'.aruna.api.internal.v1.Emi" +
+      "tEventRequest\032(.aruna.api.internal.v1.Em" +
+      "itEventResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNAL2\207\004\n\024" +
+      "InternalEventService\022x\n\021CreateStreamGrou" +
+      "p\022/.aruna.api.internal.v1.CreateStreamGr" +
+      "oupRequest\0320.aruna.api.internal.v1.Creat" +
+      "eStreamGroupResponse\"\000\022o\n\016GetStreamGroup" +
+      "\022,.aruna.api.internal.v1.GetStreamGroupR" +
+      "equest\032-.aruna.api.internal.v1.GetStream" +
+      "GroupResponse\"\000\022x\n\021DeleteStreamGroup\022/.a" +
+      "runa.api.internal.v1.DeleteStreamGroupRe" +
+      "quest\0320.aruna.api.internal.v1.DeleteStre" +
+      "amGroupResponse\"\000\022x\n\021GetSharedRevision\022/" +
+      ".aruna.api.internal.v1.GetSharedRevision" +
+      "Request\0320.aruna.api.internal.v1.GetShare" +
+      "dRevisionResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNALB\331\001" +
+      "\n\031com.aruna.api.internal.v1B\021Notificatio" +
+      "nProtoZ4github.com/ArunaStorage/go-api/a" +
+      "runa/api/internal/v1\242\002\003AAI\252\002\025Aruna.Api.I" +
+      "nternal.V1\312\002\025Aruna\\Api\\Internal\\V1\342\002!Aru" +
+      "na\\Api\\Internal\\V1\\GPBMetadata\352\002\030Aruna::" +
+      "Api::Internal::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12983,7 +13168,7 @@ public final class NotificationProto {
     internal_static_aruna_api_internal_v1_CreateStreamGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_CreateStreamGroupRequest_descriptor,
-        new java.lang.String[] { "Token", "EventType", "ResourceType", "ResourceId", "NotifyOnSubResource", });
+        new java.lang.String[] { "Token", "EventType", "ResourceType", "ResourceId", "NotifyOnSubResource", "Subject", });
     internal_static_aruna_api_internal_v1_CreateStreamGroupResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_aruna_api_internal_v1_CreateStreamGroupResponse_fieldAccessorTable = new

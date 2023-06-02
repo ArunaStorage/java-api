@@ -4215,6 +4215,1094 @@ public final class AuthorizeProto {
 
   }
 
+  public interface GetTokenFromSecretRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.internal.v1.GetTokenFromSecretRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+     * @return Whether the authorization field is set.
+     */
+    boolean hasAuthorization();
+    /**
+     * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+     * @return The authorization.
+     */
+    com.aruna.api.internal.v1.AuthorizeProto.Authorization getAuthorization();
+    /**
+     * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+     */
+    com.aruna.api.internal.v1.AuthorizeProto.AuthorizationOrBuilder getAuthorizationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.internal.v1.GetTokenFromSecretRequest}
+   */
+  public static final class GetTokenFromSecretRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.internal.v1.GetTokenFromSecretRequest)
+      GetTokenFromSecretRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetTokenFromSecretRequest.newBuilder() to construct.
+    private GetTokenFromSecretRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetTokenFromSecretRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTokenFromSecretRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.class, com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.Builder.class);
+    }
+
+    public static final int AUTHORIZATION_FIELD_NUMBER = 1;
+    private com.aruna.api.internal.v1.AuthorizeProto.Authorization authorization_;
+    /**
+     * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+     * @return Whether the authorization field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthorization() {
+      return authorization_ != null;
+    }
+    /**
+     * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+     * @return The authorization.
+     */
+    @java.lang.Override
+    public com.aruna.api.internal.v1.AuthorizeProto.Authorization getAuthorization() {
+      return authorization_ == null ? com.aruna.api.internal.v1.AuthorizeProto.Authorization.getDefaultInstance() : authorization_;
+    }
+    /**
+     * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.internal.v1.AuthorizeProto.AuthorizationOrBuilder getAuthorizationOrBuilder() {
+      return authorization_ == null ? com.aruna.api.internal.v1.AuthorizeProto.Authorization.getDefaultInstance() : authorization_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (authorization_ != null) {
+        output.writeMessage(1, getAuthorization());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (authorization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAuthorization());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest other = (com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest) obj;
+
+      if (hasAuthorization() != other.hasAuthorization()) return false;
+      if (hasAuthorization()) {
+        if (!getAuthorization()
+            .equals(other.getAuthorization())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAuthorization()) {
+        hash = (37 * hash) + AUTHORIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthorization().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.internal.v1.GetTokenFromSecretRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.internal.v1.GetTokenFromSecretRequest)
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.class, com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authorization_ = null;
+        if (authorizationBuilder_ != null) {
+          authorizationBuilder_.dispose();
+          authorizationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest getDefaultInstanceForType() {
+        return com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest build() {
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest buildPartial() {
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest result = new com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authorization_ = authorizationBuilder_ == null
+              ? authorization_
+              : authorizationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest) {
+          return mergeFrom((com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest other) {
+        if (other == com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.getDefaultInstance()) return this;
+        if (other.hasAuthorization()) {
+          mergeAuthorization(other.getAuthorization());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAuthorizationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.internal.v1.AuthorizeProto.Authorization authorization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.internal.v1.AuthorizeProto.Authorization, com.aruna.api.internal.v1.AuthorizeProto.Authorization.Builder, com.aruna.api.internal.v1.AuthorizeProto.AuthorizationOrBuilder> authorizationBuilder_;
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       * @return Whether the authorization field is set.
+       */
+      public boolean hasAuthorization() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       * @return The authorization.
+       */
+      public com.aruna.api.internal.v1.AuthorizeProto.Authorization getAuthorization() {
+        if (authorizationBuilder_ == null) {
+          return authorization_ == null ? com.aruna.api.internal.v1.AuthorizeProto.Authorization.getDefaultInstance() : authorization_;
+        } else {
+          return authorizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      public Builder setAuthorization(com.aruna.api.internal.v1.AuthorizeProto.Authorization value) {
+        if (authorizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authorization_ = value;
+        } else {
+          authorizationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      public Builder setAuthorization(
+          com.aruna.api.internal.v1.AuthorizeProto.Authorization.Builder builderForValue) {
+        if (authorizationBuilder_ == null) {
+          authorization_ = builderForValue.build();
+        } else {
+          authorizationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      public Builder mergeAuthorization(com.aruna.api.internal.v1.AuthorizeProto.Authorization value) {
+        if (authorizationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            authorization_ != null &&
+            authorization_ != com.aruna.api.internal.v1.AuthorizeProto.Authorization.getDefaultInstance()) {
+            getAuthorizationBuilder().mergeFrom(value);
+          } else {
+            authorization_ = value;
+          }
+        } else {
+          authorizationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      public Builder clearAuthorization() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        authorization_ = null;
+        if (authorizationBuilder_ != null) {
+          authorizationBuilder_.dispose();
+          authorizationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      public com.aruna.api.internal.v1.AuthorizeProto.Authorization.Builder getAuthorizationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAuthorizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      public com.aruna.api.internal.v1.AuthorizeProto.AuthorizationOrBuilder getAuthorizationOrBuilder() {
+        if (authorizationBuilder_ != null) {
+          return authorizationBuilder_.getMessageOrBuilder();
+        } else {
+          return authorization_ == null ?
+              com.aruna.api.internal.v1.AuthorizeProto.Authorization.getDefaultInstance() : authorization_;
+        }
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Authorization authorization = 1 [json_name = "authorization"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.internal.v1.AuthorizeProto.Authorization, com.aruna.api.internal.v1.AuthorizeProto.Authorization.Builder, com.aruna.api.internal.v1.AuthorizeProto.AuthorizationOrBuilder> 
+          getAuthorizationFieldBuilder() {
+        if (authorizationBuilder_ == null) {
+          authorizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.internal.v1.AuthorizeProto.Authorization, com.aruna.api.internal.v1.AuthorizeProto.Authorization.Builder, com.aruna.api.internal.v1.AuthorizeProto.AuthorizationOrBuilder>(
+                  getAuthorization(),
+                  getParentForChildren(),
+                  isClean());
+          authorization_ = null;
+        }
+        return authorizationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.internal.v1.GetTokenFromSecretRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.internal.v1.GetTokenFromSecretRequest)
+    private static final com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest();
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetTokenFromSecretRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetTokenFromSecretRequest>() {
+      @java.lang.Override
+      public GetTokenFromSecretRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetTokenFromSecretRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetTokenFromSecretRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetTokenFromSecretResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.internal.v1.GetTokenFromSecretResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.internal.v1.GetTokenFromSecretResponse}
+   */
+  public static final class GetTokenFromSecretResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.internal.v1.GetTokenFromSecretResponse)
+      GetTokenFromSecretResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetTokenFromSecretResponse.newBuilder() to construct.
+    private GetTokenFromSecretResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetTokenFromSecretResponse() {
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTokenFromSecretResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.class, com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.Builder.class);
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse other = (com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse) obj;
+
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.internal.v1.GetTokenFromSecretResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.internal.v1.GetTokenFromSecretResponse)
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.class, com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        token_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.internal.v1.AuthorizeProto.internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse getDefaultInstanceForType() {
+        return com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse build() {
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse buildPartial() {
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse result = new com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.token_ = token_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse) {
+          return mergeFrom((com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse other) {
+        if (other == com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.getDefaultInstance()) return this;
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                token_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object token_ = "";
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.internal.v1.GetTokenFromSecretResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.internal.v1.GetTokenFromSecretResponse)
+    private static final com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse();
+    }
+
+    public static com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetTokenFromSecretResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetTokenFromSecretResponse>() {
+      @java.lang.Override
+      public GetTokenFromSecretResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetTokenFromSecretResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetTokenFromSecretResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_internal_v1_Authorization_descriptor;
   private static final 
@@ -4245,6 +5333,16 @@ public final class AuthorizeProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_internal_v1_GetSecretResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4274,20 +5372,27 @@ public final class AuthorizeProto {
       "\taccesskey\030\001 \001(\tR\taccesskey\"_\n\021GetSecret" +
       "Response\022J\n\rauthorization\030\001 \001(\0132$.aruna." +
       "api.internal.v1.AuthorizationR\rauthoriza" +
-      "tion*E\n\006IdType\022\027\n\023ID_TYPE_UNSPECIFIED\020\000\022" +
-      "\020\n\014ID_TYPE_UUID\020\001\022\020\n\014ID_TYPE_PATH\020\0022\360\001\n\030" +
-      "InternalAuthorizeService\022`\n\tAuthorize\022\'." +
-      "aruna.api.internal.v1.AuthorizeRequest\032(" +
-      ".aruna.api.internal.v1.AuthorizeResponse" +
-      "\"\000\022`\n\tGetSecret\022\'.aruna.api.internal.v1." +
-      "GetSecretRequest\032(.aruna.api.internal.v1" +
-      ".GetSecretResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNALB\326" +
-      "\001\n\031com.aruna.api.internal.v1B\016AuthorizeP" +
-      "rotoZ4github.com/ArunaStorage/go-api/aru" +
-      "na/api/internal/v1\242\002\003AAI\252\002\025Aruna.Api.Int" +
-      "ernal.V1\312\002\025Aruna\\Api\\Internal\\V1\342\002!Aruna" +
-      "\\Api\\Internal\\V1\\GPBMetadata\352\002\030Aruna::Ap" +
-      "i::Internal::V1b\006proto3"
+      "tion\"g\n\031GetTokenFromSecretRequest\022J\n\raut" +
+      "horization\030\001 \001(\0132$.aruna.api.internal.v1" +
+      ".AuthorizationR\rauthorization\"2\n\032GetToke" +
+      "nFromSecretResponse\022\024\n\005token\030\001 \001(\tR\005toke" +
+      "n*E\n\006IdType\022\027\n\023ID_TYPE_UNSPECIFIED\020\000\022\020\n\014" +
+      "ID_TYPE_UUID\020\001\022\020\n\014ID_TYPE_PATH\020\0022\355\002\n\030Int" +
+      "ernalAuthorizeService\022`\n\tAuthorize\022\'.aru" +
+      "na.api.internal.v1.AuthorizeRequest\032(.ar" +
+      "una.api.internal.v1.AuthorizeResponse\"\000\022" +
+      "`\n\tGetSecret\022\'.aruna.api.internal.v1.Get" +
+      "SecretRequest\032(.aruna.api.internal.v1.Ge" +
+      "tSecretResponse\"\000\022{\n\022GetTokenFromSecret\022" +
+      "0.aruna.api.internal.v1.GetTokenFromSecr" +
+      "etRequest\0321.aruna.api.internal.v1.GetTok" +
+      "enFromSecretResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNAL" +
+      "B\326\001\n\031com.aruna.api.internal.v1B\016Authoriz" +
+      "eProtoZ4github.com/ArunaStorage/go-api/a" +
+      "runa/api/internal/v1\242\002\003AAI\252\002\025Aruna.Api.I" +
+      "nternal.V1\312\002\025Aruna\\Api\\Internal\\V1\342\002!Aru" +
+      "na\\Api\\Internal\\V1\\GPBMetadata\352\002\030Aruna::" +
+      "Api::Internal::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4331,6 +5436,18 @@ public final class AuthorizeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_GetSecretResponse_descriptor,
         new java.lang.String[] { "Authorization", });
+    internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_internal_v1_GetTokenFromSecretRequest_descriptor,
+        new java.lang.String[] { "Authorization", });
+    internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_internal_v1_GetTokenFromSecretResponse_descriptor,
+        new java.lang.String[] { "Token", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.VisibilityProto.apiVisibility);

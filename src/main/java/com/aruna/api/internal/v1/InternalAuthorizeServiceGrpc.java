@@ -77,6 +77,37 @@ public final class InternalAuthorizeServiceGrpc {
     return getGetSecretMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest,
+      com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse> getGetTokenFromSecretMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTokenFromSecret",
+      requestType = com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.class,
+      responseType = com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest,
+      com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse> getGetTokenFromSecretMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest, com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse> getGetTokenFromSecretMethod;
+    if ((getGetTokenFromSecretMethod = InternalAuthorizeServiceGrpc.getGetTokenFromSecretMethod) == null) {
+      synchronized (InternalAuthorizeServiceGrpc.class) {
+        if ((getGetTokenFromSecretMethod = InternalAuthorizeServiceGrpc.getGetTokenFromSecretMethod) == null) {
+          InternalAuthorizeServiceGrpc.getGetTokenFromSecretMethod = getGetTokenFromSecretMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest, com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTokenFromSecret"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InternalAuthorizeServiceMethodDescriptorSupplier("GetTokenFromSecret"))
+              .build();
+        }
+      }
+    }
+    return getGetTokenFromSecretMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,13 @@ public final class InternalAuthorizeServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.internal.v1.AuthorizeProto.GetSecretResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSecretMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getTokenFromSecret(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTokenFromSecretMethod(), responseObserver);
+    }
   }
 
   /**
@@ -182,6 +220,14 @@ public final class InternalAuthorizeServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSecretMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getTokenFromSecret(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTokenFromSecretMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -212,6 +258,13 @@ public final class InternalAuthorizeServiceGrpc {
     public com.aruna.api.internal.v1.AuthorizeProto.GetSecretResponse getSecret(com.aruna.api.internal.v1.AuthorizeProto.GetSecretRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse getTokenFromSecret(com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTokenFromSecretMethod(), getCallOptions(), request);
     }
   }
 
@@ -246,10 +299,19 @@ public final class InternalAuthorizeServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSecretMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse> getTokenFromSecret(
+        com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTokenFromSecretMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_AUTHORIZE = 0;
   private static final int METHODID_GET_SECRET = 1;
+  private static final int METHODID_GET_TOKEN_FROM_SECRET = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,6 +337,10 @@ public final class InternalAuthorizeServiceGrpc {
         case METHODID_GET_SECRET:
           serviceImpl.getSecret((com.aruna.api.internal.v1.AuthorizeProto.GetSecretRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.internal.v1.AuthorizeProto.GetSecretResponse>) responseObserver);
+          break;
+        case METHODID_GET_TOKEN_FROM_SECRET:
+          serviceImpl.getTokenFromSecret((com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -308,6 +374,13 @@ public final class InternalAuthorizeServiceGrpc {
               com.aruna.api.internal.v1.AuthorizeProto.GetSecretRequest,
               com.aruna.api.internal.v1.AuthorizeProto.GetSecretResponse>(
                 service, METHODID_GET_SECRET)))
+        .addMethod(
+          getGetTokenFromSecretMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretRequest,
+              com.aruna.api.internal.v1.AuthorizeProto.GetTokenFromSecretResponse>(
+                service, METHODID_GET_TOKEN_FROM_SECRET)))
         .build();
   }
 
@@ -358,6 +431,7 @@ public final class InternalAuthorizeServiceGrpc {
               .setSchemaDescriptor(new InternalAuthorizeServiceFileDescriptorSupplier())
               .addMethod(getAuthorizeMethod())
               .addMethod(getGetSecretMethod())
+              .addMethod(getGetTokenFromSecretMethod())
               .build();
         }
       }

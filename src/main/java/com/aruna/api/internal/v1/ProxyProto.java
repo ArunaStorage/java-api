@@ -12690,6 +12690,1020 @@ public final class ProxyProto {
 
   }
 
+  public interface CORSConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.internal.v1.CORSConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @return A list containing the allowedMethods.
+     */
+    java.util.List<java.lang.String>
+        getAllowedMethodsList();
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @return The count of allowedMethods.
+     */
+    int getAllowedMethodsCount();
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedMethods at the given index.
+     */
+    java.lang.String getAllowedMethods(int index);
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedMethods at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedMethodsBytes(int index);
+
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @return A list containing the allowedOrigins.
+     */
+    java.util.List<java.lang.String>
+        getAllowedOriginsList();
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @return The count of allowedOrigins.
+     */
+    int getAllowedOriginsCount();
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedOrigins at the given index.
+     */
+    java.lang.String getAllowedOrigins(int index);
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedOrigins at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedOriginsBytes(int index);
+
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @return A list containing the allowedHeaders.
+     */
+    java.util.List<java.lang.String>
+        getAllowedHeadersList();
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @return The count of allowedHeaders.
+     */
+    int getAllowedHeadersCount();
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedHeaders at the given index.
+     */
+    java.lang.String getAllowedHeaders(int index);
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedHeaders at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedHeadersBytes(int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.internal.v1.CORSConfig}
+   */
+  public static final class CORSConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.internal.v1.CORSConfig)
+      CORSConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CORSConfig.newBuilder() to construct.
+    private CORSConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CORSConfig() {
+      allowedMethods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      allowedOrigins_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      allowedHeaders_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CORSConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.internal.v1.ProxyProto.internal_static_aruna_api_internal_v1_CORSConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.internal.v1.ProxyProto.internal_static_aruna_api_internal_v1_CORSConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.internal.v1.ProxyProto.CORSConfig.class, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder.class);
+    }
+
+    public static final int ALLOWED_METHODS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allowedMethods_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @return A list containing the allowedMethods.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedMethodsList() {
+      return allowedMethods_;
+    }
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @return The count of allowedMethods.
+     */
+    public int getAllowedMethodsCount() {
+      return allowedMethods_.size();
+    }
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedMethods at the given index.
+     */
+    public java.lang.String getAllowedMethods(int index) {
+      return allowedMethods_.get(index);
+    }
+    /**
+     * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedMethods at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowedMethodsBytes(int index) {
+      return allowedMethods_.getByteString(index);
+    }
+
+    public static final int ALLOWED_ORIGINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allowedOrigins_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @return A list containing the allowedOrigins.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedOriginsList() {
+      return allowedOrigins_;
+    }
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @return The count of allowedOrigins.
+     */
+    public int getAllowedOriginsCount() {
+      return allowedOrigins_.size();
+    }
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedOrigins at the given index.
+     */
+    public java.lang.String getAllowedOrigins(int index) {
+      return allowedOrigins_.get(index);
+    }
+    /**
+     * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedOrigins at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowedOriginsBytes(int index) {
+      return allowedOrigins_.getByteString(index);
+    }
+
+    public static final int ALLOWED_HEADERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allowedHeaders_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @return A list containing the allowedHeaders.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedHeadersList() {
+      return allowedHeaders_;
+    }
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @return The count of allowedHeaders.
+     */
+    public int getAllowedHeadersCount() {
+      return allowedHeaders_.size();
+    }
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedHeaders at the given index.
+     */
+    public java.lang.String getAllowedHeaders(int index) {
+      return allowedHeaders_.get(index);
+    }
+    /**
+     * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedHeaders at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowedHeadersBytes(int index) {
+      return allowedHeaders_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < allowedMethods_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, allowedMethods_.getRaw(i));
+      }
+      for (int i = 0; i < allowedOrigins_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, allowedOrigins_.getRaw(i));
+      }
+      for (int i = 0; i < allowedHeaders_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, allowedHeaders_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedMethods_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedMethods_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedMethodsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedOrigins_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedOrigins_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedOriginsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedHeaders_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedHeaders_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedHeadersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.internal.v1.ProxyProto.CORSConfig)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.internal.v1.ProxyProto.CORSConfig other = (com.aruna.api.internal.v1.ProxyProto.CORSConfig) obj;
+
+      if (!getAllowedMethodsList()
+          .equals(other.getAllowedMethodsList())) return false;
+      if (!getAllowedOriginsList()
+          .equals(other.getAllowedOriginsList())) return false;
+      if (!getAllowedHeadersList()
+          .equals(other.getAllowedHeadersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAllowedMethodsCount() > 0) {
+        hash = (37 * hash) + ALLOWED_METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedMethodsList().hashCode();
+      }
+      if (getAllowedOriginsCount() > 0) {
+        hash = (37 * hash) + ALLOWED_ORIGINS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedOriginsList().hashCode();
+      }
+      if (getAllowedHeadersCount() > 0) {
+        hash = (37 * hash) + ALLOWED_HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedHeadersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.internal.v1.ProxyProto.CORSConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.internal.v1.CORSConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.internal.v1.CORSConfig)
+        com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.internal.v1.ProxyProto.internal_static_aruna_api_internal_v1_CORSConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.internal.v1.ProxyProto.internal_static_aruna_api_internal_v1_CORSConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.internal.v1.ProxyProto.CORSConfig.class, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder.class);
+      }
+
+      // Construct using com.aruna.api.internal.v1.ProxyProto.CORSConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        allowedMethods_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        allowedOrigins_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        allowedHeaders_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.internal.v1.ProxyProto.internal_static_aruna_api_internal_v1_CORSConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig getDefaultInstanceForType() {
+        return com.aruna.api.internal.v1.ProxyProto.CORSConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig build() {
+        com.aruna.api.internal.v1.ProxyProto.CORSConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig buildPartial() {
+        com.aruna.api.internal.v1.ProxyProto.CORSConfig result = new com.aruna.api.internal.v1.ProxyProto.CORSConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.internal.v1.ProxyProto.CORSConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          allowedMethods_.makeImmutable();
+          result.allowedMethods_ = allowedMethods_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          allowedOrigins_.makeImmutable();
+          result.allowedOrigins_ = allowedOrigins_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          allowedHeaders_.makeImmutable();
+          result.allowedHeaders_ = allowedHeaders_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.internal.v1.ProxyProto.CORSConfig) {
+          return mergeFrom((com.aruna.api.internal.v1.ProxyProto.CORSConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.internal.v1.ProxyProto.CORSConfig other) {
+        if (other == com.aruna.api.internal.v1.ProxyProto.CORSConfig.getDefaultInstance()) return this;
+        if (!other.allowedMethods_.isEmpty()) {
+          if (allowedMethods_.isEmpty()) {
+            allowedMethods_ = other.allowedMethods_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureAllowedMethodsIsMutable();
+            allowedMethods_.addAll(other.allowedMethods_);
+          }
+          onChanged();
+        }
+        if (!other.allowedOrigins_.isEmpty()) {
+          if (allowedOrigins_.isEmpty()) {
+            allowedOrigins_ = other.allowedOrigins_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureAllowedOriginsIsMutable();
+            allowedOrigins_.addAll(other.allowedOrigins_);
+          }
+          onChanged();
+        }
+        if (!other.allowedHeaders_.isEmpty()) {
+          if (allowedHeaders_.isEmpty()) {
+            allowedHeaders_ = other.allowedHeaders_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureAllowedHeadersIsMutable();
+            allowedHeaders_.addAll(other.allowedHeaders_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllowedMethodsIsMutable();
+                allowedMethods_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllowedOriginsIsMutable();
+                allowedOrigins_.add(s);
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllowedHeadersIsMutable();
+                allowedHeaders_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList allowedMethods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllowedMethodsIsMutable() {
+        if (!allowedMethods_.isModifiable()) {
+          allowedMethods_ = new com.google.protobuf.LazyStringArrayList(allowedMethods_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @return A list containing the allowedMethods.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedMethodsList() {
+        allowedMethods_.makeImmutable();
+        return allowedMethods_;
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @return The count of allowedMethods.
+       */
+      public int getAllowedMethodsCount() {
+        return allowedMethods_.size();
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedMethods at the given index.
+       */
+      public java.lang.String getAllowedMethods(int index) {
+        return allowedMethods_.get(index);
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedMethods at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowedMethodsBytes(int index) {
+        return allowedMethods_.getByteString(index);
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedMethods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedMethods(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedMethodsIsMutable();
+        allowedMethods_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @param value The allowedMethods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedMethods(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedMethodsIsMutable();
+        allowedMethods_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @param values The allowedMethods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedMethods(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedMethodsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedMethods_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedMethods() {
+        allowedMethods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_methods = 1 [json_name = "allowedMethods"];</code>
+       * @param value The bytes of the allowedMethods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedMethodsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllowedMethodsIsMutable();
+        allowedMethods_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList allowedOrigins_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllowedOriginsIsMutable() {
+        if (!allowedOrigins_.isModifiable()) {
+          allowedOrigins_ = new com.google.protobuf.LazyStringArrayList(allowedOrigins_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @return A list containing the allowedOrigins.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedOriginsList() {
+        allowedOrigins_.makeImmutable();
+        return allowedOrigins_;
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @return The count of allowedOrigins.
+       */
+      public int getAllowedOriginsCount() {
+        return allowedOrigins_.size();
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedOrigins at the given index.
+       */
+      public java.lang.String getAllowedOrigins(int index) {
+        return allowedOrigins_.get(index);
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedOrigins at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowedOriginsBytes(int index) {
+        return allowedOrigins_.getByteString(index);
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedOrigins to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedOrigins(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedOriginsIsMutable();
+        allowedOrigins_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @param value The allowedOrigins to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedOrigins(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedOriginsIsMutable();
+        allowedOrigins_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @param values The allowedOrigins to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedOrigins(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedOriginsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedOrigins_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedOrigins() {
+        allowedOrigins_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_origins = 2 [json_name = "allowedOrigins"];</code>
+       * @param value The bytes of the allowedOrigins to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedOriginsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllowedOriginsIsMutable();
+        allowedOrigins_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList allowedHeaders_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllowedHeadersIsMutable() {
+        if (!allowedHeaders_.isModifiable()) {
+          allowedHeaders_ = new com.google.protobuf.LazyStringArrayList(allowedHeaders_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @return A list containing the allowedHeaders.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedHeadersList() {
+        allowedHeaders_.makeImmutable();
+        return allowedHeaders_;
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @return The count of allowedHeaders.
+       */
+      public int getAllowedHeadersCount() {
+        return allowedHeaders_.size();
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedHeaders at the given index.
+       */
+      public java.lang.String getAllowedHeaders(int index) {
+        return allowedHeaders_.get(index);
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedHeaders at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowedHeadersBytes(int index) {
+        return allowedHeaders_.getByteString(index);
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedHeaders to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedHeaders(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedHeadersIsMutable();
+        allowedHeaders_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @param value The allowedHeaders to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedHeaders(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedHeadersIsMutable();
+        allowedHeaders_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @param values The allowedHeaders to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedHeaders(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedHeadersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedHeaders_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedHeaders() {
+        allowedHeaders_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_headers = 3 [json_name = "allowedHeaders"];</code>
+       * @param value The bytes of the allowedHeaders to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedHeadersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllowedHeadersIsMutable();
+        allowedHeaders_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.internal.v1.CORSConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.internal.v1.CORSConfig)
+    private static final com.aruna.api.internal.v1.ProxyProto.CORSConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.internal.v1.ProxyProto.CORSConfig();
+    }
+
+    public static com.aruna.api.internal.v1.ProxyProto.CORSConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CORSConfig>
+        PARSER = new com.google.protobuf.AbstractParser<CORSConfig>() {
+      @java.lang.Override
+      public CORSConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CORSConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CORSConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.internal.v1.ProxyProto.CORSConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetObjectLocationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.internal.v1.GetObjectLocationResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -12723,6 +13737,30 @@ public final class ProxyProto {
      * <code>.aruna.api.internal.v1.Location location = 2 [json_name = "location"];</code>
      */
     com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    java.util.List<com.aruna.api.internal.v1.ProxyProto.CORSConfig> 
+        getCorsConfigurationsList();
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    com.aruna.api.internal.v1.ProxyProto.CORSConfig getCorsConfigurations(int index);
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    int getCorsConfigurationsCount();
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    java.util.List<? extends com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder> 
+        getCorsConfigurationsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder getCorsConfigurationsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code aruna.api.internal.v1.GetObjectLocationResponse}
@@ -12737,6 +13775,7 @@ public final class ProxyProto {
       super(builder);
     }
     private GetObjectLocationResponse() {
+      corsConfigurations_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -12811,6 +13850,47 @@ public final class ProxyProto {
       return location_ == null ? com.aruna.api.internal.v1.ProxyProto.Location.getDefaultInstance() : location_;
     }
 
+    public static final int CORS_CONFIGURATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.internal.v1.ProxyProto.CORSConfig> corsConfigurations_;
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.internal.v1.ProxyProto.CORSConfig> getCorsConfigurationsList() {
+      return corsConfigurations_;
+    }
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder> 
+        getCorsConfigurationsOrBuilderList() {
+      return corsConfigurations_;
+    }
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    @java.lang.Override
+    public int getCorsConfigurationsCount() {
+      return corsConfigurations_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.internal.v1.ProxyProto.CORSConfig getCorsConfigurations(int index) {
+      return corsConfigurations_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder getCorsConfigurationsOrBuilder(
+        int index) {
+      return corsConfigurations_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12831,6 +13911,9 @@ public final class ProxyProto {
       if (location_ != null) {
         output.writeMessage(2, getLocation());
       }
+      for (int i = 0; i < corsConfigurations_.size(); i++) {
+        output.writeMessage(3, corsConfigurations_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -12847,6 +13930,10 @@ public final class ProxyProto {
       if (location_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocation());
+      }
+      for (int i = 0; i < corsConfigurations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, corsConfigurations_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -12873,6 +13960,8 @@ public final class ProxyProto {
         if (!getLocation()
             .equals(other.getLocation())) return false;
       }
+      if (!getCorsConfigurationsList()
+          .equals(other.getCorsConfigurationsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -12891,6 +13980,10 @@ public final class ProxyProto {
       if (hasLocation()) {
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocation().hashCode();
+      }
+      if (getCorsConfigurationsCount() > 0) {
+        hash = (37 * hash) + CORS_CONFIGURATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCorsConfigurationsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -13033,6 +14126,13 @@ public final class ProxyProto {
           locationBuilder_.dispose();
           locationBuilder_ = null;
         }
+        if (corsConfigurationsBuilder_ == null) {
+          corsConfigurations_ = java.util.Collections.emptyList();
+        } else {
+          corsConfigurations_ = null;
+          corsConfigurationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -13059,9 +14159,22 @@ public final class ProxyProto {
       @java.lang.Override
       public com.aruna.api.internal.v1.ProxyProto.GetObjectLocationResponse buildPartial() {
         com.aruna.api.internal.v1.ProxyProto.GetObjectLocationResponse result = new com.aruna.api.internal.v1.ProxyProto.GetObjectLocationResponse(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.internal.v1.ProxyProto.GetObjectLocationResponse result) {
+        if (corsConfigurationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            corsConfigurations_ = java.util.Collections.unmodifiableList(corsConfigurations_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.corsConfigurations_ = corsConfigurations_;
+        } else {
+          result.corsConfigurations_ = corsConfigurationsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.aruna.api.internal.v1.ProxyProto.GetObjectLocationResponse result) {
@@ -13095,6 +14208,32 @@ public final class ProxyProto {
         }
         if (other.hasLocation()) {
           mergeLocation(other.getLocation());
+        }
+        if (corsConfigurationsBuilder_ == null) {
+          if (!other.corsConfigurations_.isEmpty()) {
+            if (corsConfigurations_.isEmpty()) {
+              corsConfigurations_ = other.corsConfigurations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureCorsConfigurationsIsMutable();
+              corsConfigurations_.addAll(other.corsConfigurations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.corsConfigurations_.isEmpty()) {
+            if (corsConfigurationsBuilder_.isEmpty()) {
+              corsConfigurationsBuilder_.dispose();
+              corsConfigurationsBuilder_ = null;
+              corsConfigurations_ = other.corsConfigurations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              corsConfigurationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCorsConfigurationsFieldBuilder() : null;
+            } else {
+              corsConfigurationsBuilder_.addAllMessages(other.corsConfigurations_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -13136,6 +14275,19 @@ public final class ProxyProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                com.aruna.api.internal.v1.ProxyProto.CORSConfig m =
+                    input.readMessage(
+                        com.aruna.api.internal.v1.ProxyProto.CORSConfig.parser(),
+                        extensionRegistry);
+                if (corsConfigurationsBuilder_ == null) {
+                  ensureCorsConfigurationsIsMutable();
+                  corsConfigurations_.add(m);
+                } else {
+                  corsConfigurationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -13389,6 +14541,246 @@ public final class ProxyProto {
           location_ = null;
         }
         return locationBuilder_;
+      }
+
+      private java.util.List<com.aruna.api.internal.v1.ProxyProto.CORSConfig> corsConfigurations_ =
+        java.util.Collections.emptyList();
+      private void ensureCorsConfigurationsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          corsConfigurations_ = new java.util.ArrayList<com.aruna.api.internal.v1.ProxyProto.CORSConfig>(corsConfigurations_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.internal.v1.ProxyProto.CORSConfig, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder, com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder> corsConfigurationsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public java.util.List<com.aruna.api.internal.v1.ProxyProto.CORSConfig> getCorsConfigurationsList() {
+        if (corsConfigurationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(corsConfigurations_);
+        } else {
+          return corsConfigurationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public int getCorsConfigurationsCount() {
+        if (corsConfigurationsBuilder_ == null) {
+          return corsConfigurations_.size();
+        } else {
+          return corsConfigurationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig getCorsConfigurations(int index) {
+        if (corsConfigurationsBuilder_ == null) {
+          return corsConfigurations_.get(index);
+        } else {
+          return corsConfigurationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder setCorsConfigurations(
+          int index, com.aruna.api.internal.v1.ProxyProto.CORSConfig value) {
+        if (corsConfigurationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.set(index, value);
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder setCorsConfigurations(
+          int index, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder builderForValue) {
+        if (corsConfigurationsBuilder_ == null) {
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder addCorsConfigurations(com.aruna.api.internal.v1.ProxyProto.CORSConfig value) {
+        if (corsConfigurationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.add(value);
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder addCorsConfigurations(
+          int index, com.aruna.api.internal.v1.ProxyProto.CORSConfig value) {
+        if (corsConfigurationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.add(index, value);
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder addCorsConfigurations(
+          com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder builderForValue) {
+        if (corsConfigurationsBuilder_ == null) {
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder addCorsConfigurations(
+          int index, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder builderForValue) {
+        if (corsConfigurationsBuilder_ == null) {
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder addAllCorsConfigurations(
+          java.lang.Iterable<? extends com.aruna.api.internal.v1.ProxyProto.CORSConfig> values) {
+        if (corsConfigurationsBuilder_ == null) {
+          ensureCorsConfigurationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, corsConfigurations_);
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder clearCorsConfigurations() {
+        if (corsConfigurationsBuilder_ == null) {
+          corsConfigurations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public Builder removeCorsConfigurations(int index) {
+        if (corsConfigurationsBuilder_ == null) {
+          ensureCorsConfigurationsIsMutable();
+          corsConfigurations_.remove(index);
+          onChanged();
+        } else {
+          corsConfigurationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder getCorsConfigurationsBuilder(
+          int index) {
+        return getCorsConfigurationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder getCorsConfigurationsOrBuilder(
+          int index) {
+        if (corsConfigurationsBuilder_ == null) {
+          return corsConfigurations_.get(index);  } else {
+          return corsConfigurationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder> 
+           getCorsConfigurationsOrBuilderList() {
+        if (corsConfigurationsBuilder_ != null) {
+          return corsConfigurationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(corsConfigurations_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder addCorsConfigurationsBuilder() {
+        return getCorsConfigurationsFieldBuilder().addBuilder(
+            com.aruna.api.internal.v1.ProxyProto.CORSConfig.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder addCorsConfigurationsBuilder(
+          int index) {
+        return getCorsConfigurationsFieldBuilder().addBuilder(
+            index, com.aruna.api.internal.v1.ProxyProto.CORSConfig.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.internal.v1.CORSConfig cors_configurations = 3 [json_name = "corsConfigurations"];</code>
+       */
+      public java.util.List<com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder> 
+           getCorsConfigurationsBuilderList() {
+        return getCorsConfigurationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.internal.v1.ProxyProto.CORSConfig, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder, com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder> 
+          getCorsConfigurationsFieldBuilder() {
+        if (corsConfigurationsBuilder_ == null) {
+          corsConfigurationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.internal.v1.ProxyProto.CORSConfig, com.aruna.api.internal.v1.ProxyProto.CORSConfig.Builder, com.aruna.api.internal.v1.ProxyProto.CORSConfigOrBuilder>(
+                  corsConfigurations_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          corsConfigurations_ = null;
+        }
+        return corsConfigurationsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14866,6 +16258,11 @@ public final class ProxyProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_internal_v1_GetObjectLocationRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_internal_v1_CORSConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_internal_v1_CORSConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_internal_v1_GetObjectLocationResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14943,51 +16340,57 @@ public final class ProxyProto {
       "bjectLocationRequest\022\022\n\004path\030\001 \001(\tR\004path" +
       "\022\037\n\013revision_id\030\002 \001(\tR\nrevisionId\022\035\n\nacc" +
       "ess_key\030\003 \001(\tR\taccessKey\022\037\n\013endpoint_id\030" +
-      "\004 \001(\tR\nendpointId\"\225\001\n\031GetObjectLocationR" +
-      "esponse\022;\n\006object\030\001 \001(\0132#.aruna.api.stor" +
-      "age.models.v1.ObjectR\006object\022;\n\010location" +
-      "\030\002 \001(\0132\037.aruna.api.internal.v1.LocationR" +
-      "\010location\"U\n\034GetCollectionByBucketReques" +
-      "t\022\026\n\006bucket\030\001 \001(\tR\006bucket\022\035\n\naccess_key\030" +
-      "\002 \001(\tR\taccessKey\"c\n\035GetCollectionByBucke" +
-      "tResponse\022\035\n\nproject_id\030\001 \001(\tR\tprojectId" +
-      "\022#\n\rcollection_id\030\002 \001(\tR\014collectionId*[\n" +
-      "\014LocationType\022\035\n\031LOCATION_TYPE_UNSPECIFI" +
-      "ED\020\000\022\024\n\020LOCATION_TYPE_S3\020\001\022\026\n\022LOCATION_T" +
-      "YPE_FILE\020\0022\232\003\n\024InternalProxyService\022~\n\023I" +
-      "nitMultipartUpload\0221.aruna.api.internal." +
-      "v1.InitMultipartUploadRequest\0322.aruna.ap" +
-      "i.internal.v1.InitMultipartUploadRespons" +
-      "e\"\000\022\204\001\n\025FinishMultipartUpload\0223.aruna.ap" +
-      "i.internal.v1.FinishMultipartUploadReque" +
-      "st\0324.aruna.api.internal.v1.FinishMultipa" +
-      "rtUploadResponse\"\000\022i\n\014DeleteObject\022*.aru" +
-      "na.api.internal.v1.DeleteObjectRequest\032+" +
-      ".aruna.api.internal.v1.DeleteObjectRespo" +
-      "nse\"\000\032\020\372\322\344\223\002\n\022\010INTERNAL2\277\005\n\034InternalProx" +
-      "yNotifierService\022\212\001\n\027GetOrCreateObjectBy" +
-      "Path\0225.aruna.api.internal.v1.GetOrCreate" +
-      "ObjectByPathRequest\0326.aruna.api.internal" +
-      ".v1.GetOrCreateObjectByPathResponse\"\000\022o\n" +
-      "\016FinalizeObject\022,.aruna.api.internal.v1." +
-      "FinalizeObjectRequest\032-.aruna.api.intern" +
-      "al.v1.FinalizeObjectResponse\"\000\022\215\001\n\030GetOr" +
-      "CreateEncryptionKey\0226.aruna.api.internal" +
-      ".v1.GetOrCreateEncryptionKeyRequest\0327.ar" +
-      "una.api.internal.v1.GetOrCreateEncryptio" +
-      "nKeyResponse\"\000\022x\n\021GetObjectLocation\022/.ar" +
-      "una.api.internal.v1.GetObjectLocationReq" +
-      "uest\0320.aruna.api.internal.v1.GetObjectLo" +
-      "cationResponse\"\000\022\204\001\n\025GetCollectionByBuck" +
-      "et\0223.aruna.api.internal.v1.GetCollection" +
-      "ByBucketRequest\0324.aruna.api.internal.v1." +
-      "GetCollectionByBucketResponse\"\000\032\020\372\322\344\223\002\n\022" +
-      "\010INTERNALB\322\001\n\031com.aruna.api.internal.v1B" +
-      "\nProxyProtoZ4github.com/ArunaStorage/go-" +
-      "api/aruna/api/internal/v1\242\002\003AAI\252\002\025Aruna." +
-      "Api.Internal.V1\312\002\025Aruna\\Api\\Internal\\V1\342" +
-      "\002!Aruna\\Api\\Internal\\V1\\GPBMetadata\352\002\030Ar" +
-      "una::Api::Internal::V1b\006proto3"
+      "\004 \001(\tR\nendpointId\"\207\001\n\nCORSConfig\022\'\n\017allo" +
+      "wed_methods\030\001 \003(\tR\016allowedMethods\022\'\n\017all" +
+      "owed_origins\030\002 \003(\tR\016allowedOrigins\022\'\n\017al" +
+      "lowed_headers\030\003 \003(\tR\016allowedHeaders\"\351\001\n\031" +
+      "GetObjectLocationResponse\022;\n\006object\030\001 \001(" +
+      "\0132#.aruna.api.storage.models.v1.ObjectR\006" +
+      "object\022;\n\010location\030\002 \001(\0132\037.aruna.api.int" +
+      "ernal.v1.LocationR\010location\022R\n\023cors_conf" +
+      "igurations\030\003 \003(\0132!.aruna.api.internal.v1" +
+      ".CORSConfigR\022corsConfigurations\"U\n\034GetCo" +
+      "llectionByBucketRequest\022\026\n\006bucket\030\001 \001(\tR" +
+      "\006bucket\022\035\n\naccess_key\030\002 \001(\tR\taccessKey\"c" +
+      "\n\035GetCollectionByBucketResponse\022\035\n\nproje" +
+      "ct_id\030\001 \001(\tR\tprojectId\022#\n\rcollection_id\030" +
+      "\002 \001(\tR\014collectionId*[\n\014LocationType\022\035\n\031L" +
+      "OCATION_TYPE_UNSPECIFIED\020\000\022\024\n\020LOCATION_T" +
+      "YPE_S3\020\001\022\026\n\022LOCATION_TYPE_FILE\020\0022\232\003\n\024Int" +
+      "ernalProxyService\022~\n\023InitMultipartUpload" +
+      "\0221.aruna.api.internal.v1.InitMultipartUp" +
+      "loadRequest\0322.aruna.api.internal.v1.Init" +
+      "MultipartUploadResponse\"\000\022\204\001\n\025FinishMult" +
+      "ipartUpload\0223.aruna.api.internal.v1.Fini" +
+      "shMultipartUploadRequest\0324.aruna.api.int" +
+      "ernal.v1.FinishMultipartUploadResponse\"\000" +
+      "\022i\n\014DeleteObject\022*.aruna.api.internal.v1" +
+      ".DeleteObjectRequest\032+.aruna.api.interna" +
+      "l.v1.DeleteObjectResponse\"\000\032\020\372\322\344\223\002\n\022\010INT" +
+      "ERNAL2\277\005\n\034InternalProxyNotifierService\022\212" +
+      "\001\n\027GetOrCreateObjectByPath\0225.aruna.api.i" +
+      "nternal.v1.GetOrCreateObjectByPathReques" +
+      "t\0326.aruna.api.internal.v1.GetOrCreateObj" +
+      "ectByPathResponse\"\000\022o\n\016FinalizeObject\022,." +
+      "aruna.api.internal.v1.FinalizeObjectRequ" +
+      "est\032-.aruna.api.internal.v1.FinalizeObje" +
+      "ctResponse\"\000\022\215\001\n\030GetOrCreateEncryptionKe" +
+      "y\0226.aruna.api.internal.v1.GetOrCreateEnc" +
+      "ryptionKeyRequest\0327.aruna.api.internal.v" +
+      "1.GetOrCreateEncryptionKeyResponse\"\000\022x\n\021" +
+      "GetObjectLocation\022/.aruna.api.internal.v" +
+      "1.GetObjectLocationRequest\0320.aruna.api.i" +
+      "nternal.v1.GetObjectLocationResponse\"\000\022\204" +
+      "\001\n\025GetCollectionByBucket\0223.aruna.api.int" +
+      "ernal.v1.GetCollectionByBucketRequest\0324." +
+      "aruna.api.internal.v1.GetCollectionByBuc" +
+      "ketResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNALB\322\001\n\031com." +
+      "aruna.api.internal.v1B\nProxyProtoZ4githu" +
+      "b.com/ArunaStorage/go-api/aruna/api/inte" +
+      "rnal/v1\242\002\003AAI\252\002\025Aruna.Api.Internal.V1\312\002\025" +
+      "Aruna\\Api\\Internal\\V1\342\002!Aruna\\Api\\Intern" +
+      "al\\V1\\GPBMetadata\352\002\030Aruna::Api::Internal" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15086,20 +16489,26 @@ public final class ProxyProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_GetObjectLocationRequest_descriptor,
         new java.lang.String[] { "Path", "RevisionId", "AccessKey", "EndpointId", });
-    internal_static_aruna_api_internal_v1_GetObjectLocationResponse_descriptor =
+    internal_static_aruna_api_internal_v1_CORSConfig_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_aruna_api_internal_v1_CORSConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_internal_v1_CORSConfig_descriptor,
+        new java.lang.String[] { "AllowedMethods", "AllowedOrigins", "AllowedHeaders", });
+    internal_static_aruna_api_internal_v1_GetObjectLocationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aruna_api_internal_v1_GetObjectLocationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_GetObjectLocationResponse_descriptor,
-        new java.lang.String[] { "Object", "Location", });
+        new java.lang.String[] { "Object", "Location", "CorsConfigurations", });
     internal_static_aruna_api_internal_v1_GetCollectionByBucketRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_internal_v1_GetCollectionByBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_GetCollectionByBucketRequest_descriptor,
         new java.lang.String[] { "Bucket", "AccessKey", });
     internal_static_aruna_api_internal_v1_GetCollectionByBucketResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aruna_api_internal_v1_GetCollectionByBucketResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_GetCollectionByBucketResponse_descriptor,

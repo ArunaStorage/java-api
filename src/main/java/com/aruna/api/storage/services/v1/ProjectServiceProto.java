@@ -13300,19 +13300,19 @@ public final class ProjectServiceProto {
       "ojectRequest\032D.aruna.api.storage.service" +
       "s.v1.EditUserPermissionsForProjectRespon" +
       "se\"-\202\323\344\223\002\'2\"/v1/project/{project_id}/edi" +
-      "t_user:\001*B\337\003\n!com.aruna.api.storage.serv" +
+      "t_user:\001*B\344\003\n!com.aruna.api.storage.serv" +
       "ices.v1B\023ProjectServiceProtoP\000Z<github.c" +
       "om/ArunaStorage/go-api/aruna/api/storage" +
       "/services/v1\242\002\004AASS\252\002\035Aruna.Api.Storage." +
       "Services.V1\312\002\035Aruna\\Api\\Storage\\Services" +
       "\\V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\GPBM" +
       "etadata\352\002!Aruna::Api::Storage::Services:" +
-      ":V1\222A\314\001\022,\n#Aruna Object Storage (AOS) RE" +
-      "ST API2\0051.0.0*\001\0022\020application/json:\020appl" +
-      "ication/jsonZ`\n^\n\rAccessKeyAuth\022M\010\002\0228Aut" +
-      "hentication token, prefixed by Bearer: B" +
-      "earer <token>\032\rAuthorization \002b\023\n\021\n\rAcce" +
-      "ssKeyAuth\022\000b\006proto3"
+      ":V1\222A\321\001\0221\n#Aruna Object Storage (AOS) RE" +
+      "ST API2\n1.1.0-rc.2*\001\0022\020application/json:" +
+      "\020application/jsonZ`\n^\n\rAccessKeyAuth\022M\010\002" +
+      "\0228Authentication token, prefixed by Bear" +
+      "er: Bearer <token>\032\rAuthorization \002b\023\n\021\n" +
+      "\rAccessKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
