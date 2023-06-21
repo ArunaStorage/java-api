@@ -904,48 +904,46 @@ public final class BundlerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
+     * @return Whether the objectLocation field is set.
+     */
+    boolean hasObjectLocation();
+    /**
+     * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
      * @return The objectLocation.
      */
-    java.lang.String getObjectLocation();
+    com.aruna.api.internal.v1.ProxyProto.Location getObjectLocation();
     /**
-     * <code>string object_location = 1 [json_name = "objectLocation"];</code>
-     * @return The bytes for objectLocation.
+     * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
      */
-    com.google.protobuf.ByteString
-        getObjectLocationBytes();
+    com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder getObjectLocationOrBuilder();
 
     /**
-     * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-     * @return The encryptionKey.
+     * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+     * @return Whether the objectInfo field is set.
      */
-    java.lang.String getEncryptionKey();
+    boolean hasObjectInfo();
     /**
-     * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-     * @return The bytes for encryptionKey.
+     * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+     * @return The objectInfo.
      */
-    com.google.protobuf.ByteString
-        getEncryptionKeyBytes();
+    com.aruna.api.storage.models.v1.ModelsProto.Object getObjectInfo();
+    /**
+     * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getObjectInfoOrBuilder();
 
     /**
-     * <pre>
-     * Path + filename foo/bar/baz/test.txt
-     * </pre>
-     *
-     * <code>string object_path = 3 [json_name = "objectPath"];</code>
-     * @return The objectPath.
+     * <code>string sub_path = 3 [json_name = "subPath"];</code>
+     * @return The subPath.
      */
-    java.lang.String getObjectPath();
+    java.lang.String getSubPath();
     /**
-     * <pre>
-     * Path + filename foo/bar/baz/test.txt
-     * </pre>
-     *
-     * <code>string object_path = 3 [json_name = "objectPath"];</code>
-     * @return The bytes for objectPath.
+     * <code>string sub_path = 3 [json_name = "subPath"];</code>
+     * @return The bytes for subPath.
      */
     com.google.protobuf.ByteString
-        getObjectPathBytes();
+        getSubPathBytes();
   }
   /**
    * Protobuf type {@code aruna.api.internal.v1.ObjectRef}
@@ -960,9 +958,7 @@ public final class BundlerProto {
       super(builder);
     }
     private ObjectRef() {
-      objectLocation_ = "";
-      encryptionKey_ = "";
-      objectPath_ = "";
+      subPath_ = "";
     }
 
     @java.lang.Override
@@ -986,124 +982,90 @@ public final class BundlerProto {
     }
 
     public static final int OBJECT_LOCATION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object objectLocation_ = "";
+    private com.aruna.api.internal.v1.ProxyProto.Location objectLocation_;
     /**
-     * <code>string object_location = 1 [json_name = "objectLocation"];</code>
+     * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
+     * @return Whether the objectLocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasObjectLocation() {
+      return objectLocation_ != null;
+    }
+    /**
+     * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
      * @return The objectLocation.
      */
     @java.lang.Override
-    public java.lang.String getObjectLocation() {
-      java.lang.Object ref = objectLocation_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        objectLocation_ = s;
-        return s;
-      }
+    public com.aruna.api.internal.v1.ProxyProto.Location getObjectLocation() {
+      return objectLocation_ == null ? com.aruna.api.internal.v1.ProxyProto.Location.getDefaultInstance() : objectLocation_;
     }
     /**
-     * <code>string object_location = 1 [json_name = "objectLocation"];</code>
-     * @return The bytes for objectLocation.
+     * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getObjectLocationBytes() {
-      java.lang.Object ref = objectLocation_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        objectLocation_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder getObjectLocationOrBuilder() {
+      return objectLocation_ == null ? com.aruna.api.internal.v1.ProxyProto.Location.getDefaultInstance() : objectLocation_;
     }
 
-    public static final int ENCRYPTION_KEY_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object encryptionKey_ = "";
+    public static final int OBJECT_INFO_FIELD_NUMBER = 2;
+    private com.aruna.api.storage.models.v1.ModelsProto.Object objectInfo_;
     /**
-     * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-     * @return The encryptionKey.
+     * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+     * @return Whether the objectInfo field is set.
      */
     @java.lang.Override
-    public java.lang.String getEncryptionKey() {
-      java.lang.Object ref = encryptionKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        encryptionKey_ = s;
-        return s;
-      }
+    public boolean hasObjectInfo() {
+      return objectInfo_ != null;
     }
     /**
-     * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-     * @return The bytes for encryptionKey.
+     * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+     * @return The objectInfo.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getEncryptionKeyBytes() {
-      java.lang.Object ref = encryptionKey_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        encryptionKey_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.aruna.api.storage.models.v1.ModelsProto.Object getObjectInfo() {
+      return objectInfo_ == null ? com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance() : objectInfo_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getObjectInfoOrBuilder() {
+      return objectInfo_ == null ? com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance() : objectInfo_;
     }
 
-    public static final int OBJECT_PATH_FIELD_NUMBER = 3;
+    public static final int SUB_PATH_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object objectPath_ = "";
+    private volatile java.lang.Object subPath_ = "";
     /**
-     * <pre>
-     * Path + filename foo/bar/baz/test.txt
-     * </pre>
-     *
-     * <code>string object_path = 3 [json_name = "objectPath"];</code>
-     * @return The objectPath.
+     * <code>string sub_path = 3 [json_name = "subPath"];</code>
+     * @return The subPath.
      */
     @java.lang.Override
-    public java.lang.String getObjectPath() {
-      java.lang.Object ref = objectPath_;
+    public java.lang.String getSubPath() {
+      java.lang.Object ref = subPath_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        objectPath_ = s;
+        subPath_ = s;
         return s;
       }
     }
     /**
-     * <pre>
-     * Path + filename foo/bar/baz/test.txt
-     * </pre>
-     *
-     * <code>string object_path = 3 [json_name = "objectPath"];</code>
-     * @return The bytes for objectPath.
+     * <code>string sub_path = 3 [json_name = "subPath"];</code>
+     * @return The bytes for subPath.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getObjectPathBytes() {
-      java.lang.Object ref = objectPath_;
+        getSubPathBytes() {
+      java.lang.Object ref = subPath_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        objectPath_ = b;
+        subPath_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1124,14 +1086,14 @@ public final class BundlerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectLocation_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, objectLocation_);
+      if (objectLocation_ != null) {
+        output.writeMessage(1, getObjectLocation());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encryptionKey_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, encryptionKey_);
+      if (objectInfo_ != null) {
+        output.writeMessage(2, getObjectInfo());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectPath_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, objectPath_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subPath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subPath_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1142,14 +1104,16 @@ public final class BundlerProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectLocation_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, objectLocation_);
+      if (objectLocation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getObjectLocation());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encryptionKey_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, encryptionKey_);
+      if (objectInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getObjectInfo());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectPath_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, objectPath_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subPath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subPath_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1166,12 +1130,18 @@ public final class BundlerProto {
       }
       com.aruna.api.internal.v1.BundlerProto.ObjectRef other = (com.aruna.api.internal.v1.BundlerProto.ObjectRef) obj;
 
-      if (!getObjectLocation()
-          .equals(other.getObjectLocation())) return false;
-      if (!getEncryptionKey()
-          .equals(other.getEncryptionKey())) return false;
-      if (!getObjectPath()
-          .equals(other.getObjectPath())) return false;
+      if (hasObjectLocation() != other.hasObjectLocation()) return false;
+      if (hasObjectLocation()) {
+        if (!getObjectLocation()
+            .equals(other.getObjectLocation())) return false;
+      }
+      if (hasObjectInfo() != other.hasObjectInfo()) return false;
+      if (hasObjectInfo()) {
+        if (!getObjectInfo()
+            .equals(other.getObjectInfo())) return false;
+      }
+      if (!getSubPath()
+          .equals(other.getSubPath())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1183,12 +1153,16 @@ public final class BundlerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OBJECT_LOCATION_FIELD_NUMBER;
-      hash = (53 * hash) + getObjectLocation().hashCode();
-      hash = (37 * hash) + ENCRYPTION_KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getEncryptionKey().hashCode();
-      hash = (37 * hash) + OBJECT_PATH_FIELD_NUMBER;
-      hash = (53 * hash) + getObjectPath().hashCode();
+      if (hasObjectLocation()) {
+        hash = (37 * hash) + OBJECT_LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectLocation().hashCode();
+      }
+      if (hasObjectInfo()) {
+        hash = (37 * hash) + OBJECT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectInfo().hashCode();
+      }
+      hash = (37 * hash) + SUB_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getSubPath().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1320,9 +1294,17 @@ public final class BundlerProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        objectLocation_ = "";
-        encryptionKey_ = "";
-        objectPath_ = "";
+        objectLocation_ = null;
+        if (objectLocationBuilder_ != null) {
+          objectLocationBuilder_.dispose();
+          objectLocationBuilder_ = null;
+        }
+        objectInfo_ = null;
+        if (objectInfoBuilder_ != null) {
+          objectInfoBuilder_.dispose();
+          objectInfoBuilder_ = null;
+        }
+        subPath_ = "";
         return this;
       }
 
@@ -1357,13 +1339,17 @@ public final class BundlerProto {
       private void buildPartial0(com.aruna.api.internal.v1.BundlerProto.ObjectRef result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.objectLocation_ = objectLocation_;
+          result.objectLocation_ = objectLocationBuilder_ == null
+              ? objectLocation_
+              : objectLocationBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.encryptionKey_ = encryptionKey_;
+          result.objectInfo_ = objectInfoBuilder_ == null
+              ? objectInfo_
+              : objectInfoBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.objectPath_ = objectPath_;
+          result.subPath_ = subPath_;
         }
       }
 
@@ -1379,18 +1365,14 @@ public final class BundlerProto {
 
       public Builder mergeFrom(com.aruna.api.internal.v1.BundlerProto.ObjectRef other) {
         if (other == com.aruna.api.internal.v1.BundlerProto.ObjectRef.getDefaultInstance()) return this;
-        if (!other.getObjectLocation().isEmpty()) {
-          objectLocation_ = other.objectLocation_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        if (other.hasObjectLocation()) {
+          mergeObjectLocation(other.getObjectLocation());
         }
-        if (!other.getEncryptionKey().isEmpty()) {
-          encryptionKey_ = other.encryptionKey_;
-          bitField0_ |= 0x00000002;
-          onChanged();
+        if (other.hasObjectInfo()) {
+          mergeObjectInfo(other.getObjectInfo());
         }
-        if (!other.getObjectPath().isEmpty()) {
-          objectPath_ = other.objectPath_;
+        if (!other.getSubPath().isEmpty()) {
+          subPath_ = other.subPath_;
           bitField0_ |= 0x00000004;
           onChanged();
         }
@@ -1421,17 +1403,21 @@ public final class BundlerProto {
                 done = true;
                 break;
               case 10: {
-                objectLocation_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getObjectLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
-                encryptionKey_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getObjectInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                objectPath_ = input.readStringRequireUtf8();
+                subPath_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
@@ -1452,237 +1438,311 @@ public final class BundlerProto {
       }
       private int bitField0_;
 
-      private java.lang.Object objectLocation_ = "";
+      private com.aruna.api.internal.v1.ProxyProto.Location objectLocation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.internal.v1.ProxyProto.Location, com.aruna.api.internal.v1.ProxyProto.Location.Builder, com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder> objectLocationBuilder_;
       /**
-       * <code>string object_location = 1 [json_name = "objectLocation"];</code>
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
+       * @return Whether the objectLocation field is set.
+       */
+      public boolean hasObjectLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
        * @return The objectLocation.
        */
-      public java.lang.String getObjectLocation() {
-        java.lang.Object ref = objectLocation_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          objectLocation_ = s;
-          return s;
+      public com.aruna.api.internal.v1.ProxyProto.Location getObjectLocation() {
+        if (objectLocationBuilder_ == null) {
+          return objectLocation_ == null ? com.aruna.api.internal.v1.ProxyProto.Location.getDefaultInstance() : objectLocation_;
         } else {
-          return (java.lang.String) ref;
+          return objectLocationBuilder_.getMessage();
         }
       }
       /**
-       * <code>string object_location = 1 [json_name = "objectLocation"];</code>
-       * @return The bytes for objectLocation.
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
        */
-      public com.google.protobuf.ByteString
-          getObjectLocationBytes() {
-        java.lang.Object ref = objectLocation_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          objectLocation_ = b;
-          return b;
+      public Builder setObjectLocation(com.aruna.api.internal.v1.ProxyProto.Location value) {
+        if (objectLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objectLocation_ = value;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          objectLocationBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
       }
       /**
-       * <code>string object_location = 1 [json_name = "objectLocation"];</code>
-       * @param value The objectLocation to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
        */
       public Builder setObjectLocation(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        objectLocation_ = value;
+          com.aruna.api.internal.v1.ProxyProto.Location.Builder builderForValue) {
+        if (objectLocationBuilder_ == null) {
+          objectLocation_ = builderForValue.build();
+        } else {
+          objectLocationBuilder_.setMessage(builderForValue.build());
+        }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string object_location = 1 [json_name = "objectLocation"];</code>
-       * @return This builder for chaining.
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
+       */
+      public Builder mergeObjectLocation(com.aruna.api.internal.v1.ProxyProto.Location value) {
+        if (objectLocationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            objectLocation_ != null &&
+            objectLocation_ != com.aruna.api.internal.v1.ProxyProto.Location.getDefaultInstance()) {
+            getObjectLocationBuilder().mergeFrom(value);
+          } else {
+            objectLocation_ = value;
+          }
+        } else {
+          objectLocationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
        */
       public Builder clearObjectLocation() {
-        objectLocation_ = getDefaultInstance().getObjectLocation();
         bitField0_ = (bitField0_ & ~0x00000001);
+        objectLocation_ = null;
+        if (objectLocationBuilder_ != null) {
+          objectLocationBuilder_.dispose();
+          objectLocationBuilder_ = null;
+        }
         onChanged();
         return this;
       }
       /**
-       * <code>string object_location = 1 [json_name = "objectLocation"];</code>
-       * @param value The bytes for objectLocation to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
        */
-      public Builder setObjectLocationBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        objectLocation_ = value;
+      public com.aruna.api.internal.v1.ProxyProto.Location.Builder getObjectLocationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
-        return this;
+        return getObjectLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
+       */
+      public com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder getObjectLocationOrBuilder() {
+        if (objectLocationBuilder_ != null) {
+          return objectLocationBuilder_.getMessageOrBuilder();
+        } else {
+          return objectLocation_ == null ?
+              com.aruna.api.internal.v1.ProxyProto.Location.getDefaultInstance() : objectLocation_;
+        }
+      }
+      /**
+       * <code>.aruna.api.internal.v1.Location object_location = 1 [json_name = "objectLocation"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.internal.v1.ProxyProto.Location, com.aruna.api.internal.v1.ProxyProto.Location.Builder, com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder> 
+          getObjectLocationFieldBuilder() {
+        if (objectLocationBuilder_ == null) {
+          objectLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.internal.v1.ProxyProto.Location, com.aruna.api.internal.v1.ProxyProto.Location.Builder, com.aruna.api.internal.v1.ProxyProto.LocationOrBuilder>(
+                  getObjectLocation(),
+                  getParentForChildren(),
+                  isClean());
+          objectLocation_ = null;
+        }
+        return objectLocationBuilder_;
       }
 
-      private java.lang.Object encryptionKey_ = "";
+      private com.aruna.api.storage.models.v1.ModelsProto.Object objectInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> objectInfoBuilder_;
       /**
-       * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-       * @return The encryptionKey.
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+       * @return Whether the objectInfo field is set.
        */
-      public java.lang.String getEncryptionKey() {
-        java.lang.Object ref = encryptionKey_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          encryptionKey_ = s;
-          return s;
+      public boolean hasObjectInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+       * @return The objectInfo.
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.Object getObjectInfo() {
+        if (objectInfoBuilder_ == null) {
+          return objectInfo_ == null ? com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance() : objectInfo_;
         } else {
-          return (java.lang.String) ref;
+          return objectInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-       * @return The bytes for encryptionKey.
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
        */
-      public com.google.protobuf.ByteString
-          getEncryptionKeyBytes() {
-        java.lang.Object ref = encryptionKey_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          encryptionKey_ = b;
-          return b;
+      public Builder setObjectInfo(com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+        if (objectInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objectInfo_ = value;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          objectInfoBuilder_.setMessage(value);
         }
-      }
-      /**
-       * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-       * @param value The encryptionKey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEncryptionKey(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        encryptionKey_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-       * @return This builder for chaining.
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
        */
-      public Builder clearEncryptionKey() {
-        encryptionKey_ = getDefaultInstance().getEncryptionKey();
+      public Builder setObjectInfo(
+          com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+        if (objectInfoBuilder_ == null) {
+          objectInfo_ = builderForValue.build();
+        } else {
+          objectInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+       */
+      public Builder mergeObjectInfo(com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+        if (objectInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            objectInfo_ != null &&
+            objectInfo_ != com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance()) {
+            getObjectInfoBuilder().mergeFrom(value);
+          } else {
+            objectInfo_ = value;
+          }
+        } else {
+          objectInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+       */
+      public Builder clearObjectInfo() {
         bitField0_ = (bitField0_ & ~0x00000002);
+        objectInfo_ = null;
+        if (objectInfoBuilder_ != null) {
+          objectInfoBuilder_.dispose();
+          objectInfoBuilder_ = null;
+        }
         onChanged();
         return this;
       }
       /**
-       * <code>string encryption_key = 2 [json_name = "encryptionKey"];</code>
-       * @param value The bytes for encryptionKey to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
        */
-      public Builder setEncryptionKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        encryptionKey_ = value;
+      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder getObjectInfoBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
-        return this;
+        return getObjectInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getObjectInfoOrBuilder() {
+        if (objectInfoBuilder_ != null) {
+          return objectInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return objectInfo_ == null ?
+              com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance() : objectInfo_;
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.Object object_info = 2 [json_name = "objectInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+          getObjectInfoFieldBuilder() {
+        if (objectInfoBuilder_ == null) {
+          objectInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder>(
+                  getObjectInfo(),
+                  getParentForChildren(),
+                  isClean());
+          objectInfo_ = null;
+        }
+        return objectInfoBuilder_;
       }
 
-      private java.lang.Object objectPath_ = "";
+      private java.lang.Object subPath_ = "";
       /**
-       * <pre>
-       * Path + filename foo/bar/baz/test.txt
-       * </pre>
-       *
-       * <code>string object_path = 3 [json_name = "objectPath"];</code>
-       * @return The objectPath.
+       * <code>string sub_path = 3 [json_name = "subPath"];</code>
+       * @return The subPath.
        */
-      public java.lang.String getObjectPath() {
-        java.lang.Object ref = objectPath_;
+      public java.lang.String getSubPath() {
+        java.lang.Object ref = subPath_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          objectPath_ = s;
+          subPath_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <pre>
-       * Path + filename foo/bar/baz/test.txt
-       * </pre>
-       *
-       * <code>string object_path = 3 [json_name = "objectPath"];</code>
-       * @return The bytes for objectPath.
+       * <code>string sub_path = 3 [json_name = "subPath"];</code>
+       * @return The bytes for subPath.
        */
       public com.google.protobuf.ByteString
-          getObjectPathBytes() {
-        java.lang.Object ref = objectPath_;
+          getSubPathBytes() {
+        java.lang.Object ref = subPath_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          objectPath_ = b;
+          subPath_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <pre>
-       * Path + filename foo/bar/baz/test.txt
-       * </pre>
-       *
-       * <code>string object_path = 3 [json_name = "objectPath"];</code>
-       * @param value The objectPath to set.
+       * <code>string sub_path = 3 [json_name = "subPath"];</code>
+       * @param value The subPath to set.
        * @return This builder for chaining.
        */
-      public Builder setObjectPath(
+      public Builder setSubPath(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        objectPath_ = value;
+        subPath_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * Path + filename foo/bar/baz/test.txt
-       * </pre>
-       *
-       * <code>string object_path = 3 [json_name = "objectPath"];</code>
+       * <code>string sub_path = 3 [json_name = "subPath"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearObjectPath() {
-        objectPath_ = getDefaultInstance().getObjectPath();
+      public Builder clearSubPath() {
+        subPath_ = getDefaultInstance().getSubPath();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * Path + filename foo/bar/baz/test.txt
-       * </pre>
-       *
-       * <code>string object_path = 3 [json_name = "objectPath"];</code>
-       * @param value The bytes for objectPath to set.
+       * <code>string sub_path = 3 [json_name = "subPath"];</code>
+       * @param value The bytes for subPath to set.
        * @return This builder for chaining.
        */
-      public Builder setObjectPathBytes(
+      public Builder setSubPathBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        objectPath_ = value;
+        subPath_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
@@ -5840,48 +5900,53 @@ public final class BundlerProto {
       "\n#aruna/api/internal/v1/bundler.proto\022\025a" +
       "runa.api.internal.v1\032\033google/api/visibil" +
       "ity.proto\032\037google/protobuf/timestamp.pro" +
-      "to\"3\n\024PrepareBundleRequest\022\033\n\tbundle_id\030" +
-      "\001 \001(\tR\010bundleId\"\027\n\025PrepareBundleResponse" +
-      "\"|\n\tObjectRef\022\'\n\017object_location\030\001 \001(\tR\016" +
-      "objectLocation\022%\n\016encryption_key\030\002 \001(\tR\r" +
-      "encryptionKey\022\037\n\013object_path\030\003 \001(\tR\nobje" +
-      "ctPath\"\243\001\n\006Bundle\022\033\n\tbundle_id\030\001 \001(\tR\010bu" +
-      "ndleId\022A\n\013object_refs\030\002 \003(\0132 .aruna.api." +
-      "internal.v1.ObjectRefR\nobjectRefs\0229\n\nexp" +
-      "ires_at\030\003 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\texpiresAt\"L\n\023EnableBundleRequest\0225\n\006b" +
-      "undle\030\001 \001(\0132\035.aruna.api.internal.v1.Bund" +
-      "leR\006bundle\"\026\n\024EnableBundleResponse\"\023\n\021Ge" +
-      "tBundlesRequest\"M\n\022GetBundlesResponse\0227\n" +
-      "\007bundles\030\001 \003(\0132\035.aruna.api.internal.v1.B" +
-      "undleR\007bundles\"6\n\027InvalidateBundleReques" +
-      "t\022\033\n\tbundle_id\030\001 \001(\tR\010bundleId\"\032\n\030Invali" +
-      "dateBundleResponse2\372\002\n\026InternalBundlerSe" +
-      "rvice\022l\n\rPrepareBundle\022+.aruna.api.inter" +
-      "nal.v1.PrepareBundleRequest\032,.aruna.api." +
-      "internal.v1.PrepareBundleResponse\"\000\022i\n\014E" +
-      "nableBundle\022*.aruna.api.internal.v1.Enab" +
-      "leBundleRequest\032+.aruna.api.internal.v1." +
-      "EnableBundleResponse\"\000\022u\n\020InvalidateBund" +
-      "le\022..aruna.api.internal.v1.InvalidateBun" +
-      "dleRequest\032/.aruna.api.internal.v1.Inval" +
-      "idateBundleResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNAL2" +
-      "\232\001\n!InternalBundlerBackchannelService\022c\n" +
-      "\nGetBundles\022(.aruna.api.internal.v1.GetB" +
-      "undlesRequest\032).aruna.api.internal.v1.Ge" +
-      "tBundlesResponse\"\000\032\020\372\322\344\223\002\n\022\010INTERNALB\324\001\n" +
-      "\031com.aruna.api.internal.v1B\014BundlerProto" +
-      "Z4github.com/ArunaStorage/go-api/aruna/a" +
-      "pi/internal/v1\242\002\003AAI\252\002\025Aruna.Api.Interna" +
-      "l.V1\312\002\025Aruna\\Api\\Internal\\V1\342\002!Aruna\\Api" +
-      "\\Internal\\V1\\GPBMetadata\352\002\030Aruna::Api::I" +
-      "nternal::V1b\006proto3"
+      "to\032(aruna/api/storage/models/v1/models.p" +
+      "roto\032!aruna/api/internal/v1/proxy.proto\"" +
+      "3\n\024PrepareBundleRequest\022\033\n\tbundle_id\030\001 \001" +
+      "(\tR\010bundleId\"\027\n\025PrepareBundleResponse\"\266\001" +
+      "\n\tObjectRef\022H\n\017object_location\030\001 \001(\0132\037.a" +
+      "runa.api.internal.v1.LocationR\016objectLoc" +
+      "ation\022D\n\013object_info\030\002 \001(\0132#.aruna.api.s" +
+      "torage.models.v1.ObjectR\nobjectInfo\022\031\n\010s" +
+      "ub_path\030\003 \001(\tR\007subPath\"\243\001\n\006Bundle\022\033\n\tbun" +
+      "dle_id\030\001 \001(\tR\010bundleId\022A\n\013object_refs\030\002 " +
+      "\003(\0132 .aruna.api.internal.v1.ObjectRefR\no" +
+      "bjectRefs\0229\n\nexpires_at\030\003 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\texpiresAt\"L\n\023EnableBu" +
+      "ndleRequest\0225\n\006bundle\030\001 \001(\0132\035.aruna.api." +
+      "internal.v1.BundleR\006bundle\"\026\n\024EnableBund" +
+      "leResponse\"\023\n\021GetBundlesRequest\"M\n\022GetBu" +
+      "ndlesResponse\0227\n\007bundles\030\001 \003(\0132\035.aruna.a" +
+      "pi.internal.v1.BundleR\007bundles\"6\n\027Invali" +
+      "dateBundleRequest\022\033\n\tbundle_id\030\001 \001(\tR\010bu" +
+      "ndleId\"\032\n\030InvalidateBundleResponse2\372\002\n\026I" +
+      "nternalBundlerService\022l\n\rPrepareBundle\022+" +
+      ".aruna.api.internal.v1.PrepareBundleRequ" +
+      "est\032,.aruna.api.internal.v1.PrepareBundl" +
+      "eResponse\"\000\022i\n\014EnableBundle\022*.aruna.api." +
+      "internal.v1.EnableBundleRequest\032+.aruna." +
+      "api.internal.v1.EnableBundleResponse\"\000\022u" +
+      "\n\020InvalidateBundle\022..aruna.api.internal." +
+      "v1.InvalidateBundleRequest\032/.aruna.api.i" +
+      "nternal.v1.InvalidateBundleResponse\"\000\032\020\372" +
+      "\322\344\223\002\n\022\010INTERNAL2\232\001\n!InternalBundlerBackc" +
+      "hannelService\022c\n\nGetBundles\022(.aruna.api." +
+      "internal.v1.GetBundlesRequest\032).aruna.ap" +
+      "i.internal.v1.GetBundlesResponse\"\000\032\020\372\322\344\223" +
+      "\002\n\022\010INTERNALB\324\001\n\031com.aruna.api.internal." +
+      "v1B\014BundlerProtoZ4github.com/ArunaStorag" +
+      "e/go-api/aruna/api/internal/v1\242\002\003AAI\252\002\025A" +
+      "runa.Api.Internal.V1\312\002\025Aruna\\Api\\Interna" +
+      "l\\V1\342\002!Aruna\\Api\\Internal\\V1\\GPBMetadata" +
+      "\352\002\030Aruna::Api::Internal::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.VisibilityProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.aruna.api.storage.models.v1.ModelsProto.getDescriptor(),
+          com.aruna.api.internal.v1.ProxyProto.getDescriptor(),
         });
     internal_static_aruna_api_internal_v1_PrepareBundleRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5900,7 +5965,7 @@ public final class BundlerProto {
     internal_static_aruna_api_internal_v1_ObjectRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_ObjectRef_descriptor,
-        new java.lang.String[] { "ObjectLocation", "EncryptionKey", "ObjectPath", });
+        new java.lang.String[] { "ObjectLocation", "ObjectInfo", "SubPath", });
     internal_static_aruna_api_internal_v1_Bundle_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_aruna_api_internal_v1_Bundle_fieldAccessorTable = new
@@ -5950,6 +6015,8 @@ public final class BundlerProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.VisibilityProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.aruna.api.storage.models.v1.ModelsProto.getDescriptor();
+    com.aruna.api.internal.v1.ProxyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -205,6 +205,37 @@ public final class CollectionServiceGrpc {
     return getDeleteCollectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest,
+      com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse> getAddKeyValuesToCollectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddKeyValuesToCollection",
+      requestType = com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest.class,
+      responseType = com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest,
+      com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse> getAddKeyValuesToCollectionMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest, com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse> getAddKeyValuesToCollectionMethod;
+    if ((getAddKeyValuesToCollectionMethod = CollectionServiceGrpc.getAddKeyValuesToCollectionMethod) == null) {
+      synchronized (CollectionServiceGrpc.class) {
+        if ((getAddKeyValuesToCollectionMethod = CollectionServiceGrpc.getAddKeyValuesToCollectionMethod) == null) {
+          CollectionServiceGrpc.getAddKeyValuesToCollectionMethod = getAddKeyValuesToCollectionMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest, com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddKeyValuesToCollection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CollectionServiceMethodDescriptorSupplier("AddKeyValuesToCollection"))
+              .build();
+        }
+      }
+    }
+    return getAddKeyValuesToCollectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -345,6 +376,18 @@ public final class CollectionServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCollectionMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * AddKeyValueToCollection
+     * Status: BETA
+     * Adds key values (labels / hooks) to a collection
+     * </pre>
+     */
+    default void addKeyValuesToCollection(com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddKeyValuesToCollectionMethod(), responseObserver);
+    }
   }
 
   /**
@@ -476,6 +519,19 @@ public final class CollectionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCollectionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AddKeyValueToCollection
+     * Status: BETA
+     * Adds key values (labels / hooks) to a collection
+     * </pre>
+     */
+    public void addKeyValuesToCollection(com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddKeyValuesToCollectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -585,6 +641,18 @@ public final class CollectionServiceGrpc {
     public com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionResponse deleteCollection(com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCollectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddKeyValueToCollection
+     * Status: BETA
+     * Adds key values (labels / hooks) to a collection
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse addKeyValuesToCollection(com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddKeyValuesToCollectionMethod(), getCallOptions(), request);
     }
   }
 
@@ -702,6 +770,19 @@ public final class CollectionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCollectionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AddKeyValueToCollection
+     * Status: BETA
+     * Adds key values (labels / hooks) to a collection
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse> addKeyValuesToCollection(
+        com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddKeyValuesToCollectionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_NEW_COLLECTION = 0;
@@ -710,6 +791,7 @@ public final class CollectionServiceGrpc {
   private static final int METHODID_UPDATE_COLLECTION = 3;
   private static final int METHODID_PIN_COLLECTION_VERSION = 4;
   private static final int METHODID_DELETE_COLLECTION = 5;
+  private static final int METHODID_ADD_KEY_VALUES_TO_COLLECTION = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -751,6 +833,10 @@ public final class CollectionServiceGrpc {
         case METHODID_DELETE_COLLECTION:
           serviceImpl.deleteCollection((com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionResponse>) responseObserver);
+          break;
+        case METHODID_ADD_KEY_VALUES_TO_COLLECTION:
+          serviceImpl.addKeyValuesToCollection((com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -812,6 +898,13 @@ public final class CollectionServiceGrpc {
               com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionRequest,
               com.aruna.api.storage.services.v1.CollectionServiceProto.DeleteCollectionResponse>(
                 service, METHODID_DELETE_COLLECTION)))
+        .addMethod(
+          getAddKeyValuesToCollectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest,
+              com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionResponse>(
+                service, METHODID_ADD_KEY_VALUES_TO_COLLECTION)))
         .build();
   }
 
@@ -866,6 +959,7 @@ public final class CollectionServiceGrpc {
               .addMethod(getUpdateCollectionMethod())
               .addMethod(getPinCollectionVersionMethod())
               .addMethod(getDeleteCollectionMethod())
+              .addMethod(getAddKeyValuesToCollectionMethod())
               .build();
         }
       }

@@ -13308,7 +13308,7 @@ public final class ProjectServiceProto {
       "\\V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\GPBM" +
       "etadata\352\002!Aruna::Api::Storage::Services:" +
       ":V1\222A\321\001\0221\n#Aruna Object Storage (AOS) RE" +
-      "ST API2\n1.1.0-rc.3*\001\0022\020application/json:" +
+      "ST API2\n1.1.0-rc.4*\001\0022\020application/json:" +
       "\020application/jsonZ`\n^\n\rAccessKeyAuth\022M\010\002" +
       "\0228Authentication token, prefixed by Bear" +
       "er: Bearer <token>\032\rAuthorization \002b\023\n\021\n" +
