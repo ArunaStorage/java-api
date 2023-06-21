@@ -794,6 +794,37 @@ public final class ObjectServiceGrpc {
     return getGetProjectCollectionIdsByPathMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request,
+      com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response> getGetObjectsAsListV2Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetObjectsAsListV2",
+      requestType = com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.class,
+      responseType = com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request,
+      com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response> getGetObjectsAsListV2Method() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request, com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response> getGetObjectsAsListV2Method;
+    if ((getGetObjectsAsListV2Method = ObjectServiceGrpc.getGetObjectsAsListV2Method) == null) {
+      synchronized (ObjectServiceGrpc.class) {
+        if ((getGetObjectsAsListV2Method = ObjectServiceGrpc.getGetObjectsAsListV2Method) == null) {
+          ObjectServiceGrpc.getGetObjectsAsListV2Method = getGetObjectsAsListV2Method =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request, com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetObjectsAsListV2"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.getDefaultInstance()))
+              .setSchemaDescriptor(new ObjectServiceMethodDescriptorSupplier("GetObjectsAsListV2"))
+              .build();
+        }
+      }
+    }
+    return getGetObjectsAsListV2Method;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1178,15 +1209,28 @@ public final class ObjectServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectsByPath
+     * GetProjectCollectionIdsByPath
      * Status: BETA
-     * Gets a specific object by object_path
+     * Gets a specific project and collection_id by object_path
      * !! Paths are collection specific !!
      * </pre>
      */
     default void getProjectCollectionIdsByPath(com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectCollectionIdsByPathMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetObjectsAsListV2
+     * Status: ALPHA
+     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * !! Paths are collection specific !!
+     * </pre>
+     */
+    default void getObjectsAsListV2(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectsAsListV2Method(), responseObserver);
     }
   }
 
@@ -1581,9 +1625,9 @@ public final class ObjectServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectsByPath
+     * GetProjectCollectionIdsByPath
      * Status: BETA
-     * Gets a specific object by object_path
+     * Gets a specific project and collection_id by object_path
      * !! Paths are collection specific !!
      * </pre>
      */
@@ -1591,6 +1635,20 @@ public final class ObjectServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProjectCollectionIdsByPathMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetObjectsAsListV2
+     * Status: ALPHA
+     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * !! Paths are collection specific !!
+     * </pre>
+     */
+    public void getObjectsAsListV2(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetObjectsAsListV2Method(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1947,15 +2005,28 @@ public final class ObjectServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectsByPath
+     * GetProjectCollectionIdsByPath
      * Status: BETA
-     * Gets a specific object by object_path
+     * Gets a specific project and collection_id by object_path
      * !! Paths are collection specific !!
      * </pre>
      */
     public com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathResponse getProjectCollectionIdsByPath(com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProjectCollectionIdsByPathMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetObjectsAsListV2
+     * Status: ALPHA
+     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * !! Paths are collection specific !!
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response getObjectsAsListV2(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetObjectsAsListV2Method(), getCallOptions(), request);
     }
   }
 
@@ -2320,9 +2391,9 @@ public final class ObjectServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectsByPath
+     * GetProjectCollectionIdsByPath
      * Status: BETA
-     * Gets a specific object by object_path
+     * Gets a specific project and collection_id by object_path
      * !! Paths are collection specific !!
      * </pre>
      */
@@ -2330,6 +2401,20 @@ public final class ObjectServiceGrpc {
         com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProjectCollectionIdsByPathMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetObjectsAsListV2
+     * Status: ALPHA
+     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * !! Paths are collection specific !!
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response> getObjectsAsListV2(
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetObjectsAsListV2Method(), getCallOptions()), request);
     }
   }
 
@@ -2358,6 +2443,7 @@ public final class ObjectServiceGrpc {
   private static final int METHODID_SET_OBJECT_PATH_VISIBILITY = 22;
   private static final int METHODID_GET_OBJECTS_BY_PATH = 23;
   private static final int METHODID_GET_PROJECT_COLLECTION_IDS_BY_PATH = 24;
+  private static final int METHODID_GET_OBJECTS_AS_LIST_V2 = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2475,6 +2561,10 @@ public final class ObjectServiceGrpc {
         case METHODID_GET_PROJECT_COLLECTION_IDS_BY_PATH:
           serviceImpl.getProjectCollectionIdsByPath((com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathResponse>) responseObserver);
+          break;
+        case METHODID_GET_OBJECTS_AS_LIST_V2:
+          serviceImpl.getObjectsAsListV2((com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2669,6 +2759,13 @@ public final class ObjectServiceGrpc {
               com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathRequest,
               com.aruna.api.storage.services.v1.ObjectServiceProto.GetProjectCollectionIdsByPathResponse>(
                 service, METHODID_GET_PROJECT_COLLECTION_IDS_BY_PATH)))
+        .addMethod(
+          getGetObjectsAsListV2Method(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request,
+              com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response>(
+                service, METHODID_GET_OBJECTS_AS_LIST_V2)))
         .build();
   }
 
@@ -2742,6 +2839,7 @@ public final class ObjectServiceGrpc {
               .addMethod(getSetObjectPathVisibilityMethod())
               .addMethod(getGetObjectsByPathMethod())
               .addMethod(getGetProjectCollectionIdsByPathMethod())
+              .addMethod(getGetObjectsAsListV2Method())
               .build();
         }
       }

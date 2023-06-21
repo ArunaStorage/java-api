@@ -47777,6 +47777,3546 @@ public final class ObjectServiceProto {
 
   }
 
+  public interface GetObjectsAsListV2RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.GetObjectsAsListV2Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required 
+     * </pre>
+     *
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    java.lang.String getBucket();
+    /**
+     * <pre>
+     * Required 
+     * </pre>
+     *
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    com.google.protobuf.ByteString
+        getBucketBytes();
+
+    /**
+     * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+     * @return Whether the continuationToken field is set.
+     */
+    boolean hasContinuationToken();
+    /**
+     * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+     * @return The continuationToken.
+     */
+    java.lang.String getContinuationToken();
+    /**
+     * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+     * @return The bytes for continuationToken.
+     */
+    com.google.protobuf.ByteString
+        getContinuationTokenBytes();
+
+    /**
+     * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+     * @return Whether the delimiter field is set.
+     */
+    boolean hasDelimiter();
+    /**
+     * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+     * @return The delimiter.
+     */
+    java.lang.String getDelimiter();
+    /**
+     * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+     * @return The bytes for delimiter.
+     */
+    com.google.protobuf.ByteString
+        getDelimiterBytes();
+
+    /**
+     * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+     * @return Whether the maxKeys field is set.
+     */
+    boolean hasMaxKeys();
+    /**
+     * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+     * @return The maxKeys.
+     */
+    int getMaxKeys();
+
+    /**
+     * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+     * @return Whether the prefix field is set.
+     */
+    boolean hasPrefix();
+    /**
+     * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
+
+    /**
+     * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+     * @return Whether the startAfter field is set.
+     */
+    boolean hasStartAfter();
+    /**
+     * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+     * @return The startAfter.
+     */
+    java.lang.String getStartAfter();
+    /**
+     * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+     * @return The bytes for startAfter.
+     */
+    com.google.protobuf.ByteString
+        getStartAfterBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v1.GetObjectsAsListV2Request}
+   */
+  public static final class GetObjectsAsListV2Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.GetObjectsAsListV2Request)
+      GetObjectsAsListV2RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetObjectsAsListV2Request.newBuilder() to construct.
+    private GetObjectsAsListV2Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetObjectsAsListV2Request() {
+      bucket_ = "";
+      continuationToken_ = "";
+      delimiter_ = "";
+      prefix_ = "";
+      startAfter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetObjectsAsListV2Request();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.class, com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BUCKET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bucket_ = "";
+    /**
+     * <pre>
+     * Required 
+     * </pre>
+     *
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    @java.lang.Override
+    public java.lang.String getBucket() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required 
+     * </pre>
+     *
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBucketBytes() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTINUATION_TOKEN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object continuationToken_ = "";
+    /**
+     * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+     * @return Whether the continuationToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasContinuationToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+     * @return The continuationToken.
+     */
+    @java.lang.Override
+    public java.lang.String getContinuationToken() {
+      java.lang.Object ref = continuationToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        continuationToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+     * @return The bytes for continuationToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContinuationTokenBytes() {
+      java.lang.Object ref = continuationToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        continuationToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELIMITER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delimiter_ = "";
+    /**
+     * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+     * @return Whether the delimiter field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelimiter() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+     * @return The delimiter.
+     */
+    @java.lang.Override
+    public java.lang.String getDelimiter() {
+      java.lang.Object ref = delimiter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delimiter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+     * @return The bytes for delimiter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelimiterBytes() {
+      java.lang.Object ref = delimiter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delimiter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_KEYS_FIELD_NUMBER = 4;
+    private int maxKeys_ = 0;
+    /**
+     * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+     * @return Whether the maxKeys field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxKeys() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+     * @return The maxKeys.
+     */
+    @java.lang.Override
+    public int getMaxKeys() {
+      return maxKeys_;
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object prefix_ = "";
+    /**
+     * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+     * @return Whether the prefix field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrefix() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_AFTER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startAfter_ = "";
+    /**
+     * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+     * @return Whether the startAfter field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartAfter() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+     * @return The startAfter.
+     */
+    @java.lang.Override
+    public java.lang.String getStartAfter() {
+      java.lang.Object ref = startAfter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startAfter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+     * @return The bytes for startAfter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartAfterBytes() {
+      java.lang.Object ref = startAfter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startAfter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, continuationToken_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, delimiter_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(4, maxKeys_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, prefix_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, startAfter_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, continuationToken_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, delimiter_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, maxKeys_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, prefix_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, startAfter_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request other = (com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request) obj;
+
+      if (!getBucket()
+          .equals(other.getBucket())) return false;
+      if (hasContinuationToken() != other.hasContinuationToken()) return false;
+      if (hasContinuationToken()) {
+        if (!getContinuationToken()
+            .equals(other.getContinuationToken())) return false;
+      }
+      if (hasDelimiter() != other.hasDelimiter()) return false;
+      if (hasDelimiter()) {
+        if (!getDelimiter()
+            .equals(other.getDelimiter())) return false;
+      }
+      if (hasMaxKeys() != other.hasMaxKeys()) return false;
+      if (hasMaxKeys()) {
+        if (getMaxKeys()
+            != other.getMaxKeys()) return false;
+      }
+      if (hasPrefix() != other.hasPrefix()) return false;
+      if (hasPrefix()) {
+        if (!getPrefix()
+            .equals(other.getPrefix())) return false;
+      }
+      if (hasStartAfter() != other.hasStartAfter()) return false;
+      if (hasStartAfter()) {
+        if (!getStartAfter()
+            .equals(other.getStartAfter())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getBucket().hashCode();
+      if (hasContinuationToken()) {
+        hash = (37 * hash) + CONTINUATION_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getContinuationToken().hashCode();
+      }
+      if (hasDelimiter()) {
+        hash = (37 * hash) + DELIMITER_FIELD_NUMBER;
+        hash = (53 * hash) + getDelimiter().hashCode();
+      }
+      if (hasMaxKeys()) {
+        hash = (37 * hash) + MAX_KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxKeys();
+      }
+      if (hasPrefix()) {
+        hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefix().hashCode();
+      }
+      if (hasStartAfter()) {
+        hash = (37 * hash) + START_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getStartAfter().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v1.GetObjectsAsListV2Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.GetObjectsAsListV2Request)
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.class, com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bucket_ = "";
+        continuationToken_ = "";
+        delimiter_ = "";
+        maxKeys_ = 0;
+        prefix_ = "";
+        startAfter_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request build() {
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request buildPartial() {
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request result = new com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bucket_ = bucket_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.continuationToken_ = continuationToken_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.delimiter_ = delimiter_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maxKeys_ = maxKeys_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.prefix_ = prefix_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.startAfter_ = startAfter_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request) {
+          return mergeFrom((com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request other) {
+        if (other == com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request.getDefaultInstance()) return this;
+        if (!other.getBucket().isEmpty()) {
+          bucket_ = other.bucket_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasContinuationToken()) {
+          continuationToken_ = other.continuationToken_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDelimiter()) {
+          delimiter_ = other.delimiter_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasMaxKeys()) {
+          setMaxKeys(other.getMaxKeys());
+        }
+        if (other.hasPrefix()) {
+          prefix_ = other.prefix_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasStartAfter()) {
+          startAfter_ = other.startAfter_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bucket_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                continuationToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                delimiter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                maxKeys_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                prefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                startAfter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object bucket_ = "";
+      /**
+       * <pre>
+       * Required 
+       * </pre>
+       *
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bucket.
+       */
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required 
+       * </pre>
+       *
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bytes for bucket.
+       */
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required 
+       * </pre>
+       *
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucket(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required 
+       * </pre>
+       *
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucket() {
+        bucket_ = getDefaultInstance().getBucket();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required 
+       * </pre>
+       *
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bytes for bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object continuationToken_ = "";
+      /**
+       * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+       * @return Whether the continuationToken field is set.
+       */
+      public boolean hasContinuationToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+       * @return The continuationToken.
+       */
+      public java.lang.String getContinuationToken() {
+        java.lang.Object ref = continuationToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          continuationToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+       * @return The bytes for continuationToken.
+       */
+      public com.google.protobuf.ByteString
+          getContinuationTokenBytes() {
+        java.lang.Object ref = continuationToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          continuationToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+       * @param value The continuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContinuationToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        continuationToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContinuationToken() {
+        continuationToken_ = getDefaultInstance().getContinuationToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string continuation_token = 2 [json_name = "continuationToken"];</code>
+       * @param value The bytes for continuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContinuationTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        continuationToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delimiter_ = "";
+      /**
+       * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+       * @return Whether the delimiter field is set.
+       */
+      public boolean hasDelimiter() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+       * @return The delimiter.
+       */
+      public java.lang.String getDelimiter() {
+        java.lang.Object ref = delimiter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delimiter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+       * @return The bytes for delimiter.
+       */
+      public com.google.protobuf.ByteString
+          getDelimiterBytes() {
+        java.lang.Object ref = delimiter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delimiter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+       * @param value The delimiter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delimiter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelimiter() {
+        delimiter_ = getDefaultInstance().getDelimiter();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string delimiter = 3 [json_name = "delimiter"];</code>
+       * @param value The bytes for delimiter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delimiter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int maxKeys_ ;
+      /**
+       * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @return Whether the maxKeys field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxKeys() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @return The maxKeys.
+       */
+      @java.lang.Override
+      public int getMaxKeys() {
+        return maxKeys_;
+      }
+      /**
+       * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @param value The maxKeys to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxKeys(int value) {
+
+        maxKeys_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxKeys() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        maxKeys_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object prefix_ = "";
+      /**
+       * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+       * @return Whether the prefix field is set.
+       */
+      public boolean hasPrefix() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+       * @return The prefix.
+       */
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+       * @return The bytes for prefix.
+       */
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        prefix_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        prefix_ = getDefaultInstance().getPrefix();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string prefix = 5 [json_name = "prefix"];</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        prefix_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object startAfter_ = "";
+      /**
+       * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+       * @return Whether the startAfter field is set.
+       */
+      public boolean hasStartAfter() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+       * @return The startAfter.
+       */
+      public java.lang.String getStartAfter() {
+        java.lang.Object ref = startAfter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startAfter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+       * @return The bytes for startAfter.
+       */
+      public com.google.protobuf.ByteString
+          getStartAfterBytes() {
+        java.lang.Object ref = startAfter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startAfter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+       * @param value The startAfter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartAfter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        startAfter_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartAfter() {
+        startAfter_ = getDefaultInstance().getStartAfter();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string start_after = 6 [json_name = "startAfter"];</code>
+       * @param value The bytes for startAfter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartAfterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        startAfter_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.GetObjectsAsListV2Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.GetObjectsAsListV2Request)
+    private static final com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request();
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetObjectsAsListV2Request>
+        PARSER = new com.google.protobuf.AbstractParser<GetObjectsAsListV2Request>() {
+      @java.lang.Override
+      public GetObjectsAsListV2Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetObjectsAsListV2Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetObjectsAsListV2Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CommonPrefixOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.CommonPrefix)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string prefix = 1 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <code>string prefix = 1 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v1.CommonPrefix}
+   */
+  public static final class CommonPrefix extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.CommonPrefix)
+      CommonPrefixOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CommonPrefix.newBuilder() to construct.
+    private CommonPrefix(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CommonPrefix() {
+      prefix_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CommonPrefix();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_CommonPrefix_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_CommonPrefix_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.class, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder.class);
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object prefix_ = "";
+    /**
+     * <code>string prefix = 1 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string prefix = 1 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix other = (com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix) obj;
+
+      if (!getPrefix()
+          .equals(other.getPrefix())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPrefix().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v1.CommonPrefix}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.CommonPrefix)
+        com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_CommonPrefix_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_CommonPrefix_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.class, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        prefix_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_CommonPrefix_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix build() {
+        com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix buildPartial() {
+        com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix result = new com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.prefix_ = prefix_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix) {
+          return mergeFrom((com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix other) {
+        if (other == com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.getDefaultInstance()) return this;
+        if (!other.getPrefix().isEmpty()) {
+          prefix_ = other.prefix_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                prefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object prefix_ = "";
+      /**
+       * <code>string prefix = 1 [json_name = "prefix"];</code>
+       * @return The prefix.
+       */
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string prefix = 1 [json_name = "prefix"];</code>
+       * @return The bytes for prefix.
+       */
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string prefix = 1 [json_name = "prefix"];</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        prefix_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string prefix = 1 [json_name = "prefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        prefix_ = getDefaultInstance().getPrefix();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string prefix = 1 [json_name = "prefix"];</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        prefix_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.CommonPrefix)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.CommonPrefix)
+    private static final com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix();
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CommonPrefix>
+        PARSER = new com.google.protobuf.AbstractParser<CommonPrefix>() {
+      @java.lang.Override
+      public CommonPrefix parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CommonPrefix> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CommonPrefix> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetObjectsAsListV2ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.GetObjectsAsListV2Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>bool is_truncated = 2 [json_name = "isTruncated"];</code>
+     * @return The isTruncated.
+     */
+    boolean getIsTruncated();
+
+    /**
+     * <code>uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+     * @return The maxKeys.
+     */
+    int getMaxKeys();
+
+    /**
+     * <code>uint32 key_count = 5 [json_name = "keyCount"];</code>
+     * @return The keyCount.
+     */
+    int getKeyCount();
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> 
+        getContentsList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.Object getContents(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    int getContentsCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+        getContentsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getContentsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix> 
+        getPrefixesList();
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix getPrefixes(int index);
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    int getPrefixesCount();
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder> 
+        getPrefixesOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder getPrefixesOrBuilder(
+        int index);
+
+    /**
+     * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+     * @return Whether the nextContinuationToken field is set.
+     */
+    boolean hasNextContinuationToken();
+    /**
+     * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+     * @return The nextContinuationToken.
+     */
+    java.lang.String getNextContinuationToken();
+    /**
+     * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+     * @return The bytes for nextContinuationToken.
+     */
+    com.google.protobuf.ByteString
+        getNextContinuationTokenBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v1.GetObjectsAsListV2Response}
+   */
+  public static final class GetObjectsAsListV2Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.GetObjectsAsListV2Response)
+      GetObjectsAsListV2ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetObjectsAsListV2Response.newBuilder() to construct.
+    private GetObjectsAsListV2Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetObjectsAsListV2Response() {
+      name_ = "";
+      contents_ = java.util.Collections.emptyList();
+      prefixes_ = java.util.Collections.emptyList();
+      nextContinuationToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetObjectsAsListV2Response();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.class, com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_TRUNCATED_FIELD_NUMBER = 2;
+    private boolean isTruncated_ = false;
+    /**
+     * <code>bool is_truncated = 2 [json_name = "isTruncated"];</code>
+     * @return The isTruncated.
+     */
+    @java.lang.Override
+    public boolean getIsTruncated() {
+      return isTruncated_;
+    }
+
+    public static final int MAX_KEYS_FIELD_NUMBER = 4;
+    private int maxKeys_ = 0;
+    /**
+     * <code>uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+     * @return The maxKeys.
+     */
+    @java.lang.Override
+    public int getMaxKeys() {
+      return maxKeys_;
+    }
+
+    public static final int KEY_COUNT_FIELD_NUMBER = 5;
+    private int keyCount_ = 0;
+    /**
+     * <code>uint32 key_count = 5 [json_name = "keyCount"];</code>
+     * @return The keyCount.
+     */
+    @java.lang.Override
+    public int getKeyCount() {
+      return keyCount_;
+    }
+
+    public static final int CONTENTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> contents_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> getContentsList() {
+      return contents_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+        getContentsOrBuilderList() {
+      return contents_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    @java.lang.Override
+    public int getContentsCount() {
+      return contents_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.Object getContents(int index) {
+      return contents_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getContentsOrBuilder(
+        int index) {
+      return contents_.get(index);
+    }
+
+    public static final int PREFIXES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix> prefixes_;
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix> getPrefixesList() {
+      return prefixes_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder> 
+        getPrefixesOrBuilderList() {
+      return prefixes_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    @java.lang.Override
+    public int getPrefixesCount() {
+      return prefixes_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix getPrefixes(int index) {
+      return prefixes_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder getPrefixesOrBuilder(
+        int index) {
+      return prefixes_.get(index);
+    }
+
+    public static final int NEXT_CONTINUATION_TOKEN_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nextContinuationToken_ = "";
+    /**
+     * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+     * @return Whether the nextContinuationToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasNextContinuationToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+     * @return The nextContinuationToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextContinuationToken() {
+      java.lang.Object ref = nextContinuationToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextContinuationToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+     * @return The bytes for nextContinuationToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextContinuationTokenBytes() {
+      java.lang.Object ref = nextContinuationToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextContinuationToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (isTruncated_ != false) {
+        output.writeBool(2, isTruncated_);
+      }
+      if (maxKeys_ != 0) {
+        output.writeUInt32(4, maxKeys_);
+      }
+      if (keyCount_ != 0) {
+        output.writeUInt32(5, keyCount_);
+      }
+      for (int i = 0; i < contents_.size(); i++) {
+        output.writeMessage(6, contents_.get(i));
+      }
+      for (int i = 0; i < prefixes_.size(); i++) {
+        output.writeMessage(7, prefixes_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, nextContinuationToken_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (isTruncated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isTruncated_);
+      }
+      if (maxKeys_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, maxKeys_);
+      }
+      if (keyCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, keyCount_);
+      }
+      for (int i = 0; i < contents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, contents_.get(i));
+      }
+      for (int i = 0; i < prefixes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, prefixes_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, nextContinuationToken_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response other = (com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getIsTruncated()
+          != other.getIsTruncated()) return false;
+      if (getMaxKeys()
+          != other.getMaxKeys()) return false;
+      if (getKeyCount()
+          != other.getKeyCount()) return false;
+      if (!getContentsList()
+          .equals(other.getContentsList())) return false;
+      if (!getPrefixesList()
+          .equals(other.getPrefixesList())) return false;
+      if (hasNextContinuationToken() != other.hasNextContinuationToken()) return false;
+      if (hasNextContinuationToken()) {
+        if (!getNextContinuationToken()
+            .equals(other.getNextContinuationToken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + IS_TRUNCATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsTruncated());
+      hash = (37 * hash) + MAX_KEYS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxKeys();
+      hash = (37 * hash) + KEY_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyCount();
+      if (getContentsCount() > 0) {
+        hash = (37 * hash) + CONTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContentsList().hashCode();
+      }
+      if (getPrefixesCount() > 0) {
+        hash = (37 * hash) + PREFIXES_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefixesList().hashCode();
+      }
+      if (hasNextContinuationToken()) {
+        hash = (37 * hash) + NEXT_CONTINUATION_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getNextContinuationToken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v1.GetObjectsAsListV2Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.GetObjectsAsListV2Response)
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.class, com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        isTruncated_ = false;
+        maxKeys_ = 0;
+        keyCount_ = 0;
+        if (contentsBuilder_ == null) {
+          contents_ = java.util.Collections.emptyList();
+        } else {
+          contents_ = null;
+          contentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (prefixesBuilder_ == null) {
+          prefixes_ = java.util.Collections.emptyList();
+        } else {
+          prefixes_ = null;
+          prefixesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        nextContinuationToken_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response build() {
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response buildPartial() {
+        com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response result = new com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response result) {
+        if (contentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            contents_ = java.util.Collections.unmodifiableList(contents_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.contents_ = contents_;
+        } else {
+          result.contents_ = contentsBuilder_.build();
+        }
+        if (prefixesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            prefixes_ = java.util.Collections.unmodifiableList(prefixes_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.prefixes_ = prefixes_;
+        } else {
+          result.prefixes_ = prefixesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isTruncated_ = isTruncated_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxKeys_ = maxKeys_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.keyCount_ = keyCount_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.nextContinuationToken_ = nextContinuationToken_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response) {
+          return mergeFrom((com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response other) {
+        if (other == com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getIsTruncated() != false) {
+          setIsTruncated(other.getIsTruncated());
+        }
+        if (other.getMaxKeys() != 0) {
+          setMaxKeys(other.getMaxKeys());
+        }
+        if (other.getKeyCount() != 0) {
+          setKeyCount(other.getKeyCount());
+        }
+        if (contentsBuilder_ == null) {
+          if (!other.contents_.isEmpty()) {
+            if (contents_.isEmpty()) {
+              contents_ = other.contents_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureContentsIsMutable();
+              contents_.addAll(other.contents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contents_.isEmpty()) {
+            if (contentsBuilder_.isEmpty()) {
+              contentsBuilder_.dispose();
+              contentsBuilder_ = null;
+              contents_ = other.contents_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              contentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContentsFieldBuilder() : null;
+            } else {
+              contentsBuilder_.addAllMessages(other.contents_);
+            }
+          }
+        }
+        if (prefixesBuilder_ == null) {
+          if (!other.prefixes_.isEmpty()) {
+            if (prefixes_.isEmpty()) {
+              prefixes_ = other.prefixes_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensurePrefixesIsMutable();
+              prefixes_.addAll(other.prefixes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.prefixes_.isEmpty()) {
+            if (prefixesBuilder_.isEmpty()) {
+              prefixesBuilder_.dispose();
+              prefixesBuilder_ = null;
+              prefixes_ = other.prefixes_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              prefixesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPrefixesFieldBuilder() : null;
+            } else {
+              prefixesBuilder_.addAllMessages(other.prefixes_);
+            }
+          }
+        }
+        if (other.hasNextContinuationToken()) {
+          nextContinuationToken_ = other.nextContinuationToken_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                isTruncated_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 32: {
+                maxKeys_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              case 40: {
+                keyCount_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 40
+              case 50: {
+                com.aruna.api.storage.models.v1.ModelsProto.Object m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v1.ModelsProto.Object.parser(),
+                        extensionRegistry);
+                if (contentsBuilder_ == null) {
+                  ensureContentsIsMutable();
+                  contents_.add(m);
+                } else {
+                  contentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix m =
+                    input.readMessage(
+                        com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.parser(),
+                        extensionRegistry);
+                if (prefixesBuilder_ == null) {
+                  ensurePrefixesIsMutable();
+                  prefixes_.add(m);
+                } else {
+                  prefixesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                nextContinuationToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean isTruncated_ ;
+      /**
+       * <code>bool is_truncated = 2 [json_name = "isTruncated"];</code>
+       * @return The isTruncated.
+       */
+      @java.lang.Override
+      public boolean getIsTruncated() {
+        return isTruncated_;
+      }
+      /**
+       * <code>bool is_truncated = 2 [json_name = "isTruncated"];</code>
+       * @param value The isTruncated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsTruncated(boolean value) {
+
+        isTruncated_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_truncated = 2 [json_name = "isTruncated"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsTruncated() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isTruncated_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int maxKeys_ ;
+      /**
+       * <code>uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @return The maxKeys.
+       */
+      @java.lang.Override
+      public int getMaxKeys() {
+        return maxKeys_;
+      }
+      /**
+       * <code>uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @param value The maxKeys to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxKeys(int value) {
+
+        maxKeys_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 max_keys = 4 [json_name = "maxKeys"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxKeys() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxKeys_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int keyCount_ ;
+      /**
+       * <code>uint32 key_count = 5 [json_name = "keyCount"];</code>
+       * @return The keyCount.
+       */
+      @java.lang.Override
+      public int getKeyCount() {
+        return keyCount_;
+      }
+      /**
+       * <code>uint32 key_count = 5 [json_name = "keyCount"];</code>
+       * @param value The keyCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyCount(int value) {
+
+        keyCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 key_count = 5 [json_name = "keyCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        keyCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> contents_ =
+        java.util.Collections.emptyList();
+      private void ensureContentsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          contents_ = new java.util.ArrayList<com.aruna.api.storage.models.v1.ModelsProto.Object>(contents_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> contentsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> getContentsList() {
+        if (contentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contents_);
+        } else {
+          return contentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public int getContentsCount() {
+        if (contentsBuilder_ == null) {
+          return contents_.size();
+        } else {
+          return contentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.Object getContents(int index) {
+        if (contentsBuilder_ == null) {
+          return contents_.get(index);
+        } else {
+          return contentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder setContents(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.set(index, value);
+          onChanged();
+        } else {
+          contentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder setContents(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder addContents(com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.add(value);
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder addContents(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.add(index, value);
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder addContents(
+          com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder addContents(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder addAllContents(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v1.ModelsProto.Object> values) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contents_);
+          onChanged();
+        } else {
+          contentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder clearContents() {
+        if (contentsBuilder_ == null) {
+          contents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          contentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public Builder removeContents(int index) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.remove(index);
+          onChanged();
+        } else {
+          contentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder getContentsBuilder(
+          int index) {
+        return getContentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getContentsOrBuilder(
+          int index) {
+        if (contentsBuilder_ == null) {
+          return contents_.get(index);  } else {
+          return contentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+           getContentsOrBuilderList() {
+        if (contentsBuilder_ != null) {
+          return contentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contents_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder addContentsBuilder() {
+        return getContentsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder addContentsBuilder(
+          int index) {
+        return getContentsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object.Builder> 
+           getContentsBuilderList() {
+        return getContentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+          getContentsFieldBuilder() {
+        if (contentsBuilder_ == null) {
+          contentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder>(
+                  contents_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contents_ = null;
+        }
+        return contentsBuilder_;
+      }
+
+      private java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix> prefixes_ =
+        java.util.Collections.emptyList();
+      private void ensurePrefixesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          prefixes_ = new java.util.ArrayList<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix>(prefixes_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder> prefixesBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix> getPrefixesList() {
+        if (prefixesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prefixes_);
+        } else {
+          return prefixesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public int getPrefixesCount() {
+        if (prefixesBuilder_ == null) {
+          return prefixes_.size();
+        } else {
+          return prefixesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix getPrefixes(int index) {
+        if (prefixesBuilder_ == null) {
+          return prefixes_.get(index);
+        } else {
+          return prefixesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder setPrefixes(
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix value) {
+        if (prefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrefixesIsMutable();
+          prefixes_.set(index, value);
+          onChanged();
+        } else {
+          prefixesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder setPrefixes(
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder builderForValue) {
+        if (prefixesBuilder_ == null) {
+          ensurePrefixesIsMutable();
+          prefixes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          prefixesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder addPrefixes(com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix value) {
+        if (prefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrefixesIsMutable();
+          prefixes_.add(value);
+          onChanged();
+        } else {
+          prefixesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder addPrefixes(
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix value) {
+        if (prefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrefixesIsMutable();
+          prefixes_.add(index, value);
+          onChanged();
+        } else {
+          prefixesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder addPrefixes(
+          com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder builderForValue) {
+        if (prefixesBuilder_ == null) {
+          ensurePrefixesIsMutable();
+          prefixes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          prefixesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder addPrefixes(
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder builderForValue) {
+        if (prefixesBuilder_ == null) {
+          ensurePrefixesIsMutable();
+          prefixes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          prefixesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder addAllPrefixes(
+          java.lang.Iterable<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix> values) {
+        if (prefixesBuilder_ == null) {
+          ensurePrefixesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, prefixes_);
+          onChanged();
+        } else {
+          prefixesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder clearPrefixes() {
+        if (prefixesBuilder_ == null) {
+          prefixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          prefixesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public Builder removePrefixes(int index) {
+        if (prefixesBuilder_ == null) {
+          ensurePrefixesIsMutable();
+          prefixes_.remove(index);
+          onChanged();
+        } else {
+          prefixesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder getPrefixesBuilder(
+          int index) {
+        return getPrefixesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder getPrefixesOrBuilder(
+          int index) {
+        if (prefixesBuilder_ == null) {
+          return prefixes_.get(index);  } else {
+          return prefixesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder> 
+           getPrefixesOrBuilderList() {
+        if (prefixesBuilder_ != null) {
+          return prefixesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(prefixes_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder addPrefixesBuilder() {
+        return getPrefixesFieldBuilder().addBuilder(
+            com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder addPrefixesBuilder(
+          int index) {
+        return getPrefixesFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v1.CommonPrefix prefixes = 7 [json_name = "prefixes"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder> 
+           getPrefixesBuilderList() {
+        return getPrefixesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder> 
+          getPrefixesFieldBuilder() {
+        if (prefixesBuilder_ == null) {
+          prefixesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefix.Builder, com.aruna.api.storage.services.v1.ObjectServiceProto.CommonPrefixOrBuilder>(
+                  prefixes_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          prefixes_ = null;
+        }
+        return prefixesBuilder_;
+      }
+
+      private java.lang.Object nextContinuationToken_ = "";
+      /**
+       * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+       * @return Whether the nextContinuationToken field is set.
+       */
+      public boolean hasNextContinuationToken() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+       * @return The nextContinuationToken.
+       */
+      public java.lang.String getNextContinuationToken() {
+        java.lang.Object ref = nextContinuationToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextContinuationToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+       * @return The bytes for nextContinuationToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextContinuationTokenBytes() {
+        java.lang.Object ref = nextContinuationToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextContinuationToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+       * @param value The nextContinuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextContinuationToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nextContinuationToken_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextContinuationToken() {
+        nextContinuationToken_ = getDefaultInstance().getNextContinuationToken();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string next_continuation_token = 8 [json_name = "nextContinuationToken"];</code>
+       * @param value The bytes for nextContinuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextContinuationTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nextContinuationToken_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.GetObjectsAsListV2Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.GetObjectsAsListV2Response)
+    private static final com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response();
+    }
+
+    public static com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetObjectsAsListV2Response>
+        PARSER = new com.google.protobuf.AbstractParser<GetObjectsAsListV2Response>() {
+      @java.lang.Override
+      public GetObjectsAsListV2Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetObjectsAsListV2Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetObjectsAsListV2Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.GetObjectsAsListV2Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v1_URL_descriptor;
   private static final 
@@ -48057,6 +51597,21 @@ public final class ObjectServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v1_GetObjectsByPathResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v1_CommonPrefix_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v1_CommonPrefix_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -48246,140 +51801,162 @@ public final class ObjectServiceProto {
       " \001(\tR\tprojectId\022#\n\rcollection_id\030\002 \001(\tR\014" +
       "collectionId\"W\n\030GetObjectsByPathResponse" +
       "\022;\n\006object\030\003 \003(\0132#.aruna.api.storage.mod" +
-      "els.v1.ObjectR\006object2\231\'\n\rObjectService\022" +
-      "\276\001\n\023InitializeNewObject\0229.aruna.api.stor" +
-      "age.services.v1.InitializeNewObjectReque" +
-      "st\032:.aruna.api.storage.services.v1.Initi" +
-      "alizeNewObjectResponse\"0\202\323\344\223\002*\"%/v1/coll" +
-      "ection/{collection_id}/object:\001*\022\315\001\n\014Get" +
-      "UploadURL\0222.aruna.api.storage.services.v" +
-      "1.GetUploadURLRequest\0323.aruna.api.storag" +
-      "e.services.v1.GetUploadURLResponse\"T\202\323\344\223" +
-      "\002N\022L/v1/collection/{collection_id}/objec" +
-      "t/{object_id}/staging/{upload_id}/upload" +
-      "\022\301\001\n\016GetDownloadURL\0224.aruna.api.storage." +
-      "services.v1.GetDownloadURLRequest\0325.arun" +
-      "a.api.storage.services.v1.GetDownloadURL" +
-      "Response\"B\202\323\344\223\002<\022:/v1/collection/{collec" +
-      "tion_id}/object/{object_id}/download\022\310\001\n" +
-      "\025GetDownloadLinksBatch\022;.aruna.api.stora" +
-      "ge.services.v1.GetDownloadLinksBatchRequ" +
-      "est\032<.aruna.api.storage.services.v1.GetD" +
-      "ownloadLinksBatchResponse\"4\202\323\344\223\002.\022,/v1/c" +
-      "ollection/{collection_id}/objects/batch\022" +
-      "\332\001\n\031CreateDownloadLinksStream\022?.aruna.ap" +
-      "i.storage.services.v1.CreateDownloadLink" +
-      "sStreamRequest\032@.aruna.api.storage.servi" +
-      "ces.v1.CreateDownloadLinksStreamResponse" +
-      "\"8\202\323\344\223\0022\"-/v1/collection/{collection_id}" +
-      "/objects/stream:\001*0\001\022\345\001\n\023FinishObjectSta" +
-      "ging\0229.aruna.api.storage.services.v1.Fin" +
-      "ishObjectStagingRequest\032:.aruna.api.stor" +
-      "age.services.v1.FinishObjectStagingRespo" +
-      "nse\"W\202\323\344\223\002Q2L/v1/collection/{collection_" +
-      "id}/object/{object_id}/staging/{upload_i" +
-      "d}/finish:\001*\022\274\001\n\014UpdateObject\0222.aruna.ap" +
-      "i.storage.services.v1.UpdateObjectReques" +
-      "t\0323.aruna.api.storage.services.v1.Update" +
-      "ObjectResponse\"C\202\323\344\223\002=\"8/v1/collection/{" +
-      "collection_id}/object/{object_id}/update" +
-      ":\001*\022\361\001\n\025CreateObjectReference\022;.aruna.ap" +
-      "i.storage.services.v1.CreateObjectRefere" +
-      "nceRequest\032<.aruna.api.storage.services." +
-      "v1.CreateObjectReferenceResponse\"]\202\323\344\223\002W" +
-      "\"R/v1/collection/{collection_id}/object/" +
-      "{object_id}/reference/{target_collection" +
-      "_id}:\001*\022\270\001\n\013CloneObject\0221.aruna.api.stor" +
-      "age.services.v1.CloneObjectRequest\0322.aru" +
-      "na.api.storage.services.v1.CloneObjectRe" +
-      "sponse\"B\202\323\344\223\002<\"7/v1/collection/{collecti" +
-      "on_id}/object/{object_id}/clone:\001*\022\265\001\n\014D" +
-      "eleteObject\0222.aruna.api.storage.services" +
-      ".v1.DeleteObjectRequest\0323.aruna.api.stor" +
-      "age.services.v1.DeleteObjectResponse\"<\202\323" +
-      "\344\223\0026*1/v1/collection/{collection_id}/obj" +
-      "ect/{object_id}:\001*\022\255\001\n\rDeleteObjects\0223.a" +
-      "runa.api.storage.services.v1.DeleteObjec" +
-      "tsRequest\0324.aruna.api.storage.services.v" +
-      "1.DeleteObjectsResponse\"1\202\323\344\223\002+*&/v1/col" +
-      "lection/{collection_id}/objects:\001*\022\265\001\n\rG" +
-      "etObjectByID\0223.aruna.api.storage.service" +
-      "s.v1.GetObjectByIDRequest\0324.aruna.api.st" +
-      "orage.services.v1.GetObjectByIDResponse\"" +
-      "9\202\323\344\223\0023\0221/v1/collection/{collection_id}/" +
-      "object/{object_id}\022\241\001\n\nGetObjects\0220.arun" +
-      "a.api.storage.services.v1.GetObjectsRequ" +
-      "est\0321.aruna.api.storage.services.v1.GetO" +
-      "bjectsResponse\".\202\323\344\223\002(\022&/v1/collection/{" +
-      "collection_id}/objects\022\316\001\n\022GetObjectRevi" +
-      "sions\0228.aruna.api.storage.services.v1.Ge" +
-      "tObjectRevisionsRequest\0329.aruna.api.stor" +
-      "age.services.v1.GetObjectRevisionsRespon" +
-      "se\"C\202\323\344\223\002=\022;/v1/collection/{collection_i" +
-      "d}/object/{object_id}/revisions\022\332\001\n\027GetL" +
-      "atestObjectRevision\022=.aruna.api.storage." +
-      "services.v1.GetLatestObjectRevisionReque" +
-      "st\032>.aruna.api.storage.services.v1.GetLa" +
-      "testObjectRevisionResponse\"@\202\323\344\223\002:\0228/v1/" +
-      "collection/{collection_id}/object/{objec" +
-      "t_id}/latest\022\316\001\n\022GetObjectEndpoints\0228.ar" +
-      "una.api.storage.services.v1.GetObjectEnd" +
-      "pointsRequest\0329.aruna.api.storage.servic" +
-      "es.v1.GetObjectEndpointsResponse\"C\202\323\344\223\002=" +
-      "\022;/v1/collection/{collection_id}/object/" +
-      "{object_id}/endpoints\022\317\001\n\021AddLabelsToObj" +
-      "ect\0227.aruna.api.storage.services.v1.AddL" +
-      "abelsToObjectRequest\0328.aruna.api.storage" +
-      ".services.v1.AddLabelsToObjectResponse\"G" +
-      "\202\323\344\223\002A2</v1/collection/{collection_id}/o" +
-      "bject/{object_id}/add_labels:\001*\022\313\001\n\020SetH" +
-      "ooksOfObject\0226.aruna.api.storage.service" +
-      "s.v1.SetHooksOfObjectRequest\0327.aruna.api" +
-      ".storage.services.v1.SetHooksOfObjectRes" +
-      "ponse\"F\202\323\344\223\002@2;/v1/collection/{collectio" +
-      "n_id}/object/{object_id}/set_hooks:\001*\022\300\001" +
-      "\n\rGetReferences\0223.aruna.api.storage.serv" +
-      "ices.v1.GetReferencesRequest\0324.aruna.api" +
-      ".storage.services.v1.GetReferencesRespon" +
-      "se\"D\202\323\344\223\002>\022</v1/collection/{collection_i" +
-      "d}/object/{object_id}/references\022\272\001\n\rGet" +
-      "ObjectPath\0223.aruna.api.storage.services." +
-      "v1.GetObjectPathRequest\0324.aruna.api.stor" +
-      "age.services.v1.GetObjectPathResponse\">\202" +
-      "\323\344\223\0028\0226/v1/collection/{collection_id}/ob" +
-      "ject/{object_id}/path\022\253\001\n\016GetObjectPaths" +
-      "\0224.aruna.api.storage.services.v1.GetObje" +
-      "ctPathsRequest\0325.aruna.api.storage.servi" +
-      "ces.v1.GetObjectPathsResponse\",\202\323\344\223\002&\022$/" +
-      "v1/collection/{collection_id}/paths\022\306\001\n\020" +
-      "CreateObjectPath\0226.aruna.api.storage.ser" +
-      "vices.v1.CreateObjectPathRequest\0327.aruna" +
-      ".api.storage.services.v1.CreateObjectPat" +
-      "hResponse\"A\202\323\344\223\002;\"6/v1/collection/{colle" +
-      "ction_id}/object/{object_id}/path:\001*\022\335\001\n" +
-      "\027SetObjectPathVisibility\022=.aruna.api.sto" +
-      "rage.services.v1.SetObjectPathVisibility" +
-      "Request\032>.aruna.api.storage.services.v1." +
-      "SetObjectPathVisibilityResponse\"C\202\323\344\223\002=2" +
-      "8/v1/collection/{collection_id}/path/{pa" +
-      "th=**}/visibility:\001*\022\246\001\n\020GetObjectsByPat" +
-      "h\0226.aruna.api.storage.services.v1.GetObj" +
-      "ectsByPathRequest\0327.aruna.api.storage.se" +
-      "rvices.v1.GetObjectsByPathResponse\"!\202\323\344\223" +
-      "\002\033\022\031/v1/path/object/{path=**}\022\321\001\n\035GetPro" +
-      "jectCollectionIdsByPath\022C.aruna.api.stor" +
-      "age.services.v1.GetProjectCollectionIdsB" +
-      "yPathRequest\032D.aruna.api.storage.service" +
-      "s.v1.GetProjectCollectionIdsByPathRespon" +
-      "se\"%\202\323\344\223\002\037\022\035/v1/path/collection/{path=**" +
-      "}B\216\002\n!com.aruna.api.storage.services.v1B" +
-      "\022ObjectServiceProtoP\000Z<github.com/ArunaS" +
-      "torage/go-api/aruna/api/storage/services" +
-      "/v1\242\002\004AASS\252\002\035Aruna.Api.Storage.Services." +
-      "V1\312\002\035Aruna\\Api\\Storage\\Services\\V1\342\002)Aru" +
-      "na\\Api\\Storage\\Services\\V1\\GPBMetadata\352\002" +
-      "!Aruna::Api::Storage::Services::V1b\006prot" +
-      "o3"
+      "els.v1.ObjectR\006object\"\272\002\n\031GetObjectsAsLi" +
+      "stV2Request\022\026\n\006bucket\030\001 \001(\tR\006bucket\0222\n\022c" +
+      "ontinuation_token\030\002 \001(\tH\000R\021continuationT" +
+      "oken\210\001\001\022!\n\tdelimiter\030\003 \001(\tH\001R\tdelimiter\210" +
+      "\001\001\022\036\n\010max_keys\030\004 \001(\rH\002R\007maxKeys\210\001\001\022\033\n\006pr" +
+      "efix\030\005 \001(\tH\003R\006prefix\210\001\001\022$\n\013start_after\030\006" +
+      " \001(\tH\004R\nstartAfter\210\001\001B\025\n\023_continuation_t" +
+      "okenB\014\n\n_delimiterB\013\n\t_max_keysB\t\n\007_pref" +
+      "ixB\016\n\014_start_after\"&\n\014CommonPrefix\022\026\n\006pr" +
+      "efix\030\001 \001(\tR\006prefix\"\356\002\n\032GetObjectsAsListV" +
+      "2Response\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014is_trun" +
+      "cated\030\002 \001(\010R\013isTruncated\022\031\n\010max_keys\030\004 \001" +
+      "(\rR\007maxKeys\022\033\n\tkey_count\030\005 \001(\rR\010keyCount" +
+      "\022?\n\010contents\030\006 \003(\0132#.aruna.api.storage.m" +
+      "odels.v1.ObjectR\010contents\022G\n\010prefixes\030\007 " +
+      "\003(\0132+.aruna.api.storage.services.v1.Comm" +
+      "onPrefixR\010prefixes\022;\n\027next_continuation_" +
+      "token\030\010 \001(\tH\000R\025nextContinuationToken\210\001\001B" +
+      "\032\n\030_next_continuation_token2\306(\n\rObjectSe" +
+      "rvice\022\276\001\n\023InitializeNewObject\0229.aruna.ap" +
+      "i.storage.services.v1.InitializeNewObjec" +
+      "tRequest\032:.aruna.api.storage.services.v1" +
+      ".InitializeNewObjectResponse\"0\202\323\344\223\002*\"%/v" +
+      "1/collection/{collection_id}/object:\001*\022\315" +
+      "\001\n\014GetUploadURL\0222.aruna.api.storage.serv" +
+      "ices.v1.GetUploadURLRequest\0323.aruna.api." +
+      "storage.services.v1.GetUploadURLResponse" +
+      "\"T\202\323\344\223\002N\022L/v1/collection/{collection_id}" +
+      "/object/{object_id}/staging/{upload_id}/" +
+      "upload\022\301\001\n\016GetDownloadURL\0224.aruna.api.st" +
+      "orage.services.v1.GetDownloadURLRequest\032" +
+      "5.aruna.api.storage.services.v1.GetDownl" +
+      "oadURLResponse\"B\202\323\344\223\002<\022:/v1/collection/{" +
+      "collection_id}/object/{object_id}/downlo" +
+      "ad\022\310\001\n\025GetDownloadLinksBatch\022;.aruna.api" +
+      ".storage.services.v1.GetDownloadLinksBat" +
+      "chRequest\032<.aruna.api.storage.services.v" +
+      "1.GetDownloadLinksBatchResponse\"4\202\323\344\223\002.\022" +
+      ",/v1/collection/{collection_id}/objects/" +
+      "batch\022\332\001\n\031CreateDownloadLinksStream\022?.ar" +
+      "una.api.storage.services.v1.CreateDownlo" +
+      "adLinksStreamRequest\032@.aruna.api.storage" +
+      ".services.v1.CreateDownloadLinksStreamRe" +
+      "sponse\"8\202\323\344\223\0022\"-/v1/collection/{collecti" +
+      "on_id}/objects/stream:\001*0\001\022\345\001\n\023FinishObj" +
+      "ectStaging\0229.aruna.api.storage.services." +
+      "v1.FinishObjectStagingRequest\032:.aruna.ap" +
+      "i.storage.services.v1.FinishObjectStagin" +
+      "gResponse\"W\202\323\344\223\002Q2L/v1/collection/{colle" +
+      "ction_id}/object/{object_id}/staging/{up" +
+      "load_id}/finish:\001*\022\274\001\n\014UpdateObject\0222.ar" +
+      "una.api.storage.services.v1.UpdateObject" +
+      "Request\0323.aruna.api.storage.services.v1." +
+      "UpdateObjectResponse\"C\202\323\344\223\002=\"8/v1/collec" +
+      "tion/{collection_id}/object/{object_id}/" +
+      "update:\001*\022\361\001\n\025CreateObjectReference\022;.ar" +
+      "una.api.storage.services.v1.CreateObject" +
+      "ReferenceRequest\032<.aruna.api.storage.ser" +
+      "vices.v1.CreateObjectReferenceResponse\"]" +
+      "\202\323\344\223\002W\"R/v1/collection/{collection_id}/o" +
+      "bject/{object_id}/reference/{target_coll" +
+      "ection_id}:\001*\022\270\001\n\013CloneObject\0221.aruna.ap" +
+      "i.storage.services.v1.CloneObjectRequest" +
+      "\0322.aruna.api.storage.services.v1.CloneOb" +
+      "jectResponse\"B\202\323\344\223\002<\"7/v1/collection/{co" +
+      "llection_id}/object/{object_id}/clone:\001*" +
+      "\022\265\001\n\014DeleteObject\0222.aruna.api.storage.se" +
+      "rvices.v1.DeleteObjectRequest\0323.aruna.ap" +
+      "i.storage.services.v1.DeleteObjectRespon" +
+      "se\"<\202\323\344\223\0026*1/v1/collection/{collection_i" +
+      "d}/object/{object_id}:\001*\022\255\001\n\rDeleteObjec" +
+      "ts\0223.aruna.api.storage.services.v1.Delet" +
+      "eObjectsRequest\0324.aruna.api.storage.serv" +
+      "ices.v1.DeleteObjectsResponse\"1\202\323\344\223\002+*&/" +
+      "v1/collection/{collection_id}/objects:\001*" +
+      "\022\265\001\n\rGetObjectByID\0223.aruna.api.storage.s" +
+      "ervices.v1.GetObjectByIDRequest\0324.aruna." +
+      "api.storage.services.v1.GetObjectByIDRes" +
+      "ponse\"9\202\323\344\223\0023\0221/v1/collection/{collectio" +
+      "n_id}/object/{object_id}\022\241\001\n\nGetObjects\022" +
+      "0.aruna.api.storage.services.v1.GetObjec" +
+      "tsRequest\0321.aruna.api.storage.services.v" +
+      "1.GetObjectsResponse\".\202\323\344\223\002(\022&/v1/collec" +
+      "tion/{collection_id}/objects\022\316\001\n\022GetObje" +
+      "ctRevisions\0228.aruna.api.storage.services" +
+      ".v1.GetObjectRevisionsRequest\0329.aruna.ap" +
+      "i.storage.services.v1.GetObjectRevisions" +
+      "Response\"C\202\323\344\223\002=\022;/v1/collection/{collec" +
+      "tion_id}/object/{object_id}/revisions\022\332\001" +
+      "\n\027GetLatestObjectRevision\022=.aruna.api.st" +
+      "orage.services.v1.GetLatestObjectRevisio" +
+      "nRequest\032>.aruna.api.storage.services.v1" +
+      ".GetLatestObjectRevisionResponse\"@\202\323\344\223\002:" +
+      "\0228/v1/collection/{collection_id}/object/" +
+      "{object_id}/latest\022\316\001\n\022GetObjectEndpoint" +
+      "s\0228.aruna.api.storage.services.v1.GetObj" +
+      "ectEndpointsRequest\0329.aruna.api.storage." +
+      "services.v1.GetObjectEndpointsResponse\"C" +
+      "\202\323\344\223\002=\022;/v1/collection/{collection_id}/o" +
+      "bject/{object_id}/endpoints\022\317\001\n\021AddLabel" +
+      "sToObject\0227.aruna.api.storage.services.v" +
+      "1.AddLabelsToObjectRequest\0328.aruna.api.s" +
+      "torage.services.v1.AddLabelsToObjectResp" +
+      "onse\"G\202\323\344\223\002A2</v1/collection/{collection" +
+      "_id}/object/{object_id}/add_labels:\001*\022\313\001" +
+      "\n\020SetHooksOfObject\0226.aruna.api.storage.s" +
+      "ervices.v1.SetHooksOfObjectRequest\0327.aru" +
+      "na.api.storage.services.v1.SetHooksOfObj" +
+      "ectResponse\"F\202\323\344\223\002@2;/v1/collection/{col" +
+      "lection_id}/object/{object_id}/set_hooks" +
+      ":\001*\022\300\001\n\rGetReferences\0223.aruna.api.storag" +
+      "e.services.v1.GetReferencesRequest\0324.aru" +
+      "na.api.storage.services.v1.GetReferences" +
+      "Response\"D\202\323\344\223\002>\022</v1/collection/{collec" +
+      "tion_id}/object/{object_id}/references\022\272" +
+      "\001\n\rGetObjectPath\0223.aruna.api.storage.ser" +
+      "vices.v1.GetObjectPathRequest\0324.aruna.ap" +
+      "i.storage.services.v1.GetObjectPathRespo" +
+      "nse\">\202\323\344\223\0028\0226/v1/collection/{collection_" +
+      "id}/object/{object_id}/path\022\253\001\n\016GetObjec" +
+      "tPaths\0224.aruna.api.storage.services.v1.G" +
+      "etObjectPathsRequest\0325.aruna.api.storage" +
+      ".services.v1.GetObjectPathsResponse\",\202\323\344" +
+      "\223\002&\022$/v1/collection/{collection_id}/path" +
+      "s\022\306\001\n\020CreateObjectPath\0226.aruna.api.stora" +
+      "ge.services.v1.CreateObjectPathRequest\0327" +
+      ".aruna.api.storage.services.v1.CreateObj" +
+      "ectPathResponse\"A\202\323\344\223\002;\"6/v1/collection/" +
+      "{collection_id}/object/{object_id}/path:" +
+      "\001*\022\335\001\n\027SetObjectPathVisibility\022=.aruna.a" +
+      "pi.storage.services.v1.SetObjectPathVisi" +
+      "bilityRequest\032>.aruna.api.storage.servic" +
+      "es.v1.SetObjectPathVisibilityResponse\"C\202" +
+      "\323\344\223\002=28/v1/collection/{collection_id}/pa" +
+      "th/{path=**}/visibility:\001*\022\246\001\n\020GetObject" +
+      "sByPath\0226.aruna.api.storage.services.v1." +
+      "GetObjectsByPathRequest\0327.aruna.api.stor" +
+      "age.services.v1.GetObjectsByPathResponse" +
+      "\"!\202\323\344\223\002\033\022\031/v1/path/object/{path=**}\022\321\001\n\035" +
+      "GetProjectCollectionIdsByPath\022C.aruna.ap" +
+      "i.storage.services.v1.GetProjectCollecti" +
+      "onIdsByPathRequest\032D.aruna.api.storage.s" +
+      "ervices.v1.GetProjectCollectionIdsByPath" +
+      "Response\"%\202\323\344\223\002\037\022\035/v1/path/collection/{p" +
+      "ath=**}\022\252\001\n\022GetObjectsAsListV2\0228.aruna.a" +
+      "pi.storage.services.v1.GetObjectsAsListV" +
+      "2Request\0329.aruna.api.storage.services.v1" +
+      ".GetObjectsAsListV2Response\"\037\202\323\344\223\002\031\022\027/v1" +
+      "/path/objects/listv2B\216\002\n!com.aruna.api.s" +
+      "torage.services.v1B\022ObjectServiceProtoP\000" +
+      "Z<github.com/ArunaStorage/go-api/aruna/a" +
+      "pi/storage/services/v1\242\002\004AASS\252\002\035Aruna.Ap" +
+      "i.Storage.Services.V1\312\002\035Aruna\\Api\\Storag" +
+      "e\\Services\\V1\342\002)Aruna\\Api\\Storage\\Servic" +
+      "es\\V1\\GPBMetadata\352\002!Aruna::Api::Storage:" +
+      ":Services::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48724,6 +52301,24 @@ public final class ObjectServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_GetObjectsByPathResponse_descriptor,
         new java.lang.String[] { "Object", });
+    internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_descriptor =
+      getDescriptor().getMessageTypes().get(56);
+    internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Request_descriptor,
+        new java.lang.String[] { "Bucket", "ContinuationToken", "Delimiter", "MaxKeys", "Prefix", "StartAfter", "ContinuationToken", "Delimiter", "MaxKeys", "Prefix", "StartAfter", });
+    internal_static_aruna_api_storage_services_v1_CommonPrefix_descriptor =
+      getDescriptor().getMessageTypes().get(57);
+    internal_static_aruna_api_storage_services_v1_CommonPrefix_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v1_CommonPrefix_descriptor,
+        new java.lang.String[] { "Prefix", });
+    internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_descriptor =
+      getDescriptor().getMessageTypes().get(58);
+    internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v1_GetObjectsAsListV2Response_descriptor,
+        new java.lang.String[] { "Name", "IsTruncated", "MaxKeys", "KeyCount", "Contents", "Prefixes", "NextContinuationToken", "NextContinuationToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
