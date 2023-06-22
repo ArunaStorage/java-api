@@ -15949,49 +15949,61 @@ public final class CollectionServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The collectionId.
+     */
+    java.lang.String getCollectionId();
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The bytes for collectionId.
+     */
+    com.google.protobuf.ByteString
+        getCollectionIdBytes();
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> 
         getLabelsList();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     com.aruna.api.storage.models.v1.ModelsProto.KeyValue getLabels(int index);
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     int getLabelsCount();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> 
         getLabelsOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder getLabelsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> 
         getHooksList();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     com.aruna.api.storage.models.v1.ModelsProto.KeyValue getHooks(int index);
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     int getHooksCount();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> 
         getHooksOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder getHooksOrBuilder(
         int index);
@@ -16009,6 +16021,7 @@ public final class CollectionServiceProto {
       super(builder);
     }
     private AddKeyValuesToCollectionRequest() {
+      collectionId_ = "";
       labels_ = java.util.Collections.emptyList();
       hooks_ = java.util.Collections.emptyList();
     }
@@ -16033,18 +16046,57 @@ public final class CollectionServiceProto {
               com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest.class, com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest.Builder.class);
     }
 
-    public static final int LABELS_FIELD_NUMBER = 1;
+    public static final int COLLECTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collectionId_ = "";
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The collectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getCollectionId() {
+      java.lang.Object ref = collectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The bytes for collectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollectionIdBytes() {
+      java.lang.Object ref = collectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> labels_;
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> getLabelsList() {
       return labels_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> 
@@ -16052,21 +16104,21 @@ public final class CollectionServiceProto {
       return labels_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public int getLabelsCount() {
       return labels_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v1.ModelsProto.KeyValue getLabels(int index) {
       return labels_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder getLabelsOrBuilder(
@@ -16074,18 +16126,18 @@ public final class CollectionServiceProto {
       return labels_.get(index);
     }
 
-    public static final int HOOKS_FIELD_NUMBER = 2;
+    public static final int HOOKS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> hooks_;
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> getHooksList() {
       return hooks_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> 
@@ -16093,21 +16145,21 @@ public final class CollectionServiceProto {
       return hooks_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     @java.lang.Override
     public int getHooksCount() {
       return hooks_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v1.ModelsProto.KeyValue getHooks(int index) {
       return hooks_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+     * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder getHooksOrBuilder(
@@ -16129,11 +16181,14 @@ public final class CollectionServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collectionId_);
+      }
       for (int i = 0; i < labels_.size(); i++) {
-        output.writeMessage(1, labels_.get(i));
+        output.writeMessage(2, labels_.get(i));
       }
       for (int i = 0; i < hooks_.size(); i++) {
-        output.writeMessage(2, hooks_.get(i));
+        output.writeMessage(3, hooks_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -16144,13 +16199,16 @@ public final class CollectionServiceProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collectionId_);
+      }
       for (int i = 0; i < labels_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, labels_.get(i));
+          .computeMessageSize(2, labels_.get(i));
       }
       for (int i = 0; i < hooks_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, hooks_.get(i));
+          .computeMessageSize(3, hooks_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -16167,6 +16225,8 @@ public final class CollectionServiceProto {
       }
       com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest other = (com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest) obj;
 
+      if (!getCollectionId()
+          .equals(other.getCollectionId())) return false;
       if (!getLabelsList()
           .equals(other.getLabelsList())) return false;
       if (!getHooksList()
@@ -16182,6 +16242,8 @@ public final class CollectionServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COLLECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCollectionId().hashCode();
       if (getLabelsCount() > 0) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + getLabelsList().hashCode();
@@ -16321,20 +16383,21 @@ public final class CollectionServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        collectionId_ = "";
         if (labelsBuilder_ == null) {
           labels_ = java.util.Collections.emptyList();
         } else {
           labels_ = null;
           labelsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (hooksBuilder_ == null) {
           hooks_ = java.util.Collections.emptyList();
         } else {
           hooks_ = null;
           hooksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -16369,18 +16432,18 @@ public final class CollectionServiceProto {
 
       private void buildPartialRepeatedFields(com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest result) {
         if (labelsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             labels_ = java.util.Collections.unmodifiableList(labels_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.labels_ = labels_;
         } else {
           result.labels_ = labelsBuilder_.build();
         }
         if (hooksBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             hooks_ = java.util.Collections.unmodifiableList(hooks_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.hooks_ = hooks_;
         } else {
@@ -16390,6 +16453,9 @@ public final class CollectionServiceProto {
 
       private void buildPartial0(com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collectionId_ = collectionId_;
+        }
       }
 
       @java.lang.Override
@@ -16404,11 +16470,16 @@ public final class CollectionServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest other) {
         if (other == com.aruna.api.storage.services.v1.CollectionServiceProto.AddKeyValuesToCollectionRequest.getDefaultInstance()) return this;
+        if (!other.getCollectionId().isEmpty()) {
+          collectionId_ = other.collectionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (labelsBuilder_ == null) {
           if (!other.labels_.isEmpty()) {
             if (labels_.isEmpty()) {
               labels_ = other.labels_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureLabelsIsMutable();
               labels_.addAll(other.labels_);
@@ -16421,7 +16492,7 @@ public final class CollectionServiceProto {
               labelsBuilder_.dispose();
               labelsBuilder_ = null;
               labels_ = other.labels_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               labelsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLabelsFieldBuilder() : null;
@@ -16434,7 +16505,7 @@ public final class CollectionServiceProto {
           if (!other.hooks_.isEmpty()) {
             if (hooks_.isEmpty()) {
               hooks_ = other.hooks_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureHooksIsMutable();
               hooks_.addAll(other.hooks_);
@@ -16447,7 +16518,7 @@ public final class CollectionServiceProto {
               hooksBuilder_.dispose();
               hooksBuilder_ = null;
               hooks_ = other.hooks_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               hooksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHooksFieldBuilder() : null;
@@ -16483,6 +16554,11 @@ public final class CollectionServiceProto {
                 done = true;
                 break;
               case 10: {
+                collectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
                 com.aruna.api.storage.models.v1.ModelsProto.KeyValue m =
                     input.readMessage(
                         com.aruna.api.storage.models.v1.ModelsProto.KeyValue.parser(),
@@ -16494,8 +16570,8 @@ public final class CollectionServiceProto {
                   labelsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 10
-              case 18: {
+              } // case 18
+              case 26: {
                 com.aruna.api.storage.models.v1.ModelsProto.KeyValue m =
                     input.readMessage(
                         com.aruna.api.storage.models.v1.ModelsProto.KeyValue.parser(),
@@ -16507,7 +16583,7 @@ public final class CollectionServiceProto {
                   hooksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 18
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -16525,12 +16601,84 @@ public final class CollectionServiceProto {
       }
       private int bitField0_;
 
+      private java.lang.Object collectionId_ = "";
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return The collectionId.
+       */
+      public java.lang.String getCollectionId() {
+        java.lang.Object ref = collectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return The bytes for collectionId.
+       */
+      public com.google.protobuf.ByteString
+          getCollectionIdBytes() {
+        java.lang.Object ref = collectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @param value The collectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionId() {
+        collectionId_ = getDefaultInstance().getCollectionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @param value The bytes for collectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> labels_ =
         java.util.Collections.emptyList();
       private void ensureLabelsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           labels_ = new java.util.ArrayList<com.aruna.api.storage.models.v1.ModelsProto.KeyValue>(labels_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -16538,7 +16686,7 @@ public final class CollectionServiceProto {
           com.aruna.api.storage.models.v1.ModelsProto.KeyValue, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> labelsBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> getLabelsList() {
         if (labelsBuilder_ == null) {
@@ -16548,7 +16696,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public int getLabelsCount() {
         if (labelsBuilder_ == null) {
@@ -16558,7 +16706,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue getLabels(int index) {
         if (labelsBuilder_ == null) {
@@ -16568,7 +16716,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder setLabels(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue value) {
@@ -16585,7 +16733,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder setLabels(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder builderForValue) {
@@ -16599,7 +16747,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder addLabels(com.aruna.api.storage.models.v1.ModelsProto.KeyValue value) {
         if (labelsBuilder_ == null) {
@@ -16615,7 +16763,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder addLabels(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue value) {
@@ -16632,7 +16780,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder addLabels(
           com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder builderForValue) {
@@ -16646,7 +16794,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder addLabels(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder builderForValue) {
@@ -16660,7 +16808,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder addAllLabels(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValue> values) {
@@ -16675,12 +16823,12 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder clearLabels() {
         if (labelsBuilder_ == null) {
           labels_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           labelsBuilder_.clear();
@@ -16688,7 +16836,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public Builder removeLabels(int index) {
         if (labelsBuilder_ == null) {
@@ -16701,14 +16849,14 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder getLabelsBuilder(
           int index) {
         return getLabelsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder getLabelsOrBuilder(
           int index) {
@@ -16718,7 +16866,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> 
            getLabelsOrBuilderList() {
@@ -16729,14 +16877,14 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder addLabelsBuilder() {
         return getLabelsFieldBuilder().addBuilder(
             com.aruna.api.storage.models.v1.ModelsProto.KeyValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder addLabelsBuilder(
           int index) {
@@ -16744,7 +16892,7 @@ public final class CollectionServiceProto {
             index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 1 [json_name = "labels"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue labels = 2 [json_name = "labels"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder> 
            getLabelsBuilderList() {
@@ -16757,7 +16905,7 @@ public final class CollectionServiceProto {
           labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v1.ModelsProto.KeyValue, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder>(
                   labels_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           labels_ = null;
@@ -16768,9 +16916,9 @@ public final class CollectionServiceProto {
       private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> hooks_ =
         java.util.Collections.emptyList();
       private void ensureHooksIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           hooks_ = new java.util.ArrayList<com.aruna.api.storage.models.v1.ModelsProto.KeyValue>(hooks_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -16778,7 +16926,7 @@ public final class CollectionServiceProto {
           com.aruna.api.storage.models.v1.ModelsProto.KeyValue, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> hooksBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue> getHooksList() {
         if (hooksBuilder_ == null) {
@@ -16788,7 +16936,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public int getHooksCount() {
         if (hooksBuilder_ == null) {
@@ -16798,7 +16946,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue getHooks(int index) {
         if (hooksBuilder_ == null) {
@@ -16808,7 +16956,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder setHooks(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue value) {
@@ -16825,7 +16973,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder setHooks(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder builderForValue) {
@@ -16839,7 +16987,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder addHooks(com.aruna.api.storage.models.v1.ModelsProto.KeyValue value) {
         if (hooksBuilder_ == null) {
@@ -16855,7 +17003,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder addHooks(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue value) {
@@ -16872,7 +17020,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder addHooks(
           com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder builderForValue) {
@@ -16886,7 +17034,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder addHooks(
           int index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder builderForValue) {
@@ -16900,7 +17048,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder addAllHooks(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValue> values) {
@@ -16915,12 +17063,12 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder clearHooks() {
         if (hooksBuilder_ == null) {
           hooks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           hooksBuilder_.clear();
@@ -16928,7 +17076,7 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public Builder removeHooks(int index) {
         if (hooksBuilder_ == null) {
@@ -16941,14 +17089,14 @@ public final class CollectionServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder getHooksBuilder(
           int index) {
         return getHooksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder getHooksOrBuilder(
           int index) {
@@ -16958,7 +17106,7 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder> 
            getHooksOrBuilderList() {
@@ -16969,14 +17117,14 @@ public final class CollectionServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder addHooksBuilder() {
         return getHooksFieldBuilder().addBuilder(
             com.aruna.api.storage.models.v1.ModelsProto.KeyValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder addHooksBuilder(
           int index) {
@@ -16984,7 +17132,7 @@ public final class CollectionServiceProto {
             index, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 2 [json_name = "hooks"];</code>
+       * <code>repeated .aruna.api.storage.models.v1.KeyValue hooks = 3 [json_name = "hooks"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder> 
            getHooksBuilderList() {
@@ -16997,7 +17145,7 @@ public final class CollectionServiceProto {
           hooksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v1.ModelsProto.KeyValue, com.aruna.api.storage.models.v1.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v1.ModelsProto.KeyValueOrBuilder>(
                   hooks_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           hooks_ = null;
@@ -17880,72 +18028,73 @@ public final class CollectionServiceProto {
       "dels.v1.CollectionOverviewR\ncollection\"T" +
       "\n\027DeleteCollectionRequest\022#\n\rcollection_" +
       "id\030\001 \001(\tR\014collectionId\022\024\n\005force\030\003 \001(\010R\005f" +
-      "orce\"\032\n\030DeleteCollectionResponse\"\235\001\n\037Add" +
-      "KeyValuesToCollectionRequest\022=\n\006labels\030\001" +
-      " \003(\0132%.aruna.api.storage.models.v1.KeyVa" +
-      "lueR\006labels\022;\n\005hooks\030\002 \003(\0132%.aruna.api.s" +
-      "torage.models.v1.KeyValueR\005hooks\"s\n AddK" +
-      "eyValuesToCollectionResponse\022O\n\ncollecti" +
-      "on\030\001 \001(\0132/.aruna.api.storage.models.v1.C" +
-      "ollectionOverviewR\ncollection2\216\n\n\021Collec" +
-      "tionService\022\247\001\n\023CreateNewCollection\0229.ar" +
-      "una.api.storage.services.v1.CreateNewCol" +
-      "lectionRequest\032:.aruna.api.storage.servi" +
-      "ces.v1.CreateNewCollectionResponse\"\031\202\323\344\223" +
-      "\002\023\"\016/v1/collection:\001*\022\256\001\n\021GetCollectionB" +
-      "yID\0227.aruna.api.storage.services.v1.GetC" +
-      "ollectionByIDRequest\0328.aruna.api.storage" +
-      ".services.v1.GetCollectionByIDResponse\"&" +
-      "\202\323\344\223\002 \022\036/v1/collection/{collection_id}\022\243" +
-      "\001\n\016GetCollections\0224.aruna.api.storage.se" +
-      "rvices.v1.GetCollectionsRequest\0325.aruna." +
-      "api.storage.services.v1.GetCollectionsRe" +
-      "sponse\"$\202\323\344\223\002\036\022\034/v1/collections/{project" +
-      "_id}\022\256\001\n\020UpdateCollection\0226.aruna.api.st" +
-      "orage.services.v1.UpdateCollectionReques" +
-      "t\0327.aruna.api.storage.services.v1.Update" +
-      "CollectionResponse\")\202\323\344\223\002#\032\036/v1/collecti" +
-      "on/{collection_id}:\001*\022\276\001\n\024PinCollectionV" +
-      "ersion\022:.aruna.api.storage.services.v1.P" +
-      "inCollectionVersionRequest\032;.aruna.api.s" +
-      "torage.services.v1.PinCollectionVersionR" +
-      "esponse\"-\202\323\344\223\002\'\"\"/v1/collection/{collect" +
-      "ion_id}/pin:\001*\022\256\001\n\020DeleteCollection\0226.ar" +
-      "una.api.storage.services.v1.DeleteCollec" +
-      "tionRequest\0327.aruna.api.storage.services" +
-      ".v1.DeleteCollectionResponse\")\202\323\344\223\002#*\036/v" +
-      "1/collection/{collection_id}:\001*\022\324\001\n\030AddK" +
-      "eyValuesToCollection\022>.aruna.api.storage" +
-      ".services.v1.AddKeyValuesToCollectionReq" +
-      "uest\032?.aruna.api.storage.services.v1.Add" +
-      "KeyValuesToCollectionResponse\"7\202\323\344\223\00212,/" +
-      "v1/collection/{collection_id}/add_key_va" +
-      "lue:\001*2\321\005\n\020WorkspaceService\022\232\001\n\017CreateWo" +
-      "rkspace\0225.aruna.api.storage.services.v1." +
-      "CreateWorkspaceRequest\0326.aruna.api.stora" +
-      "ge.services.v1.CreateWorkspaceResponse\"\030" +
-      "\202\323\344\223\002\022\"\r/v1/workspace:\001*\022\251\001\n\017DeleteWorks" +
-      "pace\0225.aruna.api.storage.services.v1.Del" +
-      "eteWorkspaceRequest\0326.aruna.api.storage." +
-      "services.v1.DeleteWorkspaceResponse\"\'\202\323\344" +
-      "\223\002!*\034/v1/workspace/{workspace_id}:\001*\022\254\001\n" +
-      "\016ClaimWorkspace\0224.aruna.api.storage.serv" +
-      "ices.v1.ClaimWorkspaceRequest\0325.aruna.ap" +
-      "i.storage.services.v1.ClaimWorkspaceResp" +
-      "onse\"-\202\323\344\223\002\'\"\"/v1/workspace/{workspace_i" +
-      "d}/claim:\001*\022\304\001\n\021MoveWorkspaceData\0227.arun" +
-      "a.api.storage.services.v1.MoveWorkspaceD" +
-      "ataRequest\0328.aruna.api.storage.services." +
-      "v1.MoveWorkspaceDataResponse\"<\202\323\344\223\0026\"1/v" +
-      "1/workspace/{workspace_id}/move/{collect" +
-      "ion_id}:\001*B\222\002\n!com.aruna.api.storage.ser" +
-      "vices.v1B\026CollectionServiceProtoP\000Z<gith" +
-      "ub.com/ArunaStorage/go-api/aruna/api/sto" +
-      "rage/services/v1\242\002\004AASS\252\002\035Aruna.Api.Stor" +
-      "age.Services.V1\312\002\035Aruna\\Api\\Storage\\Serv" +
-      "ices\\V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\" +
-      "GPBMetadata\352\002!Aruna::Api::Storage::Servi" +
-      "ces::V1b\006proto3"
+      "orce\"\032\n\030DeleteCollectionResponse\"\302\001\n\037Add" +
+      "KeyValuesToCollectionRequest\022#\n\rcollecti" +
+      "on_id\030\001 \001(\tR\014collectionId\022=\n\006labels\030\002 \003(" +
+      "\0132%.aruna.api.storage.models.v1.KeyValue" +
+      "R\006labels\022;\n\005hooks\030\003 \003(\0132%.aruna.api.stor" +
+      "age.models.v1.KeyValueR\005hooks\"s\n AddKeyV" +
+      "aluesToCollectionResponse\022O\n\ncollection\030" +
+      "\001 \001(\0132/.aruna.api.storage.models.v1.Coll" +
+      "ectionOverviewR\ncollection2\216\n\n\021Collectio" +
+      "nService\022\247\001\n\023CreateNewCollection\0229.aruna" +
+      ".api.storage.services.v1.CreateNewCollec" +
+      "tionRequest\032:.aruna.api.storage.services" +
+      ".v1.CreateNewCollectionResponse\"\031\202\323\344\223\002\023\"" +
+      "\016/v1/collection:\001*\022\256\001\n\021GetCollectionByID" +
+      "\0227.aruna.api.storage.services.v1.GetColl" +
+      "ectionByIDRequest\0328.aruna.api.storage.se" +
+      "rvices.v1.GetCollectionByIDResponse\"&\202\323\344" +
+      "\223\002 \022\036/v1/collection/{collection_id}\022\243\001\n\016" +
+      "GetCollections\0224.aruna.api.storage.servi" +
+      "ces.v1.GetCollectionsRequest\0325.aruna.api" +
+      ".storage.services.v1.GetCollectionsRespo" +
+      "nse\"$\202\323\344\223\002\036\022\034/v1/collections/{project_id" +
+      "}\022\256\001\n\020UpdateCollection\0226.aruna.api.stora" +
+      "ge.services.v1.UpdateCollectionRequest\0327" +
+      ".aruna.api.storage.services.v1.UpdateCol" +
+      "lectionResponse\")\202\323\344\223\002#\032\036/v1/collection/" +
+      "{collection_id}:\001*\022\276\001\n\024PinCollectionVers" +
+      "ion\022:.aruna.api.storage.services.v1.PinC" +
+      "ollectionVersionRequest\032;.aruna.api.stor" +
+      "age.services.v1.PinCollectionVersionResp" +
+      "onse\"-\202\323\344\223\002\'\"\"/v1/collection/{collection" +
+      "_id}/pin:\001*\022\256\001\n\020DeleteCollection\0226.aruna" +
+      ".api.storage.services.v1.DeleteCollectio" +
+      "nRequest\0327.aruna.api.storage.services.v1" +
+      ".DeleteCollectionResponse\")\202\323\344\223\002#*\036/v1/c" +
+      "ollection/{collection_id}:\001*\022\324\001\n\030AddKeyV" +
+      "aluesToCollection\022>.aruna.api.storage.se" +
+      "rvices.v1.AddKeyValuesToCollectionReques" +
+      "t\032?.aruna.api.storage.services.v1.AddKey" +
+      "ValuesToCollectionResponse\"7\202\323\344\223\00212,/v1/" +
+      "collection/{collection_id}/add_key_value" +
+      ":\001*2\321\005\n\020WorkspaceService\022\232\001\n\017CreateWorks" +
+      "pace\0225.aruna.api.storage.services.v1.Cre" +
+      "ateWorkspaceRequest\0326.aruna.api.storage." +
+      "services.v1.CreateWorkspaceResponse\"\030\202\323\344" +
+      "\223\002\022\"\r/v1/workspace:\001*\022\251\001\n\017DeleteWorkspac" +
+      "e\0225.aruna.api.storage.services.v1.Delete" +
+      "WorkspaceRequest\0326.aruna.api.storage.ser" +
+      "vices.v1.DeleteWorkspaceResponse\"\'\202\323\344\223\002!" +
+      "*\034/v1/workspace/{workspace_id}:\001*\022\254\001\n\016Cl" +
+      "aimWorkspace\0224.aruna.api.storage.service" +
+      "s.v1.ClaimWorkspaceRequest\0325.aruna.api.s" +
+      "torage.services.v1.ClaimWorkspaceRespons" +
+      "e\"-\202\323\344\223\002\'\"\"/v1/workspace/{workspace_id}/" +
+      "claim:\001*\022\304\001\n\021MoveWorkspaceData\0227.aruna.a" +
+      "pi.storage.services.v1.MoveWorkspaceData" +
+      "Request\0328.aruna.api.storage.services.v1." +
+      "MoveWorkspaceDataResponse\"<\202\323\344\223\0026\"1/v1/w" +
+      "orkspace/{workspace_id}/move/{collection" +
+      "_id}:\001*B\222\002\n!com.aruna.api.storage.servic" +
+      "es.v1B\026CollectionServiceProtoP\000Z<github." +
+      "com/ArunaStorage/go-api/aruna/api/storag" +
+      "e/services/v1\242\002\004AASS\252\002\035Aruna.Api.Storage" +
+      ".Services.V1\312\002\035Aruna\\Api\\Storage\\Service" +
+      "s\\V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\GPB" +
+      "Metadata\352\002!Aruna::Api::Storage::Services" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18079,7 +18228,7 @@ public final class CollectionServiceProto {
     internal_static_aruna_api_storage_services_v1_AddKeyValuesToCollectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_AddKeyValuesToCollectionRequest_descriptor,
-        new java.lang.String[] { "Labels", "Hooks", });
+        new java.lang.String[] { "CollectionId", "Labels", "Hooks", });
     internal_static_aruna_api_storage_services_v1_AddKeyValuesToCollectionResponse_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_aruna_api_storage_services_v1_AddKeyValuesToCollectionResponse_fieldAccessorTable = new

@@ -3841,6 +3841,18 @@ public final class BundlerProto {
   public interface GetBundlesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.internal.v1.GetBundlesRequest)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    java.lang.String getEndpointId();
+    /**
+     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    com.google.protobuf.ByteString
+        getEndpointIdBytes();
   }
   /**
    * Protobuf type {@code aruna.api.internal.v1.GetBundlesRequest}
@@ -3855,6 +3867,7 @@ public final class BundlerProto {
       super(builder);
     }
     private GetBundlesRequest() {
+      endpointId_ = "";
     }
 
     @java.lang.Override
@@ -3877,6 +3890,45 @@ public final class BundlerProto {
               com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest.class, com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest.Builder.class);
     }
 
+    public static final int ENDPOINT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpointId_ = "";
+    /**
+     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpointId() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointIdBytes() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3891,6 +3943,9 @@ public final class BundlerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, endpointId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3900,6 +3955,9 @@ public final class BundlerProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, endpointId_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3915,6 +3973,8 @@ public final class BundlerProto {
       }
       com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest other = (com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest) obj;
 
+      if (!getEndpointId()
+          .equals(other.getEndpointId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3926,6 +3986,8 @@ public final class BundlerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpointId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4056,6 +4118,8 @@ public final class BundlerProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        endpointId_ = "";
         return this;
       }
 
@@ -4082,8 +4146,16 @@ public final class BundlerProto {
       @java.lang.Override
       public com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest buildPartial() {
         com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest result = new com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.endpointId_ = endpointId_;
+        }
       }
 
       @java.lang.Override
@@ -4098,6 +4170,11 @@ public final class BundlerProto {
 
       public Builder mergeFrom(com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest other) {
         if (other == com.aruna.api.internal.v1.BundlerProto.GetBundlesRequest.getDefaultInstance()) return this;
+        if (!other.getEndpointId().isEmpty()) {
+          endpointId_ = other.endpointId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4124,6 +4201,11 @@ public final class BundlerProto {
               case 0:
                 done = true;
                 break;
+              case 10: {
+                endpointId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4137,6 +4219,79 @@ public final class BundlerProto {
         } finally {
           onChanged();
         } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object endpointId_ = "";
+      /**
+       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+       * @return The endpointId.
+       */
+      public java.lang.String getEndpointId() {
+        java.lang.Object ref = endpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+       * @return The bytes for endpointId.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointIdBytes() {
+        java.lang.Object ref = endpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+       * @param value The endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpointId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpointId() {
+        endpointId_ = getDefaultInstance().getEndpointId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
+       * @param value The bytes for endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpointId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -5915,30 +6070,31 @@ public final class BundlerProto {
       "rotobuf.TimestampR\texpiresAt\"L\n\023EnableBu" +
       "ndleRequest\0225\n\006bundle\030\001 \001(\0132\035.aruna.api." +
       "internal.v1.BundleR\006bundle\"\026\n\024EnableBund" +
-      "leResponse\"\023\n\021GetBundlesRequest\"M\n\022GetBu" +
-      "ndlesResponse\0227\n\007bundles\030\001 \003(\0132\035.aruna.a" +
-      "pi.internal.v1.BundleR\007bundles\"6\n\027Invali" +
-      "dateBundleRequest\022\033\n\tbundle_id\030\001 \001(\tR\010bu" +
-      "ndleId\"\032\n\030InvalidateBundleResponse2\372\002\n\026I" +
-      "nternalBundlerService\022l\n\rPrepareBundle\022+" +
-      ".aruna.api.internal.v1.PrepareBundleRequ" +
-      "est\032,.aruna.api.internal.v1.PrepareBundl" +
-      "eResponse\"\000\022i\n\014EnableBundle\022*.aruna.api." +
-      "internal.v1.EnableBundleRequest\032+.aruna." +
-      "api.internal.v1.EnableBundleResponse\"\000\022u" +
-      "\n\020InvalidateBundle\022..aruna.api.internal." +
-      "v1.InvalidateBundleRequest\032/.aruna.api.i" +
-      "nternal.v1.InvalidateBundleResponse\"\000\032\020\372" +
-      "\322\344\223\002\n\022\010INTERNAL2\232\001\n!InternalBundlerBackc" +
-      "hannelService\022c\n\nGetBundles\022(.aruna.api." +
-      "internal.v1.GetBundlesRequest\032).aruna.ap" +
-      "i.internal.v1.GetBundlesResponse\"\000\032\020\372\322\344\223" +
-      "\002\n\022\010INTERNALB\324\001\n\031com.aruna.api.internal." +
-      "v1B\014BundlerProtoZ4github.com/ArunaStorag" +
-      "e/go-api/aruna/api/internal/v1\242\002\003AAI\252\002\025A" +
-      "runa.Api.Internal.V1\312\002\025Aruna\\Api\\Interna" +
-      "l\\V1\342\002!Aruna\\Api\\Internal\\V1\\GPBMetadata" +
-      "\352\002\030Aruna::Api::Internal::V1b\006proto3"
+      "leResponse\"4\n\021GetBundlesRequest\022\037\n\013endpo" +
+      "int_id\030\001 \001(\tR\nendpointId\"M\n\022GetBundlesRe" +
+      "sponse\0227\n\007bundles\030\001 \003(\0132\035.aruna.api.inte" +
+      "rnal.v1.BundleR\007bundles\"6\n\027InvalidateBun" +
+      "dleRequest\022\033\n\tbundle_id\030\001 \001(\tR\010bundleId\"" +
+      "\032\n\030InvalidateBundleResponse2\372\002\n\026Internal" +
+      "BundlerService\022l\n\rPrepareBundle\022+.aruna." +
+      "api.internal.v1.PrepareBundleRequest\032,.a" +
+      "runa.api.internal.v1.PrepareBundleRespon" +
+      "se\"\000\022i\n\014EnableBundle\022*.aruna.api.interna" +
+      "l.v1.EnableBundleRequest\032+.aruna.api.int" +
+      "ernal.v1.EnableBundleResponse\"\000\022u\n\020Inval" +
+      "idateBundle\022..aruna.api.internal.v1.Inva" +
+      "lidateBundleRequest\032/.aruna.api.internal" +
+      ".v1.InvalidateBundleResponse\"\000\032\020\372\322\344\223\002\n\022\010" +
+      "INTERNAL2\232\001\n!InternalBundlerBackchannelS" +
+      "ervice\022c\n\nGetBundles\022(.aruna.api.interna" +
+      "l.v1.GetBundlesRequest\032).aruna.api.inter" +
+      "nal.v1.GetBundlesResponse\"\000\032\020\372\322\344\223\002\n\022\010INT" +
+      "ERNALB\324\001\n\031com.aruna.api.internal.v1B\014Bun" +
+      "dlerProtoZ4github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/internal/v1\242\002\003AAI\252\002\025Aruna.Ap" +
+      "i.Internal.V1\312\002\025Aruna\\Api\\Internal\\V1\342\002!" +
+      "Aruna\\Api\\Internal\\V1\\GPBMetadata\352\002\030Arun" +
+      "a::Api::Internal::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5989,7 +6145,7 @@ public final class BundlerProto {
     internal_static_aruna_api_internal_v1_GetBundlesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_internal_v1_GetBundlesRequest_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "EndpointId", });
     internal_static_aruna_api_internal_v1_GetBundlesResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_aruna_api_internal_v1_GetBundlesResponse_fieldAccessorTable = new

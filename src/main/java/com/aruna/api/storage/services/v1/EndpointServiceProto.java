@@ -59,46 +59,6 @@ public final class EndpointServiceProto {
 
     /**
      * <pre>
-     * Public hostname of the proxy
-     * </pre>
-     *
-     * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-     * @return The proxyHostname.
-     */
-    java.lang.String getProxyHostname();
-    /**
-     * <pre>
-     * Public hostname of the proxy
-     * </pre>
-     *
-     * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-     * @return The bytes for proxyHostname.
-     */
-    com.google.protobuf.ByteString
-        getProxyHostnameBytes();
-
-    /**
-     * <pre>
-     * Internal hostname for the proxy
-     * </pre>
-     *
-     * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-     * @return The internalHostname.
-     */
-    java.lang.String getInternalHostname();
-    /**
-     * <pre>
-     * Internal hostname for the proxy
-     * </pre>
-     *
-     * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-     * @return The bytes for internalHostname.
-     */
-    com.google.protobuf.ByteString
-        getInternalHostnameBytes();
-
-    /**
-     * <pre>
      * (optional) URL to a offsite documentation 
      * </pre>
      *
@@ -146,6 +106,60 @@ public final class EndpointServiceProto {
      */
     com.google.protobuf.ByteString
         getPubkeyBytes();
+
+    /**
+     * <pre>
+     * Added option to make a Dataproxy a bundler
+     * </pre>
+     *
+     * <code>bool is_bundler = 8 [json_name = "isBundler"];</code>
+     * @return The isBundler.
+     */
+    boolean getIsBundler();
+
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> 
+        getHostConfigsList();
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getHostConfigs(int index);
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    int getHostConfigsCount();
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+        getHostConfigsOrBuilderList();
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v1.AddEndpointRequest}
@@ -162,10 +176,9 @@ public final class EndpointServiceProto {
     private AddEndpointRequest() {
       name_ = "";
       epType_ = 0;
-      proxyHostname_ = "";
-      internalHostname_ = "";
       documentationPath_ = "";
       pubkey_ = "";
+      hostConfigs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -259,100 +272,6 @@ public final class EndpointServiceProto {
     @java.lang.Override public com.aruna.api.storage.models.v1.ModelsProto.EndpointType getEpType() {
       com.aruna.api.storage.models.v1.ModelsProto.EndpointType result = com.aruna.api.storage.models.v1.ModelsProto.EndpointType.forNumber(epType_);
       return result == null ? com.aruna.api.storage.models.v1.ModelsProto.EndpointType.UNRECOGNIZED : result;
-    }
-
-    public static final int PROXY_HOSTNAME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object proxyHostname_ = "";
-    /**
-     * <pre>
-     * Public hostname of the proxy
-     * </pre>
-     *
-     * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-     * @return The proxyHostname.
-     */
-    @java.lang.Override
-    public java.lang.String getProxyHostname() {
-      java.lang.Object ref = proxyHostname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        proxyHostname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Public hostname of the proxy
-     * </pre>
-     *
-     * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-     * @return The bytes for proxyHostname.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProxyHostnameBytes() {
-      java.lang.Object ref = proxyHostname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        proxyHostname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int INTERNAL_HOSTNAME_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object internalHostname_ = "";
-    /**
-     * <pre>
-     * Internal hostname for the proxy
-     * </pre>
-     *
-     * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-     * @return The internalHostname.
-     */
-    @java.lang.Override
-    public java.lang.String getInternalHostname() {
-      java.lang.Object ref = internalHostname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        internalHostname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Internal hostname for the proxy
-     * </pre>
-     *
-     * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-     * @return The bytes for internalHostname.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getInternalHostnameBytes() {
-      java.lang.Object ref = internalHostname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        internalHostname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     public static final int DOCUMENTATION_PATH_FIELD_NUMBER = 5;
@@ -464,6 +383,82 @@ public final class EndpointServiceProto {
       }
     }
 
+    public static final int IS_BUNDLER_FIELD_NUMBER = 8;
+    private boolean isBundler_ = false;
+    /**
+     * <pre>
+     * Added option to make a Dataproxy a bundler
+     * </pre>
+     *
+     * <code>bool is_bundler = 8 [json_name = "isBundler"];</code>
+     * @return The isBundler.
+     */
+    @java.lang.Override
+    public boolean getIsBundler() {
+      return isBundler_;
+    }
+
+    public static final int HOST_CONFIGS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> hostConfigs_;
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> getHostConfigsList() {
+      return hostConfigs_;
+    }
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+        getHostConfigsOrBuilderList() {
+      return hostConfigs_;
+    }
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public int getHostConfigsCount() {
+      return hostConfigs_.size();
+    }
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getHostConfigs(int index) {
+      return hostConfigs_.get(index);
+    }
+    /**
+     * <pre>
+     * List of EndpointHostConfigs
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
+        int index) {
+      return hostConfigs_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -484,12 +479,6 @@ public final class EndpointServiceProto {
       if (epType_ != com.aruna.api.storage.models.v1.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, epType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proxyHostname_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, proxyHostname_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalHostname_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, internalHostname_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentationPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, documentationPath_);
       }
@@ -498,6 +487,12 @@ public final class EndpointServiceProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pubkey_);
+      }
+      if (isBundler_ != false) {
+        output.writeBool(8, isBundler_);
+      }
+      for (int i = 0; i < hostConfigs_.size(); i++) {
+        output.writeMessage(9, hostConfigs_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -515,12 +510,6 @@ public final class EndpointServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, epType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proxyHostname_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, proxyHostname_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalHostname_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, internalHostname_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentationPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, documentationPath_);
       }
@@ -530,6 +519,14 @@ public final class EndpointServiceProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pubkey_);
+      }
+      if (isBundler_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, isBundler_);
+      }
+      for (int i = 0; i < hostConfigs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, hostConfigs_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -549,16 +546,16 @@ public final class EndpointServiceProto {
       if (!getName()
           .equals(other.getName())) return false;
       if (epType_ != other.epType_) return false;
-      if (!getProxyHostname()
-          .equals(other.getProxyHostname())) return false;
-      if (!getInternalHostname()
-          .equals(other.getInternalHostname())) return false;
       if (!getDocumentationPath()
           .equals(other.getDocumentationPath())) return false;
       if (getIsPublic()
           != other.getIsPublic()) return false;
       if (!getPubkey()
           .equals(other.getPubkey())) return false;
+      if (getIsBundler()
+          != other.getIsBundler()) return false;
+      if (!getHostConfigsList()
+          .equals(other.getHostConfigsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -574,10 +571,6 @@ public final class EndpointServiceProto {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + EP_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + epType_;
-      hash = (37 * hash) + PROXY_HOSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getProxyHostname().hashCode();
-      hash = (37 * hash) + INTERNAL_HOSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getInternalHostname().hashCode();
       hash = (37 * hash) + DOCUMENTATION_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentationPath().hashCode();
       hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
@@ -585,6 +578,13 @@ public final class EndpointServiceProto {
           getIsPublic());
       hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
       hash = (53 * hash) + getPubkey().hashCode();
+      hash = (37 * hash) + IS_BUNDLER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsBundler());
+      if (getHostConfigsCount() > 0) {
+        hash = (37 * hash) + HOST_CONFIGS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostConfigsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -718,11 +718,17 @@ public final class EndpointServiceProto {
         bitField0_ = 0;
         name_ = "";
         epType_ = 0;
-        proxyHostname_ = "";
-        internalHostname_ = "";
         documentationPath_ = "";
         isPublic_ = false;
         pubkey_ = "";
+        isBundler_ = false;
+        if (hostConfigsBuilder_ == null) {
+          hostConfigs_ = java.util.Collections.emptyList();
+        } else {
+          hostConfigs_ = null;
+          hostConfigsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -749,9 +755,22 @@ public final class EndpointServiceProto {
       @java.lang.Override
       public com.aruna.api.storage.services.v1.EndpointServiceProto.AddEndpointRequest buildPartial() {
         com.aruna.api.storage.services.v1.EndpointServiceProto.AddEndpointRequest result = new com.aruna.api.storage.services.v1.EndpointServiceProto.AddEndpointRequest(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.storage.services.v1.EndpointServiceProto.AddEndpointRequest result) {
+        if (hostConfigsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            hostConfigs_ = java.util.Collections.unmodifiableList(hostConfigs_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.hostConfigs_ = hostConfigs_;
+        } else {
+          result.hostConfigs_ = hostConfigsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.aruna.api.storage.services.v1.EndpointServiceProto.AddEndpointRequest result) {
@@ -763,19 +782,16 @@ public final class EndpointServiceProto {
           result.epType_ = epType_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.proxyHostname_ = proxyHostname_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.internalHostname_ = internalHostname_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.documentationPath_ = documentationPath_;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isPublic_ = isPublic_;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.pubkey_ = pubkey_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isBundler_ = isBundler_;
         }
       }
 
@@ -799,19 +815,9 @@ public final class EndpointServiceProto {
         if (other.epType_ != 0) {
           setEpTypeValue(other.getEpTypeValue());
         }
-        if (!other.getProxyHostname().isEmpty()) {
-          proxyHostname_ = other.proxyHostname_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.getInternalHostname().isEmpty()) {
-          internalHostname_ = other.internalHostname_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
         if (!other.getDocumentationPath().isEmpty()) {
           documentationPath_ = other.documentationPath_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.getIsPublic() != false) {
@@ -819,8 +825,37 @@ public final class EndpointServiceProto {
         }
         if (!other.getPubkey().isEmpty()) {
           pubkey_ = other.pubkey_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000010;
           onChanged();
+        }
+        if (other.getIsBundler() != false) {
+          setIsBundler(other.getIsBundler());
+        }
+        if (hostConfigsBuilder_ == null) {
+          if (!other.hostConfigs_.isEmpty()) {
+            if (hostConfigs_.isEmpty()) {
+              hostConfigs_ = other.hostConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureHostConfigsIsMutable();
+              hostConfigs_.addAll(other.hostConfigs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hostConfigs_.isEmpty()) {
+            if (hostConfigsBuilder_.isEmpty()) {
+              hostConfigsBuilder_.dispose();
+              hostConfigsBuilder_ = null;
+              hostConfigs_ = other.hostConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              hostConfigsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHostConfigsFieldBuilder() : null;
+            } else {
+              hostConfigsBuilder_.addAllMessages(other.hostConfigs_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -858,31 +893,39 @@ public final class EndpointServiceProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
-              case 26: {
-                proxyHostname_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                internalHostname_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
               case 42: {
                 documentationPath_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 42
               case 48: {
                 isPublic_ = input.readBool();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 48
               case 58: {
                 pubkey_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000010;
                 break;
               } // case 58
+              case 64: {
+                isBundler_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 64
+              case 74: {
+                com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.parser(),
+                        extensionRegistry);
+                if (hostConfigsBuilder_ == null) {
+                  ensureHostConfigsIsMutable();
+                  hostConfigs_.add(m);
+                } else {
+                  hostConfigsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1065,190 +1108,6 @@ public final class EndpointServiceProto {
         return this;
       }
 
-      private java.lang.Object proxyHostname_ = "";
-      /**
-       * <pre>
-       * Public hostname of the proxy
-       * </pre>
-       *
-       * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-       * @return The proxyHostname.
-       */
-      public java.lang.String getProxyHostname() {
-        java.lang.Object ref = proxyHostname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          proxyHostname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Public hostname of the proxy
-       * </pre>
-       *
-       * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-       * @return The bytes for proxyHostname.
-       */
-      public com.google.protobuf.ByteString
-          getProxyHostnameBytes() {
-        java.lang.Object ref = proxyHostname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          proxyHostname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Public hostname of the proxy
-       * </pre>
-       *
-       * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-       * @param value The proxyHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProxyHostname(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        proxyHostname_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Public hostname of the proxy
-       * </pre>
-       *
-       * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProxyHostname() {
-        proxyHostname_ = getDefaultInstance().getProxyHostname();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Public hostname of the proxy
-       * </pre>
-       *
-       * <code>string proxy_hostname = 3 [json_name = "proxyHostname"];</code>
-       * @param value The bytes for proxyHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProxyHostnameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        proxyHostname_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object internalHostname_ = "";
-      /**
-       * <pre>
-       * Internal hostname for the proxy
-       * </pre>
-       *
-       * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-       * @return The internalHostname.
-       */
-      public java.lang.String getInternalHostname() {
-        java.lang.Object ref = internalHostname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          internalHostname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Internal hostname for the proxy
-       * </pre>
-       *
-       * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-       * @return The bytes for internalHostname.
-       */
-      public com.google.protobuf.ByteString
-          getInternalHostnameBytes() {
-        java.lang.Object ref = internalHostname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          internalHostname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Internal hostname for the proxy
-       * </pre>
-       *
-       * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-       * @param value The internalHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInternalHostname(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        internalHostname_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Internal hostname for the proxy
-       * </pre>
-       *
-       * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInternalHostname() {
-        internalHostname_ = getDefaultInstance().getInternalHostname();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Internal hostname for the proxy
-       * </pre>
-       *
-       * <code>string internal_hostname = 4 [json_name = "internalHostname"];</code>
-       * @param value The bytes for internalHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInternalHostnameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        internalHostname_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object documentationPath_ = "";
       /**
        * <pre>
@@ -1304,7 +1163,7 @@ public final class EndpointServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         documentationPath_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1318,7 +1177,7 @@ public final class EndpointServiceProto {
        */
       public Builder clearDocumentationPath() {
         documentationPath_ = getDefaultInstance().getDocumentationPath();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1336,7 +1195,7 @@ public final class EndpointServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         documentationPath_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1366,7 +1225,7 @@ public final class EndpointServiceProto {
       public Builder setIsPublic(boolean value) {
 
         isPublic_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1379,7 +1238,7 @@ public final class EndpointServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearIsPublic() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         isPublic_ = false;
         onChanged();
         return this;
@@ -1440,7 +1299,7 @@ public final class EndpointServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         pubkey_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1454,7 +1313,7 @@ public final class EndpointServiceProto {
        */
       public Builder clearPubkey() {
         pubkey_ = getDefaultInstance().getPubkey();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1472,9 +1331,365 @@ public final class EndpointServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         pubkey_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
+      }
+
+      private boolean isBundler_ ;
+      /**
+       * <pre>
+       * Added option to make a Dataproxy a bundler
+       * </pre>
+       *
+       * <code>bool is_bundler = 8 [json_name = "isBundler"];</code>
+       * @return The isBundler.
+       */
+      @java.lang.Override
+      public boolean getIsBundler() {
+        return isBundler_;
+      }
+      /**
+       * <pre>
+       * Added option to make a Dataproxy a bundler
+       * </pre>
+       *
+       * <code>bool is_bundler = 8 [json_name = "isBundler"];</code>
+       * @param value The isBundler to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsBundler(boolean value) {
+
+        isBundler_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Added option to make a Dataproxy a bundler
+       * </pre>
+       *
+       * <code>bool is_bundler = 8 [json_name = "isBundler"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsBundler() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isBundler_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> hostConfigs_ =
+        java.util.Collections.emptyList();
+      private void ensureHostConfigsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          hostConfigs_ = new java.util.ArrayList<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig>(hostConfigs_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> hostConfigsBuilder_;
+
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> getHostConfigsList() {
+        if (hostConfigsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hostConfigs_);
+        } else {
+          return hostConfigsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public int getHostConfigsCount() {
+        if (hostConfigsBuilder_ == null) {
+          return hostConfigs_.size();
+        } else {
+          return hostConfigsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getHostConfigs(int index) {
+        if (hostConfigsBuilder_ == null) {
+          return hostConfigs_.get(index);
+        } else {
+          return hostConfigsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder setHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig value) {
+        if (hostConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostConfigsIsMutable();
+          hostConfigs_.set(index, value);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder setHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder builderForValue) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostConfigsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig value) {
+        if (hostConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(value);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig value) {
+        if (hostConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(index, value);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(
+          com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder builderForValue) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder builderForValue) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addAllHostConfigs(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> values) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hostConfigs_);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder clearHostConfigs() {
+        if (hostConfigsBuilder_ == null) {
+          hostConfigs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public Builder removeHostConfigs(int index) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.remove(index);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder getHostConfigsBuilder(
+          int index) {
+        return getHostConfigsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
+          int index) {
+        if (hostConfigsBuilder_ == null) {
+          return hostConfigs_.get(index);  } else {
+          return hostConfigsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+           getHostConfigsOrBuilderList() {
+        if (hostConfigsBuilder_ != null) {
+          return hostConfigsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hostConfigs_);
+        }
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder addHostConfigsBuilder() {
+        return getHostConfigsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder addHostConfigsBuilder(
+          int index) {
+        return getHostConfigsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of EndpointHostConfigs
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 9 [json_name = "hostConfigs"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder> 
+           getHostConfigsBuilderList() {
+        return getHostConfigsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+          getHostConfigsFieldBuilder() {
+        if (hostConfigsBuilder_ == null) {
+          hostConfigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder>(
+                  hostConfigs_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          hostConfigs_ = null;
+        }
+        return hostConfigsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7005,58 +7220,59 @@ public final class EndpointServiceProto {
       "\n4aruna/api/storage/services/v1/endpoint" +
       "_service.proto\022\035aruna.api.storage.servic" +
       "es.v1\032(aruna/api/storage/models/v1/model" +
-      "s.proto\032\034google/api/annotations.proto\"\244\002" +
+      "s.proto\032\034google/api/annotations.proto\"\303\002" +
       "\n\022AddEndpointRequest\022\022\n\004name\030\001 \001(\tR\004name" +
       "\022B\n\007ep_type\030\002 \001(\0162).aruna.api.storage.mo" +
-      "dels.v1.EndpointTypeR\006epType\022%\n\016proxy_ho" +
-      "stname\030\003 \001(\tR\rproxyHostname\022+\n\021internal_" +
-      "hostname\030\004 \001(\tR\020internalHostname\022-\n\022docu" +
-      "mentation_path\030\005 \001(\tR\021documentationPath\022" +
-      "\033\n\tis_public\030\006 \001(\010R\010isPublic\022\026\n\006pubkey\030\007" +
-      " \001(\tR\006pubkey\"}\n\023AddEndpointResponse\022A\n\010e" +
-      "ndpoint\030\001 \001(\0132%.aruna.api.storage.models" +
-      ".v1.EndpointR\010endpoint\022#\n\rpubkey_serial\030" +
-      "\002 \001(\003R\014pubkeySerial\"j\n\022GetEndpointReques" +
-      "t\022%\n\rendpoint_name\030\001 \001(\tH\000R\014endpointName" +
-      "\022!\n\013endpoint_id\030\002 \001(\tH\000R\nendpointIdB\n\n\010e" +
-      "ndpoint\"X\n\023GetEndpointResponse\022A\n\010endpoi" +
-      "nt\030\001 \001(\0132%.aruna.api.storage.models.v1.E" +
-      "ndpointR\010endpoint\"\025\n\023GetEndpointsRequest" +
-      "\"[\n\024GetEndpointsResponse\022C\n\tendpoints\030\001 " +
-      "\003(\0132%.aruna.api.storage.models.v1.Endpoi" +
-      "ntR\tendpoints\"8\n\025DeleteEndpointRequest\022\037" +
-      "\n\013endpoint_id\030\001 \001(\tR\nendpointId\"\030\n\026Delet" +
-      "eEndpointResponse\"\033\n\031GetDefaultEndpointR" +
-      "equest\"_\n\032GetDefaultEndpointResponse\022A\n\010" +
-      "endpoint\030\001 \001(\0132%.aruna.api.storage.model" +
-      "s.v1.EndpointR\010endpoint2\215\006\n\017EndpointServ" +
-      "ice\022\215\001\n\013AddEndpoint\0221.aruna.api.storage." +
-      "services.v1.AddEndpointRequest\0322.aruna.a" +
-      "pi.storage.services.v1.AddEndpointRespon" +
-      "se\"\027\202\323\344\223\002\021\"\014/v1/endpoint:\001*\022\212\001\n\013GetEndpo" +
-      "int\0221.aruna.api.storage.services.v1.GetE" +
-      "ndpointRequest\0322.aruna.api.storage.servi" +
-      "ces.v1.GetEndpointResponse\"\024\202\323\344\223\002\016\022\014/v1/" +
-      "endpoint\022\216\001\n\014GetEndpoints\0222.aruna.api.st" +
-      "orage.services.v1.GetEndpointsRequest\0323." +
-      "aruna.api.storage.services.v1.GetEndpoin" +
-      "tsResponse\"\025\202\323\344\223\002\017\022\r/v1/endpoints\022\241\001\n\016De" +
-      "leteEndpoint\0224.aruna.api.storage.service" +
-      "s.v1.DeleteEndpointRequest\0325.aruna.api.s" +
-      "torage.services.v1.DeleteEndpointRespons" +
-      "e\"\"\202\323\344\223\002\034*\032/v1/endpoint/{endpoint_id}\022\247\001" +
-      "\n\022GetDefaultEndpoint\0228.aruna.api.storage" +
-      ".services.v1.GetDefaultEndpointRequest\0329" +
-      ".aruna.api.storage.services.v1.GetDefaul" +
-      "tEndpointResponse\"\034\202\323\344\223\002\026\022\024/v1/endpoint/" +
-      "defaultB\220\002\n!com.aruna.api.storage.servic" +
-      "es.v1B\024EndpointServiceProtoP\000Z<github.co" +
-      "m/ArunaStorage/go-api/aruna/api/storage/" +
-      "services/v1\242\002\004AASS\252\002\035Aruna.Api.Storage.S" +
-      "ervices.V1\312\002\035Aruna\\Api\\Storage\\Services\\" +
-      "V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\GPBMe" +
-      "tadata\352\002!Aruna::Api::Storage::Services::" +
-      "V1b\006proto3"
+      "dels.v1.EndpointTypeR\006epType\022-\n\022document" +
+      "ation_path\030\005 \001(\tR\021documentationPath\022\033\n\ti" +
+      "s_public\030\006 \001(\010R\010isPublic\022\026\n\006pubkey\030\007 \001(\t" +
+      "R\006pubkey\022\035\n\nis_bundler\030\010 \001(\010R\tisBundler\022" +
+      "R\n\014host_configs\030\t \003(\0132/.aruna.api.storag" +
+      "e.models.v1.EndpointHostConfigR\013hostConf" +
+      "igs\"}\n\023AddEndpointResponse\022A\n\010endpoint\030\001" +
+      " \001(\0132%.aruna.api.storage.models.v1.Endpo" +
+      "intR\010endpoint\022#\n\rpubkey_serial\030\002 \001(\003R\014pu" +
+      "bkeySerial\"j\n\022GetEndpointRequest\022%\n\rendp" +
+      "oint_name\030\001 \001(\tH\000R\014endpointName\022!\n\013endpo" +
+      "int_id\030\002 \001(\tH\000R\nendpointIdB\n\n\010endpoint\"X" +
+      "\n\023GetEndpointResponse\022A\n\010endpoint\030\001 \001(\0132" +
+      "%.aruna.api.storage.models.v1.EndpointR\010" +
+      "endpoint\"\025\n\023GetEndpointsRequest\"[\n\024GetEn" +
+      "dpointsResponse\022C\n\tendpoints\030\001 \003(\0132%.aru" +
+      "na.api.storage.models.v1.EndpointR\tendpo" +
+      "ints\"8\n\025DeleteEndpointRequest\022\037\n\013endpoin" +
+      "t_id\030\001 \001(\tR\nendpointId\"\030\n\026DeleteEndpoint" +
+      "Response\"\033\n\031GetDefaultEndpointRequest\"_\n" +
+      "\032GetDefaultEndpointResponse\022A\n\010endpoint\030" +
+      "\001 \001(\0132%.aruna.api.storage.models.v1.Endp" +
+      "ointR\010endpoint2\215\006\n\017EndpointService\022\215\001\n\013A" +
+      "ddEndpoint\0221.aruna.api.storage.services." +
+      "v1.AddEndpointRequest\0322.aruna.api.storag" +
+      "e.services.v1.AddEndpointResponse\"\027\202\323\344\223\002" +
+      "\021\"\014/v1/endpoint:\001*\022\212\001\n\013GetEndpoint\0221.aru" +
+      "na.api.storage.services.v1.GetEndpointRe" +
+      "quest\0322.aruna.api.storage.services.v1.Ge" +
+      "tEndpointResponse\"\024\202\323\344\223\002\016\022\014/v1/endpoint\022" +
+      "\216\001\n\014GetEndpoints\0222.aruna.api.storage.ser" +
+      "vices.v1.GetEndpointsRequest\0323.aruna.api" +
+      ".storage.services.v1.GetEndpointsRespons" +
+      "e\"\025\202\323\344\223\002\017\022\r/v1/endpoints\022\241\001\n\016DeleteEndpo" +
+      "int\0224.aruna.api.storage.services.v1.Dele" +
+      "teEndpointRequest\0325.aruna.api.storage.se" +
+      "rvices.v1.DeleteEndpointResponse\"\"\202\323\344\223\002\034" +
+      "*\032/v1/endpoint/{endpoint_id}\022\247\001\n\022GetDefa" +
+      "ultEndpoint\0228.aruna.api.storage.services" +
+      ".v1.GetDefaultEndpointRequest\0329.aruna.ap" +
+      "i.storage.services.v1.GetDefaultEndpoint" +
+      "Response\"\034\202\323\344\223\002\026\022\024/v1/endpoint/defaultB\220" +
+      "\002\n!com.aruna.api.storage.services.v1B\024En" +
+      "dpointServiceProtoP\000Z<github.com/ArunaSt" +
+      "orage/go-api/aruna/api/storage/services/" +
+      "v1\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V" +
+      "1\312\002\035Aruna\\Api\\Storage\\Services\\V1\342\002)Arun" +
+      "a\\Api\\Storage\\Services\\V1\\GPBMetadata\352\002!" +
+      "Aruna::Api::Storage::Services::V1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7069,7 +7285,7 @@ public final class EndpointServiceProto {
     internal_static_aruna_api_storage_services_v1_AddEndpointRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_AddEndpointRequest_descriptor,
-        new java.lang.String[] { "Name", "EpType", "ProxyHostname", "InternalHostname", "DocumentationPath", "IsPublic", "Pubkey", });
+        new java.lang.String[] { "Name", "EpType", "DocumentationPath", "IsPublic", "Pubkey", "IsBundler", "HostConfigs", });
     internal_static_aruna_api_storage_services_v1_AddEndpointResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v1_AddEndpointResponse_fieldAccessorTable = new

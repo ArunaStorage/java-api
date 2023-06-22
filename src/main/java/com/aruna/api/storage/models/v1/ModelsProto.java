@@ -1110,6 +1110,132 @@ public final class ModelsProto {
     // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v1.EndpointType)
   }
 
+  /**
+   * Protobuf enum {@code aruna.api.storage.models.v1.EndpointHostType}
+   */
+  public enum EndpointHostType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ENDPOINT_HOST_TYPE_UNSPECIFIED = 0;</code>
+     */
+    ENDPOINT_HOST_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>ENDPOINT_HOST_TYPE_PROXY = 1;</code>
+     */
+    ENDPOINT_HOST_TYPE_PROXY(1),
+    /**
+     * <code>ENDPOINT_HOST_TYPE_INTERNAL = 2;</code>
+     */
+    ENDPOINT_HOST_TYPE_INTERNAL(2),
+    /**
+     * <code>ENDPOINT_HOST_TYPE_BUNDLER = 3;</code>
+     */
+    ENDPOINT_HOST_TYPE_BUNDLER(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ENDPOINT_HOST_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int ENDPOINT_HOST_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>ENDPOINT_HOST_TYPE_PROXY = 1;</code>
+     */
+    public static final int ENDPOINT_HOST_TYPE_PROXY_VALUE = 1;
+    /**
+     * <code>ENDPOINT_HOST_TYPE_INTERNAL = 2;</code>
+     */
+    public static final int ENDPOINT_HOST_TYPE_INTERNAL_VALUE = 2;
+    /**
+     * <code>ENDPOINT_HOST_TYPE_BUNDLER = 3;</code>
+     */
+    public static final int ENDPOINT_HOST_TYPE_BUNDLER_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EndpointHostType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EndpointHostType forNumber(int value) {
+      switch (value) {
+        case 0: return ENDPOINT_HOST_TYPE_UNSPECIFIED;
+        case 1: return ENDPOINT_HOST_TYPE_PROXY;
+        case 2: return ENDPOINT_HOST_TYPE_INTERNAL;
+        case 3: return ENDPOINT_HOST_TYPE_BUNDLER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EndpointHostType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EndpointHostType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EndpointHostType>() {
+            public EndpointHostType findValueByNumber(int number) {
+              return EndpointHostType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v1.ModelsProto.getDescriptor().getEnumTypes().get(8);
+    }
+
+    private static final EndpointHostType[] VALUES = values();
+
+    public static EndpointHostType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EndpointHostType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v1.EndpointHostType)
+  }
+
   public interface KeyValueOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v1.KeyValue)
       com.google.protobuf.MessageOrBuilder {
@@ -7101,6 +7227,850 @@ public final class ModelsProto {
 
   }
 
+  public interface EndpointHostConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v1.EndpointHostConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+
+    /**
+     * <code>bool is_primary = 2 [json_name = "isPrimary"];</code>
+     * @return The isPrimary.
+     */
+    boolean getIsPrimary();
+
+    /**
+     * <code>bool ssl = 3 [json_name = "ssl"];</code>
+     * @return The ssl.
+     */
+    boolean getSsl();
+
+    /**
+     * <code>bool public = 4 [json_name = "public"];</code>
+     * @return The public.
+     */
+    boolean getPublic();
+
+    /**
+     * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+     * @return The enum numeric value on the wire for hostType.
+     */
+    int getHostTypeValue();
+    /**
+     * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+     * @return The hostType.
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType getHostType();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.models.v1.EndpointHostConfig}
+   */
+  public static final class EndpointHostConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.models.v1.EndpointHostConfig)
+      EndpointHostConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EndpointHostConfig.newBuilder() to construct.
+    private EndpointHostConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EndpointHostConfig() {
+      url_ = "";
+      hostType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EndpointHostConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v1.ModelsProto.internal_static_aruna_api_storage_models_v1_EndpointHostConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.models.v1.ModelsProto.internal_static_aruna_api_storage_models_v1_EndpointHostConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.class, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder.class);
+    }
+
+    public static final int URL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object url_ = "";
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_PRIMARY_FIELD_NUMBER = 2;
+    private boolean isPrimary_ = false;
+    /**
+     * <code>bool is_primary = 2 [json_name = "isPrimary"];</code>
+     * @return The isPrimary.
+     */
+    @java.lang.Override
+    public boolean getIsPrimary() {
+      return isPrimary_;
+    }
+
+    public static final int SSL_FIELD_NUMBER = 3;
+    private boolean ssl_ = false;
+    /**
+     * <code>bool ssl = 3 [json_name = "ssl"];</code>
+     * @return The ssl.
+     */
+    @java.lang.Override
+    public boolean getSsl() {
+      return ssl_;
+    }
+
+    public static final int PUBLIC_FIELD_NUMBER = 4;
+    private boolean public_ = false;
+    /**
+     * <code>bool public = 4 [json_name = "public"];</code>
+     * @return The public.
+     */
+    @java.lang.Override
+    public boolean getPublic() {
+      return public_;
+    }
+
+    public static final int HOST_TYPE_FIELD_NUMBER = 5;
+    private int hostType_ = 0;
+    /**
+     * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+     * @return The enum numeric value on the wire for hostType.
+     */
+    @java.lang.Override public int getHostTypeValue() {
+      return hostType_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+     * @return The hostType.
+     */
+    @java.lang.Override public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType getHostType() {
+      com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType result = com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType.forNumber(hostType_);
+      return result == null ? com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+      }
+      if (isPrimary_ != false) {
+        output.writeBool(2, isPrimary_);
+      }
+      if (ssl_ != false) {
+        output.writeBool(3, ssl_);
+      }
+      if (public_ != false) {
+        output.writeBool(4, public_);
+      }
+      if (hostType_ != com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType.ENDPOINT_HOST_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, hostType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+      }
+      if (isPrimary_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isPrimary_);
+      }
+      if (ssl_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, ssl_);
+      }
+      if (public_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, public_);
+      }
+      if (hostType_ != com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType.ENDPOINT_HOST_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, hostType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig other = (com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig) obj;
+
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (getIsPrimary()
+          != other.getIsPrimary()) return false;
+      if (getSsl()
+          != other.getSsl()) return false;
+      if (getPublic()
+          != other.getPublic()) return false;
+      if (hostType_ != other.hostType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + IS_PRIMARY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPrimary());
+      hash = (37 * hash) + SSL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSsl());
+      hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPublic());
+      hash = (37 * hash) + HOST_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + hostType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.models.v1.EndpointHostConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.models.v1.EndpointHostConfig)
+        com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.models.v1.ModelsProto.internal_static_aruna_api_storage_models_v1_EndpointHostConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.models.v1.ModelsProto.internal_static_aruna_api_storage_models_v1_EndpointHostConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.class, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        url_ = "";
+        isPrimary_ = false;
+        ssl_ = false;
+        public_ = false;
+        hostType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.models.v1.ModelsProto.internal_static_aruna_api_storage_models_v1_EndpointHostConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getDefaultInstanceForType() {
+        return com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig build() {
+        com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig buildPartial() {
+        com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig result = new com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.url_ = url_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isPrimary_ = isPrimary_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ssl_ = ssl_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.public_ = public_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.hostType_ = hostType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig) {
+          return mergeFrom((com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig other) {
+        if (other == com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.getDefaultInstance()) return this;
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getIsPrimary() != false) {
+          setIsPrimary(other.getIsPrimary());
+        }
+        if (other.getSsl() != false) {
+          setSsl(other.getSsl());
+        }
+        if (other.getPublic() != false) {
+          setPublic(other.getPublic());
+        }
+        if (other.hostType_ != 0) {
+          setHostTypeValue(other.getHostTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                url_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                isPrimary_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                ssl_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                public_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                hostType_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        url_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        url_ = getDefaultInstance().getUrl();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        url_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean isPrimary_ ;
+      /**
+       * <code>bool is_primary = 2 [json_name = "isPrimary"];</code>
+       * @return The isPrimary.
+       */
+      @java.lang.Override
+      public boolean getIsPrimary() {
+        return isPrimary_;
+      }
+      /**
+       * <code>bool is_primary = 2 [json_name = "isPrimary"];</code>
+       * @param value The isPrimary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPrimary(boolean value) {
+
+        isPrimary_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_primary = 2 [json_name = "isPrimary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPrimary() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isPrimary_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean ssl_ ;
+      /**
+       * <code>bool ssl = 3 [json_name = "ssl"];</code>
+       * @return The ssl.
+       */
+      @java.lang.Override
+      public boolean getSsl() {
+        return ssl_;
+      }
+      /**
+       * <code>bool ssl = 3 [json_name = "ssl"];</code>
+       * @param value The ssl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSsl(boolean value) {
+
+        ssl_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool ssl = 3 [json_name = "ssl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSsl() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ssl_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean public_ ;
+      /**
+       * <code>bool public = 4 [json_name = "public"];</code>
+       * @return The public.
+       */
+      @java.lang.Override
+      public boolean getPublic() {
+        return public_;
+      }
+      /**
+       * <code>bool public = 4 [json_name = "public"];</code>
+       * @param value The public to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublic(boolean value) {
+
+        public_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool public = 4 [json_name = "public"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublic() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        public_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int hostType_ = 0;
+      /**
+       * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+       * @return The enum numeric value on the wire for hostType.
+       */
+      @java.lang.Override public int getHostTypeValue() {
+        return hostType_;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+       * @param value The enum numeric value on the wire for hostType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostTypeValue(int value) {
+        hostType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+       * @return The hostType.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType getHostType() {
+        com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType result = com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType.forNumber(hostType_);
+        return result == null ? com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+       * @param value The hostType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostType(com.aruna.api.storage.models.v1.ModelsProto.EndpointHostType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        hostType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v1.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        hostType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.models.v1.EndpointHostConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.models.v1.EndpointHostConfig)
+    private static final com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig();
+    }
+
+    public static com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EndpointHostConfig>
+        PARSER = new com.google.protobuf.AbstractParser<EndpointHostConfig>() {
+      @java.lang.Override
+      public EndpointHostConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EndpointHostConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EndpointHostConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface EndpointOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v1.Endpoint)
       com.google.protobuf.MessageOrBuilder {
@@ -7141,30 +8111,6 @@ public final class ModelsProto {
         getNameBytes();
 
     /**
-     * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-     * @return The proxyHostname.
-     */
-    java.lang.String getProxyHostname();
-    /**
-     * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-     * @return The bytes for proxyHostname.
-     */
-    com.google.protobuf.ByteString
-        getProxyHostnameBytes();
-
-    /**
-     * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-     * @return The internalHostname.
-     */
-    java.lang.String getInternalHostname();
-    /**
-     * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-     * @return The bytes for internalHostname.
-     */
-    com.google.protobuf.ByteString
-        getInternalHostnameBytes();
-
-    /**
      * <code>string documentation_path = 6 [json_name = "documentationPath"];</code>
      * @return The documentationPath.
      */
@@ -7198,6 +8144,36 @@ public final class ModelsProto {
      * @return The status.
      */
     com.aruna.api.storage.models.v1.ModelsProto.EndpointStatus getStatus();
+
+    /**
+     * <code>bool is_bundler = 10 [json_name = "isBundler"];</code>
+     * @return The isBundler.
+     */
+    boolean getIsBundler();
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> 
+        getHostConfigsList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getHostConfigs(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    int getHostConfigsCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+        getHostConfigsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v1.Endpoint}
@@ -7215,10 +8191,9 @@ public final class ModelsProto {
       id_ = "";
       epType_ = 0;
       name_ = "";
-      proxyHostname_ = "";
-      internalHostname_ = "";
       documentationPath_ = "";
       status_ = 0;
+      hostConfigs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7337,84 +8312,6 @@ public final class ModelsProto {
       }
     }
 
-    public static final int PROXY_HOSTNAME_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object proxyHostname_ = "";
-    /**
-     * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-     * @return The proxyHostname.
-     */
-    @java.lang.Override
-    public java.lang.String getProxyHostname() {
-      java.lang.Object ref = proxyHostname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        proxyHostname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-     * @return The bytes for proxyHostname.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProxyHostnameBytes() {
-      java.lang.Object ref = proxyHostname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        proxyHostname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int INTERNAL_HOSTNAME_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object internalHostname_ = "";
-    /**
-     * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-     * @return The internalHostname.
-     */
-    @java.lang.Override
-    public java.lang.String getInternalHostname() {
-      java.lang.Object ref = internalHostname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        internalHostname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-     * @return The bytes for internalHostname.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getInternalHostnameBytes() {
-      java.lang.Object ref = internalHostname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        internalHostname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int DOCUMENTATION_PATH_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private volatile java.lang.Object documentationPath_ = "";
@@ -7494,6 +8391,58 @@ public final class ModelsProto {
       return result == null ? com.aruna.api.storage.models.v1.ModelsProto.EndpointStatus.UNRECOGNIZED : result;
     }
 
+    public static final int IS_BUNDLER_FIELD_NUMBER = 10;
+    private boolean isBundler_ = false;
+    /**
+     * <code>bool is_bundler = 10 [json_name = "isBundler"];</code>
+     * @return The isBundler.
+     */
+    @java.lang.Override
+    public boolean getIsBundler() {
+      return isBundler_;
+    }
+
+    public static final int HOST_CONFIGS_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> hostConfigs_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> getHostConfigsList() {
+      return hostConfigs_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+        getHostConfigsOrBuilderList() {
+      return hostConfigs_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public int getHostConfigsCount() {
+      return hostConfigs_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getHostConfigs(int index) {
+      return hostConfigs_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
+        int index) {
+      return hostConfigs_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7517,12 +8466,6 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proxyHostname_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, proxyHostname_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalHostname_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, internalHostname_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentationPath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, documentationPath_);
       }
@@ -7534,6 +8477,12 @@ public final class ModelsProto {
       }
       if (status_ != com.aruna.api.storage.models.v1.ModelsProto.EndpointStatus.ENDPOINT_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, status_);
+      }
+      if (isBundler_ != false) {
+        output.writeBool(10, isBundler_);
+      }
+      for (int i = 0; i < hostConfigs_.size(); i++) {
+        output.writeMessage(11, hostConfigs_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -7554,12 +8503,6 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proxyHostname_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, proxyHostname_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalHostname_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, internalHostname_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentationPath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, documentationPath_);
       }
@@ -7574,6 +8517,14 @@ public final class ModelsProto {
       if (status_ != com.aruna.api.storage.models.v1.ModelsProto.EndpointStatus.ENDPOINT_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, status_);
+      }
+      if (isBundler_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, isBundler_);
+      }
+      for (int i = 0; i < hostConfigs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, hostConfigs_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7595,10 +8546,6 @@ public final class ModelsProto {
       if (epType_ != other.epType_) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!getProxyHostname()
-          .equals(other.getProxyHostname())) return false;
-      if (!getInternalHostname()
-          .equals(other.getInternalHostname())) return false;
       if (!getDocumentationPath()
           .equals(other.getDocumentationPath())) return false;
       if (getIsPublic()
@@ -7606,6 +8553,10 @@ public final class ModelsProto {
       if (getIsDefault()
           != other.getIsDefault()) return false;
       if (status_ != other.status_) return false;
+      if (getIsBundler()
+          != other.getIsBundler()) return false;
+      if (!getHostConfigsList()
+          .equals(other.getHostConfigsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7623,10 +8574,6 @@ public final class ModelsProto {
       hash = (53 * hash) + epType_;
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + PROXY_HOSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getProxyHostname().hashCode();
-      hash = (37 * hash) + INTERNAL_HOSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getInternalHostname().hashCode();
       hash = (37 * hash) + DOCUMENTATION_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentationPath().hashCode();
       hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
@@ -7637,6 +8584,13 @@ public final class ModelsProto {
           getIsDefault());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + IS_BUNDLER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsBundler());
+      if (getHostConfigsCount() > 0) {
+        hash = (37 * hash) + HOST_CONFIGS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostConfigsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7771,12 +8725,18 @@ public final class ModelsProto {
         id_ = "";
         epType_ = 0;
         name_ = "";
-        proxyHostname_ = "";
-        internalHostname_ = "";
         documentationPath_ = "";
         isPublic_ = false;
         isDefault_ = false;
         status_ = 0;
+        isBundler_ = false;
+        if (hostConfigsBuilder_ == null) {
+          hostConfigs_ = java.util.Collections.emptyList();
+        } else {
+          hostConfigs_ = null;
+          hostConfigsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -7803,9 +8763,22 @@ public final class ModelsProto {
       @java.lang.Override
       public com.aruna.api.storage.models.v1.ModelsProto.Endpoint buildPartial() {
         com.aruna.api.storage.models.v1.ModelsProto.Endpoint result = new com.aruna.api.storage.models.v1.ModelsProto.Endpoint(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.storage.models.v1.ModelsProto.Endpoint result) {
+        if (hostConfigsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            hostConfigs_ = java.util.Collections.unmodifiableList(hostConfigs_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.hostConfigs_ = hostConfigs_;
+        } else {
+          result.hostConfigs_ = hostConfigsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.aruna.api.storage.models.v1.ModelsProto.Endpoint result) {
@@ -7820,22 +8793,19 @@ public final class ModelsProto {
           result.name_ = name_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.proxyHostname_ = proxyHostname_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.internalHostname_ = internalHostname_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.documentationPath_ = documentationPath_;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.isPublic_ = isPublic_;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.isDefault_ = isDefault_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.isBundler_ = isBundler_;
         }
       }
 
@@ -7864,19 +8834,9 @@ public final class ModelsProto {
           bitField0_ |= 0x00000004;
           onChanged();
         }
-        if (!other.getProxyHostname().isEmpty()) {
-          proxyHostname_ = other.proxyHostname_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getInternalHostname().isEmpty()) {
-          internalHostname_ = other.internalHostname_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
         if (!other.getDocumentationPath().isEmpty()) {
           documentationPath_ = other.documentationPath_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getIsPublic() != false) {
@@ -7887,6 +8847,35 @@ public final class ModelsProto {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.getIsBundler() != false) {
+          setIsBundler(other.getIsBundler());
+        }
+        if (hostConfigsBuilder_ == null) {
+          if (!other.hostConfigs_.isEmpty()) {
+            if (hostConfigs_.isEmpty()) {
+              hostConfigs_ = other.hostConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureHostConfigsIsMutable();
+              hostConfigs_.addAll(other.hostConfigs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hostConfigs_.isEmpty()) {
+            if (hostConfigsBuilder_.isEmpty()) {
+              hostConfigsBuilder_.dispose();
+              hostConfigsBuilder_ = null;
+              hostConfigs_ = other.hostConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              hostConfigsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHostConfigsFieldBuilder() : null;
+            } else {
+              hostConfigsBuilder_.addAllMessages(other.hostConfigs_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7929,36 +8918,44 @@ public final class ModelsProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                proxyHostname_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                internalHostname_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
               case 50: {
                 documentationPath_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 50
               case 56: {
                 isPublic_ = input.readBool();
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000010;
                 break;
               } // case 56
               case 64: {
                 isDefault_ = input.readBool();
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000020;
                 break;
               } // case 64
               case 72: {
                 status_ = input.readEnum();
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000040;
                 break;
               } // case 72
+              case 80: {
+                isBundler_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 80
+              case 90: {
+                com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.parser(),
+                        extensionRegistry);
+                if (hostConfigsBuilder_ == null) {
+                  ensureHostConfigsIsMutable();
+                  hostConfigs_.add(m);
+                } else {
+                  hostConfigsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8173,150 +9170,6 @@ public final class ModelsProto {
         return this;
       }
 
-      private java.lang.Object proxyHostname_ = "";
-      /**
-       * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-       * @return The proxyHostname.
-       */
-      public java.lang.String getProxyHostname() {
-        java.lang.Object ref = proxyHostname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          proxyHostname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-       * @return The bytes for proxyHostname.
-       */
-      public com.google.protobuf.ByteString
-          getProxyHostnameBytes() {
-        java.lang.Object ref = proxyHostname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          proxyHostname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-       * @param value The proxyHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProxyHostname(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        proxyHostname_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProxyHostname() {
-        proxyHostname_ = getDefaultInstance().getProxyHostname();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string proxy_hostname = 4 [json_name = "proxyHostname"];</code>
-       * @param value The bytes for proxyHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProxyHostnameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        proxyHostname_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object internalHostname_ = "";
-      /**
-       * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-       * @return The internalHostname.
-       */
-      public java.lang.String getInternalHostname() {
-        java.lang.Object ref = internalHostname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          internalHostname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-       * @return The bytes for internalHostname.
-       */
-      public com.google.protobuf.ByteString
-          getInternalHostnameBytes() {
-        java.lang.Object ref = internalHostname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          internalHostname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-       * @param value The internalHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInternalHostname(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        internalHostname_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInternalHostname() {
-        internalHostname_ = getDefaultInstance().getInternalHostname();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string internal_hostname = 5 [json_name = "internalHostname"];</code>
-       * @param value The bytes for internalHostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInternalHostnameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        internalHostname_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object documentationPath_ = "";
       /**
        * <code>string documentation_path = 6 [json_name = "documentationPath"];</code>
@@ -8360,7 +9213,7 @@ public final class ModelsProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         documentationPath_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8370,7 +9223,7 @@ public final class ModelsProto {
        */
       public Builder clearDocumentationPath() {
         documentationPath_ = getDefaultInstance().getDocumentationPath();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -8384,7 +9237,7 @@ public final class ModelsProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         documentationPath_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8406,7 +9259,7 @@ public final class ModelsProto {
       public Builder setIsPublic(boolean value) {
 
         isPublic_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -8415,7 +9268,7 @@ public final class ModelsProto {
        * @return This builder for chaining.
        */
       public Builder clearIsPublic() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         isPublic_ = false;
         onChanged();
         return this;
@@ -8438,7 +9291,7 @@ public final class ModelsProto {
       public Builder setIsDefault(boolean value) {
 
         isDefault_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -8447,7 +9300,7 @@ public final class ModelsProto {
        * @return This builder for chaining.
        */
       public Builder clearIsDefault() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         isDefault_ = false;
         onChanged();
         return this;
@@ -8468,7 +9321,7 @@ public final class ModelsProto {
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -8490,7 +9343,7 @@ public final class ModelsProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000040;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -8500,10 +9353,282 @@ public final class ModelsProto {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private boolean isBundler_ ;
+      /**
+       * <code>bool is_bundler = 10 [json_name = "isBundler"];</code>
+       * @return The isBundler.
+       */
+      @java.lang.Override
+      public boolean getIsBundler() {
+        return isBundler_;
+      }
+      /**
+       * <code>bool is_bundler = 10 [json_name = "isBundler"];</code>
+       * @param value The isBundler to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsBundler(boolean value) {
+
+        isBundler_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_bundler = 10 [json_name = "isBundler"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsBundler() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        isBundler_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> hostConfigs_ =
+        java.util.Collections.emptyList();
+      private void ensureHostConfigsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          hostConfigs_ = new java.util.ArrayList<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig>(hostConfigs_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> hostConfigsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> getHostConfigsList() {
+        if (hostConfigsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hostConfigs_);
+        } else {
+          return hostConfigsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public int getHostConfigsCount() {
+        if (hostConfigsBuilder_ == null) {
+          return hostConfigs_.size();
+        } else {
+          return hostConfigsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig getHostConfigs(int index) {
+        if (hostConfigsBuilder_ == null) {
+          return hostConfigs_.get(index);
+        } else {
+          return hostConfigsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder setHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig value) {
+        if (hostConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostConfigsIsMutable();
+          hostConfigs_.set(index, value);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder setHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder builderForValue) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostConfigsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig value) {
+        if (hostConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(value);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig value) {
+        if (hostConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(index, value);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(
+          com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder builderForValue) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addHostConfigs(
+          int index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder builderForValue) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder addAllHostConfigs(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig> values) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hostConfigs_);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder clearHostConfigs() {
+        if (hostConfigsBuilder_ == null) {
+          hostConfigs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public Builder removeHostConfigs(int index) {
+        if (hostConfigsBuilder_ == null) {
+          ensureHostConfigsIsMutable();
+          hostConfigs_.remove(index);
+          onChanged();
+        } else {
+          hostConfigsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder getHostConfigsBuilder(
+          int index) {
+        return getHostConfigsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
+          int index) {
+        if (hostConfigsBuilder_ == null) {
+          return hostConfigs_.get(index);  } else {
+          return hostConfigsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+           getHostConfigsOrBuilderList() {
+        if (hostConfigsBuilder_ != null) {
+          return hostConfigsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hostConfigs_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder addHostConfigsBuilder() {
+        return getHostConfigsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder addHostConfigsBuilder(
+          int index) {
+        return getHostConfigsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v1.EndpointHostConfig host_configs = 11 [json_name = "hostConfigs"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder> 
+           getHostConfigsBuilderList() {
+        return getHostConfigsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder> 
+          getHostConfigsFieldBuilder() {
+        if (hostConfigsBuilder_ == null) {
+          hostConfigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v1.ModelsProto.EndpointHostConfigOrBuilder>(
+                  hostConfigs_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          hostConfigs_ = null;
+        }
+        return hostConfigsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -34429,6 +35554,11 @@ public final class ModelsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_models_v1_Source_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_models_v1_EndpointHostConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_models_v1_EndpointHostConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_models_v1_Endpoint_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -34535,168 +35665,177 @@ public final class ModelsProto {
       "h\"\036\n\006Origin\022\016\n\002id\030\002 \001(\tR\002idJ\004\010\001\020\002\"r\n\006Sou" +
       "rce\022\036\n\nidentifier\030\001 \001(\tR\nidentifier\022H\n\013s" +
       "ource_type\030\002 \001(\0162\'.aruna.api.storage.mod" +
-      "els.v1.SourceTypeR\nsourceType\"\366\002\n\010Endpoi" +
-      "nt\022\016\n\002id\030\001 \001(\tR\002id\022B\n\007ep_type\030\002 \001(\0162).ar" +
-      "una.api.storage.models.v1.EndpointTypeR\006" +
-      "epType\022\022\n\004name\030\003 \001(\tR\004name\022%\n\016proxy_host" +
-      "name\030\004 \001(\tR\rproxyHostname\022+\n\021internal_ho" +
-      "stname\030\005 \001(\tR\020internalHostname\022-\n\022docume" +
-      "ntation_path\030\006 \001(\tR\021documentationPath\022\033\n" +
-      "\tis_public\030\007 \001(\010R\010isPublic\022\035\n\nis_default" +
-      "\030\010 \001(\010R\tisDefault\022C\n\006status\030\t \001(\0162+.arun" +
-      "a.api.storage.models.v1.EndpointStatusR\006" +
-      "status\"\236\005\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\032\n\010fil" +
-      "ename\030\002 \001(\tR\010filename\022=\n\006labels\030\004 \003(\0132%." +
-      "aruna.api.storage.models.v1.KeyValueR\006la" +
-      "bels\022;\n\005hooks\030\005 \003(\0132%.aruna.api.storage." +
-      "models.v1.KeyValueR\005hooks\0224\n\007created\030\006 \001" +
-      "(\0132\032.google.protobuf.TimestampR\007created\022" +
-      "\037\n\013content_len\030\007 \001(\003R\ncontentLen\022;\n\006stat" +
-      "us\030\010 \001(\0162#.aruna.api.storage.models.v1.S" +
-      "tatusR\006status\022;\n\006origin\030\t \001(\0132#.aruna.ap" +
-      "i.storage.models.v1.OriginR\006origin\022E\n\nda" +
-      "ta_class\030\n \001(\0162&.aruna.api.storage.model" +
-      "s.v1.DataClassR\tdataClass\0229\n\006hashes\030\020 \003(" +
-      "\0132!.aruna.api.storage.models.v1.HashR\006ha" +
-      "shes\022\035\n\nrev_number\030\014 \001(\003R\trevNumber\022;\n\006s" +
-      "ource\030\r \001(\0132#.aruna.api.storage.models.v" +
-      "1.SourceR\006source\022\026\n\006latest\030\016 \001(\010R\006latest" +
-      "\022\037\n\013auto_update\030\017 \001(\010R\nautoUpdateJ\004\010\013\020\014\"" +
-      "H\n\007Objects\022=\n\007objects\030\001 \003(\0132#.aruna.api." +
-      "storage.models.v1.ObjectR\007objects\"\272\003\n\013Ob" +
-      "jectGroup\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR" +
-      "\004name\022 \n\013description\030\003 \001(\tR\013description\022" +
-      "=\n\006labels\030\006 \003(\0132%.aruna.api.storage.mode" +
-      "ls.v1.KeyValueR\006labels\022;\n\005hooks\030\007 \003(\0132%." +
-      "aruna.api.storage.models.v1.KeyValueR\005ho" +
-      "oks\022=\n\007objects\030\010 \003(\0132#.aruna.api.storage" +
-      ".models.v1.ObjectR\007objects\022F\n\014meta_objec" +
-      "ts\030\t \003(\0132#.aruna.api.storage.models.v1.O" +
-      "bjectR\013metaObjects\022C\n\005stats\030\n \001(\0132-.arun" +
-      "a.api.storage.models.v1.ObjectGroupStats" +
-      "R\005stats\022\035\n\nrev_number\030\013 \001(\003R\trevNumber\"]" +
-      "\n\014ObjectGroups\022M\n\robject_groups\030\001 \003(\0132(." +
-      "aruna.api.storage.models.v1.ObjectGroupR" +
-      "\014objectGroups\"\273\002\n\023ObjectGroupOverview\022\016\n" +
-      "\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013des" +
-      "cription\030\003 \001(\tR\013description\022=\n\006labels\030\006 " +
-      "\003(\0132%.aruna.api.storage.models.v1.KeyVal" +
-      "ueR\006labels\022;\n\005hooks\030\007 \003(\0132%.aruna.api.st" +
-      "orage.models.v1.KeyValueR\005hooks\022C\n\005stats" +
-      "\030\010 \001(\0132-.aruna.api.storage.models.v1.Obj" +
-      "ectGroupStatsR\005stats\022\035\n\nrev_number\030\t \001(\003" +
-      "R\trevNumber\"~\n\024ObjectGroupOverviews\022f\n\026o" +
-      "bject_group_overviews\030\001 \003(\01320.aruna.api." +
-      "storage.models.v1.ObjectGroupOverviewR\024o" +
-      "bjectGroupOverviews\"\200\003\n\021ObjectGroupWithI" +
-      "D\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
-      "\013description\030\003 \001(\tR\013description\022=\n\006label" +
-      "s\030\006 \003(\0132%.aruna.api.storage.models.v1.Ke" +
-      "yValueR\006labels\022;\n\005hooks\030\007 \003(\0132%.aruna.ap" +
-      "i.storage.models.v1.KeyValueR\005hooks\022\035\n\no" +
-      "bject_ids\030\010 \003(\tR\tobjectIds\022&\n\017meta_objec" +
-      "t_ids\030\t \003(\tR\rmetaObjectIds\022C\n\005stats\030\n \001(" +
-      "\0132-.aruna.api.storage.models.v1.ObjectGr" +
-      "oupStatsR\005stats\022\035\n\nrev_number\030\013 \001(\003R\trev" +
-      "Number\"w\n\022ObjectGroupWithIDs\022a\n\025object_g" +
-      "roup_with_ids\030\001 \003(\0132..aruna.api.storage." +
-      "models.v1.ObjectGroupWithIDR\022objectGroup" +
-      "WithIds\"\213\006\n\nCollection\022\016\n\002id\030\001 \001(\tR\002id\022\022" +
+      "els.v1.SourceTypeR\nsourceType\"\273\001\n\022Endpoi" +
+      "ntHostConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n\nis_pri" +
+      "mary\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(\010R\003ssl\022" +
+      "\026\n\006public\030\004 \001(\010R\006public\022J\n\thost_type\030\005 \001" +
+      "(\0162-.aruna.api.storage.models.v1.Endpoin" +
+      "tHostTypeR\010hostType\"\225\003\n\010Endpoint\022\016\n\002id\030\001" +
+      " \001(\tR\002id\022B\n\007ep_type\030\002 \001(\0162).aruna.api.st" +
+      "orage.models.v1.EndpointTypeR\006epType\022\022\n\004" +
+      "name\030\003 \001(\tR\004name\022-\n\022documentation_path\030\006" +
+      " \001(\tR\021documentationPath\022\033\n\tis_public\030\007 \001" +
+      "(\010R\010isPublic\022\035\n\nis_default\030\010 \001(\010R\tisDefa" +
+      "ult\022C\n\006status\030\t \001(\0162+.aruna.api.storage." +
+      "models.v1.EndpointStatusR\006status\022\035\n\nis_b" +
+      "undler\030\n \001(\010R\tisBundler\022R\n\014host_configs\030" +
+      "\013 \003(\0132/.aruna.api.storage.models.v1.Endp" +
+      "ointHostConfigR\013hostConfigs\"\236\005\n\006Object\022\016" +
+      "\n\002id\030\001 \001(\tR\002id\022\032\n\010filename\030\002 \001(\tR\010filena" +
+      "me\022=\n\006labels\030\004 \003(\0132%.aruna.api.storage.m" +
+      "odels.v1.KeyValueR\006labels\022;\n\005hooks\030\005 \003(\013" +
+      "2%.aruna.api.storage.models.v1.KeyValueR" +
+      "\005hooks\0224\n\007created\030\006 \001(\0132\032.google.protobu" +
+      "f.TimestampR\007created\022\037\n\013content_len\030\007 \001(" +
+      "\003R\ncontentLen\022;\n\006status\030\010 \001(\0162#.aruna.ap" +
+      "i.storage.models.v1.StatusR\006status\022;\n\006or" +
+      "igin\030\t \001(\0132#.aruna.api.storage.models.v1" +
+      ".OriginR\006origin\022E\n\ndata_class\030\n \001(\0162&.ar" +
+      "una.api.storage.models.v1.DataClassR\tdat" +
+      "aClass\0229\n\006hashes\030\020 \003(\0132!.aruna.api.stora" +
+      "ge.models.v1.HashR\006hashes\022\035\n\nrev_number\030" +
+      "\014 \001(\003R\trevNumber\022;\n\006source\030\r \001(\0132#.aruna" +
+      ".api.storage.models.v1.SourceR\006source\022\026\n" +
+      "\006latest\030\016 \001(\010R\006latest\022\037\n\013auto_update\030\017 \001" +
+      "(\010R\nautoUpdateJ\004\010\013\020\014\"H\n\007Objects\022=\n\007objec" +
+      "ts\030\001 \003(\0132#.aruna.api.storage.models.v1.O" +
+      "bjectR\007objects\"\272\003\n\013ObjectGroup\022\016\n\002id\030\001 \001" +
+      "(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descriptio" +
+      "n\030\003 \001(\tR\013description\022=\n\006labels\030\006 \003(\0132%.a" +
+      "runa.api.storage.models.v1.KeyValueR\006lab" +
+      "els\022;\n\005hooks\030\007 \003(\0132%.aruna.api.storage.m" +
+      "odels.v1.KeyValueR\005hooks\022=\n\007objects\030\010 \003(" +
+      "\0132#.aruna.api.storage.models.v1.ObjectR\007" +
+      "objects\022F\n\014meta_objects\030\t \003(\0132#.aruna.ap" +
+      "i.storage.models.v1.ObjectR\013metaObjects\022" +
+      "C\n\005stats\030\n \001(\0132-.aruna.api.storage.model" +
+      "s.v1.ObjectGroupStatsR\005stats\022\035\n\nrev_numb" +
+      "er\030\013 \001(\003R\trevNumber\"]\n\014ObjectGroups\022M\n\ro" +
+      "bject_groups\030\001 \003(\0132(.aruna.api.storage.m" +
+      "odels.v1.ObjectGroupR\014objectGroups\"\273\002\n\023O" +
+      "bjectGroupOverview\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004na" +
+      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
+      "cription\022=\n\006labels\030\006 \003(\0132%.aruna.api.sto" +
+      "rage.models.v1.KeyValueR\006labels\022;\n\005hooks" +
+      "\030\007 \003(\0132%.aruna.api.storage.models.v1.Key" +
+      "ValueR\005hooks\022C\n\005stats\030\010 \001(\0132-.aruna.api." +
+      "storage.models.v1.ObjectGroupStatsR\005stat" +
+      "s\022\035\n\nrev_number\030\t \001(\003R\trevNumber\"~\n\024Obje" +
+      "ctGroupOverviews\022f\n\026object_group_overvie" +
+      "ws\030\001 \003(\01320.aruna.api.storage.models.v1.O" +
+      "bjectGroupOverviewR\024objectGroupOverviews" +
+      "\"\200\003\n\021ObjectGroupWithID\022\016\n\002id\030\001 \001(\tR\002id\022\022" +
       "\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR" +
-      "\013description\022=\n\006labels\030\004 \003(\0132%.aruna.api" +
+      "\013description\022=\n\006labels\030\006 \003(\0132%.aruna.api" +
       ".storage.models.v1.KeyValueR\006labels\022;\n\005h" +
-      "ooks\030\005 \003(\0132%.aruna.api.storage.models.v1" +
-      ".KeyValueR\005hooks\022Q\n\016label_ontology\030\006 \001(\013" +
-      "2*.aruna.api.storage.models.v1.LabelOnto" +
-      "logyR\rlabelOntology\0224\n\007created\030\007 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\007created\022=\n\007obj" +
-      "ects\030\010 \003(\0132#.aruna.api.storage.models.v1" +
-      ".ObjectR\007objects\022K\n\016specifications\030\t \003(\013" +
-      "2#.aruna.api.storage.models.v1.ObjectR\016s" +
-      "pecifications\022M\n\robject_groups\030\n \003(\0132(.a" +
-      "runa.api.storage.models.v1.ObjectGroupR\014" +
-      "objectGroups\022Q\n\020semantic_version\030\014 \001(\0132$" +
-      ".aruna.api.storage.models.v1.VersionH\000R\017" +
-      "semanticVersion\022\030\n\006latest\030\r \001(\010H\000R\006lates" +
-      "t\022B\n\005stats\030\016 \001(\0132,.aruna.api.storage.mod" +
-      "els.v1.CollectionStatsR\005stats\022\033\n\tis_publ" +
-      "ic\030\017 \001(\010R\010isPublicB\t\n\007version\"X\n\013Collect" +
-      "ions\022I\n\013collections\030\001 \003(\0132\'.aruna.api.st" +
-      "orage.models.v1.CollectionR\013collections\"" +
-      "\270\004\n\022CollectionOverview\022\016\n\002id\030\001 \001(\tR\002id\022\022" +
-      "\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR" +
-      "\013description\022=\n\006labels\030\004 \003(\0132%.aruna.api" +
-      ".storage.models.v1.KeyValueR\006labels\022;\n\005h" +
-      "ooks\030\005 \003(\0132%.aruna.api.storage.models.v1" +
-      ".KeyValueR\005hooks\022Q\n\016label_ontology\030\006 \001(\013" +
-      "2*.aruna.api.storage.models.v1.LabelOnto" +
-      "logyR\rlabelOntology\0224\n\007created\030\007 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\007created\022Q\n\020sem" +
+      "ooks\030\007 \003(\0132%.aruna.api.storage.models.v1" +
+      ".KeyValueR\005hooks\022\035\n\nobject_ids\030\010 \003(\tR\tob" +
+      "jectIds\022&\n\017meta_object_ids\030\t \003(\tR\rmetaOb" +
+      "jectIds\022C\n\005stats\030\n \001(\0132-.aruna.api.stora" +
+      "ge.models.v1.ObjectGroupStatsR\005stats\022\035\n\n" +
+      "rev_number\030\013 \001(\003R\trevNumber\"w\n\022ObjectGro" +
+      "upWithIDs\022a\n\025object_group_with_ids\030\001 \003(\013" +
+      "2..aruna.api.storage.models.v1.ObjectGro" +
+      "upWithIDR\022objectGroupWithIds\"\213\006\n\nCollect" +
+      "ion\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022" +
+      " \n\013description\030\003 \001(\tR\013description\022=\n\006lab" +
+      "els\030\004 \003(\0132%.aruna.api.storage.models.v1." +
+      "KeyValueR\006labels\022;\n\005hooks\030\005 \003(\0132%.aruna." +
+      "api.storage.models.v1.KeyValueR\005hooks\022Q\n" +
+      "\016label_ontology\030\006 \001(\0132*.aruna.api.storag" +
+      "e.models.v1.LabelOntologyR\rlabelOntology" +
+      "\0224\n\007created\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stampR\007created\022=\n\007objects\030\010 \003(\0132#.aruna." +
+      "api.storage.models.v1.ObjectR\007objects\022K\n" +
+      "\016specifications\030\t \003(\0132#.aruna.api.storag" +
+      "e.models.v1.ObjectR\016specifications\022M\n\rob" +
+      "ject_groups\030\n \003(\0132(.aruna.api.storage.mo" +
+      "dels.v1.ObjectGroupR\014objectGroups\022Q\n\020sem" +
       "antic_version\030\014 \001(\0132$.aruna.api.storage." +
       "models.v1.VersionH\000R\017semanticVersion\022\030\n\006" +
       "latest\030\r \001(\010H\000R\006latest\022B\n\005stats\030\016 \001(\0132,." +
       "aruna.api.storage.models.v1.CollectionSt" +
       "atsR\005stats\022\033\n\tis_public\030\017 \001(\010R\010isPublicB" +
-      "\t\n\007version\"y\n\023CollectionOverviews\022b\n\024col" +
-      "lection_overviews\030\001 \003(\0132/.aruna.api.stor" +
-      "age.models.v1.CollectionOverviewR\023collec" +
-      "tionOverviews\"\235\005\n\020CollectionWithID\022\016\n\002id" +
-      "\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descri" +
-      "ption\030\003 \001(\tR\013description\022=\n\006labels\030\004 \003(\013" +
-      "2%.aruna.api.storage.models.v1.KeyValueR" +
-      "\006labels\022;\n\005hooks\030\005 \003(\0132%.aruna.api.stora" +
-      "ge.models.v1.KeyValueR\005hooks\022Q\n\016label_on" +
-      "tology\030\006 \001(\0132*.aruna.api.storage.models." +
-      "v1.LabelOntologyR\rlabelOntology\0224\n\007creat" +
-      "ed\030\007 \001(\0132\032.google.protobuf.TimestampR\007cr" +
-      "eated\022\030\n\007objects\030\010 \003(\tR\007objects\022&\n\016speci" +
-      "fications\030\t \003(\tR\016specifications\022#\n\robjec" +
-      "t_groups\030\n \003(\tR\014objectGroups\022Q\n\020semantic" +
-      "_version\030\014 \001(\0132$.aruna.api.storage.model" +
-      "s.v1.VersionH\000R\017semanticVersion\022\030\n\006lates" +
-      "t\030\r \001(\010H\000R\006latest\022B\n\005stats\030\016 \001(\0132,.aruna" +
-      ".api.storage.models.v1.CollectionStatsR\005" +
-      "stats\022\033\n\tis_public\030\017 \001(\010R\010isPublicB\t\n\007ve" +
-      "rsion\"r\n\021CollectionWithIDs\022]\n\023collection" +
-      "_with_ids\030\001 \003(\0132-.aruna.api.storage.mode" +
-      "ls.v1.CollectionWithIDR\021collectionWithId" +
-      "s*\267\001\n\014ResourceType\022\035\n\031RESOURCE_TYPE_UNSP" +
-      "ECIFIED\020\000\022\031\n\025RESOURCE_TYPE_PROJECT\020\001\022\034\n\030" +
-      "RESOURCE_TYPE_COLLECTION\020\002\022\036\n\032RESOURCE_T" +
-      "YPE_OBJECT_GROUP\020\003\022\030\n\024RESOURCE_TYPE_OBJE" +
-      "CT\020\004\022\025\n\021RESOURCE_TYPE_ALL\020\005*\273\001\n\016Resource" +
-      "Action\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022" +
-      "\032\n\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_" +
-      "ACTION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDAT" +
-      "E\020\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURC" +
-      "E_ACTION_DELETE\020\005*\242\001\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\024\n" +
-      "\020STATUS_AVAILABLE\020\002\022\026\n\022STATUS_UNAVAILABL" +
-      "E\020\003\022\020\n\014STATUS_ERROR\020\004\022\020\n\014STATUS_TRASH\020\005\022" +
-      "\025\n\021STATUS_FINALIZING\020\006*\322\001\n\016EndpointStatu" +
-      "s\022\037\n\033ENDPOINT_STATUS_UNSPECIFIED\020\000\022 \n\034EN" +
-      "DPOINT_STATUS_INITIALIZING\020\001\022\035\n\031ENDPOINT" +
-      "_STATUS_AVAILABLE\020\002\022\034\n\030ENDPOINT_STATUS_D" +
-      "EGRADED\020\003\022\037\n\033ENDPOINT_STATUS_UNAVAILABLE" +
-      "\020\004\022\037\n\033ENDPOINT_STATUS_MAINTENANCE\020\005*k\n\rH" +
-      "ashalgorithm\022\035\n\031HASHALGORITHM_UNSPECIFIE" +
-      "D\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HASHALGORI" +
-      "THM_SHA256\020\003\"\004\010\002\020\002\"\004\010\004\020\007*\215\001\n\tDataClass\022\032" +
-      "\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025\n\021DATA_CLASS" +
-      "_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIVATE\020\002\022\033\n\027DAT" +
-      "A_CLASS_CONFIDENTIAL\020\003\022\030\n\024DATA_CLASS_PRO" +
-      "TECTED\020\004*S\n\nSourceType\022\033\n\027SOURCE_TYPE_UN" +
-      "SPECIFIED\020\000\022\023\n\017SOURCE_TYPE_URL\020\001\022\023\n\017SOUR" +
-      "CE_TYPE_DOI\020\002*[\n\014EndpointType\022\035\n\031ENDPOIN" +
-      "T_TYPE_UNSPECIFIED\020\000\022\024\n\020ENDPOINT_TYPE_S3" +
-      "\020\001\022\026\n\022ENDPOINT_TYPE_FILE\020\002B\371\001\n\037com.aruna" +
-      ".api.storage.models.v1B\013ModelsProtoZ:git" +
-      "hub.com/ArunaStorage/go-api/aruna/api/st" +
-      "orage/models/v1\242\002\004AASM\252\002\033Aruna.Api.Stora" +
-      "ge.Models.V1\312\002\033Aruna\\Api\\Storage\\Models\\" +
-      "V1\342\002\'Aruna\\Api\\Storage\\Models\\V1\\GPBMeta" +
-      "data\352\002\037Aruna::Api::Storage::Models::V1b\006" +
-      "proto3"
+      "\t\n\007version\"X\n\013Collections\022I\n\013collections" +
+      "\030\001 \003(\0132\'.aruna.api.storage.models.v1.Col" +
+      "lectionR\013collections\"\270\004\n\022CollectionOverv" +
+      "iew\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022" +
+      " \n\013description\030\003 \001(\tR\013description\022=\n\006lab" +
+      "els\030\004 \003(\0132%.aruna.api.storage.models.v1." +
+      "KeyValueR\006labels\022;\n\005hooks\030\005 \003(\0132%.aruna." +
+      "api.storage.models.v1.KeyValueR\005hooks\022Q\n" +
+      "\016label_ontology\030\006 \001(\0132*.aruna.api.storag" +
+      "e.models.v1.LabelOntologyR\rlabelOntology" +
+      "\0224\n\007created\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stampR\007created\022Q\n\020semantic_version\030\014 \001(\013" +
+      "2$.aruna.api.storage.models.v1.VersionH\000" +
+      "R\017semanticVersion\022\030\n\006latest\030\r \001(\010H\000R\006lat" +
+      "est\022B\n\005stats\030\016 \001(\0132,.aruna.api.storage.m" +
+      "odels.v1.CollectionStatsR\005stats\022\033\n\tis_pu" +
+      "blic\030\017 \001(\010R\010isPublicB\t\n\007version\"y\n\023Colle" +
+      "ctionOverviews\022b\n\024collection_overviews\030\001" +
+      " \003(\0132/.aruna.api.storage.models.v1.Colle" +
+      "ctionOverviewR\023collectionOverviews\"\235\005\n\020C" +
+      "ollectionWithID\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030" +
+      "\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descri" +
+      "ption\022=\n\006labels\030\004 \003(\0132%.aruna.api.storag" +
+      "e.models.v1.KeyValueR\006labels\022;\n\005hooks\030\005 " +
+      "\003(\0132%.aruna.api.storage.models.v1.KeyVal" +
+      "ueR\005hooks\022Q\n\016label_ontology\030\006 \001(\0132*.arun" +
+      "a.api.storage.models.v1.LabelOntologyR\rl" +
+      "abelOntology\0224\n\007created\030\007 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\007created\022\030\n\007objects\030\010 " +
+      "\003(\tR\007objects\022&\n\016specifications\030\t \003(\tR\016sp" +
+      "ecifications\022#\n\robject_groups\030\n \003(\tR\014obj" +
+      "ectGroups\022Q\n\020semantic_version\030\014 \001(\0132$.ar" +
+      "una.api.storage.models.v1.VersionH\000R\017sem" +
+      "anticVersion\022\030\n\006latest\030\r \001(\010H\000R\006latest\022B" +
+      "\n\005stats\030\016 \001(\0132,.aruna.api.storage.models" +
+      ".v1.CollectionStatsR\005stats\022\033\n\tis_public\030" +
+      "\017 \001(\010R\010isPublicB\t\n\007version\"r\n\021Collection" +
+      "WithIDs\022]\n\023collection_with_ids\030\001 \003(\0132-.a" +
+      "runa.api.storage.models.v1.CollectionWit" +
+      "hIDR\021collectionWithIds*\267\001\n\014ResourceType\022" +
+      "\035\n\031RESOURCE_TYPE_UNSPECIFIED\020\000\022\031\n\025RESOUR" +
+      "CE_TYPE_PROJECT\020\001\022\034\n\030RESOURCE_TYPE_COLLE" +
+      "CTION\020\002\022\036\n\032RESOURCE_TYPE_OBJECT_GROUP\020\003\022" +
+      "\030\n\024RESOURCE_TYPE_OBJECT\020\004\022\025\n\021RESOURCE_TY" +
+      "PE_ALL\020\005*\273\001\n\016ResourceAction\022\037\n\033RESOURCE_" +
+      "ACTION_UNSPECIFIED\020\000\022\032\n\026RESOURCE_ACTION_" +
+      "CREATE\020\001\022\032\n\026RESOURCE_ACTION_APPEND\020\002\022\032\n\026" +
+      "RESOURCE_ACTION_UPDATE\020\003\022\030\n\024RESOURCE_ACT" +
+      "ION_READ\020\004\022\032\n\026RESOURCE_ACTION_DELETE\020\005*\242" +
+      "\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\027\n\023STA" +
+      "TUS_INITIALIZING\020\001\022\024\n\020STATUS_AVAILABLE\020\002" +
+      "\022\026\n\022STATUS_UNAVAILABLE\020\003\022\020\n\014STATUS_ERROR" +
+      "\020\004\022\020\n\014STATUS_TRASH\020\005\022\025\n\021STATUS_FINALIZIN" +
+      "G\020\006*\322\001\n\016EndpointStatus\022\037\n\033ENDPOINT_STATU" +
+      "S_UNSPECIFIED\020\000\022 \n\034ENDPOINT_STATUS_INITI" +
+      "ALIZING\020\001\022\035\n\031ENDPOINT_STATUS_AVAILABLE\020\002" +
+      "\022\034\n\030ENDPOINT_STATUS_DEGRADED\020\003\022\037\n\033ENDPOI" +
+      "NT_STATUS_UNAVAILABLE\020\004\022\037\n\033ENDPOINT_STAT" +
+      "US_MAINTENANCE\020\005*k\n\rHashalgorithm\022\035\n\031HAS" +
+      "HALGORITHM_UNSPECIFIED\020\000\022\025\n\021HASHALGORITH" +
+      "M_MD5\020\001\022\030\n\024HASHALGORITHM_SHA256\020\003\"\004\010\002\020\002\"" +
+      "\004\010\004\020\007*\215\001\n\tDataClass\022\032\n\026DATA_CLASS_UNSPEC" +
+      "IFIED\020\000\022\025\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_C" +
+      "LASS_PRIVATE\020\002\022\033\n\027DATA_CLASS_CONFIDENTIA" +
+      "L\020\003\022\030\n\024DATA_CLASS_PROTECTED\020\004*S\n\nSourceT" +
+      "ype\022\033\n\027SOURCE_TYPE_UNSPECIFIED\020\000\022\023\n\017SOUR" +
+      "CE_TYPE_URL\020\001\022\023\n\017SOURCE_TYPE_DOI\020\002*[\n\014En" +
+      "dpointType\022\035\n\031ENDPOINT_TYPE_UNSPECIFIED\020" +
+      "\000\022\024\n\020ENDPOINT_TYPE_S3\020\001\022\026\n\022ENDPOINT_TYPE" +
+      "_FILE\020\002*\225\001\n\020EndpointHostType\022\"\n\036ENDPOINT" +
+      "_HOST_TYPE_UNSPECIFIED\020\000\022\034\n\030ENDPOINT_HOS" +
+      "T_TYPE_PROXY\020\001\022\037\n\033ENDPOINT_HOST_TYPE_INT" +
+      "ERNAL\020\002\022\036\n\032ENDPOINT_HOST_TYPE_BUNDLER\020\003B" +
+      "\371\001\n\037com.aruna.api.storage.models.v1B\013Mod" +
+      "elsProtoZ:github.com/ArunaStorage/go-api" +
+      "/aruna/api/storage/models/v1\242\002\004AASM\252\002\033Ar" +
+      "una.Api.Storage.Models.V1\312\002\033Aruna\\Api\\St" +
+      "orage\\Models\\V1\342\002\'Aruna\\Api\\Storage\\Mode" +
+      "ls\\V1\\GPBMetadata\352\002\037Aruna::Api::Storage:" +
+      ":Models::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34757,92 +35896,98 @@ public final class ModelsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Source_descriptor,
         new java.lang.String[] { "Identifier", "SourceType", });
-    internal_static_aruna_api_storage_models_v1_Endpoint_descriptor =
+    internal_static_aruna_api_storage_models_v1_EndpointHostConfig_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_aruna_api_storage_models_v1_EndpointHostConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_models_v1_EndpointHostConfig_descriptor,
+        new java.lang.String[] { "Url", "IsPrimary", "Ssl", "Public", "HostType", });
+    internal_static_aruna_api_storage_models_v1_Endpoint_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_models_v1_Endpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Endpoint_descriptor,
-        new java.lang.String[] { "Id", "EpType", "Name", "ProxyHostname", "InternalHostname", "DocumentationPath", "IsPublic", "IsDefault", "Status", });
+        new java.lang.String[] { "Id", "EpType", "Name", "DocumentationPath", "IsPublic", "IsDefault", "Status", "IsBundler", "HostConfigs", });
     internal_static_aruna_api_storage_models_v1_Object_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_storage_models_v1_Object_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Object_descriptor,
         new java.lang.String[] { "Id", "Filename", "Labels", "Hooks", "Created", "ContentLen", "Status", "Origin", "DataClass", "Hashes", "RevNumber", "Source", "Latest", "AutoUpdate", });
     internal_static_aruna_api_storage_models_v1_Objects_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aruna_api_storage_models_v1_Objects_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Objects_descriptor,
         new java.lang.String[] { "Objects", });
     internal_static_aruna_api_storage_models_v1_ObjectGroup_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_storage_models_v1_ObjectGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ObjectGroup_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Labels", "Hooks", "Objects", "MetaObjects", "Stats", "RevNumber", });
     internal_static_aruna_api_storage_models_v1_ObjectGroups_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_aruna_api_storage_models_v1_ObjectGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ObjectGroups_descriptor,
         new java.lang.String[] { "ObjectGroups", });
     internal_static_aruna_api_storage_models_v1_ObjectGroupOverview_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_aruna_api_storage_models_v1_ObjectGroupOverview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ObjectGroupOverview_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Labels", "Hooks", "Stats", "RevNumber", });
     internal_static_aruna_api_storage_models_v1_ObjectGroupOverviews_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aruna_api_storage_models_v1_ObjectGroupOverviews_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ObjectGroupOverviews_descriptor,
         new java.lang.String[] { "ObjectGroupOverviews", });
     internal_static_aruna_api_storage_models_v1_ObjectGroupWithID_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_storage_models_v1_ObjectGroupWithID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ObjectGroupWithID_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Labels", "Hooks", "ObjectIds", "MetaObjectIds", "Stats", "RevNumber", });
     internal_static_aruna_api_storage_models_v1_ObjectGroupWithIDs_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aruna_api_storage_models_v1_ObjectGroupWithIDs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ObjectGroupWithIDs_descriptor,
         new java.lang.String[] { "ObjectGroupWithIds", });
     internal_static_aruna_api_storage_models_v1_Collection_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aruna_api_storage_models_v1_Collection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Collection_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Labels", "Hooks", "LabelOntology", "Created", "Objects", "Specifications", "ObjectGroups", "SemanticVersion", "Latest", "Stats", "IsPublic", "Version", });
     internal_static_aruna_api_storage_models_v1_Collections_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aruna_api_storage_models_v1_Collections_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Collections_descriptor,
         new java.lang.String[] { "Collections", });
     internal_static_aruna_api_storage_models_v1_CollectionOverview_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_aruna_api_storage_models_v1_CollectionOverview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_CollectionOverview_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Labels", "Hooks", "LabelOntology", "Created", "SemanticVersion", "Latest", "Stats", "IsPublic", "Version", });
     internal_static_aruna_api_storage_models_v1_CollectionOverviews_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_aruna_api_storage_models_v1_CollectionOverviews_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_CollectionOverviews_descriptor,
         new java.lang.String[] { "CollectionOverviews", });
     internal_static_aruna_api_storage_models_v1_CollectionWithID_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_aruna_api_storage_models_v1_CollectionWithID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_CollectionWithID_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Labels", "Hooks", "LabelOntology", "Created", "Objects", "Specifications", "ObjectGroups", "SemanticVersion", "Latest", "Stats", "IsPublic", "Version", });
     internal_static_aruna_api_storage_models_v1_CollectionWithIDs_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_aruna_api_storage_models_v1_CollectionWithIDs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_CollectionWithIDs_descriptor,

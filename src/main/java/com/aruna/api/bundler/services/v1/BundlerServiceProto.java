@@ -149,24 +149,36 @@ public final class BundlerServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The collectionId.
+     */
+    java.lang.String getCollectionId();
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The bytes for collectionId.
+     */
+    com.google.protobuf.ByteString
+        getCollectionIdBytes();
+
+    /**
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @return A list containing the objectIds.
      */
     java.util.List<java.lang.String>
         getObjectIdsList();
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @return The count of objectIds.
      */
     int getObjectIdsCount();
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @param index The index of the element to return.
      * @return The objectIds at the given index.
      */
     java.lang.String getObjectIds(int index);
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the objectIds at the given index.
      */
@@ -174,42 +186,62 @@ public final class BundlerServiceProto {
         getObjectIdsBytes(int index);
 
     /**
-     * <code>string filename = 2 [json_name = "filename"];</code>
+     * <code>string filename = 3 [json_name = "filename"];</code>
      * @return The filename.
      */
     java.lang.String getFilename();
     /**
-     * <code>string filename = 2 [json_name = "filename"];</code>
+     * <code>string filename = 3 [json_name = "filename"];</code>
      * @return The bytes for filename.
      */
     com.google.protobuf.ByteString
         getFilenameBytes();
 
     /**
-     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
      * @return The enum numeric value on the wire for archiveType.
      */
     int getArchiveTypeValue();
     /**
-     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
      * @return The archiveType.
      */
     com.aruna.api.bundler.services.v1.BundlerServiceProto.ArchiveType getArchiveType();
 
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
+
+    /**
+     * <pre>
+     * Optional endpoint_id
+     * </pre>
+     *
+     * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    java.lang.String getEndpointId();
+    /**
+     * <pre>
+     * Optional endpoint_id
+     * </pre>
+     *
+     * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    com.google.protobuf.ByteString
+        getEndpointIdBytes();
   }
   /**
    * Protobuf type {@code aruna.api.bundler.services.v1.CreateBundleRequest}
@@ -224,10 +256,12 @@ public final class BundlerServiceProto {
       super(builder);
     }
     private CreateBundleRequest() {
+      collectionId_ = "";
       objectIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       filename_ = "";
       archiveType_ = 0;
+      endpointId_ = "";
     }
 
     @java.lang.Override
@@ -250,12 +284,51 @@ public final class BundlerServiceProto {
               com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest.class, com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest.Builder.class);
     }
 
-    public static final int OBJECT_IDS_FIELD_NUMBER = 1;
+    public static final int COLLECTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collectionId_ = "";
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The collectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getCollectionId() {
+      java.lang.Object ref = collectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The bytes for collectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollectionIdBytes() {
+      java.lang.Object ref = collectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OBJECT_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList objectIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @return A list containing the objectIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -263,14 +336,14 @@ public final class BundlerServiceProto {
       return objectIds_;
     }
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @return The count of objectIds.
      */
     public int getObjectIdsCount() {
       return objectIds_.size();
     }
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @param index The index of the element to return.
      * @return The objectIds at the given index.
      */
@@ -278,7 +351,7 @@ public final class BundlerServiceProto {
       return objectIds_.get(index);
     }
     /**
-     * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+     * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the objectIds at the given index.
      */
@@ -287,11 +360,11 @@ public final class BundlerServiceProto {
       return objectIds_.getByteString(index);
     }
 
-    public static final int FILENAME_FIELD_NUMBER = 2;
+    public static final int FILENAME_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object filename_ = "";
     /**
-     * <code>string filename = 2 [json_name = "filename"];</code>
+     * <code>string filename = 3 [json_name = "filename"];</code>
      * @return The filename.
      */
     @java.lang.Override
@@ -308,7 +381,7 @@ public final class BundlerServiceProto {
       }
     }
     /**
-     * <code>string filename = 2 [json_name = "filename"];</code>
+     * <code>string filename = 3 [json_name = "filename"];</code>
      * @return The bytes for filename.
      */
     @java.lang.Override
@@ -326,17 +399,17 @@ public final class BundlerServiceProto {
       }
     }
 
-    public static final int ARCHIVE_TYPE_FIELD_NUMBER = 3;
+    public static final int ARCHIVE_TYPE_FIELD_NUMBER = 4;
     private int archiveType_ = 0;
     /**
-     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
      * @return The enum numeric value on the wire for archiveType.
      */
     @java.lang.Override public int getArchiveTypeValue() {
       return archiveType_;
     }
     /**
-     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+     * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
      * @return The archiveType.
      */
     @java.lang.Override public com.aruna.api.bundler.services.v1.BundlerServiceProto.ArchiveType getArchiveType() {
@@ -344,10 +417,10 @@ public final class BundlerServiceProto {
       return result == null ? com.aruna.api.bundler.services.v1.BundlerServiceProto.ArchiveType.UNRECOGNIZED : result;
     }
 
-    public static final int EXPIRES_AT_FIELD_NUMBER = 4;
+    public static final int EXPIRES_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp expiresAt_;
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return Whether the expiresAt field is set.
      */
     @java.lang.Override
@@ -355,7 +428,7 @@ public final class BundlerServiceProto {
       return expiresAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return The expiresAt.
      */
     @java.lang.Override
@@ -363,11 +436,58 @@ public final class BundlerServiceProto {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+
+    public static final int ENDPOINT_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpointId_ = "";
+    /**
+     * <pre>
+     * Optional endpoint_id
+     * </pre>
+     *
+     * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpointId() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional endpoint_id
+     * </pre>
+     *
+     * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointIdBytes() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -384,17 +504,23 @@ public final class BundlerServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collectionId_);
+      }
       for (int i = 0; i < objectIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, objectIds_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, objectIds_.getRaw(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filename_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filename_);
       }
       if (archiveType_ != com.aruna.api.bundler.services.v1.BundlerServiceProto.ArchiveType.ARCHIVE_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, archiveType_);
+        output.writeEnum(4, archiveType_);
       }
       if (expiresAt_ != null) {
-        output.writeMessage(4, getExpiresAt());
+        output.writeMessage(5, getExpiresAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, endpointId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -405,6 +531,9 @@ public final class BundlerServiceProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collectionId_);
+      }
       {
         int dataSize = 0;
         for (int i = 0; i < objectIds_.size(); i++) {
@@ -414,15 +543,18 @@ public final class BundlerServiceProto {
         size += 1 * getObjectIdsList().size();
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filename_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filename_);
       }
       if (archiveType_ != com.aruna.api.bundler.services.v1.BundlerServiceProto.ArchiveType.ARCHIVE_TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, archiveType_);
+          .computeEnumSize(4, archiveType_);
       }
       if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getExpiresAt());
+          .computeMessageSize(5, getExpiresAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, endpointId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -439,6 +571,8 @@ public final class BundlerServiceProto {
       }
       com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest other = (com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest) obj;
 
+      if (!getCollectionId()
+          .equals(other.getCollectionId())) return false;
       if (!getObjectIdsList()
           .equals(other.getObjectIdsList())) return false;
       if (!getFilename()
@@ -449,6 +583,8 @@ public final class BundlerServiceProto {
         if (!getExpiresAt()
             .equals(other.getExpiresAt())) return false;
       }
+      if (!getEndpointId()
+          .equals(other.getEndpointId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -460,6 +596,8 @@ public final class BundlerServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COLLECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCollectionId().hashCode();
       if (getObjectIdsCount() > 0) {
         hash = (37 * hash) + OBJECT_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getObjectIdsList().hashCode();
@@ -472,6 +610,8 @@ public final class BundlerServiceProto {
         hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
         hash = (53 * hash) + getExpiresAt().hashCode();
       }
+      hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpointId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -603,6 +743,7 @@ public final class BundlerServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        collectionId_ = "";
         objectIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         filename_ = "";
@@ -612,6 +753,7 @@ public final class BundlerServiceProto {
           expiresAtBuilder_.dispose();
           expiresAtBuilder_ = null;
         }
+        endpointId_ = "";
         return this;
       }
 
@@ -646,19 +788,25 @@ public final class BundlerServiceProto {
       private void buildPartial0(com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collectionId_ = collectionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           objectIds_.makeImmutable();
           result.objectIds_ = objectIds_;
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.filename_ = filename_;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.archiveType_ = archiveType_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiresAt_ = expiresAtBuilder_ == null
               ? expiresAt_
               : expiresAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.endpointId_ = endpointId_;
         }
       }
 
@@ -674,10 +822,15 @@ public final class BundlerServiceProto {
 
       public Builder mergeFrom(com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest other) {
         if (other == com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleRequest.getDefaultInstance()) return this;
+        if (!other.getCollectionId().isEmpty()) {
+          collectionId_ = other.collectionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (!other.objectIds_.isEmpty()) {
           if (objectIds_.isEmpty()) {
             objectIds_ = other.objectIds_;
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000002;
           } else {
             ensureObjectIdsIsMutable();
             objectIds_.addAll(other.objectIds_);
@@ -686,7 +839,7 @@ public final class BundlerServiceProto {
         }
         if (!other.getFilename().isEmpty()) {
           filename_ = other.filename_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.archiveType_ != 0) {
@@ -694,6 +847,11 @@ public final class BundlerServiceProto {
         }
         if (other.hasExpiresAt()) {
           mergeExpiresAt(other.getExpiresAt());
+        }
+        if (!other.getEndpointId().isEmpty()) {
+          endpointId_ = other.endpointId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -722,28 +880,38 @@ public final class BundlerServiceProto {
                 done = true;
                 break;
               case 10: {
+                collectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
                 java.lang.String s = input.readStringRequireUtf8();
                 ensureObjectIdsIsMutable();
                 objectIds_.add(s);
                 break;
-              } // case 10
-              case 18: {
-                filename_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
               } // case 18
-              case 24: {
-                archiveType_ = input.readEnum();
+              case 26: {
+                filename_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 24
-              case 34: {
+              } // case 26
+              case 32: {
+                archiveType_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
                 input.readMessage(
                     getExpiresAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
                 break;
-              } // case 34
+              } // case 42
+              case 50: {
+                endpointId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -761,16 +929,88 @@ public final class BundlerServiceProto {
       }
       private int bitField0_;
 
+      private java.lang.Object collectionId_ = "";
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return The collectionId.
+       */
+      public java.lang.String getCollectionId() {
+        java.lang.Object ref = collectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return The bytes for collectionId.
+       */
+      public com.google.protobuf.ByteString
+          getCollectionIdBytes() {
+        java.lang.Object ref = collectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @param value The collectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionId() {
+        collectionId_ = getDefaultInstance().getCollectionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @param value The bytes for collectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.LazyStringArrayList objectIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureObjectIdsIsMutable() {
         if (!objectIds_.isModifiable()) {
           objectIds_ = new com.google.protobuf.LazyStringArrayList(objectIds_);
         }
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @return A list containing the objectIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -779,14 +1019,14 @@ public final class BundlerServiceProto {
         return objectIds_;
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @return The count of objectIds.
        */
       public int getObjectIdsCount() {
         return objectIds_.size();
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @param index The index of the element to return.
        * @return The objectIds at the given index.
        */
@@ -794,7 +1034,7 @@ public final class BundlerServiceProto {
         return objectIds_.get(index);
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the objectIds at the given index.
        */
@@ -803,7 +1043,7 @@ public final class BundlerServiceProto {
         return objectIds_.getByteString(index);
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @param index The index to set the value at.
        * @param value The objectIds to set.
        * @return This builder for chaining.
@@ -813,12 +1053,12 @@ public final class BundlerServiceProto {
         if (value == null) { throw new NullPointerException(); }
         ensureObjectIdsIsMutable();
         objectIds_.set(index, value);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @param value The objectIds to add.
        * @return This builder for chaining.
        */
@@ -827,12 +1067,12 @@ public final class BundlerServiceProto {
         if (value == null) { throw new NullPointerException(); }
         ensureObjectIdsIsMutable();
         objectIds_.add(value);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @param values The objectIds to add.
        * @return This builder for chaining.
        */
@@ -841,23 +1081,23 @@ public final class BundlerServiceProto {
         ensureObjectIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, objectIds_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @return This builder for chaining.
        */
       public Builder clearObjectIds() {
         objectIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
+        bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string object_ids = 1 [json_name = "objectIds"];</code>
+       * <code>repeated string object_ids = 2 [json_name = "objectIds"];</code>
        * @param value The bytes of the objectIds to add.
        * @return This builder for chaining.
        */
@@ -867,14 +1107,14 @@ public final class BundlerServiceProto {
         checkByteStringIsUtf8(value);
         ensureObjectIdsIsMutable();
         objectIds_.add(value);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object filename_ = "";
       /**
-       * <code>string filename = 2 [json_name = "filename"];</code>
+       * <code>string filename = 3 [json_name = "filename"];</code>
        * @return The filename.
        */
       public java.lang.String getFilename() {
@@ -890,7 +1130,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string filename = 2 [json_name = "filename"];</code>
+       * <code>string filename = 3 [json_name = "filename"];</code>
        * @return The bytes for filename.
        */
       public com.google.protobuf.ByteString
@@ -907,7 +1147,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string filename = 2 [json_name = "filename"];</code>
+       * <code>string filename = 3 [json_name = "filename"];</code>
        * @param value The filename to set.
        * @return This builder for chaining.
        */
@@ -915,22 +1155,22 @@ public final class BundlerServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         filename_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string filename = 2 [json_name = "filename"];</code>
+       * <code>string filename = 3 [json_name = "filename"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilename() {
         filename_ = getDefaultInstance().getFilename();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string filename = 2 [json_name = "filename"];</code>
+       * <code>string filename = 3 [json_name = "filename"];</code>
        * @param value The bytes for filename to set.
        * @return This builder for chaining.
        */
@@ -939,32 +1179,32 @@ public final class BundlerServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         filename_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private int archiveType_ = 0;
       /**
-       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
        * @return The enum numeric value on the wire for archiveType.
        */
       @java.lang.Override public int getArchiveTypeValue() {
         return archiveType_;
       }
       /**
-       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
        * @param value The enum numeric value on the wire for archiveType to set.
        * @return This builder for chaining.
        */
       public Builder setArchiveTypeValue(int value) {
         archiveType_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
        * @return The archiveType.
        */
       @java.lang.Override
@@ -973,7 +1213,7 @@ public final class BundlerServiceProto {
         return result == null ? com.aruna.api.bundler.services.v1.BundlerServiceProto.ArchiveType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
        * @param value The archiveType to set.
        * @return This builder for chaining.
        */
@@ -981,17 +1221,17 @@ public final class BundlerServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         archiveType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 3 [json_name = "archiveType"];</code>
+       * <code>.aruna.api.bundler.services.v1.ArchiveType archive_type = 4 [json_name = "archiveType"];</code>
        * @return This builder for chaining.
        */
       public Builder clearArchiveType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         archiveType_ = 0;
         onChanged();
         return this;
@@ -1001,14 +1241,14 @@ public final class BundlerServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        * @return The expiresAt.
        */
       public com.google.protobuf.Timestamp getExpiresAt() {
@@ -1019,7 +1259,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
@@ -1030,12 +1270,12 @@ public final class BundlerServiceProto {
         } else {
           expiresAtBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder setExpiresAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1044,16 +1284,16 @@ public final class BundlerServiceProto {
         } else {
           expiresAtBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
+          if (((bitField0_ & 0x00000010) != 0) &&
             expiresAt_ != null &&
             expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getExpiresAtBuilder().mergeFrom(value);
@@ -1063,15 +1303,15 @@ public final class BundlerServiceProto {
         } else {
           expiresAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder clearExpiresAt() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         expiresAt_ = null;
         if (expiresAtBuilder_ != null) {
           expiresAtBuilder_.dispose();
@@ -1081,15 +1321,15 @@ public final class BundlerServiceProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getExpiresAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
         if (expiresAtBuilder_ != null) {
@@ -1100,7 +1340,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1114,6 +1354,98 @@ public final class BundlerServiceProto {
           expiresAt_ = null;
         }
         return expiresAtBuilder_;
+      }
+
+      private java.lang.Object endpointId_ = "";
+      /**
+       * <pre>
+       * Optional endpoint_id
+       * </pre>
+       *
+       * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+       * @return The endpointId.
+       */
+      public java.lang.String getEndpointId() {
+        java.lang.Object ref = endpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional endpoint_id
+       * </pre>
+       *
+       * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+       * @return The bytes for endpointId.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointIdBytes() {
+        java.lang.Object ref = endpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional endpoint_id
+       * </pre>
+       *
+       * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+       * @param value The endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpointId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional endpoint_id
+       * </pre>
+       *
+       * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpointId() {
+        endpointId_ = getDefaultInstance().getEndpointId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional endpoint_id
+       * </pre>
+       *
+       * <code>string endpoint_id = 6 [json_name = "endpointId"];</code>
+       * @param value The bytes for endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpointId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1184,12 +1516,24 @@ public final class BundlerServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bundleId.
+     */
+    java.lang.String getBundleId();
+    /**
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bytes for bundleId.
+     */
+    com.google.protobuf.ByteString
+        getBundleIdBytes();
+
+    /**
+     * <code>string url = 2 [json_name = "url"];</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
@@ -1208,6 +1552,7 @@ public final class BundlerServiceProto {
       super(builder);
     }
     private CreateBundleResponse() {
+      bundleId_ = "";
       url_ = "";
     }
 
@@ -1231,11 +1576,50 @@ public final class BundlerServiceProto {
               com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse.class, com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse.Builder.class);
     }
 
-    public static final int URL_FIELD_NUMBER = 1;
+    public static final int BUNDLE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bundleId_ = "";
+    /**
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bundleId.
+     */
+    @java.lang.Override
+    public java.lang.String getBundleId() {
+      java.lang.Object ref = bundleId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bundleId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bytes for bundleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBundleIdBytes() {
+      java.lang.Object ref = bundleId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bundleId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object url_ = "";
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -1252,7 +1636,7 @@ public final class BundlerServiceProto {
       }
     }
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
+     * <code>string url = 2 [json_name = "url"];</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -1284,8 +1668,11 @@ public final class BundlerServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bundleId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1296,8 +1683,11 @@ public final class BundlerServiceProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bundleId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1314,6 +1704,8 @@ public final class BundlerServiceProto {
       }
       com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse other = (com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse) obj;
 
+      if (!getBundleId()
+          .equals(other.getBundleId())) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1327,6 +1719,8 @@ public final class BundlerServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUNDLE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBundleId().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1460,6 +1854,7 @@ public final class BundlerServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        bundleId_ = "";
         url_ = "";
         return this;
       }
@@ -1495,6 +1890,9 @@ public final class BundlerServiceProto {
       private void buildPartial0(com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bundleId_ = bundleId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.url_ = url_;
         }
       }
@@ -1511,9 +1909,14 @@ public final class BundlerServiceProto {
 
       public Builder mergeFrom(com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse other) {
         if (other == com.aruna.api.bundler.services.v1.BundlerServiceProto.CreateBundleResponse.getDefaultInstance()) return this;
+        if (!other.getBundleId().isEmpty()) {
+          bundleId_ = other.bundleId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1543,10 +1946,15 @@ public final class BundlerServiceProto {
                 done = true;
                 break;
               case 10: {
-                url_ = input.readStringRequireUtf8();
+                bundleId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                url_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1564,9 +1972,81 @@ public final class BundlerServiceProto {
       }
       private int bitField0_;
 
+      private java.lang.Object bundleId_ = "";
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @return The bundleId.
+       */
+      public java.lang.String getBundleId() {
+        java.lang.Object ref = bundleId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bundleId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @return The bytes for bundleId.
+       */
+      public com.google.protobuf.ByteString
+          getBundleIdBytes() {
+        java.lang.Object ref = bundleId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bundleId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @param value The bundleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBundleId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bundleId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBundleId() {
+        bundleId_ = getDefaultInstance().getBundleId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @param value The bytes for bundleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBundleIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bundleId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -1582,7 +2062,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -1599,7 +2079,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -1607,22 +2087,22 @@ public final class BundlerServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         url_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
         url_ = getDefaultInstance().getUrl();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
+       * <code>string url = 2 [json_name = "url"];</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -1631,7 +2111,7 @@ public final class BundlerServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         url_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1704,12 +2184,24 @@ public final class BundlerServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The collectionId.
+     */
+    java.lang.String getCollectionId();
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The bytes for collectionId.
+     */
+    com.google.protobuf.ByteString
+        getCollectionIdBytes();
+
+    /**
+     * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
      * @return The bundleId.
      */
     java.lang.String getBundleId();
     /**
-     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
      * @return The bytes for bundleId.
      */
     com.google.protobuf.ByteString
@@ -1728,6 +2220,7 @@ public final class BundlerServiceProto {
       super(builder);
     }
     private DeleteBundleRequest() {
+      collectionId_ = "";
       bundleId_ = "";
     }
 
@@ -1751,11 +2244,50 @@ public final class BundlerServiceProto {
               com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest.class, com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest.Builder.class);
     }
 
-    public static final int BUNDLE_ID_FIELD_NUMBER = 1;
+    public static final int COLLECTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collectionId_ = "";
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The collectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getCollectionId() {
+      java.lang.Object ref = collectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+     * @return The bytes for collectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollectionIdBytes() {
+      java.lang.Object ref = collectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUNDLE_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object bundleId_ = "";
     /**
-     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
      * @return The bundleId.
      */
     @java.lang.Override
@@ -1772,7 +2304,7 @@ public final class BundlerServiceProto {
       }
     }
     /**
-     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
      * @return The bytes for bundleId.
      */
     @java.lang.Override
@@ -1804,8 +2336,11 @@ public final class BundlerServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collectionId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bundleId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bundleId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1816,8 +2351,11 @@ public final class BundlerServiceProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collectionId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bundleId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bundleId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1834,6 +2372,8 @@ public final class BundlerServiceProto {
       }
       com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest other = (com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest) obj;
 
+      if (!getCollectionId()
+          .equals(other.getCollectionId())) return false;
       if (!getBundleId()
           .equals(other.getBundleId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1847,6 +2387,8 @@ public final class BundlerServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COLLECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCollectionId().hashCode();
       hash = (37 * hash) + BUNDLE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getBundleId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1980,6 +2522,7 @@ public final class BundlerServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        collectionId_ = "";
         bundleId_ = "";
         return this;
       }
@@ -2015,6 +2558,9 @@ public final class BundlerServiceProto {
       private void buildPartial0(com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collectionId_ = collectionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bundleId_ = bundleId_;
         }
       }
@@ -2031,9 +2577,14 @@ public final class BundlerServiceProto {
 
       public Builder mergeFrom(com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest other) {
         if (other == com.aruna.api.bundler.services.v1.BundlerServiceProto.DeleteBundleRequest.getDefaultInstance()) return this;
+        if (!other.getCollectionId().isEmpty()) {
+          collectionId_ = other.collectionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (!other.getBundleId().isEmpty()) {
           bundleId_ = other.bundleId_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2063,10 +2614,15 @@ public final class BundlerServiceProto {
                 done = true;
                 break;
               case 10: {
-                bundleId_ = input.readStringRequireUtf8();
+                collectionId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                bundleId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2084,9 +2640,81 @@ public final class BundlerServiceProto {
       }
       private int bitField0_;
 
+      private java.lang.Object collectionId_ = "";
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return The collectionId.
+       */
+      public java.lang.String getCollectionId() {
+        java.lang.Object ref = collectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return The bytes for collectionId.
+       */
+      public com.google.protobuf.ByteString
+          getCollectionIdBytes() {
+        java.lang.Object ref = collectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @param value The collectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionId() {
+        collectionId_ = getDefaultInstance().getCollectionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collection_id = 1 [json_name = "collectionId"];</code>
+       * @param value The bytes for collectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object bundleId_ = "";
       /**
-       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
        * @return The bundleId.
        */
       public java.lang.String getBundleId() {
@@ -2102,7 +2730,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
        * @return The bytes for bundleId.
        */
       public com.google.protobuf.ByteString
@@ -2119,7 +2747,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
        * @param value The bundleId to set.
        * @return This builder for chaining.
        */
@@ -2127,22 +2755,22 @@ public final class BundlerServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         bundleId_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBundleId() {
         bundleId_ = getDefaultInstance().getBundleId();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * <code>string bundle_id = 2 [json_name = "bundleId"];</code>
        * @param value The bytes for bundleId to set.
        * @return This builder for chaining.
        */
@@ -2151,7 +2779,7 @@ public final class BundlerServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         bundleId_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2615,64 +3243,77 @@ public final class BundlerServiceProto {
     java.lang.String[] descriptorData = {
       "\n3aruna/api/bundler/services/v1/bundler_" +
       "service.proto\022\035aruna.api.bundler.service" +
-      "s.v1\032\037google/protobuf/timestamp.proto\"\332\001" +
-      "\n\023CreateBundleRequest\022\035\n\nobject_ids\030\001 \003(" +
-      "\tR\tobjectIds\022\032\n\010filename\030\002 \001(\tR\010filename" +
-      "\022M\n\014archive_type\030\003 \001(\0162*.aruna.api.bundl" +
-      "er.services.v1.ArchiveTypeR\013archiveType\022" +
-      "9\n\nexpires_at\030\004 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\texpiresAt\"(\n\024CreateBundleRespon" +
-      "se\022\020\n\003url\030\001 \001(\tR\003url\"2\n\023DeleteBundleRequ" +
-      "est\022\033\n\tbundle_id\030\001 \001(\tR\010bundleId\"\026\n\024Dele" +
-      "teBundleResponse*t\n\013ArchiveType\022\034\n\030ARCHI" +
-      "VE_TYPE_UNSPECIFIED\020\000\022\027\n\023ARCHIVE_TYPE_TA" +
-      "R_GZ\020\001\022\024\n\020ARCHIVE_TYPE_ZIP\020\002\022\030\n\024ARCHIVE_" +
-      "TYPE_TAR_ZST\020\0032\206\002\n\016BundlerService\022y\n\014Cre" +
-      "ateBundle\0222.aruna.api.bundler.services.v" +
-      "1.CreateBundleRequest\0323.aruna.api.bundle" +
-      "r.services.v1.CreateBundleResponse\"\000\022y\n\014" +
-      "DeleteBundle\0222.aruna.api.bundler.service" +
-      "s.v1.DeleteBundleRequest\0323.aruna.api.bun" +
-      "dler.services.v1.DeleteBundleResponse\"\000B" +
-      "\217\002\n!com.aruna.api.bundler.services.v1B\023B" +
-      "undlerServiceProtoP\000Z<github.com/ArunaSt" +
-      "orage/go-api/aruna/api/storage/services/" +
-      "v1\242\002\004AABS\252\002\035Aruna.Api.Bundler.Services.V" +
-      "1\312\002\035Aruna\\Api\\Bundler\\Services\\V1\342\002)Arun" +
-      "a\\Api\\Bundler\\Services\\V1\\GPBMetadata\352\002!" +
-      "Aruna::Api::Bundler::Services::V1b\006proto" +
-      "3"
+      "s.v1\032\037google/protobuf/timestamp.proto\032\034g" +
+      "oogle/api/annotations.proto\"\240\002\n\023CreateBu" +
+      "ndleRequest\022#\n\rcollection_id\030\001 \001(\tR\014coll" +
+      "ectionId\022\035\n\nobject_ids\030\002 \003(\tR\tobjectIds\022" +
+      "\032\n\010filename\030\003 \001(\tR\010filename\022M\n\014archive_t" +
+      "ype\030\004 \001(\0162*.aruna.api.bundler.services.v" +
+      "1.ArchiveTypeR\013archiveType\0229\n\nexpires_at" +
+      "\030\005 \001(\0132\032.google.protobuf.TimestampR\texpi" +
+      "resAt\022\037\n\013endpoint_id\030\006 \001(\tR\nendpointId\"E" +
+      "\n\024CreateBundleResponse\022\033\n\tbundle_id\030\001 \001(" +
+      "\tR\010bundleId\022\020\n\003url\030\002 \001(\tR\003url\"W\n\023DeleteB" +
+      "undleRequest\022#\n\rcollection_id\030\001 \001(\tR\014col" +
+      "lectionId\022\033\n\tbundle_id\030\002 \001(\tR\010bundleId\"\026" +
+      "\n\024DeleteBundleResponse*t\n\013ArchiveType\022\034\n" +
+      "\030ARCHIVE_TYPE_UNSPECIFIED\020\000\022\027\n\023ARCHIVE_T" +
+      "YPE_TAR_GZ\020\001\022\024\n\020ARCHIVE_TYPE_ZIP\020\002\022\030\n\024AR" +
+      "CHIVE_TYPE_TAR_ZST\020\0032\364\002\n\016BundlerService\022" +
+      "\251\001\n\014CreateBundle\0222.aruna.api.bundler.ser" +
+      "vices.v1.CreateBundleRequest\0323.aruna.api" +
+      ".bundler.services.v1.CreateBundleRespons" +
+      "e\"0\202\323\344\223\002*\"%/v1/collection/{collection_id" +
+      "}/bundle:\001*\022\265\001\n\014DeleteBundle\0222.aruna.api" +
+      ".bundler.services.v1.DeleteBundleRequest" +
+      "\0323.aruna.api.bundler.services.v1.DeleteB" +
+      "undleResponse\"<\202\323\344\223\0026*1/v1/collection/{c" +
+      "ollection_id}/bundle/{bundle_id}:\001*B\217\002\n!" +
+      "com.aruna.api.bundler.services.v1B\023Bundl" +
+      "erServiceProtoP\000Z<github.com/ArunaStorag" +
+      "e/go-api/aruna/api/storage/services/v1\242\002" +
+      "\004AABS\252\002\035Aruna.Api.Bundler.Services.V1\312\002\035" +
+      "Aruna\\Api\\Bundler\\Services\\V1\342\002)Aruna\\Ap" +
+      "i\\Bundler\\Services\\V1\\GPBMetadata\352\002!Arun" +
+      "a::Api::Bundler::Services::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_aruna_api_bundler_services_v1_CreateBundleRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_aruna_api_bundler_services_v1_CreateBundleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_bundler_services_v1_CreateBundleRequest_descriptor,
-        new java.lang.String[] { "ObjectIds", "Filename", "ArchiveType", "ExpiresAt", });
+        new java.lang.String[] { "CollectionId", "ObjectIds", "Filename", "ArchiveType", "ExpiresAt", "EndpointId", });
     internal_static_aruna_api_bundler_services_v1_CreateBundleResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_bundler_services_v1_CreateBundleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_bundler_services_v1_CreateBundleResponse_descriptor,
-        new java.lang.String[] { "Url", });
+        new java.lang.String[] { "BundleId", "Url", });
     internal_static_aruna_api_bundler_services_v1_DeleteBundleRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_aruna_api_bundler_services_v1_DeleteBundleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_bundler_services_v1_DeleteBundleRequest_descriptor,
-        new java.lang.String[] { "BundleId", });
+        new java.lang.String[] { "CollectionId", "BundleId", });
     internal_static_aruna_api_bundler_services_v1_DeleteBundleResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_aruna_api_bundler_services_v1_DeleteBundleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_bundler_services_v1_DeleteBundleResponse_descriptor,
         new java.lang.String[] { });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
