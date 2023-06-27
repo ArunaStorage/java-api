@@ -49686,27 +49686,47 @@ public final class ObjectServiceProto {
     int getKeyCount();
 
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
-    java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> 
+    java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL> 
         getContentsList();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
-    com.aruna.api.storage.models.v1.ModelsProto.Object getContents(int index);
+    com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL getContents(int index);
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
     int getContentsCount();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
-    java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+    java.util.List<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder> 
         getContentsOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
-    com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getContentsOrBuilder(
+    com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder getContentsOrBuilder(
         int index);
 
     /**
@@ -49864,41 +49884,61 @@ public final class ObjectServiceProto {
 
     public static final int CONTENTS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> contents_;
+    private java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL> contents_;
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> getContentsList() {
+    public java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL> getContentsList() {
       return contents_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+    public java.util.List<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder> 
         getContentsOrBuilderList() {
       return contents_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
     @java.lang.Override
     public int getContentsCount() {
       return contents_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v1.ModelsProto.Object getContents(int index) {
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL getContents(int index) {
       return contents_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+     * <pre>
+     * Does not contain URLs, only paths
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getContentsOrBuilder(
+    public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder getContentsOrBuilder(
         int index) {
       return contents_.get(index);
     }
@@ -50480,9 +50520,9 @@ public final class ObjectServiceProto {
                 break;
               } // case 40
               case 50: {
-                com.aruna.api.storage.models.v1.ModelsProto.Object m =
+                com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL m =
                     input.readMessage(
-                        com.aruna.api.storage.models.v1.ModelsProto.Object.parser(),
+                        com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.parser(),
                         extensionRegistry);
                 if (contentsBuilder_ == null) {
                   ensureContentsIsMutable();
@@ -50695,22 +50735,26 @@ public final class ObjectServiceProto {
         return this;
       }
 
-      private java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> contents_ =
+      private java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL> contents_ =
         java.util.Collections.emptyList();
       private void ensureContentsIsMutable() {
         if (!((bitField0_ & 0x00000010) != 0)) {
-          contents_ = new java.util.ArrayList<com.aruna.api.storage.models.v1.ModelsProto.Object>(contents_);
+          contents_ = new java.util.ArrayList<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL>(contents_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> contentsBuilder_;
+          com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder> contentsBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object> getContentsList() {
+      public java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL> getContentsList() {
         if (contentsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(contents_);
         } else {
@@ -50718,7 +50762,11 @@ public final class ObjectServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public int getContentsCount() {
         if (contentsBuilder_ == null) {
@@ -50728,9 +50776,13 @@ public final class ObjectServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public com.aruna.api.storage.models.v1.ModelsProto.Object getContents(int index) {
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL getContents(int index) {
         if (contentsBuilder_ == null) {
           return contents_.get(index);
         } else {
@@ -50738,10 +50790,14 @@ public final class ObjectServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder setContents(
-          int index, com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL value) {
         if (contentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -50755,10 +50811,14 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder setContents(
-          int index, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder builderForValue) {
         if (contentsBuilder_ == null) {
           ensureContentsIsMutable();
           contents_.set(index, builderForValue.build());
@@ -50769,9 +50829,13 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public Builder addContents(com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+      public Builder addContents(com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL value) {
         if (contentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -50785,10 +50849,14 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder addContents(
-          int index, com.aruna.api.storage.models.v1.ModelsProto.Object value) {
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL value) {
         if (contentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -50802,10 +50870,14 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder addContents(
-          com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+          com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder builderForValue) {
         if (contentsBuilder_ == null) {
           ensureContentsIsMutable();
           contents_.add(builderForValue.build());
@@ -50816,10 +50888,14 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder addContents(
-          int index, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder builderForValue) {
+          int index, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder builderForValue) {
         if (contentsBuilder_ == null) {
           ensureContentsIsMutable();
           contents_.add(index, builderForValue.build());
@@ -50830,10 +50906,14 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder addAllContents(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v1.ModelsProto.Object> values) {
+          java.lang.Iterable<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL> values) {
         if (contentsBuilder_ == null) {
           ensureContentsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -50845,7 +50925,11 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder clearContents() {
         if (contentsBuilder_ == null) {
@@ -50858,7 +50942,11 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
       public Builder removeContents(int index) {
         if (contentsBuilder_ == null) {
@@ -50871,16 +50959,24 @@ public final class ObjectServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder getContentsBuilder(
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder getContentsBuilder(
           int index) {
         return getContentsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder getContentsOrBuilder(
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder getContentsOrBuilder(
           int index) {
         if (contentsBuilder_ == null) {
           return contents_.get(index);  } else {
@@ -50888,9 +50984,13 @@ public final class ObjectServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public java.util.List<? extends com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+      public java.util.List<? extends com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder> 
            getContentsOrBuilderList() {
         if (contentsBuilder_ != null) {
           return contentsBuilder_.getMessageOrBuilderList();
@@ -50899,33 +50999,45 @@ public final class ObjectServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder addContentsBuilder() {
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder addContentsBuilder() {
         return getContentsFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance());
+            com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public com.aruna.api.storage.models.v1.ModelsProto.Object.Builder addContentsBuilder(
+      public com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder addContentsBuilder(
           int index) {
         return getContentsFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v1.ModelsProto.Object.getDefaultInstance());
+            index, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v1.Object contents = 6 [json_name = "contents"];</code>
+       * <pre>
+       * Does not contain URLs, only paths
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v1.ObjectWithURL contents = 6 [json_name = "contents"];</code>
        */
-      public java.util.List<com.aruna.api.storage.models.v1.ModelsProto.Object.Builder> 
+      public java.util.List<com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder> 
            getContentsBuilderList() {
         return getContentsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder> 
+          com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder> 
           getContentsFieldBuilder() {
         if (contentsBuilder_ == null) {
           contentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v1.ModelsProto.Object, com.aruna.api.storage.models.v1.ModelsProto.Object.Builder, com.aruna.api.storage.models.v1.ModelsProto.ObjectOrBuilder>(
+              com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURL.Builder, com.aruna.api.storage.services.v1.ObjectServiceProto.ObjectWithURLOrBuilder>(
                   contents_,
                   ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
@@ -51810,153 +51922,153 @@ public final class ObjectServiceProto {
       " \001(\tH\004R\nstartAfter\210\001\001B\025\n\023_continuation_t" +
       "okenB\014\n\n_delimiterB\013\n\t_max_keysB\t\n\007_pref" +
       "ixB\016\n\014_start_after\"&\n\014CommonPrefix\022\026\n\006pr" +
-      "efix\030\001 \001(\tR\006prefix\"\356\002\n\032GetObjectsAsListV" +
+      "efix\030\001 \001(\tR\006prefix\"\367\002\n\032GetObjectsAsListV" +
       "2Response\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014is_trun" +
       "cated\030\002 \001(\010R\013isTruncated\022\031\n\010max_keys\030\004 \001" +
       "(\rR\007maxKeys\022\033\n\tkey_count\030\005 \001(\rR\010keyCount" +
-      "\022?\n\010contents\030\006 \003(\0132#.aruna.api.storage.m" +
-      "odels.v1.ObjectR\010contents\022G\n\010prefixes\030\007 " +
-      "\003(\0132+.aruna.api.storage.services.v1.Comm" +
-      "onPrefixR\010prefixes\022;\n\027next_continuation_" +
-      "token\030\010 \001(\tH\000R\025nextContinuationToken\210\001\001B" +
-      "\032\n\030_next_continuation_token2\306(\n\rObjectSe" +
-      "rvice\022\276\001\n\023InitializeNewObject\0229.aruna.ap" +
-      "i.storage.services.v1.InitializeNewObjec" +
-      "tRequest\032:.aruna.api.storage.services.v1" +
-      ".InitializeNewObjectResponse\"0\202\323\344\223\002*\"%/v" +
-      "1/collection/{collection_id}/object:\001*\022\315" +
-      "\001\n\014GetUploadURL\0222.aruna.api.storage.serv" +
-      "ices.v1.GetUploadURLRequest\0323.aruna.api." +
-      "storage.services.v1.GetUploadURLResponse" +
-      "\"T\202\323\344\223\002N\022L/v1/collection/{collection_id}" +
-      "/object/{object_id}/staging/{upload_id}/" +
-      "upload\022\301\001\n\016GetDownloadURL\0224.aruna.api.st" +
-      "orage.services.v1.GetDownloadURLRequest\032" +
-      "5.aruna.api.storage.services.v1.GetDownl" +
-      "oadURLResponse\"B\202\323\344\223\002<\022:/v1/collection/{" +
-      "collection_id}/object/{object_id}/downlo" +
-      "ad\022\310\001\n\025GetDownloadLinksBatch\022;.aruna.api" +
-      ".storage.services.v1.GetDownloadLinksBat" +
-      "chRequest\032<.aruna.api.storage.services.v" +
-      "1.GetDownloadLinksBatchResponse\"4\202\323\344\223\002.\022" +
-      ",/v1/collection/{collection_id}/objects/" +
-      "batch\022\332\001\n\031CreateDownloadLinksStream\022?.ar" +
-      "una.api.storage.services.v1.CreateDownlo" +
-      "adLinksStreamRequest\032@.aruna.api.storage" +
-      ".services.v1.CreateDownloadLinksStreamRe" +
-      "sponse\"8\202\323\344\223\0022\"-/v1/collection/{collecti" +
-      "on_id}/objects/stream:\001*0\001\022\345\001\n\023FinishObj" +
-      "ectStaging\0229.aruna.api.storage.services." +
-      "v1.FinishObjectStagingRequest\032:.aruna.ap" +
-      "i.storage.services.v1.FinishObjectStagin" +
-      "gResponse\"W\202\323\344\223\002Q2L/v1/collection/{colle" +
+      "\022H\n\010contents\030\006 \003(\0132,.aruna.api.storage.s" +
+      "ervices.v1.ObjectWithURLR\010contents\022G\n\010pr" +
+      "efixes\030\007 \003(\0132+.aruna.api.storage.service" +
+      "s.v1.CommonPrefixR\010prefixes\022;\n\027next_cont" +
+      "inuation_token\030\010 \001(\tH\000R\025nextContinuation" +
+      "Token\210\001\001B\032\n\030_next_continuation_token2\306(\n" +
+      "\rObjectService\022\276\001\n\023InitializeNewObject\0229" +
+      ".aruna.api.storage.services.v1.Initializ" +
+      "eNewObjectRequest\032:.aruna.api.storage.se" +
+      "rvices.v1.InitializeNewObjectResponse\"0\202" +
+      "\323\344\223\002*\"%/v1/collection/{collection_id}/ob" +
+      "ject:\001*\022\315\001\n\014GetUploadURL\0222.aruna.api.sto" +
+      "rage.services.v1.GetUploadURLRequest\0323.a" +
+      "runa.api.storage.services.v1.GetUploadUR" +
+      "LResponse\"T\202\323\344\223\002N\022L/v1/collection/{colle" +
       "ction_id}/object/{object_id}/staging/{up" +
-      "load_id}/finish:\001*\022\274\001\n\014UpdateObject\0222.ar" +
-      "una.api.storage.services.v1.UpdateObject" +
-      "Request\0323.aruna.api.storage.services.v1." +
-      "UpdateObjectResponse\"C\202\323\344\223\002=\"8/v1/collec" +
+      "load_id}/upload\022\301\001\n\016GetDownloadURL\0224.aru" +
+      "na.api.storage.services.v1.GetDownloadUR" +
+      "LRequest\0325.aruna.api.storage.services.v1" +
+      ".GetDownloadURLResponse\"B\202\323\344\223\002<\022:/v1/col" +
+      "lection/{collection_id}/object/{object_i" +
+      "d}/download\022\310\001\n\025GetDownloadLinksBatch\022;." +
+      "aruna.api.storage.services.v1.GetDownloa" +
+      "dLinksBatchRequest\032<.aruna.api.storage.s" +
+      "ervices.v1.GetDownloadLinksBatchResponse" +
+      "\"4\202\323\344\223\002.\022,/v1/collection/{collection_id}" +
+      "/objects/batch\022\332\001\n\031CreateDownloadLinksSt" +
+      "ream\022?.aruna.api.storage.services.v1.Cre" +
+      "ateDownloadLinksStreamRequest\032@.aruna.ap" +
+      "i.storage.services.v1.CreateDownloadLink" +
+      "sStreamResponse\"8\202\323\344\223\0022\"-/v1/collection/" +
+      "{collection_id}/objects/stream:\001*0\001\022\345\001\n\023" +
+      "FinishObjectStaging\0229.aruna.api.storage." +
+      "services.v1.FinishObjectStagingRequest\032:" +
+      ".aruna.api.storage.services.v1.FinishObj" +
+      "ectStagingResponse\"W\202\323\344\223\002Q2L/v1/collecti" +
+      "on/{collection_id}/object/{object_id}/st" +
+      "aging/{upload_id}/finish:\001*\022\274\001\n\014UpdateOb" +
+      "ject\0222.aruna.api.storage.services.v1.Upd" +
+      "ateObjectRequest\0323.aruna.api.storage.ser" +
+      "vices.v1.UpdateObjectResponse\"C\202\323\344\223\002=\"8/" +
+      "v1/collection/{collection_id}/object/{ob" +
+      "ject_id}/update:\001*\022\361\001\n\025CreateObjectRefer" +
+      "ence\022;.aruna.api.storage.services.v1.Cre" +
+      "ateObjectReferenceRequest\032<.aruna.api.st" +
+      "orage.services.v1.CreateObjectReferenceR" +
+      "esponse\"]\202\323\344\223\002W\"R/v1/collection/{collect" +
+      "ion_id}/object/{object_id}/reference/{ta" +
+      "rget_collection_id}:\001*\022\270\001\n\013CloneObject\0221" +
+      ".aruna.api.storage.services.v1.CloneObje" +
+      "ctRequest\0322.aruna.api.storage.services.v" +
+      "1.CloneObjectResponse\"B\202\323\344\223\002<\"7/v1/colle" +
+      "ction/{collection_id}/object/{object_id}" +
+      "/clone:\001*\022\265\001\n\014DeleteObject\0222.aruna.api.s" +
+      "torage.services.v1.DeleteObjectRequest\0323" +
+      ".aruna.api.storage.services.v1.DeleteObj" +
+      "ectResponse\"<\202\323\344\223\0026*1/v1/collection/{col" +
+      "lection_id}/object/{object_id}:\001*\022\255\001\n\rDe" +
+      "leteObjects\0223.aruna.api.storage.services" +
+      ".v1.DeleteObjectsRequest\0324.aruna.api.sto" +
+      "rage.services.v1.DeleteObjectsResponse\"1" +
+      "\202\323\344\223\002+*&/v1/collection/{collection_id}/o" +
+      "bjects:\001*\022\265\001\n\rGetObjectByID\0223.aruna.api." +
+      "storage.services.v1.GetObjectByIDRequest" +
+      "\0324.aruna.api.storage.services.v1.GetObje" +
+      "ctByIDResponse\"9\202\323\344\223\0023\0221/v1/collection/{" +
+      "collection_id}/object/{object_id}\022\241\001\n\nGe" +
+      "tObjects\0220.aruna.api.storage.services.v1" +
+      ".GetObjectsRequest\0321.aruna.api.storage.s" +
+      "ervices.v1.GetObjectsResponse\".\202\323\344\223\002(\022&/" +
+      "v1/collection/{collection_id}/objects\022\316\001" +
+      "\n\022GetObjectRevisions\0228.aruna.api.storage" +
+      ".services.v1.GetObjectRevisionsRequest\0329" +
+      ".aruna.api.storage.services.v1.GetObject" +
+      "RevisionsResponse\"C\202\323\344\223\002=\022;/v1/collectio" +
+      "n/{collection_id}/object/{object_id}/rev" +
+      "isions\022\332\001\n\027GetLatestObjectRevision\022=.aru" +
+      "na.api.storage.services.v1.GetLatestObje" +
+      "ctRevisionRequest\032>.aruna.api.storage.se" +
+      "rvices.v1.GetLatestObjectRevisionRespons" +
+      "e\"@\202\323\344\223\002:\0228/v1/collection/{collection_id" +
+      "}/object/{object_id}/latest\022\316\001\n\022GetObjec" +
+      "tEndpoints\0228.aruna.api.storage.services." +
+      "v1.GetObjectEndpointsRequest\0329.aruna.api" +
+      ".storage.services.v1.GetObjectEndpointsR" +
+      "esponse\"C\202\323\344\223\002=\022;/v1/collection/{collect" +
+      "ion_id}/object/{object_id}/endpoints\022\317\001\n" +
+      "\021AddLabelsToObject\0227.aruna.api.storage.s" +
+      "ervices.v1.AddLabelsToObjectRequest\0328.ar" +
+      "una.api.storage.services.v1.AddLabelsToO" +
+      "bjectResponse\"G\202\323\344\223\002A2</v1/collection/{c" +
+      "ollection_id}/object/{object_id}/add_lab" +
+      "els:\001*\022\313\001\n\020SetHooksOfObject\0226.aruna.api." +
+      "storage.services.v1.SetHooksOfObjectRequ" +
+      "est\0327.aruna.api.storage.services.v1.SetH" +
+      "ooksOfObjectResponse\"F\202\323\344\223\002@2;/v1/collec" +
       "tion/{collection_id}/object/{object_id}/" +
-      "update:\001*\022\361\001\n\025CreateObjectReference\022;.ar" +
-      "una.api.storage.services.v1.CreateObject" +
-      "ReferenceRequest\032<.aruna.api.storage.ser" +
-      "vices.v1.CreateObjectReferenceResponse\"]" +
-      "\202\323\344\223\002W\"R/v1/collection/{collection_id}/o" +
-      "bject/{object_id}/reference/{target_coll" +
-      "ection_id}:\001*\022\270\001\n\013CloneObject\0221.aruna.ap" +
-      "i.storage.services.v1.CloneObjectRequest" +
-      "\0322.aruna.api.storage.services.v1.CloneOb" +
-      "jectResponse\"B\202\323\344\223\002<\"7/v1/collection/{co" +
-      "llection_id}/object/{object_id}/clone:\001*" +
-      "\022\265\001\n\014DeleteObject\0222.aruna.api.storage.se" +
-      "rvices.v1.DeleteObjectRequest\0323.aruna.ap" +
-      "i.storage.services.v1.DeleteObjectRespon" +
-      "se\"<\202\323\344\223\0026*1/v1/collection/{collection_i" +
-      "d}/object/{object_id}:\001*\022\255\001\n\rDeleteObjec" +
-      "ts\0223.aruna.api.storage.services.v1.Delet" +
-      "eObjectsRequest\0324.aruna.api.storage.serv" +
-      "ices.v1.DeleteObjectsResponse\"1\202\323\344\223\002+*&/" +
-      "v1/collection/{collection_id}/objects:\001*" +
-      "\022\265\001\n\rGetObjectByID\0223.aruna.api.storage.s" +
-      "ervices.v1.GetObjectByIDRequest\0324.aruna." +
-      "api.storage.services.v1.GetObjectByIDRes" +
-      "ponse\"9\202\323\344\223\0023\0221/v1/collection/{collectio" +
-      "n_id}/object/{object_id}\022\241\001\n\nGetObjects\022" +
-      "0.aruna.api.storage.services.v1.GetObjec" +
-      "tsRequest\0321.aruna.api.storage.services.v" +
-      "1.GetObjectsResponse\".\202\323\344\223\002(\022&/v1/collec" +
-      "tion/{collection_id}/objects\022\316\001\n\022GetObje" +
-      "ctRevisions\0228.aruna.api.storage.services" +
-      ".v1.GetObjectRevisionsRequest\0329.aruna.ap" +
-      "i.storage.services.v1.GetObjectRevisions" +
-      "Response\"C\202\323\344\223\002=\022;/v1/collection/{collec" +
-      "tion_id}/object/{object_id}/revisions\022\332\001" +
-      "\n\027GetLatestObjectRevision\022=.aruna.api.st" +
-      "orage.services.v1.GetLatestObjectRevisio" +
-      "nRequest\032>.aruna.api.storage.services.v1" +
-      ".GetLatestObjectRevisionResponse\"@\202\323\344\223\002:" +
-      "\0228/v1/collection/{collection_id}/object/" +
-      "{object_id}/latest\022\316\001\n\022GetObjectEndpoint" +
-      "s\0228.aruna.api.storage.services.v1.GetObj" +
-      "ectEndpointsRequest\0329.aruna.api.storage." +
-      "services.v1.GetObjectEndpointsResponse\"C" +
-      "\202\323\344\223\002=\022;/v1/collection/{collection_id}/o" +
-      "bject/{object_id}/endpoints\022\317\001\n\021AddLabel" +
-      "sToObject\0227.aruna.api.storage.services.v" +
-      "1.AddLabelsToObjectRequest\0328.aruna.api.s" +
-      "torage.services.v1.AddLabelsToObjectResp" +
-      "onse\"G\202\323\344\223\002A2</v1/collection/{collection" +
-      "_id}/object/{object_id}/add_labels:\001*\022\313\001" +
-      "\n\020SetHooksOfObject\0226.aruna.api.storage.s" +
-      "ervices.v1.SetHooksOfObjectRequest\0327.aru" +
-      "na.api.storage.services.v1.SetHooksOfObj" +
-      "ectResponse\"F\202\323\344\223\002@2;/v1/collection/{col" +
-      "lection_id}/object/{object_id}/set_hooks" +
-      ":\001*\022\300\001\n\rGetReferences\0223.aruna.api.storag" +
-      "e.services.v1.GetReferencesRequest\0324.aru" +
-      "na.api.storage.services.v1.GetReferences" +
-      "Response\"D\202\323\344\223\002>\022</v1/collection/{collec" +
-      "tion_id}/object/{object_id}/references\022\272" +
-      "\001\n\rGetObjectPath\0223.aruna.api.storage.ser" +
-      "vices.v1.GetObjectPathRequest\0324.aruna.ap" +
-      "i.storage.services.v1.GetObjectPathRespo" +
-      "nse\">\202\323\344\223\0028\0226/v1/collection/{collection_" +
-      "id}/object/{object_id}/path\022\253\001\n\016GetObjec" +
-      "tPaths\0224.aruna.api.storage.services.v1.G" +
-      "etObjectPathsRequest\0325.aruna.api.storage" +
-      ".services.v1.GetObjectPathsResponse\",\202\323\344" +
-      "\223\002&\022$/v1/collection/{collection_id}/path" +
-      "s\022\306\001\n\020CreateObjectPath\0226.aruna.api.stora" +
-      "ge.services.v1.CreateObjectPathRequest\0327" +
-      ".aruna.api.storage.services.v1.CreateObj" +
-      "ectPathResponse\"A\202\323\344\223\002;\"6/v1/collection/" +
-      "{collection_id}/object/{object_id}/path:" +
-      "\001*\022\335\001\n\027SetObjectPathVisibility\022=.aruna.a" +
-      "pi.storage.services.v1.SetObjectPathVisi" +
-      "bilityRequest\032>.aruna.api.storage.servic" +
-      "es.v1.SetObjectPathVisibilityResponse\"C\202" +
-      "\323\344\223\002=28/v1/collection/{collection_id}/pa" +
-      "th/{path=**}/visibility:\001*\022\246\001\n\020GetObject" +
-      "sByPath\0226.aruna.api.storage.services.v1." +
-      "GetObjectsByPathRequest\0327.aruna.api.stor" +
-      "age.services.v1.GetObjectsByPathResponse" +
-      "\"!\202\323\344\223\002\033\022\031/v1/path/object/{path=**}\022\321\001\n\035" +
-      "GetProjectCollectionIdsByPath\022C.aruna.ap" +
-      "i.storage.services.v1.GetProjectCollecti" +
-      "onIdsByPathRequest\032D.aruna.api.storage.s" +
-      "ervices.v1.GetProjectCollectionIdsByPath" +
-      "Response\"%\202\323\344\223\002\037\022\035/v1/path/collection/{p" +
-      "ath=**}\022\252\001\n\022GetObjectsAsListV2\0228.aruna.a" +
-      "pi.storage.services.v1.GetObjectsAsListV" +
-      "2Request\0329.aruna.api.storage.services.v1" +
-      ".GetObjectsAsListV2Response\"\037\202\323\344\223\002\031\022\027/v1" +
-      "/path/objects/listv2B\216\002\n!com.aruna.api.s" +
-      "torage.services.v1B\022ObjectServiceProtoP\000" +
-      "Z<github.com/ArunaStorage/go-api/aruna/a" +
-      "pi/storage/services/v1\242\002\004AASS\252\002\035Aruna.Ap" +
-      "i.Storage.Services.V1\312\002\035Aruna\\Api\\Storag" +
-      "e\\Services\\V1\342\002)Aruna\\Api\\Storage\\Servic" +
-      "es\\V1\\GPBMetadata\352\002!Aruna::Api::Storage:" +
-      ":Services::V1b\006proto3"
+      "set_hooks:\001*\022\300\001\n\rGetReferences\0223.aruna.a" +
+      "pi.storage.services.v1.GetReferencesRequ" +
+      "est\0324.aruna.api.storage.services.v1.GetR" +
+      "eferencesResponse\"D\202\323\344\223\002>\022</v1/collectio" +
+      "n/{collection_id}/object/{object_id}/ref" +
+      "erences\022\272\001\n\rGetObjectPath\0223.aruna.api.st" +
+      "orage.services.v1.GetObjectPathRequest\0324" +
+      ".aruna.api.storage.services.v1.GetObject" +
+      "PathResponse\">\202\323\344\223\0028\0226/v1/collection/{co" +
+      "llection_id}/object/{object_id}/path\022\253\001\n" +
+      "\016GetObjectPaths\0224.aruna.api.storage.serv" +
+      "ices.v1.GetObjectPathsRequest\0325.aruna.ap" +
+      "i.storage.services.v1.GetObjectPathsResp" +
+      "onse\",\202\323\344\223\002&\022$/v1/collection/{collection" +
+      "_id}/paths\022\306\001\n\020CreateObjectPath\0226.aruna." +
+      "api.storage.services.v1.CreateObjectPath" +
+      "Request\0327.aruna.api.storage.services.v1." +
+      "CreateObjectPathResponse\"A\202\323\344\223\002;\"6/v1/co" +
+      "llection/{collection_id}/object/{object_" +
+      "id}/path:\001*\022\335\001\n\027SetObjectPathVisibility\022" +
+      "=.aruna.api.storage.services.v1.SetObjec" +
+      "tPathVisibilityRequest\032>.aruna.api.stora" +
+      "ge.services.v1.SetObjectPathVisibilityRe" +
+      "sponse\"C\202\323\344\223\002=28/v1/collection/{collecti" +
+      "on_id}/path/{path=**}/visibility:\001*\022\246\001\n\020" +
+      "GetObjectsByPath\0226.aruna.api.storage.ser" +
+      "vices.v1.GetObjectsByPathRequest\0327.aruna" +
+      ".api.storage.services.v1.GetObjectsByPat" +
+      "hResponse\"!\202\323\344\223\002\033\022\031/v1/path/object/{path" +
+      "=**}\022\321\001\n\035GetProjectCollectionIdsByPath\022C" +
+      ".aruna.api.storage.services.v1.GetProjec" +
+      "tCollectionIdsByPathRequest\032D.aruna.api." +
+      "storage.services.v1.GetProjectCollection" +
+      "IdsByPathResponse\"%\202\323\344\223\002\037\022\035/v1/path/coll" +
+      "ection/{path=**}\022\252\001\n\022GetObjectsAsListV2\022" +
+      "8.aruna.api.storage.services.v1.GetObjec" +
+      "tsAsListV2Request\0329.aruna.api.storage.se" +
+      "rvices.v1.GetObjectsAsListV2Response\"\037\202\323" +
+      "\344\223\002\031\022\027/v1/path/objects/listv2B\216\002\n!com.ar" +
+      "una.api.storage.services.v1B\022ObjectServi" +
+      "ceProtoP\000Z<github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/storage/services/v1\242\002\004AASS\252\002" +
+      "\035Aruna.Api.Storage.Services.V1\312\002\035Aruna\\A" +
+      "pi\\Storage\\Services\\V1\342\002)Aruna\\Api\\Stora" +
+      "ge\\Services\\V1\\GPBMetadata\352\002!Aruna::Api:" +
+      ":Storage::Services::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

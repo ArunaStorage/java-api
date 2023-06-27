@@ -1224,7 +1224,7 @@ public final class ObjectServiceGrpc {
      * <pre>
      * GetObjectsAsListV2
      * Status: ALPHA
-     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * Gets a list of ObjectWithURLs represented similar to a S3 ListObjectsV2 request
      * !! Paths are collection specific !!
      * </pre>
      */
@@ -1641,7 +1641,7 @@ public final class ObjectServiceGrpc {
      * <pre>
      * GetObjectsAsListV2
      * Status: ALPHA
-     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * Gets a list of ObjectWithURLs represented similar to a S3 ListObjectsV2 request
      * !! Paths are collection specific !!
      * </pre>
      */
@@ -2020,7 +2020,7 @@ public final class ObjectServiceGrpc {
      * <pre>
      * GetObjectsAsListV2
      * Status: ALPHA
-     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * Gets a list of ObjectWithURLs represented similar to a S3 ListObjectsV2 request
      * !! Paths are collection specific !!
      * </pre>
      */
@@ -2407,7 +2407,7 @@ public final class ObjectServiceGrpc {
      * <pre>
      * GetObjectsAsListV2
      * Status: ALPHA
-     * Gets a list of objects represented similar to a S3 ListObjectsV2 request
+     * Gets a list of ObjectWithURLs represented similar to a S3 ListObjectsV2 request
      * !! Paths are collection specific !!
      * </pre>
      */
