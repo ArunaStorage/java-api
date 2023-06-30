@@ -83,35 +83,35 @@ public final class ServiceAccountServiceGrpc {
     return getCreateServiceAccountTokenMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest,
-      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse> getEditServiceAccountPermissionMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest,
+      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse> getSetServiceAccountPermissionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "EditServiceAccountPermission",
-      requestType = com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.class,
-      responseType = com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "SetServiceAccountPermission",
+      requestType = com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.class,
+      responseType = com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest,
-      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse> getEditServiceAccountPermissionMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse> getEditServiceAccountPermissionMethod;
-    if ((getEditServiceAccountPermissionMethod = ServiceAccountServiceGrpc.getEditServiceAccountPermissionMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest,
+      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse> getSetServiceAccountPermissionMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse> getSetServiceAccountPermissionMethod;
+    if ((getSetServiceAccountPermissionMethod = ServiceAccountServiceGrpc.getSetServiceAccountPermissionMethod) == null) {
       synchronized (ServiceAccountServiceGrpc.class) {
-        if ((getEditServiceAccountPermissionMethod = ServiceAccountServiceGrpc.getEditServiceAccountPermissionMethod) == null) {
-          ServiceAccountServiceGrpc.getEditServiceAccountPermissionMethod = getEditServiceAccountPermissionMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse>newBuilder()
+        if ((getSetServiceAccountPermissionMethod = ServiceAccountServiceGrpc.getSetServiceAccountPermissionMethod) == null) {
+          ServiceAccountServiceGrpc.getSetServiceAccountPermissionMethod = getSetServiceAccountPermissionMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditServiceAccountPermission"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetServiceAccountPermission"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.getDefaultInstance()))
+                  com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ServiceAccountServiceMethodDescriptorSupplier("EditServiceAccountPermission"))
+                  com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceAccountServiceMethodDescriptorSupplier("SetServiceAccountPermission"))
               .build();
         }
       }
     }
-    return getEditServiceAccountPermissionMethod;
+    return getSetServiceAccountPermissionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.GetServiceAccountTokenRequest,
@@ -382,13 +382,13 @@ public final class ServiceAccountServiceGrpc {
 
     /**
      * <pre>
-     * EditServiceAccountPermission
+     * SetServiceAccountPermission
      * Overwrites the project specific permissions for a service account
      * </pre>
      */
-    default void editServiceAccountPermission(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditServiceAccountPermissionMethod(), responseObserver);
+    default void setServiceAccountPermission(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetServiceAccountPermissionMethod(), responseObserver);
     }
 
     /**
@@ -533,14 +533,14 @@ public final class ServiceAccountServiceGrpc {
 
     /**
      * <pre>
-     * EditServiceAccountPermission
+     * SetServiceAccountPermission
      * Overwrites the project specific permissions for a service account
      * </pre>
      */
-    public void editServiceAccountPermission(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse> responseObserver) {
+    public void setServiceAccountPermission(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getEditServiceAccountPermissionMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSetServiceAccountPermissionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -672,13 +672,13 @@ public final class ServiceAccountServiceGrpc {
 
     /**
      * <pre>
-     * EditServiceAccountPermission
+     * SetServiceAccountPermission
      * Overwrites the project specific permissions for a service account
      * </pre>
      */
-    public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse editServiceAccountPermission(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest request) {
+    public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse setServiceAccountPermission(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getEditServiceAccountPermissionMethod(), getCallOptions(), request);
+          getChannel(), getSetServiceAccountPermissionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -806,14 +806,14 @@ public final class ServiceAccountServiceGrpc {
 
     /**
      * <pre>
-     * EditServiceAccountPermission
+     * SetServiceAccountPermission
      * Overwrites the project specific permissions for a service account
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse> editServiceAccountPermission(
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse> setServiceAccountPermission(
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getEditServiceAccountPermissionMethod(), getCallOptions()), request);
+          getChannel().newCall(getSetServiceAccountPermissionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -897,7 +897,7 @@ public final class ServiceAccountServiceGrpc {
 
   private static final int METHODID_CREATE_SERVICE_ACCOUNT = 0;
   private static final int METHODID_CREATE_SERVICE_ACCOUNT_TOKEN = 1;
-  private static final int METHODID_EDIT_SERVICE_ACCOUNT_PERMISSION = 2;
+  private static final int METHODID_SET_SERVICE_ACCOUNT_PERMISSION = 2;
   private static final int METHODID_GET_SERVICE_ACCOUNT_TOKEN = 3;
   private static final int METHODID_GET_SERVICE_ACCOUNT_TOKENS = 4;
   private static final int METHODID_GET_SERVICE_ACCOUNTS_BY_PROJECT = 5;
@@ -930,9 +930,9 @@ public final class ServiceAccountServiceGrpc {
           serviceImpl.createServiceAccountToken((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.CreateServiceAccountTokenRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.CreateServiceAccountTokenResponse>) responseObserver);
           break;
-        case METHODID_EDIT_SERVICE_ACCOUNT_PERMISSION:
-          serviceImpl.editServiceAccountPermission((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse>) responseObserver);
+        case METHODID_SET_SERVICE_ACCOUNT_PERMISSION:
+          serviceImpl.setServiceAccountPermission((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse>) responseObserver);
           break;
         case METHODID_GET_SERVICE_ACCOUNT_TOKEN:
           serviceImpl.getServiceAccountToken((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.GetServiceAccountTokenRequest) request,
@@ -991,12 +991,12 @@ public final class ServiceAccountServiceGrpc {
               com.aruna.api.storage.services.v1.ServiceAccountServiceProto.CreateServiceAccountTokenResponse>(
                 service, METHODID_CREATE_SERVICE_ACCOUNT_TOKEN)))
         .addMethod(
-          getEditServiceAccountPermissionMethod(),
+          getSetServiceAccountPermissionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest,
-              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse>(
-                service, METHODID_EDIT_SERVICE_ACCOUNT_PERMISSION)))
+              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest,
+              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse>(
+                service, METHODID_SET_SERVICE_ACCOUNT_PERMISSION)))
         .addMethod(
           getGetServiceAccountTokenMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1089,7 +1089,7 @@ public final class ServiceAccountServiceGrpc {
               .setSchemaDescriptor(new ServiceAccountServiceFileDescriptorSupplier())
               .addMethod(getCreateServiceAccountMethod())
               .addMethod(getCreateServiceAccountTokenMethod())
-              .addMethod(getEditServiceAccountPermissionMethod())
+              .addMethod(getSetServiceAccountPermissionMethod())
               .addMethod(getGetServiceAccountTokenMethod())
               .addMethod(getGetServiceAccountTokensMethod())
               .addMethod(getGetServiceAccountsByProjectMethod())

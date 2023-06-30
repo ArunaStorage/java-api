@@ -2281,19 +2281,11 @@ public final class ServiceAccountServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * Empty if token should inherit account / project permissions
-     * </pre>
-     *
      * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
      * @return The svcAccountId.
      */
     java.lang.String getSvcAccountId();
     /**
-     * <pre>
-     * Empty if token should inherit account / project permissions
-     * </pre>
-     *
      * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
      * @return The bytes for svcAccountId.
      */
@@ -2302,19 +2294,39 @@ public final class ServiceAccountServiceProto {
 
     /**
      * <pre>
-     * Collection id
+     * Identify the associated project (should always be provided)
      * </pre>
      *
-     * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * Identify the associated project (should always be provided)
+     * </pre>
+     *
+     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Collection id, will be empty if permission should be on project level
+     * </pre>
+     *
+     * <code>string collection_id = 3 [json_name = "collectionId"];</code>
      * @return The collectionId.
      */
     java.lang.String getCollectionId();
     /**
      * <pre>
-     * Collection id
+     * Collection id, will be empty if permission should be on project level
      * </pre>
      *
-     * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+     * <code>string collection_id = 3 [json_name = "collectionId"];</code>
      * @return The bytes for collectionId.
      */
     com.google.protobuf.ByteString
@@ -2322,19 +2334,19 @@ public final class ServiceAccountServiceProto {
 
     /**
      * <pre>
-     * Token name
+     * (optional) Token name
      * </pre>
      *
-     * <code>string name = 3 [json_name = "name"];</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
      * <pre>
-     * Token name
+     * (optional) Token name
      * </pre>
      *
-     * <code>string name = 3 [json_name = "name"];</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2342,46 +2354,46 @@ public final class ServiceAccountServiceProto {
 
     /**
      * <pre>
-     * Token expiry
+     * (optional) Token expiry 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
      * <pre>
-     * Token expiry
+     * (optional) Token expiry 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
      * <pre>
-     * Token expiry
+     * (optional) Token expiry 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 
     /**
      * <pre>
-     * Token permissions
+     * Token permissions, must be less than or equal user permissions
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
      * @return The enum numeric value on the wire for permission.
      */
     int getPermissionValue();
     /**
      * <pre>
-     * Token permissions
+     * Token permissions, must be less than or equal user permissions
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
      * @return The permission.
      */
     com.aruna.api.storage.models.v1.AuthProto.Permission getPermission();
@@ -2400,6 +2412,7 @@ public final class ServiceAccountServiceProto {
     }
     private CreateServiceAccountTokenRequest() {
       svcAccountId_ = "";
+      projectId_ = "";
       collectionId_ = "";
       name_ = "";
       permission_ = 0;
@@ -2429,10 +2442,6 @@ public final class ServiceAccountServiceProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object svcAccountId_ = "";
     /**
-     * <pre>
-     * Empty if token should inherit account / project permissions
-     * </pre>
-     *
      * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
      * @return The svcAccountId.
      */
@@ -2450,10 +2459,6 @@ public final class ServiceAccountServiceProto {
       }
     }
     /**
-     * <pre>
-     * Empty if token should inherit account / project permissions
-     * </pre>
-     *
      * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
      * @return The bytes for svcAccountId.
      */
@@ -2472,15 +2477,62 @@ public final class ServiceAccountServiceProto {
       }
     }
 
-    public static final int COLLECTION_ID_FIELD_NUMBER = 2;
+    public static final int PROJECT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object projectId_ = "";
+    /**
+     * <pre>
+     * Identify the associated project (should always be provided)
+     * </pre>
+     *
+     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identify the associated project (should always be provided)
+     * </pre>
+     *
+     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLECTION_ID_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collectionId_ = "";
     /**
      * <pre>
-     * Collection id
+     * Collection id, will be empty if permission should be on project level
      * </pre>
      *
-     * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+     * <code>string collection_id = 3 [json_name = "collectionId"];</code>
      * @return The collectionId.
      */
     @java.lang.Override
@@ -2498,10 +2550,10 @@ public final class ServiceAccountServiceProto {
     }
     /**
      * <pre>
-     * Collection id
+     * Collection id, will be empty if permission should be on project level
      * </pre>
      *
-     * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+     * <code>string collection_id = 3 [json_name = "collectionId"];</code>
      * @return The bytes for collectionId.
      */
     @java.lang.Override
@@ -2519,15 +2571,15 @@ public final class ServiceAccountServiceProto {
       }
     }
 
-    public static final int NAME_FIELD_NUMBER = 3;
+    public static final int NAME_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
      * <pre>
-     * Token name
+     * (optional) Token name
      * </pre>
      *
-     * <code>string name = 3 [json_name = "name"];</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2545,10 +2597,10 @@ public final class ServiceAccountServiceProto {
     }
     /**
      * <pre>
-     * Token name
+     * (optional) Token name
      * </pre>
      *
-     * <code>string name = 3 [json_name = "name"];</code>
+     * <code>string name = 4 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -2566,14 +2618,14 @@ public final class ServiceAccountServiceProto {
       }
     }
 
-    public static final int EXPIRES_AT_FIELD_NUMBER = 4;
+    public static final int EXPIRES_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp expiresAt_;
     /**
      * <pre>
-     * Token expiry
+     * (optional) Token expiry 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return Whether the expiresAt field is set.
      */
     @java.lang.Override
@@ -2582,10 +2634,10 @@ public final class ServiceAccountServiceProto {
     }
     /**
      * <pre>
-     * Token expiry
+     * (optional) Token expiry 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      * @return The expiresAt.
      */
     @java.lang.Override
@@ -2594,24 +2646,24 @@ public final class ServiceAccountServiceProto {
     }
     /**
      * <pre>
-     * Token expiry
+     * (optional) Token expiry 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
 
-    public static final int PERMISSION_FIELD_NUMBER = 5;
+    public static final int PERMISSION_FIELD_NUMBER = 6;
     private int permission_ = 0;
     /**
      * <pre>
-     * Token permissions
+     * Token permissions, must be less than or equal user permissions
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
      * @return The enum numeric value on the wire for permission.
      */
     @java.lang.Override public int getPermissionValue() {
@@ -2619,10 +2671,10 @@ public final class ServiceAccountServiceProto {
     }
     /**
      * <pre>
-     * Token permissions
+     * Token permissions, must be less than or equal user permissions
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
      * @return The permission.
      */
     @java.lang.Override public com.aruna.api.storage.models.v1.AuthProto.Permission getPermission() {
@@ -2647,17 +2699,20 @@ public final class ServiceAccountServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(svcAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, svcAccountId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, projectId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collectionId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, collectionId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
       if (expiresAt_ != null) {
-        output.writeMessage(4, getExpiresAt());
+        output.writeMessage(5, getExpiresAt());
       }
       if (permission_ != com.aruna.api.storage.models.v1.AuthProto.Permission.PERMISSION_UNSPECIFIED.getNumber()) {
-        output.writeEnum(5, permission_);
+        output.writeEnum(6, permission_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2671,19 +2726,22 @@ public final class ServiceAccountServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(svcAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, svcAccountId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, projectId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collectionId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, collectionId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
       if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getExpiresAt());
+          .computeMessageSize(5, getExpiresAt());
       }
       if (permission_ != com.aruna.api.storage.models.v1.AuthProto.Permission.PERMISSION_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, permission_);
+          .computeEnumSize(6, permission_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2702,6 +2760,8 @@ public final class ServiceAccountServiceProto {
 
       if (!getSvcAccountId()
           .equals(other.getSvcAccountId())) return false;
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
       if (!getCollectionId()
           .equals(other.getCollectionId())) return false;
       if (!getName()
@@ -2725,6 +2785,8 @@ public final class ServiceAccountServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SVC_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSvcAccountId().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
       hash = (37 * hash) + COLLECTION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCollectionId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -2867,6 +2929,7 @@ public final class ServiceAccountServiceProto {
         super.clear();
         bitField0_ = 0;
         svcAccountId_ = "";
+        projectId_ = "";
         collectionId_ = "";
         name_ = "";
         expiresAt_ = null;
@@ -2912,17 +2975,20 @@ public final class ServiceAccountServiceProto {
           result.svcAccountId_ = svcAccountId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.collectionId_ = collectionId_;
+          result.projectId_ = projectId_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.name_ = name_;
+          result.collectionId_ = collectionId_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiresAt_ = expiresAtBuilder_ == null
               ? expiresAt_
               : expiresAtBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.permission_ = permission_;
         }
       }
@@ -2944,14 +3010,19 @@ public final class ServiceAccountServiceProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (!other.getCollectionId().isEmpty()) {
           collectionId_ = other.collectionId_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasExpiresAt()) {
@@ -2992,27 +3063,32 @@ public final class ServiceAccountServiceProto {
                 break;
               } // case 10
               case 18: {
-                collectionId_ = input.readStringRequireUtf8();
+                projectId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                name_ = input.readStringRequireUtf8();
+                collectionId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
-                input.readMessage(
-                    getExpiresAtFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
-              case 40: {
-                permission_ = input.readEnum();
+              case 42: {
+                input.readMessage(
+                    getExpiresAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 40
+              } // case 42
+              case 48: {
+                permission_ = input.readEnum();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3032,10 +3108,6 @@ public final class ServiceAccountServiceProto {
 
       private java.lang.Object svcAccountId_ = "";
       /**
-       * <pre>
-       * Empty if token should inherit account / project permissions
-       * </pre>
-       *
        * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
        * @return The svcAccountId.
        */
@@ -3052,10 +3124,6 @@ public final class ServiceAccountServiceProto {
         }
       }
       /**
-       * <pre>
-       * Empty if token should inherit account / project permissions
-       * </pre>
-       *
        * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
        * @return The bytes for svcAccountId.
        */
@@ -3073,10 +3141,6 @@ public final class ServiceAccountServiceProto {
         }
       }
       /**
-       * <pre>
-       * Empty if token should inherit account / project permissions
-       * </pre>
-       *
        * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
        * @param value The svcAccountId to set.
        * @return This builder for chaining.
@@ -3090,10 +3154,6 @@ public final class ServiceAccountServiceProto {
         return this;
       }
       /**
-       * <pre>
-       * Empty if token should inherit account / project permissions
-       * </pre>
-       *
        * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
        * @return This builder for chaining.
        */
@@ -3104,10 +3164,6 @@ public final class ServiceAccountServiceProto {
         return this;
       }
       /**
-       * <pre>
-       * Empty if token should inherit account / project permissions
-       * </pre>
-       *
        * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
        * @param value The bytes for svcAccountId to set.
        * @return This builder for chaining.
@@ -3122,13 +3178,105 @@ public final class ServiceAccountServiceProto {
         return this;
       }
 
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * Identify the associated project (should always be provided)
+       * </pre>
+       *
+       * <code>string project_id = 2 [json_name = "projectId"];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identify the associated project (should always be provided)
+       * </pre>
+       *
+       * <code>string project_id = 2 [json_name = "projectId"];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identify the associated project (should always be provided)
+       * </pre>
+       *
+       * <code>string project_id = 2 [json_name = "projectId"];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        projectId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identify the associated project (should always be provided)
+       * </pre>
+       *
+       * <code>string project_id = 2 [json_name = "projectId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        projectId_ = getDefaultInstance().getProjectId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identify the associated project (should always be provided)
+       * </pre>
+       *
+       * <code>string project_id = 2 [json_name = "projectId"];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        projectId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object collectionId_ = "";
       /**
        * <pre>
-       * Collection id
+       * Collection id, will be empty if permission should be on project level
        * </pre>
        *
-       * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+       * <code>string collection_id = 3 [json_name = "collectionId"];</code>
        * @return The collectionId.
        */
       public java.lang.String getCollectionId() {
@@ -3145,10 +3293,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Collection id
+       * Collection id, will be empty if permission should be on project level
        * </pre>
        *
-       * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+       * <code>string collection_id = 3 [json_name = "collectionId"];</code>
        * @return The bytes for collectionId.
        */
       public com.google.protobuf.ByteString
@@ -3166,10 +3314,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Collection id
+       * Collection id, will be empty if permission should be on project level
        * </pre>
        *
-       * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+       * <code>string collection_id = 3 [json_name = "collectionId"];</code>
        * @param value The collectionId to set.
        * @return This builder for chaining.
        */
@@ -3177,30 +3325,30 @@ public final class ServiceAccountServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         collectionId_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Collection id
+       * Collection id, will be empty if permission should be on project level
        * </pre>
        *
-       * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+       * <code>string collection_id = 3 [json_name = "collectionId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCollectionId() {
         collectionId_ = getDefaultInstance().getCollectionId();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Collection id
+       * Collection id, will be empty if permission should be on project level
        * </pre>
        *
-       * <code>string collection_id = 2 [json_name = "collectionId"];</code>
+       * <code>string collection_id = 3 [json_name = "collectionId"];</code>
        * @param value The bytes for collectionId to set.
        * @return This builder for chaining.
        */
@@ -3209,7 +3357,7 @@ public final class ServiceAccountServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         collectionId_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3217,10 +3365,10 @@ public final class ServiceAccountServiceProto {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Token name
+       * (optional) Token name
        * </pre>
        *
-       * <code>string name = 3 [json_name = "name"];</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3237,10 +3385,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token name
+       * (optional) Token name
        * </pre>
        *
-       * <code>string name = 3 [json_name = "name"];</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3258,10 +3406,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token name
+       * (optional) Token name
        * </pre>
        *
-       * <code>string name = 3 [json_name = "name"];</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3269,30 +3417,30 @@ public final class ServiceAccountServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token name
+       * (optional) Token name
        * </pre>
        *
-       * <code>string name = 3 [json_name = "name"];</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token name
+       * (optional) Token name
        * </pre>
        *
-       * <code>string name = 3 [json_name = "name"];</code>
+       * <code>string name = 4 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3301,7 +3449,7 @@ public final class ServiceAccountServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3311,21 +3459,21 @@ public final class ServiceAccountServiceProto {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        * @return The expiresAt.
        */
       public com.google.protobuf.Timestamp getExpiresAt() {
@@ -3337,10 +3485,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
@@ -3351,16 +3499,16 @@ public final class ServiceAccountServiceProto {
         } else {
           expiresAtBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder setExpiresAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -3369,20 +3517,20 @@ public final class ServiceAccountServiceProto {
         } else {
           expiresAtBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
+          if (((bitField0_ & 0x00000010) != 0) &&
             expiresAt_ != null &&
             expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getExpiresAtBuilder().mergeFrom(value);
@@ -3392,19 +3540,19 @@ public final class ServiceAccountServiceProto {
         } else {
           expiresAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public Builder clearExpiresAt() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         expiresAt_ = null;
         if (expiresAtBuilder_ != null) {
           expiresAtBuilder_.dispose();
@@ -3415,22 +3563,22 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getExpiresAtFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
         if (expiresAtBuilder_ != null) {
@@ -3442,10 +3590,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token expiry
+       * (optional) Token expiry 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -3464,10 +3612,10 @@ public final class ServiceAccountServiceProto {
       private int permission_ = 0;
       /**
        * <pre>
-       * Token permissions
+       * Token permissions, must be less than or equal user permissions
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
        * @return The enum numeric value on the wire for permission.
        */
       @java.lang.Override public int getPermissionValue() {
@@ -3475,25 +3623,25 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token permissions
+       * Token permissions, must be less than or equal user permissions
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
        * @param value The enum numeric value on the wire for permission to set.
        * @return This builder for chaining.
        */
       public Builder setPermissionValue(int value) {
         permission_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token permissions
+       * Token permissions, must be less than or equal user permissions
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
        * @return The permission.
        */
       @java.lang.Override
@@ -3503,10 +3651,10 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * Token permissions
+       * Token permissions, must be less than or equal user permissions
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
        * @param value The permission to set.
        * @return This builder for chaining.
        */
@@ -3514,21 +3662,21 @@ public final class ServiceAccountServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         permission_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Token permissions
+       * Token permissions, must be less than or equal user permissions
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v1.Permission permission = 5 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v1.Permission permission = 6 [json_name = "permission"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPermission() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         permission_ = 0;
         onChanged();
         return this;
@@ -3630,9 +3778,7 @@ public final class ServiceAccountServiceProto {
 
     /**
      * <pre>
-     * This is the actual secret token
-     * Attention, this can not be recreated and needs to be stored securely
-     * New tokens will always contain a new secret
+     * This is the actual secret API token
      * </pre>
      *
      * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -3641,9 +3787,7 @@ public final class ServiceAccountServiceProto {
     java.lang.String getTokenSecret();
     /**
      * <pre>
-     * This is the actual secret token
-     * Attention, this can not be recreated and needs to be stored securely
-     * New tokens will always contain a new secret
+     * This is the actual secret API token
      * </pre>
      *
      * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -3651,6 +3795,46 @@ public final class ServiceAccountServiceProto {
      */
     com.google.protobuf.ByteString
         getTokenSecretBytes();
+
+    /**
+     * <pre>
+     * S3 Access Key
+     * </pre>
+     *
+     * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+     * @return The s3AccessKey.
+     */
+    java.lang.String getS3AccessKey();
+    /**
+     * <pre>
+     * S3 Access Key
+     * </pre>
+     *
+     * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+     * @return The bytes for s3AccessKey.
+     */
+    com.google.protobuf.ByteString
+        getS3AccessKeyBytes();
+
+    /**
+     * <pre>
+     * S3 Secret Key
+     * </pre>
+     *
+     * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+     * @return The s3SecretKey.
+     */
+    java.lang.String getS3SecretKey();
+    /**
+     * <pre>
+     * S3 Secret Key
+     * </pre>
+     *
+     * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+     * @return The bytes for s3SecretKey.
+     */
+    com.google.protobuf.ByteString
+        getS3SecretKeyBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v1.CreateServiceAccountTokenResponse}
@@ -3666,6 +3850,8 @@ public final class ServiceAccountServiceProto {
     }
     private CreateServiceAccountTokenResponse() {
       tokenSecret_ = "";
+      s3AccessKey_ = "";
+      s3SecretKey_ = "";
     }
 
     @java.lang.Override
@@ -3731,9 +3917,7 @@ public final class ServiceAccountServiceProto {
     private volatile java.lang.Object tokenSecret_ = "";
     /**
      * <pre>
-     * This is the actual secret token
-     * Attention, this can not be recreated and needs to be stored securely
-     * New tokens will always contain a new secret
+     * This is the actual secret API token
      * </pre>
      *
      * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -3754,9 +3938,7 @@ public final class ServiceAccountServiceProto {
     }
     /**
      * <pre>
-     * This is the actual secret token
-     * Attention, this can not be recreated and needs to be stored securely
-     * New tokens will always contain a new secret
+     * This is the actual secret API token
      * </pre>
      *
      * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -3771,6 +3953,100 @@ public final class ServiceAccountServiceProto {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         tokenSecret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int S3_ACCESS_KEY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object s3AccessKey_ = "";
+    /**
+     * <pre>
+     * S3 Access Key
+     * </pre>
+     *
+     * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+     * @return The s3AccessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getS3AccessKey() {
+      java.lang.Object ref = s3AccessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        s3AccessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * S3 Access Key
+     * </pre>
+     *
+     * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+     * @return The bytes for s3AccessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getS3AccessKeyBytes() {
+      java.lang.Object ref = s3AccessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        s3AccessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int S3_SECRET_KEY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object s3SecretKey_ = "";
+    /**
+     * <pre>
+     * S3 Secret Key
+     * </pre>
+     *
+     * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+     * @return The s3SecretKey.
+     */
+    @java.lang.Override
+    public java.lang.String getS3SecretKey() {
+      java.lang.Object ref = s3SecretKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        s3SecretKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * S3 Secret Key
+     * </pre>
+     *
+     * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+     * @return The bytes for s3SecretKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getS3SecretKeyBytes() {
+      java.lang.Object ref = s3SecretKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        s3SecretKey_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3797,6 +4073,12 @@ public final class ServiceAccountServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenSecret_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenSecret_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3AccessKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, s3AccessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3SecretKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, s3SecretKey_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3812,6 +4094,12 @@ public final class ServiceAccountServiceProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenSecret_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenSecret_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3AccessKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, s3AccessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3SecretKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, s3SecretKey_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3835,6 +4123,10 @@ public final class ServiceAccountServiceProto {
       }
       if (!getTokenSecret()
           .equals(other.getTokenSecret())) return false;
+      if (!getS3AccessKey()
+          .equals(other.getS3AccessKey())) return false;
+      if (!getS3SecretKey()
+          .equals(other.getS3SecretKey())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3852,6 +4144,10 @@ public final class ServiceAccountServiceProto {
       }
       hash = (37 * hash) + TOKEN_SECRET_FIELD_NUMBER;
       hash = (53 * hash) + getTokenSecret().hashCode();
+      hash = (37 * hash) + S3_ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getS3AccessKey().hashCode();
+      hash = (37 * hash) + S3_SECRET_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getS3SecretKey().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3989,6 +4285,8 @@ public final class ServiceAccountServiceProto {
           tokenBuilder_ = null;
         }
         tokenSecret_ = "";
+        s3AccessKey_ = "";
+        s3SecretKey_ = "";
         return this;
       }
 
@@ -4030,6 +4328,12 @@ public final class ServiceAccountServiceProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenSecret_ = tokenSecret_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.s3AccessKey_ = s3AccessKey_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.s3SecretKey_ = s3SecretKey_;
+        }
       }
 
       @java.lang.Override
@@ -4050,6 +4354,16 @@ public final class ServiceAccountServiceProto {
         if (!other.getTokenSecret().isEmpty()) {
           tokenSecret_ = other.tokenSecret_;
           bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getS3AccessKey().isEmpty()) {
+          s3AccessKey_ = other.s3AccessKey_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getS3SecretKey().isEmpty()) {
+          s3SecretKey_ = other.s3SecretKey_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4090,6 +4404,16 @@ public final class ServiceAccountServiceProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                s3AccessKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                s3SecretKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4265,9 +4589,7 @@ public final class ServiceAccountServiceProto {
       private java.lang.Object tokenSecret_ = "";
       /**
        * <pre>
-       * This is the actual secret token
-       * Attention, this can not be recreated and needs to be stored securely
-       * New tokens will always contain a new secret
+       * This is the actual secret API token
        * </pre>
        *
        * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -4287,9 +4609,7 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * This is the actual secret token
-       * Attention, this can not be recreated and needs to be stored securely
-       * New tokens will always contain a new secret
+       * This is the actual secret API token
        * </pre>
        *
        * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -4310,9 +4630,7 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * This is the actual secret token
-       * Attention, this can not be recreated and needs to be stored securely
-       * New tokens will always contain a new secret
+       * This is the actual secret API token
        * </pre>
        *
        * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -4329,9 +4647,7 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * This is the actual secret token
-       * Attention, this can not be recreated and needs to be stored securely
-       * New tokens will always contain a new secret
+       * This is the actual secret API token
        * </pre>
        *
        * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -4345,9 +4661,7 @@ public final class ServiceAccountServiceProto {
       }
       /**
        * <pre>
-       * This is the actual secret token
-       * Attention, this can not be recreated and needs to be stored securely
-       * New tokens will always contain a new secret
+       * This is the actual secret API token
        * </pre>
        *
        * <code>string token_secret = 2 [json_name = "tokenSecret"];</code>
@@ -4360,6 +4674,190 @@ public final class ServiceAccountServiceProto {
         checkByteStringIsUtf8(value);
         tokenSecret_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object s3AccessKey_ = "";
+      /**
+       * <pre>
+       * S3 Access Key
+       * </pre>
+       *
+       * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+       * @return The s3AccessKey.
+       */
+      public java.lang.String getS3AccessKey() {
+        java.lang.Object ref = s3AccessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          s3AccessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 Access Key
+       * </pre>
+       *
+       * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+       * @return The bytes for s3AccessKey.
+       */
+      public com.google.protobuf.ByteString
+          getS3AccessKeyBytes() {
+        java.lang.Object ref = s3AccessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          s3AccessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 Access Key
+       * </pre>
+       *
+       * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+       * @param value The s3AccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3AccessKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        s3AccessKey_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 Access Key
+       * </pre>
+       *
+       * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS3AccessKey() {
+        s3AccessKey_ = getDefaultInstance().getS3AccessKey();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 Access Key
+       * </pre>
+       *
+       * <code>string s3_access_key = 3 [json_name = "s3AccessKey"];</code>
+       * @param value The bytes for s3AccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3AccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        s3AccessKey_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object s3SecretKey_ = "";
+      /**
+       * <pre>
+       * S3 Secret Key
+       * </pre>
+       *
+       * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+       * @return The s3SecretKey.
+       */
+      public java.lang.String getS3SecretKey() {
+        java.lang.Object ref = s3SecretKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          s3SecretKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 Secret Key
+       * </pre>
+       *
+       * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+       * @return The bytes for s3SecretKey.
+       */
+      public com.google.protobuf.ByteString
+          getS3SecretKeyBytes() {
+        java.lang.Object ref = s3SecretKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          s3SecretKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 Secret Key
+       * </pre>
+       *
+       * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+       * @param value The s3SecretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3SecretKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        s3SecretKey_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 Secret Key
+       * </pre>
+       *
+       * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS3SecretKey() {
+        s3SecretKey_ = getDefaultInstance().getS3SecretKey();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 Secret Key
+       * </pre>
+       *
+       * <code>string s3_secret_key = 4 [json_name = "s3SecretKey"];</code>
+       * @param value The bytes for s3SecretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3SecretKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        s3SecretKey_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4427,8 +4925,8 @@ public final class ServiceAccountServiceProto {
 
   }
 
-  public interface EditServiceAccountPermissionRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.EditServiceAccountPermissionRequest)
+  public interface SetServiceAccountPermissionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.SetServiceAccountPermissionRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4455,18 +4953,18 @@ public final class ServiceAccountServiceProto {
     com.aruna.api.storage.models.v1.AuthProto.Permission getNewPermission();
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v1.EditServiceAccountPermissionRequest}
+   * Protobuf type {@code aruna.api.storage.services.v1.SetServiceAccountPermissionRequest}
    */
-  public static final class EditServiceAccountPermissionRequest extends
+  public static final class SetServiceAccountPermissionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.EditServiceAccountPermissionRequest)
-      EditServiceAccountPermissionRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.SetServiceAccountPermissionRequest)
+      SetServiceAccountPermissionRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EditServiceAccountPermissionRequest.newBuilder() to construct.
-    private EditServiceAccountPermissionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SetServiceAccountPermissionRequest.newBuilder() to construct.
+    private SetServiceAccountPermissionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EditServiceAccountPermissionRequest() {
+    private SetServiceAccountPermissionRequest() {
       svcAccountId_ = "";
       newPermission_ = 0;
     }
@@ -4475,20 +4973,20 @@ public final class ServiceAccountServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EditServiceAccountPermissionRequest();
+      return new SetServiceAccountPermissionRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_descriptor;
+      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_fieldAccessorTable
+      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.Builder.class);
+              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.Builder.class);
     }
 
     public static final int SVC_ACCOUNT_ID_FIELD_NUMBER = 1;
@@ -4594,10 +5092,10 @@ public final class ServiceAccountServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest other = (com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest) obj;
+      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest other = (com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest) obj;
 
       if (!getSvcAccountId()
           .equals(other.getSvcAccountId())) return false;
@@ -4622,44 +5120,44 @@ public final class ServiceAccountServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4667,26 +5165,26 @@ public final class ServiceAccountServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4699,7 +5197,7 @@ public final class ServiceAccountServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4715,26 +5213,26 @@ public final class ServiceAccountServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v1.EditServiceAccountPermissionRequest}
+     * Protobuf type {@code aruna.api.storage.services.v1.SetServiceAccountPermissionRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.EditServiceAccountPermissionRequest)
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.SetServiceAccountPermissionRequest)
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_descriptor;
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_fieldAccessorTable
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.Builder.class);
+                com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.newBuilder()
+      // Construct using com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.newBuilder()
       private Builder() {
 
       }
@@ -4756,17 +5254,17 @@ public final class ServiceAccountServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_descriptor;
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.getDefaultInstance();
+      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest build() {
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest result = buildPartial();
+      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest build() {
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4774,14 +5272,14 @@ public final class ServiceAccountServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest buildPartial() {
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest result = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest(this);
+      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest buildPartial() {
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest result = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest result) {
+      private void buildPartial0(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.svcAccountId_ = svcAccountId_;
@@ -4793,16 +5291,16 @@ public final class ServiceAccountServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest) {
-          return mergeFrom((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest)other);
+        if (other instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest other) {
-        if (other == com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest other) {
+        if (other == com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest.getDefaultInstance()) return this;
         if (!other.getSvcAccountId().isEmpty()) {
           svcAccountId_ = other.svcAccountId_;
           bitField0_ |= 0x00000001;
@@ -5001,23 +5499,23 @@ public final class ServiceAccountServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.EditServiceAccountPermissionRequest)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.SetServiceAccountPermissionRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.EditServiceAccountPermissionRequest)
-    private static final com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.SetServiceAccountPermissionRequest)
+    private static final com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest();
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest getDefaultInstance() {
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EditServiceAccountPermissionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<EditServiceAccountPermissionRequest>() {
+    private static final com.google.protobuf.Parser<SetServiceAccountPermissionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetServiceAccountPermissionRequest>() {
       @java.lang.Override
-      public EditServiceAccountPermissionRequest parsePartialFrom(
+      public SetServiceAccountPermissionRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5036,24 +5534,24 @@ public final class ServiceAccountServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<EditServiceAccountPermissionRequest> parser() {
+    public static com.google.protobuf.Parser<SetServiceAccountPermissionRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EditServiceAccountPermissionRequest> getParserForType() {
+    public com.google.protobuf.Parser<SetServiceAccountPermissionRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionRequest getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface EditServiceAccountPermissionResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.EditServiceAccountPermissionResponse)
+  public interface SetServiceAccountPermissionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v1.SetServiceAccountPermissionResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5072,38 +5570,38 @@ public final class ServiceAccountServiceProto {
     com.aruna.api.storage.services.v1.ServiceAccountServiceProto.ServiceAccountOrBuilder getServiceAccountOrBuilder();
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v1.EditServiceAccountPermissionResponse}
+   * Protobuf type {@code aruna.api.storage.services.v1.SetServiceAccountPermissionResponse}
    */
-  public static final class EditServiceAccountPermissionResponse extends
+  public static final class SetServiceAccountPermissionResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.EditServiceAccountPermissionResponse)
-      EditServiceAccountPermissionResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v1.SetServiceAccountPermissionResponse)
+      SetServiceAccountPermissionResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EditServiceAccountPermissionResponse.newBuilder() to construct.
-    private EditServiceAccountPermissionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SetServiceAccountPermissionResponse.newBuilder() to construct.
+    private SetServiceAccountPermissionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EditServiceAccountPermissionResponse() {
+    private SetServiceAccountPermissionResponse() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EditServiceAccountPermissionResponse();
+      return new SetServiceAccountPermissionResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_descriptor;
+      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_fieldAccessorTable
+      return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.Builder.class);
+              com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.Builder.class);
     }
 
     public static final int SERVICE_ACCOUNT_FIELD_NUMBER = 1;
@@ -5172,10 +5670,10 @@ public final class ServiceAccountServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse other = (com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse) obj;
+      com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse other = (com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse) obj;
 
       if (hasServiceAccount() != other.hasServiceAccount()) return false;
       if (hasServiceAccount()) {
@@ -5202,44 +5700,44 @@ public final class ServiceAccountServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5247,26 +5745,26 @@ public final class ServiceAccountServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse parseFrom(
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5279,7 +5777,7 @@ public final class ServiceAccountServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5295,26 +5793,26 @@ public final class ServiceAccountServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v1.EditServiceAccountPermissionResponse}
+     * Protobuf type {@code aruna.api.storage.services.v1.SetServiceAccountPermissionResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.EditServiceAccountPermissionResponse)
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v1.SetServiceAccountPermissionResponse)
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_descriptor;
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_fieldAccessorTable
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.Builder.class);
+                com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.class, com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.newBuilder()
+      // Construct using com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.newBuilder()
       private Builder() {
 
       }
@@ -5339,17 +5837,17 @@ public final class ServiceAccountServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_descriptor;
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.getDefaultInstance();
+      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse build() {
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse result = buildPartial();
+      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse build() {
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5357,14 +5855,14 @@ public final class ServiceAccountServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse buildPartial() {
-        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse result = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse(this);
+      public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse buildPartial() {
+        com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse result = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse result) {
+      private void buildPartial0(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.serviceAccount_ = serviceAccountBuilder_ == null
@@ -5375,16 +5873,16 @@ public final class ServiceAccountServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse) {
-          return mergeFrom((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse)other);
+        if (other instanceof com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse other) {
-        if (other == com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse other) {
+        if (other == com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse.getDefaultInstance()) return this;
         if (other.hasServiceAccount()) {
           mergeServiceAccount(other.getServiceAccount());
         }
@@ -5569,23 +6067,23 @@ public final class ServiceAccountServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.EditServiceAccountPermissionResponse)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v1.SetServiceAccountPermissionResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.EditServiceAccountPermissionResponse)
-    private static final com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v1.SetServiceAccountPermissionResponse)
+    private static final com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse();
     }
 
-    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse getDefaultInstance() {
+    public static com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EditServiceAccountPermissionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<EditServiceAccountPermissionResponse>() {
+    private static final com.google.protobuf.Parser<SetServiceAccountPermissionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SetServiceAccountPermissionResponse>() {
       @java.lang.Override
-      public EditServiceAccountPermissionResponse parsePartialFrom(
+      public SetServiceAccountPermissionResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5604,17 +6102,17 @@ public final class ServiceAccountServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<EditServiceAccountPermissionResponse> parser() {
+    public static com.google.protobuf.Parser<SetServiceAccountPermissionResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EditServiceAccountPermissionResponse> getParserForType() {
+    public com.google.protobuf.Parser<SetServiceAccountPermissionResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.EditServiceAccountPermissionResponse getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v1.ServiceAccountServiceProto.SetServiceAccountPermissionResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12397,15 +12895,15 @@ public final class ServiceAccountServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v1_CreateServiceAccountTokenResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_descriptor;
+    internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_descriptor;
+    internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v1_GetServiceAccountTokenRequest_descriptor;
   private static final 
@@ -12478,122 +12976,122 @@ public final class ServiceAccountServiceProto {
       "\n;aruna/api/storage/services/v1/service_" +
       "account_service.proto\022\035aruna.api.storage" +
       ".services.v1\032&aruna/api/storage/models/v" +
-      "1/auth.proto\032\033google/api/visibility.prot" +
-      "o\032\034google/api/annotations.proto\032\037google/" +
-      "protobuf/timestamp.proto\"\231\001\n\033CreateServi" +
-      "ceAccountRequest\022\022\n\004name\030\001 \001(\tR\004name\022\035\n\n" +
-      "project_id\030\002 \001(\tR\tprojectId\022G\n\npermissio" +
-      "n\030\003 \001(\0162\'.aruna.api.storage.models.v1.Pe" +
-      "rmissionR\npermission\"\262\001\n\016ServiceAccount\022" +
-      "$\n\016svc_account_id\030\001 \001(\tR\014svcAccountId\022\035\n" +
-      "\nproject_id\030\002 \001(\tR\tprojectId\022\022\n\004name\030\003 \001" +
-      "(\tR\004name\022G\n\npermission\030\004 \001(\0162\'.aruna.api" +
-      ".storage.models.v1.PermissionR\npermissio" +
-      "n\"v\n\034CreateServiceAccountResponse\022V\n\017ser" +
-      "vice_account\030\001 \001(\0132-.aruna.api.storage.s" +
-      "ervices.v1.ServiceAccountR\016serviceAccoun" +
-      "t\"\205\002\n CreateServiceAccountTokenRequest\022$" +
-      "\n\016svc_account_id\030\001 \001(\tR\014svcAccountId\022#\n\r" +
-      "collection_id\030\002 \001(\tR\014collectionId\022\022\n\004nam" +
-      "e\030\003 \001(\tR\004name\0229\n\nexpires_at\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\texpiresAt\022G\n\nperm" +
-      "ission\030\005 \001(\0162\'.aruna.api.storage.models." +
-      "v1.PermissionR\npermission\"\200\001\n!CreateServ" +
-      "iceAccountTokenResponse\0228\n\005token\030\001 \001(\0132\"" +
-      ".aruna.api.storage.models.v1.TokenR\005toke" +
-      "n\022!\n\014token_secret\030\002 \001(\tR\013tokenSecret\"\233\001\n" +
-      "#EditServiceAccountPermissionRequest\022$\n\016" +
-      "svc_account_id\030\001 \001(\tR\014svcAccountId\022N\n\016ne" +
-      "w_permission\030\002 \001(\0162\'.aruna.api.storage.m" +
-      "odels.v1.PermissionR\rnewPermission\"~\n$Ed" +
-      "itServiceAccountPermissionResponse\022V\n\017se" +
-      "rvice_account\030\001 \001(\0132-.aruna.api.storage." +
-      "services.v1.ServiceAccountR\016serviceAccou" +
-      "nt\"`\n\035GetServiceAccountTokenRequest\022$\n\016s" +
-      "vc_account_id\030\001 \001(\tR\014svcAccountId\022\031\n\010tok" +
-      "en_id\030\002 \001(\tR\007tokenId\"Z\n\036GetServiceAccoun" +
-      "tTokenResponse\0228\n\005token\030\001 \001(\0132\".aruna.ap" +
-      "i.storage.models.v1.TokenR\005token\"F\n\036GetS" +
-      "erviceAccountTokensRequest\022$\n\016svc_accoun" +
-      "t_id\030\001 \001(\tR\014svcAccountId\"[\n\037GetServiceAc" +
-      "countTokensResponse\0228\n\005token\030\001 \003(\0132\".aru" +
-      "na.api.storage.models.v1.TokenR\005token\"C\n" +
-      "\"GetServiceAccountsByProjectRequest\022\035\n\np" +
-      "roject_id\030\001 \001(\tR\tprojectId\"w\n#GetService" +
-      "AccountsByProjectResponse\022P\n\014svc_account" +
-      "s\030\001 \003(\0132-.aruna.api.storage.services.v1." +
-      "ServiceAccountR\013svcAccounts\"c\n DeleteSer" +
-      "viceAccountTokenRequest\022$\n\016svc_account_i" +
-      "d\030\001 \001(\tR\014svcAccountId\022\031\n\010token_id\030\002 \001(\tR" +
-      "\007tokenId\"#\n!DeleteServiceAccountTokenRes" +
-      "ponse\"I\n!DeleteServiceAccountTokensReque" +
-      "st\022$\n\016svc_account_id\030\001 \001(\tR\014svcAccountId" +
-      "\"$\n\"DeleteServiceAccountTokensResponse\"C" +
-      "\n\033DeleteServiceAccountRequest\022$\n\016svc_acc" +
-      "ount_id\030\001 \001(\tR\014svcAccountId\"\036\n\034DeleteSer" +
-      "viceAccountResponse2\225\017\n\025ServiceAccountSe" +
-      "rvice\022\257\001\n\024CreateServiceAccount\022:.aruna.a" +
+      "1/auth.proto\032\034google/api/annotations.pro" +
+      "to\032\037google/protobuf/timestamp.proto\"\231\001\n\033" +
+      "CreateServiceAccountRequest\022\022\n\004name\030\001 \001(" +
+      "\tR\004name\022\035\n\nproject_id\030\002 \001(\tR\tprojectId\022G" +
+      "\n\npermission\030\003 \001(\0162\'.aruna.api.storage.m" +
+      "odels.v1.PermissionR\npermission\"\262\001\n\016Serv" +
+      "iceAccount\022$\n\016svc_account_id\030\001 \001(\tR\014svcA" +
+      "ccountId\022\035\n\nproject_id\030\002 \001(\tR\tprojectId\022" +
+      "\022\n\004name\030\003 \001(\tR\004name\022G\n\npermission\030\004 \001(\0162" +
+      "\'.aruna.api.storage.models.v1.Permission" +
+      "R\npermission\"v\n\034CreateServiceAccountResp" +
+      "onse\022V\n\017service_account\030\001 \001(\0132-.aruna.ap" +
+      "i.storage.services.v1.ServiceAccountR\016se" +
+      "rviceAccount\"\244\002\n CreateServiceAccountTok" +
+      "enRequest\022$\n\016svc_account_id\030\001 \001(\tR\014svcAc" +
+      "countId\022\035\n\nproject_id\030\002 \001(\tR\tprojectId\022#" +
+      "\n\rcollection_id\030\003 \001(\tR\014collectionId\022\022\n\004n" +
+      "ame\030\004 \001(\tR\004name\0229\n\nexpires_at\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\texpiresAt\022G\n\npe" +
+      "rmission\030\006 \001(\0162\'.aruna.api.storage.model" +
+      "s.v1.PermissionR\npermission\"\310\001\n!CreateSe" +
+      "rviceAccountTokenResponse\0228\n\005token\030\001 \001(\013" +
+      "2\".aruna.api.storage.models.v1.TokenR\005to" +
+      "ken\022!\n\014token_secret\030\002 \001(\tR\013tokenSecret\022\"" +
+      "\n\rs3_access_key\030\003 \001(\tR\013s3AccessKey\022\"\n\rs3" +
+      "_secret_key\030\004 \001(\tR\013s3SecretKey\"\232\001\n\"SetSe" +
+      "rviceAccountPermissionRequest\022$\n\016svc_acc" +
+      "ount_id\030\001 \001(\tR\014svcAccountId\022N\n\016new_permi" +
+      "ssion\030\002 \001(\0162\'.aruna.api.storage.models.v" +
+      "1.PermissionR\rnewPermission\"}\n#SetServic" +
+      "eAccountPermissionResponse\022V\n\017service_ac" +
+      "count\030\001 \001(\0132-.aruna.api.storage.services" +
+      ".v1.ServiceAccountR\016serviceAccount\"`\n\035Ge" +
+      "tServiceAccountTokenRequest\022$\n\016svc_accou" +
+      "nt_id\030\001 \001(\tR\014svcAccountId\022\031\n\010token_id\030\002 " +
+      "\001(\tR\007tokenId\"Z\n\036GetServiceAccountTokenRe" +
+      "sponse\0228\n\005token\030\001 \001(\0132\".aruna.api.storag" +
+      "e.models.v1.TokenR\005token\"F\n\036GetServiceAc" +
+      "countTokensRequest\022$\n\016svc_account_id\030\001 \001" +
+      "(\tR\014svcAccountId\"[\n\037GetServiceAccountTok" +
+      "ensResponse\0228\n\005token\030\001 \003(\0132\".aruna.api.s" +
+      "torage.models.v1.TokenR\005token\"C\n\"GetServ" +
+      "iceAccountsByProjectRequest\022\035\n\nproject_i" +
+      "d\030\001 \001(\tR\tprojectId\"w\n#GetServiceAccounts" +
+      "ByProjectResponse\022P\n\014svc_accounts\030\001 \003(\0132" +
+      "-.aruna.api.storage.services.v1.ServiceA" +
+      "ccountR\013svcAccounts\"c\n DeleteServiceAcco" +
+      "untTokenRequest\022$\n\016svc_account_id\030\001 \001(\tR" +
+      "\014svcAccountId\022\031\n\010token_id\030\002 \001(\tR\007tokenId" +
+      "\"#\n!DeleteServiceAccountTokenResponse\"I\n" +
+      "!DeleteServiceAccountTokensRequest\022$\n\016sv" +
+      "c_account_id\030\001 \001(\tR\014svcAccountId\"$\n\"Dele" +
+      "teServiceAccountTokensResponse\"C\n\033Delete" +
+      "ServiceAccountRequest\022$\n\016svc_account_id\030" +
+      "\001 \001(\tR\014svcAccountId\"\036\n\034DeleteServiceAcco" +
+      "untResponse2\376\016\n\025ServiceAccountService\022\257\001" +
+      "\n\024CreateServiceAccount\022:.aruna.api.stora" +
+      "ge.services.v1.CreateServiceAccountReque" +
+      "st\032;.aruna.api.storage.services.v1.Creat" +
+      "eServiceAccountResponse\"\036\202\323\344\223\002\030\"\023/v1/ser" +
+      "vice_account:\001*\022\325\001\n\031CreateServiceAccount" +
+      "Token\022?.aruna.api.storage.services.v1.Cr" +
+      "eateServiceAccountTokenRequest\032@.aruna.a" +
       "pi.storage.services.v1.CreateServiceAcco" +
-      "untRequest\032;.aruna.api.storage.services." +
-      "v1.CreateServiceAccountResponse\"\036\202\323\344\223\002\030\"" +
-      "\023/v1/service_account:\001*\022\325\001\n\031CreateServic" +
-      "eAccountToken\022?.aruna.api.storage.servic" +
-      "es.v1.CreateServiceAccountTokenRequest\032@" +
-      ".aruna.api.storage.services.v1.CreateSer" +
-      "viceAccountTokenResponse\"5\202\323\344\223\002/\"*/v1/se" +
-      "rvice_account/{svc_account_id}/token:\001*\022" +
-      "\344\001\n\034EditServiceAccountPermission\022B.aruna" +
-      ".api.storage.services.v1.EditServiceAcco" +
-      "untPermissionRequest\032C.aruna.api.storage" +
-      ".services.v1.EditServiceAccountPermissio" +
-      "nResponse\";\202\323\344\223\0025\0320/v1/service_account/{" +
-      "svc_account_id}/permissions:\001*\022\324\001\n\026GetSe" +
-      "rviceAccountToken\022<.aruna.api.storage.se" +
-      "rvices.v1.GetServiceAccountTokenRequest\032" +
-      "=.aruna.api.storage.services.v1.GetServi" +
-      "ceAccountTokenResponse\"=\202\323\344\223\0027\0225/v1/serv" +
-      "ice_account/{svc_account_id}/token/{toke" +
-      "n_id}\022\315\001\n\027GetServiceAccountTokens\022=.arun" +
-      "a.api.storage.services.v1.GetServiceAcco" +
-      "untTokensRequest\032>.aruna.api.storage.ser" +
-      "vices.v1.GetServiceAccountTokensResponse" +
-      "\"3\202\323\344\223\002-\022+/v1/service_account/{svc_accou" +
-      "nt_id}/tokens\022\326\001\n\033GetServiceAccountsByPr" +
-      "oject\022A.aruna.api.storage.services.v1.Ge" +
-      "tServiceAccountsByProjectRequest\032B.aruna" +
-      ".api.storage.services.v1.GetServiceAccou" +
-      "ntsByProjectResponse\"0\202\323\344\223\002*\022(/v1/servic" +
-      "e_account/project/{project_id}\022\335\001\n\031Delet" +
-      "eServiceAccountToken\022?.aruna.api.storage" +
-      ".services.v1.DeleteServiceAccountTokenRe" +
-      "quest\032@.aruna.api.storage.services.v1.De" +
-      "leteServiceAccountTokenResponse\"=\202\323\344\223\0027*" +
-      "5/v1/service_account/{svc_account_id}/to" +
-      "ken/{token_id}\022\326\001\n\032DeleteServiceAccountT" +
-      "okens\022@.aruna.api.storage.services.v1.De" +
-      "leteServiceAccountTokensRequest\032A.aruna." +
-      "api.storage.services.v1.DeleteServiceAcc" +
-      "ountTokensResponse\"3\202\323\344\223\002-*+/v1/service_" +
-      "account/{svc_account_id}/tokens\022\275\001\n\024Dele" +
-      "teServiceAccount\022:.aruna.api.storage.ser" +
-      "vices.v1.DeleteServiceAccountRequest\032;.a" +
-      "runa.api.storage.services.v1.DeleteServi" +
-      "ceAccountResponse\",\202\323\344\223\002&*$/v1/service_a" +
-      "ccount/{svc_account_id}\032\022\372\322\344\223\002\014\022\nUNFINIS" +
-      "HEDB\226\002\n!com.aruna.api.storage.services.v" +
-      "1B\032ServiceAccountServiceProtoP\000Z<github." +
-      "com/ArunaStorage/go-api/aruna/api/storag" +
-      "e/services/v1\242\002\004AASS\252\002\035Aruna.Api.Storage" +
-      ".Services.V1\312\002\035Aruna\\Api\\Storage\\Service" +
-      "s\\V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\GPB" +
-      "Metadata\352\002!Aruna::Api::Storage::Services" +
-      "::V1b\006proto3"
+      "untTokenResponse\"5\202\323\344\223\002/\"*/v1/service_ac" +
+      "count/{svc_account_id}/token:\001*\022\341\001\n\033SetS" +
+      "erviceAccountPermission\022A.aruna.api.stor" +
+      "age.services.v1.SetServiceAccountPermiss" +
+      "ionRequest\032B.aruna.api.storage.services." +
+      "v1.SetServiceAccountPermissionResponse\";" +
+      "\202\323\344\223\0025\0320/v1/service_account/{svc_account" +
+      "_id}/permissions:\001*\022\324\001\n\026GetServiceAccoun" +
+      "tToken\022<.aruna.api.storage.services.v1.G" +
+      "etServiceAccountTokenRequest\032=.aruna.api" +
+      ".storage.services.v1.GetServiceAccountTo" +
+      "kenResponse\"=\202\323\344\223\0027\0225/v1/service_account" +
+      "/{svc_account_id}/token/{token_id}\022\315\001\n\027G" +
+      "etServiceAccountTokens\022=.aruna.api.stora" +
+      "ge.services.v1.GetServiceAccountTokensRe" +
+      "quest\032>.aruna.api.storage.services.v1.Ge" +
+      "tServiceAccountTokensResponse\"3\202\323\344\223\002-\022+/" +
+      "v1/service_account/{svc_account_id}/toke" +
+      "ns\022\326\001\n\033GetServiceAccountsByProject\022A.aru" +
+      "na.api.storage.services.v1.GetServiceAcc" +
+      "ountsByProjectRequest\032B.aruna.api.storag" +
+      "e.services.v1.GetServiceAccountsByProjec" +
+      "tResponse\"0\202\323\344\223\002*\022(/v1/service_account/p" +
+      "roject/{project_id}\022\335\001\n\031DeleteServiceAcc" +
+      "ountToken\022?.aruna.api.storage.services.v" +
+      "1.DeleteServiceAccountTokenRequest\032@.aru" +
+      "na.api.storage.services.v1.DeleteService" +
+      "AccountTokenResponse\"=\202\323\344\223\0027*5/v1/servic" +
+      "e_account/{svc_account_id}/token/{token_" +
+      "id}\022\326\001\n\032DeleteServiceAccountTokens\022@.aru" +
+      "na.api.storage.services.v1.DeleteService" +
+      "AccountTokensRequest\032A.aruna.api.storage" +
+      ".services.v1.DeleteServiceAccountTokensR" +
+      "esponse\"3\202\323\344\223\002-*+/v1/service_account/{sv" +
+      "c_account_id}/tokens\022\275\001\n\024DeleteServiceAc" +
+      "count\022:.aruna.api.storage.services.v1.De" +
+      "leteServiceAccountRequest\032;.aruna.api.st" +
+      "orage.services.v1.DeleteServiceAccountRe" +
+      "sponse\",\202\323\344\223\002&*$/v1/service_account/{svc" +
+      "_account_id}B\226\002\n!com.aruna.api.storage.s" +
+      "ervices.v1B\032ServiceAccountServiceProtoP\000" +
+      "Z<github.com/ArunaStorage/go-api/aruna/a" +
+      "pi/storage/services/v1\242\002\004AASS\252\002\035Aruna.Ap" +
+      "i.Storage.Services.V1\312\002\035Aruna\\Api\\Storag" +
+      "e\\Services\\V1\342\002)Aruna\\Api\\Storage\\Servic" +
+      "es\\V1\\GPBMetadata\352\002!Aruna::Api::Storage:" +
+      ":Services::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.aruna.api.storage.models.v1.AuthProto.getDescriptor(),
-          com.google.api.VisibilityProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -12620,24 +13118,24 @@ public final class ServiceAccountServiceProto {
     internal_static_aruna_api_storage_services_v1_CreateServiceAccountTokenRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_CreateServiceAccountTokenRequest_descriptor,
-        new java.lang.String[] { "SvcAccountId", "CollectionId", "Name", "ExpiresAt", "Permission", });
+        new java.lang.String[] { "SvcAccountId", "ProjectId", "CollectionId", "Name", "ExpiresAt", "Permission", });
     internal_static_aruna_api_storage_services_v1_CreateServiceAccountTokenResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_aruna_api_storage_services_v1_CreateServiceAccountTokenResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_CreateServiceAccountTokenResponse_descriptor,
-        new java.lang.String[] { "Token", "TokenSecret", });
-    internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_descriptor =
+        new java.lang.String[] { "Token", "TokenSecret", "S3AccessKey", "S3SecretKey", });
+    internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionRequest_descriptor,
+        internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionRequest_descriptor,
         new java.lang.String[] { "SvcAccountId", "NewPermission", });
-    internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_descriptor =
+    internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v1_EditServiceAccountPermissionResponse_descriptor,
+        internal_static_aruna_api_storage_services_v1_SetServiceAccountPermissionResponse_descriptor,
         new java.lang.String[] { "ServiceAccount", });
     internal_static_aruna_api_storage_services_v1_GetServiceAccountTokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
@@ -12713,12 +13211,10 @@ public final class ServiceAccountServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.aruna.api.storage.models.v1.AuthProto.getDescriptor();
-    com.google.api.VisibilityProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
