@@ -57,6 +57,16 @@ public final class ProjectServiceProto {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flag = 3 [json_name = "flag"];</code>
+     * @return The flag.
+     */
+    long getFlag();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v1.CreateProjectRequest}
@@ -189,6 +199,21 @@ public final class ProjectServiceProto {
       }
     }
 
+    public static final int FLAG_FIELD_NUMBER = 3;
+    private long flag_ = 0L;
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flag = 3 [json_name = "flag"];</code>
+     * @return The flag.
+     */
+    @java.lang.Override
+    public long getFlag() {
+      return flag_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -209,6 +234,9 @@ public final class ProjectServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
+      if (flag_ != 0L) {
+        output.writeInt64(3, flag_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -223,6 +251,10 @@ public final class ProjectServiceProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (flag_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, flag_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -243,6 +275,8 @@ public final class ProjectServiceProto {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (getFlag()
+          != other.getFlag()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -258,6 +292,9 @@ public final class ProjectServiceProto {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlag());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -391,6 +428,7 @@ public final class ProjectServiceProto {
         bitField0_ = 0;
         name_ = "";
         description_ = "";
+        flag_ = 0L;
         return this;
       }
 
@@ -430,6 +468,9 @@ public final class ProjectServiceProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.flag_ = flag_;
+        }
       }
 
       @java.lang.Override
@@ -453,6 +494,9 @@ public final class ProjectServiceProto {
           description_ = other.description_;
           bitField0_ |= 0x00000002;
           onChanged();
+        }
+        if (other.getFlag() != 0L) {
+          setFlag(other.getFlag());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -490,6 +534,11 @@ public final class ProjectServiceProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 24: {
+                flag_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -687,6 +736,50 @@ public final class ProjectServiceProto {
         checkByteStringIsUtf8(value);
         description_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long flag_ ;
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flag = 3 [json_name = "flag"];</code>
+       * @return The flag.
+       */
+      @java.lang.Override
+      public long getFlag() {
+        return flag_;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flag = 3 [json_name = "flag"];</code>
+       * @param value The flag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlag(long value) {
+
+        flag_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flag = 3 [json_name = "flag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlag() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        flag_ = 0L;
         onChanged();
         return this;
       }
@@ -5882,6 +5975,16 @@ public final class ProjectServiceProto {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flag = 4 [json_name = "flag"];</code>
+     * @return The flag.
+     */
+    long getFlag();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v1.UpdateProjectRequest}
@@ -6062,6 +6165,21 @@ public final class ProjectServiceProto {
       }
     }
 
+    public static final int FLAG_FIELD_NUMBER = 4;
+    private long flag_ = 0L;
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flag = 4 [json_name = "flag"];</code>
+     * @return The flag.
+     */
+    @java.lang.Override
+    public long getFlag() {
+      return flag_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6085,6 +6203,9 @@ public final class ProjectServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
+      if (flag_ != 0L) {
+        output.writeInt64(4, flag_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6102,6 +6223,10 @@ public final class ProjectServiceProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (flag_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, flag_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6124,6 +6249,8 @@ public final class ProjectServiceProto {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (getFlag()
+          != other.getFlag()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6141,6 +6268,9 @@ public final class ProjectServiceProto {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlag());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6275,6 +6405,7 @@ public final class ProjectServiceProto {
         projectId_ = "";
         name_ = "";
         description_ = "";
+        flag_ = 0L;
         return this;
       }
 
@@ -6317,6 +6448,9 @@ public final class ProjectServiceProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.description_ = description_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.flag_ = flag_;
+        }
       }
 
       @java.lang.Override
@@ -6345,6 +6479,9 @@ public final class ProjectServiceProto {
           description_ = other.description_;
           bitField0_ |= 0x00000004;
           onChanged();
+        }
+        if (other.getFlag() != 0L) {
+          setFlag(other.getFlag());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6387,6 +6524,11 @@ public final class ProjectServiceProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                flag_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6676,6 +6818,50 @@ public final class ProjectServiceProto {
         checkByteStringIsUtf8(value);
         description_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long flag_ ;
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flag = 4 [json_name = "flag"];</code>
+       * @return The flag.
+       */
+      @java.lang.Override
+      public long getFlag() {
+        return flag_;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flag = 4 [json_name = "flag"];</code>
+       * @param value The flag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlag(long value) {
+
+        flag_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flag = 4 [json_name = "flag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlag() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        flag_ = 0L;
         onChanged();
         return this;
       }
@@ -13210,26 +13396,27 @@ public final class ProjectServiceProto {
       "s.v1\032&aruna/api/storage/models/v1/auth.p" +
       "roto\032\034google/api/annotations.proto\032.prot" +
       "oc-gen-openapiv2/options/annotations.pro" +
-      "to\"L\n\024CreateProjectRequest\022\022\n\004name\030\001 \001(\t" +
+      "to\"`\n\024CreateProjectRequest\022\022\n\004name\030\001 \001(\t" +
       "R\004name\022 \n\013description\030\002 \001(\tR\013description" +
-      "\"6\n\025CreateProjectResponse\022\035\n\nproject_id\030" +
-      "\001 \001(\tR\tprojectId\"\221\001\n\027AddUserToProjectReq" +
-      "uest\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\022W\n\017u" +
-      "ser_permission\030\003 \001(\0132..aruna.api.storage" +
-      ".models.v1.ProjectPermissionR\016userPermis" +
-      "sion\"\032\n\030AddUserToProjectResponse\"2\n\021GetP" +
-      "rojectRequest\022\035\n\nproject_id\030\001 \001(\tR\tproje" +
-      "ctId\"\\\n\022GetProjectResponse\022F\n\007project\030\001 " +
-      "\001(\0132,.aruna.api.storage.models.v1.Projec" +
-      "tOverviewR\007project\"\024\n\022GetProjectsRequest" +
-      "\"_\n\023GetProjectsResponse\022H\n\010projects\030\001 \003(" +
-      "\0132,.aruna.api.storage.models.v1.ProjectO" +
-      "verviewR\010projects\"6\n\025DestroyProjectReque" +
-      "st\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\"\030\n\026Des" +
-      "troyProjectResponse\"k\n\024UpdateProjectRequ" +
-      "est\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
-      "cription\"_\n\025UpdateProjectResponse\022F\n\007pro" +
+      "\022\022\n\004flag\030\003 \001(\003R\004flag\"6\n\025CreateProjectRes" +
+      "ponse\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\"\221\001\n" +
+      "\027AddUserToProjectRequest\022\035\n\nproject_id\030\001" +
+      " \001(\tR\tprojectId\022W\n\017user_permission\030\003 \001(\013" +
+      "2..aruna.api.storage.models.v1.ProjectPe" +
+      "rmissionR\016userPermission\"\032\n\030AddUserToPro" +
+      "jectResponse\"2\n\021GetProjectRequest\022\035\n\npro" +
+      "ject_id\030\001 \001(\tR\tprojectId\"\\\n\022GetProjectRe" +
+      "sponse\022F\n\007project\030\001 \001(\0132,.aruna.api.stor" +
+      "age.models.v1.ProjectOverviewR\007project\"\024" +
+      "\n\022GetProjectsRequest\"_\n\023GetProjectsRespo" +
+      "nse\022H\n\010projects\030\001 \003(\0132,.aruna.api.storag" +
+      "e.models.v1.ProjectOverviewR\010projects\"6\n" +
+      "\025DestroyProjectRequest\022\035\n\nproject_id\030\001 \001" +
+      "(\tR\tprojectId\"\030\n\026DestroyProjectResponse\"" +
+      "\177\n\024UpdateProjectRequest\022\035\n\nproject_id\030\001 " +
+      "\001(\tR\tprojectId\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013de" +
+      "scription\030\003 \001(\tR\013description\022\022\n\004flag\030\004 \001" +
+      "(\003R\004flag\"_\n\025UpdateProjectResponse\022F\n\007pro" +
       "ject\030\001 \001(\0132,.aruna.api.storage.models.v1" +
       ".ProjectOverviewR\007project\"V\n\034RemoveUserF" +
       "romProjectRequest\022\035\n\nproject_id\030\001 \001(\tR\tp" +
@@ -13308,7 +13495,7 @@ public final class ProjectServiceProto {
       "\\V1\342\002)Aruna\\Api\\Storage\\Services\\V1\\GPBM" +
       "etadata\352\002!Aruna::Api::Storage::Services:" +
       ":V1\222A\321\001\0221\n#Aruna Object Storage (AOS) RE" +
-      "ST API2\n1.1.0-rc.7*\001\0022\020application/json:" +
+      "ST API2\n1.1.0-rc.8*\001\0022\020application/json:" +
       "\020application/jsonZ`\n^\n\rAccessKeyAuth\022M\010\002" +
       "\0228Authentication token, prefixed by Bear" +
       "er: Bearer <token>\032\rAuthorization \002b\023\n\021\n" +
@@ -13326,7 +13513,7 @@ public final class ProjectServiceProto {
     internal_static_aruna_api_storage_services_v1_CreateProjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_CreateProjectRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", });
+        new java.lang.String[] { "Name", "Description", "Flag", });
     internal_static_aruna_api_storage_services_v1_CreateProjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v1_CreateProjectResponse_fieldAccessorTable = new
@@ -13386,7 +13573,7 @@ public final class ProjectServiceProto {
     internal_static_aruna_api_storage_services_v1_UpdateProjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v1_UpdateProjectRequest_descriptor,
-        new java.lang.String[] { "ProjectId", "Name", "Description", });
+        new java.lang.String[] { "ProjectId", "Name", "Description", "Flag", });
     internal_static_aruna_api_storage_services_v1_UpdateProjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_storage_services_v1_UpdateProjectResponse_fieldAccessorTable = new

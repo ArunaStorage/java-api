@@ -553,6 +553,16 @@ public final class AuthProto {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flags = 6 [json_name = "flags"];</code>
+     * @return The flags.
+     */
+    long getFlags();
   }
   /**
    * <pre>
@@ -796,6 +806,21 @@ public final class AuthProto {
       }
     }
 
+    public static final int FLAGS_FIELD_NUMBER = 6;
+    private long flags_ = 0L;
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flags = 6 [json_name = "flags"];</code>
+     * @return The flags.
+     */
+    @java.lang.Override
+    public long getFlags() {
+      return flags_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -824,6 +849,9 @@ public final class AuthProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
+      if (flags_ != 0L) {
+        output.writeInt64(6, flags_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -855,6 +883,10 @@ public final class AuthProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
+      if (flags_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, flags_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -880,6 +912,8 @@ public final class AuthProto {
           .equals(other.getCollectionIdsList())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (getFlags()
+          != other.getFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -905,6 +939,9 @@ public final class AuthProto {
       }
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlags());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1054,6 +1091,7 @@ public final class AuthProto {
         collectionIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         description_ = "";
+        flags_ = 0L;
         return this;
       }
 
@@ -1112,6 +1150,9 @@ public final class AuthProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.flags_ = flags_;
         }
       }
 
@@ -1178,6 +1219,9 @@ public final class AuthProto {
           bitField0_ |= 0x00000010;
           onChanged();
         }
+        if (other.getFlags() != 0L) {
+          setFlags(other.getFlags());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1238,6 +1282,11 @@ public final class AuthProto {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
+              case 48: {
+                flags_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1821,6 +1870,50 @@ public final class AuthProto {
         onChanged();
         return this;
       }
+
+      private long flags_ ;
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flags = 6 [json_name = "flags"];</code>
+       * @return The flags.
+       */
+      @java.lang.Override
+      public long getFlags() {
+        return flags_;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flags = 6 [json_name = "flags"];</code>
+       * @param value The flags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlags(long value) {
+
+        flags_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flags = 6 [json_name = "flags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlags() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        flags_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1974,6 +2067,16 @@ public final class AuthProto {
      */
     com.google.protobuf.ByteString
         getUserIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flags = 6 [json_name = "flags"];</code>
+     * @return The flags.
+     */
+    long getFlags();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v1.ProjectOverview}
@@ -2208,6 +2311,21 @@ public final class AuthProto {
       return userIds_.getByteString(index);
     }
 
+    public static final int FLAGS_FIELD_NUMBER = 6;
+    private long flags_ = 0L;
+    /**
+     * <pre>
+     * Project binary flag(s)
+     * </pre>
+     *
+     * <code>int64 flags = 6 [json_name = "flags"];</code>
+     * @return The flags.
+     */
+    @java.lang.Override
+    public long getFlags() {
+      return flags_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2236,6 +2354,9 @@ public final class AuthProto {
       }
       for (int i = 0; i < userIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, userIds_.getRaw(i));
+      }
+      if (flags_ != 0L) {
+        output.writeInt64(6, flags_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2271,6 +2392,10 @@ public final class AuthProto {
         size += dataSize;
         size += 1 * getUserIdsList().size();
       }
+      if (flags_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, flags_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2296,6 +2421,8 @@ public final class AuthProto {
           .equals(other.getCollectionIdsList())) return false;
       if (!getUserIdsList()
           .equals(other.getUserIdsList())) return false;
+      if (getFlags()
+          != other.getFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2321,6 +2448,9 @@ public final class AuthProto {
         hash = (37 * hash) + USER_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getUserIdsList().hashCode();
       }
+      hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlags());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2459,6 +2589,7 @@ public final class AuthProto {
             com.google.protobuf.LazyStringArrayList.emptyList();
         userIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
+        flags_ = 0L;
         return this;
       }
 
@@ -2509,6 +2640,9 @@ public final class AuthProto {
           userIds_.makeImmutable();
           result.userIds_ = userIds_;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.flags_ = flags_;
+        }
       }
 
       @java.lang.Override
@@ -2557,6 +2691,9 @@ public final class AuthProto {
             userIds_.addAll(other.userIds_);
           }
           onChanged();
+        }
+        if (other.getFlags() != 0L) {
+          setFlags(other.getFlags());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2611,6 +2748,11 @@ public final class AuthProto {
                 userIds_.add(s);
                 break;
               } // case 42
+              case 48: {
+                flags_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3062,6 +3204,50 @@ public final class AuthProto {
         ensureUserIdsIsMutable();
         userIds_.add(value);
         bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long flags_ ;
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flags = 6 [json_name = "flags"];</code>
+       * @return The flags.
+       */
+      @java.lang.Override
+      public long getFlags() {
+        return flags_;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flags = 6 [json_name = "flags"];</code>
+       * @param value The flags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlags(long value) {
+
+        flags_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Project binary flag(s)
+       * </pre>
+       *
+       * <code>int64 flags = 6 [json_name = "flags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlags() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        flags_ = 0L;
         onChanged();
         return this;
       }
@@ -8159,58 +8345,59 @@ public final class AuthProto {
     java.lang.String[] descriptorData = {
       "\n&aruna/api/storage/models/v1/auth.proto" +
       "\022\033aruna.api.storage.models.v1\032\037google/pr" +
-      "otobuf/timestamp.proto\"\321\001\n\007Project\022\016\n\002id" +
+      "otobuf/timestamp.proto\"\347\001\n\007Project\022\016\n\002id" +
       "\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022Y\n\020user_p" +
       "ermissions\030\003 \003(\0132..aruna.api.storage.mod" +
       "els.v1.ProjectPermissionR\017userPermission" +
       "s\022%\n\016collection_ids\030\004 \003(\tR\rcollectionIds" +
-      "\022 \n\013description\030\005 \001(\tR\013description\"\231\001\n\017P" +
-      "rojectOverview\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002" +
-      " \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descrip" +
-      "tion\022%\n\016collection_ids\030\004 \003(\tR\rcollection" +
-      "Ids\022\031\n\010user_ids\030\005 \003(\tR\007userIds\"\321\001\n\004User\022" +
-      "\016\n\002id\030\001 \001(\tR\002id\022\037\n\013external_id\030\002 \001(\tR\nex" +
-      "ternalId\022!\n\014display_name\030\003 \001(\tR\013displayN" +
-      "ame\022\026\n\006active\030\004 \001(\010R\006active\022\031\n\010is_admin\030" +
-      "\005 \001(\010R\007isAdmin\022,\n\022is_service_account\030\006 \001" +
-      "(\010R\020isServiceAccount\022\024\n\005email\030\007 \001(\tR\005ema" +
-      "il\"\311\003\n\005Token\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001" +
-      "(\tR\004name\022E\n\ntoken_type\030\004 \001(\0162&.aruna.api" +
-      ".storage.models.v1.TokenTypeR\ttokenType\022" +
-      "9\n\ncreated_at\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\tcreatedAt\0229\n\nexpires_at\030\006 \001(\0132\032" +
-      ".google.protobuf.TimestampR\texpiresAt\022#\n" +
-      "\rcollection_id\030\007 \001(\tR\014collectionId\022\035\n\npr" +
-      "oject_id\030\010 \001(\tR\tprojectId\022G\n\npermission\030" +
-      "\t \001(\0162\'.aruna.api.storage.models.v1.Perm" +
-      "issionR\npermission\022\035\n\nis_session\030\n \001(\010R\t" +
-      "isSession\0223\n\007used_at\030\013 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\006usedAt\"\275\001\n\021ProjectPermis" +
-      "sion\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nproject" +
-      "_id\030\002 \001(\tR\tprojectId\022G\n\npermission\030\003 \001(\016" +
-      "2\'.aruna.api.storage.models.v1.Permissio" +
-      "nR\npermission\022\'\n\017service_account\030\004 \001(\010R\016" +
-      "serviceAccount\"\302\001\n\034ProjectPermissionDisp" +
-      "layName\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nproj" +
-      "ect_id\030\002 \001(\tR\tprojectId\022G\n\npermission\030\003 " +
-      "\001(\0162\'.aruna.api.storage.models.v1.Permis" +
-      "sionR\npermission\022!\n\014display_name\030\004 \001(\tR\013" +
-      "displayName*\226\001\n\nPermission\022\032\n\026PERMISSION" +
-      "_UNSPECIFIED\020\000\022\023\n\017PERMISSION_NONE\020\001\022\023\n\017P" +
-      "ERMISSION_READ\020\002\022\025\n\021PERMISSION_APPEND\020\003\022" +
-      "\025\n\021PERMISSION_MODIFY\020\004\022\024\n\020PERMISSION_ADM" +
-      "IN\020\005*g\n\010PermType\022\031\n\025PERM_TYPE_UNSPECIFIE" +
-      "D\020\000\022\022\n\016PERM_TYPE_USER\020\001\022\027\n\023PERM_TYPE_ANO" +
-      "NYMOUS\020\002\022\023\n\017PERM_TYPE_TOKEN\020\003*W\n\tTokenTy" +
-      "pe\022\032\n\026TOKEN_TYPE_UNSPECIFIED\020\000\022\027\n\023TOKEN_" +
-      "TYPE_PERSONAL\020\001\022\025\n\021TOKEN_TYPE_SCOPED\020\002B\367" +
-      "\001\n\037com.aruna.api.storage.models.v1B\tAuth" +
-      "ProtoZ:github.com/ArunaStorage/go-api/ar" +
-      "una/api/storage/models/v1\242\002\004AASM\252\002\033Aruna" +
-      ".Api.Storage.Models.V1\312\002\033Aruna\\Api\\Stora" +
-      "ge\\Models\\V1\342\002\'Aruna\\Api\\Storage\\Models\\" +
-      "V1\\GPBMetadata\352\002\037Aruna::Api::Storage::Mo" +
-      "dels::V1b\006proto3"
+      "\022 \n\013description\030\005 \001(\tR\013description\022\024\n\005fl" +
+      "ags\030\006 \001(\003R\005flags\"\257\001\n\017ProjectOverview\022\016\n\002" +
+      "id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013desc" +
+      "ription\030\003 \001(\tR\013description\022%\n\016collection" +
+      "_ids\030\004 \003(\tR\rcollectionIds\022\031\n\010user_ids\030\005 " +
+      "\003(\tR\007userIds\022\024\n\005flags\030\006 \001(\003R\005flags\"\321\001\n\004U" +
+      "ser\022\016\n\002id\030\001 \001(\tR\002id\022\037\n\013external_id\030\002 \001(\t" +
+      "R\nexternalId\022!\n\014display_name\030\003 \001(\tR\013disp" +
+      "layName\022\026\n\006active\030\004 \001(\010R\006active\022\031\n\010is_ad" +
+      "min\030\005 \001(\010R\007isAdmin\022,\n\022is_service_account" +
+      "\030\006 \001(\010R\020isServiceAccount\022\024\n\005email\030\007 \001(\tR" +
+      "\005email\"\311\003\n\005Token\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022E\n\ntoken_type\030\004 \001(\0162&.aruna" +
+      ".api.storage.models.v1.TokenTypeR\ttokenT" +
+      "ype\0229\n\ncreated_at\030\005 \001(\0132\032.google.protobu" +
+      "f.TimestampR\tcreatedAt\0229\n\nexpires_at\030\006 \001" +
+      "(\0132\032.google.protobuf.TimestampR\texpiresA" +
+      "t\022#\n\rcollection_id\030\007 \001(\tR\014collectionId\022\035" +
+      "\n\nproject_id\030\010 \001(\tR\tprojectId\022G\n\npermiss" +
+      "ion\030\t \001(\0162\'.aruna.api.storage.models.v1." +
+      "PermissionR\npermission\022\035\n\nis_session\030\n \001" +
+      "(\010R\tisSession\0223\n\007used_at\030\013 \001(\0132\032.google." +
+      "protobuf.TimestampR\006usedAt\"\275\001\n\021ProjectPe" +
+      "rmission\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\npro" +
+      "ject_id\030\002 \001(\tR\tprojectId\022G\n\npermission\030\003" +
+      " \001(\0162\'.aruna.api.storage.models.v1.Permi" +
+      "ssionR\npermission\022\'\n\017service_account\030\004 \001" +
+      "(\010R\016serviceAccount\"\302\001\n\034ProjectPermission" +
+      "DisplayName\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\n" +
+      "project_id\030\002 \001(\tR\tprojectId\022G\n\npermissio" +
+      "n\030\003 \001(\0162\'.aruna.api.storage.models.v1.Pe" +
+      "rmissionR\npermission\022!\n\014display_name\030\004 \001" +
+      "(\tR\013displayName*\226\001\n\nPermission\022\032\n\026PERMIS" +
+      "SION_UNSPECIFIED\020\000\022\023\n\017PERMISSION_NONE\020\001\022" +
+      "\023\n\017PERMISSION_READ\020\002\022\025\n\021PERMISSION_APPEN" +
+      "D\020\003\022\025\n\021PERMISSION_MODIFY\020\004\022\024\n\020PERMISSION" +
+      "_ADMIN\020\005*g\n\010PermType\022\031\n\025PERM_TYPE_UNSPEC" +
+      "IFIED\020\000\022\022\n\016PERM_TYPE_USER\020\001\022\027\n\023PERM_TYPE" +
+      "_ANONYMOUS\020\002\022\023\n\017PERM_TYPE_TOKEN\020\003*W\n\tTok" +
+      "enType\022\032\n\026TOKEN_TYPE_UNSPECIFIED\020\000\022\027\n\023TO" +
+      "KEN_TYPE_PERSONAL\020\001\022\025\n\021TOKEN_TYPE_SCOPED" +
+      "\020\002B\367\001\n\037com.aruna.api.storage.models.v1B\t" +
+      "AuthProtoZ:github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/storage/models/v1\242\002\004AASM\252\002\033A" +
+      "runa.Api.Storage.Models.V1\312\002\033Aruna\\Api\\S" +
+      "torage\\Models\\V1\342\002\'Aruna\\Api\\Storage\\Mod" +
+      "els\\V1\\GPBMetadata\352\002\037Aruna::Api::Storage" +
+      "::Models::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8222,13 +8409,13 @@ public final class AuthProto {
     internal_static_aruna_api_storage_models_v1_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_Project_descriptor,
-        new java.lang.String[] { "Id", "Name", "UserPermissions", "CollectionIds", "Description", });
+        new java.lang.String[] { "Id", "Name", "UserPermissions", "CollectionIds", "Description", "Flags", });
     internal_static_aruna_api_storage_models_v1_ProjectOverview_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_models_v1_ProjectOverview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v1_ProjectOverview_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "CollectionIds", "UserIds", });
+        new java.lang.String[] { "Id", "Name", "Description", "CollectionIds", "UserIds", "Flags", });
     internal_static_aruna_api_storage_models_v1_User_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_aruna_api_storage_models_v1_User_fieldAccessorTable = new
