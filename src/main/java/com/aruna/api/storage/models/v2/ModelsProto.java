@@ -158,37 +158,37 @@ public final class ModelsProto {
    * Which kind of endpoint 
    * </pre>
    *
-   * Protobuf enum {@code aruna.api.storage.models.v2.EndpointType}
+   * Protobuf enum {@code aruna.api.storage.models.v2.EndpointVariant}
    */
-  public enum EndpointType
+  public enum EndpointVariant
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>ENDPOINT_TYPE_UNSPECIFIED = 0;</code>
+     * <code>ENDPOINT_VARIANT_UNSPECIFIED = 0;</code>
      */
-    ENDPOINT_TYPE_UNSPECIFIED(0),
+    ENDPOINT_VARIANT_UNSPECIFIED(0),
     /**
-     * <code>ENDPOINT_TYPE_PERSISTENT = 1;</code>
+     * <code>ENDPOINT_VARIANT_PERSISTENT = 1;</code>
      */
-    ENDPOINT_TYPE_PERSISTENT(1),
+    ENDPOINT_VARIANT_PERSISTENT(1),
     /**
-     * <code>ENDPOINT_TYPE_VOLATILE = 2;</code>
+     * <code>ENDPOINT_VARIANT_VOLATILE = 2;</code>
      */
-    ENDPOINT_TYPE_VOLATILE(2),
+    ENDPOINT_VARIANT_VOLATILE(2),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>ENDPOINT_TYPE_UNSPECIFIED = 0;</code>
+     * <code>ENDPOINT_VARIANT_UNSPECIFIED = 0;</code>
      */
-    public static final int ENDPOINT_TYPE_UNSPECIFIED_VALUE = 0;
+    public static final int ENDPOINT_VARIANT_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>ENDPOINT_TYPE_PERSISTENT = 1;</code>
+     * <code>ENDPOINT_VARIANT_PERSISTENT = 1;</code>
      */
-    public static final int ENDPOINT_TYPE_PERSISTENT_VALUE = 1;
+    public static final int ENDPOINT_VARIANT_PERSISTENT_VALUE = 1;
     /**
-     * <code>ENDPOINT_TYPE_VOLATILE = 2;</code>
+     * <code>ENDPOINT_VARIANT_VOLATILE = 2;</code>
      */
-    public static final int ENDPOINT_TYPE_VOLATILE_VALUE = 2;
+    public static final int ENDPOINT_VARIANT_VOLATILE_VALUE = 2;
 
 
     public final int getNumber() {
@@ -205,7 +205,7 @@ public final class ModelsProto {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static EndpointType valueOf(int value) {
+    public static EndpointVariant valueOf(int value) {
       return forNumber(value);
     }
 
@@ -213,24 +213,24 @@ public final class ModelsProto {
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static EndpointType forNumber(int value) {
+    public static EndpointVariant forNumber(int value) {
       switch (value) {
-        case 0: return ENDPOINT_TYPE_UNSPECIFIED;
-        case 1: return ENDPOINT_TYPE_PERSISTENT;
-        case 2: return ENDPOINT_TYPE_VOLATILE;
+        case 0: return ENDPOINT_VARIANT_UNSPECIFIED;
+        case 1: return ENDPOINT_VARIANT_PERSISTENT;
+        case 2: return ENDPOINT_VARIANT_VOLATILE;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EndpointType>
+    public static com.google.protobuf.Internal.EnumLiteMap<EndpointVariant>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        EndpointType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EndpointType>() {
-            public EndpointType findValueByNumber(int number) {
-              return EndpointType.forNumber(number);
+        EndpointVariant> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EndpointVariant>() {
+            public EndpointVariant findValueByNumber(int number) {
+              return EndpointVariant.forNumber(number);
             }
           };
 
@@ -251,9 +251,9 @@ public final class ModelsProto {
       return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(1);
     }
 
-    private static final EndpointType[] VALUES = values();
+    private static final EndpointVariant[] VALUES = values();
 
-    public static EndpointType valueOf(
+    public static EndpointVariant valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -267,11 +267,11 @@ public final class ModelsProto {
 
     private final int value;
 
-    private EndpointType(int value) {
+    private EndpointVariant(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.EndpointType)
+    // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.EndpointVariant)
   }
 
   /**
@@ -279,37 +279,37 @@ public final class ModelsProto {
    * Which features does the endpoint have
    * </pre>
    *
-   * Protobuf enum {@code aruna.api.storage.models.v2.EndpointHostType}
+   * Protobuf enum {@code aruna.api.storage.models.v2.EndpointHostVariant}
    */
-  public enum EndpointHostType
+  public enum EndpointHostVariant
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>ENDPOINT_HOST_TYPE_UNSPECIFIED = 0;</code>
+     * <code>ENDPOINT_HOST_VARIANT_UNSPECIFIED = 0;</code>
      */
-    ENDPOINT_HOST_TYPE_UNSPECIFIED(0),
+    ENDPOINT_HOST_VARIANT_UNSPECIFIED(0),
     /**
-     * <code>ENDPOINT_HOST_TYPE_PROXY = 1;</code>
+     * <code>ENDPOINT_HOST_VARIANT_PROXY = 1;</code>
      */
-    ENDPOINT_HOST_TYPE_PROXY(1),
+    ENDPOINT_HOST_VARIANT_PROXY(1),
     /**
-     * <code>ENDPOINT_HOST_TYPE_BUNDLER = 2;</code>
+     * <code>ENDPOINT_HOST_VARIANT_BUNDLER = 2;</code>
      */
-    ENDPOINT_HOST_TYPE_BUNDLER(2),
+    ENDPOINT_HOST_VARIANT_BUNDLER(2),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>ENDPOINT_HOST_TYPE_UNSPECIFIED = 0;</code>
+     * <code>ENDPOINT_HOST_VARIANT_UNSPECIFIED = 0;</code>
      */
-    public static final int ENDPOINT_HOST_TYPE_UNSPECIFIED_VALUE = 0;
+    public static final int ENDPOINT_HOST_VARIANT_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>ENDPOINT_HOST_TYPE_PROXY = 1;</code>
+     * <code>ENDPOINT_HOST_VARIANT_PROXY = 1;</code>
      */
-    public static final int ENDPOINT_HOST_TYPE_PROXY_VALUE = 1;
+    public static final int ENDPOINT_HOST_VARIANT_PROXY_VALUE = 1;
     /**
-     * <code>ENDPOINT_HOST_TYPE_BUNDLER = 2;</code>
+     * <code>ENDPOINT_HOST_VARIANT_BUNDLER = 2;</code>
      */
-    public static final int ENDPOINT_HOST_TYPE_BUNDLER_VALUE = 2;
+    public static final int ENDPOINT_HOST_VARIANT_BUNDLER_VALUE = 2;
 
 
     public final int getNumber() {
@@ -326,7 +326,7 @@ public final class ModelsProto {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static EndpointHostType valueOf(int value) {
+    public static EndpointHostVariant valueOf(int value) {
       return forNumber(value);
     }
 
@@ -334,24 +334,24 @@ public final class ModelsProto {
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static EndpointHostType forNumber(int value) {
+    public static EndpointHostVariant forNumber(int value) {
       switch (value) {
-        case 0: return ENDPOINT_HOST_TYPE_UNSPECIFIED;
-        case 1: return ENDPOINT_HOST_TYPE_PROXY;
-        case 2: return ENDPOINT_HOST_TYPE_BUNDLER;
+        case 0: return ENDPOINT_HOST_VARIANT_UNSPECIFIED;
+        case 1: return ENDPOINT_HOST_VARIANT_PROXY;
+        case 2: return ENDPOINT_HOST_VARIANT_BUNDLER;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EndpointHostType>
+    public static com.google.protobuf.Internal.EnumLiteMap<EndpointHostVariant>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        EndpointHostType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EndpointHostType>() {
-            public EndpointHostType findValueByNumber(int number) {
-              return EndpointHostType.forNumber(number);
+        EndpointHostVariant> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EndpointHostVariant>() {
+            public EndpointHostVariant findValueByNumber(int number) {
+              return EndpointHostVariant.forNumber(number);
             }
           };
 
@@ -372,9 +372,9 @@ public final class ModelsProto {
       return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(2);
     }
 
-    private static final EndpointHostType[] VALUES = values();
+    private static final EndpointHostVariant[] VALUES = values();
 
-    public static EndpointHostType valueOf(
+    public static EndpointHostVariant valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -388,11 +388,11 @@ public final class ModelsProto {
 
     private final int value;
 
-    private EndpointHostType(int value) {
+    private EndpointHostVariant(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.EndpointHostType)
+    // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.EndpointHostVariant)
   }
 
   /**
@@ -13852,15 +13852,15 @@ public final class ModelsProto {
     boolean getPublic();
 
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-     * @return The enum numeric value on the wire for hostType.
+     * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+     * @return The enum numeric value on the wire for hostVariant.
      */
-    int getHostTypeValue();
+    int getHostVariantValue();
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-     * @return The hostType.
+     * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+     * @return The hostVariant.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType getHostType();
+    com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant getHostVariant();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.EndpointHostConfig}
@@ -13876,7 +13876,7 @@ public final class ModelsProto {
     }
     private EndpointHostConfig() {
       url_ = "";
-      hostType_ = 0;
+      hostVariant_ = 0;
     }
 
     @java.lang.Override
@@ -13971,22 +13971,22 @@ public final class ModelsProto {
       return public_;
     }
 
-    public static final int HOST_TYPE_FIELD_NUMBER = 5;
-    private int hostType_ = 0;
+    public static final int HOST_VARIANT_FIELD_NUMBER = 5;
+    private int hostVariant_ = 0;
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-     * @return The enum numeric value on the wire for hostType.
+     * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+     * @return The enum numeric value on the wire for hostVariant.
      */
-    @java.lang.Override public int getHostTypeValue() {
-      return hostType_;
+    @java.lang.Override public int getHostVariantValue() {
+      return hostVariant_;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-     * @return The hostType.
+     * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+     * @return The hostVariant.
      */
-    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType getHostType() {
-      com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType.forNumber(hostType_);
-      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType.UNRECOGNIZED : result;
+    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant getHostVariant() {
+      com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant.forNumber(hostVariant_);
+      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14015,8 +14015,8 @@ public final class ModelsProto {
       if (public_ != false) {
         output.writeBool(4, public_);
       }
-      if (hostType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType.ENDPOINT_HOST_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(5, hostType_);
+      if (hostVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant.ENDPOINT_HOST_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, hostVariant_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -14042,9 +14042,9 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, public_);
       }
-      if (hostType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType.ENDPOINT_HOST_TYPE_UNSPECIFIED.getNumber()) {
+      if (hostVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant.ENDPOINT_HOST_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, hostType_);
+          .computeEnumSize(5, hostVariant_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -14069,7 +14069,7 @@ public final class ModelsProto {
           != other.getSsl()) return false;
       if (getPublic()
           != other.getPublic()) return false;
-      if (hostType_ != other.hostType_) return false;
+      if (hostVariant_ != other.hostVariant_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -14092,8 +14092,8 @@ public final class ModelsProto {
       hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPublic());
-      hash = (37 * hash) + HOST_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + hostType_;
+      hash = (37 * hash) + HOST_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + hostVariant_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14229,7 +14229,7 @@ public final class ModelsProto {
         isPrimary_ = false;
         ssl_ = false;
         public_ = false;
-        hostType_ = 0;
+        hostVariant_ = 0;
         return this;
       }
 
@@ -14276,7 +14276,7 @@ public final class ModelsProto {
           result.public_ = public_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.hostType_ = hostType_;
+          result.hostVariant_ = hostVariant_;
         }
       }
 
@@ -14306,8 +14306,8 @@ public final class ModelsProto {
         if (other.getPublic() != false) {
           setPublic(other.getPublic());
         }
-        if (other.hostType_ != 0) {
-          setHostTypeValue(other.getHostTypeValue());
+        if (other.hostVariant_ != 0) {
+          setHostVariantValue(other.getHostVariantValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -14356,7 +14356,7 @@ public final class ModelsProto {
                 break;
               } // case 32
               case 40: {
-                hostType_ = input.readEnum();
+                hostVariant_ = input.readEnum();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
@@ -14545,55 +14545,55 @@ public final class ModelsProto {
         return this;
       }
 
-      private int hostType_ = 0;
+      private int hostVariant_ = 0;
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-       * @return The enum numeric value on the wire for hostType.
+       * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+       * @return The enum numeric value on the wire for hostVariant.
        */
-      @java.lang.Override public int getHostTypeValue() {
-        return hostType_;
+      @java.lang.Override public int getHostVariantValue() {
+        return hostVariant_;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-       * @param value The enum numeric value on the wire for hostType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+       * @param value The enum numeric value on the wire for hostVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setHostTypeValue(int value) {
-        hostType_ = value;
+      public Builder setHostVariantValue(int value) {
+        hostVariant_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-       * @return The hostType.
+       * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+       * @return The hostVariant.
        */
       @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType getHostType() {
-        com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType.forNumber(hostType_);
-        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType.UNRECOGNIZED : result;
+      public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant getHostVariant() {
+        com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant.forNumber(hostVariant_);
+        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
-       * @param value The hostType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
+       * @param value The hostVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setHostType(com.aruna.api.storage.models.v2.ModelsProto.EndpointHostType value) {
+      public Builder setHostVariant(com.aruna.api.storage.models.v2.ModelsProto.EndpointHostVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000010;
-        hostType_ = value.getNumber();
+        hostVariant_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointHostType host_type = 5 [json_name = "hostType"];</code>
+       * <code>.aruna.api.storage.models.v2.EndpointHostVariant host_variant = 5 [json_name = "hostVariant"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearHostType() {
+      public Builder clearHostVariant() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        hostType_ = 0;
+        hostVariant_ = 0;
         onChanged();
         return this;
       }
@@ -14678,15 +14678,15 @@ public final class ModelsProto {
         getIdBytes();
 
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The enum numeric value on the wire for epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The enum numeric value on the wire for epVariant.
      */
-    int getEpTypeValue();
+    int getEpVariantValue();
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The epVariant.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType();
+    com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant();
 
     /**
      * <code>string name = 3 [json_name = "name"];</code>
@@ -14707,83 +14707,36 @@ public final class ModelsProto {
     boolean getIsPublic();
 
     /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @return A list containing the defaultFor.
-     */
-    java.util.List<java.lang.String>
-        getDefaultForList();
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @return The count of defaultFor.
-     */
-    int getDefaultForCount();
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @param index The index of the element to return.
-     * @return The defaultFor at the given index.
-     */
-    java.lang.String getDefaultFor(int index);
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the defaultFor at the given index.
-     */
-    com.google.protobuf.ByteString
-        getDefaultForBytes(int index);
-
-    /**
-     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
      * @return The status.
      */
     com.aruna.api.storage.models.v2.ModelsProto.ComponentStatus getStatus();
 
     /**
-     * <code>bool is_bundler = 7 [json_name = "isBundler"];</code>
-     * @return The isBundler.
-     */
-    boolean getIsBundler();
-
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig> 
         getHostConfigsList();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig getHostConfigs(int index);
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     int getHostConfigsCount();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder> 
         getHostConfigsOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
         int index);
@@ -14802,10 +14755,8 @@ public final class ModelsProto {
     }
     private Endpoint() {
       id_ = "";
-      epType_ = 0;
+      epVariant_ = 0;
       name_ = "";
-      defaultFor_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       status_ = 0;
       hostConfigs_ = java.util.Collections.emptyList();
     }
@@ -14869,22 +14820,22 @@ public final class ModelsProto {
       }
     }
 
-    public static final int EP_TYPE_FIELD_NUMBER = 2;
-    private int epType_ = 0;
+    public static final int EP_VARIANT_FIELD_NUMBER = 2;
+    private int epVariant_ = 0;
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The enum numeric value on the wire for epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The enum numeric value on the wire for epVariant.
      */
-    @java.lang.Override public int getEpTypeValue() {
-      return epType_;
+    @java.lang.Override public int getEpVariantValue() {
+      return epVariant_;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The epVariant.
      */
-    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType() {
-      com.aruna.api.storage.models.v2.ModelsProto.EndpointType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointType.forNumber(epType_);
-      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointType.UNRECOGNIZED : result;
+    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
+      com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
+      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
@@ -14937,70 +14888,17 @@ public final class ModelsProto {
       return isPublic_;
     }
 
-    public static final int DEFAULT_FOR_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList defaultFor_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @return A list containing the defaultFor.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getDefaultForList() {
-      return defaultFor_;
-    }
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @return The count of defaultFor.
-     */
-    public int getDefaultForCount() {
-      return defaultFor_.size();
-    }
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @param index The index of the element to return.
-     * @return The defaultFor at the given index.
-     */
-    public java.lang.String getDefaultFor(int index) {
-      return defaultFor_.get(index);
-    }
-    /**
-     * <pre>
-     * Aruna Servers that this endpoint is default for 
-     * </pre>
-     *
-     * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the defaultFor at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getDefaultForBytes(int index) {
-      return defaultFor_.getByteString(index);
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 6;
+    public static final int STATUS_FIELD_NUMBER = 5;
     private int status_ = 0;
     /**
-     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+     * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.ComponentStatus getStatus() {
@@ -15008,29 +14906,18 @@ public final class ModelsProto {
       return result == null ? com.aruna.api.storage.models.v2.ModelsProto.ComponentStatus.UNRECOGNIZED : result;
     }
 
-    public static final int IS_BUNDLER_FIELD_NUMBER = 7;
-    private boolean isBundler_ = false;
-    /**
-     * <code>bool is_bundler = 7 [json_name = "isBundler"];</code>
-     * @return The isBundler.
-     */
-    @java.lang.Override
-    public boolean getIsBundler() {
-      return isBundler_;
-    }
-
-    public static final int HOST_CONFIGS_FIELD_NUMBER = 8;
+    public static final int HOST_CONFIGS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig> hostConfigs_;
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig> getHostConfigsList() {
       return hostConfigs_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder> 
@@ -15038,21 +14925,21 @@ public final class ModelsProto {
       return hostConfigs_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     @java.lang.Override
     public int getHostConfigsCount() {
       return hostConfigs_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig getHostConfigs(int index) {
       return hostConfigs_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
@@ -15077,8 +14964,8 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (epType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, epType_);
+      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, epVariant_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
@@ -15086,17 +14973,11 @@ public final class ModelsProto {
       if (isPublic_ != false) {
         output.writeBool(4, isPublic_);
       }
-      for (int i = 0; i < defaultFor_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, defaultFor_.getRaw(i));
-      }
       if (status_ != com.aruna.api.storage.models.v2.ModelsProto.ComponentStatus.COMPONENT_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(6, status_);
-      }
-      if (isBundler_ != false) {
-        output.writeBool(7, isBundler_);
+        output.writeEnum(5, status_);
       }
       for (int i = 0; i < hostConfigs_.size(); i++) {
-        output.writeMessage(8, hostConfigs_.get(i));
+        output.writeMessage(6, hostConfigs_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -15110,9 +14991,9 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (epType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
+      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, epType_);
+          .computeEnumSize(2, epVariant_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
@@ -15121,25 +15002,13 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, isPublic_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < defaultFor_.size(); i++) {
-          dataSize += computeStringSizeNoTag(defaultFor_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getDefaultForList().size();
-      }
       if (status_ != com.aruna.api.storage.models.v2.ModelsProto.ComponentStatus.COMPONENT_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(6, status_);
-      }
-      if (isBundler_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isBundler_);
+          .computeEnumSize(5, status_);
       }
       for (int i = 0; i < hostConfigs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, hostConfigs_.get(i));
+          .computeMessageSize(6, hostConfigs_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -15158,16 +15027,12 @@ public final class ModelsProto {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (epType_ != other.epType_) return false;
+      if (epVariant_ != other.epVariant_) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (getIsPublic()
           != other.getIsPublic()) return false;
-      if (!getDefaultForList()
-          .equals(other.getDefaultForList())) return false;
       if (status_ != other.status_) return false;
-      if (getIsBundler()
-          != other.getIsBundler()) return false;
       if (!getHostConfigsList()
           .equals(other.getHostConfigsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -15183,22 +15048,15 @@ public final class ModelsProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + EP_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + epType_;
+      hash = (37 * hash) + EP_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + epVariant_;
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsPublic());
-      if (getDefaultForCount() > 0) {
-        hash = (37 * hash) + DEFAULT_FOR_FIELD_NUMBER;
-        hash = (53 * hash) + getDefaultForList().hashCode();
-      }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (37 * hash) + IS_BUNDLER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsBundler());
       if (getHostConfigsCount() > 0) {
         hash = (37 * hash) + HOST_CONFIGS_FIELD_NUMBER;
         hash = (53 * hash) + getHostConfigsList().hashCode();
@@ -15335,20 +15193,17 @@ public final class ModelsProto {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        epType_ = 0;
+        epVariant_ = 0;
         name_ = "";
         isPublic_ = false;
-        defaultFor_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
         status_ = 0;
-        isBundler_ = false;
         if (hostConfigsBuilder_ == null) {
           hostConfigs_ = java.util.Collections.emptyList();
         } else {
           hostConfigs_ = null;
           hostConfigsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -15383,9 +15238,9 @@ public final class ModelsProto {
 
       private void buildPartialRepeatedFields(com.aruna.api.storage.models.v2.ModelsProto.Endpoint result) {
         if (hostConfigsBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             hostConfigs_ = java.util.Collections.unmodifiableList(hostConfigs_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.hostConfigs_ = hostConfigs_;
         } else {
@@ -15399,7 +15254,7 @@ public final class ModelsProto {
           result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.epType_ = epType_;
+          result.epVariant_ = epVariant_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
@@ -15408,14 +15263,7 @@ public final class ModelsProto {
           result.isPublic_ = isPublic_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          defaultFor_.makeImmutable();
-          result.defaultFor_ = defaultFor_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.isBundler_ = isBundler_;
         }
       }
 
@@ -15436,8 +15284,8 @@ public final class ModelsProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.epType_ != 0) {
-          setEpTypeValue(other.getEpTypeValue());
+        if (other.epVariant_ != 0) {
+          setEpVariantValue(other.getEpVariantValue());
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
@@ -15447,27 +15295,14 @@ public final class ModelsProto {
         if (other.getIsPublic() != false) {
           setIsPublic(other.getIsPublic());
         }
-        if (!other.defaultFor_.isEmpty()) {
-          if (defaultFor_.isEmpty()) {
-            defaultFor_ = other.defaultFor_;
-            bitField0_ |= 0x00000010;
-          } else {
-            ensureDefaultForIsMutable();
-            defaultFor_.addAll(other.defaultFor_);
-          }
-          onChanged();
-        }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
-        }
-        if (other.getIsBundler() != false) {
-          setIsBundler(other.getIsBundler());
         }
         if (hostConfigsBuilder_ == null) {
           if (!other.hostConfigs_.isEmpty()) {
             if (hostConfigs_.isEmpty()) {
               hostConfigs_ = other.hostConfigs_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureHostConfigsIsMutable();
               hostConfigs_.addAll(other.hostConfigs_);
@@ -15480,7 +15315,7 @@ public final class ModelsProto {
               hostConfigsBuilder_.dispose();
               hostConfigsBuilder_ = null;
               hostConfigs_ = other.hostConfigs_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000020);
               hostConfigsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHostConfigsFieldBuilder() : null;
@@ -15521,7 +15356,7 @@ public final class ModelsProto {
                 break;
               } // case 10
               case 16: {
-                epType_ = input.readEnum();
+                epVariant_ = input.readEnum();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -15535,23 +15370,12 @@ public final class ModelsProto {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
-              case 42: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureDefaultForIsMutable();
-                defaultFor_.add(s);
-                break;
-              } // case 42
-              case 48: {
+              case 40: {
                 status_ = input.readEnum();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000010;
                 break;
-              } // case 48
-              case 56: {
-                isBundler_ = input.readBool();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 56
-              case 66: {
+              } // case 40
+              case 50: {
                 com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig m =
                     input.readMessage(
                         com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.parser(),
@@ -15563,7 +15387,7 @@ public final class ModelsProto {
                   hostConfigsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 66
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -15653,55 +15477,55 @@ public final class ModelsProto {
         return this;
       }
 
-      private int epType_ = 0;
+      private int epVariant_ = 0;
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @return The enum numeric value on the wire for epType.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @return The enum numeric value on the wire for epVariant.
        */
-      @java.lang.Override public int getEpTypeValue() {
-        return epType_;
+      @java.lang.Override public int getEpVariantValue() {
+        return epVariant_;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @param value The enum numeric value on the wire for epType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @param value The enum numeric value on the wire for epVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEpTypeValue(int value) {
-        epType_ = value;
+      public Builder setEpVariantValue(int value) {
+        epVariant_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @return The epType.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @return The epVariant.
        */
       @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType() {
-        com.aruna.api.storage.models.v2.ModelsProto.EndpointType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointType.forNumber(epType_);
-        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointType.UNRECOGNIZED : result;
+      public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
+        com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
+        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @param value The epType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @param value The epVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEpType(com.aruna.api.storage.models.v2.ModelsProto.EndpointType value) {
+      public Builder setEpVariant(com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000002;
-        epType_ = value.getNumber();
+        epVariant_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEpType() {
+      public Builder clearEpVariant() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        epType_ = 0;
+        epVariant_ = 0;
         onChanged();
         return this;
       }
@@ -15810,174 +15634,27 @@ public final class ModelsProto {
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList defaultFor_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureDefaultForIsMutable() {
-        if (!defaultFor_.isModifiable()) {
-          defaultFor_ = new com.google.protobuf.LazyStringArrayList(defaultFor_);
-        }
-        bitField0_ |= 0x00000010;
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @return A list containing the defaultFor.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getDefaultForList() {
-        defaultFor_.makeImmutable();
-        return defaultFor_;
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @return The count of defaultFor.
-       */
-      public int getDefaultForCount() {
-        return defaultFor_.size();
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @param index The index of the element to return.
-       * @return The defaultFor at the given index.
-       */
-      public java.lang.String getDefaultFor(int index) {
-        return defaultFor_.get(index);
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the defaultFor at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getDefaultForBytes(int index) {
-        return defaultFor_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @param index The index to set the value at.
-       * @param value The defaultFor to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDefaultFor(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDefaultForIsMutable();
-        defaultFor_.set(index, value);
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @param value The defaultFor to add.
-       * @return This builder for chaining.
-       */
-      public Builder addDefaultFor(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDefaultForIsMutable();
-        defaultFor_.add(value);
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @param values The defaultFor to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllDefaultFor(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureDefaultForIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, defaultFor_);
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDefaultFor() {
-        defaultFor_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Aruna Servers that this endpoint is default for 
-       * </pre>
-       *
-       * <code>repeated string default_for = 5 [json_name = "defaultFor"];</code>
-       * @param value The bytes of the defaultFor to add.
-       * @return This builder for chaining.
-       */
-      public Builder addDefaultForBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureDefaultForIsMutable();
-        defaultFor_.add(value);
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-
       private int status_ = 0;
       /**
-       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
        * @return The status.
        */
       @java.lang.Override
@@ -15986,7 +15663,7 @@ public final class ModelsProto {
         return result == null ? com.aruna.api.storage.models.v2.ModelsProto.ComponentStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -15994,50 +15671,18 @@ public final class ModelsProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         status_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 6 [json_name = "status"];</code>
+       * <code>.aruna.api.storage.models.v2.ComponentStatus status = 5 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         status_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isBundler_ ;
-      /**
-       * <code>bool is_bundler = 7 [json_name = "isBundler"];</code>
-       * @return The isBundler.
-       */
-      @java.lang.Override
-      public boolean getIsBundler() {
-        return isBundler_;
-      }
-      /**
-       * <code>bool is_bundler = 7 [json_name = "isBundler"];</code>
-       * @param value The isBundler to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsBundler(boolean value) {
-
-        isBundler_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_bundler = 7 [json_name = "isBundler"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsBundler() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        isBundler_ = false;
         onChanged();
         return this;
       }
@@ -16045,9 +15690,9 @@ public final class ModelsProto {
       private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig> hostConfigs_ =
         java.util.Collections.emptyList();
       private void ensureHostConfigsIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           hostConfigs_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig>(hostConfigs_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -16055,7 +15700,7 @@ public final class ModelsProto {
           com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder> hostConfigsBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig> getHostConfigsList() {
         if (hostConfigsBuilder_ == null) {
@@ -16065,7 +15710,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public int getHostConfigsCount() {
         if (hostConfigsBuilder_ == null) {
@@ -16075,7 +15720,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig getHostConfigs(int index) {
         if (hostConfigsBuilder_ == null) {
@@ -16085,7 +15730,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder setHostConfigs(
           int index, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig value) {
@@ -16102,7 +15747,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder setHostConfigs(
           int index, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder builderForValue) {
@@ -16116,7 +15761,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder addHostConfigs(com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig value) {
         if (hostConfigsBuilder_ == null) {
@@ -16132,7 +15777,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder addHostConfigs(
           int index, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig value) {
@@ -16149,7 +15794,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder addHostConfigs(
           com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder builderForValue) {
@@ -16163,7 +15808,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder addHostConfigs(
           int index, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder builderForValue) {
@@ -16177,7 +15822,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder addAllHostConfigs(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig> values) {
@@ -16192,12 +15837,12 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder clearHostConfigs() {
         if (hostConfigsBuilder_ == null) {
           hostConfigs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           hostConfigsBuilder_.clear();
@@ -16205,7 +15850,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public Builder removeHostConfigs(int index) {
         if (hostConfigsBuilder_ == null) {
@@ -16218,14 +15863,14 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder getHostConfigsBuilder(
           int index) {
         return getHostConfigsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder getHostConfigsOrBuilder(
           int index) {
@@ -16235,7 +15880,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder> 
            getHostConfigsOrBuilderList() {
@@ -16246,14 +15891,14 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder addHostConfigsBuilder() {
         return getHostConfigsFieldBuilder().addBuilder(
             com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder addHostConfigsBuilder(
           int index) {
@@ -16261,7 +15906,7 @@ public final class ModelsProto {
             index, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 8 [json_name = "hostConfigs"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.EndpointHostConfig host_configs = 6 [json_name = "hostConfigs"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder> 
            getHostConfigsBuilderList() {
@@ -16274,7 +15919,7 @@ public final class ModelsProto {
           hostConfigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfig.Builder, com.aruna.api.storage.models.v2.ModelsProto.EndpointHostConfigOrBuilder>(
                   hostConfigs_,
-                  ((bitField0_ & 0x00000080) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           hostConfigs_ = null;
@@ -28871,137 +28516,136 @@ public final class ModelsProto {
       "ize\022=\n\014last_updated\030\003 \001(\0132\032.google.proto" +
       "buf.TimestampR\013lastUpdated\"X\n\004Hash\022<\n\003al" +
       "g\030\001 \001(\0162*.aruna.api.storage.models.v2.Ha" +
-      "shalgorithmR\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\273\001\n" +
+      "shalgorithmR\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n" +
       "\022EndpointHostConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n" +
       "\nis_primary\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(" +
-      "\010R\003ssl\022\026\n\006public\030\004 \001(\010R\006public\022J\n\thost_t" +
-      "ype\030\005 \001(\0162-.aruna.api.storage.models.v2." +
-      "EndpointHostTypeR\010hostType\"\351\002\n\010Endpoint\022" +
-      "\016\n\002id\030\001 \001(\tR\002id\022B\n\007ep_type\030\002 \001(\0162).aruna" +
-      ".api.storage.models.v2.EndpointTypeR\006epT" +
-      "ype\022\022\n\004name\030\003 \001(\tR\004name\022\033\n\tis_public\030\004 \001" +
-      "(\010R\010isPublic\022\037\n\013default_for\030\005 \003(\tR\ndefau" +
-      "ltFor\022D\n\006status\030\006 \001(\0162,.aruna.api.storag" +
-      "e.models.v2.ComponentStatusR\006status\022\035\n\ni" +
-      "s_bundler\030\007 \001(\010R\tisBundler\022R\n\014host_confi" +
-      "gs\030\010 \003(\0132/.aruna.api.storage.models.v2.E" +
-      "ndpointHostConfigR\013hostConfigs\"\253\002\n\017Gener" +
-      "icResource\022@\n\007project\030\001 \001(\0132$.aruna.api." +
-      "storage.models.v2.ProjectH\000R\007project\022I\n\n" +
-      "collection\030\002 \001(\0132\'.aruna.api.storage.mod" +
-      "els.v2.CollectionH\000R\ncollection\022@\n\007datas" +
-      "et\030\003 \001(\0132$.aruna.api.storage.models.v2.D" +
-      "atasetH\000R\007dataset\022=\n\006object\030\004 \001(\0132#.arun" +
-      "a.api.storage.models.v2.ObjectH\000R\006object" +
-      "B\n\n\010resource\"\214\004\n\007Project\022\016\n\002id\030\001 \001(\tR\002id" +
-      "\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(" +
-      "\tR\013description\022D\n\nkey_values\030\004 \003(\0132%.aru" +
-      "na.api.storage.models.v2.KeyValueR\tkeyVa" +
-      "lues\022C\n\trelations\030\005 \003(\0132%.aruna.api.stor" +
-      "age.models.v2.RelationR\trelations\0228\n\005sta" +
-      "ts\030\006 \001(\0132\".aruna.api.storage.models.v2.S" +
-      "tatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&.aruna." +
-      "api.storage.models.v2.DataClassR\tdataCla" +
-      "ss\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf" +
-      ".TimestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(" +
-      "\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api" +
-      ".storage.models.v2.StatusR\006status\022\030\n\007dyn" +
-      "amic\030\013 \001(\010R\007dynamic\"\217\004\n\nCollection\022\016\n\002id" +
-      "\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descri" +
-      "ption\030\003 \001(\tR\013description\022D\n\nkey_values\030\004" +
-      " \003(\0132%.aruna.api.storage.models.v2.KeyVa" +
-      "lueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.arun" +
-      "a.api.storage.models.v2.RelationR\trelati" +
-      "ons\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage.m" +
-      "odels.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(" +
-      "\0162&.aruna.api.storage.models.v2.DataClas" +
-      "sR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\tcreatedAt\022\035\n\ncreat" +
-      "ed_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#" +
-      ".aruna.api.storage.models.v2.StatusR\006sta" +
-      "tus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\214\004\n\007Datase" +
+      "\010R\003ssl\022\026\n\006public\030\004 \001(\010R\006public\022S\n\014host_v" +
+      "ariant\030\005 \001(\01620.aruna.api.storage.models." +
+      "v2.EndpointHostVariantR\013hostVariant\"\262\002\n\010" +
+      "Endpoint\022\016\n\002id\030\001 \001(\tR\002id\022K\n\nep_variant\030\002" +
+      " \001(\0162,.aruna.api.storage.models.v2.Endpo" +
+      "intVariantR\tepVariant\022\022\n\004name\030\003 \001(\tR\004nam" +
+      "e\022\033\n\tis_public\030\004 \001(\010R\010isPublic\022D\n\006status" +
+      "\030\005 \001(\0162,.aruna.api.storage.models.v2.Com" +
+      "ponentStatusR\006status\022R\n\014host_configs\030\006 \003" +
+      "(\0132/.aruna.api.storage.models.v2.Endpoin" +
+      "tHostConfigR\013hostConfigs\"\253\002\n\017GenericReso" +
+      "urce\022@\n\007project\030\001 \001(\0132$.aruna.api.storag" +
+      "e.models.v2.ProjectH\000R\007project\022I\n\ncollec" +
+      "tion\030\002 \001(\0132\'.aruna.api.storage.models.v2" +
+      ".CollectionH\000R\ncollection\022@\n\007dataset\030\003 \001" +
+      "(\0132$.aruna.api.storage.models.v2.Dataset" +
+      "H\000R\007dataset\022=\n\006object\030\004 \001(\0132#.aruna.api." +
+      "storage.models.v2.ObjectH\000R\006objectB\n\n\010re" +
+      "source\"\214\004\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004na" +
+      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
+      "cription\022D\n\nkey_values\030\004 \003(\0132%.aruna.api" +
+      ".storage.models.v2.KeyValueR\tkeyValues\022C" +
+      "\n\trelations\030\005 \003(\0132%.aruna.api.storage.mo" +
+      "dels.v2.RelationR\trelations\0228\n\005stats\030\006 \001" +
+      "(\0132\".aruna.api.storage.models.v2.StatsR\005" +
+      "stats\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.st" +
+      "orage.models.v2.DataClassR\tdataClass\0229\n\n" +
+      "created_at\030\010 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcre" +
+      "atedBy\022;\n\006status\030\n \001(\0162#.aruna.api.stora" +
+      "ge.models.v2.StatusR\006status\022\030\n\007dynamic\030\013" +
+      " \001(\010R\007dynamic\"\217\004\n\nCollection\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030" +
+      "\003 \001(\tR\013description\022D\n\nkey_values\030\004 \003(\0132%" +
+      ".aruna.api.storage.models.v2.KeyValueR\tk" +
+      "eyValues\022C\n\trelations\030\005 \003(\0132%.aruna.api." +
+      "storage.models.v2.RelationR\trelations\0228\n" +
+      "\005stats\030\006 \001(\0132\".aruna.api.storage.models." +
+      "v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&.ar" +
+      "una.api.storage.models.v2.DataClassR\tdat" +
+      "aClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\tcreatedAt\022\035\n\ncreated_by\030" +
+      "\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna" +
+      ".api.storage.models.v2.StatusR\006status\022\030\n" +
+      "\007dynamic\030\013 \001(\010R\007dynamic\"\214\004\n\007Dataset\022\016\n\002i" +
+      "d\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descr" +
+      "iption\030\003 \001(\tR\013description\022D\n\nkey_values\030" +
+      "\004 \003(\0132%.aruna.api.storage.models.v2.KeyV" +
+      "alueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.aru" +
+      "na.api.storage.models.v2.RelationR\trelat" +
+      "ions\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage." +
+      "models.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001" +
+      "(\0162&.aruna.api.storage.models.v2.DataCla" +
+      "ssR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\tcreatedAt\022\035\n\ncrea" +
+      "ted_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162" +
+      "#.aruna.api.storage.models.v2.StatusR\006st" +
+      "atus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\255\004\n\006Objec" +
       "t\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
       "\013description\030\003 \001(\tR\013description\022D\n\nkey_v" +
       "alues\030\004 \003(\0132%.aruna.api.storage.models.v" +
       "2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003(\013" +
       "2%.aruna.api.storage.models.v2.RelationR" +
-      "\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api.st" +
-      "orage.models.v2.StatsR\005stats\022E\n\ndata_cla" +
-      "ss\030\007 \001(\0162&.aruna.api.storage.models.v2.D" +
-      "ataClassR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tcreatedAt\022\035" +
-      "\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030" +
-      "\n \001(\0162#.aruna.api.storage.models.v2.Stat" +
-      "usR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\255\004\n" +
-      "\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004n" +
-      "ame\022 \n\013description\030\003 \001(\tR\013description\022D\n" +
-      "\nkey_values\030\004 \003(\0132%.aruna.api.storage.mo" +
-      "dels.v2.KeyValueR\tkeyValues\022C\n\trelations" +
-      "\030\005 \003(\0132%.aruna.api.storage.models.v2.Rel" +
-      "ationR\trelations\022\037\n\013content_len\030\006 \001(\003R\nc" +
-      "ontentLen\022E\n\ndata_class\030\007 \001(\0162&.aruna.ap" +
-      "i.storage.models.v2.DataClassR\tdataClass" +
-      "\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf.T" +
-      "imestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR" +
-      "\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api.s" +
-      "torage.models.v2.StatusR\006status\022\030\n\007dynam" +
-      "ic\030\013 \001(\010R\007dynamic\0229\n\006hashes\030\014 \003(\0132!.arun" +
-      "a.api.storage.models.v2.HashR\006hashes*\215\001\n" +
-      "\tDataClass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025" +
-      "\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIV" +
-      "ATE\020\002\022\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DATA_" +
-      "CLASS_CONFIDENTIAL\020\005*g\n\014EndpointType\022\035\n\031" +
-      "ENDPOINT_TYPE_UNSPECIFIED\020\000\022\034\n\030ENDPOINT_" +
-      "TYPE_PERSISTENT\020\001\022\032\n\026ENDPOINT_TYPE_VOLAT" +
-      "ILE\020\002*t\n\020EndpointHostType\022\"\n\036ENDPOINT_HO" +
-      "ST_TYPE_UNSPECIFIED\020\000\022\034\n\030ENDPOINT_HOST_T" +
-      "YPE_PROXY\020\001\022\036\n\032ENDPOINT_HOST_TYPE_BUNDLE" +
-      "R\020\002*\276\001\n\017PermissionLevel\022 \n\034PERMISSION_LE" +
-      "VEL_UNSPECIFIED\020\000\022\031\n\025PERMISSION_LEVEL_NO" +
-      "NE\020\002\022\031\n\025PERMISSION_LEVEL_READ\020\003\022\033\n\027PERMI" +
-      "SSION_LEVEL_APPEND\020\004\022\032\n\026PERMISSION_LEVEL" +
-      "_WRITE\020\005\022\032\n\026PERMISSION_LEVEL_ADMIN\020\006*\221\001\n" +
-      "\017KeyValueVariant\022!\n\035KEY_VALUE_VARIANT_UN" +
-      "SPECIFIED\020\000\022\033\n\027KEY_VALUE_VARIANT_LABEL\020\001" +
-      "\022\"\n\036KEY_VALUE_VARIANT_STATIC_LABEL\020\002\022\032\n\026" +
-      "KEY_VALUE_VARIANT_HOOK\020\003*\221\001\n\027ExternalRel" +
-      "ationVariant\022)\n%EXTERNAL_RELATION_VARIAN" +
-      "T_UNSPECIFIED\020\000\022!\n\035EXTERNAL_RELATION_VAR" +
-      "IANT_URL\020\001\022(\n$EXTERNAL_RELATION_VARIANT_" +
-      "IDENTIFIER\020\002*\211\002\n\027InternalRelationVariant" +
-      "\022)\n%INTERNAL_RELATION_VARIANT_UNSPECIFIE" +
-      "D\020\000\022(\n$INTERNAL_RELATION_VARIANT_BELONGS" +
-      "_TO\020\001\022$\n INTERNAL_RELATION_VARIANT_ORIGI" +
-      "N\020\002\022%\n!INTERNAL_RELATION_VARIANT_DERIVED" +
-      "\020\003\022&\n\"INTERNAL_RELATION_VARIANT_METADATA" +
-      "\020\004\022$\n INTERNAL_RELATION_VARIANT_POLICY\020\005" +
-      "*x\n\021RelationDirection\022\"\n\036RELATION_DIRECT" +
-      "ION_UNSPECIFIED\020\000\022\036\n\032RELATION_DIRECTION_" +
-      "INBOUND\020\001\022\037\n\033RELATION_DIRECTION_OUTBOUND" +
-      "\020\002*\273\001\n\016ResourceAction\022\037\n\033RESOURCE_ACTION" +
-      "_UNSPECIFIED\020\000\022\032\n\026RESOURCE_ACTION_CREATE" +
-      "\020\001\022\032\n\026RESOURCE_ACTION_APPEND\020\002\022\032\n\026RESOUR" +
-      "CE_ACTION_UPDATE\020\003\022\030\n\024RESOURCE_ACTION_RE" +
-      "AD\020\004\022\032\n\026RESOURCE_ACTION_DELETE\020\005*\244\001\n\006Sta" +
-      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\027\n\023STATUS_IN" +
-      "ITIALIZING\020\001\022\025\n\021STATUS_VALIDATING\020\002\022\024\n\020S" +
-      "TATUS_AVAILABLE\020\003\022\026\n\022STATUS_UNAVAILABLE\020" +
-      "\004\022\020\n\014STATUS_ERROR\020\005\022\022\n\016STATUS_DELETED\020\006*" +
-      "\331\001\n\017ComponentStatus\022 \n\034COMPONENT_STATUS_" +
-      "UNSPECIFIED\020\000\022!\n\035COMPONENT_STATUS_INITIA" +
-      "LIZING\020\001\022\036\n\032COMPONENT_STATUS_AVAILABLE\020\002" +
-      "\022\035\n\031COMPONENT_STATUS_DEGRADED\020\003\022 \n\034COMPO" +
-      "NENT_STATUS_UNAVAILABLE\020\004\022 \n\034COMPONENT_S" +
-      "TATUS_MAINTENANCE\020\005*_\n\rHashalgorithm\022\035\n\031" +
-      "HASHALGORITHM_UNSPECIFIED\020\000\022\025\n\021HASHALGOR" +
-      "ITHM_MD5\020\001\022\030\n\024HASHALGORITHM_SHA256\020\002B\371\001\n" +
-      "\037com.aruna.api.storage.models.v2B\013Models" +
-      "ProtoZ:github.com/ArunaStorage/go-api/ar" +
-      "una/api/storage/models/v2\242\002\004AASM\252\002\033Aruna" +
-      ".Api.Storage.Models.V2\312\002\033Aruna\\Api\\Stora" +
-      "ge\\Models\\V2\342\002\'Aruna\\Api\\Storage\\Models\\" +
-      "V2\\GPBMetadata\352\002\037Aruna::Api::Storage::Mo" +
-      "dels::V2b\006proto3"
+      "\trelations\022\037\n\013content_len\030\006 \001(\003R\ncontent" +
+      "Len\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.stor" +
+      "age.models.v2.DataClassR\tdataClass\0229\n\ncr" +
+      "eated_at\030\010 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreat" +
+      "edBy\022;\n\006status\030\n \001(\0162#.aruna.api.storage" +
+      ".models.v2.StatusR\006status\022\030\n\007dynamic\030\013 \001" +
+      "(\010R\007dynamic\0229\n\006hashes\030\014 \003(\0132!.aruna.api." +
+      "storage.models.v2.HashR\006hashes*\215\001\n\tDataC" +
+      "lass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025\n\021DATA" +
+      "_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIVATE\020\002\022" +
+      "\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DATA_CLASS_" +
+      "CONFIDENTIAL\020\005*s\n\017EndpointVariant\022 \n\034END" +
+      "POINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033ENDPOINT_" +
+      "VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOINT_VARIANT" +
+      "_VOLATILE\020\002*\200\001\n\023EndpointHostVariant\022%\n!E" +
+      "NDPOINT_HOST_VARIANT_UNSPECIFIED\020\000\022\037\n\033EN" +
+      "DPOINT_HOST_VARIANT_PROXY\020\001\022!\n\035ENDPOINT_" +
+      "HOST_VARIANT_BUNDLER\020\002*\276\001\n\017PermissionLev" +
+      "el\022 \n\034PERMISSION_LEVEL_UNSPECIFIED\020\000\022\031\n\025" +
+      "PERMISSION_LEVEL_NONE\020\002\022\031\n\025PERMISSION_LE" +
+      "VEL_READ\020\003\022\033\n\027PERMISSION_LEVEL_APPEND\020\004\022" +
+      "\032\n\026PERMISSION_LEVEL_WRITE\020\005\022\032\n\026PERMISSIO" +
+      "N_LEVEL_ADMIN\020\006*\221\001\n\017KeyValueVariant\022!\n\035K" +
+      "EY_VALUE_VARIANT_UNSPECIFIED\020\000\022\033\n\027KEY_VA" +
+      "LUE_VARIANT_LABEL\020\001\022\"\n\036KEY_VALUE_VARIANT" +
+      "_STATIC_LABEL\020\002\022\032\n\026KEY_VALUE_VARIANT_HOO" +
+      "K\020\003*\221\001\n\027ExternalRelationVariant\022)\n%EXTER" +
+      "NAL_RELATION_VARIANT_UNSPECIFIED\020\000\022!\n\035EX" +
+      "TERNAL_RELATION_VARIANT_URL\020\001\022(\n$EXTERNA" +
+      "L_RELATION_VARIANT_IDENTIFIER\020\002*\211\002\n\027Inte" +
+      "rnalRelationVariant\022)\n%INTERNAL_RELATION" +
+      "_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL_RELAT" +
+      "ION_VARIANT_BELONGS_TO\020\001\022$\n INTERNAL_REL" +
+      "ATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL_RELAT" +
+      "ION_VARIANT_DERIVED\020\003\022&\n\"INTERNAL_RELATI" +
+      "ON_VARIANT_METADATA\020\004\022$\n INTERNAL_RELATI" +
+      "ON_VARIANT_POLICY\020\005*x\n\021RelationDirection" +
+      "\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000\022\036\n\032" +
+      "RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELATION" +
+      "_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceAction" +
+      "\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n\026RES" +
+      "OURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_ACTION" +
+      "_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020\003\022\030\n" +
+      "\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_ACTI" +
+      "ON_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNSPECI" +
+      "FIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021STATU" +
+      "S_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003\022\026\n\022" +
+      "STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR\020\005\022\022" +
+      "\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStatus\022 " +
+      "\n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035COMP" +
+      "ONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPONENT" +
+      "_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STATUS_" +
+      "DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVAILAB" +
+      "LE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE\020\005*_" +
+      "\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNSPECI" +
+      "FIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HASHALG" +
+      "ORITHM_SHA256\020\002B\371\001\n\037com.aruna.api.storag" +
+      "e.models.v2B\013ModelsProtoZ:github.com/Aru" +
+      "naStorage/go-api/aruna/api/storage/model" +
+      "s/v2\242\002\004AASM\252\002\033Aruna.Api.Storage.Models.V" +
+      "2\312\002\033Aruna\\Api\\Storage\\Models\\V2\342\002\'Aruna\\" +
+      "Api\\Storage\\Models\\V2\\GPBMetadata\352\002\037Arun" +
+      "a::Api::Storage::Models::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29085,13 +28729,13 @@ public final class ModelsProto {
     internal_static_aruna_api_storage_models_v2_EndpointHostConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_EndpointHostConfig_descriptor,
-        new java.lang.String[] { "Url", "IsPrimary", "Ssl", "Public", "HostType", });
+        new java.lang.String[] { "Url", "IsPrimary", "Ssl", "Public", "HostVariant", });
     internal_static_aruna_api_storage_models_v2_Endpoint_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_storage_models_v2_Endpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Endpoint_descriptor,
-        new java.lang.String[] { "Id", "EpType", "Name", "IsPublic", "DefaultFor", "Status", "IsBundler", "HostConfigs", });
+        new java.lang.String[] { "Id", "EpVariant", "Name", "IsPublic", "Status", "HostConfigs", });
     internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_aruna_api_storage_models_v2_GenericResource_fieldAccessorTable = new

@@ -423,6 +423,37 @@ public final class UserServiceGrpc {
     return getGetAllUsersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> getMergeUserAccountMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MergeUserAccount",
+      requestType = com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> getMergeUserAccountMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> getMergeUserAccountMethod;
+    if ((getMergeUserAccountMethod = UserServiceGrpc.getMergeUserAccountMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getMergeUserAccountMethod = UserServiceGrpc.getMergeUserAccountMethod) == null) {
+          UserServiceGrpc.getMergeUserAccountMethod = getMergeUserAccountMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MergeUserAccount"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("MergeUserAccount"))
+              .build();
+        }
+      }
+    }
+    return getMergeUserAccountMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -632,6 +663,18 @@ public final class UserServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllUsersMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * MergeUserAccount
+     * Status: ALPHA
+     * Get all users including permissions (Admin only)
+     * </pre>
+     */
+    default void mergeUserAccount(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMergeUserAccountMethod(), responseObserver);
+    }
   }
 
   /**
@@ -840,6 +883,19 @@ public final class UserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAllUsersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * MergeUserAccount
+     * Status: ALPHA
+     * Get all users including permissions (Admin only)
+     * </pre>
+     */
+    public void mergeUserAccount(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMergeUserAccountMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1018,6 +1074,18 @@ public final class UserServiceGrpc {
     public com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersResponse getAllUsers(com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAllUsersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MergeUserAccount
+     * Status: ALPHA
+     * Get all users including permissions (Admin only)
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse mergeUserAccount(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMergeUserAccountMethod(), getCallOptions(), request);
     }
   }
 
@@ -1211,6 +1279,19 @@ public final class UserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAllUsersMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * MergeUserAccount
+     * Status: ALPHA
+     * Get all users including permissions (Admin only)
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> mergeUserAccount(
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMergeUserAccountMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_USER = 0;
@@ -1226,6 +1307,7 @@ public final class UserServiceGrpc {
   private static final int METHODID_UPDATE_USER_EMAIL = 10;
   private static final int METHODID_GET_NOT_ACTIVATED_USERS = 11;
   private static final int METHODID_GET_ALL_USERS = 12;
+  private static final int METHODID_MERGE_USER_ACCOUNT = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1295,6 +1377,10 @@ public final class UserServiceGrpc {
         case METHODID_GET_ALL_USERS:
           serviceImpl.getAllUsers((com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersResponse>) responseObserver);
+          break;
+        case METHODID_MERGE_USER_ACCOUNT:
+          serviceImpl.mergeUserAccount((com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1405,6 +1491,13 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersRequest,
               com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersResponse>(
                 service, METHODID_GET_ALL_USERS)))
+        .addMethod(
+          getMergeUserAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest,
+              com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse>(
+                service, METHODID_MERGE_USER_ACCOUNT)))
         .build();
   }
 
@@ -1466,6 +1559,7 @@ public final class UserServiceGrpc {
               .addMethod(getUpdateUserEmailMethod())
               .addMethod(getGetNotActivatedUsersMethod())
               .addMethod(getGetAllUsersMethod())
+              .addMethod(getMergeUserAccountMethod())
               .build();
         }
       }

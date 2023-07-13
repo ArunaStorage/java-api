@@ -15496,6 +15496,1242 @@ public final class UserServiceProto {
 
   }
 
+  public interface MergeUserAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.MergeUserAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+
+    /**
+     * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+     * @return The fromUserId.
+     */
+    java.lang.String getFromUserId();
+    /**
+     * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+     * @return The bytes for fromUserId.
+     */
+    com.google.protobuf.ByteString
+        getFromUserIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.MergeUserAccountRequest}
+   */
+  public static final class MergeUserAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.MergeUserAccountRequest)
+      MergeUserAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MergeUserAccountRequest.newBuilder() to construct.
+    private MergeUserAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MergeUserAccountRequest() {
+      userId_ = "";
+      fromUserId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MergeUserAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.class, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.Builder.class);
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_USER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fromUserId_ = "";
+    /**
+     * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+     * @return The fromUserId.
+     */
+    @java.lang.Override
+    public java.lang.String getFromUserId() {
+      java.lang.Object ref = fromUserId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromUserId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+     * @return The bytes for fromUserId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromUserIdBytes() {
+      java.lang.Object ref = fromUserId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromUserId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromUserId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromUserId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fromUserId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest other = (com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest) obj;
+
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!getFromUserId()
+          .equals(other.getFromUserId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (37 * hash) + FROM_USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFromUserId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.MergeUserAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.MergeUserAccountRequest)
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.class, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userId_ = "";
+        fromUserId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest result = new com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fromUserId_ = fromUserId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.getDefaultInstance()) return this;
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFromUserId().isEmpty()) {
+          fromUserId_ = other.fromUserId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                fromUserId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromUserId_ = "";
+      /**
+       * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+       * @return The fromUserId.
+       */
+      public java.lang.String getFromUserId() {
+        java.lang.Object ref = fromUserId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromUserId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+       * @return The bytes for fromUserId.
+       */
+      public com.google.protobuf.ByteString
+          getFromUserIdBytes() {
+        java.lang.Object ref = fromUserId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromUserId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+       * @param value The fromUserId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fromUserId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromUserId() {
+        fromUserId_ = getDefaultInstance().getFromUserId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_user_id = 2 [json_name = "fromUserId"];</code>
+       * @param value The bytes for fromUserId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fromUserId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.MergeUserAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.MergeUserAccountRequest)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MergeUserAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MergeUserAccountRequest>() {
+      @java.lang.Override
+      public MergeUserAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MergeUserAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MergeUserAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MergeUserAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.MergeUserAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+     * @return Whether the user field is set.
+     */
+    boolean hasUser();
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+     * @return The user.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.User getUser();
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder getUserOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.MergeUserAccountResponse}
+   */
+  public static final class MergeUserAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.MergeUserAccountResponse)
+      MergeUserAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MergeUserAccountResponse.newBuilder() to construct.
+    private MergeUserAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MergeUserAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MergeUserAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.class, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.Builder.class);
+    }
+
+    public static final int USER_FIELD_NUMBER = 1;
+    private com.aruna.api.storage.models.v2.ModelsProto.User user_;
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+     * @return Whether the user field is set.
+     */
+    @java.lang.Override
+    public boolean hasUser() {
+      return user_ != null;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+     * @return The user.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.User getUser() {
+      return user_ == null ? com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance() : user_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder getUserOrBuilder() {
+      return user_ == null ? com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance() : user_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (user_ != null) {
+        output.writeMessage(1, getUser());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (user_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUser());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse other = (com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse) obj;
+
+      if (hasUser() != other.hasUser()) return false;
+      if (hasUser()) {
+        if (!getUser()
+            .equals(other.getUser())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUser()) {
+        hash = (37 * hash) + USER_FIELD_NUMBER;
+        hash = (53 * hash) + getUser().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.MergeUserAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.MergeUserAccountResponse)
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.class, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        user_ = null;
+        if (userBuilder_ != null) {
+          userBuilder_.dispose();
+          userBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse result = new com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.user_ = userBuilder_ == null
+              ? user_
+              : userBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.getDefaultInstance()) return this;
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getUserFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.storage.models.v2.ModelsProto.User user_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.User, com.aruna.api.storage.models.v2.ModelsProto.User.Builder, com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder> userBuilder_;
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       * @return Whether the user field is set.
+       */
+      public boolean hasUser() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       * @return The user.
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.User getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance() : user_;
+        } else {
+          return userBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder setUser(com.aruna.api.storage.models.v2.ModelsProto.User value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          user_ = value;
+        } else {
+          userBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder setUser(
+          com.aruna.api.storage.models.v2.ModelsProto.User.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder mergeUser(com.aruna.api.storage.models.v2.ModelsProto.User value) {
+        if (userBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            user_ != null &&
+            user_ != com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance()) {
+            getUserBuilder().mergeFrom(value);
+          } else {
+            user_ = value;
+          }
+        } else {
+          userBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder clearUser() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        user_ = null;
+        if (userBuilder_ != null) {
+          userBuilder_.dispose();
+          userBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.User.Builder getUserBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          return user_ == null ?
+              com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance() : user_;
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 1 [json_name = "user"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.User, com.aruna.api.storage.models.v2.ModelsProto.User.Builder, com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.User, com.aruna.api.storage.models.v2.ModelsProto.User.Builder, com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder>(
+                  getUser(),
+                  getParentForChildren(),
+                  isClean());
+          user_ = null;
+        }
+        return userBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.MergeUserAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.MergeUserAccountResponse)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MergeUserAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MergeUserAccountResponse>() {
+      @java.lang.Override
+      public MergeUserAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MergeUserAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MergeUserAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_RegisterUserRequest_descriptor;
   private static final 
@@ -15626,6 +16862,16 @@ public final class UserServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_UpdateUserEmailResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -15680,66 +16926,75 @@ public final class UserServiceProto {
       "UpdateUserEmailRequest\022\027\n\007user_id\030\001 \001(\tR" +
       "\006userId\022\033\n\tnew_email\030\002 \001(\tR\010newEmail\"P\n\027" +
       "UpdateUserEmailResponse\0225\n\004user\030\001 \001(\0132!." +
-      "aruna.api.storage.models.v2.UserR\004user2\234" +
-      "\020\n\013UserService\022\225\001\n\014RegisterUser\0222.aruna." +
-      "api.storage.services.v2.RegisterUserRequ" +
-      "est\0323.aruna.api.storage.services.v2.Regi" +
-      "sterUserResponse\"\034\202\323\344\223\002\026\"\021/v2/auth/regis" +
-      "ter:\001*\022\247\001\n\016DeactivateUser\0224.aruna.api.st" +
-      "orage.services.v2.DeactivateUserRequest\032" +
-      "5.aruna.api.storage.services.v2.Deactiva" +
-      "teUserResponse\"(\202\323\344\223\002\"2\035/v2/user/{user_i" +
-      "d}/deactivate:\001*\022\237\001\n\014ActivateUser\0222.arun" +
-      "a.api.storage.services.v2.ActivateUserRe" +
-      "quest\0323.aruna.api.storage.services.v2.Ac" +
-      "tivateUserResponse\"&\202\323\344\223\002 2\033/v2/user/{us" +
-      "er_id}/activate:\001*\022\230\001\n\016CreateAPIToken\0224." +
-      "aruna.api.storage.services.v2.CreateAPIT" +
-      "okenRequest\0325.aruna.api.storage.services" +
-      ".v2.CreateAPITokenResponse\"\031\202\323\344\223\002\023\"\016/v2/" +
-      "auth/token:\001*\022\227\001\n\013GetAPIToken\0221.aruna.ap" +
-      "i.storage.services.v2.GetAPITokenRequest" +
-      "\0322.aruna.api.storage.services.v2.GetAPIT" +
-      "okenResponse\"!\202\323\344\223\002\033\022\031/v2/auth/token/{to" +
-      "ken_id}\022\220\001\n\014GetAPITokens\0222.aruna.api.sto" +
-      "rage.services.v2.GetAPITokensRequest\0323.a" +
-      "runa.api.storage.services.v2.GetAPIToken" +
-      "sResponse\"\027\202\323\344\223\002\021\022\017/v2/auth/tokens\022\240\001\n\016D" +
-      "eleteAPIToken\0224.aruna.api.storage.servic" +
-      "es.v2.DeleteAPITokenRequest\0325.aruna.api." +
-      "storage.services.v2.DeleteAPITokenRespon" +
-      "se\"!\202\323\344\223\002\033*\031/v2/auth/token/{token_id}\022\231\001" +
-      "\n\017DeleteAPITokens\0225.aruna.api.storage.se" +
-      "rvices.v2.DeleteAPITokensRequest\0326.aruna" +
-      ".api.storage.services.v2.DeleteAPITokens" +
-      "Response\"\027\202\323\344\223\002\021*\017/v2/auth/tokens\022z\n\007Get" +
-      "User\022-.aruna.api.storage.services.v2.Get" +
-      "UserRequest\032..aruna.api.storage.services" +
-      ".v2.GetUserResponse\"\020\202\323\344\223\002\n\022\010/v2/user\022\276\001" +
-      "\n\025UpdateUserDisplayName\022;.aruna.api.stor" +
-      "age.services.v2.UpdateUserDisplayNameReq" +
-      "uest\032<.aruna.api.storage.services.v2.Upd" +
-      "ateUserDisplayNameResponse\"*\202\323\344\223\002$2\037/v2/" +
-      "user/{user_id}/display_name:\001*\022\245\001\n\017Updat" +
-      "eUserEmail\0225.aruna.api.storage.services." +
-      "v2.UpdateUserEmailRequest\0326.aruna.api.st" +
-      "orage.services.v2.UpdateUserEmailRespons" +
-      "e\"#\202\323\344\223\002\0352\030/v2/user/{user_id}/email:\001*\022\257" +
-      "\001\n\024GetNotActivatedUsers\022:.aruna.api.stor" +
-      "age.services.v2.GetNotActivatedUsersRequ" +
-      "est\032;.aruna.api.storage.services.v2.GetN" +
-      "otActivatedUsersResponse\"\036\202\323\344\223\002\030\022\026/v2/us" +
-      "er/not_activated\022\212\001\n\013GetAllUsers\0221.aruna" +
-      ".api.storage.services.v2.GetAllUsersRequ" +
-      "est\0322.aruna.api.storage.services.v2.GetA" +
-      "llUsersResponse\"\024\202\323\344\223\002\016\022\014/v2/user/allB\214\002" +
-      "\n!com.aruna.api.storage.services.v2B\020Use" +
-      "rServiceProtoP\000Z<github.com/ArunaStorage" +
-      "/go-api/aruna/api/storage/services/v2\242\002\004" +
-      "AASS\252\002\035Aruna.Api.Storage.Services.V2\312\002\035A" +
-      "runa\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api" +
-      "\\Storage\\Services\\V2\\GPBMetadata\352\002!Aruna" +
-      "::Api::Storage::Services::V2b\006proto3"
+      "aruna.api.storage.models.v2.UserR\004user\"T" +
+      "\n\027MergeUserAccountRequest\022\027\n\007user_id\030\001 \001" +
+      "(\tR\006userId\022 \n\014from_user_id\030\002 \001(\tR\nfromUs" +
+      "erId\"Q\n\030MergeUserAccountResponse\0225\n\004user" +
+      "\030\001 \001(\0132!.aruna.api.storage.models.v2.Use" +
+      "rR\004user2\323\021\n\013UserService\022\225\001\n\014RegisterUser" +
+      "\0222.aruna.api.storage.services.v2.Registe" +
+      "rUserRequest\0323.aruna.api.storage.service" +
+      "s.v2.RegisterUserResponse\"\034\202\323\344\223\002\026\"\021/v2/a" +
+      "uth/register:\001*\022\247\001\n\016DeactivateUser\0224.aru" +
+      "na.api.storage.services.v2.DeactivateUse" +
+      "rRequest\0325.aruna.api.storage.services.v2" +
+      ".DeactivateUserResponse\"(\202\323\344\223\002\"2\035/v2/use" +
+      "r/{user_id}/deactivate:\001*\022\237\001\n\014ActivateUs" +
+      "er\0222.aruna.api.storage.services.v2.Activ" +
+      "ateUserRequest\0323.aruna.api.storage.servi" +
+      "ces.v2.ActivateUserResponse\"&\202\323\344\223\002 2\033/v2" +
+      "/user/{user_id}/activate:\001*\022\230\001\n\016CreateAP" +
+      "IToken\0224.aruna.api.storage.services.v2.C" +
+      "reateAPITokenRequest\0325.aruna.api.storage" +
+      ".services.v2.CreateAPITokenResponse\"\031\202\323\344" +
+      "\223\002\023\"\016/v2/auth/token:\001*\022\227\001\n\013GetAPIToken\0221" +
+      ".aruna.api.storage.services.v2.GetAPITok" +
+      "enRequest\0322.aruna.api.storage.services.v" +
+      "2.GetAPITokenResponse\"!\202\323\344\223\002\033\022\031/v2/auth/" +
+      "token/{token_id}\022\220\001\n\014GetAPITokens\0222.arun" +
+      "a.api.storage.services.v2.GetAPITokensRe" +
+      "quest\0323.aruna.api.storage.services.v2.Ge" +
+      "tAPITokensResponse\"\027\202\323\344\223\002\021\022\017/v2/auth/tok" +
+      "ens\022\240\001\n\016DeleteAPIToken\0224.aruna.api.stora" +
+      "ge.services.v2.DeleteAPITokenRequest\0325.a" +
+      "runa.api.storage.services.v2.DeleteAPITo" +
+      "kenResponse\"!\202\323\344\223\002\033*\031/v2/auth/token/{tok" +
+      "en_id}\022\231\001\n\017DeleteAPITokens\0225.aruna.api.s" +
+      "torage.services.v2.DeleteAPITokensReques" +
+      "t\0326.aruna.api.storage.services.v2.Delete" +
+      "APITokensResponse\"\027\202\323\344\223\002\021*\017/v2/auth/toke" +
+      "ns\022z\n\007GetUser\022-.aruna.api.storage.servic" +
+      "es.v2.GetUserRequest\032..aruna.api.storage" +
+      ".services.v2.GetUserResponse\"\020\202\323\344\223\002\n\022\010/v" +
+      "2/user\022\276\001\n\025UpdateUserDisplayName\022;.aruna" +
+      ".api.storage.services.v2.UpdateUserDispl" +
+      "ayNameRequest\032<.aruna.api.storage.servic" +
+      "es.v2.UpdateUserDisplayNameResponse\"*\202\323\344" +
+      "\223\002$2\037/v2/user/{user_id}/display_name:\001*\022" +
+      "\245\001\n\017UpdateUserEmail\0225.aruna.api.storage." +
+      "services.v2.UpdateUserEmailRequest\0326.aru" +
+      "na.api.storage.services.v2.UpdateUserEma" +
+      "ilResponse\"#\202\323\344\223\002\0352\030/v2/user/{user_id}/e" +
+      "mail:\001*\022\257\001\n\024GetNotActivatedUsers\022:.aruna" +
+      ".api.storage.services.v2.GetNotActivated" +
+      "UsersRequest\032;.aruna.api.storage.service" +
+      "s.v2.GetNotActivatedUsersResponse\"\036\202\323\344\223\002" +
+      "\030\022\026/v2/user/not_activated\022\212\001\n\013GetAllUser" +
+      "s\0221.aruna.api.storage.services.v2.GetAll" +
+      "UsersRequest\0322.aruna.api.storage.service" +
+      "s.v2.GetAllUsersResponse\"\024\202\323\344\223\002\016\022\014/v2/us" +
+      "er/all\022\264\001\n\020MergeUserAccount\0226.aruna.api." +
+      "storage.services.v2.MergeUserAccountRequ" +
+      "est\0327.aruna.api.storage.services.v2.Merg" +
+      "eUserAccountResponse\"/\202\323\344\223\002)\022\'/v2/user/{" +
+      "user_id}/merge/{from_user_id}B\214\002\n!com.ar" +
+      "una.api.storage.services.v2B\020UserService" +
+      "ProtoP\000Z<github.com/ArunaStorage/go-api/" +
+      "aruna/api/storage/services/v2\242\002\004AASS\252\002\035A" +
+      "runa.Api.Storage.Services.V2\312\002\035Aruna\\Api" +
+      "\\Storage\\Services\\V2\342\002)Aruna\\Api\\Storage" +
+      "\\Services\\V2\\GPBMetadata\352\002!Aruna::Api::S" +
+      "torage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15903,6 +17158,18 @@ public final class UserServiceProto {
     internal_static_aruna_api_storage_services_v2_UpdateUserEmailResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_UpdateUserEmailResponse_descriptor,
+        new java.lang.String[] { "User", });
+    internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_MergeUserAccountRequest_descriptor,
+        new java.lang.String[] { "UserId", "FromUserId", });
+    internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_MergeUserAccountResponse_descriptor,
         new java.lang.String[] { "User", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

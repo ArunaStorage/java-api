@@ -19070,19 +19070,19 @@ public final class NotificationServiceProto {
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-     * @return The enum numeric value on the wire for epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+     * @return The enum numeric value on the wire for epVariant.
      */
-    int getEpTypeValue();
+    int getEpVariantValue();
     /**
      * <pre>
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-     * @return The epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+     * @return The epVariant.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType();
+    com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant();
 
     /**
      * <pre>
@@ -19149,7 +19149,7 @@ public final class NotificationServiceProto {
     private DataproxyInfo() {
       endpointId_ = "";
       name_ = "";
-      epType_ = 0;
+      epVariant_ = 0;
       pubkey_ = "";
       url_ = "";
     }
@@ -19260,30 +19260,30 @@ public final class NotificationServiceProto {
       }
     }
 
-    public static final int EP_TYPE_FIELD_NUMBER = 3;
-    private int epType_ = 0;
+    public static final int EP_VARIANT_FIELD_NUMBER = 3;
+    private int epVariant_ = 0;
     /**
      * <pre>
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-     * @return The enum numeric value on the wire for epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+     * @return The enum numeric value on the wire for epVariant.
      */
-    @java.lang.Override public int getEpTypeValue() {
-      return epType_;
+    @java.lang.Override public int getEpVariantValue() {
+      return epVariant_;
     }
     /**
      * <pre>
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-     * @return The epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+     * @return The epVariant.
      */
-    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType() {
-      com.aruna.api.storage.models.v2.ModelsProto.EndpointType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointType.forNumber(epType_);
-      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointType.UNRECOGNIZED : result;
+    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
+      com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
+      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
     }
 
     public static final int IS_PUBLIC_FIELD_NUMBER = 4;
@@ -19415,8 +19415,8 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (epType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, epType_);
+      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, epVariant_);
       }
       if (isPublic_ != false) {
         output.writeBool(4, isPublic_);
@@ -19442,9 +19442,9 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (epType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
+      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, epType_);
+          .computeEnumSize(3, epVariant_);
       }
       if (isPublic_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -19475,7 +19475,7 @@ public final class NotificationServiceProto {
           .equals(other.getEndpointId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (epType_ != other.epType_) return false;
+      if (epVariant_ != other.epVariant_) return false;
       if (getIsPublic()
           != other.getIsPublic()) return false;
       if (!getPubkey()
@@ -19497,8 +19497,8 @@ public final class NotificationServiceProto {
       hash = (53 * hash) + getEndpointId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + EP_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + epType_;
+      hash = (37 * hash) + EP_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + epVariant_;
       hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsPublic());
@@ -19639,7 +19639,7 @@ public final class NotificationServiceProto {
         bitField0_ = 0;
         endpointId_ = "";
         name_ = "";
-        epType_ = 0;
+        epVariant_ = 0;
         isPublic_ = false;
         pubkey_ = "";
         url_ = "";
@@ -19683,7 +19683,7 @@ public final class NotificationServiceProto {
           result.name_ = name_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.epType_ = epType_;
+          result.epVariant_ = epVariant_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isPublic_ = isPublic_;
@@ -19718,8 +19718,8 @@ public final class NotificationServiceProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (other.epType_ != 0) {
-          setEpTypeValue(other.getEpTypeValue());
+        if (other.epVariant_ != 0) {
+          setEpVariantValue(other.getEpVariantValue());
         }
         if (other.getIsPublic() != false) {
           setIsPublic(other.getIsPublic());
@@ -19771,7 +19771,7 @@ public final class NotificationServiceProto {
                 break;
               } // case 18
               case 24: {
-                epType_ = input.readEnum();
+                epVariant_ = input.readEnum();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
@@ -19971,29 +19971,29 @@ public final class NotificationServiceProto {
         return this;
       }
 
-      private int epType_ = 0;
+      private int epVariant_ = 0;
       /**
        * <pre>
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-       * @return The enum numeric value on the wire for epType.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+       * @return The enum numeric value on the wire for epVariant.
        */
-      @java.lang.Override public int getEpTypeValue() {
-        return epType_;
+      @java.lang.Override public int getEpVariantValue() {
+        return epVariant_;
       }
       /**
        * <pre>
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-       * @param value The enum numeric value on the wire for epType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+       * @param value The enum numeric value on the wire for epVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEpTypeValue(int value) {
-        epType_ = value;
+      public Builder setEpVariantValue(int value) {
+        epVariant_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
@@ -20003,29 +20003,29 @@ public final class NotificationServiceProto {
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-       * @return The epType.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+       * @return The epVariant.
        */
       @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType() {
-        com.aruna.api.storage.models.v2.ModelsProto.EndpointType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointType.forNumber(epType_);
-        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointType.UNRECOGNIZED : result;
+      public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
+        com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
+        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
-       * @param value The epType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
+       * @param value The epVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEpType(com.aruna.api.storage.models.v2.ModelsProto.EndpointType value) {
+      public Builder setEpVariant(com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000004;
-        epType_ = value.getNumber();
+        epVariant_ = value.getNumber();
         onChanged();
         return this;
       }
@@ -20034,12 +20034,12 @@ public final class NotificationServiceProto {
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 3 [json_name = "epType"];</code>
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEpType() {
+      public Builder clearEpVariant() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        epType_ = 0;
+        epVariant_ = 0;
         onChanged();
         return this;
       }
@@ -24214,75 +24214,75 @@ public final class NotificationServiceProto {
       "api.notification.services.v2.ReplyR\005repl" +
       "yB\n\n\010_context\"E\n\005Reply\022\024\n\005reply\030\001 \001(\tR\005r" +
       "eply\022\022\n\004salt\030\002 \001(\tR\004salt\022\022\n\004hmac\030\003 \001(\tR\004" +
-      "hmac\"\317\001\n\rDataproxyInfo\022\037\n\013endpoint_id\030\001 " +
-      "\001(\tR\nendpointId\022\022\n\004name\030\002 \001(\tR\004name\022B\n\007e" +
-      "p_type\030\003 \001(\0162).aruna.api.storage.models." +
-      "v2.EndpointTypeR\006epType\022\033\n\tis_public\030\004 \001" +
-      "(\010R\010isPublic\022\026\n\006pubkey\030\005 \001(\tR\006pubkey\022\020\n\003" +
-      "url\030\006 \001(\tR\003url\"\251\001\n\021ScheduledDowntime\022\032\n\010" +
-      "location\030\001 \001(\tR\010location\022\034\n\tcomponent\030\002 " +
-      "\001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\004from\022*\n\002to\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\002to\"g\n\nNewVersion" +
-      "\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcomponen" +
-      "t\030\002 \001(\tR\tcomponent\022\037\n\013new_version\030\003 \001(\tR" +
-      "\nnewVersion\"\242\004\n\020AnouncementEvent\022Y\n\016new_" +
-      "data_proxy\030\001 \001(\01321.aruna.api.notificatio" +
-      "n.services.v2.DataproxyInfoH\000R\014newDataPr" +
-      "oxy\022_\n\021remove_data_proxy\030\002 \001(\01321.aruna.a" +
-      "pi.notification.services.v2.DataproxyInf" +
-      "oH\000R\017removeDataProxy\022_\n\021update_data_prox" +
-      "y\030\003 \001(\01321.aruna.api.notification.service" +
-      "s.v2.DataproxyInfoH\000R\017updateDataProxy\022S\n" +
-      "\010downtime\030\004 \001(\01325.aruna.api.notification" +
-      ".services.v2.ScheduledDowntimeH\000R\010downti" +
-      "me\022J\n\007version\030\005 \001(\0132..aruna.api.notifica" +
-      "tion.services.v2.NewVersionH\000R\007version\022?" +
-      "\n\005reply\030\006 \001(\0132).aruna.api.notification.s" +
-      "ervices.v2.ReplyR\005replyB\017\n\revent_variant" +
-      "*\255\001\n\017ResourceVariant\022 \n\034RESOURCE_VARIANT" +
-      "_UNSPECIFIED\020\000\022\034\n\030RESOURCE_VARIANT_PROJE" +
-      "CT\020\001\022\037\n\033RESOURCE_VARIANT_COLLECTION\020\002\022\034\n" +
-      "\030RESOURCE_VARIANT_DATASET\020\003\022\033\n\027RESOURCE_" +
-      "VARIANT_OBJECT\020\004*\276\001\n\021ResourceEventType\022#" +
-      "\n\037RESOURCE_EVENT_TYPE_UNSPECIFIED\020\000\022\037\n\033R" +
-      "ESOURCE_EVENT_TYPE_CREATED\020\001\022!\n\035RESOURCE" +
-      "_EVENT_TYPE_AVAILABLE\020\002\022\037\n\033RESOURCE_EVEN" +
-      "T_TYPE_UPDATED\020\003\022\037\n\033RESOURCE_EVENT_TYPE_" +
-      "DELETED\020\004*\207\001\n\rUserEventType\022\037\n\033USER_EVEN" +
-      "T_TYPE_UNSPECIFIED\020\000\022\033\n\027USER_EVENT_TYPE_" +
-      "CREATED\020\001\022\033\n\027USER_EVENT_TYPE_UPDATED\020\002\022\033" +
-      "\n\027USER_EVENT_TYPE_DELETED\020\0032\334\006\n\030EventNot" +
-      "ificationService\022\233\001\n\024CreateStreamConsume" +
-      "r\022?.aruna.api.notification.services.v2.C" +
-      "reateStreamConsumerRequest\032@.aruna.api.n" +
-      "otification.services.v2.CreateStreamCons" +
-      "umerResponse\"\000\022\233\001\n\024GetEventMessageBatch\022" +
-      "?.aruna.api.notification.services.v2.Get" +
-      "EventMessageBatchRequest\032@.aruna.api.not" +
-      "ification.services.v2.GetEventMessageBat" +
-      "chResponse\"\000\022\257\001\n\032GetEventMessageBatchStr" +
-      "eam\022E.aruna.api.notification.services.v2" +
-      ".GetEventMessageBatchStreamRequest\032F.aru" +
-      "na.api.notification.services.v2.GetEvent" +
-      "MessageBatchStreamResponse\"\0000\001\022\244\001\n\027Ackno" +
-      "wledgeMessageBatch\022B.aruna.api.notificat" +
-      "ion.services.v2.AcknowledgeMessageBatchR" +
-      "equest\032C.aruna.api.notification.services" +
-      ".v2.AcknowledgeMessageBatchResponse\"\000\022\252\001" +
-      "\n\031DeleteEventStreamingGroup\022D.aruna.api." +
-      "notification.services.v2.DeleteEventStre" +
-      "amingGroupRequest\032E.aruna.api.notificati" +
-      "on.services.v2.DeleteEventStreamingGroup" +
-      "Response\"\000B\262\002\n&com.aruna.api.notificatio" +
-      "n.services.v2B\030NotificationServiceProtoP" +
-      "\000ZAgithub.com/ArunaStorage/go-api/aruna/" +
-      "api/notification/services/v2\242\002\004AANS\252\002\"Ar" +
-      "una.Api.Notification.Services.V2\312\002\"Aruna" +
-      "\\Api\\Notification\\Services\\V2\342\002.Aruna\\Ap" +
-      "i\\Notification\\Services\\V2\\GPBMetadata\352\002" +
-      "&Aruna::Api::Notification::Services::V2b" +
-      "\006proto3"
+      "hmac\"\330\001\n\rDataproxyInfo\022\037\n\013endpoint_id\030\001 " +
+      "\001(\tR\nendpointId\022\022\n\004name\030\002 \001(\tR\004name\022K\n\ne" +
+      "p_variant\030\003 \001(\0162,.aruna.api.storage.mode" +
+      "ls.v2.EndpointVariantR\tepVariant\022\033\n\tis_p" +
+      "ublic\030\004 \001(\010R\010isPublic\022\026\n\006pubkey\030\005 \001(\tR\006p" +
+      "ubkey\022\020\n\003url\030\006 \001(\tR\003url\"\251\001\n\021ScheduledDow" +
+      "ntime\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcom" +
+      "ponent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032." +
+      "google.protobuf.TimestampR\004from\022*\n\002to\030\004 " +
+      "\001(\0132\032.google.protobuf.TimestampR\002to\"g\n\nN" +
+      "ewVersion\022\032\n\010location\030\001 \001(\tR\010location\022\034\n" +
+      "\tcomponent\030\002 \001(\tR\tcomponent\022\037\n\013new_versi" +
+      "on\030\003 \001(\tR\nnewVersion\"\242\004\n\020AnouncementEven" +
+      "t\022Y\n\016new_data_proxy\030\001 \001(\01321.aruna.api.no" +
+      "tification.services.v2.DataproxyInfoH\000R\014" +
+      "newDataProxy\022_\n\021remove_data_proxy\030\002 \001(\0132" +
+      "1.aruna.api.notification.services.v2.Dat" +
+      "aproxyInfoH\000R\017removeDataProxy\022_\n\021update_" +
+      "data_proxy\030\003 \001(\01321.aruna.api.notificatio" +
+      "n.services.v2.DataproxyInfoH\000R\017updateDat" +
+      "aProxy\022S\n\010downtime\030\004 \001(\01325.aruna.api.not" +
+      "ification.services.v2.ScheduledDowntimeH" +
+      "\000R\010downtime\022J\n\007version\030\005 \001(\0132..aruna.api" +
+      ".notification.services.v2.NewVersionH\000R\007" +
+      "version\022?\n\005reply\030\006 \001(\0132).aruna.api.notif" +
+      "ication.services.v2.ReplyR\005replyB\017\n\reven" +
+      "t_variant*\255\001\n\017ResourceVariant\022 \n\034RESOURC" +
+      "E_VARIANT_UNSPECIFIED\020\000\022\034\n\030RESOURCE_VARI" +
+      "ANT_PROJECT\020\001\022\037\n\033RESOURCE_VARIANT_COLLEC" +
+      "TION\020\002\022\034\n\030RESOURCE_VARIANT_DATASET\020\003\022\033\n\027" +
+      "RESOURCE_VARIANT_OBJECT\020\004*\276\001\n\021ResourceEv" +
+      "entType\022#\n\037RESOURCE_EVENT_TYPE_UNSPECIFI" +
+      "ED\020\000\022\037\n\033RESOURCE_EVENT_TYPE_CREATED\020\001\022!\n" +
+      "\035RESOURCE_EVENT_TYPE_AVAILABLE\020\002\022\037\n\033RESO" +
+      "URCE_EVENT_TYPE_UPDATED\020\003\022\037\n\033RESOURCE_EV" +
+      "ENT_TYPE_DELETED\020\004*\207\001\n\rUserEventType\022\037\n\033" +
+      "USER_EVENT_TYPE_UNSPECIFIED\020\000\022\033\n\027USER_EV" +
+      "ENT_TYPE_CREATED\020\001\022\033\n\027USER_EVENT_TYPE_UP" +
+      "DATED\020\002\022\033\n\027USER_EVENT_TYPE_DELETED\020\0032\334\006\n" +
+      "\030EventNotificationService\022\233\001\n\024CreateStre" +
+      "amConsumer\022?.aruna.api.notification.serv" +
+      "ices.v2.CreateStreamConsumerRequest\032@.ar" +
+      "una.api.notification.services.v2.CreateS" +
+      "treamConsumerResponse\"\000\022\233\001\n\024GetEventMess" +
+      "ageBatch\022?.aruna.api.notification.servic" +
+      "es.v2.GetEventMessageBatchRequest\032@.arun" +
+      "a.api.notification.services.v2.GetEventM" +
+      "essageBatchResponse\"\000\022\257\001\n\032GetEventMessag" +
+      "eBatchStream\022E.aruna.api.notification.se" +
+      "rvices.v2.GetEventMessageBatchStreamRequ" +
+      "est\032F.aruna.api.notification.services.v2" +
+      ".GetEventMessageBatchStreamResponse\"\0000\001\022" +
+      "\244\001\n\027AcknowledgeMessageBatch\022B.aruna.api." +
+      "notification.services.v2.AcknowledgeMess" +
+      "ageBatchRequest\032C.aruna.api.notification" +
+      ".services.v2.AcknowledgeMessageBatchResp" +
+      "onse\"\000\022\252\001\n\031DeleteEventStreamingGroup\022D.a" +
+      "runa.api.notification.services.v2.Delete" +
+      "EventStreamingGroupRequest\032E.aruna.api.n" +
+      "otification.services.v2.DeleteEventStrea" +
+      "mingGroupResponse\"\000B\262\002\n&com.aruna.api.no" +
+      "tification.services.v2B\030NotificationServ" +
+      "iceProtoP\000ZAgithub.com/ArunaStorage/go-a" +
+      "pi/aruna/api/notification/services/v2\242\002\004" +
+      "AANS\252\002\"Aruna.Api.Notification.Services.V" +
+      "2\312\002\"Aruna\\Api\\Notification\\Services\\V2\342\002" +
+      ".Aruna\\Api\\Notification\\Services\\V2\\GPBM" +
+      "etadata\352\002&Aruna::Api::Notification::Serv" +
+      "ices::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24439,7 +24439,7 @@ public final class NotificationServiceProto {
     internal_static_aruna_api_notification_services_v2_DataproxyInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor,
-        new java.lang.String[] { "EndpointId", "Name", "EpType", "IsPublic", "Pubkey", "Url", });
+        new java.lang.String[] { "EndpointId", "Name", "EpVariant", "IsPublic", "Pubkey", "Url", });
     internal_static_aruna_api_notification_services_v2_ScheduledDowntime_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_aruna_api_notification_services_v2_ScheduledDowntime_fieldAccessorTable = new

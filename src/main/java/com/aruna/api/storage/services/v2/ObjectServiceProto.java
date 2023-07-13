@@ -240,23 +240,6 @@ public final class ObjectServiceProto {
     com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
         int index);
 
-    /**
-     * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-     * @return Whether the preferredEndpointId field is set.
-     */
-    boolean hasPreferredEndpointId();
-    /**
-     * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-     * @return The preferredEndpointId.
-     */
-    java.lang.String getPreferredEndpointId();
-    /**
-     * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-     * @return The bytes for preferredEndpointId.
-     */
-    com.google.protobuf.ByteString
-        getPreferredEndpointIdBytes();
-
     com.aruna.api.storage.services.v2.ObjectServiceProto.CreateObjectRequest.ParentCase getParentCase();
   }
   /**
@@ -278,7 +261,6 @@ public final class ObjectServiceProto {
       externalRelations_ = java.util.Collections.emptyList();
       dataClass_ = 0;
       hashes_ = java.util.Collections.emptyList();
-      preferredEndpointId_ = "";
     }
 
     @java.lang.Override
@@ -301,7 +283,6 @@ public final class ObjectServiceProto {
               com.aruna.api.storage.services.v2.ObjectServiceProto.CreateObjectRequest.class, com.aruna.api.storage.services.v2.ObjectServiceProto.CreateObjectRequest.Builder.class);
     }
 
-    private int bitField0_;
     private int parentCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object parent_;
@@ -785,53 +766,6 @@ public final class ObjectServiceProto {
       return hashes_.get(index);
     }
 
-    public static final int PREFERRED_ENDPOINT_ID_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object preferredEndpointId_ = "";
-    /**
-     * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-     * @return Whether the preferredEndpointId field is set.
-     */
-    @java.lang.Override
-    public boolean hasPreferredEndpointId() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-     * @return The preferredEndpointId.
-     */
-    @java.lang.Override
-    public java.lang.String getPreferredEndpointId() {
-      java.lang.Object ref = preferredEndpointId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        preferredEndpointId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-     * @return The bytes for preferredEndpointId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPreferredEndpointIdBytes() {
-      java.lang.Object ref = preferredEndpointId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        preferredEndpointId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -873,9 +807,6 @@ public final class ObjectServiceProto {
       for (int i = 0; i < hashes_.size(); i++) {
         output.writeMessage(9, hashes_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, preferredEndpointId_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -916,9 +847,6 @@ public final class ObjectServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, hashes_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, preferredEndpointId_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -945,11 +873,6 @@ public final class ObjectServiceProto {
       if (dataClass_ != other.dataClass_) return false;
       if (!getHashesList()
           .equals(other.getHashesList())) return false;
-      if (hasPreferredEndpointId() != other.hasPreferredEndpointId()) return false;
-      if (hasPreferredEndpointId()) {
-        if (!getPreferredEndpointId()
-            .equals(other.getPreferredEndpointId())) return false;
-      }
       if (!getParentCase().equals(other.getParentCase())) return false;
       switch (parentCase_) {
         case 6:
@@ -995,10 +918,6 @@ public final class ObjectServiceProto {
       if (getHashesCount() > 0) {
         hash = (37 * hash) + HASHES_FIELD_NUMBER;
         hash = (53 * hash) + getHashesList().hashCode();
-      }
-      if (hasPreferredEndpointId()) {
-        hash = (37 * hash) + PREFERRED_ENDPOINT_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getPreferredEndpointId().hashCode();
       }
       switch (parentCase_) {
         case 6:
@@ -1171,7 +1090,6 @@ public final class ObjectServiceProto {
           hashesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000100);
-        preferredEndpointId_ = "";
         parentCase_ = 0;
         parent_ = null;
         return this;
@@ -1248,12 +1166,6 @@ public final class ObjectServiceProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.dataClass_ = dataClass_;
         }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.preferredEndpointId_ = preferredEndpointId_;
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.aruna.api.storage.services.v2.ObjectServiceProto.CreateObjectRequest result) {
@@ -1363,11 +1275,6 @@ public final class ObjectServiceProto {
               hashesBuilder_.addAllMessages(other.hashes_);
             }
           }
-        }
-        if (other.hasPreferredEndpointId()) {
-          preferredEndpointId_ = other.preferredEndpointId_;
-          bitField0_ |= 0x00000200;
-          onChanged();
         }
         switch (other.getParentCase()) {
           case PROJECT_ID: {
@@ -1490,11 +1397,6 @@ public final class ObjectServiceProto {
                 }
                 break;
               } // case 74
-              case 82: {
-                preferredEndpointId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2925,85 +2827,6 @@ public final class ObjectServiceProto {
           hashes_ = null;
         }
         return hashesBuilder_;
-      }
-
-      private java.lang.Object preferredEndpointId_ = "";
-      /**
-       * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-       * @return Whether the preferredEndpointId field is set.
-       */
-      public boolean hasPreferredEndpointId() {
-        return ((bitField0_ & 0x00000200) != 0);
-      }
-      /**
-       * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-       * @return The preferredEndpointId.
-       */
-      public java.lang.String getPreferredEndpointId() {
-        java.lang.Object ref = preferredEndpointId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          preferredEndpointId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-       * @return The bytes for preferredEndpointId.
-       */
-      public com.google.protobuf.ByteString
-          getPreferredEndpointIdBytes() {
-        java.lang.Object ref = preferredEndpointId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          preferredEndpointId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-       * @param value The preferredEndpointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPreferredEndpointId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        preferredEndpointId_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPreferredEndpointId() {
-        preferredEndpointId_ = getDefaultInstance().getPreferredEndpointId();
-        bitField0_ = (bitField0_ & ~0x00000200);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string preferred_endpoint_id = 10 [json_name = "preferredEndpointId"];</code>
-       * @param value The bytes for preferredEndpointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPreferredEndpointIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        preferredEndpointId_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21681,7 +21504,7 @@ public final class ObjectServiceProto {
       "\n2aruna/api/storage/services/v2/object_s" +
       "ervice.proto\022\035aruna.api.storage.services" +
       ".v2\032(aruna/api/storage/models/v2/models." +
-      "proto\032\034google/api/annotations.proto\"\267\004\n\023" +
+      "proto\032\034google/api/annotations.proto\"\344\003\n\023" +
       "CreateObjectRequest\022\022\n\004name\030\001 \001(\tR\004name\022" +
       " \n\013description\030\002 \001(\tR\013description\022D\n\nkey" +
       "_values\030\003 \003(\0132%.aruna.api.storage.models" +
@@ -21693,113 +21516,111 @@ public final class ObjectServiceProto {
       "id\030\006 \001(\tH\000R\tprojectId\022%\n\rcollection_id\030\007" +
       " \001(\tH\000R\014collectionId\022\037\n\ndataset_id\030\010 \001(\t" +
       "H\000R\tdatasetId\0229\n\006hashes\030\t \003(\0132!.aruna.ap" +
-      "i.storage.models.v2.HashR\006hashes\0227\n\025pref" +
-      "erred_endpoint_id\030\n \001(\tH\001R\023preferredEndp" +
-      "ointId\210\001\001B\010\n\006parentB\030\n\026_preferred_endpoi" +
-      "nt_id\"S\n\024CreateObjectResponse\022;\n\006object\030" +
-      "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
-      "ctR\006object\"q\n\023GetUploadURLRequest\022\033\n\tobj" +
-      "ect_id\030\001 \001(\tR\010objectId\022\034\n\tmultipart\030\002 \001(" +
-      "\010R\tmultipart\022\037\n\013part_number\030\003 \001(\005R\npartN" +
-      "umber\"(\n\024GetUploadURLResponse\022\020\n\003url\030\001 \001" +
-      "(\tR\003url\"4\n\025GetDownloadURLRequest\022\033\n\tobje" +
-      "ct_id\030\001 \001(\tR\010objectId\"*\n\026GetDownloadURLR" +
-      "esponse\022\020\n\003url\030\001 \001(\tR\003url\"8\n\016CompletedPa" +
-      "rts\022\022\n\004etag\030\001 \001(\tR\004etag\022\022\n\004part\030\002 \001(\003R\004p" +
-      "art\"\314\001\n\032FinishObjectStagingRequest\022\033\n\tob" +
-      "ject_id\030\001 \001(\tR\010objectId\0229\n\006hashes\030\002 \003(\0132" +
-      "!.aruna.api.storage.models.v2.HashR\006hash" +
-      "es\022V\n\017completed_parts\030\003 \003(\0132-.aruna.api." +
-      "storage.services.v2.CompletedPartsR\016comp" +
-      "letedParts\"Z\n\033FinishObjectStagingRespons" +
-      "e\022;\n\006object\030\001 \001(\0132#.aruna.api.storage.mo" +
-      "dels.v2.ObjectR\006object\"\264\004\n\023UpdateObjectR" +
-      "equest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\027\n\004n" +
-      "ame\030\002 \001(\tH\001R\004name\210\001\001\022%\n\013description\030\003 \001(" +
-      "\tH\002R\013description\210\001\001\022K\n\016add_key_values\030\004 " +
-      "\003(\0132%.aruna.api.storage.models.v2.KeyVal" +
-      "ueR\014addKeyValues\022Q\n\021remove_key_values\030\005 " +
-      "\003(\0132%.aruna.api.storage.models.v2.KeyVal" +
-      "ueR\017removeKeyValues\022J\n\ndata_class\030\007 \001(\0162" +
-      "&.aruna.api.storage.models.v2.DataClassH" +
-      "\003R\tdataClass\210\001\001\022\037\n\nproject_id\030\010 \001(\tH\000R\tp" +
-      "rojectId\022%\n\rcollection_id\030\t \001(\tH\000R\014colle" +
-      "ctionId\022\037\n\ndataset_id\030\n \001(\tH\000R\tdatasetId" +
-      "\0229\n\006hashes\030\014 \003(\0132!.aruna.api.storage.mod" +
-      "els.v2.HashR\006hashesB\010\n\006parentB\007\n\005_nameB\016" +
-      "\n\014_descriptionB\r\n\013_data_class\"v\n\024UpdateO" +
-      "bjectResponse\022;\n\006object\030\001 \001(\0132#.aruna.ap" +
-      "i.storage.models.v2.ObjectR\006object\022!\n\014ne" +
-      "w_revision\030\002 \001(\010R\013newRevision\"\244\001\n\022CloneO" +
+      "i.storage.models.v2.HashR\006hashesB\010\n\006pare" +
+      "nt\"S\n\024CreateObjectResponse\022;\n\006object\030\001 \001" +
+      "(\0132#.aruna.api.storage.models.v2.ObjectR" +
+      "\006object\"q\n\023GetUploadURLRequest\022\033\n\tobject" +
+      "_id\030\001 \001(\tR\010objectId\022\034\n\tmultipart\030\002 \001(\010R\t" +
+      "multipart\022\037\n\013part_number\030\003 \001(\005R\npartNumb" +
+      "er\"(\n\024GetUploadURLResponse\022\020\n\003url\030\001 \001(\tR" +
+      "\003url\"4\n\025GetDownloadURLRequest\022\033\n\tobject_" +
+      "id\030\001 \001(\tR\010objectId\"*\n\026GetDownloadURLResp" +
+      "onse\022\020\n\003url\030\001 \001(\tR\003url\"8\n\016CompletedParts" +
+      "\022\022\n\004etag\030\001 \001(\tR\004etag\022\022\n\004part\030\002 \001(\003R\004part" +
+      "\"\314\001\n\032FinishObjectStagingRequest\022\033\n\tobjec" +
+      "t_id\030\001 \001(\tR\010objectId\0229\n\006hashes\030\002 \003(\0132!.a" +
+      "runa.api.storage.models.v2.HashR\006hashes\022" +
+      "V\n\017completed_parts\030\003 \003(\0132-.aruna.api.sto" +
+      "rage.services.v2.CompletedPartsR\016complet" +
+      "edParts\"Z\n\033FinishObjectStagingResponse\022;" +
+      "\n\006object\030\001 \001(\0132#.aruna.api.storage.model" +
+      "s.v2.ObjectR\006object\"\264\004\n\023UpdateObjectRequ" +
+      "est\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\027\n\004name" +
+      "\030\002 \001(\tH\001R\004name\210\001\001\022%\n\013description\030\003 \001(\tH\002" +
+      "R\013description\210\001\001\022K\n\016add_key_values\030\004 \003(\013" +
+      "2%.aruna.api.storage.models.v2.KeyValueR" +
+      "\014addKeyValues\022Q\n\021remove_key_values\030\005 \003(\013" +
+      "2%.aruna.api.storage.models.v2.KeyValueR" +
+      "\017removeKeyValues\022J\n\ndata_class\030\007 \001(\0162&.a" +
+      "runa.api.storage.models.v2.DataClassH\003R\t" +
+      "dataClass\210\001\001\022\037\n\nproject_id\030\010 \001(\tH\000R\tproj" +
+      "ectId\022%\n\rcollection_id\030\t \001(\tH\000R\014collecti" +
+      "onId\022\037\n\ndataset_id\030\n \001(\tH\000R\tdatasetId\0229\n" +
+      "\006hashes\030\014 \003(\0132!.aruna.api.storage.models" +
+      ".v2.HashR\006hashesB\010\n\006parentB\007\n\005_nameB\016\n\014_" +
+      "descriptionB\r\n\013_data_class\"v\n\024UpdateObje" +
+      "ctResponse\022;\n\006object\030\001 \001(\0132#.aruna.api.s" +
+      "torage.models.v2.ObjectR\006object\022!\n\014new_r" +
+      "evision\030\002 \001(\010R\013newRevision\"\244\001\n\022CloneObje" +
+      "ctRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\037" +
+      "\n\nproject_id\030\002 \001(\tH\000R\tprojectId\022%\n\rcolle" +
+      "ction_id\030\003 \001(\tH\000R\014collectionId\022\037\n\ndatase" +
+      "t_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006parent\"R\n\023Clo" +
+      "neObjectResponse\022;\n\006object\030\001 \001(\0132#.aruna" +
+      ".api.storage.models.v2.ObjectR\006object\"Y\n" +
+      "\023DeleteObjectRequest\022\033\n\tobject_id\030\001 \001(\tR" +
+      "\010objectId\022%\n\016with_revisions\030\002 \001(\010R\rwithR" +
+      "evisions\"\026\n\024DeleteObjectResponse\"/\n\020GetO" +
       "bjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectI" +
-      "d\022\037\n\nproject_id\030\002 \001(\tH\000R\tprojectId\022%\n\rco" +
-      "llection_id\030\003 \001(\tH\000R\014collectionId\022\037\n\ndat" +
-      "aset_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006parent\"R\n\023" +
-      "CloneObjectResponse\022;\n\006object\030\001 \001(\0132#.ar" +
-      "una.api.storage.models.v2.ObjectR\006object" +
-      "\"Y\n\023DeleteObjectRequest\022\033\n\tobject_id\030\001 \001" +
-      "(\tR\010objectId\022%\n\016with_revisions\030\002 \001(\010R\rwi" +
-      "thRevisions\"\026\n\024DeleteObjectResponse\"/\n\020G" +
-      "etObjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010obje" +
-      "ctId\"P\n\021GetObjectResponse\022;\n\006object\030\001 \001(" +
-      "\0132#.aruna.api.storage.models.v2.ObjectR\006" +
-      "object\"2\n\021GetObjectsRequest\022\035\n\nobject_id" +
-      "s\030\001 \003(\tR\tobjectIds\"S\n\022GetObjectsResponse" +
-      "\022=\n\007objects\030\001 \003(\0132#.aruna.api.storage.mo" +
-      "dels.v2.ObjectR\007objects\"8\n\031GetObjectRevi" +
-      "sionsRequest\022\033\n\tobject_id\030\002 \001(\tR\010objectI" +
-      "d\"[\n\032GetObjectRevisionsResponse\022=\n\007objec" +
-      "ts\030\001 \003(\0132#.aruna.api.storage.models.v2.O" +
-      "bjectR\007objects\"=\n\036GetLatestObjectRevisio" +
-      "nRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"^\n" +
-      "\037GetLatestObjectRevisionResponse\022;\n\006obje" +
-      "ct\030\001 \001(\0132#.aruna.api.storage.models.v2.O" +
-      "bjectR\006object\"]\n\031GetObjectEndpointsReque" +
-      "st\022#\n\rcollection_id\030\001 \001(\tR\014collectionId\022" +
-      "\033\n\tobject_id\030\002 \001(\tR\010objectId2\220\013\n\rObjectS" +
-      "ervice\022\216\001\n\014CreateObject\0222.aruna.api.stor" +
-      "age.services.v2.CreateObjectRequest\0323.ar" +
-      "una.api.storage.services.v2.CreateObject" +
-      "Response\"\025\202\323\344\223\002\017\"\n/v2/object:\001*\022\236\001\n\014GetU" +
-      "ploadURL\0222.aruna.api.storage.services.v2" +
-      ".GetUploadURLRequest\0323.aruna.api.storage" +
-      ".services.v2.GetUploadURLResponse\"%\202\323\344\223\002" +
-      "\037\022\035/v2/object/{object_id}/upload\022\246\001\n\016Get" +
-      "DownloadURL\0224.aruna.api.storage.services" +
-      ".v2.GetDownloadURLRequest\0325.aruna.api.st" +
-      "orage.services.v2.GetDownloadURLResponse" +
-      "\"\'\202\323\344\223\002!\022\037/v2/object/{object_id}/downloa" +
-      "d\022\266\001\n\023FinishObjectStaging\0229.aruna.api.st" +
-      "orage.services.v2.FinishObjectStagingReq" +
-      "uest\032:.aruna.api.storage.services.v2.Fin" +
-      "ishObjectStagingResponse\"(\202\323\344\223\002\"2\035/v2/ob" +
-      "ject/{object_id}/finish:\001*\022\232\001\n\014UpdateObj" +
-      "ect\0222.aruna.api.storage.services.v2.Upda" +
-      "teObjectRequest\0323.aruna.api.storage.serv" +
-      "ices.v2.UpdateObjectResponse\"!\202\323\344\223\002\033\"\026/v" +
-      "2/object/{object_id}:\001*\022\226\001\n\013CloneObject\022" +
-      "1.aruna.api.storage.services.v2.CloneObj" +
-      "ectRequest\0322.aruna.api.storage.services." +
-      "v2.CloneObjectResponse\" \202\323\344\223\002\032\"\025/v2/{obj" +
-      "ect_id}/clone:\001*\022\232\001\n\014DeleteObject\0222.arun" +
-      "a.api.storage.services.v2.DeleteObjectRe" +
-      "quest\0323.aruna.api.storage.services.v2.De" +
-      "leteObjectResponse\"!\202\323\344\223\002\033*\026/v2/object/{" +
-      "object_id}:\001*\022\216\001\n\tGetObject\022/.aruna.api." +
-      "storage.services.v2.GetObjectRequest\0320.a" +
-      "runa.api.storage.services.v2.GetObjectRe" +
-      "sponse\"\036\202\323\344\223\002\030\022\026/v2/object/{object_id}\022\206" +
-      "\001\n\nGetObjects\0220.aruna.api.storage.servic" +
-      "es.v2.GetObjectsRequest\0321.aruna.api.stor" +
-      "age.services.v2.GetObjectsResponse\"\023\202\323\344\223" +
-      "\002\r\022\013/v2/objectsB\216\002\n!com.aruna.api.storag" +
-      "e.services.v2B\022ObjectServiceProtoP\000Z<git" +
-      "hub.com/ArunaStorage/go-api/aruna/api/st" +
-      "orage/services/v2\242\002\004AASS\252\002\035Aruna.Api.Sto" +
-      "rage.Services.V2\312\002\035Aruna\\Api\\Storage\\Ser" +
-      "vices\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2" +
-      "\\GPBMetadata\352\002!Aruna::Api::Storage::Serv" +
-      "ices::V2b\006proto3"
+      "d\"P\n\021GetObjectResponse\022;\n\006object\030\001 \001(\0132#" +
+      ".aruna.api.storage.models.v2.ObjectR\006obj" +
+      "ect\"2\n\021GetObjectsRequest\022\035\n\nobject_ids\030\001" +
+      " \003(\tR\tobjectIds\"S\n\022GetObjectsResponse\022=\n" +
+      "\007objects\030\001 \003(\0132#.aruna.api.storage.model" +
+      "s.v2.ObjectR\007objects\"8\n\031GetObjectRevisio" +
+      "nsRequest\022\033\n\tobject_id\030\002 \001(\tR\010objectId\"[" +
+      "\n\032GetObjectRevisionsResponse\022=\n\007objects\030" +
+      "\001 \003(\0132#.aruna.api.storage.models.v2.Obje" +
+      "ctR\007objects\"=\n\036GetLatestObjectRevisionRe" +
+      "quest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"^\n\037Ge" +
+      "tLatestObjectRevisionResponse\022;\n\006object\030" +
+      "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
+      "ctR\006object\"]\n\031GetObjectEndpointsRequest\022" +
+      "#\n\rcollection_id\030\001 \001(\tR\014collectionId\022\033\n\t" +
+      "object_id\030\002 \001(\tR\010objectId2\220\013\n\rObjectServ" +
+      "ice\022\216\001\n\014CreateObject\0222.aruna.api.storage" +
+      ".services.v2.CreateObjectRequest\0323.aruna" +
+      ".api.storage.services.v2.CreateObjectRes" +
+      "ponse\"\025\202\323\344\223\002\017\"\n/v2/object:\001*\022\236\001\n\014GetUplo" +
+      "adURL\0222.aruna.api.storage.services.v2.Ge" +
+      "tUploadURLRequest\0323.aruna.api.storage.se" +
+      "rvices.v2.GetUploadURLResponse\"%\202\323\344\223\002\037\022\035" +
+      "/v2/object/{object_id}/upload\022\246\001\n\016GetDow" +
+      "nloadURL\0224.aruna.api.storage.services.v2" +
+      ".GetDownloadURLRequest\0325.aruna.api.stora" +
+      "ge.services.v2.GetDownloadURLResponse\"\'\202" +
+      "\323\344\223\002!\022\037/v2/object/{object_id}/download\022\266" +
+      "\001\n\023FinishObjectStaging\0229.aruna.api.stora" +
+      "ge.services.v2.FinishObjectStagingReques" +
+      "t\032:.aruna.api.storage.services.v2.Finish" +
+      "ObjectStagingResponse\"(\202\323\344\223\002\"2\035/v2/objec" +
+      "t/{object_id}/finish:\001*\022\232\001\n\014UpdateObject" +
+      "\0222.aruna.api.storage.services.v2.UpdateO" +
+      "bjectRequest\0323.aruna.api.storage.service" +
+      "s.v2.UpdateObjectResponse\"!\202\323\344\223\002\033\"\026/v2/o" +
+      "bject/{object_id}:\001*\022\226\001\n\013CloneObject\0221.a" +
+      "runa.api.storage.services.v2.CloneObject" +
+      "Request\0322.aruna.api.storage.services.v2." +
+      "CloneObjectResponse\" \202\323\344\223\002\032\"\025/v2/{object" +
+      "_id}/clone:\001*\022\232\001\n\014DeleteObject\0222.aruna.a" +
+      "pi.storage.services.v2.DeleteObjectReque" +
+      "st\0323.aruna.api.storage.services.v2.Delet" +
+      "eObjectResponse\"!\202\323\344\223\002\033*\026/v2/object/{obj" +
+      "ect_id}:\001*\022\216\001\n\tGetObject\022/.aruna.api.sto" +
+      "rage.services.v2.GetObjectRequest\0320.arun" +
+      "a.api.storage.services.v2.GetObjectRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/v2/object/{object_id}\022\206\001\n\n" +
+      "GetObjects\0220.aruna.api.storage.services." +
+      "v2.GetObjectsRequest\0321.aruna.api.storage" +
+      ".services.v2.GetObjectsResponse\"\023\202\323\344\223\002\r\022" +
+      "\013/v2/objectsB\216\002\n!com.aruna.api.storage.s" +
+      "ervices.v2B\022ObjectServiceProtoP\000Z<github" +
+      ".com/ArunaStorage/go-api/aruna/api/stora" +
+      "ge/services/v2\242\002\004AASS\252\002\035Aruna.Api.Storag" +
+      "e.Services.V2\312\002\035Aruna\\Api\\Storage\\Servic" +
+      "es\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GP" +
+      "BMetadata\352\002!Aruna::Api::Storage::Service" +
+      "s::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21812,7 +21633,7 @@ public final class ObjectServiceProto {
     internal_static_aruna_api_storage_services_v2_CreateObjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateObjectRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", "KeyValues", "ExternalRelations", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "PreferredEndpointId", "Parent", "PreferredEndpointId", });
+        new java.lang.String[] { "Name", "Description", "KeyValues", "ExternalRelations", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "Parent", });
     internal_static_aruna_api_storage_services_v2_CreateObjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v2_CreateObjectResponse_fieldAccessorTable = new

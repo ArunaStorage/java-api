@@ -43,19 +43,19 @@ public final class EndpointServiceProto {
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The enum numeric value on the wire for epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The enum numeric value on the wire for epVariant.
      */
-    int getEpTypeValue();
+    int getEpVariantValue();
     /**
      * <pre>
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The epVariant.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType();
+    com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant();
 
     /**
      * <pre>
@@ -145,7 +145,7 @@ public final class EndpointServiceProto {
     }
     private CreateEndpointRequest() {
       name_ = "";
-      epType_ = 0;
+      epVariant_ = 0;
       pubkey_ = "";
       hostConfigs_ = java.util.Collections.emptyList();
     }
@@ -217,30 +217,30 @@ public final class EndpointServiceProto {
       }
     }
 
-    public static final int EP_TYPE_FIELD_NUMBER = 2;
-    private int epType_ = 0;
+    public static final int EP_VARIANT_FIELD_NUMBER = 2;
+    private int epVariant_ = 0;
     /**
      * <pre>
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The enum numeric value on the wire for epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The enum numeric value on the wire for epVariant.
      */
-    @java.lang.Override public int getEpTypeValue() {
-      return epType_;
+    @java.lang.Override public int getEpVariantValue() {
+      return epVariant_;
     }
     /**
      * <pre>
      * Endpoint type
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-     * @return The epType.
+     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+     * @return The epVariant.
      */
-    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType() {
-      com.aruna.api.storage.models.v2.ModelsProto.EndpointType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointType.forNumber(epType_);
-      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointType.UNRECOGNIZED : result;
+    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
+      com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
+      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
     }
 
     public static final int IS_PUBLIC_FIELD_NUMBER = 3;
@@ -383,8 +383,8 @@ public final class EndpointServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (epType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, epType_);
+      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, epVariant_);
       }
       if (isPublic_ != false) {
         output.writeBool(3, isPublic_);
@@ -407,9 +407,9 @@ public final class EndpointServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (epType_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointType.ENDPOINT_TYPE_UNSPECIFIED.getNumber()) {
+      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, epType_);
+          .computeEnumSize(2, epVariant_);
       }
       if (isPublic_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -439,7 +439,7 @@ public final class EndpointServiceProto {
 
       if (!getName()
           .equals(other.getName())) return false;
-      if (epType_ != other.epType_) return false;
+      if (epVariant_ != other.epVariant_) return false;
       if (getIsPublic()
           != other.getIsPublic()) return false;
       if (!getPubkey()
@@ -459,8 +459,8 @@ public final class EndpointServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + EP_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + epType_;
+      hash = (37 * hash) + EP_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + epVariant_;
       hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsPublic());
@@ -602,7 +602,7 @@ public final class EndpointServiceProto {
         super.clear();
         bitField0_ = 0;
         name_ = "";
-        epType_ = 0;
+        epVariant_ = 0;
         isPublic_ = false;
         pubkey_ = "";
         if (hostConfigsBuilder_ == null) {
@@ -662,7 +662,7 @@ public final class EndpointServiceProto {
           result.name_ = name_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.epType_ = epType_;
+          result.epVariant_ = epVariant_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.isPublic_ = isPublic_;
@@ -689,8 +689,8 @@ public final class EndpointServiceProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.epType_ != 0) {
-          setEpTypeValue(other.getEpTypeValue());
+        if (other.epVariant_ != 0) {
+          setEpVariantValue(other.getEpVariantValue());
         }
         if (other.getIsPublic() != false) {
           setIsPublic(other.getIsPublic());
@@ -758,7 +758,7 @@ public final class EndpointServiceProto {
                 break;
               } // case 10
               case 16: {
-                epType_ = input.readEnum();
+                epVariant_ = input.readEnum();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -894,29 +894,29 @@ public final class EndpointServiceProto {
         return this;
       }
 
-      private int epType_ = 0;
+      private int epVariant_ = 0;
       /**
        * <pre>
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @return The enum numeric value on the wire for epType.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @return The enum numeric value on the wire for epVariant.
        */
-      @java.lang.Override public int getEpTypeValue() {
-        return epType_;
+      @java.lang.Override public int getEpVariantValue() {
+        return epVariant_;
       }
       /**
        * <pre>
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @param value The enum numeric value on the wire for epType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @param value The enum numeric value on the wire for epVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEpTypeValue(int value) {
-        epType_ = value;
+      public Builder setEpVariantValue(int value) {
+        epVariant_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
@@ -926,29 +926,29 @@ public final class EndpointServiceProto {
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @return The epType.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @return The epVariant.
        */
       @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.EndpointType getEpType() {
-        com.aruna.api.storage.models.v2.ModelsProto.EndpointType result = com.aruna.api.storage.models.v2.ModelsProto.EndpointType.forNumber(epType_);
-        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointType.UNRECOGNIZED : result;
+      public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
+        com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
+        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
-       * @param value The epType to set.
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
+       * @param value The epVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEpType(com.aruna.api.storage.models.v2.ModelsProto.EndpointType value) {
+      public Builder setEpVariant(com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000002;
-        epType_ = value.getNumber();
+        epVariant_ = value.getNumber();
         onChanged();
         return this;
       }
@@ -957,12 +957,12 @@ public final class EndpointServiceProto {
        * Endpoint type
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.EndpointType ep_type = 2 [json_name = "epType"];</code>
+       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 2 [json_name = "epVariant"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEpType() {
+      public Builder clearEpVariant() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        epType_ = 0;
+        epVariant_ = 0;
         onChanged();
         return this;
       }
@@ -7765,62 +7765,62 @@ public final class EndpointServiceProto {
       "\n4aruna/api/storage/services/v2/endpoint" +
       "_service.proto\022\035aruna.api.storage.servic" +
       "es.v2\032(aruna/api/storage/models/v2/model" +
-      "s.proto\032\034google/api/annotations.proto\"\370\001" +
+      "s.proto\032\034google/api/annotations.proto\"\201\002" +
       "\n\025CreateEndpointRequest\022\022\n\004name\030\001 \001(\tR\004n" +
-      "ame\022B\n\007ep_type\030\002 \001(\0162).aruna.api.storage" +
-      ".models.v2.EndpointTypeR\006epType\022\033\n\tis_pu" +
-      "blic\030\003 \001(\010R\010isPublic\022\026\n\006pubkey\030\004 \001(\tR\006pu" +
-      "bkey\022R\n\014host_configs\030\005 \003(\0132/.aruna.api.s" +
-      "torage.models.v2.EndpointHostConfigR\013hos" +
-      "tConfigs\"[\n\026CreateEndpointResponse\022A\n\010en" +
-      "dpoint\030\001 \001(\0132%.aruna.api.storage.models." +
-      "v2.EndpointR\010endpoint\"\030\n\026OnboardEndpoint" +
-      "Request\"+\n\027OnboardEndpointResponse\022\020\n\003ur" +
-      "l\030\001 \001(\tR\003url\"j\n\022GetEndpointRequest\022%\n\ren" +
-      "dpoint_name\030\001 \001(\tH\000R\014endpointName\022!\n\013end" +
-      "point_id\030\002 \001(\tH\000R\nendpointIdB\n\n\010endpoint" +
-      "\"X\n\023GetEndpointResponse\022A\n\010endpoint\030\001 \001(" +
-      "\0132%.aruna.api.storage.models.v2.Endpoint" +
-      "R\010endpoint\"\025\n\023GetEndpointsRequest\"[\n\024Get" +
-      "EndpointsResponse\022C\n\tendpoints\030\001 \003(\0132%.a" +
-      "runa.api.storage.models.v2.EndpointR\tend" +
-      "points\"8\n\025DeleteEndpointRequest\022\037\n\013endpo" +
-      "int_id\030\001 \001(\tR\nendpointId\"\030\n\026DeleteEndpoi" +
-      "ntResponse\"\033\n\031GetDefaultEndpointRequest\"" +
-      "_\n\032GetDefaultEndpointResponse\022A\n\010endpoin" +
-      "t\030\001 \001(\0132%.aruna.api.storage.models.v2.En" +
-      "dpointR\010endpoint2\267\007\n\017EndpointService\022\226\001\n" +
-      "\016CreateEndpoint\0224.aruna.api.storage.serv" +
-      "ices.v2.CreateEndpointRequest\0325.aruna.ap" +
-      "i.storage.services.v2.CreateEndpointResp" +
-      "onse\"\027\202\323\344\223\002\021\"\014/v2/endpoint:\001*\022\236\001\n\017Onboar" +
-      "dEndpoint\0225.aruna.api.storage.services.v" +
-      "2.OnboardEndpointRequest\0326.aruna.api.sto" +
-      "rage.services.v2.OnboardEndpointResponse" +
-      "\"\034\202\323\344\223\002\026\022\024/v2/endpoint/onboard\022\212\001\n\013GetEn" +
-      "dpoint\0221.aruna.api.storage.services.v2.G" +
-      "etEndpointRequest\0322.aruna.api.storage.se" +
-      "rvices.v2.GetEndpointResponse\"\024\202\323\344\223\002\016\022\014/" +
-      "v2/endpoint\022\216\001\n\014GetEndpoints\0222.aruna.api" +
-      ".storage.services.v2.GetEndpointsRequest" +
-      "\0323.aruna.api.storage.services.v2.GetEndp" +
-      "ointsResponse\"\025\202\323\344\223\002\017\022\r/v2/endpoints\022\241\001\n" +
-      "\016DeleteEndpoint\0224.aruna.api.storage.serv" +
-      "ices.v2.DeleteEndpointRequest\0325.aruna.ap" +
-      "i.storage.services.v2.DeleteEndpointResp" +
-      "onse\"\"\202\323\344\223\002\034*\032/v2/endpoint/{endpoint_id}" +
-      "\022\247\001\n\022GetDefaultEndpoint\0228.aruna.api.stor" +
-      "age.services.v2.GetDefaultEndpointReques" +
-      "t\0329.aruna.api.storage.services.v2.GetDef" +
-      "aultEndpointResponse\"\034\202\323\344\223\002\026\022\024/v2/endpoi" +
-      "nt/defaultB\220\002\n!com.aruna.api.storage.ser" +
-      "vices.v2B\024EndpointServiceProtoP\000Z<github" +
-      ".com/ArunaStorage/go-api/aruna/api/stora" +
-      "ge/services/v2\242\002\004AASS\252\002\035Aruna.Api.Storag" +
-      "e.Services.V2\312\002\035Aruna\\Api\\Storage\\Servic" +
-      "es\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GP" +
-      "BMetadata\352\002!Aruna::Api::Storage::Service" +
-      "s::V2b\006proto3"
+      "ame\022K\n\nep_variant\030\002 \001(\0162,.aruna.api.stor" +
+      "age.models.v2.EndpointVariantR\tepVariant" +
+      "\022\033\n\tis_public\030\003 \001(\010R\010isPublic\022\026\n\006pubkey\030" +
+      "\004 \001(\tR\006pubkey\022R\n\014host_configs\030\005 \003(\0132/.ar" +
+      "una.api.storage.models.v2.EndpointHostCo" +
+      "nfigR\013hostConfigs\"[\n\026CreateEndpointRespo" +
+      "nse\022A\n\010endpoint\030\001 \001(\0132%.aruna.api.storag" +
+      "e.models.v2.EndpointR\010endpoint\"\030\n\026Onboar" +
+      "dEndpointRequest\"+\n\027OnboardEndpointRespo" +
+      "nse\022\020\n\003url\030\001 \001(\tR\003url\"j\n\022GetEndpointRequ" +
+      "est\022%\n\rendpoint_name\030\001 \001(\tH\000R\014endpointNa" +
+      "me\022!\n\013endpoint_id\030\002 \001(\tH\000R\nendpointIdB\n\n" +
+      "\010endpoint\"X\n\023GetEndpointResponse\022A\n\010endp" +
+      "oint\030\001 \001(\0132%.aruna.api.storage.models.v2" +
+      ".EndpointR\010endpoint\"\025\n\023GetEndpointsReque" +
+      "st\"[\n\024GetEndpointsResponse\022C\n\tendpoints\030" +
+      "\001 \003(\0132%.aruna.api.storage.models.v2.Endp" +
+      "ointR\tendpoints\"8\n\025DeleteEndpointRequest" +
+      "\022\037\n\013endpoint_id\030\001 \001(\tR\nendpointId\"\030\n\026Del" +
+      "eteEndpointResponse\"\033\n\031GetDefaultEndpoin" +
+      "tRequest\"_\n\032GetDefaultEndpointResponse\022A" +
+      "\n\010endpoint\030\001 \001(\0132%.aruna.api.storage.mod" +
+      "els.v2.EndpointR\010endpoint2\267\007\n\017EndpointSe" +
+      "rvice\022\226\001\n\016CreateEndpoint\0224.aruna.api.sto" +
+      "rage.services.v2.CreateEndpointRequest\0325" +
+      ".aruna.api.storage.services.v2.CreateEnd" +
+      "pointResponse\"\027\202\323\344\223\002\021\"\014/v2/endpoint:\001*\022\236" +
+      "\001\n\017OnboardEndpoint\0225.aruna.api.storage.s" +
+      "ervices.v2.OnboardEndpointRequest\0326.arun" +
+      "a.api.storage.services.v2.OnboardEndpoin" +
+      "tResponse\"\034\202\323\344\223\002\026\022\024/v2/endpoint/onboard\022" +
+      "\212\001\n\013GetEndpoint\0221.aruna.api.storage.serv" +
+      "ices.v2.GetEndpointRequest\0322.aruna.api.s" +
+      "torage.services.v2.GetEndpointResponse\"\024" +
+      "\202\323\344\223\002\016\022\014/v2/endpoint\022\216\001\n\014GetEndpoints\0222." +
+      "aruna.api.storage.services.v2.GetEndpoin" +
+      "tsRequest\0323.aruna.api.storage.services.v" +
+      "2.GetEndpointsResponse\"\025\202\323\344\223\002\017\022\r/v2/endp" +
+      "oints\022\241\001\n\016DeleteEndpoint\0224.aruna.api.sto" +
+      "rage.services.v2.DeleteEndpointRequest\0325" +
+      ".aruna.api.storage.services.v2.DeleteEnd" +
+      "pointResponse\"\"\202\323\344\223\002\034*\032/v2/endpoint/{end" +
+      "point_id}\022\247\001\n\022GetDefaultEndpoint\0228.aruna" +
+      ".api.storage.services.v2.GetDefaultEndpo" +
+      "intRequest\0329.aruna.api.storage.services." +
+      "v2.GetDefaultEndpointResponse\"\034\202\323\344\223\002\026\022\024/" +
+      "v2/endpoint/defaultB\220\002\n!com.aruna.api.st" +
+      "orage.services.v2B\024EndpointServiceProtoP" +
+      "\000Z<github.com/ArunaStorage/go-api/aruna/" +
+      "api/storage/services/v2\242\002\004AASS\252\002\035Aruna.A" +
+      "pi.Storage.Services.V2\312\002\035Aruna\\Api\\Stora" +
+      "ge\\Services\\V2\342\002)Aruna\\Api\\Storage\\Servi" +
+      "ces\\V2\\GPBMetadata\352\002!Aruna::Api::Storage" +
+      "::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7833,7 +7833,7 @@ public final class EndpointServiceProto {
     internal_static_aruna_api_storage_services_v2_CreateEndpointRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateEndpointRequest_descriptor,
-        new java.lang.String[] { "Name", "EpType", "IsPublic", "Pubkey", "HostConfigs", });
+        new java.lang.String[] { "Name", "EpVariant", "IsPublic", "Pubkey", "HostConfigs", });
     internal_static_aruna_api_storage_services_v2_CreateEndpointResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v2_CreateEndpointResponse_fieldAccessorTable = new
