@@ -6508,11 +6508,21 @@ public final class ObjectServiceProto {
 
     /**
      * <pre>
+     * Final content len 
+     * </pre>
+     *
+     * <code>int64 content_len = 2 [json_name = "contentLen"];</code>
+     * @return The contentLen.
+     */
+    long getContentLen();
+
+    /**
+     * <pre>
      * Hash of the uploaded data - used to verify the data integrity.
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> 
         getHashesList();
@@ -6522,7 +6532,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.Hash getHashes(int index);
     /**
@@ -6531,7 +6541,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     int getHashesCount();
     /**
@@ -6540,7 +6550,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder> 
         getHashesOrBuilderList();
@@ -6550,7 +6560,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
         int index);
@@ -6562,7 +6572,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     java.util.List<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts> 
         getCompletedPartsList();
@@ -6573,7 +6583,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts getCompletedParts(int index);
     /**
@@ -6583,7 +6593,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     int getCompletedPartsCount();
     /**
@@ -6593,7 +6603,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder> 
         getCompletedPartsOrBuilderList();
@@ -6604,7 +6614,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder getCompletedPartsOrBuilder(
         int index);
@@ -6694,7 +6704,22 @@ public final class ObjectServiceProto {
       }
     }
 
-    public static final int HASHES_FIELD_NUMBER = 2;
+    public static final int CONTENT_LEN_FIELD_NUMBER = 2;
+    private long contentLen_ = 0L;
+    /**
+     * <pre>
+     * Final content len 
+     * </pre>
+     *
+     * <code>int64 content_len = 2 [json_name = "contentLen"];</code>
+     * @return The contentLen.
+     */
+    @java.lang.Override
+    public long getContentLen() {
+      return contentLen_;
+    }
+
+    public static final int HASHES_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> hashes_;
     /**
@@ -6703,7 +6728,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> getHashesList() {
@@ -6715,7 +6740,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder> 
@@ -6728,7 +6753,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public int getHashesCount() {
@@ -6740,7 +6765,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.Hash getHashes(int index) {
@@ -6752,7 +6777,7 @@ public final class ObjectServiceProto {
      * This supports multiple hashing algorithms.
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
@@ -6760,7 +6785,7 @@ public final class ObjectServiceProto {
       return hashes_.get(index);
     }
 
-    public static final int COMPLETED_PARTS_FIELD_NUMBER = 3;
+    public static final int COMPLETED_PARTS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts> completedParts_;
     /**
@@ -6770,7 +6795,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts> getCompletedPartsList() {
@@ -6783,7 +6808,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder> 
@@ -6797,7 +6822,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     @java.lang.Override
     public int getCompletedPartsCount() {
@@ -6810,7 +6835,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts getCompletedParts(int index) {
@@ -6823,7 +6848,7 @@ public final class ObjectServiceProto {
      * (optional)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder getCompletedPartsOrBuilder(
@@ -6848,11 +6873,14 @@ public final class ObjectServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, objectId_);
       }
+      if (contentLen_ != 0L) {
+        output.writeInt64(2, contentLen_);
+      }
       for (int i = 0; i < hashes_.size(); i++) {
-        output.writeMessage(2, hashes_.get(i));
+        output.writeMessage(3, hashes_.get(i));
       }
       for (int i = 0; i < completedParts_.size(); i++) {
-        output.writeMessage(3, completedParts_.get(i));
+        output.writeMessage(4, completedParts_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -6866,13 +6894,17 @@ public final class ObjectServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, objectId_);
       }
+      if (contentLen_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, contentLen_);
+      }
       for (int i = 0; i < hashes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, hashes_.get(i));
+          .computeMessageSize(3, hashes_.get(i));
       }
       for (int i = 0; i < completedParts_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, completedParts_.get(i));
+          .computeMessageSize(4, completedParts_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6891,6 +6923,8 @@ public final class ObjectServiceProto {
 
       if (!getObjectId()
           .equals(other.getObjectId())) return false;
+      if (getContentLen()
+          != other.getContentLen()) return false;
       if (!getHashesList()
           .equals(other.getHashesList())) return false;
       if (!getCompletedPartsList()
@@ -6908,6 +6942,9 @@ public final class ObjectServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + OBJECT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getObjectId().hashCode();
+      hash = (37 * hash) + CONTENT_LEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContentLen());
       if (getHashesCount() > 0) {
         hash = (37 * hash) + HASHES_FIELD_NUMBER;
         hash = (53 * hash) + getHashesList().hashCode();
@@ -7048,20 +7085,21 @@ public final class ObjectServiceProto {
         super.clear();
         bitField0_ = 0;
         objectId_ = "";
+        contentLen_ = 0L;
         if (hashesBuilder_ == null) {
           hashes_ = java.util.Collections.emptyList();
         } else {
           hashes_ = null;
           hashesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (completedPartsBuilder_ == null) {
           completedParts_ = java.util.Collections.emptyList();
         } else {
           completedParts_ = null;
           completedPartsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -7096,18 +7134,18 @@ public final class ObjectServiceProto {
 
       private void buildPartialRepeatedFields(com.aruna.api.storage.services.v2.ObjectServiceProto.FinishObjectStagingRequest result) {
         if (hashesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             hashes_ = java.util.Collections.unmodifiableList(hashes_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.hashes_ = hashes_;
         } else {
           result.hashes_ = hashesBuilder_.build();
         }
         if (completedPartsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             completedParts_ = java.util.Collections.unmodifiableList(completedParts_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.completedParts_ = completedParts_;
         } else {
@@ -7119,6 +7157,9 @@ public final class ObjectServiceProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.objectId_ = objectId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentLen_ = contentLen_;
         }
       }
 
@@ -7139,11 +7180,14 @@ public final class ObjectServiceProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.getContentLen() != 0L) {
+          setContentLen(other.getContentLen());
+        }
         if (hashesBuilder_ == null) {
           if (!other.hashes_.isEmpty()) {
             if (hashes_.isEmpty()) {
               hashes_ = other.hashes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureHashesIsMutable();
               hashes_.addAll(other.hashes_);
@@ -7156,7 +7200,7 @@ public final class ObjectServiceProto {
               hashesBuilder_.dispose();
               hashesBuilder_ = null;
               hashes_ = other.hashes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               hashesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHashesFieldBuilder() : null;
@@ -7169,7 +7213,7 @@ public final class ObjectServiceProto {
           if (!other.completedParts_.isEmpty()) {
             if (completedParts_.isEmpty()) {
               completedParts_ = other.completedParts_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureCompletedPartsIsMutable();
               completedParts_.addAll(other.completedParts_);
@@ -7182,7 +7226,7 @@ public final class ObjectServiceProto {
               completedPartsBuilder_.dispose();
               completedPartsBuilder_ = null;
               completedParts_ = other.completedParts_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               completedPartsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCompletedPartsFieldBuilder() : null;
@@ -7222,7 +7266,12 @@ public final class ObjectServiceProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
+              case 16: {
+                contentLen_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
                 com.aruna.api.storage.models.v2.ModelsProto.Hash m =
                     input.readMessage(
                         com.aruna.api.storage.models.v2.ModelsProto.Hash.parser(),
@@ -7234,8 +7283,8 @@ public final class ObjectServiceProto {
                   hashesBuilder_.addMessage(m);
                 }
                 break;
-              } // case 18
-              case 26: {
+              } // case 26
+              case 34: {
                 com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts m =
                     input.readMessage(
                         com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.parser(),
@@ -7247,7 +7296,7 @@ public final class ObjectServiceProto {
                   completedPartsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 26
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7357,12 +7406,56 @@ public final class ObjectServiceProto {
         return this;
       }
 
+      private long contentLen_ ;
+      /**
+       * <pre>
+       * Final content len 
+       * </pre>
+       *
+       * <code>int64 content_len = 2 [json_name = "contentLen"];</code>
+       * @return The contentLen.
+       */
+      @java.lang.Override
+      public long getContentLen() {
+        return contentLen_;
+      }
+      /**
+       * <pre>
+       * Final content len 
+       * </pre>
+       *
+       * <code>int64 content_len = 2 [json_name = "contentLen"];</code>
+       * @param value The contentLen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentLen(long value) {
+
+        contentLen_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Final content len 
+       * </pre>
+       *
+       * <code>int64 content_len = 2 [json_name = "contentLen"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentLen() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contentLen_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> hashes_ =
         java.util.Collections.emptyList();
       private void ensureHashesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           hashes_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Hash>(hashes_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -7375,7 +7468,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> getHashesList() {
         if (hashesBuilder_ == null) {
@@ -7390,7 +7483,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public int getHashesCount() {
         if (hashesBuilder_ == null) {
@@ -7405,7 +7498,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash getHashes(int index) {
         if (hashesBuilder_ == null) {
@@ -7420,7 +7513,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder setHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash value) {
@@ -7442,7 +7535,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder setHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder builderForValue) {
@@ -7461,7 +7554,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder addHashes(com.aruna.api.storage.models.v2.ModelsProto.Hash value) {
         if (hashesBuilder_ == null) {
@@ -7482,7 +7575,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder addHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash value) {
@@ -7504,7 +7597,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder addHashes(
           com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder builderForValue) {
@@ -7523,7 +7616,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder addHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder builderForValue) {
@@ -7542,7 +7635,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder addAllHashes(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Hash> values) {
@@ -7562,12 +7655,12 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder clearHashes() {
         if (hashesBuilder_ == null) {
           hashes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           hashesBuilder_.clear();
@@ -7580,7 +7673,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public Builder removeHashes(int index) {
         if (hashesBuilder_ == null) {
@@ -7598,7 +7691,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder getHashesBuilder(
           int index) {
@@ -7610,7 +7703,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
           int index) {
@@ -7625,7 +7718,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder> 
            getHashesOrBuilderList() {
@@ -7641,7 +7734,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder addHashesBuilder() {
         return getHashesFieldBuilder().addBuilder(
@@ -7653,7 +7746,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder addHashesBuilder(
           int index) {
@@ -7666,7 +7759,7 @@ public final class ObjectServiceProto {
        * This supports multiple hashing algorithms.
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 2 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 3 [json_name = "hashes"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder> 
            getHashesBuilderList() {
@@ -7679,7 +7772,7 @@ public final class ObjectServiceProto {
           hashesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v2.ModelsProto.Hash, com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder, com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder>(
                   hashes_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           hashes_ = null;
@@ -7690,9 +7783,9 @@ public final class ObjectServiceProto {
       private java.util.List<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts> completedParts_ =
         java.util.Collections.emptyList();
       private void ensureCompletedPartsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           completedParts_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts>(completedParts_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -7706,7 +7799,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public java.util.List<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts> getCompletedPartsList() {
         if (completedPartsBuilder_ == null) {
@@ -7722,7 +7815,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public int getCompletedPartsCount() {
         if (completedPartsBuilder_ == null) {
@@ -7738,7 +7831,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts getCompletedParts(int index) {
         if (completedPartsBuilder_ == null) {
@@ -7754,7 +7847,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder setCompletedParts(
           int index, com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts value) {
@@ -7777,7 +7870,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder setCompletedParts(
           int index, com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder builderForValue) {
@@ -7797,7 +7890,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder addCompletedParts(com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts value) {
         if (completedPartsBuilder_ == null) {
@@ -7819,7 +7912,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder addCompletedParts(
           int index, com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts value) {
@@ -7842,7 +7935,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder addCompletedParts(
           com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder builderForValue) {
@@ -7862,7 +7955,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder addCompletedParts(
           int index, com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder builderForValue) {
@@ -7882,7 +7975,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder addAllCompletedParts(
           java.lang.Iterable<? extends com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts> values) {
@@ -7903,12 +7996,12 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder clearCompletedParts() {
         if (completedPartsBuilder_ == null) {
           completedParts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           completedPartsBuilder_.clear();
@@ -7922,7 +8015,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public Builder removeCompletedParts(int index) {
         if (completedPartsBuilder_ == null) {
@@ -7941,7 +8034,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder getCompletedPartsBuilder(
           int index) {
@@ -7954,7 +8047,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder getCompletedPartsOrBuilder(
           int index) {
@@ -7970,7 +8063,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder> 
            getCompletedPartsOrBuilderList() {
@@ -7987,7 +8080,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder addCompletedPartsBuilder() {
         return getCompletedPartsFieldBuilder().addBuilder(
@@ -8000,7 +8093,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder addCompletedPartsBuilder(
           int index) {
@@ -8014,7 +8107,7 @@ public final class ObjectServiceProto {
        * (optional)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 3 [json_name = "completedParts"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.CompletedParts completed_parts = 4 [json_name = "completedParts"];</code>
        */
       public java.util.List<com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder> 
            getCompletedPartsBuilderList() {
@@ -8027,7 +8120,7 @@ public final class ObjectServiceProto {
           completedPartsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts, com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedParts.Builder, com.aruna.api.storage.services.v2.ObjectServiceProto.CompletedPartsOrBuilder>(
                   completedParts_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           completedParts_ = null;
@@ -21527,100 +21620,101 @@ public final class ObjectServiceProto {
       "id\030\001 \001(\tR\010objectId\"*\n\026GetDownloadURLResp" +
       "onse\022\020\n\003url\030\001 \001(\tR\003url\"8\n\016CompletedParts" +
       "\022\022\n\004etag\030\001 \001(\tR\004etag\022\022\n\004part\030\002 \001(\003R\004part" +
-      "\"\314\001\n\032FinishObjectStagingRequest\022\033\n\tobjec" +
-      "t_id\030\001 \001(\tR\010objectId\0229\n\006hashes\030\002 \003(\0132!.a" +
-      "runa.api.storage.models.v2.HashR\006hashes\022" +
-      "V\n\017completed_parts\030\003 \003(\0132-.aruna.api.sto" +
-      "rage.services.v2.CompletedPartsR\016complet" +
-      "edParts\"Z\n\033FinishObjectStagingResponse\022;" +
-      "\n\006object\030\001 \001(\0132#.aruna.api.storage.model" +
-      "s.v2.ObjectR\006object\"\264\004\n\023UpdateObjectRequ" +
-      "est\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\027\n\004name" +
-      "\030\002 \001(\tH\001R\004name\210\001\001\022%\n\013description\030\003 \001(\tH\002" +
-      "R\013description\210\001\001\022K\n\016add_key_values\030\004 \003(\013" +
-      "2%.aruna.api.storage.models.v2.KeyValueR" +
-      "\014addKeyValues\022Q\n\021remove_key_values\030\005 \003(\013" +
-      "2%.aruna.api.storage.models.v2.KeyValueR" +
-      "\017removeKeyValues\022J\n\ndata_class\030\007 \001(\0162&.a" +
-      "runa.api.storage.models.v2.DataClassH\003R\t" +
-      "dataClass\210\001\001\022\037\n\nproject_id\030\010 \001(\tH\000R\tproj" +
-      "ectId\022%\n\rcollection_id\030\t \001(\tH\000R\014collecti" +
-      "onId\022\037\n\ndataset_id\030\n \001(\tH\000R\tdatasetId\0229\n" +
-      "\006hashes\030\014 \003(\0132!.aruna.api.storage.models" +
-      ".v2.HashR\006hashesB\010\n\006parentB\007\n\005_nameB\016\n\014_" +
-      "descriptionB\r\n\013_data_class\"v\n\024UpdateObje" +
-      "ctResponse\022;\n\006object\030\001 \001(\0132#.aruna.api.s" +
-      "torage.models.v2.ObjectR\006object\022!\n\014new_r" +
-      "evision\030\002 \001(\010R\013newRevision\"\244\001\n\022CloneObje" +
-      "ctRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\037" +
-      "\n\nproject_id\030\002 \001(\tH\000R\tprojectId\022%\n\rcolle" +
-      "ction_id\030\003 \001(\tH\000R\014collectionId\022\037\n\ndatase" +
-      "t_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006parent\"R\n\023Clo" +
-      "neObjectResponse\022;\n\006object\030\001 \001(\0132#.aruna" +
-      ".api.storage.models.v2.ObjectR\006object\"Y\n" +
-      "\023DeleteObjectRequest\022\033\n\tobject_id\030\001 \001(\tR" +
-      "\010objectId\022%\n\016with_revisions\030\002 \001(\010R\rwithR" +
-      "evisions\"\026\n\024DeleteObjectResponse\"/\n\020GetO" +
-      "bjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectI" +
-      "d\"P\n\021GetObjectResponse\022;\n\006object\030\001 \001(\0132#" +
+      "\"\355\001\n\032FinishObjectStagingRequest\022\033\n\tobjec" +
+      "t_id\030\001 \001(\tR\010objectId\022\037\n\013content_len\030\002 \001(" +
+      "\003R\ncontentLen\0229\n\006hashes\030\003 \003(\0132!.aruna.ap" +
+      "i.storage.models.v2.HashR\006hashes\022V\n\017comp" +
+      "leted_parts\030\004 \003(\0132-.aruna.api.storage.se" +
+      "rvices.v2.CompletedPartsR\016completedParts" +
+      "\"Z\n\033FinishObjectStagingResponse\022;\n\006objec" +
+      "t\030\001 \001(\0132#.aruna.api.storage.models.v2.Ob" +
+      "jectR\006object\"\264\004\n\023UpdateObjectRequest\022\033\n\t" +
+      "object_id\030\001 \001(\tR\010objectId\022\027\n\004name\030\002 \001(\tH" +
+      "\001R\004name\210\001\001\022%\n\013description\030\003 \001(\tH\002R\013descr" +
+      "iption\210\001\001\022K\n\016add_key_values\030\004 \003(\0132%.arun" +
+      "a.api.storage.models.v2.KeyValueR\014addKey" +
+      "Values\022Q\n\021remove_key_values\030\005 \003(\0132%.arun" +
+      "a.api.storage.models.v2.KeyValueR\017remove" +
+      "KeyValues\022J\n\ndata_class\030\007 \001(\0162&.aruna.ap" +
+      "i.storage.models.v2.DataClassH\003R\tdataCla" +
+      "ss\210\001\001\022\037\n\nproject_id\030\010 \001(\tH\000R\tprojectId\022%" +
+      "\n\rcollection_id\030\t \001(\tH\000R\014collectionId\022\037\n" +
+      "\ndataset_id\030\n \001(\tH\000R\tdatasetId\0229\n\006hashes" +
+      "\030\014 \003(\0132!.aruna.api.storage.models.v2.Has" +
+      "hR\006hashesB\010\n\006parentB\007\n\005_nameB\016\n\014_descrip" +
+      "tionB\r\n\013_data_class\"v\n\024UpdateObjectRespo" +
+      "nse\022;\n\006object\030\001 \001(\0132#.aruna.api.storage." +
+      "models.v2.ObjectR\006object\022!\n\014new_revision" +
+      "\030\002 \001(\010R\013newRevision\"\244\001\n\022CloneObjectReque" +
+      "st\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\037\n\nproje" +
+      "ct_id\030\002 \001(\tH\000R\tprojectId\022%\n\rcollection_i" +
+      "d\030\003 \001(\tH\000R\014collectionId\022\037\n\ndataset_id\030\004 " +
+      "\001(\tH\000R\tdatasetIdB\010\n\006parent\"R\n\023CloneObjec" +
+      "tResponse\022;\n\006object\030\001 \001(\0132#.aruna.api.st" +
+      "orage.models.v2.ObjectR\006object\"Y\n\023Delete" +
+      "ObjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010object" +
+      "Id\022%\n\016with_revisions\030\002 \001(\010R\rwithRevision" +
+      "s\"\026\n\024DeleteObjectResponse\"/\n\020GetObjectRe" +
+      "quest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"P\n\021Ge" +
+      "tObjectResponse\022;\n\006object\030\001 \001(\0132#.aruna." +
+      "api.storage.models.v2.ObjectR\006object\"2\n\021" +
+      "GetObjectsRequest\022\035\n\nobject_ids\030\001 \003(\tR\to" +
+      "bjectIds\"S\n\022GetObjectsResponse\022=\n\007object" +
+      "s\030\001 \003(\0132#.aruna.api.storage.models.v2.Ob" +
+      "jectR\007objects\"8\n\031GetObjectRevisionsReque" +
+      "st\022\033\n\tobject_id\030\002 \001(\tR\010objectId\"[\n\032GetOb" +
+      "jectRevisionsResponse\022=\n\007objects\030\001 \003(\0132#" +
+      ".aruna.api.storage.models.v2.ObjectR\007obj" +
+      "ects\"=\n\036GetLatestObjectRevisionRequest\022\033" +
+      "\n\tobject_id\030\001 \001(\tR\010objectId\"^\n\037GetLatest" +
+      "ObjectRevisionResponse\022;\n\006object\030\001 \001(\0132#" +
       ".aruna.api.storage.models.v2.ObjectR\006obj" +
-      "ect\"2\n\021GetObjectsRequest\022\035\n\nobject_ids\030\001" +
-      " \003(\tR\tobjectIds\"S\n\022GetObjectsResponse\022=\n" +
-      "\007objects\030\001 \003(\0132#.aruna.api.storage.model" +
-      "s.v2.ObjectR\007objects\"8\n\031GetObjectRevisio" +
-      "nsRequest\022\033\n\tobject_id\030\002 \001(\tR\010objectId\"[" +
-      "\n\032GetObjectRevisionsResponse\022=\n\007objects\030" +
-      "\001 \003(\0132#.aruna.api.storage.models.v2.Obje" +
-      "ctR\007objects\"=\n\036GetLatestObjectRevisionRe" +
-      "quest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"^\n\037Ge" +
-      "tLatestObjectRevisionResponse\022;\n\006object\030" +
-      "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
-      "ctR\006object\"]\n\031GetObjectEndpointsRequest\022" +
-      "#\n\rcollection_id\030\001 \001(\tR\014collectionId\022\033\n\t" +
-      "object_id\030\002 \001(\tR\010objectId2\220\013\n\rObjectServ" +
-      "ice\022\216\001\n\014CreateObject\0222.aruna.api.storage" +
-      ".services.v2.CreateObjectRequest\0323.aruna" +
-      ".api.storage.services.v2.CreateObjectRes" +
-      "ponse\"\025\202\323\344\223\002\017\"\n/v2/object:\001*\022\236\001\n\014GetUplo" +
-      "adURL\0222.aruna.api.storage.services.v2.Ge" +
-      "tUploadURLRequest\0323.aruna.api.storage.se" +
-      "rvices.v2.GetUploadURLResponse\"%\202\323\344\223\002\037\022\035" +
-      "/v2/object/{object_id}/upload\022\246\001\n\016GetDow" +
-      "nloadURL\0224.aruna.api.storage.services.v2" +
-      ".GetDownloadURLRequest\0325.aruna.api.stora" +
-      "ge.services.v2.GetDownloadURLResponse\"\'\202" +
-      "\323\344\223\002!\022\037/v2/object/{object_id}/download\022\266" +
-      "\001\n\023FinishObjectStaging\0229.aruna.api.stora" +
-      "ge.services.v2.FinishObjectStagingReques" +
-      "t\032:.aruna.api.storage.services.v2.Finish" +
-      "ObjectStagingResponse\"(\202\323\344\223\002\"2\035/v2/objec" +
-      "t/{object_id}/finish:\001*\022\232\001\n\014UpdateObject" +
-      "\0222.aruna.api.storage.services.v2.UpdateO" +
-      "bjectRequest\0323.aruna.api.storage.service" +
-      "s.v2.UpdateObjectResponse\"!\202\323\344\223\002\033\"\026/v2/o" +
-      "bject/{object_id}:\001*\022\226\001\n\013CloneObject\0221.a" +
-      "runa.api.storage.services.v2.CloneObject" +
-      "Request\0322.aruna.api.storage.services.v2." +
-      "CloneObjectResponse\" \202\323\344\223\002\032\"\025/v2/{object" +
-      "_id}/clone:\001*\022\232\001\n\014DeleteObject\0222.aruna.a" +
-      "pi.storage.services.v2.DeleteObjectReque" +
-      "st\0323.aruna.api.storage.services.v2.Delet" +
-      "eObjectResponse\"!\202\323\344\223\002\033*\026/v2/object/{obj" +
-      "ect_id}:\001*\022\216\001\n\tGetObject\022/.aruna.api.sto" +
-      "rage.services.v2.GetObjectRequest\0320.arun" +
-      "a.api.storage.services.v2.GetObjectRespo" +
-      "nse\"\036\202\323\344\223\002\030\022\026/v2/object/{object_id}\022\206\001\n\n" +
-      "GetObjects\0220.aruna.api.storage.services." +
-      "v2.GetObjectsRequest\0321.aruna.api.storage" +
-      ".services.v2.GetObjectsResponse\"\023\202\323\344\223\002\r\022" +
-      "\013/v2/objectsB\216\002\n!com.aruna.api.storage.s" +
-      "ervices.v2B\022ObjectServiceProtoP\000Z<github" +
-      ".com/ArunaStorage/go-api/aruna/api/stora" +
-      "ge/services/v2\242\002\004AASS\252\002\035Aruna.Api.Storag" +
-      "e.Services.V2\312\002\035Aruna\\Api\\Storage\\Servic" +
-      "es\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GP" +
-      "BMetadata\352\002!Aruna::Api::Storage::Service" +
-      "s::V2b\006proto3"
+      "ect\"]\n\031GetObjectEndpointsRequest\022#\n\rcoll" +
+      "ection_id\030\001 \001(\tR\014collectionId\022\033\n\tobject_" +
+      "id\030\002 \001(\tR\010objectId2\220\013\n\rObjectService\022\216\001\n" +
+      "\014CreateObject\0222.aruna.api.storage.servic" +
+      "es.v2.CreateObjectRequest\0323.aruna.api.st" +
+      "orage.services.v2.CreateObjectResponse\"\025" +
+      "\202\323\344\223\002\017\"\n/v2/object:\001*\022\236\001\n\014GetUploadURL\0222" +
+      ".aruna.api.storage.services.v2.GetUpload" +
+      "URLRequest\0323.aruna.api.storage.services." +
+      "v2.GetUploadURLResponse\"%\202\323\344\223\002\037\022\035/v2/obj" +
+      "ect/{object_id}/upload\022\246\001\n\016GetDownloadUR" +
+      "L\0224.aruna.api.storage.services.v2.GetDow" +
+      "nloadURLRequest\0325.aruna.api.storage.serv" +
+      "ices.v2.GetDownloadURLResponse\"\'\202\323\344\223\002!\022\037" +
+      "/v2/object/{object_id}/download\022\266\001\n\023Fini" +
+      "shObjectStaging\0229.aruna.api.storage.serv" +
+      "ices.v2.FinishObjectStagingRequest\032:.aru" +
+      "na.api.storage.services.v2.FinishObjectS" +
+      "tagingResponse\"(\202\323\344\223\002\"2\035/v2/object/{obje" +
+      "ct_id}/finish:\001*\022\232\001\n\014UpdateObject\0222.arun" +
+      "a.api.storage.services.v2.UpdateObjectRe" +
+      "quest\0323.aruna.api.storage.services.v2.Up" +
+      "dateObjectResponse\"!\202\323\344\223\002\033\"\026/v2/object/{" +
+      "object_id}:\001*\022\226\001\n\013CloneObject\0221.aruna.ap" +
+      "i.storage.services.v2.CloneObjectRequest" +
+      "\0322.aruna.api.storage.services.v2.CloneOb" +
+      "jectResponse\" \202\323\344\223\002\032\"\025/v2/{object_id}/cl" +
+      "one:\001*\022\232\001\n\014DeleteObject\0222.aruna.api.stor" +
+      "age.services.v2.DeleteObjectRequest\0323.ar" +
+      "una.api.storage.services.v2.DeleteObject" +
+      "Response\"!\202\323\344\223\002\033*\026/v2/object/{object_id}" +
+      ":\001*\022\216\001\n\tGetObject\022/.aruna.api.storage.se" +
+      "rvices.v2.GetObjectRequest\0320.aruna.api.s" +
+      "torage.services.v2.GetObjectResponse\"\036\202\323" +
+      "\344\223\002\030\022\026/v2/object/{object_id}\022\206\001\n\nGetObje" +
+      "cts\0220.aruna.api.storage.services.v2.GetO" +
+      "bjectsRequest\0321.aruna.api.storage.servic" +
+      "es.v2.GetObjectsResponse\"\023\202\323\344\223\002\r\022\013/v2/ob" +
+      "jectsB\216\002\n!com.aruna.api.storage.services" +
+      ".v2B\022ObjectServiceProtoP\000Z<github.com/Ar" +
+      "unaStorage/go-api/aruna/api/storage/serv" +
+      "ices/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Servi" +
+      "ces.V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002" +
+      ")Aruna\\Api\\Storage\\Services\\V2\\GPBMetada" +
+      "ta\352\002!Aruna::Api::Storage::Services::V2b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21675,7 +21769,7 @@ public final class ObjectServiceProto {
     internal_static_aruna_api_storage_services_v2_FinishObjectStagingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_FinishObjectStagingRequest_descriptor,
-        new java.lang.String[] { "ObjectId", "Hashes", "CompletedParts", });
+        new java.lang.String[] { "ObjectId", "ContentLen", "Hashes", "CompletedParts", });
     internal_static_aruna_api_storage_services_v2_FinishObjectStagingResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_storage_services_v2_FinishObjectStagingResponse_fieldAccessorTable = new

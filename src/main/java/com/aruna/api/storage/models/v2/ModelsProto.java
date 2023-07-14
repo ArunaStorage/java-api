@@ -1698,6 +1698,141 @@ public final class ModelsProto {
     // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.Hashalgorithm)
   }
 
+  /**
+   * Protobuf enum {@code aruna.api.storage.models.v2.ResourceVariant}
+   */
+  public enum ResourceVariant
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RESOURCE_VARIANT_UNSPECIFIED = 0;</code>
+     */
+    RESOURCE_VARIANT_UNSPECIFIED(0),
+    /**
+     * <code>RESOURCE_VARIANT_PROJECT = 1;</code>
+     */
+    RESOURCE_VARIANT_PROJECT(1),
+    /**
+     * <code>RESOURCE_VARIANT_COLLECTION = 2;</code>
+     */
+    RESOURCE_VARIANT_COLLECTION(2),
+    /**
+     * <code>RESOURCE_VARIANT_DATASET = 3;</code>
+     */
+    RESOURCE_VARIANT_DATASET(3),
+    /**
+     * <code>RESOURCE_VARIANT_OBJECT = 4;</code>
+     */
+    RESOURCE_VARIANT_OBJECT(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>RESOURCE_VARIANT_UNSPECIFIED = 0;</code>
+     */
+    public static final int RESOURCE_VARIANT_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>RESOURCE_VARIANT_PROJECT = 1;</code>
+     */
+    public static final int RESOURCE_VARIANT_PROJECT_VALUE = 1;
+    /**
+     * <code>RESOURCE_VARIANT_COLLECTION = 2;</code>
+     */
+    public static final int RESOURCE_VARIANT_COLLECTION_VALUE = 2;
+    /**
+     * <code>RESOURCE_VARIANT_DATASET = 3;</code>
+     */
+    public static final int RESOURCE_VARIANT_DATASET_VALUE = 3;
+    /**
+     * <code>RESOURCE_VARIANT_OBJECT = 4;</code>
+     */
+    public static final int RESOURCE_VARIANT_OBJECT_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ResourceVariant valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ResourceVariant forNumber(int value) {
+      switch (value) {
+        case 0: return RESOURCE_VARIANT_UNSPECIFIED;
+        case 1: return RESOURCE_VARIANT_PROJECT;
+        case 2: return RESOURCE_VARIANT_COLLECTION;
+        case 3: return RESOURCE_VARIANT_DATASET;
+        case 4: return RESOURCE_VARIANT_OBJECT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResourceVariant>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ResourceVariant> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResourceVariant>() {
+            public ResourceVariant findValueByNumber(int number) {
+              return ResourceVariant.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(12);
+    }
+
+    private static final ResourceVariant[] VALUES = values();
+
+    public static ResourceVariant valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ResourceVariant(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.ResourceVariant)
+  }
+
   public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.User)
       com.google.protobuf.MessageOrBuilder {
@@ -10802,45 +10937,56 @@ public final class ModelsProto {
         getResourceIdBytes();
 
     /**
-     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+     * @return The enum numeric value on the wire for resourceVariant.
+     */
+    int getResourceVariantValue();
+    /**
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+     * @return The resourceVariant.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant getResourceVariant();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
      * @return Whether the definedVariant field is set.
      */
     boolean hasDefinedVariant();
     /**
-     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
      * @return The enum numeric value on the wire for definedVariant.
      */
     int getDefinedVariantValue();
     /**
-     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
      * @return The definedVariant.
      */
     com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant getDefinedVariant();
 
     /**
-     * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+     * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
      * @return Whether the customVariant field is set.
      */
     boolean hasCustomVariant();
     /**
-     * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+     * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
      * @return The customVariant.
      */
     java.lang.String getCustomVariant();
     /**
-     * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+     * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
      * @return The bytes for customVariant.
      */
     com.google.protobuf.ByteString
         getCustomVariantBytes();
 
     /**
-     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
      * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
-     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
      * @return The direction.
      */
     com.aruna.api.storage.models.v2.ModelsProto.RelationDirection getDirection();
@@ -10861,6 +11007,7 @@ public final class ModelsProto {
     }
     private InternalRelation() {
       resourceId_ = "";
+      resourceVariant_ = 0;
       direction_ = 0;
     }
 
@@ -10890,8 +11037,8 @@ public final class ModelsProto {
     public enum VariantCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      DEFINED_VARIANT(2),
-      CUSTOM_VARIANT(3),
+      DEFINED_VARIANT(3),
+      CUSTOM_VARIANT(4),
       VARIANT_NOT_SET(0);
       private final int value;
       private VariantCase(int value) {
@@ -10909,8 +11056,8 @@ public final class ModelsProto {
 
       public static VariantCase forNumber(int value) {
         switch (value) {
-          case 2: return DEFINED_VARIANT;
-          case 3: return CUSTOM_VARIANT;
+          case 3: return DEFINED_VARIANT;
+          case 4: return CUSTOM_VARIANT;
           case 0: return VARIANT_NOT_SET;
           default: return null;
         }
@@ -10965,30 +11112,48 @@ public final class ModelsProto {
       }
     }
 
-    public static final int DEFINED_VARIANT_FIELD_NUMBER = 2;
+    public static final int RESOURCE_VARIANT_FIELD_NUMBER = 2;
+    private int resourceVariant_ = 0;
     /**
-     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+     * @return The enum numeric value on the wire for resourceVariant.
+     */
+    @java.lang.Override public int getResourceVariantValue() {
+      return resourceVariant_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+     * @return The resourceVariant.
+     */
+    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant getResourceVariant() {
+      com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant result = com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.forNumber(resourceVariant_);
+      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.UNRECOGNIZED : result;
+    }
+
+    public static final int DEFINED_VARIANT_FIELD_NUMBER = 3;
+    /**
+     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
      * @return Whether the definedVariant field is set.
      */
     public boolean hasDefinedVariant() {
-      return variantCase_ == 2;
+      return variantCase_ == 3;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
      * @return The enum numeric value on the wire for definedVariant.
      */
     public int getDefinedVariantValue() {
-      if (variantCase_ == 2) {
+      if (variantCase_ == 3) {
         return (java.lang.Integer) variant_;
       }
       return 0;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
      * @return The definedVariant.
      */
     public com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant getDefinedVariant() {
-      if (variantCase_ == 2) {
+      if (variantCase_ == 3) {
         com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant result = com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant.forNumber(
             (java.lang.Integer) variant_);
         return result == null ? com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant.UNRECOGNIZED : result;
@@ -10996,21 +11161,21 @@ public final class ModelsProto {
       return com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant.INTERNAL_RELATION_VARIANT_UNSPECIFIED;
     }
 
-    public static final int CUSTOM_VARIANT_FIELD_NUMBER = 3;
+    public static final int CUSTOM_VARIANT_FIELD_NUMBER = 4;
     /**
-     * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+     * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
      * @return Whether the customVariant field is set.
      */
     public boolean hasCustomVariant() {
-      return variantCase_ == 3;
+      return variantCase_ == 4;
     }
     /**
-     * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+     * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
      * @return The customVariant.
      */
     public java.lang.String getCustomVariant() {
       java.lang.Object ref = "";
-      if (variantCase_ == 3) {
+      if (variantCase_ == 4) {
         ref = variant_;
       }
       if (ref instanceof java.lang.String) {
@@ -11019,27 +11184,27 @@ public final class ModelsProto {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (variantCase_ == 3) {
+        if (variantCase_ == 4) {
           variant_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+     * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
      * @return The bytes for customVariant.
      */
     public com.google.protobuf.ByteString
         getCustomVariantBytes() {
       java.lang.Object ref = "";
-      if (variantCase_ == 3) {
+      if (variantCase_ == 4) {
         ref = variant_;
       }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        if (variantCase_ == 3) {
+        if (variantCase_ == 4) {
           variant_ = b;
         }
         return b;
@@ -11048,17 +11213,17 @@ public final class ModelsProto {
       }
     }
 
-    public static final int DIRECTION_FIELD_NUMBER = 4;
+    public static final int DIRECTION_FIELD_NUMBER = 5;
     private int direction_ = 0;
     /**
-     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
      * @return The enum numeric value on the wire for direction.
      */
     @java.lang.Override public int getDirectionValue() {
       return direction_;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+     * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
      * @return The direction.
      */
     @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.RelationDirection getDirection() {
@@ -11083,14 +11248,17 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
-      if (variantCase_ == 2) {
-        output.writeEnum(2, ((java.lang.Integer) variant_));
+      if (resourceVariant_ != com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, resourceVariant_);
       }
       if (variantCase_ == 3) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, variant_);
+        output.writeEnum(3, ((java.lang.Integer) variant_));
+      }
+      if (variantCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, variant_);
       }
       if (direction_ != com.aruna.api.storage.models.v2.ModelsProto.RelationDirection.RELATION_DIRECTION_UNSPECIFIED.getNumber()) {
-        output.writeEnum(4, direction_);
+        output.writeEnum(5, direction_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -11104,16 +11272,20 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
-      if (variantCase_ == 2) {
+      if (resourceVariant_ != com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, ((java.lang.Integer) variant_));
+          .computeEnumSize(2, resourceVariant_);
       }
       if (variantCase_ == 3) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, variant_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, ((java.lang.Integer) variant_));
+      }
+      if (variantCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, variant_);
       }
       if (direction_ != com.aruna.api.storage.models.v2.ModelsProto.RelationDirection.RELATION_DIRECTION_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, direction_);
+          .computeEnumSize(5, direction_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -11132,14 +11304,15 @@ public final class ModelsProto {
 
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
+      if (resourceVariant_ != other.resourceVariant_) return false;
       if (direction_ != other.direction_) return false;
       if (!getVariantCase().equals(other.getVariantCase())) return false;
       switch (variantCase_) {
-        case 2:
+        case 3:
           if (getDefinedVariantValue()
               != other.getDefinedVariantValue()) return false;
           break;
-        case 3:
+        case 4:
           if (!getCustomVariant()
               .equals(other.getCustomVariant())) return false;
           break;
@@ -11159,14 +11332,16 @@ public final class ModelsProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + RESOURCE_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + resourceVariant_;
       hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
       hash = (53 * hash) + direction_;
       switch (variantCase_) {
-        case 2:
+        case 3:
           hash = (37 * hash) + DEFINED_VARIANT_FIELD_NUMBER;
           hash = (53 * hash) + getDefinedVariantValue();
           break;
-        case 3:
+        case 4:
           hash = (37 * hash) + CUSTOM_VARIANT_FIELD_NUMBER;
           hash = (53 * hash) + getCustomVariant().hashCode();
           break;
@@ -11305,6 +11480,7 @@ public final class ModelsProto {
         super.clear();
         bitField0_ = 0;
         resourceId_ = "";
+        resourceVariant_ = 0;
         direction_ = 0;
         variantCase_ = 0;
         variant_ = null;
@@ -11345,7 +11521,10 @@ public final class ModelsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.resourceId_ = resourceId_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.resourceVariant_ = resourceVariant_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.direction_ = direction_;
         }
       }
@@ -11372,6 +11551,9 @@ public final class ModelsProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.resourceVariant_ != 0) {
+          setResourceVariantValue(other.getResourceVariantValue());
+        }
         if (other.direction_ != 0) {
           setDirectionValue(other.getDirectionValue());
         }
@@ -11381,7 +11563,7 @@ public final class ModelsProto {
             break;
           }
           case CUSTOM_VARIANT: {
-            variantCase_ = 3;
+            variantCase_ = 4;
             variant_ = other.variant_;
             onChanged();
             break;
@@ -11422,22 +11604,27 @@ public final class ModelsProto {
                 break;
               } // case 10
               case 16: {
-                int rawValue = input.readEnum();
-                variantCase_ = 2;
-                variant_ = rawValue;
+                resourceVariant_ = input.readEnum();
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
-              case 26: {
-                java.lang.String s = input.readStringRequireUtf8();
+              case 24: {
+                int rawValue = input.readEnum();
                 variantCase_ = 3;
+                variant_ = rawValue;
+                break;
+              } // case 24
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                variantCase_ = 4;
                 variant_ = s;
                 break;
-              } // case 26
-              case 32: {
+              } // case 34
+              case 40: {
                 direction_ = input.readEnum();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
                 break;
-              } // case 32
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -11542,43 +11729,96 @@ public final class ModelsProto {
         return this;
       }
 
+      private int resourceVariant_ = 0;
       /**
-       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+       * @return The enum numeric value on the wire for resourceVariant.
+       */
+      @java.lang.Override public int getResourceVariantValue() {
+        return resourceVariant_;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+       * @param value The enum numeric value on the wire for resourceVariant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceVariantValue(int value) {
+        resourceVariant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+       * @return The resourceVariant.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant getResourceVariant() {
+        com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant result = com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.forNumber(resourceVariant_);
+        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+       * @param value The resourceVariant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceVariant(com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        resourceVariant_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 2 [json_name = "resourceVariant"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceVariant() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        resourceVariant_ = 0;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
        * @return Whether the definedVariant field is set.
        */
       @java.lang.Override
       public boolean hasDefinedVariant() {
-        return variantCase_ == 2;
+        return variantCase_ == 3;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
        * @return The enum numeric value on the wire for definedVariant.
        */
       @java.lang.Override
       public int getDefinedVariantValue() {
-        if (variantCase_ == 2) {
+        if (variantCase_ == 3) {
           return ((java.lang.Integer) variant_).intValue();
         }
         return 0;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
        * @param value The enum numeric value on the wire for definedVariant to set.
        * @return This builder for chaining.
        */
       public Builder setDefinedVariantValue(int value) {
-        variantCase_ = 2;
+        variantCase_ = 3;
         variant_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
        * @return The definedVariant.
        */
       @java.lang.Override
       public com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant getDefinedVariant() {
-        if (variantCase_ == 2) {
+        if (variantCase_ == 3) {
           com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant result = com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant.forNumber(
               (java.lang.Integer) variant_);
           return result == null ? com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant.UNRECOGNIZED : result;
@@ -11586,7 +11826,7 @@ public final class ModelsProto {
         return com.aruna.api.storage.models.v2.ModelsProto.InternalRelationVariant.INTERNAL_RELATION_VARIANT_UNSPECIFIED;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
        * @param value The definedVariant to set.
        * @return This builder for chaining.
        */
@@ -11594,17 +11834,17 @@ public final class ModelsProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        variantCase_ = 2;
+        variantCase_ = 3;
         variant_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 2 [json_name = "definedVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.InternalRelationVariant defined_variant = 3 [json_name = "definedVariant"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDefinedVariant() {
-        if (variantCase_ == 2) {
+        if (variantCase_ == 3) {
           variantCase_ = 0;
           variant_ = null;
           onChanged();
@@ -11613,28 +11853,28 @@ public final class ModelsProto {
       }
 
       /**
-       * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+       * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
        * @return Whether the customVariant field is set.
        */
       @java.lang.Override
       public boolean hasCustomVariant() {
-        return variantCase_ == 3;
+        return variantCase_ == 4;
       }
       /**
-       * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+       * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
        * @return The customVariant.
        */
       @java.lang.Override
       public java.lang.String getCustomVariant() {
         java.lang.Object ref = "";
-        if (variantCase_ == 3) {
+        if (variantCase_ == 4) {
           ref = variant_;
         }
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (variantCase_ == 3) {
+          if (variantCase_ == 4) {
             variant_ = s;
           }
           return s;
@@ -11643,21 +11883,21 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+       * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
        * @return The bytes for customVariant.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
           getCustomVariantBytes() {
         java.lang.Object ref = "";
-        if (variantCase_ == 3) {
+        if (variantCase_ == 4) {
           ref = variant_;
         }
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          if (variantCase_ == 3) {
+          if (variantCase_ == 4) {
             variant_ = b;
           }
           return b;
@@ -11666,24 +11906,24 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+       * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
        * @param value The customVariant to set.
        * @return This builder for chaining.
        */
       public Builder setCustomVariant(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        variantCase_ = 3;
+        variantCase_ = 4;
         variant_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+       * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomVariant() {
-        if (variantCase_ == 3) {
+        if (variantCase_ == 4) {
           variantCase_ = 0;
           variant_ = null;
           onChanged();
@@ -11691,7 +11931,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>string custom_variant = 3 [json_name = "customVariant"];</code>
+       * <code>string custom_variant = 4 [json_name = "customVariant"];</code>
        * @param value The bytes for customVariant to set.
        * @return This builder for chaining.
        */
@@ -11699,7 +11939,7 @@ public final class ModelsProto {
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        variantCase_ = 3;
+        variantCase_ = 4;
         variant_ = value;
         onChanged();
         return this;
@@ -11707,25 +11947,25 @@ public final class ModelsProto {
 
       private int direction_ = 0;
       /**
-       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
        * @return The enum numeric value on the wire for direction.
        */
       @java.lang.Override public int getDirectionValue() {
         return direction_;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
        * @param value The enum numeric value on the wire for direction to set.
        * @return This builder for chaining.
        */
       public Builder setDirectionValue(int value) {
         direction_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
        * @return The direction.
        */
       @java.lang.Override
@@ -11734,7 +11974,7 @@ public final class ModelsProto {
         return result == null ? com.aruna.api.storage.models.v2.ModelsProto.RelationDirection.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
        * @param value The direction to set.
        * @return This builder for chaining.
        */
@@ -11742,17 +11982,17 @@ public final class ModelsProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         direction_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 4 [json_name = "direction"];</code>
+       * <code>.aruna.api.storage.models.v2.RelationDirection direction = 5 [json_name = "direction"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDirection() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         direction_ = 0;
         onChanged();
         return this;
@@ -28502,150 +28742,157 @@ public final class ModelsProto {
       "ifier\022_\n\017defined_variant\030\002 \001(\01624.aruna.a" +
       "pi.storage.models.v2.ExternalRelationVar" +
       "iantH\000R\016definedVariant\022\'\n\016custom_variant" +
-      "\030\003 \001(\tH\000R\rcustomVariantB\t\n\007variant\"\226\002\n\020I" +
+      "\030\003 \001(\tH\000R\rcustomVariantB\t\n\007variant\"\357\002\n\020I" +
       "nternalRelation\022\037\n\013resource_id\030\001 \001(\tR\nre" +
-      "sourceId\022_\n\017defined_variant\030\002 \001(\01624.arun" +
-      "a.api.storage.models.v2.InternalRelation" +
-      "VariantH\000R\016definedVariant\022\'\n\016custom_vari" +
-      "ant\030\003 \001(\tH\000R\rcustomVariant\022L\n\tdirection\030" +
-      "\004 \001(\0162..aruna.api.storage.models.v2.Rela" +
-      "tionDirectionR\tdirectionB\t\n\007variant\"K\n\013P" +
-      "ageRequest\022\037\n\013start_after\030\001 \001(\tR\nstartAf" +
-      "ter\022\033\n\tpage_size\030\002 \001(\003R\010pageSize\"p\n\005Stat" +
-      "s\022\024\n\005count\030\001 \001(\003R\005count\022\022\n\004size\030\002 \001(\003R\004s" +
-      "ize\022=\n\014last_updated\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampR\013lastUpdated\"X\n\004Hash\022<\n\003al" +
-      "g\030\001 \001(\0162*.aruna.api.storage.models.v2.Ha" +
-      "shalgorithmR\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n" +
-      "\022EndpointHostConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n" +
-      "\nis_primary\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(" +
-      "\010R\003ssl\022\026\n\006public\030\004 \001(\010R\006public\022S\n\014host_v" +
-      "ariant\030\005 \001(\01620.aruna.api.storage.models." +
-      "v2.EndpointHostVariantR\013hostVariant\"\262\002\n\010" +
-      "Endpoint\022\016\n\002id\030\001 \001(\tR\002id\022K\n\nep_variant\030\002" +
-      " \001(\0162,.aruna.api.storage.models.v2.Endpo" +
-      "intVariantR\tepVariant\022\022\n\004name\030\003 \001(\tR\004nam" +
-      "e\022\033\n\tis_public\030\004 \001(\010R\010isPublic\022D\n\006status" +
-      "\030\005 \001(\0162,.aruna.api.storage.models.v2.Com" +
-      "ponentStatusR\006status\022R\n\014host_configs\030\006 \003" +
-      "(\0132/.aruna.api.storage.models.v2.Endpoin" +
-      "tHostConfigR\013hostConfigs\"\253\002\n\017GenericReso" +
-      "urce\022@\n\007project\030\001 \001(\0132$.aruna.api.storag" +
-      "e.models.v2.ProjectH\000R\007project\022I\n\ncollec" +
-      "tion\030\002 \001(\0132\'.aruna.api.storage.models.v2" +
-      ".CollectionH\000R\ncollection\022@\n\007dataset\030\003 \001" +
-      "(\0132$.aruna.api.storage.models.v2.Dataset" +
-      "H\000R\007dataset\022=\n\006object\030\004 \001(\0132#.aruna.api." +
-      "storage.models.v2.ObjectH\000R\006objectB\n\n\010re" +
-      "source\"\214\004\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
-      "cription\022D\n\nkey_values\030\004 \003(\0132%.aruna.api" +
-      ".storage.models.v2.KeyValueR\tkeyValues\022C" +
-      "\n\trelations\030\005 \003(\0132%.aruna.api.storage.mo" +
-      "dels.v2.RelationR\trelations\0228\n\005stats\030\006 \001" +
-      "(\0132\".aruna.api.storage.models.v2.StatsR\005" +
-      "stats\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.st" +
-      "orage.models.v2.DataClassR\tdataClass\0229\n\n" +
-      "created_at\030\010 \001(\0132\032.google.protobuf.Times" +
-      "tampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcre" +
-      "atedBy\022;\n\006status\030\n \001(\0162#.aruna.api.stora" +
-      "ge.models.v2.StatusR\006status\022\030\n\007dynamic\030\013" +
-      " \001(\010R\007dynamic\"\217\004\n\nCollection\022\016\n\002id\030\001 \001(\t" +
-      "R\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030" +
-      "\003 \001(\tR\013description\022D\n\nkey_values\030\004 \003(\0132%" +
-      ".aruna.api.storage.models.v2.KeyValueR\tk" +
-      "eyValues\022C\n\trelations\030\005 \003(\0132%.aruna.api." +
-      "storage.models.v2.RelationR\trelations\0228\n" +
-      "\005stats\030\006 \001(\0132\".aruna.api.storage.models." +
-      "v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&.ar" +
-      "una.api.storage.models.v2.DataClassR\tdat" +
-      "aClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\tcreatedAt\022\035\n\ncreated_by\030" +
-      "\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna" +
-      ".api.storage.models.v2.StatusR\006status\022\030\n" +
-      "\007dynamic\030\013 \001(\010R\007dynamic\"\214\004\n\007Dataset\022\016\n\002i" +
-      "d\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descr" +
-      "iption\030\003 \001(\tR\013description\022D\n\nkey_values\030" +
-      "\004 \003(\0132%.aruna.api.storage.models.v2.KeyV" +
-      "alueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.aru" +
-      "na.api.storage.models.v2.RelationR\trelat" +
-      "ions\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage." +
-      "models.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001" +
-      "(\0162&.aruna.api.storage.models.v2.DataCla" +
-      "ssR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\tcreatedAt\022\035\n\ncrea" +
-      "ted_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162" +
-      "#.aruna.api.storage.models.v2.StatusR\006st" +
-      "atus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\255\004\n\006Objec" +
-      "t\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
-      "\013description\030\003 \001(\tR\013description\022D\n\nkey_v" +
-      "alues\030\004 \003(\0132%.aruna.api.storage.models.v" +
-      "2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003(\013" +
-      "2%.aruna.api.storage.models.v2.RelationR" +
-      "\trelations\022\037\n\013content_len\030\006 \001(\003R\ncontent" +
-      "Len\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.stor" +
-      "age.models.v2.DataClassR\tdataClass\0229\n\ncr" +
-      "eated_at\030\010 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreat" +
-      "edBy\022;\n\006status\030\n \001(\0162#.aruna.api.storage" +
-      ".models.v2.StatusR\006status\022\030\n\007dynamic\030\013 \001" +
-      "(\010R\007dynamic\0229\n\006hashes\030\014 \003(\0132!.aruna.api." +
-      "storage.models.v2.HashR\006hashes*\215\001\n\tDataC" +
-      "lass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025\n\021DATA" +
-      "_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIVATE\020\002\022" +
-      "\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DATA_CLASS_" +
-      "CONFIDENTIAL\020\005*s\n\017EndpointVariant\022 \n\034END" +
-      "POINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033ENDPOINT_" +
-      "VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOINT_VARIANT" +
-      "_VOLATILE\020\002*\200\001\n\023EndpointHostVariant\022%\n!E" +
-      "NDPOINT_HOST_VARIANT_UNSPECIFIED\020\000\022\037\n\033EN" +
-      "DPOINT_HOST_VARIANT_PROXY\020\001\022!\n\035ENDPOINT_" +
-      "HOST_VARIANT_BUNDLER\020\002*\276\001\n\017PermissionLev" +
-      "el\022 \n\034PERMISSION_LEVEL_UNSPECIFIED\020\000\022\031\n\025" +
-      "PERMISSION_LEVEL_NONE\020\002\022\031\n\025PERMISSION_LE" +
-      "VEL_READ\020\003\022\033\n\027PERMISSION_LEVEL_APPEND\020\004\022" +
-      "\032\n\026PERMISSION_LEVEL_WRITE\020\005\022\032\n\026PERMISSIO" +
-      "N_LEVEL_ADMIN\020\006*\221\001\n\017KeyValueVariant\022!\n\035K" +
-      "EY_VALUE_VARIANT_UNSPECIFIED\020\000\022\033\n\027KEY_VA" +
-      "LUE_VARIANT_LABEL\020\001\022\"\n\036KEY_VALUE_VARIANT" +
-      "_STATIC_LABEL\020\002\022\032\n\026KEY_VALUE_VARIANT_HOO" +
-      "K\020\003*\221\001\n\027ExternalRelationVariant\022)\n%EXTER" +
-      "NAL_RELATION_VARIANT_UNSPECIFIED\020\000\022!\n\035EX" +
-      "TERNAL_RELATION_VARIANT_URL\020\001\022(\n$EXTERNA" +
-      "L_RELATION_VARIANT_IDENTIFIER\020\002*\211\002\n\027Inte" +
-      "rnalRelationVariant\022)\n%INTERNAL_RELATION" +
-      "_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL_RELAT" +
-      "ION_VARIANT_BELONGS_TO\020\001\022$\n INTERNAL_REL" +
-      "ATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL_RELAT" +
-      "ION_VARIANT_DERIVED\020\003\022&\n\"INTERNAL_RELATI" +
-      "ON_VARIANT_METADATA\020\004\022$\n INTERNAL_RELATI" +
-      "ON_VARIANT_POLICY\020\005*x\n\021RelationDirection" +
-      "\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000\022\036\n\032" +
-      "RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELATION" +
-      "_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceAction" +
-      "\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n\026RES" +
-      "OURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_ACTION" +
-      "_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020\003\022\030\n" +
-      "\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_ACTI" +
-      "ON_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNSPECI" +
-      "FIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021STATU" +
-      "S_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003\022\026\n\022" +
-      "STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR\020\005\022\022" +
-      "\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStatus\022 " +
-      "\n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035COMP" +
-      "ONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPONENT" +
-      "_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STATUS_" +
-      "DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVAILAB" +
-      "LE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE\020\005*_" +
-      "\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNSPECI" +
-      "FIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HASHALG" +
-      "ORITHM_SHA256\020\002B\371\001\n\037com.aruna.api.storag" +
-      "e.models.v2B\013ModelsProtoZ:github.com/Aru" +
-      "naStorage/go-api/aruna/api/storage/model" +
-      "s/v2\242\002\004AASM\252\002\033Aruna.Api.Storage.Models.V" +
-      "2\312\002\033Aruna\\Api\\Storage\\Models\\V2\342\002\'Aruna\\" +
-      "Api\\Storage\\Models\\V2\\GPBMetadata\352\002\037Arun" +
-      "a::Api::Storage::Models::V2b\006proto3"
+      "sourceId\022W\n\020resource_variant\030\002 \001(\0162,.aru" +
+      "na.api.storage.models.v2.ResourceVariant" +
+      "R\017resourceVariant\022_\n\017defined_variant\030\003 \001" +
+      "(\01624.aruna.api.storage.models.v2.Interna" +
+      "lRelationVariantH\000R\016definedVariant\022\'\n\016cu" +
+      "stom_variant\030\004 \001(\tH\000R\rcustomVariant\022L\n\td" +
+      "irection\030\005 \001(\0162..aruna.api.storage.model" +
+      "s.v2.RelationDirectionR\tdirectionB\t\n\007var" +
+      "iant\"K\n\013PageRequest\022\037\n\013start_after\030\001 \001(\t" +
+      "R\nstartAfter\022\033\n\tpage_size\030\002 \001(\003R\010pageSiz" +
+      "e\"p\n\005Stats\022\024\n\005count\030\001 \001(\003R\005count\022\022\n\004size" +
+      "\030\002 \001(\003R\004size\022=\n\014last_updated\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\013lastUpdated\"X\n\004H" +
+      "ash\022<\n\003alg\030\001 \001(\0162*.aruna.api.storage.mod" +
+      "els.v2.HashalgorithmR\003alg\022\022\n\004hash\030\002 \001(\tR" +
+      "\004hash\"\304\001\n\022EndpointHostConfig\022\020\n\003url\030\001 \001(" +
+      "\tR\003url\022\035\n\nis_primary\030\002 \001(\010R\tisPrimary\022\020\n" +
+      "\003ssl\030\003 \001(\010R\003ssl\022\026\n\006public\030\004 \001(\010R\006public\022" +
+      "S\n\014host_variant\030\005 \001(\01620.aruna.api.storag" +
+      "e.models.v2.EndpointHostVariantR\013hostVar" +
+      "iant\"\262\002\n\010Endpoint\022\016\n\002id\030\001 \001(\tR\002id\022K\n\nep_" +
+      "variant\030\002 \001(\0162,.aruna.api.storage.models" +
+      ".v2.EndpointVariantR\tepVariant\022\022\n\004name\030\003" +
+      " \001(\tR\004name\022\033\n\tis_public\030\004 \001(\010R\010isPublic\022" +
+      "D\n\006status\030\005 \001(\0162,.aruna.api.storage.mode" +
+      "ls.v2.ComponentStatusR\006status\022R\n\014host_co" +
+      "nfigs\030\006 \003(\0132/.aruna.api.storage.models.v" +
+      "2.EndpointHostConfigR\013hostConfigs\"\253\002\n\017Ge" +
+      "nericResource\022@\n\007project\030\001 \001(\0132$.aruna.a" +
+      "pi.storage.models.v2.ProjectH\000R\007project\022" +
+      "I\n\ncollection\030\002 \001(\0132\'.aruna.api.storage." +
+      "models.v2.CollectionH\000R\ncollection\022@\n\007da" +
+      "taset\030\003 \001(\0132$.aruna.api.storage.models.v" +
+      "2.DatasetH\000R\007dataset\022=\n\006object\030\004 \001(\0132#.a" +
+      "runa.api.storage.models.v2.ObjectH\000R\006obj" +
+      "ectB\n\n\010resource\"\214\004\n\007Project\022\016\n\002id\030\001 \001(\tR" +
+      "\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003" +
+      " \001(\tR\013description\022D\n\nkey_values\030\004 \003(\0132%." +
+      "aruna.api.storage.models.v2.KeyValueR\tke" +
+      "yValues\022C\n\trelations\030\005 \003(\0132%.aruna.api.s" +
+      "torage.models.v2.RelationR\trelations\0228\n\005" +
+      "stats\030\006 \001(\0132\".aruna.api.storage.models.v" +
+      "2.StatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&.aru" +
+      "na.api.storage.models.v2.DataClassR\tdata" +
+      "Class\0229\n\ncreated_at\030\010 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tcreatedAt\022\035\n\ncreated_by\030\t" +
+      " \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna." +
+      "api.storage.models.v2.StatusR\006status\022\030\n\007" +
+      "dynamic\030\013 \001(\010R\007dynamic\"\217\004\n\nCollection\022\016\n" +
+      "\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013des" +
+      "cription\030\003 \001(\tR\013description\022D\n\nkey_value" +
+      "s\030\004 \003(\0132%.aruna.api.storage.models.v2.Ke" +
+      "yValueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.a" +
+      "runa.api.storage.models.v2.RelationR\trel" +
+      "ations\0228\n\005stats\030\006 \001(\0132\".aruna.api.storag" +
+      "e.models.v2.StatsR\005stats\022E\n\ndata_class\030\007" +
+      " \001(\0162&.aruna.api.storage.models.v2.DataC" +
+      "lassR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\tcreatedAt\022\035\n\ncr" +
+      "eated_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(" +
+      "\0162#.aruna.api.storage.models.v2.StatusR\006" +
+      "status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\214\004\n\007Dat" +
+      "aset\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name" +
+      "\022 \n\013description\030\003 \001(\tR\013description\022D\n\nke" +
+      "y_values\030\004 \003(\0132%.aruna.api.storage.model" +
+      "s.v2.KeyValueR\tkeyValues\022C\n\trelations\030\005 " +
+      "\003(\0132%.aruna.api.storage.models.v2.Relati" +
+      "onR\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api" +
+      ".storage.models.v2.StatsR\005stats\022E\n\ndata_" +
+      "class\030\007 \001(\0162&.aruna.api.storage.models.v" +
+      "2.DataClassR\tdataClass\0229\n\ncreated_at\030\010 \001" +
+      "(\0132\032.google.protobuf.TimestampR\tcreatedA" +
+      "t\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006stat" +
+      "us\030\n \001(\0162#.aruna.api.storage.models.v2.S" +
+      "tatusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"" +
+      "\255\004\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\022 \n\013description\030\003 \001(\tR\013description" +
+      "\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.storage" +
+      ".models.v2.KeyValueR\tkeyValues\022C\n\trelati" +
+      "ons\030\005 \003(\0132%.aruna.api.storage.models.v2." +
+      "RelationR\trelations\022\037\n\013content_len\030\006 \001(\003" +
+      "R\ncontentLen\022E\n\ndata_class\030\007 \001(\0162&.aruna" +
+      ".api.storage.models.v2.DataClassR\tdataCl" +
+      "ass\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobu" +
+      "f.TimestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001" +
+      "(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.ap" +
+      "i.storage.models.v2.StatusR\006status\022\030\n\007dy" +
+      "namic\030\013 \001(\010R\007dynamic\0229\n\006hashes\030\014 \003(\0132!.a" +
+      "runa.api.storage.models.v2.HashR\006hashes*" +
+      "\215\001\n\tDataClass\022\032\n\026DATA_CLASS_UNSPECIFIED\020" +
+      "\000\022\025\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_P" +
+      "RIVATE\020\002\022\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DA" +
+      "TA_CLASS_CONFIDENTIAL\020\005*s\n\017EndpointVaria" +
+      "nt\022 \n\034ENDPOINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033" +
+      "ENDPOINT_VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOIN" +
+      "T_VARIANT_VOLATILE\020\002*\200\001\n\023EndpointHostVar" +
+      "iant\022%\n!ENDPOINT_HOST_VARIANT_UNSPECIFIE" +
+      "D\020\000\022\037\n\033ENDPOINT_HOST_VARIANT_PROXY\020\001\022!\n\035" +
+      "ENDPOINT_HOST_VARIANT_BUNDLER\020\002*\276\001\n\017Perm" +
+      "issionLevel\022 \n\034PERMISSION_LEVEL_UNSPECIF" +
+      "IED\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031\n\025PERM" +
+      "ISSION_LEVEL_READ\020\003\022\033\n\027PERMISSION_LEVEL_" +
+      "APPEND\020\004\022\032\n\026PERMISSION_LEVEL_WRITE\020\005\022\032\n\026" +
+      "PERMISSION_LEVEL_ADMIN\020\006*\221\001\n\017KeyValueVar" +
+      "iant\022!\n\035KEY_VALUE_VARIANT_UNSPECIFIED\020\000\022" +
+      "\033\n\027KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KEY_VALU" +
+      "E_VARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VALUE_VA" +
+      "RIANT_HOOK\020\003*\221\001\n\027ExternalRelationVariant" +
+      "\022)\n%EXTERNAL_RELATION_VARIANT_UNSPECIFIE" +
+      "D\020\000\022!\n\035EXTERNAL_RELATION_VARIANT_URL\020\001\022(" +
+      "\n$EXTERNAL_RELATION_VARIANT_IDENTIFIER\020\002" +
+      "*\211\002\n\027InternalRelationVariant\022)\n%INTERNAL" +
+      "_RELATION_VARIANT_UNSPECIFIED\020\000\022(\n$INTER" +
+      "NAL_RELATION_VARIANT_BELONGS_TO\020\001\022$\n INT" +
+      "ERNAL_RELATION_VARIANT_ORIGIN\020\002\022%\n!INTER" +
+      "NAL_RELATION_VARIANT_DERIVED\020\003\022&\n\"INTERN" +
+      "AL_RELATION_VARIANT_METADATA\020\004\022$\n INTERN" +
+      "AL_RELATION_VARIANT_POLICY\020\005*x\n\021Relation" +
+      "Direction\022\"\n\036RELATION_DIRECTION_UNSPECIF" +
+      "IED\020\000\022\036\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n" +
+      "\033RELATION_DIRECTION_OUTBOUND\020\002*\273\001\n\016Resou" +
+      "rceAction\022\037\n\033RESOURCE_ACTION_UNSPECIFIED" +
+      "\020\000\022\032\n\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOUR" +
+      "CE_ACTION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UP" +
+      "DATE\020\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESO" +
+      "URCE_ACTION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATU" +
+      "S_UNSPECIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001" +
+      "\022\025\n\021STATUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILA" +
+      "BLE\020\003\022\026\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_" +
+      "ERROR\020\005\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017Componen" +
+      "tStatus\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020" +
+      "\000\022!\n\035COMPONENT_STATUS_INITIALIZING\020\001\022\036\n\032" +
+      "COMPONENT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONEN" +
+      "T_STATUS_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_" +
+      "UNAVAILABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTE" +
+      "NANCE\020\005*_\n\rHashalgorithm\022\035\n\031HASHALGORITH" +
+      "M_UNSPECIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030" +
+      "\n\024HASHALGORITHM_SHA256\020\002*\255\001\n\017ResourceVar" +
+      "iant\022 \n\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034" +
+      "\n\030RESOURCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE" +
+      "_VARIANT_COLLECTION\020\002\022\034\n\030RESOURCE_VARIAN" +
+      "T_DATASET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004" +
+      "B\371\001\n\037com.aruna.api.storage.models.v2B\013Mo" +
+      "delsProtoZ:github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/storage/models/v2\242\002\004AASM\252\002\033A" +
+      "runa.Api.Storage.Models.V2\312\002\033Aruna\\Api\\S" +
+      "torage\\Models\\V2\342\002\'Aruna\\Api\\Storage\\Mod" +
+      "els\\V2\\GPBMetadata\352\002\037Aruna::Api::Storage" +
+      "::Models::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28705,7 +28952,7 @@ public final class ModelsProto {
     internal_static_aruna_api_storage_models_v2_InternalRelation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_InternalRelation_descriptor,
-        new java.lang.String[] { "ResourceId", "DefinedVariant", "CustomVariant", "Direction", "Variant", });
+        new java.lang.String[] { "ResourceId", "ResourceVariant", "DefinedVariant", "CustomVariant", "Direction", "Variant", });
     internal_static_aruna_api_storage_models_v2_PageRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_aruna_api_storage_models_v2_PageRequest_fieldAccessorTable = new

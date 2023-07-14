@@ -15,141 +15,6 @@ public final class NotificationServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code aruna.api.notification.services.v2.ResourceVariant}
-   */
-  public enum ResourceVariant
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>RESOURCE_VARIANT_UNSPECIFIED = 0;</code>
-     */
-    RESOURCE_VARIANT_UNSPECIFIED(0),
-    /**
-     * <code>RESOURCE_VARIANT_PROJECT = 1;</code>
-     */
-    RESOURCE_VARIANT_PROJECT(1),
-    /**
-     * <code>RESOURCE_VARIANT_COLLECTION = 2;</code>
-     */
-    RESOURCE_VARIANT_COLLECTION(2),
-    /**
-     * <code>RESOURCE_VARIANT_DATASET = 3;</code>
-     */
-    RESOURCE_VARIANT_DATASET(3),
-    /**
-     * <code>RESOURCE_VARIANT_OBJECT = 4;</code>
-     */
-    RESOURCE_VARIANT_OBJECT(4),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>RESOURCE_VARIANT_UNSPECIFIED = 0;</code>
-     */
-    public static final int RESOURCE_VARIANT_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>RESOURCE_VARIANT_PROJECT = 1;</code>
-     */
-    public static final int RESOURCE_VARIANT_PROJECT_VALUE = 1;
-    /**
-     * <code>RESOURCE_VARIANT_COLLECTION = 2;</code>
-     */
-    public static final int RESOURCE_VARIANT_COLLECTION_VALUE = 2;
-    /**
-     * <code>RESOURCE_VARIANT_DATASET = 3;</code>
-     */
-    public static final int RESOURCE_VARIANT_DATASET_VALUE = 3;
-    /**
-     * <code>RESOURCE_VARIANT_OBJECT = 4;</code>
-     */
-    public static final int RESOURCE_VARIANT_OBJECT_VALUE = 4;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static ResourceVariant valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static ResourceVariant forNumber(int value) {
-      switch (value) {
-        case 0: return RESOURCE_VARIANT_UNSPECIFIED;
-        case 1: return RESOURCE_VARIANT_PROJECT;
-        case 2: return RESOURCE_VARIANT_COLLECTION;
-        case 3: return RESOURCE_VARIANT_DATASET;
-        case 4: return RESOURCE_VARIANT_OBJECT;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<ResourceVariant>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        ResourceVariant> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ResourceVariant>() {
-            public ResourceVariant findValueByNumber(int number) {
-              return ResourceVariant.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final ResourceVariant[] VALUES = values();
-
-    public static ResourceVariant valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private ResourceVariant(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:aruna.api.notification.services.v2.ResourceVariant)
-  }
-
-  /**
    * Protobuf enum {@code aruna.api.notification.services.v2.ResourceEventType}
    */
   public enum ResourceEventType
@@ -258,7 +123,7 @@ public final class NotificationServiceProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(1);
+      return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final ResourceEventType[] VALUES = values();
@@ -384,7 +249,7 @@ public final class NotificationServiceProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(2);
+      return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final UserEventType[] VALUES = values();
@@ -439,15 +304,27 @@ public final class NotificationServiceProto {
         getResourceNameBytes();
 
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * @return The associatedId.
+     */
+    java.lang.String getAssociatedId();
+    /**
+     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * @return The bytes for associatedId.
+     */
+    com.google.protobuf.ByteString
+        getAssociatedIdBytes();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
      * @return The enum numeric value on the wire for resourceVariant.
      */
     int getResourceVariantValue();
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
      * @return The resourceVariant.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant getResourceVariant();
+    com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant getResourceVariant();
   }
   /**
    * Protobuf type {@code aruna.api.notification.services.v2.Resource}
@@ -464,6 +341,7 @@ public final class NotificationServiceProto {
     private Resource() {
       resourceId_ = "";
       resourceName_ = "";
+      associatedId_ = "";
       resourceVariant_ = 0;
     }
 
@@ -565,22 +443,61 @@ public final class NotificationServiceProto {
       }
     }
 
-    public static final int RESOURCE_VARIANT_FIELD_NUMBER = 3;
+    public static final int ASSOCIATED_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object associatedId_ = "";
+    /**
+     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * @return The associatedId.
+     */
+    @java.lang.Override
+    public java.lang.String getAssociatedId() {
+      java.lang.Object ref = associatedId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        associatedId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * @return The bytes for associatedId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssociatedIdBytes() {
+      java.lang.Object ref = associatedId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        associatedId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCE_VARIANT_FIELD_NUMBER = 4;
     private int resourceVariant_ = 0;
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
      * @return The enum numeric value on the wire for resourceVariant.
      */
     @java.lang.Override public int getResourceVariantValue() {
       return resourceVariant_;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+     * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
      * @return The resourceVariant.
      */
-    @java.lang.Override public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant getResourceVariant() {
-      com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant result = com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant.forNumber(resourceVariant_);
-      return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant.UNRECOGNIZED : result;
+    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant getResourceVariant() {
+      com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant result = com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.forNumber(resourceVariant_);
+      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -603,8 +520,11 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourceName_);
       }
-      if (resourceVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, resourceVariant_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(associatedId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, associatedId_);
+      }
+      if (resourceVariant_ != com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, resourceVariant_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -621,9 +541,12 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourceName_);
       }
-      if (resourceVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(associatedId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, associatedId_);
+      }
+      if (resourceVariant_ != com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, resourceVariant_);
+          .computeEnumSize(4, resourceVariant_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -644,6 +567,8 @@ public final class NotificationServiceProto {
           .equals(other.getResourceId())) return false;
       if (!getResourceName()
           .equals(other.getResourceName())) return false;
+      if (!getAssociatedId()
+          .equals(other.getAssociatedId())) return false;
       if (resourceVariant_ != other.resourceVariant_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -660,6 +585,8 @@ public final class NotificationServiceProto {
       hash = (53 * hash) + getResourceId().hashCode();
       hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getResourceName().hashCode();
+      hash = (37 * hash) + ASSOCIATED_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAssociatedId().hashCode();
       hash = (37 * hash) + RESOURCE_VARIANT_FIELD_NUMBER;
       hash = (53 * hash) + resourceVariant_;
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -795,6 +722,7 @@ public final class NotificationServiceProto {
         bitField0_ = 0;
         resourceId_ = "";
         resourceName_ = "";
+        associatedId_ = "";
         resourceVariant_ = 0;
         return this;
       }
@@ -836,6 +764,9 @@ public final class NotificationServiceProto {
           result.resourceName_ = resourceName_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.associatedId_ = associatedId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.resourceVariant_ = resourceVariant_;
         }
       }
@@ -860,6 +791,11 @@ public final class NotificationServiceProto {
         if (!other.getResourceName().isEmpty()) {
           resourceName_ = other.resourceName_;
           bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAssociatedId().isEmpty()) {
+          associatedId_ = other.associatedId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.resourceVariant_ != 0) {
@@ -901,11 +837,16 @@ public final class NotificationServiceProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 24: {
-                resourceVariant_ = input.readEnum();
+              case 26: {
+                associatedId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 24
+              } // case 26
+              case 32: {
+                resourceVariant_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1067,54 +1008,126 @@ public final class NotificationServiceProto {
         return this;
       }
 
+      private java.lang.Object associatedId_ = "";
+      /**
+       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * @return The associatedId.
+       */
+      public java.lang.String getAssociatedId() {
+        java.lang.Object ref = associatedId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          associatedId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * @return The bytes for associatedId.
+       */
+      public com.google.protobuf.ByteString
+          getAssociatedIdBytes() {
+        java.lang.Object ref = associatedId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          associatedId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * @param value The associatedId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssociatedId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        associatedId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssociatedId() {
+        associatedId_ = getDefaultInstance().getAssociatedId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * @param value The bytes for associatedId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssociatedIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        associatedId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
       private int resourceVariant_ = 0;
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
        * @return The enum numeric value on the wire for resourceVariant.
        */
       @java.lang.Override public int getResourceVariantValue() {
         return resourceVariant_;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
        * @param value The enum numeric value on the wire for resourceVariant to set.
        * @return This builder for chaining.
        */
       public Builder setResourceVariantValue(int value) {
         resourceVariant_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
        * @return The resourceVariant.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant getResourceVariant() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant result = com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant.forNumber(resourceVariant_);
-        return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant.UNRECOGNIZED : result;
+      public com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant getResourceVariant() {
+        com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant result = com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.forNumber(resourceVariant_);
+        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
        * @param value The resourceVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setResourceVariant(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceVariant value) {
+      public Builder setResourceVariant(com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         resourceVariant_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceVariant resource_variant = 3 [json_name = "resourceVariant"];</code>
+       * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
        * @return This builder for chaining.
        */
       public Builder clearResourceVariant() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         resourceVariant_ = 0;
         onChanged();
         return this;
@@ -24124,165 +24137,161 @@ public final class NotificationServiceProto {
       "ification_service.proto\022\"aruna.api.notif" +
       "ication.services.v2\032\037google/protobuf/tim" +
       "estamp.proto\032(aruna/api/storage/models/v" +
-      "2/models.proto\"\260\001\n\010Resource\022\037\n\013resource_" +
+      "2/models.proto\"\316\001\n\010Resource\022\037\n\013resource_" +
       "id\030\001 \001(\tR\nresourceId\022#\n\rresource_name\030\002 " +
-      "\001(\tR\014resourceName\022^\n\020resource_variant\030\003 " +
-      "\001(\01623.aruna.api.notification.services.v2" +
-      ".ResourceVariantR\017resourceVariant\"\264\001\n\014St" +
-      "reamTarget\022J\n\010resource\030\001 \001(\0132,.aruna.api" +
-      ".notification.services.v2.ResourceH\000R\010re" +
-      "source\022\024\n\004user\030\002 \001(\010H\000R\004user\022$\n\014anouncem" +
-      "ents\030\003 \001(\010H\000R\014anouncements\022\022\n\003all\030\004 \001(\010H" +
-      "\000R\003allB\010\n\006target\"\305\003\n\033CreateStreamConsume" +
-      "rRequest\022H\n\006target\030\001 \001(\01320.aruna.api.not" +
-      "ification.services.v2.StreamTargetR\006targ" +
-      "et\0221\n\024include_subresources\030\002 \001(\010R\023includ" +
-      "eSubresources\022N\n\nstream_all\030\003 \001(\0132-.arun" +
-      "a.api.notification.services.v2.StreamAll" +
-      "H\000R\tstreamAll\022^\n\020stream_from_date\030\004 \001(\0132" +
-      "2.aruna.api.notification.services.v2.Str" +
-      "eamFromDateH\000R\016streamFromDate\022j\n\024stream_" +
-      "from_sequence\030\005 \001(\01326.aruna.api.notifica" +
-      "tion.services.v2.StreamFromSequenceH\000R\022s" +
-      "treamFromSequenceB\r\n\013stream_type\"F\n\034Crea" +
-      "teStreamConsumerResponse\022&\n\017stream_group" +
-      "_id\030\001 \001(\tR\rstreamGroupId\"d\n\033GetEventMess" +
-      "ageBatchRequest\022&\n\017stream_group_id\030\001 \001(\t" +
-      "R\rstreamGroupId\022\035\n\nbatch_size\030\002 \001(\rR\tbat" +
-      "chSize\"l\n\034GetEventMessageBatchResponse\022L" +
-      "\n\010messages\030\001 \003(\01320.aruna.api.notificatio" +
-      "n.services.v2.EventMessageR\010messages\"j\n!" +
-      "GetEventMessageBatchStreamRequest\022&\n\017str" +
-      "eam_group_id\030\001 \001(\tR\rstreamGroupId\022\035\n\nbat" +
-      "ch_size\030\002 \001(\rR\tbatchSize\"r\n\"GetEventMess" +
-      "ageBatchStreamResponse\022L\n\010messages\030\001 \003(\013" +
-      "20.aruna.api.notification.services.v2.Ev" +
-      "entMessageR\010messages\"e\n\036AcknowledgeMessa" +
-      "geBatchRequest\022C\n\007replies\030\001 \003(\0132).aruna." +
-      "api.notification.services.v2.ReplyR\007repl" +
-      "ies\"!\n\037AcknowledgeMessageBatchResponse\"J" +
-      "\n DeleteEventStreamingGroupRequest\022&\n\017st" +
-      "ream_group_id\030\001 \001(\tR\rstreamGroupId\"#\n!De" +
-      "leteEventStreamingGroupResponse\"0\n\022Strea" +
-      "mFromSequence\022\032\n\010sequence\030\001 \001(\004R\010sequenc" +
-      "e\"J\n\016StreamFromDate\0228\n\ttimestamp\030\001 \001(\0132\032" +
-      ".google.protobuf.TimestampR\ttimestamp\"\013\n" +
-      "\tStreamAll\"\256\001\n\016RelationUpdate\022J\n\radd_rel" +
-      "ations\030\002 \003(\0132%.aruna.api.storage.models." +
-      "v2.RelationR\014addRelations\022P\n\020remove_rela" +
-      "tions\030\003 \003(\0132%.aruna.api.storage.models.v" +
-      "2.RelationR\017removeRelations\"/\n\006Fields\022%\n" +
-      "\016updated_fields\030\001 \003(\tR\rupdatedFields\"\376\001\n" +
-      "\024ResourceEventContext\022S\n\016updated_fields\030" +
-      "\001 \001(\0132*.aruna.api.notification.services." +
-      "v2.FieldsH\000R\rupdatedFields\022_\n\020relation_u" +
-      "pdates\030\002 \001(\01322.aruna.api.notification.se" +
-      "rvices.v2.RelationUpdateH\000R\017relationUpda" +
-      "tes\022\'\n\016custom_context\030\003 \001(\tH\000R\rcustomCon" +
-      "textB\007\n\005event\"t\n\005Token\022\016\n\002id\030\001 \001(\tR\002id\022L" +
-      "\n\npermission\030\002 \001(\0132\'.aruna.api.storage.m" +
-      "odels.v2.PermissionH\000R\npermission\210\001\001B\r\n\013" +
-      "_permission\"\350\001\n\020UserEventContext\022%\n\rupda" +
-      "ted_field\030\001 \001(\tH\000R\014updatedField\022\026\n\005admin" +
-      "\030\002 \001(\010H\000R\005admin\022A\n\005token\030\003 \001(\0132).aruna.a" +
-      "pi.notification.services.v2.TokenH\000R\005tok" +
-      "en\022I\n\npermission\030\004 \001(\0132\'.aruna.api.stora" +
-      "ge.models.v2.PermissionH\000R\npermissionB\007\n" +
-      "\005event\"\264\002\n\014EventMessage\022Z\n\016resource_even" +
-      "t\030\001 \001(\01321.aruna.api.notification.service" +
-      "s.v2.ResourceEventH\000R\rresourceEvent\022N\n\nu" +
-      "ser_event\030\002 \001(\0132-.aruna.api.notification" +
-      ".services.v2.UserEventH\000R\tuserEvent\022e\n\022a" +
-      "nnouncement_event\030\003 \001(\01324.aruna.api.noti" +
-      "fication.services.v2.AnouncementEventH\000R" +
-      "\021announcementEventB\021\n\017message_variant\"\325\002" +
-      "\n\rResourceEvent\022H\n\010resource\030\001 \001(\0132,.arun" +
-      "a.api.notification.services.v2.ResourceR" +
-      "\010resource\022T\n\nevent_type\030\002 \001(\01625.aruna.ap" +
-      "i.notification.services.v2.ResourceEvent" +
-      "TypeR\teventType\022W\n\007context\030\003 \001(\01328.aruna" +
-      ".api.notification.services.v2.ResourceEv" +
-      "entContextH\000R\007context\210\001\001\022?\n\005reply\030\004 \001(\0132" +
-      ").aruna.api.notification.services.v2.Rep" +
-      "lyR\005replyB\n\n\010_context\"\265\002\n\tUserEvent\022\027\n\007u" +
-      "ser_id\030\001 \001(\tR\006userId\022\033\n\tuser_name\030\002 \001(\tR" +
-      "\010userName\022P\n\nevent_type\030\003 \001(\01621.aruna.ap" +
-      "i.notification.services.v2.UserEventType" +
-      "R\teventType\022S\n\007context\030\004 \001(\01324.aruna.api" +
-      ".notification.services.v2.UserEventConte" +
-      "xtH\000R\007context\210\001\001\022?\n\005reply\030\005 \001(\0132).aruna." +
-      "api.notification.services.v2.ReplyR\005repl" +
-      "yB\n\n\010_context\"E\n\005Reply\022\024\n\005reply\030\001 \001(\tR\005r" +
-      "eply\022\022\n\004salt\030\002 \001(\tR\004salt\022\022\n\004hmac\030\003 \001(\tR\004" +
-      "hmac\"\330\001\n\rDataproxyInfo\022\037\n\013endpoint_id\030\001 " +
-      "\001(\tR\nendpointId\022\022\n\004name\030\002 \001(\tR\004name\022K\n\ne" +
-      "p_variant\030\003 \001(\0162,.aruna.api.storage.mode" +
-      "ls.v2.EndpointVariantR\tepVariant\022\033\n\tis_p" +
-      "ublic\030\004 \001(\010R\010isPublic\022\026\n\006pubkey\030\005 \001(\tR\006p" +
-      "ubkey\022\020\n\003url\030\006 \001(\tR\003url\"\251\001\n\021ScheduledDow" +
-      "ntime\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcom" +
-      "ponent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032." +
-      "google.protobuf.TimestampR\004from\022*\n\002to\030\004 " +
-      "\001(\0132\032.google.protobuf.TimestampR\002to\"g\n\nN" +
-      "ewVersion\022\032\n\010location\030\001 \001(\tR\010location\022\034\n" +
-      "\tcomponent\030\002 \001(\tR\tcomponent\022\037\n\013new_versi" +
-      "on\030\003 \001(\tR\nnewVersion\"\242\004\n\020AnouncementEven" +
-      "t\022Y\n\016new_data_proxy\030\001 \001(\01321.aruna.api.no" +
-      "tification.services.v2.DataproxyInfoH\000R\014" +
-      "newDataProxy\022_\n\021remove_data_proxy\030\002 \001(\0132" +
-      "1.aruna.api.notification.services.v2.Dat" +
-      "aproxyInfoH\000R\017removeDataProxy\022_\n\021update_" +
-      "data_proxy\030\003 \001(\01321.aruna.api.notificatio" +
-      "n.services.v2.DataproxyInfoH\000R\017updateDat" +
-      "aProxy\022S\n\010downtime\030\004 \001(\01325.aruna.api.not" +
-      "ification.services.v2.ScheduledDowntimeH" +
-      "\000R\010downtime\022J\n\007version\030\005 \001(\0132..aruna.api" +
-      ".notification.services.v2.NewVersionH\000R\007" +
-      "version\022?\n\005reply\030\006 \001(\0132).aruna.api.notif" +
-      "ication.services.v2.ReplyR\005replyB\017\n\reven" +
-      "t_variant*\255\001\n\017ResourceVariant\022 \n\034RESOURC" +
-      "E_VARIANT_UNSPECIFIED\020\000\022\034\n\030RESOURCE_VARI" +
-      "ANT_PROJECT\020\001\022\037\n\033RESOURCE_VARIANT_COLLEC" +
-      "TION\020\002\022\034\n\030RESOURCE_VARIANT_DATASET\020\003\022\033\n\027" +
-      "RESOURCE_VARIANT_OBJECT\020\004*\276\001\n\021ResourceEv" +
-      "entType\022#\n\037RESOURCE_EVENT_TYPE_UNSPECIFI" +
-      "ED\020\000\022\037\n\033RESOURCE_EVENT_TYPE_CREATED\020\001\022!\n" +
-      "\035RESOURCE_EVENT_TYPE_AVAILABLE\020\002\022\037\n\033RESO" +
-      "URCE_EVENT_TYPE_UPDATED\020\003\022\037\n\033RESOURCE_EV" +
-      "ENT_TYPE_DELETED\020\004*\207\001\n\rUserEventType\022\037\n\033" +
-      "USER_EVENT_TYPE_UNSPECIFIED\020\000\022\033\n\027USER_EV" +
-      "ENT_TYPE_CREATED\020\001\022\033\n\027USER_EVENT_TYPE_UP" +
-      "DATED\020\002\022\033\n\027USER_EVENT_TYPE_DELETED\020\0032\334\006\n" +
-      "\030EventNotificationService\022\233\001\n\024CreateStre" +
-      "amConsumer\022?.aruna.api.notification.serv" +
-      "ices.v2.CreateStreamConsumerRequest\032@.ar" +
-      "una.api.notification.services.v2.CreateS" +
-      "treamConsumerResponse\"\000\022\233\001\n\024GetEventMess" +
-      "ageBatch\022?.aruna.api.notification.servic" +
-      "es.v2.GetEventMessageBatchRequest\032@.arun" +
-      "a.api.notification.services.v2.GetEventM" +
-      "essageBatchResponse\"\000\022\257\001\n\032GetEventMessag" +
-      "eBatchStream\022E.aruna.api.notification.se" +
-      "rvices.v2.GetEventMessageBatchStreamRequ" +
-      "est\032F.aruna.api.notification.services.v2" +
-      ".GetEventMessageBatchStreamResponse\"\0000\001\022" +
-      "\244\001\n\027AcknowledgeMessageBatch\022B.aruna.api." +
-      "notification.services.v2.AcknowledgeMess" +
-      "ageBatchRequest\032C.aruna.api.notification" +
-      ".services.v2.AcknowledgeMessageBatchResp" +
-      "onse\"\000\022\252\001\n\031DeleteEventStreamingGroup\022D.a" +
-      "runa.api.notification.services.v2.Delete" +
-      "EventStreamingGroupRequest\032E.aruna.api.n" +
-      "otification.services.v2.DeleteEventStrea" +
-      "mingGroupResponse\"\000B\262\002\n&com.aruna.api.no" +
-      "tification.services.v2B\030NotificationServ" +
-      "iceProtoP\000ZAgithub.com/ArunaStorage/go-a" +
-      "pi/aruna/api/notification/services/v2\242\002\004" +
-      "AANS\252\002\"Aruna.Api.Notification.Services.V" +
-      "2\312\002\"Aruna\\Api\\Notification\\Services\\V2\342\002" +
-      ".Aruna\\Api\\Notification\\Services\\V2\\GPBM" +
-      "etadata\352\002&Aruna::Api::Notification::Serv" +
-      "ices::V2b\006proto3"
+      "\001(\tR\014resourceName\022#\n\rassociated_id\030\003 \001(\t" +
+      "R\014associatedId\022W\n\020resource_variant\030\004 \001(\016" +
+      "2,.aruna.api.storage.models.v2.ResourceV" +
+      "ariantR\017resourceVariant\"\264\001\n\014StreamTarget" +
+      "\022J\n\010resource\030\001 \001(\0132,.aruna.api.notificat" +
+      "ion.services.v2.ResourceH\000R\010resource\022\024\n\004" +
+      "user\030\002 \001(\010H\000R\004user\022$\n\014anouncements\030\003 \001(\010" +
+      "H\000R\014anouncements\022\022\n\003all\030\004 \001(\010H\000R\003allB\010\n\006" +
+      "target\"\305\003\n\033CreateStreamConsumerRequest\022H" +
+      "\n\006target\030\001 \001(\01320.aruna.api.notification." +
+      "services.v2.StreamTargetR\006target\0221\n\024incl" +
+      "ude_subresources\030\002 \001(\010R\023includeSubresour" +
+      "ces\022N\n\nstream_all\030\003 \001(\0132-.aruna.api.noti" +
+      "fication.services.v2.StreamAllH\000R\tstream" +
+      "All\022^\n\020stream_from_date\030\004 \001(\01322.aruna.ap" +
+      "i.notification.services.v2.StreamFromDat" +
+      "eH\000R\016streamFromDate\022j\n\024stream_from_seque" +
+      "nce\030\005 \001(\01326.aruna.api.notification.servi" +
+      "ces.v2.StreamFromSequenceH\000R\022streamFromS" +
+      "equenceB\r\n\013stream_type\"F\n\034CreateStreamCo" +
+      "nsumerResponse\022&\n\017stream_group_id\030\001 \001(\tR" +
+      "\rstreamGroupId\"d\n\033GetEventMessageBatchRe" +
+      "quest\022&\n\017stream_group_id\030\001 \001(\tR\rstreamGr" +
+      "oupId\022\035\n\nbatch_size\030\002 \001(\rR\tbatchSize\"l\n\034" +
+      "GetEventMessageBatchResponse\022L\n\010messages" +
+      "\030\001 \003(\01320.aruna.api.notification.services" +
+      ".v2.EventMessageR\010messages\"j\n!GetEventMe" +
+      "ssageBatchStreamRequest\022&\n\017stream_group_" +
+      "id\030\001 \001(\tR\rstreamGroupId\022\035\n\nbatch_size\030\002 " +
+      "\001(\rR\tbatchSize\"r\n\"GetEventMessageBatchSt" +
+      "reamResponse\022L\n\010messages\030\001 \003(\01320.aruna.a" +
+      "pi.notification.services.v2.EventMessage" +
+      "R\010messages\"e\n\036AcknowledgeMessageBatchReq" +
+      "uest\022C\n\007replies\030\001 \003(\0132).aruna.api.notifi" +
+      "cation.services.v2.ReplyR\007replies\"!\n\037Ack" +
+      "nowledgeMessageBatchResponse\"J\n DeleteEv" +
+      "entStreamingGroupRequest\022&\n\017stream_group" +
+      "_id\030\001 \001(\tR\rstreamGroupId\"#\n!DeleteEventS" +
+      "treamingGroupResponse\"0\n\022StreamFromSeque" +
+      "nce\022\032\n\010sequence\030\001 \001(\004R\010sequence\"J\n\016Strea" +
+      "mFromDate\0228\n\ttimestamp\030\001 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\ttimestamp\"\013\n\tStreamAll" +
+      "\"\256\001\n\016RelationUpdate\022J\n\radd_relations\030\002 \003" +
+      "(\0132%.aruna.api.storage.models.v2.Relatio" +
+      "nR\014addRelations\022P\n\020remove_relations\030\003 \003(" +
+      "\0132%.aruna.api.storage.models.v2.Relation" +
+      "R\017removeRelations\"/\n\006Fields\022%\n\016updated_f" +
+      "ields\030\001 \003(\tR\rupdatedFields\"\376\001\n\024ResourceE" +
+      "ventContext\022S\n\016updated_fields\030\001 \001(\0132*.ar" +
+      "una.api.notification.services.v2.FieldsH" +
+      "\000R\rupdatedFields\022_\n\020relation_updates\030\002 \001" +
+      "(\01322.aruna.api.notification.services.v2." +
+      "RelationUpdateH\000R\017relationUpdates\022\'\n\016cus" +
+      "tom_context\030\003 \001(\tH\000R\rcustomContextB\007\n\005ev" +
+      "ent\"t\n\005Token\022\016\n\002id\030\001 \001(\tR\002id\022L\n\npermissi" +
+      "on\030\002 \001(\0132\'.aruna.api.storage.models.v2.P" +
+      "ermissionH\000R\npermission\210\001\001B\r\n\013_permissio" +
+      "n\"\350\001\n\020UserEventContext\022%\n\rupdated_field\030" +
+      "\001 \001(\tH\000R\014updatedField\022\026\n\005admin\030\002 \001(\010H\000R\005" +
+      "admin\022A\n\005token\030\003 \001(\0132).aruna.api.notific" +
+      "ation.services.v2.TokenH\000R\005token\022I\n\nperm" +
+      "ission\030\004 \001(\0132\'.aruna.api.storage.models." +
+      "v2.PermissionH\000R\npermissionB\007\n\005event\"\264\002\n" +
+      "\014EventMessage\022Z\n\016resource_event\030\001 \001(\01321." +
+      "aruna.api.notification.services.v2.Resou" +
+      "rceEventH\000R\rresourceEvent\022N\n\nuser_event\030" +
+      "\002 \001(\0132-.aruna.api.notification.services." +
+      "v2.UserEventH\000R\tuserEvent\022e\n\022announcemen" +
+      "t_event\030\003 \001(\01324.aruna.api.notification.s" +
+      "ervices.v2.AnouncementEventH\000R\021announcem" +
+      "entEventB\021\n\017message_variant\"\325\002\n\rResource" +
+      "Event\022H\n\010resource\030\001 \001(\0132,.aruna.api.noti" +
+      "fication.services.v2.ResourceR\010resource\022" +
+      "T\n\nevent_type\030\002 \001(\01625.aruna.api.notifica" +
+      "tion.services.v2.ResourceEventTypeR\teven" +
+      "tType\022W\n\007context\030\003 \001(\01328.aruna.api.notif" +
+      "ication.services.v2.ResourceEventContext" +
+      "H\000R\007context\210\001\001\022?\n\005reply\030\004 \001(\0132).aruna.ap" +
+      "i.notification.services.v2.ReplyR\005replyB" +
+      "\n\n\010_context\"\265\002\n\tUserEvent\022\027\n\007user_id\030\001 \001" +
+      "(\tR\006userId\022\033\n\tuser_name\030\002 \001(\tR\010userName\022" +
+      "P\n\nevent_type\030\003 \001(\01621.aruna.api.notifica" +
+      "tion.services.v2.UserEventTypeR\teventTyp" +
+      "e\022S\n\007context\030\004 \001(\01324.aruna.api.notificat" +
+      "ion.services.v2.UserEventContextH\000R\007cont" +
+      "ext\210\001\001\022?\n\005reply\030\005 \001(\0132).aruna.api.notifi" +
+      "cation.services.v2.ReplyR\005replyB\n\n\010_cont" +
+      "ext\"E\n\005Reply\022\024\n\005reply\030\001 \001(\tR\005reply\022\022\n\004sa" +
+      "lt\030\002 \001(\tR\004salt\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\330\001\n\rD" +
+      "ataproxyInfo\022\037\n\013endpoint_id\030\001 \001(\tR\nendpo" +
+      "intId\022\022\n\004name\030\002 \001(\tR\004name\022K\n\nep_variant\030" +
+      "\003 \001(\0162,.aruna.api.storage.models.v2.Endp" +
+      "ointVariantR\tepVariant\022\033\n\tis_public\030\004 \001(" +
+      "\010R\010isPublic\022\026\n\006pubkey\030\005 \001(\tR\006pubkey\022\020\n\003u" +
+      "rl\030\006 \001(\tR\003url\"\251\001\n\021ScheduledDowntime\022\032\n\010l" +
+      "ocation\030\001 \001(\tR\010location\022\034\n\tcomponent\030\002 \001" +
+      "(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\004from\022*\n\002to\030\004 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\002to\"g\n\nNewVersion\022" +
+      "\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcomponent" +
+      "\030\002 \001(\tR\tcomponent\022\037\n\013new_version\030\003 \001(\tR\n" +
+      "newVersion\"\242\004\n\020AnouncementEvent\022Y\n\016new_d" +
+      "ata_proxy\030\001 \001(\01321.aruna.api.notification" +
+      ".services.v2.DataproxyInfoH\000R\014newDataPro" +
+      "xy\022_\n\021remove_data_proxy\030\002 \001(\01321.aruna.ap" +
+      "i.notification.services.v2.DataproxyInfo" +
+      "H\000R\017removeDataProxy\022_\n\021update_data_proxy" +
+      "\030\003 \001(\01321.aruna.api.notification.services" +
+      ".v2.DataproxyInfoH\000R\017updateDataProxy\022S\n\010" +
+      "downtime\030\004 \001(\01325.aruna.api.notification." +
+      "services.v2.ScheduledDowntimeH\000R\010downtim" +
+      "e\022J\n\007version\030\005 \001(\0132..aruna.api.notificat" +
+      "ion.services.v2.NewVersionH\000R\007version\022?\n" +
+      "\005reply\030\006 \001(\0132).aruna.api.notification.se" +
+      "rvices.v2.ReplyR\005replyB\017\n\revent_variant*" +
+      "\276\001\n\021ResourceEventType\022#\n\037RESOURCE_EVENT_" +
+      "TYPE_UNSPECIFIED\020\000\022\037\n\033RESOURCE_EVENT_TYP" +
+      "E_CREATED\020\001\022!\n\035RESOURCE_EVENT_TYPE_AVAIL" +
+      "ABLE\020\002\022\037\n\033RESOURCE_EVENT_TYPE_UPDATED\020\003\022" +
+      "\037\n\033RESOURCE_EVENT_TYPE_DELETED\020\004*\207\001\n\rUse" +
+      "rEventType\022\037\n\033USER_EVENT_TYPE_UNSPECIFIE" +
+      "D\020\000\022\033\n\027USER_EVENT_TYPE_CREATED\020\001\022\033\n\027USER" +
+      "_EVENT_TYPE_UPDATED\020\002\022\033\n\027USER_EVENT_TYPE" +
+      "_DELETED\020\0032\334\006\n\030EventNotificationService\022" +
+      "\233\001\n\024CreateStreamConsumer\022?.aruna.api.not" +
+      "ification.services.v2.CreateStreamConsum" +
+      "erRequest\032@.aruna.api.notification.servi" +
+      "ces.v2.CreateStreamConsumerResponse\"\000\022\233\001" +
+      "\n\024GetEventMessageBatch\022?.aruna.api.notif" +
+      "ication.services.v2.GetEventMessageBatch" +
+      "Request\032@.aruna.api.notification.service" +
+      "s.v2.GetEventMessageBatchResponse\"\000\022\257\001\n\032" +
+      "GetEventMessageBatchStream\022E.aruna.api.n" +
+      "otification.services.v2.GetEventMessageB" +
+      "atchStreamRequest\032F.aruna.api.notificati" +
+      "on.services.v2.GetEventMessageBatchStrea" +
+      "mResponse\"\0000\001\022\244\001\n\027AcknowledgeMessageBatc" +
+      "h\022B.aruna.api.notification.services.v2.A" +
+      "cknowledgeMessageBatchRequest\032C.aruna.ap" +
+      "i.notification.services.v2.AcknowledgeMe" +
+      "ssageBatchResponse\"\000\022\252\001\n\031DeleteEventStre" +
+      "amingGroup\022D.aruna.api.notification.serv" +
+      "ices.v2.DeleteEventStreamingGroupRequest" +
+      "\032E.aruna.api.notification.services.v2.De" +
+      "leteEventStreamingGroupResponse\"\000B\262\002\n&co" +
+      "m.aruna.api.notification.services.v2B\030No" +
+      "tificationServiceProtoP\000ZAgithub.com/Aru" +
+      "naStorage/go-api/aruna/api/notification/" +
+      "services/v2\242\002\004AANS\252\002\"Aruna.Api.Notificat" +
+      "ion.Services.V2\312\002\"Aruna\\Api\\Notification" +
+      "\\Services\\V2\342\002.Aruna\\Api\\Notification\\Se" +
+      "rvices\\V2\\GPBMetadata\352\002&Aruna::Api::Noti" +
+      "fication::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24295,7 +24304,7 @@ public final class NotificationServiceProto {
     internal_static_aruna_api_notification_services_v2_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_Resource_descriptor,
-        new java.lang.String[] { "ResourceId", "ResourceName", "ResourceVariant", });
+        new java.lang.String[] { "ResourceId", "ResourceName", "AssociatedId", "ResourceVariant", });
     internal_static_aruna_api_notification_services_v2_StreamTarget_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_notification_services_v2_StreamTarget_fieldAccessorTable = new
