@@ -83,6 +83,37 @@ public final class StorageStatusServiceGrpc {
     return getGetStorageStatusMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest,
+      com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> getGetPubkeysMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPubkeys",
+      requestType = com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest.class,
+      responseType = com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest,
+      com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> getGetPubkeysMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest, com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> getGetPubkeysMethod;
+    if ((getGetPubkeysMethod = StorageStatusServiceGrpc.getGetPubkeysMethod) == null) {
+      synchronized (StorageStatusServiceGrpc.class) {
+        if ((getGetPubkeysMethod = StorageStatusServiceGrpc.getGetPubkeysMethod) == null) {
+          StorageStatusServiceGrpc.getGetPubkeysMethod = getGetPubkeysMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest, com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPubkeys"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StorageStatusServiceMethodDescriptorSupplier("GetPubkeys"))
+              .build();
+        }
+      }
+    }
+    return getGetPubkeysMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -161,6 +192,13 @@ public final class StorageStatusServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStorageStatusMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getPubkeys(com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPubkeysMethod(), responseObserver);
+    }
   }
 
   /**
@@ -228,6 +266,14 @@ public final class StorageStatusServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetStorageStatusMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getPubkeys(com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPubkeysMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -275,6 +321,13 @@ public final class StorageStatusServiceGrpc {
     public com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusResponse getStorageStatus(com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetStorageStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse getPubkeys(com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPubkeysMethod(), getCallOptions(), request);
     }
   }
 
@@ -326,10 +379,19 @@ public final class StorageStatusServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetStorageStatusMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> getPubkeys(
+        com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPubkeysMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_STORAGE_VERSION = 0;
   private static final int METHODID_GET_STORAGE_STATUS = 1;
+  private static final int METHODID_GET_PUBKEYS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -355,6 +417,10 @@ public final class StorageStatusServiceGrpc {
         case METHODID_GET_STORAGE_STATUS:
           serviceImpl.getStorageStatus((com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusResponse>) responseObserver);
+          break;
+        case METHODID_GET_PUBKEYS:
+          serviceImpl.getPubkeys((com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -388,6 +454,13 @@ public final class StorageStatusServiceGrpc {
               com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusRequest,
               com.aruna.api.storage.services.v2.InfoServiceProto.GetStorageStatusResponse>(
                 service, METHODID_GET_STORAGE_STATUS)))
+        .addMethod(
+          getGetPubkeysMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest,
+              com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse>(
+                service, METHODID_GET_PUBKEYS)))
         .build();
   }
 
@@ -438,6 +511,7 @@ public final class StorageStatusServiceGrpc {
               .setSchemaDescriptor(new StorageStatusServiceFileDescriptorSupplier())
               .addMethod(getGetStorageVersionMethod())
               .addMethod(getGetStorageStatusMethod())
+              .addMethod(getGetPubkeysMethod())
               .build();
         }
       }

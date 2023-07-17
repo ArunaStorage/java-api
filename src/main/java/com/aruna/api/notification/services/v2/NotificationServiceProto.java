@@ -15,53 +15,53 @@ public final class NotificationServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code aruna.api.notification.services.v2.ResourceEventType}
+   * Protobuf enum {@code aruna.api.notification.services.v2.EventVariant}
    */
-  public enum ResourceEventType
+  public enum EventVariant
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>RESOURCE_EVENT_TYPE_UNSPECIFIED = 0;</code>
+     * <code>EVENT_VARIANT_UNSPECIFIED = 0;</code>
      */
-    RESOURCE_EVENT_TYPE_UNSPECIFIED(0),
+    EVENT_VARIANT_UNSPECIFIED(0),
     /**
-     * <code>RESOURCE_EVENT_TYPE_CREATED = 1;</code>
+     * <code>EVENT_VARIANT_CREATED = 1;</code>
      */
-    RESOURCE_EVENT_TYPE_CREATED(1),
+    EVENT_VARIANT_CREATED(1),
     /**
-     * <code>RESOURCE_EVENT_TYPE_AVAILABLE = 2;</code>
+     * <code>EVENT_VARIANT_AVAILABLE = 2;</code>
      */
-    RESOURCE_EVENT_TYPE_AVAILABLE(2),
+    EVENT_VARIANT_AVAILABLE(2),
     /**
-     * <code>RESOURCE_EVENT_TYPE_UPDATED = 3;</code>
+     * <code>EVENT_VARIANT_UPDATED = 3;</code>
      */
-    RESOURCE_EVENT_TYPE_UPDATED(3),
+    EVENT_VARIANT_UPDATED(3),
     /**
-     * <code>RESOURCE_EVENT_TYPE_DELETED = 4;</code>
+     * <code>EVENT_VARIANT_DELETED = 4;</code>
      */
-    RESOURCE_EVENT_TYPE_DELETED(4),
+    EVENT_VARIANT_DELETED(4),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>RESOURCE_EVENT_TYPE_UNSPECIFIED = 0;</code>
+     * <code>EVENT_VARIANT_UNSPECIFIED = 0;</code>
      */
-    public static final int RESOURCE_EVENT_TYPE_UNSPECIFIED_VALUE = 0;
+    public static final int EVENT_VARIANT_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>RESOURCE_EVENT_TYPE_CREATED = 1;</code>
+     * <code>EVENT_VARIANT_CREATED = 1;</code>
      */
-    public static final int RESOURCE_EVENT_TYPE_CREATED_VALUE = 1;
+    public static final int EVENT_VARIANT_CREATED_VALUE = 1;
     /**
-     * <code>RESOURCE_EVENT_TYPE_AVAILABLE = 2;</code>
+     * <code>EVENT_VARIANT_AVAILABLE = 2;</code>
      */
-    public static final int RESOURCE_EVENT_TYPE_AVAILABLE_VALUE = 2;
+    public static final int EVENT_VARIANT_AVAILABLE_VALUE = 2;
     /**
-     * <code>RESOURCE_EVENT_TYPE_UPDATED = 3;</code>
+     * <code>EVENT_VARIANT_UPDATED = 3;</code>
      */
-    public static final int RESOURCE_EVENT_TYPE_UPDATED_VALUE = 3;
+    public static final int EVENT_VARIANT_UPDATED_VALUE = 3;
     /**
-     * <code>RESOURCE_EVENT_TYPE_DELETED = 4;</code>
+     * <code>EVENT_VARIANT_DELETED = 4;</code>
      */
-    public static final int RESOURCE_EVENT_TYPE_DELETED_VALUE = 4;
+    public static final int EVENT_VARIANT_DELETED_VALUE = 4;
 
 
     public final int getNumber() {
@@ -78,7 +78,7 @@ public final class NotificationServiceProto {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static ResourceEventType valueOf(int value) {
+    public static EventVariant valueOf(int value) {
       return forNumber(value);
     }
 
@@ -86,26 +86,26 @@ public final class NotificationServiceProto {
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static ResourceEventType forNumber(int value) {
+    public static EventVariant forNumber(int value) {
       switch (value) {
-        case 0: return RESOURCE_EVENT_TYPE_UNSPECIFIED;
-        case 1: return RESOURCE_EVENT_TYPE_CREATED;
-        case 2: return RESOURCE_EVENT_TYPE_AVAILABLE;
-        case 3: return RESOURCE_EVENT_TYPE_UPDATED;
-        case 4: return RESOURCE_EVENT_TYPE_DELETED;
+        case 0: return EVENT_VARIANT_UNSPECIFIED;
+        case 1: return EVENT_VARIANT_CREATED;
+        case 2: return EVENT_VARIANT_AVAILABLE;
+        case 3: return EVENT_VARIANT_UPDATED;
+        case 4: return EVENT_VARIANT_DELETED;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ResourceEventType>
+    public static com.google.protobuf.Internal.EnumLiteMap<EventVariant>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        ResourceEventType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ResourceEventType>() {
-            public ResourceEventType findValueByNumber(int number) {
-              return ResourceEventType.forNumber(number);
+        EventVariant> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EventVariant>() {
+            public EventVariant findValueByNumber(int number) {
+              return EventVariant.forNumber(number);
             }
           };
 
@@ -126,9 +126,9 @@ public final class NotificationServiceProto {
       return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final ResourceEventType[] VALUES = values();
+    private static final EventVariant[] VALUES = values();
 
-    public static ResourceEventType valueOf(
+    public static EventVariant valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -142,137 +142,11 @@ public final class NotificationServiceProto {
 
     private final int value;
 
-    private ResourceEventType(int value) {
+    private EventVariant(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:aruna.api.notification.services.v2.ResourceEventType)
-  }
-
-  /**
-   * Protobuf enum {@code aruna.api.notification.services.v2.UserEventType}
-   */
-  public enum UserEventType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>USER_EVENT_TYPE_UNSPECIFIED = 0;</code>
-     */
-    USER_EVENT_TYPE_UNSPECIFIED(0),
-    /**
-     * <code>USER_EVENT_TYPE_CREATED = 1;</code>
-     */
-    USER_EVENT_TYPE_CREATED(1),
-    /**
-     * <code>USER_EVENT_TYPE_UPDATED = 2;</code>
-     */
-    USER_EVENT_TYPE_UPDATED(2),
-    /**
-     * <code>USER_EVENT_TYPE_DELETED = 3;</code>
-     */
-    USER_EVENT_TYPE_DELETED(3),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>USER_EVENT_TYPE_UNSPECIFIED = 0;</code>
-     */
-    public static final int USER_EVENT_TYPE_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>USER_EVENT_TYPE_CREATED = 1;</code>
-     */
-    public static final int USER_EVENT_TYPE_CREATED_VALUE = 1;
-    /**
-     * <code>USER_EVENT_TYPE_UPDATED = 2;</code>
-     */
-    public static final int USER_EVENT_TYPE_UPDATED_VALUE = 2;
-    /**
-     * <code>USER_EVENT_TYPE_DELETED = 3;</code>
-     */
-    public static final int USER_EVENT_TYPE_DELETED_VALUE = 3;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static UserEventType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static UserEventType forNumber(int value) {
-      switch (value) {
-        case 0: return USER_EVENT_TYPE_UNSPECIFIED;
-        case 1: return USER_EVENT_TYPE_CREATED;
-        case 2: return USER_EVENT_TYPE_UPDATED;
-        case 3: return USER_EVENT_TYPE_DELETED;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<UserEventType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        UserEventType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<UserEventType>() {
-            public UserEventType findValueByNumber(int number) {
-              return UserEventType.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final UserEventType[] VALUES = values();
-
-    public static UserEventType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private UserEventType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:aruna.api.notification.services.v2.UserEventType)
+    // @@protoc_insertion_point(enum_scope:aruna.api.notification.services.v2.EventVariant)
   }
 
   public interface ResourceOrBuilder extends
@@ -292,28 +166,22 @@ public final class NotificationServiceProto {
         getResourceIdBytes();
 
     /**
-     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-     * @return The resourceName.
-     */
-    java.lang.String getResourceName();
-    /**
-     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-     * @return The bytes for resourceName.
-     */
-    com.google.protobuf.ByteString
-        getResourceNameBytes();
-
-    /**
-     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * <code>string associated_id = 2 [json_name = "associatedId"];</code>
      * @return The associatedId.
      */
     java.lang.String getAssociatedId();
     /**
-     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * <code>string associated_id = 2 [json_name = "associatedId"];</code>
      * @return The bytes for associatedId.
      */
     com.google.protobuf.ByteString
         getAssociatedIdBytes();
+
+    /**
+     * <code>bool persistent_resource_id = 3 [json_name = "persistentResourceId"];</code>
+     * @return The persistentResourceId.
+     */
+    boolean getPersistentResourceId();
 
     /**
      * <code>.aruna.api.storage.models.v2.ResourceVariant resource_variant = 4 [json_name = "resourceVariant"];</code>
@@ -340,7 +208,6 @@ public final class NotificationServiceProto {
     }
     private Resource() {
       resourceId_ = "";
-      resourceName_ = "";
       associatedId_ = "";
       resourceVariant_ = 0;
     }
@@ -404,50 +271,11 @@ public final class NotificationServiceProto {
       }
     }
 
-    public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object resourceName_ = "";
-    /**
-     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-     * @return The resourceName.
-     */
-    @java.lang.Override
-    public java.lang.String getResourceName() {
-      java.lang.Object ref = resourceName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        resourceName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-     * @return The bytes for resourceName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getResourceNameBytes() {
-      java.lang.Object ref = resourceName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        resourceName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ASSOCIATED_ID_FIELD_NUMBER = 3;
+    public static final int ASSOCIATED_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object associatedId_ = "";
     /**
-     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * <code>string associated_id = 2 [json_name = "associatedId"];</code>
      * @return The associatedId.
      */
     @java.lang.Override
@@ -464,7 +292,7 @@ public final class NotificationServiceProto {
       }
     }
     /**
-     * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+     * <code>string associated_id = 2 [json_name = "associatedId"];</code>
      * @return The bytes for associatedId.
      */
     @java.lang.Override
@@ -480,6 +308,17 @@ public final class NotificationServiceProto {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int PERSISTENT_RESOURCE_ID_FIELD_NUMBER = 3;
+    private boolean persistentResourceId_ = false;
+    /**
+     * <code>bool persistent_resource_id = 3 [json_name = "persistentResourceId"];</code>
+     * @return The persistentResourceId.
+     */
+    @java.lang.Override
+    public boolean getPersistentResourceId() {
+      return persistentResourceId_;
     }
 
     public static final int RESOURCE_VARIANT_FIELD_NUMBER = 4;
@@ -517,11 +356,11 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourceName_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(associatedId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, associatedId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, associatedId_);
+      }
+      if (persistentResourceId_ != false) {
+        output.writeBool(3, persistentResourceId_);
       }
       if (resourceVariant_ != com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, resourceVariant_);
@@ -538,11 +377,12 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourceName_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(associatedId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, associatedId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, associatedId_);
+      }
+      if (persistentResourceId_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, persistentResourceId_);
       }
       if (resourceVariant_ != com.aruna.api.storage.models.v2.ModelsProto.ResourceVariant.RESOURCE_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -565,10 +405,10 @@ public final class NotificationServiceProto {
 
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
-      if (!getResourceName()
-          .equals(other.getResourceName())) return false;
       if (!getAssociatedId()
           .equals(other.getAssociatedId())) return false;
+      if (getPersistentResourceId()
+          != other.getPersistentResourceId()) return false;
       if (resourceVariant_ != other.resourceVariant_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -583,10 +423,11 @@ public final class NotificationServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getResourceId().hashCode();
-      hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getResourceName().hashCode();
       hash = (37 * hash) + ASSOCIATED_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAssociatedId().hashCode();
+      hash = (37 * hash) + PERSISTENT_RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPersistentResourceId());
       hash = (37 * hash) + RESOURCE_VARIANT_FIELD_NUMBER;
       hash = (53 * hash) + resourceVariant_;
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -721,8 +562,8 @@ public final class NotificationServiceProto {
         super.clear();
         bitField0_ = 0;
         resourceId_ = "";
-        resourceName_ = "";
         associatedId_ = "";
+        persistentResourceId_ = false;
         resourceVariant_ = 0;
         return this;
       }
@@ -761,10 +602,10 @@ public final class NotificationServiceProto {
           result.resourceId_ = resourceId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.resourceName_ = resourceName_;
+          result.associatedId_ = associatedId_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.associatedId_ = associatedId_;
+          result.persistentResourceId_ = persistentResourceId_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.resourceVariant_ = resourceVariant_;
@@ -788,15 +629,13 @@ public final class NotificationServiceProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (!other.getResourceName().isEmpty()) {
-          resourceName_ = other.resourceName_;
+        if (!other.getAssociatedId().isEmpty()) {
+          associatedId_ = other.associatedId_;
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (!other.getAssociatedId().isEmpty()) {
-          associatedId_ = other.associatedId_;
-          bitField0_ |= 0x00000004;
-          onChanged();
+        if (other.getPersistentResourceId() != false) {
+          setPersistentResourceId(other.getPersistentResourceId());
         }
         if (other.resourceVariant_ != 0) {
           setResourceVariantValue(other.getResourceVariantValue());
@@ -833,15 +672,15 @@ public final class NotificationServiceProto {
                 break;
               } // case 10
               case 18: {
-                resourceName_ = input.readStringRequireUtf8();
+                associatedId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 26: {
-                associatedId_ = input.readStringRequireUtf8();
+              case 24: {
+                persistentResourceId_ = input.readBool();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
+              } // case 24
               case 32: {
                 resourceVariant_ = input.readEnum();
                 bitField0_ |= 0x00000008;
@@ -936,81 +775,9 @@ public final class NotificationServiceProto {
         return this;
       }
 
-      private java.lang.Object resourceName_ = "";
-      /**
-       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-       * @return The resourceName.
-       */
-      public java.lang.String getResourceName() {
-        java.lang.Object ref = resourceName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          resourceName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-       * @return The bytes for resourceName.
-       */
-      public com.google.protobuf.ByteString
-          getResourceNameBytes() {
-        java.lang.Object ref = resourceName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          resourceName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-       * @param value The resourceName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResourceName(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        resourceName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResourceName() {
-        resourceName_ = getDefaultInstance().getResourceName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
-       * @param value The bytes for resourceName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResourceNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        resourceName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object associatedId_ = "";
       /**
-       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * <code>string associated_id = 2 [json_name = "associatedId"];</code>
        * @return The associatedId.
        */
       public java.lang.String getAssociatedId() {
@@ -1026,7 +793,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * <code>string associated_id = 2 [json_name = "associatedId"];</code>
        * @return The bytes for associatedId.
        */
       public com.google.protobuf.ByteString
@@ -1043,7 +810,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * <code>string associated_id = 2 [json_name = "associatedId"];</code>
        * @param value The associatedId to set.
        * @return This builder for chaining.
        */
@@ -1051,22 +818,22 @@ public final class NotificationServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         associatedId_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * <code>string associated_id = 2 [json_name = "associatedId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAssociatedId() {
         associatedId_ = getDefaultInstance().getAssociatedId();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string associated_id = 3 [json_name = "associatedId"];</code>
+       * <code>string associated_id = 2 [json_name = "associatedId"];</code>
        * @param value The bytes for associatedId to set.
        * @return This builder for chaining.
        */
@@ -1075,7 +842,39 @@ public final class NotificationServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         associatedId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean persistentResourceId_ ;
+      /**
+       * <code>bool persistent_resource_id = 3 [json_name = "persistentResourceId"];</code>
+       * @return The persistentResourceId.
+       */
+      @java.lang.Override
+      public boolean getPersistentResourceId() {
+        return persistentResourceId_;
+      }
+      /**
+       * <code>bool persistent_resource_id = 3 [json_name = "persistentResourceId"];</code>
+       * @param value The persistentResourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPersistentResourceId(boolean value) {
+
+        persistentResourceId_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool persistent_resource_id = 3 [json_name = "persistentResourceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPersistentResourceId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        persistentResourceId_ = false;
         onChanged();
         return this;
       }
@@ -10146,4705 +9945,6 @@ public final class NotificationServiceProto {
 
   }
 
-  public interface RelationUpdateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.RelationUpdate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> 
-        getAddRelationsList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.Relation getAddRelations(int index);
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    int getAddRelationsCount();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-        getAddRelationsOrBuilderList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getAddRelationsOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> 
-        getRemoveRelationsList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.Relation getRemoveRelations(int index);
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    int getRemoveRelationsCount();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-        getRemoveRelationsOrBuilderList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getRemoveRelationsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code aruna.api.notification.services.v2.RelationUpdate}
-   */
-  public static final class RelationUpdate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.RelationUpdate)
-      RelationUpdateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RelationUpdate.newBuilder() to construct.
-    private RelationUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RelationUpdate() {
-      addRelations_ = java.util.Collections.emptyList();
-      removeRelations_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RelationUpdate();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_RelationUpdate_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_RelationUpdate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.class, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder.class);
-    }
-
-    public static final int ADD_RELATIONS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> addRelations_;
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> getAddRelationsList() {
-      return addRelations_;
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-        getAddRelationsOrBuilderList() {
-      return addRelations_;
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    @java.lang.Override
-    public int getAddRelationsCount() {
-      return addRelations_.size();
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.Relation getAddRelations(int index) {
-      return addRelations_.get(index);
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getAddRelationsOrBuilder(
-        int index) {
-      return addRelations_.get(index);
-    }
-
-    public static final int REMOVE_RELATIONS_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> removeRelations_;
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> getRemoveRelationsList() {
-      return removeRelations_;
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-        getRemoveRelationsOrBuilderList() {
-      return removeRelations_;
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    @java.lang.Override
-    public int getRemoveRelationsCount() {
-      return removeRelations_.size();
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.Relation getRemoveRelations(int index) {
-      return removeRelations_.get(index);
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getRemoveRelationsOrBuilder(
-        int index) {
-      return removeRelations_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < addRelations_.size(); i++) {
-        output.writeMessage(2, addRelations_.get(i));
-      }
-      for (int i = 0; i < removeRelations_.size(); i++) {
-        output.writeMessage(3, removeRelations_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < addRelations_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, addRelations_.get(i));
-      }
-      for (int i = 0; i < removeRelations_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, removeRelations_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate other = (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) obj;
-
-      if (!getAddRelationsList()
-          .equals(other.getAddRelationsList())) return false;
-      if (!getRemoveRelationsList()
-          .equals(other.getRemoveRelationsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getAddRelationsCount() > 0) {
-        hash = (37 * hash) + ADD_RELATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getAddRelationsList().hashCode();
-      }
-      if (getRemoveRelationsCount() > 0) {
-        hash = (37 * hash) + REMOVE_RELATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getRemoveRelationsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.notification.services.v2.RelationUpdate}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.RelationUpdate)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_RelationUpdate_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_RelationUpdate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.class, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder.class);
-      }
-
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (addRelationsBuilder_ == null) {
-          addRelations_ = java.util.Collections.emptyList();
-        } else {
-          addRelations_ = null;
-          addRelationsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (removeRelationsBuilder_ == null) {
-          removeRelations_ = java.util.Collections.emptyList();
-        } else {
-          removeRelations_ = null;
-          removeRelationsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_RelationUpdate_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate result = new com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate result) {
-        if (addRelationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            addRelations_ = java.util.Collections.unmodifiableList(addRelations_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.addRelations_ = addRelations_;
-        } else {
-          result.addRelations_ = addRelationsBuilder_.build();
-        }
-        if (removeRelationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            removeRelations_ = java.util.Collections.unmodifiableList(removeRelations_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.removeRelations_ = removeRelations_;
-        } else {
-          result.removeRelations_ = removeRelationsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance()) return this;
-        if (addRelationsBuilder_ == null) {
-          if (!other.addRelations_.isEmpty()) {
-            if (addRelations_.isEmpty()) {
-              addRelations_ = other.addRelations_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureAddRelationsIsMutable();
-              addRelations_.addAll(other.addRelations_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.addRelations_.isEmpty()) {
-            if (addRelationsBuilder_.isEmpty()) {
-              addRelationsBuilder_.dispose();
-              addRelationsBuilder_ = null;
-              addRelations_ = other.addRelations_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              addRelationsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAddRelationsFieldBuilder() : null;
-            } else {
-              addRelationsBuilder_.addAllMessages(other.addRelations_);
-            }
-          }
-        }
-        if (removeRelationsBuilder_ == null) {
-          if (!other.removeRelations_.isEmpty()) {
-            if (removeRelations_.isEmpty()) {
-              removeRelations_ = other.removeRelations_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureRemoveRelationsIsMutable();
-              removeRelations_.addAll(other.removeRelations_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.removeRelations_.isEmpty()) {
-            if (removeRelationsBuilder_.isEmpty()) {
-              removeRelationsBuilder_.dispose();
-              removeRelationsBuilder_ = null;
-              removeRelations_ = other.removeRelations_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              removeRelationsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRemoveRelationsFieldBuilder() : null;
-            } else {
-              removeRelationsBuilder_.addAllMessages(other.removeRelations_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                com.aruna.api.storage.models.v2.ModelsProto.Relation m =
-                    input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.Relation.parser(),
-                        extensionRegistry);
-                if (addRelationsBuilder_ == null) {
-                  ensureAddRelationsIsMutable();
-                  addRelations_.add(m);
-                } else {
-                  addRelationsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              case 26: {
-                com.aruna.api.storage.models.v2.ModelsProto.Relation m =
-                    input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.Relation.parser(),
-                        extensionRegistry);
-                if (removeRelationsBuilder_ == null) {
-                  ensureRemoveRelationsIsMutable();
-                  removeRelations_.add(m);
-                } else {
-                  removeRelationsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> addRelations_ =
-        java.util.Collections.emptyList();
-      private void ensureAddRelationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          addRelations_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Relation>(addRelations_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> addRelationsBuilder_;
-
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> getAddRelationsList() {
-        if (addRelationsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(addRelations_);
-        } else {
-          return addRelationsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public int getAddRelationsCount() {
-        if (addRelationsBuilder_ == null) {
-          return addRelations_.size();
-        } else {
-          return addRelationsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation getAddRelations(int index) {
-        if (addRelationsBuilder_ == null) {
-          return addRelations_.get(index);
-        } else {
-          return addRelationsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder setAddRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
-        if (addRelationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAddRelationsIsMutable();
-          addRelations_.set(index, value);
-          onChanged();
-        } else {
-          addRelationsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder setAddRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
-        if (addRelationsBuilder_ == null) {
-          ensureAddRelationsIsMutable();
-          addRelations_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          addRelationsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder addAddRelations(com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
-        if (addRelationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAddRelationsIsMutable();
-          addRelations_.add(value);
-          onChanged();
-        } else {
-          addRelationsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder addAddRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
-        if (addRelationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAddRelationsIsMutable();
-          addRelations_.add(index, value);
-          onChanged();
-        } else {
-          addRelationsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder addAddRelations(
-          com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
-        if (addRelationsBuilder_ == null) {
-          ensureAddRelationsIsMutable();
-          addRelations_.add(builderForValue.build());
-          onChanged();
-        } else {
-          addRelationsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder addAddRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
-        if (addRelationsBuilder_ == null) {
-          ensureAddRelationsIsMutable();
-          addRelations_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          addRelationsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder addAllAddRelations(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Relation> values) {
-        if (addRelationsBuilder_ == null) {
-          ensureAddRelationsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, addRelations_);
-          onChanged();
-        } else {
-          addRelationsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder clearAddRelations() {
-        if (addRelationsBuilder_ == null) {
-          addRelations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          addRelationsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public Builder removeAddRelations(int index) {
-        if (addRelationsBuilder_ == null) {
-          ensureAddRelationsIsMutable();
-          addRelations_.remove(index);
-          onChanged();
-        } else {
-          addRelationsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder getAddRelationsBuilder(
-          int index) {
-        return getAddRelationsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getAddRelationsOrBuilder(
-          int index) {
-        if (addRelationsBuilder_ == null) {
-          return addRelations_.get(index);  } else {
-          return addRelationsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-           getAddRelationsOrBuilderList() {
-        if (addRelationsBuilder_ != null) {
-          return addRelationsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(addRelations_);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder addAddRelationsBuilder() {
-        return getAddRelationsFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder addAddRelationsBuilder(
-          int index) {
-        return getAddRelationsFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation add_relations = 2 [json_name = "addRelations"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder> 
-           getAddRelationsBuilderList() {
-        return getAddRelationsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-          getAddRelationsFieldBuilder() {
-        if (addRelationsBuilder_ == null) {
-          addRelationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder>(
-                  addRelations_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          addRelations_ = null;
-        }
-        return addRelationsBuilder_;
-      }
-
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> removeRelations_ =
-        java.util.Collections.emptyList();
-      private void ensureRemoveRelationsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          removeRelations_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Relation>(removeRelations_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> removeRelationsBuilder_;
-
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> getRemoveRelationsList() {
-        if (removeRelationsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(removeRelations_);
-        } else {
-          return removeRelationsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public int getRemoveRelationsCount() {
-        if (removeRelationsBuilder_ == null) {
-          return removeRelations_.size();
-        } else {
-          return removeRelationsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation getRemoveRelations(int index) {
-        if (removeRelationsBuilder_ == null) {
-          return removeRelations_.get(index);
-        } else {
-          return removeRelationsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder setRemoveRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
-        if (removeRelationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.set(index, value);
-          onChanged();
-        } else {
-          removeRelationsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder setRemoveRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
-        if (removeRelationsBuilder_ == null) {
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          removeRelationsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder addRemoveRelations(com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
-        if (removeRelationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.add(value);
-          onChanged();
-        } else {
-          removeRelationsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder addRemoveRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
-        if (removeRelationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.add(index, value);
-          onChanged();
-        } else {
-          removeRelationsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder addRemoveRelations(
-          com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
-        if (removeRelationsBuilder_ == null) {
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.add(builderForValue.build());
-          onChanged();
-        } else {
-          removeRelationsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder addRemoveRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
-        if (removeRelationsBuilder_ == null) {
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          removeRelationsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder addAllRemoveRelations(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Relation> values) {
-        if (removeRelationsBuilder_ == null) {
-          ensureRemoveRelationsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, removeRelations_);
-          onChanged();
-        } else {
-          removeRelationsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder clearRemoveRelations() {
-        if (removeRelationsBuilder_ == null) {
-          removeRelations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          removeRelationsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public Builder removeRemoveRelations(int index) {
-        if (removeRelationsBuilder_ == null) {
-          ensureRemoveRelationsIsMutable();
-          removeRelations_.remove(index);
-          onChanged();
-        } else {
-          removeRelationsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder getRemoveRelationsBuilder(
-          int index) {
-        return getRemoveRelationsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getRemoveRelationsOrBuilder(
-          int index) {
-        if (removeRelationsBuilder_ == null) {
-          return removeRelations_.get(index);  } else {
-          return removeRelationsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-           getRemoveRelationsOrBuilderList() {
-        if (removeRelationsBuilder_ != null) {
-          return removeRelationsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(removeRelations_);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder addRemoveRelationsBuilder() {
-        return getRemoveRelationsFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder addRemoveRelationsBuilder(
-          int index) {
-        return getRemoveRelationsFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.Relation remove_relations = 3 [json_name = "removeRelations"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder> 
-           getRemoveRelationsBuilderList() {
-        return getRemoveRelationsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
-          getRemoveRelationsFieldBuilder() {
-        if (removeRelationsBuilder_ == null) {
-          removeRelationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder>(
-                  removeRelations_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          removeRelations_ = null;
-        }
-        return removeRelationsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.RelationUpdate)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.RelationUpdate)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate();
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RelationUpdate>
-        PARSER = new com.google.protobuf.AbstractParser<RelationUpdate>() {
-      @java.lang.Override
-      public RelationUpdate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<RelationUpdate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RelationUpdate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface FieldsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.Fields)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return A list containing the updatedFields.
-     */
-    java.util.List<java.lang.String>
-        getUpdatedFieldsList();
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return The count of updatedFields.
-     */
-    int getUpdatedFieldsCount();
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @param index The index of the element to return.
-     * @return The updatedFields at the given index.
-     */
-    java.lang.String getUpdatedFields(int index);
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the updatedFields at the given index.
-     */
-    com.google.protobuf.ByteString
-        getUpdatedFieldsBytes(int index);
-  }
-  /**
-   * Protobuf type {@code aruna.api.notification.services.v2.Fields}
-   */
-  public static final class Fields extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.Fields)
-      FieldsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Fields.newBuilder() to construct.
-    private Fields(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Fields() {
-      updatedFields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Fields();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Fields_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Fields_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.class, com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder.class);
-    }
-
-    public static final int UPDATED_FIELDS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList updatedFields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return A list containing the updatedFields.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getUpdatedFieldsList() {
-      return updatedFields_;
-    }
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return The count of updatedFields.
-     */
-    public int getUpdatedFieldsCount() {
-      return updatedFields_.size();
-    }
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @param index The index of the element to return.
-     * @return The updatedFields at the given index.
-     */
-    public java.lang.String getUpdatedFields(int index) {
-      return updatedFields_.get(index);
-    }
-    /**
-     * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the updatedFields at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getUpdatedFieldsBytes(int index) {
-      return updatedFields_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < updatedFields_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, updatedFields_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < updatedFields_.size(); i++) {
-          dataSize += computeStringSizeNoTag(updatedFields_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getUpdatedFieldsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.Fields)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.Fields other = (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) obj;
-
-      if (!getUpdatedFieldsList()
-          .equals(other.getUpdatedFieldsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getUpdatedFieldsCount() > 0) {
-        hash = (37 * hash) + UPDATED_FIELDS_FIELD_NUMBER;
-        hash = (53 * hash) + getUpdatedFieldsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.Fields prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.notification.services.v2.Fields}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.Fields)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Fields_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Fields_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.class, com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder.class);
-      }
-
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        updatedFields_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Fields_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.Fields result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.Fields result = new com.aruna.api.notification.services.v2.NotificationServiceProto.Fields(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.Fields result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          updatedFields_.makeImmutable();
-          result.updatedFields_ = updatedFields_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.Fields)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.Fields other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance()) return this;
-        if (!other.updatedFields_.isEmpty()) {
-          if (updatedFields_.isEmpty()) {
-            updatedFields_ = other.updatedFields_;
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureUpdatedFieldsIsMutable();
-            updatedFields_.addAll(other.updatedFields_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureUpdatedFieldsIsMutable();
-                updatedFields_.add(s);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringArrayList updatedFields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureUpdatedFieldsIsMutable() {
-        if (!updatedFields_.isModifiable()) {
-          updatedFields_ = new com.google.protobuf.LazyStringArrayList(updatedFields_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @return A list containing the updatedFields.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getUpdatedFieldsList() {
-        updatedFields_.makeImmutable();
-        return updatedFields_;
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @return The count of updatedFields.
-       */
-      public int getUpdatedFieldsCount() {
-        return updatedFields_.size();
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @param index The index of the element to return.
-       * @return The updatedFields at the given index.
-       */
-      public java.lang.String getUpdatedFields(int index) {
-        return updatedFields_.get(index);
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the updatedFields at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getUpdatedFieldsBytes(int index) {
-        return updatedFields_.getByteString(index);
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @param index The index to set the value at.
-       * @param value The updatedFields to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUpdatedFields(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureUpdatedFieldsIsMutable();
-        updatedFields_.set(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @param value The updatedFields to add.
-       * @return This builder for chaining.
-       */
-      public Builder addUpdatedFields(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureUpdatedFieldsIsMutable();
-        updatedFields_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @param values The updatedFields to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllUpdatedFields(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureUpdatedFieldsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, updatedFields_);
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUpdatedFields() {
-        updatedFields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @param value The bytes of the updatedFields to add.
-       * @return This builder for chaining.
-       */
-      public Builder addUpdatedFieldsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureUpdatedFieldsIsMutable();
-        updatedFields_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.Fields)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.Fields)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.Fields DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.Fields();
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Fields getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Fields>
-        PARSER = new com.google.protobuf.AbstractParser<Fields>() {
-      @java.lang.Override
-      public Fields parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Fields> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Fields> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ResourceEventContextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.ResourceEventContext)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return Whether the updatedFields field is set.
-     */
-    boolean hasUpdatedFields();
-    /**
-     * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return The updatedFields.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.Fields getUpdatedFields();
-    /**
-     * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder getUpdatedFieldsOrBuilder();
-
-    /**
-     * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-     * @return Whether the relationUpdates field is set.
-     */
-    boolean hasRelationUpdates();
-    /**
-     * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-     * @return The relationUpdates.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate getRelationUpdates();
-    /**
-     * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder getRelationUpdatesOrBuilder();
-
-    /**
-     * <code>string custom_context = 3 [json_name = "customContext"];</code>
-     * @return Whether the customContext field is set.
-     */
-    boolean hasCustomContext();
-    /**
-     * <code>string custom_context = 3 [json_name = "customContext"];</code>
-     * @return The customContext.
-     */
-    java.lang.String getCustomContext();
-    /**
-     * <code>string custom_context = 3 [json_name = "customContext"];</code>
-     * @return The bytes for customContext.
-     */
-    com.google.protobuf.ByteString
-        getCustomContextBytes();
-
-    com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.EventCase getEventCase();
-  }
-  /**
-   * Protobuf type {@code aruna.api.notification.services.v2.ResourceEventContext}
-   */
-  public static final class ResourceEventContext extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.ResourceEventContext)
-      ResourceEventContextOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ResourceEventContext.newBuilder() to construct.
-    private ResourceEventContext(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ResourceEventContext() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ResourceEventContext();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_ResourceEventContext_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_ResourceEventContext_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.class, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder.class);
-    }
-
-    private int eventCase_ = 0;
-    @SuppressWarnings("serial")
-    private java.lang.Object event_;
-    public enum EventCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      UPDATED_FIELDS(1),
-      RELATION_UPDATES(2),
-      CUSTOM_CONTEXT(3),
-      EVENT_NOT_SET(0);
-      private final int value;
-      private EventCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static EventCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static EventCase forNumber(int value) {
-        switch (value) {
-          case 1: return UPDATED_FIELDS;
-          case 2: return RELATION_UPDATES;
-          case 3: return CUSTOM_CONTEXT;
-          case 0: return EVENT_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public EventCase
-    getEventCase() {
-      return EventCase.forNumber(
-          eventCase_);
-    }
-
-    public static final int UPDATED_FIELDS_FIELD_NUMBER = 1;
-    /**
-     * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return Whether the updatedFields field is set.
-     */
-    @java.lang.Override
-    public boolean hasUpdatedFields() {
-      return eventCase_ == 1;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-     * @return The updatedFields.
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields getUpdatedFields() {
-      if (eventCase_ == 1) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder getUpdatedFieldsOrBuilder() {
-      if (eventCase_ == 1) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-    }
-
-    public static final int RELATION_UPDATES_FIELD_NUMBER = 2;
-    /**
-     * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-     * @return Whether the relationUpdates field is set.
-     */
-    @java.lang.Override
-    public boolean hasRelationUpdates() {
-      return eventCase_ == 2;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-     * @return The relationUpdates.
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate getRelationUpdates() {
-      if (eventCase_ == 2) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder getRelationUpdatesOrBuilder() {
-      if (eventCase_ == 2) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-    }
-
-    public static final int CUSTOM_CONTEXT_FIELD_NUMBER = 3;
-    /**
-     * <code>string custom_context = 3 [json_name = "customContext"];</code>
-     * @return Whether the customContext field is set.
-     */
-    public boolean hasCustomContext() {
-      return eventCase_ == 3;
-    }
-    /**
-     * <code>string custom_context = 3 [json_name = "customContext"];</code>
-     * @return The customContext.
-     */
-    public java.lang.String getCustomContext() {
-      java.lang.Object ref = "";
-      if (eventCase_ == 3) {
-        ref = event_;
-      }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (eventCase_ == 3) {
-          event_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>string custom_context = 3 [json_name = "customContext"];</code>
-     * @return The bytes for customContext.
-     */
-    public com.google.protobuf.ByteString
-        getCustomContextBytes() {
-      java.lang.Object ref = "";
-      if (eventCase_ == 3) {
-        ref = event_;
-      }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (eventCase_ == 3) {
-          event_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (eventCase_ == 1) {
-        output.writeMessage(1, (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_);
-      }
-      if (eventCase_ == 2) {
-        output.writeMessage(2, (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_);
-      }
-      if (eventCase_ == 3) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, event_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (eventCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_);
-      }
-      if (eventCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_);
-      }
-      if (eventCase_ == 3) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, event_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext other = (com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext) obj;
-
-      if (!getEventCase().equals(other.getEventCase())) return false;
-      switch (eventCase_) {
-        case 1:
-          if (!getUpdatedFields()
-              .equals(other.getUpdatedFields())) return false;
-          break;
-        case 2:
-          if (!getRelationUpdates()
-              .equals(other.getRelationUpdates())) return false;
-          break;
-        case 3:
-          if (!getCustomContext()
-              .equals(other.getCustomContext())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (eventCase_) {
-        case 1:
-          hash = (37 * hash) + UPDATED_FIELDS_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdatedFields().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + RELATION_UPDATES_FIELD_NUMBER;
-          hash = (53 * hash) + getRelationUpdates().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + CUSTOM_CONTEXT_FIELD_NUMBER;
-          hash = (53 * hash) + getCustomContext().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.notification.services.v2.ResourceEventContext}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.ResourceEventContext)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_ResourceEventContext_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_ResourceEventContext_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.class, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder.class);
-      }
-
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (updatedFieldsBuilder_ != null) {
-          updatedFieldsBuilder_.clear();
-        }
-        if (relationUpdatesBuilder_ != null) {
-          relationUpdatesBuilder_.clear();
-        }
-        eventCase_ = 0;
-        event_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_ResourceEventContext_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext result = new com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext result) {
-        result.eventCase_ = eventCase_;
-        result.event_ = this.event_;
-        if (eventCase_ == 1 &&
-            updatedFieldsBuilder_ != null) {
-          result.event_ = updatedFieldsBuilder_.build();
-        }
-        if (eventCase_ == 2 &&
-            relationUpdatesBuilder_ != null) {
-          result.event_ = relationUpdatesBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance()) return this;
-        switch (other.getEventCase()) {
-          case UPDATED_FIELDS: {
-            mergeUpdatedFields(other.getUpdatedFields());
-            break;
-          }
-          case RELATION_UPDATES: {
-            mergeRelationUpdates(other.getRelationUpdates());
-            break;
-          }
-          case CUSTOM_CONTEXT: {
-            eventCase_ = 3;
-            event_ = other.event_;
-            onChanged();
-            break;
-          }
-          case EVENT_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getUpdatedFieldsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                eventCase_ = 1;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getRelationUpdatesFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                eventCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                java.lang.String s = input.readStringRequireUtf8();
-                eventCase_ = 3;
-                event_ = s;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int eventCase_ = 0;
-      private java.lang.Object event_;
-      public EventCase
-          getEventCase() {
-        return EventCase.forNumber(
-            eventCase_);
-      }
-
-      public Builder clearEvent() {
-        eventCase_ = 0;
-        event_ = null;
-        onChanged();
-        return this;
-      }
-
-      private int bitField0_;
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.Fields, com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder> updatedFieldsBuilder_;
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @return Whether the updatedFields field is set.
-       */
-      @java.lang.Override
-      public boolean hasUpdatedFields() {
-        return eventCase_ == 1;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       * @return The updatedFields.
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields getUpdatedFields() {
-        if (updatedFieldsBuilder_ == null) {
-          if (eventCase_ == 1) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-        } else {
-          if (eventCase_ == 1) {
-            return updatedFieldsBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      public Builder setUpdatedFields(com.aruna.api.notification.services.v2.NotificationServiceProto.Fields value) {
-        if (updatedFieldsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          event_ = value;
-          onChanged();
-        } else {
-          updatedFieldsBuilder_.setMessage(value);
-        }
-        eventCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      public Builder setUpdatedFields(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder builderForValue) {
-        if (updatedFieldsBuilder_ == null) {
-          event_ = builderForValue.build();
-          onChanged();
-        } else {
-          updatedFieldsBuilder_.setMessage(builderForValue.build());
-        }
-        eventCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      public Builder mergeUpdatedFields(com.aruna.api.notification.services.v2.NotificationServiceProto.Fields value) {
-        if (updatedFieldsBuilder_ == null) {
-          if (eventCase_ == 1 &&
-              event_ != com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance()) {
-            event_ = com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            event_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventCase_ == 1) {
-            updatedFieldsBuilder_.mergeFrom(value);
-          } else {
-            updatedFieldsBuilder_.setMessage(value);
-          }
-        }
-        eventCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      public Builder clearUpdatedFields() {
-        if (updatedFieldsBuilder_ == null) {
-          if (eventCase_ == 1) {
-            eventCase_ = 0;
-            event_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventCase_ == 1) {
-            eventCase_ = 0;
-            event_ = null;
-          }
-          updatedFieldsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder getUpdatedFieldsBuilder() {
-        return getUpdatedFieldsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder getUpdatedFieldsOrBuilder() {
-        if ((eventCase_ == 1) && (updatedFieldsBuilder_ != null)) {
-          return updatedFieldsBuilder_.getMessageOrBuilder();
-        } else {
-          if (eventCase_ == 1) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Fields updated_fields = 1 [json_name = "updatedFields"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.Fields, com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder> 
-          getUpdatedFieldsFieldBuilder() {
-        if (updatedFieldsBuilder_ == null) {
-          if (!(eventCase_ == 1)) {
-            event_ = com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.getDefaultInstance();
-          }
-          updatedFieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.Fields, com.aruna.api.notification.services.v2.NotificationServiceProto.Fields.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.FieldsOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.Fields) event_,
-                  getParentForChildren(),
-                  isClean());
-          event_ = null;
-        }
-        eventCase_ = 1;
-        onChanged();
-        return updatedFieldsBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder> relationUpdatesBuilder_;
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       * @return Whether the relationUpdates field is set.
-       */
-      @java.lang.Override
-      public boolean hasRelationUpdates() {
-        return eventCase_ == 2;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       * @return The relationUpdates.
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate getRelationUpdates() {
-        if (relationUpdatesBuilder_ == null) {
-          if (eventCase_ == 2) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-        } else {
-          if (eventCase_ == 2) {
-            return relationUpdatesBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      public Builder setRelationUpdates(com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate value) {
-        if (relationUpdatesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          event_ = value;
-          onChanged();
-        } else {
-          relationUpdatesBuilder_.setMessage(value);
-        }
-        eventCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      public Builder setRelationUpdates(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder builderForValue) {
-        if (relationUpdatesBuilder_ == null) {
-          event_ = builderForValue.build();
-          onChanged();
-        } else {
-          relationUpdatesBuilder_.setMessage(builderForValue.build());
-        }
-        eventCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      public Builder mergeRelationUpdates(com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate value) {
-        if (relationUpdatesBuilder_ == null) {
-          if (eventCase_ == 2 &&
-              event_ != com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance()) {
-            event_ = com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            event_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventCase_ == 2) {
-            relationUpdatesBuilder_.mergeFrom(value);
-          } else {
-            relationUpdatesBuilder_.setMessage(value);
-          }
-        }
-        eventCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      public Builder clearRelationUpdates() {
-        if (relationUpdatesBuilder_ == null) {
-          if (eventCase_ == 2) {
-            eventCase_ = 0;
-            event_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventCase_ == 2) {
-            eventCase_ = 0;
-            event_ = null;
-          }
-          relationUpdatesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder getRelationUpdatesBuilder() {
-        return getRelationUpdatesFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder getRelationUpdatesOrBuilder() {
-        if ((eventCase_ == 2) && (relationUpdatesBuilder_ != null)) {
-          return relationUpdatesBuilder_.getMessageOrBuilder();
-        } else {
-          if (eventCase_ == 2) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.RelationUpdate relation_updates = 2 [json_name = "relationUpdates"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder> 
-          getRelationUpdatesFieldBuilder() {
-        if (relationUpdatesBuilder_ == null) {
-          if (!(eventCase_ == 2)) {
-            event_ = com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.getDefaultInstance();
-          }
-          relationUpdatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdateOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.RelationUpdate) event_,
-                  getParentForChildren(),
-                  isClean());
-          event_ = null;
-        }
-        eventCase_ = 2;
-        onChanged();
-        return relationUpdatesBuilder_;
-      }
-
-      /**
-       * <code>string custom_context = 3 [json_name = "customContext"];</code>
-       * @return Whether the customContext field is set.
-       */
-      @java.lang.Override
-      public boolean hasCustomContext() {
-        return eventCase_ == 3;
-      }
-      /**
-       * <code>string custom_context = 3 [json_name = "customContext"];</code>
-       * @return The customContext.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomContext() {
-        java.lang.Object ref = "";
-        if (eventCase_ == 3) {
-          ref = event_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (eventCase_ == 3) {
-            event_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string custom_context = 3 [json_name = "customContext"];</code>
-       * @return The bytes for customContext.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomContextBytes() {
-        java.lang.Object ref = "";
-        if (eventCase_ == 3) {
-          ref = event_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (eventCase_ == 3) {
-            event_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string custom_context = 3 [json_name = "customContext"];</code>
-       * @param value The customContext to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomContext(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        eventCase_ = 3;
-        event_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string custom_context = 3 [json_name = "customContext"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomContext() {
-        if (eventCase_ == 3) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>string custom_context = 3 [json_name = "customContext"];</code>
-       * @param value The bytes for customContext to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomContextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        eventCase_ = 3;
-        event_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.ResourceEventContext)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.ResourceEventContext)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext();
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ResourceEventContext>
-        PARSER = new com.google.protobuf.AbstractParser<ResourceEventContext>() {
-      @java.lang.Override
-      public ResourceEventContext parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ResourceEventContext> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ResourceEventContext> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TokenOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.Token)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-     * @return Whether the permission field is set.
-     */
-    boolean hasPermission();
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-     * @return The permission.
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission();
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder();
-  }
-  /**
-   * Protobuf type {@code aruna.api.notification.services.v2.Token}
-   */
-  public static final class Token extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.Token)
-      TokenOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Token.newBuilder() to construct.
-    private Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Token() {
-      id_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Token();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Token_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Token_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.Token.class, com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PERMISSION_FIELD_NUMBER = 2;
-    private com.aruna.api.storage.models.v2.ModelsProto.Permission permission_;
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-     * @return Whether the permission field is set.
-     */
-    @java.lang.Override
-    public boolean hasPermission() {
-      return permission_ != null;
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-     * @return The permission.
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission() {
-      return permission_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance() : permission_;
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
-      return permission_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance() : permission_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (permission_ != null) {
-        output.writeMessage(2, getPermission());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (permission_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPermission());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.Token)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.Token other = (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasPermission() != other.hasPermission()) return false;
-      if (hasPermission()) {
-        if (!getPermission()
-            .equals(other.getPermission())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasPermission()) {
-        hash = (37 * hash) + PERMISSION_FIELD_NUMBER;
-        hash = (53 * hash) + getPermission().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.Token prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.notification.services.v2.Token}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.Token)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Token_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Token_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.Token.class, com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder.class);
-      }
-
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.Token.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        permission_ = null;
-        if (permissionBuilder_ != null) {
-          permissionBuilder_.dispose();
-          permissionBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_Token_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Token getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Token build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.Token result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Token buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.Token result = new com.aruna.api.notification.services.v2.NotificationServiceProto.Token(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.Token result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.permission_ = permissionBuilder_ == null
-              ? permission_
-              : permissionBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.Token) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.Token)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.Token other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasPermission()) {
-          mergePermission(other.getPermission());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getPermissionFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private com.aruna.api.storage.models.v2.ModelsProto.Permission permission_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> permissionBuilder_;
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       * @return Whether the permission field is set.
-       */
-      public boolean hasPermission() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       * @return The permission.
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission() {
-        if (permissionBuilder_ == null) {
-          return permission_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance() : permission_;
-        } else {
-          return permissionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      public Builder setPermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
-        if (permissionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          permission_ = value;
-        } else {
-          permissionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      public Builder setPermission(
-          com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
-        if (permissionBuilder_ == null) {
-          permission_ = builderForValue.build();
-        } else {
-          permissionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      public Builder mergePermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
-        if (permissionBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            permission_ != null &&
-            permission_ != com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance()) {
-            getPermissionBuilder().mergeFrom(value);
-          } else {
-            permission_ = value;
-          }
-        } else {
-          permissionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      public Builder clearPermission() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        permission_ = null;
-        if (permissionBuilder_ != null) {
-          permissionBuilder_.dispose();
-          permissionBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder getPermissionBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPermissionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
-        if (permissionBuilder_ != null) {
-          return permissionBuilder_.getMessageOrBuilder();
-        } else {
-          return permission_ == null ?
-              com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance() : permission_;
-        }
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
-          getPermissionFieldBuilder() {
-        if (permissionBuilder_ == null) {
-          permissionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder>(
-                  getPermission(),
-                  getParentForChildren(),
-                  isClean());
-          permission_ = null;
-        }
-        return permissionBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.Token)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.Token)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.Token DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.Token();
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.Token getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Token>
-        PARSER = new com.google.protobuf.AbstractParser<Token>() {
-      @java.lang.Override
-      public Token parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Token> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Token> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.Token getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface UserEventContextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.UserEventContext)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-     * @return Whether the updatedField field is set.
-     */
-    boolean hasUpdatedField();
-    /**
-     * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-     * @return The updatedField.
-     */
-    java.lang.String getUpdatedField();
-    /**
-     * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-     * @return The bytes for updatedField.
-     */
-    com.google.protobuf.ByteString
-        getUpdatedFieldBytes();
-
-    /**
-     * <code>bool admin = 2 [json_name = "admin"];</code>
-     * @return Whether the admin field is set.
-     */
-    boolean hasAdmin();
-    /**
-     * <code>bool admin = 2 [json_name = "admin"];</code>
-     * @return The admin.
-     */
-    boolean getAdmin();
-
-    /**
-     * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-     * @return Whether the token field is set.
-     */
-    boolean hasToken();
-    /**
-     * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-     * @return The token.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.Token getToken();
-    /**
-     * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder getTokenOrBuilder();
-
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-     * @return Whether the permission field is set.
-     */
-    boolean hasPermission();
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-     * @return The permission.
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission();
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder();
-
-    com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.EventCase getEventCase();
-  }
-  /**
-   * Protobuf type {@code aruna.api.notification.services.v2.UserEventContext}
-   */
-  public static final class UserEventContext extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.UserEventContext)
-      UserEventContextOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UserEventContext.newBuilder() to construct.
-    private UserEventContext(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private UserEventContext() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UserEventContext();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_UserEventContext_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_UserEventContext_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.class, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder.class);
-    }
-
-    private int eventCase_ = 0;
-    @SuppressWarnings("serial")
-    private java.lang.Object event_;
-    public enum EventCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      UPDATED_FIELD(1),
-      ADMIN(2),
-      TOKEN(3),
-      PERMISSION(4),
-      EVENT_NOT_SET(0);
-      private final int value;
-      private EventCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static EventCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static EventCase forNumber(int value) {
-        switch (value) {
-          case 1: return UPDATED_FIELD;
-          case 2: return ADMIN;
-          case 3: return TOKEN;
-          case 4: return PERMISSION;
-          case 0: return EVENT_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public EventCase
-    getEventCase() {
-      return EventCase.forNumber(
-          eventCase_);
-    }
-
-    public static final int UPDATED_FIELD_FIELD_NUMBER = 1;
-    /**
-     * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-     * @return Whether the updatedField field is set.
-     */
-    public boolean hasUpdatedField() {
-      return eventCase_ == 1;
-    }
-    /**
-     * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-     * @return The updatedField.
-     */
-    public java.lang.String getUpdatedField() {
-      java.lang.Object ref = "";
-      if (eventCase_ == 1) {
-        ref = event_;
-      }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (eventCase_ == 1) {
-          event_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-     * @return The bytes for updatedField.
-     */
-    public com.google.protobuf.ByteString
-        getUpdatedFieldBytes() {
-      java.lang.Object ref = "";
-      if (eventCase_ == 1) {
-        ref = event_;
-      }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (eventCase_ == 1) {
-          event_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ADMIN_FIELD_NUMBER = 2;
-    /**
-     * <code>bool admin = 2 [json_name = "admin"];</code>
-     * @return Whether the admin field is set.
-     */
-    @java.lang.Override
-    public boolean hasAdmin() {
-      return eventCase_ == 2;
-    }
-    /**
-     * <code>bool admin = 2 [json_name = "admin"];</code>
-     * @return The admin.
-     */
-    @java.lang.Override
-    public boolean getAdmin() {
-      if (eventCase_ == 2) {
-        return (java.lang.Boolean) event_;
-      }
-      return false;
-    }
-
-    public static final int TOKEN_FIELD_NUMBER = 3;
-    /**
-     * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-     * @return Whether the token field is set.
-     */
-    @java.lang.Override
-    public boolean hasToken() {
-      return eventCase_ == 3;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-     * @return The token.
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.Token getToken() {
-      if (eventCase_ == 3) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder getTokenOrBuilder() {
-      if (eventCase_ == 3) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-    }
-
-    public static final int PERMISSION_FIELD_NUMBER = 4;
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-     * @return Whether the permission field is set.
-     */
-    @java.lang.Override
-    public boolean hasPermission() {
-      return eventCase_ == 4;
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-     * @return The permission.
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission() {
-      if (eventCase_ == 4) {
-         return (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_;
-      }
-      return com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance();
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
-      if (eventCase_ == 4) {
-         return (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_;
-      }
-      return com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (eventCase_ == 1) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, event_);
-      }
-      if (eventCase_ == 2) {
-        output.writeBool(
-            2, (boolean)((java.lang.Boolean) event_));
-      }
-      if (eventCase_ == 3) {
-        output.writeMessage(3, (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_);
-      }
-      if (eventCase_ == 4) {
-        output.writeMessage(4, (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (eventCase_ == 1) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, event_);
-      }
-      if (eventCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(
-              2, (boolean)((java.lang.Boolean) event_));
-      }
-      if (eventCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_);
-      }
-      if (eventCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext other = (com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext) obj;
-
-      if (!getEventCase().equals(other.getEventCase())) return false;
-      switch (eventCase_) {
-        case 1:
-          if (!getUpdatedField()
-              .equals(other.getUpdatedField())) return false;
-          break;
-        case 2:
-          if (getAdmin()
-              != other.getAdmin()) return false;
-          break;
-        case 3:
-          if (!getToken()
-              .equals(other.getToken())) return false;
-          break;
-        case 4:
-          if (!getPermission()
-              .equals(other.getPermission())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (eventCase_) {
-        case 1:
-          hash = (37 * hash) + UPDATED_FIELD_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdatedField().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + ADMIN_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getAdmin());
-          break;
-        case 3:
-          hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-          hash = (53 * hash) + getToken().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + PERMISSION_FIELD_NUMBER;
-          hash = (53 * hash) + getPermission().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.notification.services.v2.UserEventContext}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.UserEventContext)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_UserEventContext_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_UserEventContext_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.class, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder.class);
-      }
-
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (tokenBuilder_ != null) {
-          tokenBuilder_.clear();
-        }
-        if (permissionBuilder_ != null) {
-          permissionBuilder_.clear();
-        }
-        eventCase_ = 0;
-        event_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_UserEventContext_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext result = new com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext result) {
-        result.eventCase_ = eventCase_;
-        result.event_ = this.event_;
-        if (eventCase_ == 3 &&
-            tokenBuilder_ != null) {
-          result.event_ = tokenBuilder_.build();
-        }
-        if (eventCase_ == 4 &&
-            permissionBuilder_ != null) {
-          result.event_ = permissionBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance()) return this;
-        switch (other.getEventCase()) {
-          case UPDATED_FIELD: {
-            eventCase_ = 1;
-            event_ = other.event_;
-            onChanged();
-            break;
-          }
-          case ADMIN: {
-            setAdmin(other.getAdmin());
-            break;
-          }
-          case TOKEN: {
-            mergeToken(other.getToken());
-            break;
-          }
-          case PERMISSION: {
-            mergePermission(other.getPermission());
-            break;
-          }
-          case EVENT_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                eventCase_ = 1;
-                event_ = s;
-                break;
-              } // case 10
-              case 16: {
-                event_ = input.readBool();
-                eventCase_ = 2;
-                break;
-              } // case 16
-              case 26: {
-                input.readMessage(
-                    getTokenFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                eventCase_ = 3;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getPermissionFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                eventCase_ = 4;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int eventCase_ = 0;
-      private java.lang.Object event_;
-      public EventCase
-          getEventCase() {
-        return EventCase.forNumber(
-            eventCase_);
-      }
-
-      public Builder clearEvent() {
-        eventCase_ = 0;
-        event_ = null;
-        onChanged();
-        return this;
-      }
-
-      private int bitField0_;
-
-      /**
-       * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-       * @return Whether the updatedField field is set.
-       */
-      @java.lang.Override
-      public boolean hasUpdatedField() {
-        return eventCase_ == 1;
-      }
-      /**
-       * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-       * @return The updatedField.
-       */
-      @java.lang.Override
-      public java.lang.String getUpdatedField() {
-        java.lang.Object ref = "";
-        if (eventCase_ == 1) {
-          ref = event_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (eventCase_ == 1) {
-            event_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-       * @return The bytes for updatedField.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getUpdatedFieldBytes() {
-        java.lang.Object ref = "";
-        if (eventCase_ == 1) {
-          ref = event_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (eventCase_ == 1) {
-            event_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-       * @param value The updatedField to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUpdatedField(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        eventCase_ = 1;
-        event_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUpdatedField() {
-        if (eventCase_ == 1) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>string updated_field = 1 [json_name = "updatedField"];</code>
-       * @param value The bytes for updatedField to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUpdatedFieldBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        eventCase_ = 1;
-        event_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>bool admin = 2 [json_name = "admin"];</code>
-       * @return Whether the admin field is set.
-       */
-      public boolean hasAdmin() {
-        return eventCase_ == 2;
-      }
-      /**
-       * <code>bool admin = 2 [json_name = "admin"];</code>
-       * @return The admin.
-       */
-      public boolean getAdmin() {
-        if (eventCase_ == 2) {
-          return (java.lang.Boolean) event_;
-        }
-        return false;
-      }
-      /**
-       * <code>bool admin = 2 [json_name = "admin"];</code>
-       * @param value The admin to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAdmin(boolean value) {
-
-        eventCase_ = 2;
-        event_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool admin = 2 [json_name = "admin"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAdmin() {
-        if (eventCase_ == 2) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-        return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.Token, com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder> tokenBuilder_;
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       * @return Whether the token field is set.
-       */
-      @java.lang.Override
-      public boolean hasToken() {
-        return eventCase_ == 3;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       * @return The token.
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Token getToken() {
-        if (tokenBuilder_ == null) {
-          if (eventCase_ == 3) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-        } else {
-          if (eventCase_ == 3) {
-            return tokenBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      public Builder setToken(com.aruna.api.notification.services.v2.NotificationServiceProto.Token value) {
-        if (tokenBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          event_ = value;
-          onChanged();
-        } else {
-          tokenBuilder_.setMessage(value);
-        }
-        eventCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      public Builder setToken(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder builderForValue) {
-        if (tokenBuilder_ == null) {
-          event_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenBuilder_.setMessage(builderForValue.build());
-        }
-        eventCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      public Builder mergeToken(com.aruna.api.notification.services.v2.NotificationServiceProto.Token value) {
-        if (tokenBuilder_ == null) {
-          if (eventCase_ == 3 &&
-              event_ != com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance()) {
-            event_ = com.aruna.api.notification.services.v2.NotificationServiceProto.Token.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            event_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventCase_ == 3) {
-            tokenBuilder_.mergeFrom(value);
-          } else {
-            tokenBuilder_.setMessage(value);
-          }
-        }
-        eventCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      public Builder clearToken() {
-        if (tokenBuilder_ == null) {
-          if (eventCase_ == 3) {
-            eventCase_ = 0;
-            event_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventCase_ == 3) {
-            eventCase_ = 0;
-            event_ = null;
-          }
-          tokenBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder getTokenBuilder() {
-        return getTokenFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder getTokenOrBuilder() {
-        if ((eventCase_ == 3) && (tokenBuilder_ != null)) {
-          return tokenBuilder_.getMessageOrBuilder();
-        } else {
-          if (eventCase_ == 3) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.Token token = 3 [json_name = "token"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.Token, com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder> 
-          getTokenFieldBuilder() {
-        if (tokenBuilder_ == null) {
-          if (!(eventCase_ == 3)) {
-            event_ = com.aruna.api.notification.services.v2.NotificationServiceProto.Token.getDefaultInstance();
-          }
-          tokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.Token, com.aruna.api.notification.services.v2.NotificationServiceProto.Token.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.TokenOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.Token) event_,
-                  getParentForChildren(),
-                  isClean());
-          event_ = null;
-        }
-        eventCase_ = 3;
-        onChanged();
-        return tokenBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> permissionBuilder_;
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       * @return Whether the permission field is set.
-       */
-      @java.lang.Override
-      public boolean hasPermission() {
-        return eventCase_ == 4;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       * @return The permission.
-       */
-      @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission() {
-        if (permissionBuilder_ == null) {
-          if (eventCase_ == 4) {
-            return (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_;
-          }
-          return com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance();
-        } else {
-          if (eventCase_ == 4) {
-            return permissionBuilder_.getMessage();
-          }
-          return com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      public Builder setPermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
-        if (permissionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          event_ = value;
-          onChanged();
-        } else {
-          permissionBuilder_.setMessage(value);
-        }
-        eventCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      public Builder setPermission(
-          com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
-        if (permissionBuilder_ == null) {
-          event_ = builderForValue.build();
-          onChanged();
-        } else {
-          permissionBuilder_.setMessage(builderForValue.build());
-        }
-        eventCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      public Builder mergePermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
-        if (permissionBuilder_ == null) {
-          if (eventCase_ == 4 &&
-              event_ != com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance()) {
-            event_ = com.aruna.api.storage.models.v2.ModelsProto.Permission.newBuilder((com.aruna.api.storage.models.v2.ModelsProto.Permission) event_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            event_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventCase_ == 4) {
-            permissionBuilder_.mergeFrom(value);
-          } else {
-            permissionBuilder_.setMessage(value);
-          }
-        }
-        eventCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      public Builder clearPermission() {
-        if (permissionBuilder_ == null) {
-          if (eventCase_ == 4) {
-            eventCase_ = 0;
-            event_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventCase_ == 4) {
-            eventCase_ = 0;
-            event_ = null;
-          }
-          permissionBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder getPermissionBuilder() {
-        return getPermissionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
-        if ((eventCase_ == 4) && (permissionBuilder_ != null)) {
-          return permissionBuilder_.getMessageOrBuilder();
-        } else {
-          if (eventCase_ == 4) {
-            return (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_;
-          }
-          return com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 4 [json_name = "permission"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
-          getPermissionFieldBuilder() {
-        if (permissionBuilder_ == null) {
-          if (!(eventCase_ == 4)) {
-            event_ = com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance();
-          }
-          permissionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder>(
-                  (com.aruna.api.storage.models.v2.ModelsProto.Permission) event_,
-                  getParentForChildren(),
-                  isClean());
-          event_ = null;
-        }
-        eventCase_ = 4;
-        onChanged();
-        return permissionBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.UserEventContext)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.UserEventContext)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext();
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<UserEventContext>
-        PARSER = new com.google.protobuf.AbstractParser<UserEventContext>() {
-      @java.lang.Override
-      public UserEventContext parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<UserEventContext> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UserEventContext> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface EventMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.EventMessage)
       com.google.protobuf.MessageOrBuilder {
@@ -15983,43 +11083,28 @@ public final class NotificationServiceProto {
     com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceOrBuilder getResourceOrBuilder();
 
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-     * @return The enum numeric value on the wire for eventType.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The enum numeric value on the wire for eventVariant.
      */
-    int getEventTypeValue();
+    int getEventVariantValue();
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-     * @return The eventType.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The eventVariant.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType getEventType();
+    com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant getEventVariant();
 
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-     * @return Whether the context field is set.
-     */
-    boolean hasContext();
-    /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-     * @return The context.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext getContext();
-    /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder getContextOrBuilder();
-
-    /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return Whether the reply field is set.
      */
     boolean hasReply();
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return The reply.
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getReply();
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder();
   }
@@ -16036,7 +11121,7 @@ public final class NotificationServiceProto {
       super(builder);
     }
     private ResourceEvent() {
-      eventType_ = 0;
+      eventVariant_ = 0;
     }
 
     @java.lang.Override
@@ -16085,54 +11170,28 @@ public final class NotificationServiceProto {
       return resource_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.Resource.getDefaultInstance() : resource_;
     }
 
-    public static final int EVENT_TYPE_FIELD_NUMBER = 2;
-    private int eventType_ = 0;
+    public static final int EVENT_VARIANT_FIELD_NUMBER = 2;
+    private int eventVariant_ = 0;
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-     * @return The enum numeric value on the wire for eventType.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The enum numeric value on the wire for eventVariant.
      */
-    @java.lang.Override public int getEventTypeValue() {
-      return eventType_;
+    @java.lang.Override public int getEventVariantValue() {
+      return eventVariant_;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-     * @return The eventType.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The eventVariant.
      */
-    @java.lang.Override public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType getEventType() {
-      com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType result = com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType.forNumber(eventType_);
-      return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType.UNRECOGNIZED : result;
-    }
-
-    public static final int CONTEXT_FIELD_NUMBER = 3;
-    private com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext context_;
-    /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-     * @return Whether the context field is set.
-     */
-    @java.lang.Override
-    public boolean hasContext() {
-      return context_ != null;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-     * @return The context.
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext getContext() {
-      return context_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance() : context_;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder getContextOrBuilder() {
-      return context_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance() : context_;
+    @java.lang.Override public com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant getEventVariant() {
+      com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant result = com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.forNumber(eventVariant_);
+      return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.UNRECOGNIZED : result;
     }
 
-    public static final int REPLY_FIELD_NUMBER = 4;
+    public static final int REPLY_FIELD_NUMBER = 3;
     private com.aruna.api.notification.services.v2.NotificationServiceProto.Reply reply_;
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return Whether the reply field is set.
      */
     @java.lang.Override
@@ -16140,7 +11199,7 @@ public final class NotificationServiceProto {
       return reply_ != null;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return The reply.
      */
     @java.lang.Override
@@ -16148,7 +11207,7 @@ public final class NotificationServiceProto {
       return reply_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.getDefaultInstance() : reply_;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder() {
@@ -16172,14 +11231,11 @@ public final class NotificationServiceProto {
       if (resource_ != null) {
         output.writeMessage(1, getResource());
       }
-      if (eventType_ != com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType.RESOURCE_EVENT_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, eventType_);
-      }
-      if (context_ != null) {
-        output.writeMessage(3, getContext());
+      if (eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.EVENT_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, eventVariant_);
       }
       if (reply_ != null) {
-        output.writeMessage(4, getReply());
+        output.writeMessage(3, getReply());
       }
       getUnknownFields().writeTo(output);
     }
@@ -16194,17 +11250,13 @@ public final class NotificationServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getResource());
       }
-      if (eventType_ != com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType.RESOURCE_EVENT_TYPE_UNSPECIFIED.getNumber()) {
+      if (eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.EVENT_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, eventType_);
-      }
-      if (context_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getContext());
+          .computeEnumSize(2, eventVariant_);
       }
       if (reply_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getReply());
+          .computeMessageSize(3, getReply());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -16226,12 +11278,7 @@ public final class NotificationServiceProto {
         if (!getResource()
             .equals(other.getResource())) return false;
       }
-      if (eventType_ != other.eventType_) return false;
-      if (hasContext() != other.hasContext()) return false;
-      if (hasContext()) {
-        if (!getContext()
-            .equals(other.getContext())) return false;
-      }
+      if (eventVariant_ != other.eventVariant_) return false;
       if (hasReply() != other.hasReply()) return false;
       if (hasReply()) {
         if (!getReply()
@@ -16252,12 +11299,8 @@ public final class NotificationServiceProto {
         hash = (37 * hash) + RESOURCE_FIELD_NUMBER;
         hash = (53 * hash) + getResource().hashCode();
       }
-      hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + eventType_;
-      if (hasContext()) {
-        hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getContext().hashCode();
-      }
+      hash = (37 * hash) + EVENT_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + eventVariant_;
       if (hasReply()) {
         hash = (37 * hash) + REPLY_FIELD_NUMBER;
         hash = (53 * hash) + getReply().hashCode();
@@ -16398,12 +11441,7 @@ public final class NotificationServiceProto {
           resourceBuilder_.dispose();
           resourceBuilder_ = null;
         }
-        eventType_ = 0;
-        context_ = null;
-        if (contextBuilder_ != null) {
-          contextBuilder_.dispose();
-          contextBuilder_ = null;
-        }
+        eventVariant_ = 0;
         reply_ = null;
         if (replyBuilder_ != null) {
           replyBuilder_.dispose();
@@ -16448,14 +11486,9 @@ public final class NotificationServiceProto {
               : resourceBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.eventType_ = eventType_;
+          result.eventVariant_ = eventVariant_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.context_ = contextBuilder_ == null
-              ? context_
-              : contextBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.reply_ = replyBuilder_ == null
               ? reply_
               : replyBuilder_.build();
@@ -16477,11 +11510,8 @@ public final class NotificationServiceProto {
         if (other.hasResource()) {
           mergeResource(other.getResource());
         }
-        if (other.eventType_ != 0) {
-          setEventTypeValue(other.getEventTypeValue());
-        }
-        if (other.hasContext()) {
-          mergeContext(other.getContext());
+        if (other.eventVariant_ != 0) {
+          setEventVariantValue(other.getEventVariantValue());
         }
         if (other.hasReply()) {
           mergeReply(other.getReply());
@@ -16520,24 +11550,17 @@ public final class NotificationServiceProto {
                 break;
               } // case 10
               case 16: {
-                eventType_ = input.readEnum();
+                eventVariant_ = input.readEnum();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 input.readMessage(
-                    getContextFieldBuilder().getBuilder(),
+                    getReplyFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                input.readMessage(
-                    getReplyFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -16674,190 +11697,71 @@ public final class NotificationServiceProto {
         return resourceBuilder_;
       }
 
-      private int eventType_ = 0;
+      private int eventVariant_ = 0;
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-       * @return The enum numeric value on the wire for eventType.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @return The enum numeric value on the wire for eventVariant.
        */
-      @java.lang.Override public int getEventTypeValue() {
-        return eventType_;
+      @java.lang.Override public int getEventVariantValue() {
+        return eventVariant_;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-       * @param value The enum numeric value on the wire for eventType to set.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @param value The enum numeric value on the wire for eventVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEventTypeValue(int value) {
-        eventType_ = value;
+      public Builder setEventVariantValue(int value) {
+        eventVariant_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-       * @return The eventType.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @return The eventVariant.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType getEventType() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType result = com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType.forNumber(eventType_);
-        return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType.UNRECOGNIZED : result;
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant getEventVariant() {
+        com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant result = com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.forNumber(eventVariant_);
+        return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
-       * @param value The eventType to set.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @param value The eventVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEventType(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventType value) {
+      public Builder setEventVariant(com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000002;
-        eventType_ = value.getNumber();
+        eventVariant_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventType event_type = 2 [json_name = "eventType"];</code>
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEventType() {
+      public Builder clearEventVariant() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        eventType_ = 0;
+        eventVariant_ = 0;
         onChanged();
         return this;
-      }
-
-      private com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext context_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder> contextBuilder_;
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       * @return Whether the context field is set.
-       */
-      public boolean hasContext() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       * @return The context.
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext getContext() {
-        if (contextBuilder_ == null) {
-          return context_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance() : context_;
-        } else {
-          return contextBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      public Builder setContext(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext value) {
-        if (contextBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          context_ = value;
-        } else {
-          contextBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      public Builder setContext(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder builderForValue) {
-        if (contextBuilder_ == null) {
-          context_ = builderForValue.build();
-        } else {
-          contextBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      public Builder mergeContext(com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext value) {
-        if (contextBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            context_ != null &&
-            context_ != com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance()) {
-            getContextBuilder().mergeFrom(value);
-          } else {
-            context_ = value;
-          }
-        } else {
-          contextBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      public Builder clearContext() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        context_ = null;
-        if (contextBuilder_ != null) {
-          contextBuilder_.dispose();
-          contextBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder getContextBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getContextFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder getContextOrBuilder() {
-        if (contextBuilder_ != null) {
-          return contextBuilder_.getMessageOrBuilder();
-        } else {
-          return context_ == null ?
-              com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.getDefaultInstance() : context_;
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.ResourceEventContext context = 3 [json_name = "context"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder> 
-          getContextFieldBuilder() {
-        if (contextBuilder_ == null) {
-          contextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContext.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceEventContextOrBuilder>(
-                  getContext(),
-                  getParentForChildren(),
-                  isClean());
-          context_ = null;
-        }
-        return contextBuilder_;
       }
 
       private com.aruna.api.notification.services.v2.NotificationServiceProto.Reply reply_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply, com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder> replyBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        * @return Whether the reply field is set.
        */
       public boolean hasReply() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        * @return The reply.
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getReply() {
@@ -16868,7 +11772,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder setReply(com.aruna.api.notification.services.v2.NotificationServiceProto.Reply value) {
         if (replyBuilder_ == null) {
@@ -16879,12 +11783,12 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder setReply(
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder builderForValue) {
@@ -16893,16 +11797,16 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder mergeReply(com.aruna.api.notification.services.v2.NotificationServiceProto.Reply value) {
         if (replyBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             reply_ != null &&
             reply_ != com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.getDefaultInstance()) {
             getReplyBuilder().mergeFrom(value);
@@ -16912,15 +11816,15 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder clearReply() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         reply_ = null;
         if (replyBuilder_ != null) {
           replyBuilder_.dispose();
@@ -16930,15 +11834,15 @@ public final class NotificationServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder getReplyBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getReplyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder() {
         if (replyBuilder_ != null) {
@@ -16949,7 +11853,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 4 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply, com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder> 
@@ -17045,55 +11949,28 @@ public final class NotificationServiceProto {
         getUserIdBytes();
 
     /**
-     * <code>string user_name = 2 [json_name = "userName"];</code>
-     * @return The userName.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The enum numeric value on the wire for eventVariant.
      */
-    java.lang.String getUserName();
+    int getEventVariantValue();
     /**
-     * <code>string user_name = 2 [json_name = "userName"];</code>
-     * @return The bytes for userName.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The eventVariant.
      */
-    com.google.protobuf.ByteString
-        getUserNameBytes();
+    com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant getEventVariant();
 
     /**
-     * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-     * @return The enum numeric value on the wire for eventType.
-     */
-    int getEventTypeValue();
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-     * @return The eventType.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType getEventType();
-
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-     * @return Whether the context field is set.
-     */
-    boolean hasContext();
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-     * @return The context.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext getContext();
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder getContextOrBuilder();
-
-    /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return Whether the reply field is set.
      */
     boolean hasReply();
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return The reply.
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getReply();
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder();
   }
@@ -17111,8 +11988,7 @@ public final class NotificationServiceProto {
     }
     private UserEvent() {
       userId_ = "";
-      userName_ = "";
-      eventType_ = 0;
+      eventVariant_ = 0;
     }
 
     @java.lang.Override
@@ -17174,93 +12050,28 @@ public final class NotificationServiceProto {
       }
     }
 
-    public static final int USER_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object userName_ = "";
+    public static final int EVENT_VARIANT_FIELD_NUMBER = 2;
+    private int eventVariant_ = 0;
     /**
-     * <code>string user_name = 2 [json_name = "userName"];</code>
-     * @return The userName.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The enum numeric value on the wire for eventVariant.
      */
-    @java.lang.Override
-    public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userName_ = s;
-        return s;
-      }
+    @java.lang.Override public int getEventVariantValue() {
+      return eventVariant_;
     }
     /**
-     * <code>string user_name = 2 [json_name = "userName"];</code>
-     * @return The bytes for userName.
+     * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+     * @return The eventVariant.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserNameBytes() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    @java.lang.Override public com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant getEventVariant() {
+      com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant result = com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.forNumber(eventVariant_);
+      return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.UNRECOGNIZED : result;
     }
 
-    public static final int EVENT_TYPE_FIELD_NUMBER = 3;
-    private int eventType_ = 0;
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-     * @return The enum numeric value on the wire for eventType.
-     */
-    @java.lang.Override public int getEventTypeValue() {
-      return eventType_;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-     * @return The eventType.
-     */
-    @java.lang.Override public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType getEventType() {
-      com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType result = com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType.forNumber(eventType_);
-      return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType.UNRECOGNIZED : result;
-    }
-
-    public static final int CONTEXT_FIELD_NUMBER = 4;
-    private com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext context_;
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-     * @return Whether the context field is set.
-     */
-    @java.lang.Override
-    public boolean hasContext() {
-      return context_ != null;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-     * @return The context.
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext getContext() {
-      return context_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance() : context_;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder getContextOrBuilder() {
-      return context_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance() : context_;
-    }
-
-    public static final int REPLY_FIELD_NUMBER = 5;
+    public static final int REPLY_FIELD_NUMBER = 3;
     private com.aruna.api.notification.services.v2.NotificationServiceProto.Reply reply_;
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return Whether the reply field is set.
      */
     @java.lang.Override
@@ -17268,7 +12079,7 @@ public final class NotificationServiceProto {
       return reply_ != null;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      * @return The reply.
      */
     @java.lang.Override
@@ -17276,7 +12087,7 @@ public final class NotificationServiceProto {
       return reply_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.getDefaultInstance() : reply_;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder() {
@@ -17300,17 +12111,11 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
-      }
-      if (eventType_ != com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType.USER_EVENT_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, eventType_);
-      }
-      if (context_ != null) {
-        output.writeMessage(4, getContext());
+      if (eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.EVENT_VARIANT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, eventVariant_);
       }
       if (reply_ != null) {
-        output.writeMessage(5, getReply());
+        output.writeMessage(3, getReply());
       }
       getUnknownFields().writeTo(output);
     }
@@ -17324,20 +12129,13 @@ public final class NotificationServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
-      }
-      if (eventType_ != com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType.USER_EVENT_TYPE_UNSPECIFIED.getNumber()) {
+      if (eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.EVENT_VARIANT_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, eventType_);
-      }
-      if (context_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getContext());
+          .computeEnumSize(2, eventVariant_);
       }
       if (reply_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getReply());
+          .computeMessageSize(3, getReply());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -17356,14 +12154,7 @@ public final class NotificationServiceProto {
 
       if (!getUserId()
           .equals(other.getUserId())) return false;
-      if (!getUserName()
-          .equals(other.getUserName())) return false;
-      if (eventType_ != other.eventType_) return false;
-      if (hasContext() != other.hasContext()) return false;
-      if (hasContext()) {
-        if (!getContext()
-            .equals(other.getContext())) return false;
-      }
+      if (eventVariant_ != other.eventVariant_) return false;
       if (hasReply() != other.hasReply()) return false;
       if (hasReply()) {
         if (!getReply()
@@ -17382,14 +12173,8 @@ public final class NotificationServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
-      hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getUserName().hashCode();
-      hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + eventType_;
-      if (hasContext()) {
-        hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getContext().hashCode();
-      }
+      hash = (37 * hash) + EVENT_VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + eventVariant_;
       if (hasReply()) {
         hash = (37 * hash) + REPLY_FIELD_NUMBER;
         hash = (53 * hash) + getReply().hashCode();
@@ -17526,13 +12311,7 @@ public final class NotificationServiceProto {
         super.clear();
         bitField0_ = 0;
         userId_ = "";
-        userName_ = "";
-        eventType_ = 0;
-        context_ = null;
-        if (contextBuilder_ != null) {
-          contextBuilder_.dispose();
-          contextBuilder_ = null;
-        }
+        eventVariant_ = 0;
         reply_ = null;
         if (replyBuilder_ != null) {
           replyBuilder_.dispose();
@@ -17575,17 +12354,9 @@ public final class NotificationServiceProto {
           result.userId_ = userId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.userName_ = userName_;
+          result.eventVariant_ = eventVariant_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.eventType_ = eventType_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.context_ = contextBuilder_ == null
-              ? context_
-              : contextBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.reply_ = replyBuilder_ == null
               ? reply_
               : replyBuilder_.build();
@@ -17609,16 +12380,8 @@ public final class NotificationServiceProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (!other.getUserName().isEmpty()) {
-          userName_ = other.userName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.eventType_ != 0) {
-          setEventTypeValue(other.getEventTypeValue());
-        }
-        if (other.hasContext()) {
-          mergeContext(other.getContext());
+        if (other.eventVariant_ != 0) {
+          setEventVariantValue(other.getEventVariantValue());
         }
         if (other.hasReply()) {
           mergeReply(other.getReply());
@@ -17654,30 +12417,18 @@ public final class NotificationServiceProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
-                userName_ = input.readStringRequireUtf8();
+              case 16: {
+                eventVariant_ = input.readEnum();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 18
-              case 24: {
-                eventType_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 34: {
-                input.readMessage(
-                    getContextFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
+              } // case 16
+              case 26: {
                 input.readMessage(
                     getReplyFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000004;
                 break;
-              } // case 42
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -17767,262 +12518,71 @@ public final class NotificationServiceProto {
         return this;
       }
 
-      private java.lang.Object userName_ = "";
+      private int eventVariant_ = 0;
       /**
-       * <code>string user_name = 2 [json_name = "userName"];</code>
-       * @return The userName.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @return The enum numeric value on the wire for eventVariant.
        */
-      public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override public int getEventVariantValue() {
+        return eventVariant_;
       }
       /**
-       * <code>string user_name = 2 [json_name = "userName"];</code>
-       * @return The bytes for userName.
-       */
-      public com.google.protobuf.ByteString
-          getUserNameBytes() {
-        java.lang.Object ref = userName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string user_name = 2 [json_name = "userName"];</code>
-       * @param value The userName to set.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @param value The enum numeric value on the wire for eventVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setUserName(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        userName_ = value;
+      public Builder setEventVariantValue(int value) {
+        eventVariant_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string user_name = 2 [json_name = "userName"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserName() {
-        userName_ = getDefaultInstance().getUserName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_name = 2 [json_name = "userName"];</code>
-       * @param value The bytes for userName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        userName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      private int eventType_ = 0;
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-       * @return The enum numeric value on the wire for eventType.
-       */
-      @java.lang.Override public int getEventTypeValue() {
-        return eventType_;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-       * @param value The enum numeric value on the wire for eventType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventTypeValue(int value) {
-        eventType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-       * @return The eventType.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @return The eventVariant.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType getEventType() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType result = com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType.forNumber(eventType_);
-        return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType.UNRECOGNIZED : result;
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant getEventVariant() {
+        com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant result = com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.forNumber(eventVariant_);
+        return result == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
-       * @param value The eventType to set.
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
+       * @param value The eventVariant to set.
        * @return This builder for chaining.
        */
-      public Builder setEventType(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventType value) {
+      public Builder setEventVariant(com.aruna.api.notification.services.v2.NotificationServiceProto.EventVariant value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000004;
-        eventType_ = value.getNumber();
+        bitField0_ |= 0x00000002;
+        eventVariant_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.UserEventType event_type = 3 [json_name = "eventType"];</code>
+       * <code>.aruna.api.notification.services.v2.EventVariant event_variant = 2 [json_name = "eventVariant"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEventType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        eventType_ = 0;
+      public Builder clearEventVariant() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        eventVariant_ = 0;
         onChanged();
         return this;
-      }
-
-      private com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext context_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder> contextBuilder_;
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       * @return Whether the context field is set.
-       */
-      public boolean hasContext() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       * @return The context.
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext getContext() {
-        if (contextBuilder_ == null) {
-          return context_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance() : context_;
-        } else {
-          return contextBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      public Builder setContext(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext value) {
-        if (contextBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          context_ = value;
-        } else {
-          contextBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      public Builder setContext(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder builderForValue) {
-        if (contextBuilder_ == null) {
-          context_ = builderForValue.build();
-        } else {
-          contextBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      public Builder mergeContext(com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext value) {
-        if (contextBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            context_ != null &&
-            context_ != com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance()) {
-            getContextBuilder().mergeFrom(value);
-          } else {
-            context_ = value;
-          }
-        } else {
-          contextBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      public Builder clearContext() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        context_ = null;
-        if (contextBuilder_ != null) {
-          contextBuilder_.dispose();
-          contextBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder getContextBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getContextFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder getContextOrBuilder() {
-        if (contextBuilder_ != null) {
-          return contextBuilder_.getMessageOrBuilder();
-        } else {
-          return context_ == null ?
-              com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.getDefaultInstance() : context_;
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.UserEventContext context = 4 [json_name = "context"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder> 
-          getContextFieldBuilder() {
-        if (contextBuilder_ == null) {
-          contextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContext.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.UserEventContextOrBuilder>(
-                  getContext(),
-                  getParentForChildren(),
-                  isClean());
-          context_ = null;
-        }
-        return contextBuilder_;
       }
 
       private com.aruna.api.notification.services.v2.NotificationServiceProto.Reply reply_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply, com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder> replyBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        * @return Whether the reply field is set.
        */
       public boolean hasReply() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        * @return The reply.
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getReply() {
@@ -18033,7 +12593,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder setReply(com.aruna.api.notification.services.v2.NotificationServiceProto.Reply value) {
         if (replyBuilder_ == null) {
@@ -18044,12 +12604,12 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder setReply(
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder builderForValue) {
@@ -18058,16 +12618,16 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder mergeReply(com.aruna.api.notification.services.v2.NotificationServiceProto.Reply value) {
         if (replyBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             reply_ != null &&
             reply_ != com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.getDefaultInstance()) {
             getReplyBuilder().mergeFrom(value);
@@ -18077,15 +12637,15 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public Builder clearReply() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         reply_ = null;
         if (replyBuilder_ != null) {
           replyBuilder_.dispose();
@@ -18095,15 +12655,15 @@ public final class NotificationServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder getReplyBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getReplyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder() {
         if (replyBuilder_ != null) {
@@ -18114,7 +12674,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 5 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 3 [json_name = "reply"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply, com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder> 
@@ -19004,1312 +13564,6 @@ public final class NotificationServiceProto {
 
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DataproxyInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.DataproxyInfo)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-     * @return The endpointId.
-     */
-    java.lang.String getEndpointId();
-    /**
-     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-     * @return The bytes for endpointId.
-     */
-    com.google.protobuf.ByteString
-        getEndpointIdBytes();
-
-    /**
-     * <pre>
-     * Endpoint name
-     * </pre>
-     *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Endpoint name
-     * </pre>
-     *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <pre>
-     * Endpoint type
-     * </pre>
-     *
-     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-     * @return The enum numeric value on the wire for epVariant.
-     */
-    int getEpVariantValue();
-    /**
-     * <pre>
-     * Endpoint type
-     * </pre>
-     *
-     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-     * @return The epVariant.
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant();
-
-    /**
-     * <pre>
-     * Is this endpoint public
-     * </pre>
-     *
-     * <code>bool is_public = 4 [json_name = "isPublic"];</code>
-     * @return The isPublic.
-     */
-    boolean getIsPublic();
-
-    /**
-     * <pre>
-     * required public_key
-     * </pre>
-     *
-     * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-     * @return The pubkey.
-     */
-    java.lang.String getPubkey();
-    /**
-     * <pre>
-     * required public_key
-     * </pre>
-     *
-     * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-     * @return The bytes for pubkey.
-     */
-    com.google.protobuf.ByteString
-        getPubkeyBytes();
-
-    /**
-     * <pre>
-     * url
-     * </pre>
-     *
-     * <code>string url = 6 [json_name = "url"];</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <pre>
-     * url
-     * </pre>
-     *
-     * <code>string url = 6 [json_name = "url"];</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-  }
-  /**
-   * Protobuf type {@code aruna.api.notification.services.v2.DataproxyInfo}
-   */
-  public static final class DataproxyInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.DataproxyInfo)
-      DataproxyInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DataproxyInfo.newBuilder() to construct.
-    private DataproxyInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private DataproxyInfo() {
-      endpointId_ = "";
-      name_ = "";
-      epVariant_ = 0;
-      pubkey_ = "";
-      url_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DataproxyInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DataproxyInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder.class);
-    }
-
-    public static final int ENDPOINT_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object endpointId_ = "";
-    /**
-     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-     * @return The endpointId.
-     */
-    @java.lang.Override
-    public java.lang.String getEndpointId() {
-      java.lang.Object ref = endpointId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        endpointId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-     * @return The bytes for endpointId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getEndpointIdBytes() {
-      java.lang.Object ref = endpointId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        endpointId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
-    /**
-     * <pre>
-     * Endpoint name
-     * </pre>
-     *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Endpoint name
-     * </pre>
-     *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EP_VARIANT_FIELD_NUMBER = 3;
-    private int epVariant_ = 0;
-    /**
-     * <pre>
-     * Endpoint type
-     * </pre>
-     *
-     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-     * @return The enum numeric value on the wire for epVariant.
-     */
-    @java.lang.Override public int getEpVariantValue() {
-      return epVariant_;
-    }
-    /**
-     * <pre>
-     * Endpoint type
-     * </pre>
-     *
-     * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-     * @return The epVariant.
-     */
-    @java.lang.Override public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
-      com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
-      return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
-    }
-
-    public static final int IS_PUBLIC_FIELD_NUMBER = 4;
-    private boolean isPublic_ = false;
-    /**
-     * <pre>
-     * Is this endpoint public
-     * </pre>
-     *
-     * <code>bool is_public = 4 [json_name = "isPublic"];</code>
-     * @return The isPublic.
-     */
-    @java.lang.Override
-    public boolean getIsPublic() {
-      return isPublic_;
-    }
-
-    public static final int PUBKEY_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object pubkey_ = "";
-    /**
-     * <pre>
-     * required public_key
-     * </pre>
-     *
-     * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-     * @return The pubkey.
-     */
-    @java.lang.Override
-    public java.lang.String getPubkey() {
-      java.lang.Object ref = pubkey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pubkey_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * required public_key
-     * </pre>
-     *
-     * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-     * @return The bytes for pubkey.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPubkeyBytes() {
-      java.lang.Object ref = pubkey_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pubkey_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int URL_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object url_ = "";
-    /**
-     * <pre>
-     * url
-     * </pre>
-     *
-     * <code>string url = 6 [json_name = "url"];</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * url
-     * </pre>
-     *
-     * <code>string url = 6 [json_name = "url"];</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, endpointId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, epVariant_);
-      }
-      if (isPublic_ != false) {
-        output.writeBool(4, isPublic_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkey_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pubkey_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, url_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, endpointId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (epVariant_ != com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.ENDPOINT_VARIANT_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, epVariant_);
-      }
-      if (isPublic_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isPublic_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkey_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pubkey_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, url_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo other = (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) obj;
-
-      if (!getEndpointId()
-          .equals(other.getEndpointId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (epVariant_ != other.epVariant_) return false;
-      if (getIsPublic()
-          != other.getIsPublic()) return false;
-      if (!getPubkey()
-          .equals(other.getPubkey())) return false;
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getEndpointId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + EP_VARIANT_FIELD_NUMBER;
-      hash = (53 * hash) + epVariant_;
-      hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsPublic());
-      hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
-      hash = (53 * hash) + getPubkey().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.notification.services.v2.DataproxyInfo}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.DataproxyInfo)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DataproxyInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder.class);
-      }
-
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        endpointId_ = "";
-        name_ = "";
-        epVariant_ = 0;
-        isPublic_ = false;
-        pubkey_ = "";
-        url_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo result = new com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.endpointId_ = endpointId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.epVariant_ = epVariant_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isPublic_ = isPublic_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.pubkey_ = pubkey_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.url_ = url_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance()) return this;
-        if (!other.getEndpointId().isEmpty()) {
-          endpointId_ = other.endpointId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.epVariant_ != 0) {
-          setEpVariantValue(other.getEpVariantValue());
-        }
-        if (other.getIsPublic() != false) {
-          setIsPublic(other.getIsPublic());
-        }
-        if (!other.getPubkey().isEmpty()) {
-          pubkey_ = other.pubkey_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                endpointId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                epVariant_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                isPublic_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                pubkey_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                url_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object endpointId_ = "";
-      /**
-       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-       * @return The endpointId.
-       */
-      public java.lang.String getEndpointId() {
-        java.lang.Object ref = endpointId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          endpointId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-       * @return The bytes for endpointId.
-       */
-      public com.google.protobuf.ByteString
-          getEndpointIdBytes() {
-        java.lang.Object ref = endpointId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          endpointId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-       * @param value The endpointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEndpointId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        endpointId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEndpointId() {
-        endpointId_ = getDefaultInstance().getEndpointId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string endpoint_id = 1 [json_name = "endpointId"];</code>
-       * @param value The bytes for endpointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEndpointIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        endpointId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <pre>
-       * Endpoint name
-       * </pre>
-       *
-       * <code>string name = 2 [json_name = "name"];</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Endpoint name
-       * </pre>
-       *
-       * <code>string name = 2 [json_name = "name"];</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Endpoint name
-       * </pre>
-       *
-       * <code>string name = 2 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Endpoint name
-       * </pre>
-       *
-       * <code>string name = 2 [json_name = "name"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Endpoint name
-       * </pre>
-       *
-       * <code>string name = 2 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      private int epVariant_ = 0;
-      /**
-       * <pre>
-       * Endpoint type
-       * </pre>
-       *
-       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-       * @return The enum numeric value on the wire for epVariant.
-       */
-      @java.lang.Override public int getEpVariantValue() {
-        return epVariant_;
-      }
-      /**
-       * <pre>
-       * Endpoint type
-       * </pre>
-       *
-       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-       * @param value The enum numeric value on the wire for epVariant to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEpVariantValue(int value) {
-        epVariant_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Endpoint type
-       * </pre>
-       *
-       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-       * @return The epVariant.
-       */
-      @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant getEpVariant() {
-        com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant result = com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.forNumber(epVariant_);
-        return result == null ? com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Endpoint type
-       * </pre>
-       *
-       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-       * @param value The epVariant to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEpVariant(com.aruna.api.storage.models.v2.ModelsProto.EndpointVariant value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000004;
-        epVariant_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Endpoint type
-       * </pre>
-       *
-       * <code>.aruna.api.storage.models.v2.EndpointVariant ep_variant = 3 [json_name = "epVariant"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEpVariant() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        epVariant_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isPublic_ ;
-      /**
-       * <pre>
-       * Is this endpoint public
-       * </pre>
-       *
-       * <code>bool is_public = 4 [json_name = "isPublic"];</code>
-       * @return The isPublic.
-       */
-      @java.lang.Override
-      public boolean getIsPublic() {
-        return isPublic_;
-      }
-      /**
-       * <pre>
-       * Is this endpoint public
-       * </pre>
-       *
-       * <code>bool is_public = 4 [json_name = "isPublic"];</code>
-       * @param value The isPublic to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsPublic(boolean value) {
-
-        isPublic_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Is this endpoint public
-       * </pre>
-       *
-       * <code>bool is_public = 4 [json_name = "isPublic"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsPublic() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        isPublic_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pubkey_ = "";
-      /**
-       * <pre>
-       * required public_key
-       * </pre>
-       *
-       * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-       * @return The pubkey.
-       */
-      public java.lang.String getPubkey() {
-        java.lang.Object ref = pubkey_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pubkey_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * required public_key
-       * </pre>
-       *
-       * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-       * @return The bytes for pubkey.
-       */
-      public com.google.protobuf.ByteString
-          getPubkeyBytes() {
-        java.lang.Object ref = pubkey_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pubkey_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * required public_key
-       * </pre>
-       *
-       * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-       * @param value The pubkey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPubkey(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        pubkey_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * required public_key
-       * </pre>
-       *
-       * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPubkey() {
-        pubkey_ = getDefaultInstance().getPubkey();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * required public_key
-       * </pre>
-       *
-       * <code>string pubkey = 5 [json_name = "pubkey"];</code>
-       * @param value The bytes for pubkey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPubkeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        pubkey_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object url_ = "";
-      /**
-       * <pre>
-       * url
-       * </pre>
-       *
-       * <code>string url = 6 [json_name = "url"];</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * url
-       * </pre>
-       *
-       * <code>string url = 6 [json_name = "url"];</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * url
-       * </pre>
-       *
-       * <code>string url = 6 [json_name = "url"];</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        url_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * url
-       * </pre>
-       *
-       * <code>string url = 6 [json_name = "url"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        url_ = getDefaultInstance().getUrl();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * url
-       * </pre>
-       *
-       * <code>string url = 6 [json_name = "url"];</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        url_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.DataproxyInfo)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.DataproxyInfo)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo();
-    }
-
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DataproxyInfo>
-        PARSER = new com.google.protobuf.AbstractParser<DataproxyInfo>() {
-      @java.lang.Override
-      public DataproxyInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<DataproxyInfo> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DataproxyInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22716,107 +15970,120 @@ public final class NotificationServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-     * @return Whether the newDataProxy field is set.
+     * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+     * @return Whether the newDataProxyId field is set.
      */
-    boolean hasNewDataProxy();
+    boolean hasNewDataProxyId();
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-     * @return The newDataProxy.
+     * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+     * @return The newDataProxyId.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getNewDataProxy();
+    java.lang.String getNewDataProxyId();
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
+     * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+     * @return The bytes for newDataProxyId.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getNewDataProxyOrBuilder();
+    com.google.protobuf.ByteString
+        getNewDataProxyIdBytes();
 
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-     * @return Whether the removeDataProxy field is set.
+     * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+     * @return Whether the removeDataProxyId field is set.
      */
-    boolean hasRemoveDataProxy();
+    boolean hasRemoveDataProxyId();
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-     * @return The removeDataProxy.
+     * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+     * @return The removeDataProxyId.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getRemoveDataProxy();
+    java.lang.String getRemoveDataProxyId();
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
+     * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+     * @return The bytes for removeDataProxyId.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getRemoveDataProxyOrBuilder();
+    com.google.protobuf.ByteString
+        getRemoveDataProxyIdBytes();
 
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-     * @return Whether the updateDataProxy field is set.
+     * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+     * @return Whether the updateDataProxyId field is set.
      */
-    boolean hasUpdateDataProxy();
+    boolean hasUpdateDataProxyId();
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-     * @return The updateDataProxy.
+     * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+     * @return The updateDataProxyId.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getUpdateDataProxy();
+    java.lang.String getUpdateDataProxyId();
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
+     * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+     * @return The bytes for updateDataProxyId.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getUpdateDataProxyOrBuilder();
+    com.google.protobuf.ByteString
+        getUpdateDataProxyIdBytes();
 
     /**
-     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+     * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+     * @return Whether the newPubkey field is set.
+     */
+    boolean hasNewPubkey();
+    /**
+     * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+     * @return The newPubkey.
+     */
+    boolean getNewPubkey();
+
+    /**
+     * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+     * @return Whether the removePubkey field is set.
+     */
+    boolean hasRemovePubkey();
+    /**
+     * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+     * @return The removePubkey.
+     */
+    boolean getRemovePubkey();
+
+    /**
+     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
      * @return Whether the downtime field is set.
      */
     boolean hasDowntime();
     /**
-     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
      * @return The downtime.
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime getDowntime();
     /**
-     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntimeOrBuilder getDowntimeOrBuilder();
 
     /**
-     * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+     * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
      * @return Whether the version field is set.
      */
     boolean hasVersion();
     /**
-     * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+     * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
      * @return The version.
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion getVersion();
     /**
-     * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+     * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersionOrBuilder getVersionOrBuilder();
 
     /**
-     * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-     * @return Whether the pubkey field is set.
-     */
-    boolean hasPubkey();
-    /**
-     * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-     * @return The pubkey.
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey getPubkey();
-    /**
-     * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-     */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkeyOrBuilder getPubkeyOrBuilder();
-
-    /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
      * @return Whether the reply field is set.
      */
     boolean hasReply();
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
      * @return The reply.
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getReply();
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
      */
     com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder();
 
@@ -22863,12 +16130,13 @@ public final class NotificationServiceProto {
     public enum EventVariantCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      NEW_DATA_PROXY(1),
-      REMOVE_DATA_PROXY(2),
-      UPDATE_DATA_PROXY(3),
-      DOWNTIME(4),
-      VERSION(5),
-      PUBKEY(6),
+      NEW_DATA_PROXY_ID(1),
+      REMOVE_DATA_PROXY_ID(2),
+      UPDATE_DATA_PROXY_ID(3),
+      NEW_PUBKEY(4),
+      REMOVE_PUBKEY(5),
+      DOWNTIME(6),
+      VERSION(7),
       EVENTVARIANT_NOT_SET(0);
       private final int value;
       private EventVariantCase(int value) {
@@ -22886,12 +16154,13 @@ public final class NotificationServiceProto {
 
       public static EventVariantCase forNumber(int value) {
         switch (value) {
-          case 1: return NEW_DATA_PROXY;
-          case 2: return REMOVE_DATA_PROXY;
-          case 3: return UPDATE_DATA_PROXY;
-          case 4: return DOWNTIME;
-          case 5: return VERSION;
-          case 6: return PUBKEY;
+          case 1: return NEW_DATA_PROXY_ID;
+          case 2: return REMOVE_DATA_PROXY_ID;
+          case 3: return UPDATE_DATA_PROXY_ID;
+          case 4: return NEW_PUBKEY;
+          case 5: return REMOVE_PUBKEY;
+          case 6: return DOWNTIME;
+          case 7: return VERSION;
           case 0: return EVENTVARIANT_NOT_SET;
           default: return null;
         }
@@ -22907,196 +16176,270 @@ public final class NotificationServiceProto {
           eventVariantCase_);
     }
 
-    public static final int NEW_DATA_PROXY_FIELD_NUMBER = 1;
+    public static final int NEW_DATA_PROXY_ID_FIELD_NUMBER = 1;
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-     * @return Whether the newDataProxy field is set.
+     * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+     * @return Whether the newDataProxyId field is set.
      */
-    @java.lang.Override
-    public boolean hasNewDataProxy() {
+    public boolean hasNewDataProxyId() {
       return eventVariantCase_ == 1;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-     * @return The newDataProxy.
+     * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+     * @return The newDataProxyId.
      */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getNewDataProxy() {
+    public java.lang.String getNewDataProxyId() {
+      java.lang.Object ref = "";
       if (eventVariantCase_ == 1) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+        ref = eventVariant_;
       }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (eventVariantCase_ == 1) {
+          eventVariant_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
+     * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+     * @return The bytes for newDataProxyId.
      */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getNewDataProxyOrBuilder() {
+    public com.google.protobuf.ByteString
+        getNewDataProxyIdBytes() {
+      java.lang.Object ref = "";
       if (eventVariantCase_ == 1) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+        ref = eventVariant_;
       }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (eventVariantCase_ == 1) {
+          eventVariant_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int REMOVE_DATA_PROXY_FIELD_NUMBER = 2;
+    public static final int REMOVE_DATA_PROXY_ID_FIELD_NUMBER = 2;
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-     * @return Whether the removeDataProxy field is set.
+     * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+     * @return Whether the removeDataProxyId field is set.
      */
-    @java.lang.Override
-    public boolean hasRemoveDataProxy() {
+    public boolean hasRemoveDataProxyId() {
       return eventVariantCase_ == 2;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-     * @return The removeDataProxy.
+     * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+     * @return The removeDataProxyId.
      */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getRemoveDataProxy() {
+    public java.lang.String getRemoveDataProxyId() {
+      java.lang.Object ref = "";
       if (eventVariantCase_ == 2) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+        ref = eventVariant_;
       }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (eventVariantCase_ == 2) {
+          eventVariant_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
+     * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+     * @return The bytes for removeDataProxyId.
      */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getRemoveDataProxyOrBuilder() {
+    public com.google.protobuf.ByteString
+        getRemoveDataProxyIdBytes() {
+      java.lang.Object ref = "";
       if (eventVariantCase_ == 2) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+        ref = eventVariant_;
       }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (eventVariantCase_ == 2) {
+          eventVariant_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int UPDATE_DATA_PROXY_FIELD_NUMBER = 3;
+    public static final int UPDATE_DATA_PROXY_ID_FIELD_NUMBER = 3;
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-     * @return Whether the updateDataProxy field is set.
+     * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+     * @return Whether the updateDataProxyId field is set.
      */
-    @java.lang.Override
-    public boolean hasUpdateDataProxy() {
+    public boolean hasUpdateDataProxyId() {
       return eventVariantCase_ == 3;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-     * @return The updateDataProxy.
+     * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+     * @return The updateDataProxyId.
      */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getUpdateDataProxy() {
+    public java.lang.String getUpdateDataProxyId() {
+      java.lang.Object ref = "";
       if (eventVariantCase_ == 3) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+        ref = eventVariant_;
       }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (eventVariantCase_ == 3) {
+          eventVariant_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
+     * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+     * @return The bytes for updateDataProxyId.
      */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getUpdateDataProxyOrBuilder() {
+    public com.google.protobuf.ByteString
+        getUpdateDataProxyIdBytes() {
+      java.lang.Object ref = "";
       if (eventVariantCase_ == 3) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+        ref = eventVariant_;
       }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (eventVariantCase_ == 3) {
+          eventVariant_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int DOWNTIME_FIELD_NUMBER = 4;
+    public static final int NEW_PUBKEY_FIELD_NUMBER = 4;
     /**
-     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+     * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+     * @return Whether the newPubkey field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewPubkey() {
+      return eventVariantCase_ == 4;
+    }
+    /**
+     * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+     * @return The newPubkey.
+     */
+    @java.lang.Override
+    public boolean getNewPubkey() {
+      if (eventVariantCase_ == 4) {
+        return (java.lang.Boolean) eventVariant_;
+      }
+      return false;
+    }
+
+    public static final int REMOVE_PUBKEY_FIELD_NUMBER = 5;
+    /**
+     * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+     * @return Whether the removePubkey field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemovePubkey() {
+      return eventVariantCase_ == 5;
+    }
+    /**
+     * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+     * @return The removePubkey.
+     */
+    @java.lang.Override
+    public boolean getRemovePubkey() {
+      if (eventVariantCase_ == 5) {
+        return (java.lang.Boolean) eventVariant_;
+      }
+      return false;
+    }
+
+    public static final int DOWNTIME_FIELD_NUMBER = 6;
+    /**
+     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
      * @return Whether the downtime field is set.
      */
     @java.lang.Override
     public boolean hasDowntime() {
-      return eventVariantCase_ == 4;
+      return eventVariantCase_ == 6;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
      * @return The downtime.
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime getDowntime() {
-      if (eventVariantCase_ == 4) {
+      if (eventVariantCase_ == 6) {
          return (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_;
       }
       return com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance();
     }
     /**
-     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+     * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntimeOrBuilder getDowntimeOrBuilder() {
-      if (eventVariantCase_ == 4) {
+      if (eventVariantCase_ == 6) {
          return (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_;
       }
       return com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance();
     }
 
-    public static final int VERSION_FIELD_NUMBER = 5;
+    public static final int VERSION_FIELD_NUMBER = 7;
     /**
-     * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+     * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
      * @return Whether the version field is set.
      */
     @java.lang.Override
     public boolean hasVersion() {
-      return eventVariantCase_ == 5;
+      return eventVariantCase_ == 7;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+     * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion getVersion() {
-      if (eventVariantCase_ == 5) {
+      if (eventVariantCase_ == 7) {
          return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_;
       }
       return com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance();
     }
     /**
-     * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+     * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersionOrBuilder getVersionOrBuilder() {
-      if (eventVariantCase_ == 5) {
+      if (eventVariantCase_ == 7) {
          return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_;
       }
       return com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance();
     }
 
-    public static final int PUBKEY_FIELD_NUMBER = 6;
-    /**
-     * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-     * @return Whether the pubkey field is set.
-     */
-    @java.lang.Override
-    public boolean hasPubkey() {
-      return eventVariantCase_ == 6;
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-     * @return The pubkey.
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey getPubkey() {
-      if (eventVariantCase_ == 6) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance();
-    }
-    /**
-     * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkeyOrBuilder getPubkeyOrBuilder() {
-      if (eventVariantCase_ == 6) {
-         return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_;
-      }
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance();
-    }
-
-    public static final int REPLY_FIELD_NUMBER = 7;
+    public static final int REPLY_FIELD_NUMBER = 8;
     private com.aruna.api.notification.services.v2.NotificationServiceProto.Reply reply_;
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
      * @return Whether the reply field is set.
      */
     @java.lang.Override
@@ -23104,7 +16447,7 @@ public final class NotificationServiceProto {
       return reply_ != null;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
      * @return The reply.
      */
     @java.lang.Override
@@ -23112,7 +16455,7 @@ public final class NotificationServiceProto {
       return reply_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.getDefaultInstance() : reply_;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+     * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
      */
     @java.lang.Override
     public com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder() {
@@ -23134,25 +16477,30 @@ public final class NotificationServiceProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (eventVariantCase_ == 1) {
-        output.writeMessage(1, (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, eventVariant_);
       }
       if (eventVariantCase_ == 2) {
-        output.writeMessage(2, (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventVariant_);
       }
       if (eventVariantCase_ == 3) {
-        output.writeMessage(3, (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, eventVariant_);
       }
       if (eventVariantCase_ == 4) {
-        output.writeMessage(4, (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_);
+        output.writeBool(
+            4, (boolean)((java.lang.Boolean) eventVariant_));
       }
       if (eventVariantCase_ == 5) {
-        output.writeMessage(5, (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_);
+        output.writeBool(
+            5, (boolean)((java.lang.Boolean) eventVariant_));
       }
       if (eventVariantCase_ == 6) {
-        output.writeMessage(6, (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_);
+        output.writeMessage(6, (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_);
+      }
+      if (eventVariantCase_ == 7) {
+        output.writeMessage(7, (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_);
       }
       if (reply_ != null) {
-        output.writeMessage(7, getReply());
+        output.writeMessage(8, getReply());
       }
       getUnknownFields().writeTo(output);
     }
@@ -23164,32 +16512,35 @@ public final class NotificationServiceProto {
 
       size = 0;
       if (eventVariantCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, eventVariant_);
       }
       if (eventVariantCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventVariant_);
       }
       if (eventVariantCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, eventVariant_);
       }
       if (eventVariantCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_);
+          .computeBoolSize(
+              4, (boolean)((java.lang.Boolean) eventVariant_));
       }
       if (eventVariantCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_);
+          .computeBoolSize(
+              5, (boolean)((java.lang.Boolean) eventVariant_));
       }
       if (eventVariantCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_);
+          .computeMessageSize(6, (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_);
+      }
+      if (eventVariantCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_);
       }
       if (reply_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getReply());
+          .computeMessageSize(8, getReply());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -23214,28 +16565,32 @@ public final class NotificationServiceProto {
       if (!getEventVariantCase().equals(other.getEventVariantCase())) return false;
       switch (eventVariantCase_) {
         case 1:
-          if (!getNewDataProxy()
-              .equals(other.getNewDataProxy())) return false;
+          if (!getNewDataProxyId()
+              .equals(other.getNewDataProxyId())) return false;
           break;
         case 2:
-          if (!getRemoveDataProxy()
-              .equals(other.getRemoveDataProxy())) return false;
+          if (!getRemoveDataProxyId()
+              .equals(other.getRemoveDataProxyId())) return false;
           break;
         case 3:
-          if (!getUpdateDataProxy()
-              .equals(other.getUpdateDataProxy())) return false;
+          if (!getUpdateDataProxyId()
+              .equals(other.getUpdateDataProxyId())) return false;
           break;
         case 4:
+          if (getNewPubkey()
+              != other.getNewPubkey()) return false;
+          break;
+        case 5:
+          if (getRemovePubkey()
+              != other.getRemovePubkey()) return false;
+          break;
+        case 6:
           if (!getDowntime()
               .equals(other.getDowntime())) return false;
           break;
-        case 5:
+        case 7:
           if (!getVersion()
               .equals(other.getVersion())) return false;
-          break;
-        case 6:
-          if (!getPubkey()
-              .equals(other.getPubkey())) return false;
           break;
         case 0:
         default:
@@ -23257,28 +16612,34 @@ public final class NotificationServiceProto {
       }
       switch (eventVariantCase_) {
         case 1:
-          hash = (37 * hash) + NEW_DATA_PROXY_FIELD_NUMBER;
-          hash = (53 * hash) + getNewDataProxy().hashCode();
+          hash = (37 * hash) + NEW_DATA_PROXY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getNewDataProxyId().hashCode();
           break;
         case 2:
-          hash = (37 * hash) + REMOVE_DATA_PROXY_FIELD_NUMBER;
-          hash = (53 * hash) + getRemoveDataProxy().hashCode();
+          hash = (37 * hash) + REMOVE_DATA_PROXY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getRemoveDataProxyId().hashCode();
           break;
         case 3:
-          hash = (37 * hash) + UPDATE_DATA_PROXY_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdateDataProxy().hashCode();
+          hash = (37 * hash) + UPDATE_DATA_PROXY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getUpdateDataProxyId().hashCode();
           break;
         case 4:
+          hash = (37 * hash) + NEW_PUBKEY_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getNewPubkey());
+          break;
+        case 5:
+          hash = (37 * hash) + REMOVE_PUBKEY_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getRemovePubkey());
+          break;
+        case 6:
           hash = (37 * hash) + DOWNTIME_FIELD_NUMBER;
           hash = (53 * hash) + getDowntime().hashCode();
           break;
-        case 5:
+        case 7:
           hash = (37 * hash) + VERSION_FIELD_NUMBER;
           hash = (53 * hash) + getVersion().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
-          hash = (53 * hash) + getPubkey().hashCode();
           break;
         case 0:
         default:
@@ -23414,23 +16775,11 @@ public final class NotificationServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        if (newDataProxyBuilder_ != null) {
-          newDataProxyBuilder_.clear();
-        }
-        if (removeDataProxyBuilder_ != null) {
-          removeDataProxyBuilder_.clear();
-        }
-        if (updateDataProxyBuilder_ != null) {
-          updateDataProxyBuilder_.clear();
-        }
         if (downtimeBuilder_ != null) {
           downtimeBuilder_.clear();
         }
         if (versionBuilder_ != null) {
           versionBuilder_.clear();
-        }
-        if (pubkeyBuilder_ != null) {
-          pubkeyBuilder_.clear();
         }
         reply_ = null;
         if (replyBuilder_ != null) {
@@ -23473,7 +16822,7 @@ public final class NotificationServiceProto {
 
       private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.AnouncementEvent result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.reply_ = replyBuilder_ == null
               ? reply_
               : replyBuilder_.build();
@@ -23483,29 +16832,13 @@ public final class NotificationServiceProto {
       private void buildPartialOneofs(com.aruna.api.notification.services.v2.NotificationServiceProto.AnouncementEvent result) {
         result.eventVariantCase_ = eventVariantCase_;
         result.eventVariant_ = this.eventVariant_;
-        if (eventVariantCase_ == 1 &&
-            newDataProxyBuilder_ != null) {
-          result.eventVariant_ = newDataProxyBuilder_.build();
-        }
-        if (eventVariantCase_ == 2 &&
-            removeDataProxyBuilder_ != null) {
-          result.eventVariant_ = removeDataProxyBuilder_.build();
-        }
-        if (eventVariantCase_ == 3 &&
-            updateDataProxyBuilder_ != null) {
-          result.eventVariant_ = updateDataProxyBuilder_.build();
-        }
-        if (eventVariantCase_ == 4 &&
+        if (eventVariantCase_ == 6 &&
             downtimeBuilder_ != null) {
           result.eventVariant_ = downtimeBuilder_.build();
         }
-        if (eventVariantCase_ == 5 &&
+        if (eventVariantCase_ == 7 &&
             versionBuilder_ != null) {
           result.eventVariant_ = versionBuilder_.build();
-        }
-        if (eventVariantCase_ == 6 &&
-            pubkeyBuilder_ != null) {
-          result.eventVariant_ = pubkeyBuilder_.build();
         }
       }
 
@@ -23525,16 +16858,30 @@ public final class NotificationServiceProto {
           mergeReply(other.getReply());
         }
         switch (other.getEventVariantCase()) {
-          case NEW_DATA_PROXY: {
-            mergeNewDataProxy(other.getNewDataProxy());
+          case NEW_DATA_PROXY_ID: {
+            eventVariantCase_ = 1;
+            eventVariant_ = other.eventVariant_;
+            onChanged();
             break;
           }
-          case REMOVE_DATA_PROXY: {
-            mergeRemoveDataProxy(other.getRemoveDataProxy());
+          case REMOVE_DATA_PROXY_ID: {
+            eventVariantCase_ = 2;
+            eventVariant_ = other.eventVariant_;
+            onChanged();
             break;
           }
-          case UPDATE_DATA_PROXY: {
-            mergeUpdateDataProxy(other.getUpdateDataProxy());
+          case UPDATE_DATA_PROXY_ID: {
+            eventVariantCase_ = 3;
+            eventVariant_ = other.eventVariant_;
+            onChanged();
+            break;
+          }
+          case NEW_PUBKEY: {
+            setNewPubkey(other.getNewPubkey());
+            break;
+          }
+          case REMOVE_PUBKEY: {
+            setRemovePubkey(other.getRemovePubkey());
             break;
           }
           case DOWNTIME: {
@@ -23543,10 +16890,6 @@ public final class NotificationServiceProto {
           }
           case VERSION: {
             mergeVersion(other.getVersion());
-            break;
-          }
-          case PUBKEY: {
-            mergePubkey(other.getPubkey());
             break;
           }
           case EVENTVARIANT_NOT_SET: {
@@ -23580,54 +16923,54 @@ public final class NotificationServiceProto {
                 done = true;
                 break;
               case 10: {
-                input.readMessage(
-                    getNewDataProxyFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                java.lang.String s = input.readStringRequireUtf8();
                 eventVariantCase_ = 1;
+                eventVariant_ = s;
                 break;
               } // case 10
               case 18: {
-                input.readMessage(
-                    getRemoveDataProxyFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                java.lang.String s = input.readStringRequireUtf8();
                 eventVariantCase_ = 2;
+                eventVariant_ = s;
                 break;
               } // case 18
               case 26: {
-                input.readMessage(
-                    getUpdateDataProxyFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                java.lang.String s = input.readStringRequireUtf8();
                 eventVariantCase_ = 3;
+                eventVariant_ = s;
                 break;
               } // case 26
-              case 34: {
-                input.readMessage(
-                    getDowntimeFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 32: {
+                eventVariant_ = input.readBool();
                 eventVariantCase_ = 4;
                 break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getVersionFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              } // case 32
+              case 40: {
+                eventVariant_ = input.readBool();
                 eventVariantCase_ = 5;
                 break;
-              } // case 42
+              } // case 40
               case 50: {
                 input.readMessage(
-                    getPubkeyFieldBuilder().getBuilder(),
+                    getDowntimeFieldBuilder().getBuilder(),
                     extensionRegistry);
                 eventVariantCase_ = 6;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
-                    getReplyFieldBuilder().getBuilder(),
+                    getVersionFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000040;
+                eventVariantCase_ = 7;
                 break;
               } // case 58
+              case 66: {
+                input.readMessage(
+                    getReplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -23660,462 +17003,399 @@ public final class NotificationServiceProto {
 
       private int bitField0_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder> newDataProxyBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       * @return Whether the newDataProxy field is set.
+       * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+       * @return Whether the newDataProxyId field is set.
        */
       @java.lang.Override
-      public boolean hasNewDataProxy() {
+      public boolean hasNewDataProxyId() {
         return eventVariantCase_ == 1;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       * @return The newDataProxy.
+       * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+       * @return The newDataProxyId.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getNewDataProxy() {
-        if (newDataProxyBuilder_ == null) {
+      public java.lang.String getNewDataProxyId() {
+        java.lang.Object ref = "";
+        if (eventVariantCase_ == 1) {
+          ref = eventVariant_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           if (eventVariantCase_ == 1) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+            eventVariant_ = s;
           }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return s;
         } else {
-          if (eventVariantCase_ == 1) {
-            return newDataProxyBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       */
-      public Builder setNewDataProxy(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo value) {
-        if (newDataProxyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          eventVariant_ = value;
-          onChanged();
-        } else {
-          newDataProxyBuilder_.setMessage(value);
-        }
-        eventVariantCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       */
-      public Builder setNewDataProxy(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder builderForValue) {
-        if (newDataProxyBuilder_ == null) {
-          eventVariant_ = builderForValue.build();
-          onChanged();
-        } else {
-          newDataProxyBuilder_.setMessage(builderForValue.build());
-        }
-        eventVariantCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       */
-      public Builder mergeNewDataProxy(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo value) {
-        if (newDataProxyBuilder_ == null) {
-          if (eventVariantCase_ == 1 &&
-              eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance()) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            eventVariant_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventVariantCase_ == 1) {
-            newDataProxyBuilder_.mergeFrom(value);
-          } else {
-            newDataProxyBuilder_.setMessage(value);
-          }
-        }
-        eventVariantCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       */
-      public Builder clearNewDataProxy() {
-        if (newDataProxyBuilder_ == null) {
-          if (eventVariantCase_ == 1) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventVariantCase_ == 1) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-          }
-          newDataProxyBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder getNewDataProxyBuilder() {
-        return getNewDataProxyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
+       * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+       * @return The bytes for newDataProxyId.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getNewDataProxyOrBuilder() {
-        if ((eventVariantCase_ == 1) && (newDataProxyBuilder_ != null)) {
-          return newDataProxyBuilder_.getMessageOrBuilder();
-        } else {
+      public com.google.protobuf.ByteString
+          getNewDataProxyIdBytes() {
+        java.lang.Object ref = "";
+        if (eventVariantCase_ == 1) {
+          ref = eventVariant_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           if (eventVariantCase_ == 1) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+            eventVariant_ = b;
           }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo new_data_proxy = 1 [json_name = "newDataProxy"];</code>
+       * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+       * @param value The newDataProxyId to set.
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder> 
-          getNewDataProxyFieldBuilder() {
-        if (newDataProxyBuilder_ == null) {
-          if (!(eventVariantCase_ == 1)) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
-          }
-          newDataProxyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_,
-                  getParentForChildren(),
-                  isClean());
-          eventVariant_ = null;
-        }
+      public Builder setNewDataProxyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         eventVariantCase_ = 1;
+        eventVariant_ = value;
         onChanged();
-        return newDataProxyBuilder_;
+        return this;
+      }
+      /**
+       * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewDataProxyId() {
+        if (eventVariantCase_ == 1) {
+          eventVariantCase_ = 0;
+          eventVariant_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string new_data_proxy_id = 1 [json_name = "newDataProxyId"];</code>
+       * @param value The bytes for newDataProxyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewDataProxyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventVariantCase_ = 1;
+        eventVariant_ = value;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder> removeDataProxyBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       * @return Whether the removeDataProxy field is set.
+       * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+       * @return Whether the removeDataProxyId field is set.
        */
       @java.lang.Override
-      public boolean hasRemoveDataProxy() {
+      public boolean hasRemoveDataProxyId() {
         return eventVariantCase_ == 2;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       * @return The removeDataProxy.
+       * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+       * @return The removeDataProxyId.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getRemoveDataProxy() {
-        if (removeDataProxyBuilder_ == null) {
+      public java.lang.String getRemoveDataProxyId() {
+        java.lang.Object ref = "";
+        if (eventVariantCase_ == 2) {
+          ref = eventVariant_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           if (eventVariantCase_ == 2) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+            eventVariant_ = s;
           }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return s;
         } else {
-          if (eventVariantCase_ == 2) {
-            return removeDataProxyBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       */
-      public Builder setRemoveDataProxy(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo value) {
-        if (removeDataProxyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          eventVariant_ = value;
-          onChanged();
-        } else {
-          removeDataProxyBuilder_.setMessage(value);
-        }
-        eventVariantCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       */
-      public Builder setRemoveDataProxy(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder builderForValue) {
-        if (removeDataProxyBuilder_ == null) {
-          eventVariant_ = builderForValue.build();
-          onChanged();
-        } else {
-          removeDataProxyBuilder_.setMessage(builderForValue.build());
-        }
-        eventVariantCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       */
-      public Builder mergeRemoveDataProxy(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo value) {
-        if (removeDataProxyBuilder_ == null) {
-          if (eventVariantCase_ == 2 &&
-              eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance()) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            eventVariant_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventVariantCase_ == 2) {
-            removeDataProxyBuilder_.mergeFrom(value);
-          } else {
-            removeDataProxyBuilder_.setMessage(value);
-          }
-        }
-        eventVariantCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       */
-      public Builder clearRemoveDataProxy() {
-        if (removeDataProxyBuilder_ == null) {
-          if (eventVariantCase_ == 2) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventVariantCase_ == 2) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-          }
-          removeDataProxyBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder getRemoveDataProxyBuilder() {
-        return getRemoveDataProxyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
+       * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+       * @return The bytes for removeDataProxyId.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getRemoveDataProxyOrBuilder() {
-        if ((eventVariantCase_ == 2) && (removeDataProxyBuilder_ != null)) {
-          return removeDataProxyBuilder_.getMessageOrBuilder();
-        } else {
+      public com.google.protobuf.ByteString
+          getRemoveDataProxyIdBytes() {
+        java.lang.Object ref = "";
+        if (eventVariantCase_ == 2) {
+          ref = eventVariant_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           if (eventVariantCase_ == 2) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+            eventVariant_ = b;
           }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo remove_data_proxy = 2 [json_name = "removeDataProxy"];</code>
+       * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+       * @param value The removeDataProxyId to set.
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder> 
-          getRemoveDataProxyFieldBuilder() {
-        if (removeDataProxyBuilder_ == null) {
-          if (!(eventVariantCase_ == 2)) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
-          }
-          removeDataProxyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_,
-                  getParentForChildren(),
-                  isClean());
-          eventVariant_ = null;
-        }
+      public Builder setRemoveDataProxyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         eventVariantCase_ = 2;
+        eventVariant_ = value;
         onChanged();
-        return removeDataProxyBuilder_;
+        return this;
+      }
+      /**
+       * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoveDataProxyId() {
+        if (eventVariantCase_ == 2) {
+          eventVariantCase_ = 0;
+          eventVariant_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string remove_data_proxy_id = 2 [json_name = "removeDataProxyId"];</code>
+       * @param value The bytes for removeDataProxyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoveDataProxyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventVariantCase_ = 2;
+        eventVariant_ = value;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder> updateDataProxyBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       * @return Whether the updateDataProxy field is set.
+       * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+       * @return Whether the updateDataProxyId field is set.
        */
       @java.lang.Override
-      public boolean hasUpdateDataProxy() {
+      public boolean hasUpdateDataProxyId() {
         return eventVariantCase_ == 3;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       * @return The updateDataProxy.
+       * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+       * @return The updateDataProxyId.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo getUpdateDataProxy() {
-        if (updateDataProxyBuilder_ == null) {
+      public java.lang.String getUpdateDataProxyId() {
+        java.lang.Object ref = "";
+        if (eventVariantCase_ == 3) {
+          ref = eventVariant_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           if (eventVariantCase_ == 3) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+            eventVariant_ = s;
           }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return s;
         } else {
-          if (eventVariantCase_ == 3) {
-            return updateDataProxyBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       */
-      public Builder setUpdateDataProxy(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo value) {
-        if (updateDataProxyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          eventVariant_ = value;
-          onChanged();
-        } else {
-          updateDataProxyBuilder_.setMessage(value);
-        }
-        eventVariantCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       */
-      public Builder setUpdateDataProxy(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder builderForValue) {
-        if (updateDataProxyBuilder_ == null) {
-          eventVariant_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateDataProxyBuilder_.setMessage(builderForValue.build());
-        }
-        eventVariantCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       */
-      public Builder mergeUpdateDataProxy(com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo value) {
-        if (updateDataProxyBuilder_ == null) {
-          if (eventVariantCase_ == 3 &&
-              eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance()) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            eventVariant_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventVariantCase_ == 3) {
-            updateDataProxyBuilder_.mergeFrom(value);
-          } else {
-            updateDataProxyBuilder_.setMessage(value);
-          }
-        }
-        eventVariantCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       */
-      public Builder clearUpdateDataProxy() {
-        if (updateDataProxyBuilder_ == null) {
-          if (eventVariantCase_ == 3) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventVariantCase_ == 3) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-          }
-          updateDataProxyBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder getUpdateDataProxyBuilder() {
-        return getUpdateDataProxyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
+       * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+       * @return The bytes for updateDataProxyId.
        */
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder getUpdateDataProxyOrBuilder() {
-        if ((eventVariantCase_ == 3) && (updateDataProxyBuilder_ != null)) {
-          return updateDataProxyBuilder_.getMessageOrBuilder();
-        } else {
+      public com.google.protobuf.ByteString
+          getUpdateDataProxyIdBytes() {
+        java.lang.Object ref = "";
+        if (eventVariantCase_ == 3) {
+          ref = eventVariant_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           if (eventVariantCase_ == 3) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_;
+            eventVariant_ = b;
           }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.DataproxyInfo update_data_proxy = 3 [json_name = "updateDataProxy"];</code>
+       * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+       * @param value The updateDataProxyId to set.
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder> 
-          getUpdateDataProxyFieldBuilder() {
-        if (updateDataProxyBuilder_ == null) {
-          if (!(eventVariantCase_ == 3)) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.getDefaultInstance();
-          }
-          updateDataProxyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfoOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.DataproxyInfo) eventVariant_,
-                  getParentForChildren(),
-                  isClean());
-          eventVariant_ = null;
-        }
+      public Builder setUpdateDataProxyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         eventVariantCase_ = 3;
+        eventVariant_ = value;
         onChanged();
-        return updateDataProxyBuilder_;
+        return this;
+      }
+      /**
+       * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdateDataProxyId() {
+        if (eventVariantCase_ == 3) {
+          eventVariantCase_ = 0;
+          eventVariant_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string update_data_proxy_id = 3 [json_name = "updateDataProxyId"];</code>
+       * @param value The bytes for updateDataProxyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateDataProxyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventVariantCase_ = 3;
+        eventVariant_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+       * @return Whether the newPubkey field is set.
+       */
+      public boolean hasNewPubkey() {
+        return eventVariantCase_ == 4;
+      }
+      /**
+       * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+       * @return The newPubkey.
+       */
+      public boolean getNewPubkey() {
+        if (eventVariantCase_ == 4) {
+          return (java.lang.Boolean) eventVariant_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+       * @param value The newPubkey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewPubkey(boolean value) {
+
+        eventVariantCase_ = 4;
+        eventVariant_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool new_pubkey = 4 [json_name = "newPubkey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewPubkey() {
+        if (eventVariantCase_ == 4) {
+          eventVariantCase_ = 0;
+          eventVariant_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+       * @return Whether the removePubkey field is set.
+       */
+      public boolean hasRemovePubkey() {
+        return eventVariantCase_ == 5;
+      }
+      /**
+       * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+       * @return The removePubkey.
+       */
+      public boolean getRemovePubkey() {
+        if (eventVariantCase_ == 5) {
+          return (java.lang.Boolean) eventVariant_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+       * @param value The removePubkey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemovePubkey(boolean value) {
+
+        eventVariantCase_ = 5;
+        eventVariant_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool remove_pubkey = 5 [json_name = "removePubkey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemovePubkey() {
+        if (eventVariantCase_ == 5) {
+          eventVariantCase_ = 0;
+          eventVariant_ = null;
+          onChanged();
+        }
+        return this;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime, com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntimeOrBuilder> downtimeBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        * @return Whether the downtime field is set.
        */
       @java.lang.Override
       public boolean hasDowntime() {
-        return eventVariantCase_ == 4;
+        return eventVariantCase_ == 6;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        * @return The downtime.
        */
       @java.lang.Override
       public com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime getDowntime() {
         if (downtimeBuilder_ == null) {
-          if (eventVariantCase_ == 4) {
+          if (eventVariantCase_ == 6) {
             return (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_;
           }
           return com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance();
         } else {
-          if (eventVariantCase_ == 4) {
+          if (eventVariantCase_ == 6) {
             return downtimeBuilder_.getMessage();
           }
           return com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance();
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       public Builder setDowntime(com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime value) {
         if (downtimeBuilder_ == null) {
@@ -24127,11 +17407,11 @@ public final class NotificationServiceProto {
         } else {
           downtimeBuilder_.setMessage(value);
         }
-        eventVariantCase_ = 4;
+        eventVariantCase_ = 6;
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       public Builder setDowntime(
           com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.Builder builderForValue) {
@@ -24141,15 +17421,15 @@ public final class NotificationServiceProto {
         } else {
           downtimeBuilder_.setMessage(builderForValue.build());
         }
-        eventVariantCase_ = 4;
+        eventVariantCase_ = 6;
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       public Builder mergeDowntime(com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime value) {
         if (downtimeBuilder_ == null) {
-          if (eventVariantCase_ == 4 &&
+          if (eventVariantCase_ == 6 &&
               eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance()) {
             eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_)
                 .mergeFrom(value).buildPartial();
@@ -24158,27 +17438,27 @@ public final class NotificationServiceProto {
           }
           onChanged();
         } else {
-          if (eventVariantCase_ == 4) {
+          if (eventVariantCase_ == 6) {
             downtimeBuilder_.mergeFrom(value);
           } else {
             downtimeBuilder_.setMessage(value);
           }
         }
-        eventVariantCase_ = 4;
+        eventVariantCase_ = 6;
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       public Builder clearDowntime() {
         if (downtimeBuilder_ == null) {
-          if (eventVariantCase_ == 4) {
+          if (eventVariantCase_ == 6) {
             eventVariantCase_ = 0;
             eventVariant_ = null;
             onChanged();
           }
         } else {
-          if (eventVariantCase_ == 4) {
+          if (eventVariantCase_ == 6) {
             eventVariantCase_ = 0;
             eventVariant_ = null;
           }
@@ -24187,33 +17467,33 @@ public final class NotificationServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.Builder getDowntimeBuilder() {
         return getDowntimeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       @java.lang.Override
       public com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntimeOrBuilder getDowntimeOrBuilder() {
-        if ((eventVariantCase_ == 4) && (downtimeBuilder_ != null)) {
+        if ((eventVariantCase_ == 6) && (downtimeBuilder_ != null)) {
           return downtimeBuilder_.getMessageOrBuilder();
         } else {
-          if (eventVariantCase_ == 4) {
+          if (eventVariantCase_ == 6) {
             return (com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime) eventVariant_;
           }
           return com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance();
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 4 [json_name = "downtime"];</code>
+       * <code>.aruna.api.notification.services.v2.ScheduledDowntime downtime = 6 [json_name = "downtime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime, com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntimeOrBuilder> 
           getDowntimeFieldBuilder() {
         if (downtimeBuilder_ == null) {
-          if (!(eventVariantCase_ == 4)) {
+          if (!(eventVariantCase_ == 6)) {
             eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.ScheduledDowntime.getDefaultInstance();
           }
           downtimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -24223,7 +17503,7 @@ public final class NotificationServiceProto {
                   isClean());
           eventVariant_ = null;
         }
-        eventVariantCase_ = 4;
+        eventVariantCase_ = 6;
         onChanged();
         return downtimeBuilder_;
       }
@@ -24231,33 +17511,33 @@ public final class NotificationServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion, com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersionOrBuilder> versionBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        * @return Whether the version field is set.
        */
       @java.lang.Override
       public boolean hasVersion() {
-        return eventVariantCase_ == 5;
+        return eventVariantCase_ == 7;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        * @return The version.
        */
       @java.lang.Override
       public com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion getVersion() {
         if (versionBuilder_ == null) {
-          if (eventVariantCase_ == 5) {
+          if (eventVariantCase_ == 7) {
             return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_;
           }
           return com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance();
         } else {
-          if (eventVariantCase_ == 5) {
+          if (eventVariantCase_ == 7) {
             return versionBuilder_.getMessage();
           }
           return com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance();
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       public Builder setVersion(com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion value) {
         if (versionBuilder_ == null) {
@@ -24269,11 +17549,11 @@ public final class NotificationServiceProto {
         } else {
           versionBuilder_.setMessage(value);
         }
-        eventVariantCase_ = 5;
+        eventVariantCase_ = 7;
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       public Builder setVersion(
           com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.Builder builderForValue) {
@@ -24283,15 +17563,15 @@ public final class NotificationServiceProto {
         } else {
           versionBuilder_.setMessage(builderForValue.build());
         }
-        eventVariantCase_ = 5;
+        eventVariantCase_ = 7;
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       public Builder mergeVersion(com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion value) {
         if (versionBuilder_ == null) {
-          if (eventVariantCase_ == 5 &&
+          if (eventVariantCase_ == 7 &&
               eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance()) {
             eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_)
                 .mergeFrom(value).buildPartial();
@@ -24300,27 +17580,27 @@ public final class NotificationServiceProto {
           }
           onChanged();
         } else {
-          if (eventVariantCase_ == 5) {
+          if (eventVariantCase_ == 7) {
             versionBuilder_.mergeFrom(value);
           } else {
             versionBuilder_.setMessage(value);
           }
         }
-        eventVariantCase_ = 5;
+        eventVariantCase_ = 7;
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       public Builder clearVersion() {
         if (versionBuilder_ == null) {
-          if (eventVariantCase_ == 5) {
+          if (eventVariantCase_ == 7) {
             eventVariantCase_ = 0;
             eventVariant_ = null;
             onChanged();
           }
         } else {
-          if (eventVariantCase_ == 5) {
+          if (eventVariantCase_ == 7) {
             eventVariantCase_ = 0;
             eventVariant_ = null;
           }
@@ -24329,33 +17609,33 @@ public final class NotificationServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.Builder getVersionBuilder() {
         return getVersionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       @java.lang.Override
       public com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersionOrBuilder getVersionOrBuilder() {
-        if ((eventVariantCase_ == 5) && (versionBuilder_ != null)) {
+        if ((eventVariantCase_ == 7) && (versionBuilder_ != null)) {
           return versionBuilder_.getMessageOrBuilder();
         } else {
-          if (eventVariantCase_ == 5) {
+          if (eventVariantCase_ == 7) {
             return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion) eventVariant_;
           }
           return com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance();
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.NewVersion version = 5 [json_name = "version"];</code>
+       * <code>.aruna.api.notification.services.v2.NewVersion version = 7 [json_name = "version"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion, com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersionOrBuilder> 
           getVersionFieldBuilder() {
         if (versionBuilder_ == null) {
-          if (!(eventVariantCase_ == 5)) {
+          if (!(eventVariantCase_ == 7)) {
             eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.NewVersion.getDefaultInstance();
           }
           versionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -24365,165 +17645,23 @@ public final class NotificationServiceProto {
                   isClean());
           eventVariant_ = null;
         }
-        eventVariantCase_ = 5;
+        eventVariantCase_ = 7;
         onChanged();
         return versionBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey, com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkeyOrBuilder> pubkeyBuilder_;
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       * @return Whether the pubkey field is set.
-       */
-      @java.lang.Override
-      public boolean hasPubkey() {
-        return eventVariantCase_ == 6;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       * @return The pubkey.
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey getPubkey() {
-        if (pubkeyBuilder_ == null) {
-          if (eventVariantCase_ == 6) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance();
-        } else {
-          if (eventVariantCase_ == 6) {
-            return pubkeyBuilder_.getMessage();
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      public Builder setPubkey(com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey value) {
-        if (pubkeyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          eventVariant_ = value;
-          onChanged();
-        } else {
-          pubkeyBuilder_.setMessage(value);
-        }
-        eventVariantCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      public Builder setPubkey(
-          com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.Builder builderForValue) {
-        if (pubkeyBuilder_ == null) {
-          eventVariant_ = builderForValue.build();
-          onChanged();
-        } else {
-          pubkeyBuilder_.setMessage(builderForValue.build());
-        }
-        eventVariantCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      public Builder mergePubkey(com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey value) {
-        if (pubkeyBuilder_ == null) {
-          if (eventVariantCase_ == 6 &&
-              eventVariant_ != com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance()) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.newBuilder((com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            eventVariant_ = value;
-          }
-          onChanged();
-        } else {
-          if (eventVariantCase_ == 6) {
-            pubkeyBuilder_.mergeFrom(value);
-          } else {
-            pubkeyBuilder_.setMessage(value);
-          }
-        }
-        eventVariantCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      public Builder clearPubkey() {
-        if (pubkeyBuilder_ == null) {
-          if (eventVariantCase_ == 6) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-            onChanged();
-          }
-        } else {
-          if (eventVariantCase_ == 6) {
-            eventVariantCase_ = 0;
-            eventVariant_ = null;
-          }
-          pubkeyBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.Builder getPubkeyBuilder() {
-        return getPubkeyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkeyOrBuilder getPubkeyOrBuilder() {
-        if ((eventVariantCase_ == 6) && (pubkeyBuilder_ != null)) {
-          return pubkeyBuilder_.getMessageOrBuilder();
-        } else {
-          if (eventVariantCase_ == 6) {
-            return (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_;
-          }
-          return com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.aruna.api.notification.services.v2.NewPubkey pubkey = 6 [json_name = "pubkey"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey, com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkeyOrBuilder> 
-          getPubkeyFieldBuilder() {
-        if (pubkeyBuilder_ == null) {
-          if (!(eventVariantCase_ == 6)) {
-            eventVariant_ = com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.getDefaultInstance();
-          }
-          pubkeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey, com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkeyOrBuilder>(
-                  (com.aruna.api.notification.services.v2.NotificationServiceProto.NewPubkey) eventVariant_,
-                  getParentForChildren(),
-                  isClean());
-          eventVariant_ = null;
-        }
-        eventVariantCase_ = 6;
-        onChanged();
-        return pubkeyBuilder_;
       }
 
       private com.aruna.api.notification.services.v2.NotificationServiceProto.Reply reply_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply, com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder> replyBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        * @return Whether the reply field is set.
        */
       public boolean hasReply() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        * @return The reply.
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply getReply() {
@@ -24534,7 +17672,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       public Builder setReply(com.aruna.api.notification.services.v2.NotificationServiceProto.Reply value) {
         if (replyBuilder_ == null) {
@@ -24545,12 +17683,12 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       public Builder setReply(
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder builderForValue) {
@@ -24559,16 +17697,16 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       public Builder mergeReply(com.aruna.api.notification.services.v2.NotificationServiceProto.Reply value) {
         if (replyBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
+          if (((bitField0_ & 0x00000080) != 0) &&
             reply_ != null &&
             reply_ != com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.getDefaultInstance()) {
             getReplyBuilder().mergeFrom(value);
@@ -24578,15 +17716,15 @@ public final class NotificationServiceProto {
         } else {
           replyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       public Builder clearReply() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         reply_ = null;
         if (replyBuilder_ != null) {
           replyBuilder_.dispose();
@@ -24596,15 +17734,15 @@ public final class NotificationServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder getReplyBuilder() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return getReplyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       public com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder getReplyOrBuilder() {
         if (replyBuilder_ != null) {
@@ -24615,7 +17753,7 @@ public final class NotificationServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.Reply reply = 7 [json_name = "reply"];</code>
+       * <code>.aruna.api.notification.services.v2.Reply reply = 8 [json_name = "reply"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.Reply, com.aruna.api.notification.services.v2.NotificationServiceProto.Reply.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.ReplyOrBuilder> 
@@ -24770,31 +17908,6 @@ public final class NotificationServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_notification_services_v2_StreamAll_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_RelationUpdate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_RelationUpdate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_Fields_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_Fields_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_ResourceEventContext_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_ResourceEventContext_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_Token_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_Token_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_UserEventContext_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_UserEventContext_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_notification_services_v2_EventMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24814,11 +17927,6 @@ public final class NotificationServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_notification_services_v2_Reply_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_DataproxyInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_notification_services_v2_ScheduledDowntime_descriptor;
   private static final 
@@ -24852,163 +17960,125 @@ public final class NotificationServiceProto {
       "ification_service.proto\022\"aruna.api.notif" +
       "ication.services.v2\032\037google/protobuf/tim" +
       "estamp.proto\032(aruna/api/storage/models/v" +
-      "2/models.proto\"\316\001\n\010Resource\022\037\n\013resource_" +
-      "id\030\001 \001(\tR\nresourceId\022#\n\rresource_name\030\002 " +
-      "\001(\tR\014resourceName\022#\n\rassociated_id\030\003 \001(\t" +
-      "R\014associatedId\022W\n\020resource_variant\030\004 \001(\016" +
-      "2,.aruna.api.storage.models.v2.ResourceV" +
-      "ariantR\017resourceVariant\"\264\001\n\014StreamTarget" +
-      "\022J\n\010resource\030\001 \001(\0132,.aruna.api.notificat" +
-      "ion.services.v2.ResourceH\000R\010resource\022\024\n\004" +
-      "user\030\002 \001(\010H\000R\004user\022$\n\014anouncements\030\003 \001(\010" +
-      "H\000R\014anouncements\022\022\n\003all\030\004 \001(\010H\000R\003allB\010\n\006" +
-      "target\"\305\003\n\033CreateStreamConsumerRequest\022H" +
-      "\n\006target\030\001 \001(\01320.aruna.api.notification." +
-      "services.v2.StreamTargetR\006target\0221\n\024incl" +
-      "ude_subresources\030\002 \001(\010R\023includeSubresour" +
-      "ces\022N\n\nstream_all\030\003 \001(\0132-.aruna.api.noti" +
-      "fication.services.v2.StreamAllH\000R\tstream" +
-      "All\022^\n\020stream_from_date\030\004 \001(\01322.aruna.ap" +
-      "i.notification.services.v2.StreamFromDat" +
-      "eH\000R\016streamFromDate\022j\n\024stream_from_seque" +
-      "nce\030\005 \001(\01326.aruna.api.notification.servi" +
-      "ces.v2.StreamFromSequenceH\000R\022streamFromS" +
-      "equenceB\r\n\013stream_type\"F\n\034CreateStreamCo" +
-      "nsumerResponse\022&\n\017stream_group_id\030\001 \001(\tR" +
-      "\rstreamGroupId\"d\n\033GetEventMessageBatchRe" +
-      "quest\022&\n\017stream_group_id\030\001 \001(\tR\rstreamGr" +
-      "oupId\022\035\n\nbatch_size\030\002 \001(\rR\tbatchSize\"l\n\034" +
-      "GetEventMessageBatchResponse\022L\n\010messages" +
-      "\030\001 \003(\01320.aruna.api.notification.services" +
-      ".v2.EventMessageR\010messages\"j\n!GetEventMe" +
-      "ssageBatchStreamRequest\022&\n\017stream_group_" +
-      "id\030\001 \001(\tR\rstreamGroupId\022\035\n\nbatch_size\030\002 " +
-      "\001(\rR\tbatchSize\"r\n\"GetEventMessageBatchSt" +
-      "reamResponse\022L\n\010messages\030\001 \003(\01320.aruna.a" +
-      "pi.notification.services.v2.EventMessage" +
-      "R\010messages\"e\n\036AcknowledgeMessageBatchReq" +
-      "uest\022C\n\007replies\030\001 \003(\0132).aruna.api.notifi" +
-      "cation.services.v2.ReplyR\007replies\"!\n\037Ack" +
-      "nowledgeMessageBatchResponse\"J\n DeleteEv" +
-      "entStreamingGroupRequest\022&\n\017stream_group" +
-      "_id\030\001 \001(\tR\rstreamGroupId\"#\n!DeleteEventS" +
-      "treamingGroupResponse\"0\n\022StreamFromSeque" +
-      "nce\022\032\n\010sequence\030\001 \001(\004R\010sequence\"J\n\016Strea" +
-      "mFromDate\0228\n\ttimestamp\030\001 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\ttimestamp\"\013\n\tStreamAll" +
-      "\"\256\001\n\016RelationUpdate\022J\n\radd_relations\030\002 \003" +
-      "(\0132%.aruna.api.storage.models.v2.Relatio" +
-      "nR\014addRelations\022P\n\020remove_relations\030\003 \003(" +
-      "\0132%.aruna.api.storage.models.v2.Relation" +
-      "R\017removeRelations\"/\n\006Fields\022%\n\016updated_f" +
-      "ields\030\001 \003(\tR\rupdatedFields\"\376\001\n\024ResourceE" +
-      "ventContext\022S\n\016updated_fields\030\001 \001(\0132*.ar" +
-      "una.api.notification.services.v2.FieldsH" +
-      "\000R\rupdatedFields\022_\n\020relation_updates\030\002 \001" +
-      "(\01322.aruna.api.notification.services.v2." +
-      "RelationUpdateH\000R\017relationUpdates\022\'\n\016cus" +
-      "tom_context\030\003 \001(\tH\000R\rcustomContextB\007\n\005ev" +
-      "ent\"`\n\005Token\022\016\n\002id\030\001 \001(\tR\002id\022G\n\npermissi" +
-      "on\030\002 \001(\0132\'.aruna.api.storage.models.v2.P" +
-      "ermissionR\npermission\"\350\001\n\020UserEventConte" +
-      "xt\022%\n\rupdated_field\030\001 \001(\tH\000R\014updatedFiel" +
-      "d\022\026\n\005admin\030\002 \001(\010H\000R\005admin\022A\n\005token\030\003 \001(\013" +
-      "2).aruna.api.notification.services.v2.To" +
-      "kenH\000R\005token\022I\n\npermission\030\004 \001(\0132\'.aruna" +
-      ".api.storage.models.v2.PermissionH\000R\nper" +
-      "missionB\007\n\005event\"\264\002\n\014EventMessage\022Z\n\016res" +
-      "ource_event\030\001 \001(\01321.aruna.api.notificati" +
-      "on.services.v2.ResourceEventH\000R\rresource" +
-      "Event\022N\n\nuser_event\030\002 \001(\0132-.aruna.api.no" +
-      "tification.services.v2.UserEventH\000R\tuser" +
-      "Event\022e\n\022announcement_event\030\003 \001(\01324.arun" +
-      "a.api.notification.services.v2.Anounceme" +
-      "ntEventH\000R\021announcementEventB\021\n\017message_" +
-      "variant\"\304\002\n\rResourceEvent\022H\n\010resource\030\001 " +
-      "\001(\0132,.aruna.api.notification.services.v2" +
-      ".ResourceR\010resource\022T\n\nevent_type\030\002 \001(\0162" +
-      "5.aruna.api.notification.services.v2.Res" +
-      "ourceEventTypeR\teventType\022R\n\007context\030\003 \001" +
-      "(\01328.aruna.api.notification.services.v2." +
-      "ResourceEventContextR\007context\022?\n\005reply\030\004" +
+      "2/models.proto\"\337\001\n\010Resource\022\037\n\013resource_" +
+      "id\030\001 \001(\tR\nresourceId\022#\n\rassociated_id\030\002 " +
+      "\001(\tR\014associatedId\0224\n\026persistent_resource" +
+      "_id\030\003 \001(\010R\024persistentResourceId\022W\n\020resou" +
+      "rce_variant\030\004 \001(\0162,.aruna.api.storage.mo" +
+      "dels.v2.ResourceVariantR\017resourceVariant" +
+      "\"\264\001\n\014StreamTarget\022J\n\010resource\030\001 \001(\0132,.ar" +
+      "una.api.notification.services.v2.Resourc" +
+      "eH\000R\010resource\022\024\n\004user\030\002 \001(\010H\000R\004user\022$\n\014a" +
+      "nouncements\030\003 \001(\010H\000R\014anouncements\022\022\n\003all" +
+      "\030\004 \001(\010H\000R\003allB\010\n\006target\"\305\003\n\033CreateStream" +
+      "ConsumerRequest\022H\n\006target\030\001 \001(\01320.aruna." +
+      "api.notification.services.v2.StreamTarge" +
+      "tR\006target\0221\n\024include_subresources\030\002 \001(\010R" +
+      "\023includeSubresources\022N\n\nstream_all\030\003 \001(\013" +
+      "2-.aruna.api.notification.services.v2.St" +
+      "reamAllH\000R\tstreamAll\022^\n\020stream_from_date" +
+      "\030\004 \001(\01322.aruna.api.notification.services" +
+      ".v2.StreamFromDateH\000R\016streamFromDate\022j\n\024" +
+      "stream_from_sequence\030\005 \001(\01326.aruna.api.n" +
+      "otification.services.v2.StreamFromSequen" +
+      "ceH\000R\022streamFromSequenceB\r\n\013stream_type\"" +
+      "F\n\034CreateStreamConsumerResponse\022&\n\017strea" +
+      "m_group_id\030\001 \001(\tR\rstreamGroupId\"d\n\033GetEv" +
+      "entMessageBatchRequest\022&\n\017stream_group_i" +
+      "d\030\001 \001(\tR\rstreamGroupId\022\035\n\nbatch_size\030\002 \001" +
+      "(\rR\tbatchSize\"l\n\034GetEventMessageBatchRes" +
+      "ponse\022L\n\010messages\030\001 \003(\01320.aruna.api.noti" +
+      "fication.services.v2.EventMessageR\010messa" +
+      "ges\"j\n!GetEventMessageBatchStreamRequest" +
+      "\022&\n\017stream_group_id\030\001 \001(\tR\rstreamGroupId" +
+      "\022\035\n\nbatch_size\030\002 \001(\rR\tbatchSize\"r\n\"GetEv" +
+      "entMessageBatchStreamResponse\022L\n\010message" +
+      "s\030\001 \003(\01320.aruna.api.notification.service" +
+      "s.v2.EventMessageR\010messages\"e\n\036Acknowled" +
+      "geMessageBatchRequest\022C\n\007replies\030\001 \003(\0132)" +
+      ".aruna.api.notification.services.v2.Repl" +
+      "yR\007replies\"!\n\037AcknowledgeMessageBatchRes" +
+      "ponse\"J\n DeleteEventStreamingGroupReques" +
+      "t\022&\n\017stream_group_id\030\001 \001(\tR\rstreamGroupI" +
+      "d\"#\n!DeleteEventStreamingGroupResponse\"0" +
+      "\n\022StreamFromSequence\022\032\n\010sequence\030\001 \001(\004R\010" +
+      "sequence\"J\n\016StreamFromDate\0228\n\ttimestamp\030" +
+      "\001 \001(\0132\032.google.protobuf.TimestampR\ttimes" +
+      "tamp\"\013\n\tStreamAll\"\264\002\n\014EventMessage\022Z\n\016re" +
+      "source_event\030\001 \001(\01321.aruna.api.notificat" +
+      "ion.services.v2.ResourceEventH\000R\rresourc" +
+      "eEvent\022N\n\nuser_event\030\002 \001(\0132-.aruna.api.n" +
+      "otification.services.v2.UserEventH\000R\tuse" +
+      "rEvent\022e\n\022announcement_event\030\003 \001(\01324.aru" +
+      "na.api.notification.services.v2.Anouncem" +
+      "entEventH\000R\021announcementEventB\021\n\017message" +
+      "_variant\"\361\001\n\rResourceEvent\022H\n\010resource\030\001" +
+      " \001(\0132,.aruna.api.notification.services.v" +
+      "2.ResourceR\010resource\022U\n\revent_variant\030\002 " +
+      "\001(\01620.aruna.api.notification.services.v2" +
+      ".EventVariantR\014eventVariant\022?\n\005reply\030\003 \001" +
+      "(\0132).aruna.api.notification.services.v2." +
+      "ReplyR\005reply\"\274\001\n\tUserEvent\022\027\n\007user_id\030\001 " +
+      "\001(\tR\006userId\022U\n\revent_variant\030\002 \001(\01620.aru" +
+      "na.api.notification.services.v2.EventVar" +
+      "iantR\014eventVariant\022?\n\005reply\030\003 \001(\0132).arun" +
+      "a.api.notification.services.v2.ReplyR\005re" +
+      "ply\"E\n\005Reply\022\024\n\005reply\030\001 \001(\tR\005reply\022\022\n\004sa" +
+      "lt\030\002 \001(\tR\004salt\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\251\001\n\021S" +
+      "cheduledDowntime\022\032\n\010location\030\001 \001(\tR\010loca" +
+      "tion\022\034\n\tcomponent\030\002 \001(\tR\tcomponent\022.\n\004fr" +
+      "om\030\003 \001(\0132\032.google.protobuf.TimestampR\004fr" +
+      "om\022*\n\002to\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\002to\"g\n\nNewVersion\022\032\n\010location\030\001 \001(\tR\010" +
+      "location\022\034\n\tcomponent\030\002 \001(\tR\tcomponent\022\037" +
+      "\n\013new_version\030\003 \001(\tR\nnewVersion\"#\n\tNewPu" +
+      "bkey\022\026\n\006pubkey\030\001 \001(\tR\006pubkey\"\340\003\n\020Anounce" +
+      "mentEvent\022+\n\021new_data_proxy_id\030\001 \001(\tH\000R\016" +
+      "newDataProxyId\0221\n\024remove_data_proxy_id\030\002" +
+      " \001(\tH\000R\021removeDataProxyId\0221\n\024update_data" +
+      "_proxy_id\030\003 \001(\tH\000R\021updateDataProxyId\022\037\n\n" +
+      "new_pubkey\030\004 \001(\010H\000R\tnewPubkey\022%\n\rremove_" +
+      "pubkey\030\005 \001(\010H\000R\014removePubkey\022S\n\010downtime" +
+      "\030\006 \001(\01325.aruna.api.notification.services" +
+      ".v2.ScheduledDowntimeH\000R\010downtime\022J\n\007ver" +
+      "sion\030\007 \001(\0132..aruna.api.notification.serv" +
+      "ices.v2.NewVersionH\000R\007version\022?\n\005reply\030\010" +
       " \001(\0132).aruna.api.notification.services.v" +
-      "2.ReplyR\005reply\"\244\002\n\tUserEvent\022\027\n\007user_id\030" +
-      "\001 \001(\tR\006userId\022\033\n\tuser_name\030\002 \001(\tR\010userNa" +
-      "me\022P\n\nevent_type\030\003 \001(\01621.aruna.api.notif" +
-      "ication.services.v2.UserEventTypeR\tevent" +
-      "Type\022N\n\007context\030\004 \001(\01324.aruna.api.notifi" +
-      "cation.services.v2.UserEventContextR\007con" +
-      "text\022?\n\005reply\030\005 \001(\0132).aruna.api.notifica" +
-      "tion.services.v2.ReplyR\005reply\"E\n\005Reply\022\024" +
-      "\n\005reply\030\001 \001(\tR\005reply\022\022\n\004salt\030\002 \001(\tR\004salt" +
-      "\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\330\001\n\rDataproxyInfo\022\037" +
-      "\n\013endpoint_id\030\001 \001(\tR\nendpointId\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\022K\n\nep_variant\030\003 \001(\0162,.aruna." +
-      "api.storage.models.v2.EndpointVariantR\te" +
-      "pVariant\022\033\n\tis_public\030\004 \001(\010R\010isPublic\022\026\n" +
-      "\006pubkey\030\005 \001(\tR\006pubkey\022\020\n\003url\030\006 \001(\tR\003url\"" +
-      "\251\001\n\021ScheduledDowntime\022\032\n\010location\030\001 \001(\tR" +
-      "\010location\022\034\n\tcomponent\030\002 \001(\tR\tcomponent\022" +
-      ".\n\004from\030\003 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\004from\022*\n\002to\030\004 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\002to\"g\n\nNewVersion\022\032\n\010location\030\001 " +
-      "\001(\tR\010location\022\034\n\tcomponent\030\002 \001(\tR\tcompon" +
-      "ent\022\037\n\013new_version\030\003 \001(\tR\nnewVersion\"#\n\t" +
-      "NewPubkey\022\026\n\006pubkey\030\001 \001(\tR\006pubkey\"\353\004\n\020An" +
-      "ouncementEvent\022Y\n\016new_data_proxy\030\001 \001(\01321" +
-      ".aruna.api.notification.services.v2.Data" +
-      "proxyInfoH\000R\014newDataProxy\022_\n\021remove_data" +
-      "_proxy\030\002 \001(\01321.aruna.api.notification.se" +
-      "rvices.v2.DataproxyInfoH\000R\017removeDataPro" +
-      "xy\022_\n\021update_data_proxy\030\003 \001(\01321.aruna.ap" +
-      "i.notification.services.v2.DataproxyInfo" +
-      "H\000R\017updateDataProxy\022S\n\010downtime\030\004 \001(\01325." +
-      "aruna.api.notification.services.v2.Sched" +
-      "uledDowntimeH\000R\010downtime\022J\n\007version\030\005 \001(" +
-      "\0132..aruna.api.notification.services.v2.N" +
-      "ewVersionH\000R\007version\022G\n\006pubkey\030\006 \001(\0132-.a" +
-      "runa.api.notification.services.v2.NewPub" +
-      "keyH\000R\006pubkey\022?\n\005reply\030\007 \001(\0132).aruna.api" +
-      ".notification.services.v2.ReplyR\005replyB\017" +
-      "\n\revent_variant*\276\001\n\021ResourceEventType\022#\n" +
-      "\037RESOURCE_EVENT_TYPE_UNSPECIFIED\020\000\022\037\n\033RE" +
-      "SOURCE_EVENT_TYPE_CREATED\020\001\022!\n\035RESOURCE_" +
-      "EVENT_TYPE_AVAILABLE\020\002\022\037\n\033RESOURCE_EVENT" +
-      "_TYPE_UPDATED\020\003\022\037\n\033RESOURCE_EVENT_TYPE_D" +
-      "ELETED\020\004*\207\001\n\rUserEventType\022\037\n\033USER_EVENT" +
-      "_TYPE_UNSPECIFIED\020\000\022\033\n\027USER_EVENT_TYPE_C" +
-      "REATED\020\001\022\033\n\027USER_EVENT_TYPE_UPDATED\020\002\022\033\n" +
-      "\027USER_EVENT_TYPE_DELETED\020\0032\334\006\n\030EventNoti" +
-      "ficationService\022\233\001\n\024CreateStreamConsumer" +
-      "\022?.aruna.api.notification.services.v2.Cr" +
-      "eateStreamConsumerRequest\032@.aruna.api.no" +
-      "tification.services.v2.CreateStreamConsu" +
-      "merResponse\"\000\022\233\001\n\024GetEventMessageBatch\022?" +
-      ".aruna.api.notification.services.v2.GetE" +
-      "ventMessageBatchRequest\032@.aruna.api.noti" +
-      "fication.services.v2.GetEventMessageBatc" +
-      "hResponse\"\000\022\257\001\n\032GetEventMessageBatchStre" +
-      "am\022E.aruna.api.notification.services.v2." +
-      "GetEventMessageBatchStreamRequest\032F.arun" +
-      "a.api.notification.services.v2.GetEventM" +
-      "essageBatchStreamResponse\"\0000\001\022\244\001\n\027Acknow" +
-      "ledgeMessageBatch\022B.aruna.api.notificati" +
-      "on.services.v2.AcknowledgeMessageBatchRe" +
-      "quest\032C.aruna.api.notification.services." +
-      "v2.AcknowledgeMessageBatchResponse\"\000\022\252\001\n" +
-      "\031DeleteEventStreamingGroup\022D.aruna.api.n" +
-      "otification.services.v2.DeleteEventStrea" +
-      "mingGroupRequest\032E.aruna.api.notificatio" +
-      "n.services.v2.DeleteEventStreamingGroupR" +
-      "esponse\"\000B\262\002\n&com.aruna.api.notification" +
-      ".services.v2B\030NotificationServiceProtoP\000" +
-      "ZAgithub.com/ArunaStorage/go-api/aruna/a" +
-      "pi/notification/services/v2\242\002\004AANS\252\002\"Aru" +
-      "na.Api.Notification.Services.V2\312\002\"Aruna\\" +
-      "Api\\Notification\\Services\\V2\342\002.Aruna\\Api" +
-      "\\Notification\\Services\\V2\\GPBMetadata\352\002&" +
-      "Aruna::Api::Notification::Services::V2b\006" +
-      "proto3"
+      "2.ReplyR\005replyB\017\n\revent_variant*\233\001\n\014Even" +
+      "tVariant\022\035\n\031EVENT_VARIANT_UNSPECIFIED\020\000\022" +
+      "\031\n\025EVENT_VARIANT_CREATED\020\001\022\033\n\027EVENT_VARI" +
+      "ANT_AVAILABLE\020\002\022\031\n\025EVENT_VARIANT_UPDATED" +
+      "\020\003\022\031\n\025EVENT_VARIANT_DELETED\020\0042\334\006\n\030EventN" +
+      "otificationService\022\233\001\n\024CreateStreamConsu" +
+      "mer\022?.aruna.api.notification.services.v2" +
+      ".CreateStreamConsumerRequest\032@.aruna.api" +
+      ".notification.services.v2.CreateStreamCo" +
+      "nsumerResponse\"\000\022\233\001\n\024GetEventMessageBatc" +
+      "h\022?.aruna.api.notification.services.v2.G" +
+      "etEventMessageBatchRequest\032@.aruna.api.n" +
+      "otification.services.v2.GetEventMessageB" +
+      "atchResponse\"\000\022\257\001\n\032GetEventMessageBatchS" +
+      "tream\022E.aruna.api.notification.services." +
+      "v2.GetEventMessageBatchStreamRequest\032F.a" +
+      "runa.api.notification.services.v2.GetEve" +
+      "ntMessageBatchStreamResponse\"\0000\001\022\244\001\n\027Ack" +
+      "nowledgeMessageBatch\022B.aruna.api.notific" +
+      "ation.services.v2.AcknowledgeMessageBatc" +
+      "hRequest\032C.aruna.api.notification.servic" +
+      "es.v2.AcknowledgeMessageBatchResponse\"\000\022" +
+      "\252\001\n\031DeleteEventStreamingGroup\022D.aruna.ap" +
+      "i.notification.services.v2.DeleteEventSt" +
+      "reamingGroupRequest\032E.aruna.api.notifica" +
+      "tion.services.v2.DeleteEventStreamingGro" +
+      "upResponse\"\000B\262\002\n&com.aruna.api.notificat" +
+      "ion.services.v2B\030NotificationServiceProt" +
+      "oP\000ZAgithub.com/ArunaStorage/go-api/arun" +
+      "a/api/notification/services/v2\242\002\004AANS\252\002\"" +
+      "Aruna.Api.Notification.Services.V2\312\002\"Aru" +
+      "na\\Api\\Notification\\Services\\V2\342\002.Aruna\\" +
+      "Api\\Notification\\Services\\V2\\GPBMetadata" +
+      "\352\002&Aruna::Api::Notification::Services::V" +
+      "2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25021,7 +18091,7 @@ public final class NotificationServiceProto {
     internal_static_aruna_api_notification_services_v2_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_Resource_descriptor,
-        new java.lang.String[] { "ResourceId", "ResourceName", "AssociatedId", "ResourceVariant", });
+        new java.lang.String[] { "ResourceId", "AssociatedId", "PersistentResourceId", "ResourceVariant", });
     internal_static_aruna_api_notification_services_v2_StreamTarget_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_notification_services_v2_StreamTarget_fieldAccessorTable = new
@@ -25106,90 +18176,54 @@ public final class NotificationServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_StreamAll_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_notification_services_v2_RelationUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_aruna_api_notification_services_v2_RelationUpdate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_RelationUpdate_descriptor,
-        new java.lang.String[] { "AddRelations", "RemoveRelations", });
-    internal_static_aruna_api_notification_services_v2_Fields_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_aruna_api_notification_services_v2_Fields_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_Fields_descriptor,
-        new java.lang.String[] { "UpdatedFields", });
-    internal_static_aruna_api_notification_services_v2_ResourceEventContext_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_aruna_api_notification_services_v2_ResourceEventContext_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_ResourceEventContext_descriptor,
-        new java.lang.String[] { "UpdatedFields", "RelationUpdates", "CustomContext", "Event", });
-    internal_static_aruna_api_notification_services_v2_Token_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_aruna_api_notification_services_v2_Token_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_Token_descriptor,
-        new java.lang.String[] { "Id", "Permission", });
-    internal_static_aruna_api_notification_services_v2_UserEventContext_descriptor =
-      getDescriptor().getMessageTypes().get(19);
-    internal_static_aruna_api_notification_services_v2_UserEventContext_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_UserEventContext_descriptor,
-        new java.lang.String[] { "UpdatedField", "Admin", "Token", "Permission", "Event", });
     internal_static_aruna_api_notification_services_v2_EventMessage_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_aruna_api_notification_services_v2_EventMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_EventMessage_descriptor,
         new java.lang.String[] { "ResourceEvent", "UserEvent", "AnnouncementEvent", "MessageVariant", });
     internal_static_aruna_api_notification_services_v2_ResourceEvent_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aruna_api_notification_services_v2_ResourceEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_ResourceEvent_descriptor,
-        new java.lang.String[] { "Resource", "EventType", "Context", "Reply", });
+        new java.lang.String[] { "Resource", "EventVariant", "Reply", });
     internal_static_aruna_api_notification_services_v2_UserEvent_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_notification_services_v2_UserEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_UserEvent_descriptor,
-        new java.lang.String[] { "UserId", "UserName", "EventType", "Context", "Reply", });
+        new java.lang.String[] { "UserId", "EventVariant", "Reply", });
     internal_static_aruna_api_notification_services_v2_Reply_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aruna_api_notification_services_v2_Reply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_Reply_descriptor,
         new java.lang.String[] { "Reply", "Salt", "Hmac", });
-    internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor =
-      getDescriptor().getMessageTypes().get(24);
-    internal_static_aruna_api_notification_services_v2_DataproxyInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_DataproxyInfo_descriptor,
-        new java.lang.String[] { "EndpointId", "Name", "EpVariant", "IsPublic", "Pubkey", "Url", });
     internal_static_aruna_api_notification_services_v2_ScheduledDowntime_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aruna_api_notification_services_v2_ScheduledDowntime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_ScheduledDowntime_descriptor,
         new java.lang.String[] { "Location", "Component", "From", "To", });
     internal_static_aruna_api_notification_services_v2_NewVersion_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aruna_api_notification_services_v2_NewVersion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_NewVersion_descriptor,
         new java.lang.String[] { "Location", "Component", "NewVersion", });
     internal_static_aruna_api_notification_services_v2_NewPubkey_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_aruna_api_notification_services_v2_NewPubkey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_NewPubkey_descriptor,
         new java.lang.String[] { "Pubkey", });
     internal_static_aruna_api_notification_services_v2_AnouncementEvent_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_aruna_api_notification_services_v2_AnouncementEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_AnouncementEvent_descriptor,
-        new java.lang.String[] { "NewDataProxy", "RemoveDataProxy", "UpdateDataProxy", "Downtime", "Version", "Pubkey", "Reply", "EventVariant", });
+        new java.lang.String[] { "NewDataProxyId", "RemoveDataProxyId", "UpdateDataProxyId", "NewPubkey", "RemovePubkey", "Downtime", "Version", "Reply", "EventVariant", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.aruna.api.storage.models.v2.ModelsProto.getDescriptor();
   }

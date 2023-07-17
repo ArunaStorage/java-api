@@ -299,6 +299,37 @@ public final class UserServiceGrpc {
     return getGetUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse> getGetUserRedactedMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUserRedacted",
+      requestType = com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse> getGetUserRedactedMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse> getGetUserRedactedMethod;
+    if ((getGetUserRedactedMethod = UserServiceGrpc.getGetUserRedactedMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getGetUserRedactedMethod = UserServiceGrpc.getGetUserRedactedMethod) == null) {
+          UserServiceGrpc.getGetUserRedactedMethod = getGetUserRedactedMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserRedacted"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetUserRedacted"))
+              .build();
+        }
+      }
+    }
+    return getGetUserRedactedMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.UpdateUserDisplayNameRequest,
       com.aruna.api.storage.services.v2.UserServiceProto.UpdateUserDisplayNameResponse> getUpdateUserDisplayNameMethod;
 
@@ -618,6 +649,20 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
+     * GetUserRequestRedacted
+     * Status: STABLE
+     * This is a request that returns the user information of the
+     * current user or if invoked by an admin from another user
+     * Redacts personal information like name or email
+     * </pre>
+     */
+    default void getUserRedacted(com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserRedactedMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateUserDisplayName
      * Status: STABLE
      * Updates the Displayname for the user (Personal only)
@@ -834,6 +879,21 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
+     * GetUserRequestRedacted
+     * Status: STABLE
+     * This is a request that returns the user information of the
+     * current user or if invoked by an admin from another user
+     * Redacts personal information like name or email
+     * </pre>
+     */
+    public void getUserRedacted(com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetUserRedactedMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateUserDisplayName
      * Status: STABLE
      * Updates the Displayname for the user (Personal only)
@@ -1026,6 +1086,20 @@ public final class UserServiceGrpc {
     public com.aruna.api.storage.services.v2.UserServiceProto.GetUserResponse getUser(com.aruna.api.storage.services.v2.UserServiceProto.GetUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetUserRequestRedacted
+     * Status: STABLE
+     * This is a request that returns the user information of the
+     * current user or if invoked by an admin from another user
+     * Redacts personal information like name or email
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse getUserRedacted(com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetUserRedactedMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1230,6 +1304,21 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
+     * GetUserRequestRedacted
+     * Status: STABLE
+     * This is a request that returns the user information of the
+     * current user or if invoked by an admin from another user
+     * Redacts personal information like name or email
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse> getUserRedacted(
+        com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetUserRedactedMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * UpdateUserDisplayName
      * Status: STABLE
      * Updates the Displayname for the user (Personal only)
@@ -1303,11 +1392,12 @@ public final class UserServiceGrpc {
   private static final int METHODID_DELETE_APITOKEN = 6;
   private static final int METHODID_DELETE_APITOKENS = 7;
   private static final int METHODID_GET_USER = 8;
-  private static final int METHODID_UPDATE_USER_DISPLAY_NAME = 9;
-  private static final int METHODID_UPDATE_USER_EMAIL = 10;
-  private static final int METHODID_GET_NOT_ACTIVATED_USERS = 11;
-  private static final int METHODID_GET_ALL_USERS = 12;
-  private static final int METHODID_MERGE_USER_ACCOUNT = 13;
+  private static final int METHODID_GET_USER_REDACTED = 9;
+  private static final int METHODID_UPDATE_USER_DISPLAY_NAME = 10;
+  private static final int METHODID_UPDATE_USER_EMAIL = 11;
+  private static final int METHODID_GET_NOT_ACTIVATED_USERS = 12;
+  private static final int METHODID_GET_ALL_USERS = 13;
+  private static final int METHODID_MERGE_USER_ACCOUNT = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1361,6 +1451,10 @@ public final class UserServiceGrpc {
         case METHODID_GET_USER:
           serviceImpl.getUser((com.aruna.api.storage.services.v2.UserServiceProto.GetUserRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetUserResponse>) responseObserver);
+          break;
+        case METHODID_GET_USER_REDACTED:
+          serviceImpl.getUserRedacted((com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse>) responseObserver);
           break;
         case METHODID_UPDATE_USER_DISPLAY_NAME:
           serviceImpl.updateUserDisplayName((com.aruna.api.storage.services.v2.UserServiceProto.UpdateUserDisplayNameRequest) request,
@@ -1464,6 +1558,13 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.UserServiceProto.GetUserResponse>(
                 service, METHODID_GET_USER)))
         .addMethod(
+          getGetUserRedactedMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedRequest,
+              com.aruna.api.storage.services.v2.UserServiceProto.GetUserRedactedResponse>(
+                service, METHODID_GET_USER_REDACTED)))
+        .addMethod(
           getUpdateUserDisplayNameMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1555,6 +1656,7 @@ public final class UserServiceGrpc {
               .addMethod(getDeleteAPITokenMethod())
               .addMethod(getDeleteAPITokensMethod())
               .addMethod(getGetUserMethod())
+              .addMethod(getGetUserRedactedMethod())
               .addMethod(getUpdateUserDisplayNameMethod())
               .addMethod(getUpdateUserEmailMethod())
               .addMethod(getGetNotActivatedUsersMethod())
