@@ -12970,7 +12970,7 @@ public final class ProjectServiceProto {
       "age\\Services\\V2\342\002)Aruna\\Api\\Storage\\Serv" +
       "ices\\V2\\GPBMetadata\352\002!Aruna::Api::Storag" +
       "e::Services::V2\222A\324\001\0224\n#Aruna Object Stor" +
-      "age (AOS) REST API2\r2.0.0-alpha.6*\001\0022\020ap" +
+      "age (AOS) REST API2\r2.0.0-alpha.7*\001\0022\020ap" +
       "plication/json:\020application/jsonZ`\n^\n\rAc" +
       "cessKeyAuth\022M\010\002\0228Authentication token, p" +
       "refixed by Bearer: Bearer <token>\032\rAutho" +

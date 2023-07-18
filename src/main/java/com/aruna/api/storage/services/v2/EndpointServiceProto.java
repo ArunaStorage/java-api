@@ -2106,43 +2106,43 @@ public final class EndpointServiceProto {
 
   }
 
-  public interface OnboardEndpointRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.OnboardEndpointRequest)
+  public interface FullSyncEndpointRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.FullSyncEndpointRequest)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v2.OnboardEndpointRequest}
+   * Protobuf type {@code aruna.api.storage.services.v2.FullSyncEndpointRequest}
    */
-  public static final class OnboardEndpointRequest extends
+  public static final class FullSyncEndpointRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.OnboardEndpointRequest)
-      OnboardEndpointRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.FullSyncEndpointRequest)
+      FullSyncEndpointRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use OnboardEndpointRequest.newBuilder() to construct.
-    private OnboardEndpointRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use FullSyncEndpointRequest.newBuilder() to construct.
+    private FullSyncEndpointRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private OnboardEndpointRequest() {
+    private FullSyncEndpointRequest() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new OnboardEndpointRequest();
+      return new FullSyncEndpointRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_descriptor;
+      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_fieldAccessorTable
+      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.class, com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.Builder.class);
+              com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.class, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2178,10 +2178,10 @@ public final class EndpointServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest other = (com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest) obj;
+      com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest other = (com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2199,44 +2199,44 @@ public final class EndpointServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2244,26 +2244,26 @@ public final class EndpointServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2276,7 +2276,7 @@ public final class EndpointServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2292,26 +2292,26 @@ public final class EndpointServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v2.OnboardEndpointRequest}
+     * Protobuf type {@code aruna.api.storage.services.v2.FullSyncEndpointRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.OnboardEndpointRequest)
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.FullSyncEndpointRequest)
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_descriptor;
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_fieldAccessorTable
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.class, com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.Builder.class);
+                com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.class, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.newBuilder()
+      // Construct using com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.newBuilder()
       private Builder() {
 
       }
@@ -2330,17 +2330,17 @@ public final class EndpointServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_descriptor;
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.getDefaultInstance();
+      public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest build() {
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest result = buildPartial();
+      public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest build() {
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2348,24 +2348,24 @@ public final class EndpointServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest buildPartial() {
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest result = new com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest(this);
+      public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest buildPartial() {
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest result = new com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest(this);
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest) {
-          return mergeFrom((com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest)other);
+        if (other instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest other) {
-        if (other == com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest other) {
+        if (other == com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2420,23 +2420,23 @@ public final class EndpointServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.OnboardEndpointRequest)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.FullSyncEndpointRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.OnboardEndpointRequest)
-    private static final com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.FullSyncEndpointRequest)
+    private static final com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest();
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest getDefaultInstance() {
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<OnboardEndpointRequest>
-        PARSER = new com.google.protobuf.AbstractParser<OnboardEndpointRequest>() {
+    private static final com.google.protobuf.Parser<FullSyncEndpointRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FullSyncEndpointRequest>() {
       @java.lang.Override
-      public OnboardEndpointRequest parsePartialFrom(
+      public FullSyncEndpointRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2455,24 +2455,24 @@ public final class EndpointServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<OnboardEndpointRequest> parser() {
+    public static com.google.protobuf.Parser<FullSyncEndpointRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<OnboardEndpointRequest> getParserForType() {
+    public com.google.protobuf.Parser<FullSyncEndpointRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface OnboardEndpointResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.OnboardEndpointResponse)
+  public interface FullSyncEndpointResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.FullSyncEndpointResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2488,18 +2488,18 @@ public final class EndpointServiceProto {
         getUrlBytes();
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v2.OnboardEndpointResponse}
+   * Protobuf type {@code aruna.api.storage.services.v2.FullSyncEndpointResponse}
    */
-  public static final class OnboardEndpointResponse extends
+  public static final class FullSyncEndpointResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.OnboardEndpointResponse)
-      OnboardEndpointResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.FullSyncEndpointResponse)
+      FullSyncEndpointResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use OnboardEndpointResponse.newBuilder() to construct.
-    private OnboardEndpointResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use FullSyncEndpointResponse.newBuilder() to construct.
+    private FullSyncEndpointResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private OnboardEndpointResponse() {
+    private FullSyncEndpointResponse() {
       url_ = "";
     }
 
@@ -2507,20 +2507,20 @@ public final class EndpointServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new OnboardEndpointResponse();
+      return new FullSyncEndpointResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_descriptor;
+      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_fieldAccessorTable
+      return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.class, com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.Builder.class);
+              com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.class, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.Builder.class);
     }
 
     public static final int URL_FIELD_NUMBER = 1;
@@ -2601,10 +2601,10 @@ public final class EndpointServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse other = (com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse) obj;
+      com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse other = (com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse) obj;
 
       if (!getUrl()
           .equals(other.getUrl())) return false;
@@ -2626,44 +2626,44 @@ public final class EndpointServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2671,26 +2671,26 @@ public final class EndpointServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2703,7 +2703,7 @@ public final class EndpointServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2719,26 +2719,26 @@ public final class EndpointServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v2.OnboardEndpointResponse}
+     * Protobuf type {@code aruna.api.storage.services.v2.FullSyncEndpointResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.OnboardEndpointResponse)
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.FullSyncEndpointResponse)
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_descriptor;
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_fieldAccessorTable
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.class, com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.Builder.class);
+                com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.class, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.newBuilder()
+      // Construct using com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.newBuilder()
       private Builder() {
 
       }
@@ -2759,17 +2759,17 @@ public final class EndpointServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_descriptor;
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.getDefaultInstance();
+      public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse build() {
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse result = buildPartial();
+      public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse build() {
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2777,14 +2777,14 @@ public final class EndpointServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse buildPartial() {
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse result = new com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse(this);
+      public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse buildPartial() {
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse result = new com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse result) {
+      private void buildPartial0(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.url_ = url_;
@@ -2793,16 +2793,16 @@ public final class EndpointServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse) {
-          return mergeFrom((com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse)other);
+        if (other instanceof com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse other) {
-        if (other == com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse other) {
+        if (other == com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.getDefaultInstance()) return this;
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
           bitField0_ |= 0x00000001;
@@ -2940,23 +2940,23 @@ public final class EndpointServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.OnboardEndpointResponse)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.FullSyncEndpointResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.OnboardEndpointResponse)
-    private static final com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.FullSyncEndpointResponse)
+    private static final com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse();
     }
 
-    public static com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse getDefaultInstance() {
+    public static com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<OnboardEndpointResponse>
-        PARSER = new com.google.protobuf.AbstractParser<OnboardEndpointResponse>() {
+    private static final com.google.protobuf.Parser<FullSyncEndpointResponse>
+        PARSER = new com.google.protobuf.AbstractParser<FullSyncEndpointResponse>() {
       @java.lang.Override
-      public OnboardEndpointResponse parsePartialFrom(
+      public FullSyncEndpointResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2975,17 +2975,17 @@ public final class EndpointServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<OnboardEndpointResponse> parser() {
+    public static com.google.protobuf.Parser<FullSyncEndpointResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<OnboardEndpointResponse> getParserForType() {
+    public com.google.protobuf.Parser<FullSyncEndpointResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7704,15 +7704,15 @@ public final class EndpointServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_CreateEndpointResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_descriptor;
+    internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_descriptor;
+    internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_GetEndpointRequest_descriptor;
   private static final 
@@ -7774,53 +7774,53 @@ public final class EndpointServiceProto {
       "una.api.storage.models.v2.EndpointHostCo" +
       "nfigR\013hostConfigs\"[\n\026CreateEndpointRespo" +
       "nse\022A\n\010endpoint\030\001 \001(\0132%.aruna.api.storag" +
-      "e.models.v2.EndpointR\010endpoint\"\030\n\026Onboar" +
-      "dEndpointRequest\"+\n\027OnboardEndpointRespo" +
-      "nse\022\020\n\003url\030\001 \001(\tR\003url\"j\n\022GetEndpointRequ" +
-      "est\022%\n\rendpoint_name\030\001 \001(\tH\000R\014endpointNa" +
-      "me\022!\n\013endpoint_id\030\002 \001(\tH\000R\nendpointIdB\n\n" +
-      "\010endpoint\"X\n\023GetEndpointResponse\022A\n\010endp" +
-      "oint\030\001 \001(\0132%.aruna.api.storage.models.v2" +
-      ".EndpointR\010endpoint\"\025\n\023GetEndpointsReque" +
-      "st\"[\n\024GetEndpointsResponse\022C\n\tendpoints\030" +
-      "\001 \003(\0132%.aruna.api.storage.models.v2.Endp" +
-      "ointR\tendpoints\"8\n\025DeleteEndpointRequest" +
-      "\022\037\n\013endpoint_id\030\001 \001(\tR\nendpointId\"\030\n\026Del" +
-      "eteEndpointResponse\"\033\n\031GetDefaultEndpoin" +
-      "tRequest\"_\n\032GetDefaultEndpointResponse\022A" +
-      "\n\010endpoint\030\001 \001(\0132%.aruna.api.storage.mod" +
-      "els.v2.EndpointR\010endpoint2\267\007\n\017EndpointSe" +
-      "rvice\022\226\001\n\016CreateEndpoint\0224.aruna.api.sto" +
-      "rage.services.v2.CreateEndpointRequest\0325" +
-      ".aruna.api.storage.services.v2.CreateEnd" +
-      "pointResponse\"\027\202\323\344\223\002\021\"\014/v2/endpoint:\001*\022\236" +
-      "\001\n\017OnboardEndpoint\0225.aruna.api.storage.s" +
-      "ervices.v2.OnboardEndpointRequest\0326.arun" +
-      "a.api.storage.services.v2.OnboardEndpoin" +
-      "tResponse\"\034\202\323\344\223\002\026\022\024/v2/endpoint/onboard\022" +
-      "\212\001\n\013GetEndpoint\0221.aruna.api.storage.serv" +
-      "ices.v2.GetEndpointRequest\0322.aruna.api.s" +
-      "torage.services.v2.GetEndpointResponse\"\024" +
-      "\202\323\344\223\002\016\022\014/v2/endpoint\022\216\001\n\014GetEndpoints\0222." +
-      "aruna.api.storage.services.v2.GetEndpoin" +
-      "tsRequest\0323.aruna.api.storage.services.v" +
-      "2.GetEndpointsResponse\"\025\202\323\344\223\002\017\022\r/v2/endp" +
-      "oints\022\241\001\n\016DeleteEndpoint\0224.aruna.api.sto" +
-      "rage.services.v2.DeleteEndpointRequest\0325" +
-      ".aruna.api.storage.services.v2.DeleteEnd" +
-      "pointResponse\"\"\202\323\344\223\002\034*\032/v2/endpoint/{end" +
-      "point_id}\022\247\001\n\022GetDefaultEndpoint\0228.aruna" +
-      ".api.storage.services.v2.GetDefaultEndpo" +
-      "intRequest\0329.aruna.api.storage.services." +
-      "v2.GetDefaultEndpointResponse\"\034\202\323\344\223\002\026\022\024/" +
-      "v2/endpoint/defaultB\220\002\n!com.aruna.api.st" +
-      "orage.services.v2B\024EndpointServiceProtoP" +
-      "\000Z<github.com/ArunaStorage/go-api/aruna/" +
-      "api/storage/services/v2\242\002\004AASS\252\002\035Aruna.A" +
-      "pi.Storage.Services.V2\312\002\035Aruna\\Api\\Stora" +
-      "ge\\Services\\V2\342\002)Aruna\\Api\\Storage\\Servi" +
-      "ces\\V2\\GPBMetadata\352\002!Aruna::Api::Storage" +
-      "::Services::V2b\006proto3"
+      "e.models.v2.EndpointR\010endpoint\"\031\n\027FullSy" +
+      "ncEndpointRequest\",\n\030FullSyncEndpointRes" +
+      "ponse\022\020\n\003url\030\001 \001(\tR\003url\"j\n\022GetEndpointRe" +
+      "quest\022%\n\rendpoint_name\030\001 \001(\tH\000R\014endpoint" +
+      "Name\022!\n\013endpoint_id\030\002 \001(\tH\000R\nendpointIdB" +
+      "\n\n\010endpoint\"X\n\023GetEndpointResponse\022A\n\010en" +
+      "dpoint\030\001 \001(\0132%.aruna.api.storage.models." +
+      "v2.EndpointR\010endpoint\"\025\n\023GetEndpointsReq" +
+      "uest\"[\n\024GetEndpointsResponse\022C\n\tendpoint" +
+      "s\030\001 \003(\0132%.aruna.api.storage.models.v2.En" +
+      "dpointR\tendpoints\"8\n\025DeleteEndpointReque" +
+      "st\022\037\n\013endpoint_id\030\001 \001(\tR\nendpointId\"\030\n\026D" +
+      "eleteEndpointResponse\"\033\n\031GetDefaultEndpo" +
+      "intRequest\"_\n\032GetDefaultEndpointResponse" +
+      "\022A\n\010endpoint\030\001 \001(\0132%.aruna.api.storage.m" +
+      "odels.v2.EndpointR\010endpoint2\267\007\n\017Endpoint" +
+      "Service\022\226\001\n\016CreateEndpoint\0224.aruna.api.s" +
+      "torage.services.v2.CreateEndpointRequest" +
+      "\0325.aruna.api.storage.services.v2.CreateE" +
+      "ndpointResponse\"\027\202\323\344\223\002\021\"\014/v2/endpoint:\001*" +
+      "\022\236\001\n\020FullSyncEndpoint\0226.aruna.api.storag" +
+      "e.services.v2.FullSyncEndpointRequest\0327." +
+      "aruna.api.storage.services.v2.FullSyncEn" +
+      "dpointResponse\"\031\202\323\344\223\002\023\022\021/v2/endpoint/syn" +
+      "c\022\212\001\n\013GetEndpoint\0221.aruna.api.storage.se" +
+      "rvices.v2.GetEndpointRequest\0322.aruna.api" +
+      ".storage.services.v2.GetEndpointResponse" +
+      "\"\024\202\323\344\223\002\016\022\014/v2/endpoint\022\216\001\n\014GetEndpoints\022" +
+      "2.aruna.api.storage.services.v2.GetEndpo" +
+      "intsRequest\0323.aruna.api.storage.services" +
+      ".v2.GetEndpointsResponse\"\025\202\323\344\223\002\017\022\r/v2/en" +
+      "dpoints\022\241\001\n\016DeleteEndpoint\0224.aruna.api.s" +
+      "torage.services.v2.DeleteEndpointRequest" +
+      "\0325.aruna.api.storage.services.v2.DeleteE" +
+      "ndpointResponse\"\"\202\323\344\223\002\034*\032/v2/endpoint/{e" +
+      "ndpoint_id}\022\247\001\n\022GetDefaultEndpoint\0228.aru" +
+      "na.api.storage.services.v2.GetDefaultEnd" +
+      "pointRequest\0329.aruna.api.storage.service" +
+      "s.v2.GetDefaultEndpointResponse\"\034\202\323\344\223\002\026\022" +
+      "\024/v2/endpoint/defaultB\220\002\n!com.aruna.api." +
+      "storage.services.v2B\024EndpointServiceProt" +
+      "oP\000Z<github.com/ArunaStorage/go-api/arun" +
+      "a/api/storage/services/v2\242\002\004AASS\252\002\035Aruna" +
+      ".Api.Storage.Services.V2\312\002\035Aruna\\Api\\Sto" +
+      "rage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Ser" +
+      "vices\\V2\\GPBMetadata\352\002!Aruna::Api::Stora" +
+      "ge::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7840,17 +7840,17 @@ public final class EndpointServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateEndpointResponse_descriptor,
         new java.lang.String[] { "Endpoint", });
-    internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_descriptor =
+    internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_OnboardEndpointRequest_descriptor,
+        internal_static_aruna_api_storage_services_v2_FullSyncEndpointRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_descriptor =
+    internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_OnboardEndpointResponse_descriptor,
+        internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_aruna_api_storage_services_v2_GetEndpointRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);

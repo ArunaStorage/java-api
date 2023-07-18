@@ -50,35 +50,35 @@ public final class EndpointServiceGrpc {
     return getCreateEndpointMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest,
-      com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse> getOnboardEndpointMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest,
+      com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> getFullSyncEndpointMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "OnboardEndpoint",
-      requestType = com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.class,
-      responseType = com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "FullSyncEndpoint",
+      requestType = com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.class,
+      responseType = com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest,
-      com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse> getOnboardEndpointMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest, com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse> getOnboardEndpointMethod;
-    if ((getOnboardEndpointMethod = EndpointServiceGrpc.getOnboardEndpointMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest,
+      com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> getFullSyncEndpointMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> getFullSyncEndpointMethod;
+    if ((getFullSyncEndpointMethod = EndpointServiceGrpc.getFullSyncEndpointMethod) == null) {
       synchronized (EndpointServiceGrpc.class) {
-        if ((getOnboardEndpointMethod = EndpointServiceGrpc.getOnboardEndpointMethod) == null) {
-          EndpointServiceGrpc.getOnboardEndpointMethod = getOnboardEndpointMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest, com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse>newBuilder()
+        if ((getFullSyncEndpointMethod = EndpointServiceGrpc.getFullSyncEndpointMethod) == null) {
+          EndpointServiceGrpc.getFullSyncEndpointMethod = getFullSyncEndpointMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "OnboardEndpoint"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FullSyncEndpoint"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest.getDefaultInstance()))
+                  com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EndpointServiceMethodDescriptorSupplier("OnboardEndpoint"))
+                  com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EndpointServiceMethodDescriptorSupplier("FullSyncEndpoint"))
               .build();
         }
       }
     }
-    return getOnboardEndpointMethod;
+    return getFullSyncEndpointMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.GetEndpointRequest,
@@ -272,15 +272,14 @@ public final class EndpointServiceGrpc {
 
     /**
      * <pre>
-     * OnboardEndpoint
+     * FullSyncEndpoint
      * Status: BETA
-     * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * Requests a full sync of all endpoint related data
      * </pre>
      */
-    default void onboardEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOnboardEndpointMethod(), responseObserver);
+    default void fullSyncEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFullSyncEndpointMethod(), responseObserver);
     }
 
     /**
@@ -386,16 +385,15 @@ public final class EndpointServiceGrpc {
 
     /**
      * <pre>
-     * OnboardEndpoint
+     * FullSyncEndpoint
      * Status: BETA
-     * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * Requests a full sync of all endpoint related data
      * </pre>
      */
-    public void onboardEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse> responseObserver) {
+    public void fullSyncEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getOnboardEndpointMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getFullSyncEndpointMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -489,15 +487,14 @@ public final class EndpointServiceGrpc {
 
     /**
      * <pre>
-     * OnboardEndpoint
+     * FullSyncEndpoint
      * Status: BETA
-     * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * Requests a full sync of all endpoint related data
      * </pre>
      */
-    public com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse onboardEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest request) {
+    public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse fullSyncEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getOnboardEndpointMethod(), getCallOptions(), request);
+          getChannel(), getFullSyncEndpointMethod(), getCallOptions(), request);
     }
 
     /**
@@ -588,16 +585,15 @@ public final class EndpointServiceGrpc {
 
     /**
      * <pre>
-     * OnboardEndpoint
+     * FullSyncEndpoint
      * Status: BETA
-     * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * Requests a full sync of all endpoint related data
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse> onboardEndpoint(
-        com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> fullSyncEndpoint(
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getOnboardEndpointMethod(), getCallOptions()), request);
+          getChannel().newCall(getFullSyncEndpointMethod(), getCallOptions()), request);
     }
 
     /**
@@ -657,7 +653,7 @@ public final class EndpointServiceGrpc {
   }
 
   private static final int METHODID_CREATE_ENDPOINT = 0;
-  private static final int METHODID_ONBOARD_ENDPOINT = 1;
+  private static final int METHODID_FULL_SYNC_ENDPOINT = 1;
   private static final int METHODID_GET_ENDPOINT = 2;
   private static final int METHODID_GET_ENDPOINTS = 3;
   private static final int METHODID_DELETE_ENDPOINT = 4;
@@ -684,9 +680,9 @@ public final class EndpointServiceGrpc {
           serviceImpl.createEndpoint((com.aruna.api.storage.services.v2.EndpointServiceProto.CreateEndpointRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.CreateEndpointResponse>) responseObserver);
           break;
-        case METHODID_ONBOARD_ENDPOINT:
-          serviceImpl.onboardEndpoint((com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse>) responseObserver);
+        case METHODID_FULL_SYNC_ENDPOINT:
+          serviceImpl.fullSyncEndpoint((com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse>) responseObserver);
           break;
         case METHODID_GET_ENDPOINT:
           serviceImpl.getEndpoint((com.aruna.api.storage.services.v2.EndpointServiceProto.GetEndpointRequest) request,
@@ -730,12 +726,12 @@ public final class EndpointServiceGrpc {
               com.aruna.api.storage.services.v2.EndpointServiceProto.CreateEndpointResponse>(
                 service, METHODID_CREATE_ENDPOINT)))
         .addMethod(
-          getOnboardEndpointMethod(),
+          getFullSyncEndpointMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointRequest,
-              com.aruna.api.storage.services.v2.EndpointServiceProto.OnboardEndpointResponse>(
-                service, METHODID_ONBOARD_ENDPOINT)))
+              com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest,
+              com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse>(
+                service, METHODID_FULL_SYNC_ENDPOINT)))
         .addMethod(
           getGetEndpointMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -813,7 +809,7 @@ public final class EndpointServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new EndpointServiceFileDescriptorSupplier())
               .addMethod(getCreateEndpointMethod())
-              .addMethod(getOnboardEndpointMethod())
+              .addMethod(getFullSyncEndpointMethod())
               .addMethod(getGetEndpointMethod())
               .addMethod(getGetEndpointsMethod())
               .addMethod(getDeleteEndpointMethod())
