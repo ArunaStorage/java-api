@@ -269,6 +269,68 @@ public final class ServiceAccountServiceGrpc {
     return getDeleteServiceAccountMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest,
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse> getGetS3CredentialsSvcAccountMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetS3CredentialsSvcAccount",
+      requestType = com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.class,
+      responseType = com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest,
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse> getGetS3CredentialsSvcAccountMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse> getGetS3CredentialsSvcAccountMethod;
+    if ((getGetS3CredentialsSvcAccountMethod = ServiceAccountServiceGrpc.getGetS3CredentialsSvcAccountMethod) == null) {
+      synchronized (ServiceAccountServiceGrpc.class) {
+        if ((getGetS3CredentialsSvcAccountMethod = ServiceAccountServiceGrpc.getGetS3CredentialsSvcAccountMethod) == null) {
+          ServiceAccountServiceGrpc.getGetS3CredentialsSvcAccountMethod = getGetS3CredentialsSvcAccountMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetS3CredentialsSvcAccount"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceAccountServiceMethodDescriptorSupplier("GetS3CredentialsSvcAccount"))
+              .build();
+        }
+      }
+    }
+    return getGetS3CredentialsSvcAccountMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest,
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse> getGetDataproxyTokenSvcAccountMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDataproxyTokenSvcAccount",
+      requestType = com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.class,
+      responseType = com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest,
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse> getGetDataproxyTokenSvcAccountMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse> getGetDataproxyTokenSvcAccountMethod;
+    if ((getGetDataproxyTokenSvcAccountMethod = ServiceAccountServiceGrpc.getGetDataproxyTokenSvcAccountMethod) == null) {
+      synchronized (ServiceAccountServiceGrpc.class) {
+        if ((getGetDataproxyTokenSvcAccountMethod = ServiceAccountServiceGrpc.getGetDataproxyTokenSvcAccountMethod) == null) {
+          ServiceAccountServiceGrpc.getGetDataproxyTokenSvcAccountMethod = getGetDataproxyTokenSvcAccountMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDataproxyTokenSvcAccount"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceAccountServiceMethodDescriptorSupplier("GetDataproxyTokenSvcAccount"))
+              .build();
+        }
+      }
+    }
+    return getGetDataproxyTokenSvcAccountMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -425,6 +487,30 @@ public final class ServiceAccountServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteServiceAccountMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetS3Credentials
+     * Status: ALPHA
+     * Gets s3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    default void getS3CredentialsSvcAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetS3CredentialsSvcAccountMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    default void getDataproxyTokenSvcAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataproxyTokenSvcAccountMethod(), responseObserver);
+    }
   }
 
   /**
@@ -576,6 +662,32 @@ public final class ServiceAccountServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteServiceAccountMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetS3Credentials
+     * Status: ALPHA
+     * Gets s3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    public void getS3CredentialsSvcAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetS3CredentialsSvcAccountMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    public void getDataproxyTokenSvcAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDataproxyTokenSvcAccountMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -701,6 +813,30 @@ public final class ServiceAccountServiceGrpc {
     public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountResponse deleteServiceAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteServiceAccountMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetS3Credentials
+     * Status: ALPHA
+     * Gets s3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse getS3CredentialsSvcAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetS3CredentialsSvcAccountMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse getDataproxyTokenSvcAccount(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDataproxyTokenSvcAccountMethod(), getCallOptions(), request);
     }
   }
 
@@ -836,6 +972,32 @@ public final class ServiceAccountServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteServiceAccountMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetS3Credentials
+     * Status: ALPHA
+     * Gets s3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse> getS3CredentialsSvcAccount(
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetS3CredentialsSvcAccountMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse> getDataproxyTokenSvcAccount(
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDataproxyTokenSvcAccountMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SERVICE_ACCOUNT = 0;
@@ -846,6 +1008,8 @@ public final class ServiceAccountServiceGrpc {
   private static final int METHODID_DELETE_SERVICE_ACCOUNT_TOKEN = 5;
   private static final int METHODID_DELETE_SERVICE_ACCOUNT_TOKENS = 6;
   private static final int METHODID_DELETE_SERVICE_ACCOUNT = 7;
+  private static final int METHODID_GET_S3CREDENTIALS_SVC_ACCOUNT = 8;
+  private static final int METHODID_GET_DATAPROXY_TOKEN_SVC_ACCOUNT = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -895,6 +1059,14 @@ public final class ServiceAccountServiceGrpc {
         case METHODID_DELETE_SERVICE_ACCOUNT:
           serviceImpl.deleteServiceAccount((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountResponse>) responseObserver);
+          break;
+        case METHODID_GET_S3CREDENTIALS_SVC_ACCOUNT:
+          serviceImpl.getS3CredentialsSvcAccount((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse>) responseObserver);
+          break;
+        case METHODID_GET_DATAPROXY_TOKEN_SVC_ACCOUNT:
+          serviceImpl.getDataproxyTokenSvcAccount((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -970,6 +1142,20 @@ public final class ServiceAccountServiceGrpc {
               com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountRequest,
               com.aruna.api.storage.services.v2.ServiceAccountServiceProto.DeleteServiceAccountResponse>(
                 service, METHODID_DELETE_SERVICE_ACCOUNT)))
+        .addMethod(
+          getGetS3CredentialsSvcAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest,
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse>(
+                service, METHODID_GET_S3CREDENTIALS_SVC_ACCOUNT)))
+        .addMethod(
+          getGetDataproxyTokenSvcAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest,
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse>(
+                service, METHODID_GET_DATAPROXY_TOKEN_SVC_ACCOUNT)))
         .build();
   }
 
@@ -1026,6 +1212,8 @@ public final class ServiceAccountServiceGrpc {
               .addMethod(getDeleteServiceAccountTokenMethod())
               .addMethod(getDeleteServiceAccountTokensMethod())
               .addMethod(getDeleteServiceAccountMethod())
+              .addMethod(getGetS3CredentialsSvcAccountMethod())
+              .addMethod(getGetDataproxyTokenSvcAccountMethod())
               .build();
         }
       }

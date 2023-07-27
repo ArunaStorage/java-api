@@ -143,35 +143,35 @@ public final class EventNotificationServiceGrpc {
     return getAcknowledgeMessageBatchMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest,
-      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse> getDeleteEventStreamingGroupMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest,
+      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse> getDeleteStreamConsumerMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteEventStreamingGroup",
-      requestType = com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.class,
-      responseType = com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "DeleteStreamConsumer",
+      requestType = com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.class,
+      responseType = com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest,
-      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse> getDeleteEventStreamingGroupMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse> getDeleteEventStreamingGroupMethod;
-    if ((getDeleteEventStreamingGroupMethod = EventNotificationServiceGrpc.getDeleteEventStreamingGroupMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest,
+      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse> getDeleteStreamConsumerMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse> getDeleteStreamConsumerMethod;
+    if ((getDeleteStreamConsumerMethod = EventNotificationServiceGrpc.getDeleteStreamConsumerMethod) == null) {
       synchronized (EventNotificationServiceGrpc.class) {
-        if ((getDeleteEventStreamingGroupMethod = EventNotificationServiceGrpc.getDeleteEventStreamingGroupMethod) == null) {
-          EventNotificationServiceGrpc.getDeleteEventStreamingGroupMethod = getDeleteEventStreamingGroupMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse>newBuilder()
+        if ((getDeleteStreamConsumerMethod = EventNotificationServiceGrpc.getDeleteStreamConsumerMethod) == null) {
+          EventNotificationServiceGrpc.getDeleteStreamConsumerMethod = getDeleteStreamConsumerMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteEventStreamingGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteStreamConsumer"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.getDefaultInstance()))
+                  com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EventNotificationServiceMethodDescriptorSupplier("DeleteEventStreamingGroup"))
+                  com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EventNotificationServiceMethodDescriptorSupplier("DeleteStreamConsumer"))
               .build();
         }
       }
     }
-    return getDeleteEventStreamingGroupMethod;
+    return getDeleteStreamConsumerMethod;
   }
 
   /**
@@ -228,8 +228,8 @@ public final class EventNotificationServiceGrpc {
 
     /**
      * <pre>
-     * CreateEventStreamingGroup
-     * Creates a new EventStreamingGroup
+     * CreateStreamConsumer
+     * Creates a new event stream consumer.
      * </pre>
      */
     default void createStreamConsumer(com.aruna.api.notification.services.v2.NotificationServiceProto.CreateStreamConsumerRequest request,
@@ -278,12 +278,12 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
-     * Deletes a existing EventStreamingGroup by ID
+     * Deletes an existing event stream consumer by ID.
      * </pre>
      */
-    default void deleteEventStreamingGroup(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEventStreamingGroupMethod(), responseObserver);
+    default void deleteStreamConsumer(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteStreamConsumerMethod(), responseObserver);
     }
   }
 
@@ -324,8 +324,8 @@ public final class EventNotificationServiceGrpc {
 
     /**
      * <pre>
-     * CreateEventStreamingGroup
-     * Creates a new EventStreamingGroup
+     * CreateStreamConsumer
+     * Creates a new event stream consumer.
      * </pre>
      */
     public void createStreamConsumer(com.aruna.api.notification.services.v2.NotificationServiceProto.CreateStreamConsumerRequest request,
@@ -378,13 +378,13 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
-     * Deletes a existing EventStreamingGroup by ID
+     * Deletes an existing event stream consumer by ID.
      * </pre>
      */
-    public void deleteEventStreamingGroup(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse> responseObserver) {
+    public void deleteStreamConsumer(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteEventStreamingGroupMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteStreamConsumerMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -410,8 +410,8 @@ public final class EventNotificationServiceGrpc {
 
     /**
      * <pre>
-     * CreateEventStreamingGroup
-     * Creates a new EventStreamingGroup
+     * CreateStreamConsumer
+     * Creates a new event stream consumer.
      * </pre>
      */
     public com.aruna.api.notification.services.v2.NotificationServiceProto.CreateStreamConsumerResponse createStreamConsumer(com.aruna.api.notification.services.v2.NotificationServiceProto.CreateStreamConsumerRequest request) {
@@ -461,12 +461,12 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
-     * Deletes a existing EventStreamingGroup by ID
+     * Deletes an existing event stream consumer by ID.
      * </pre>
      */
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse deleteEventStreamingGroup(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest request) {
+    public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse deleteStreamConsumer(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteEventStreamingGroupMethod(), getCallOptions(), request);
+          getChannel(), getDeleteStreamConsumerMethod(), getCallOptions(), request);
     }
   }
 
@@ -492,8 +492,8 @@ public final class EventNotificationServiceGrpc {
 
     /**
      * <pre>
-     * CreateEventStreamingGroup
-     * Creates a new EventStreamingGroup
+     * CreateStreamConsumer
+     * Creates a new event stream consumer.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.notification.services.v2.NotificationServiceProto.CreateStreamConsumerResponse> createStreamConsumer(
@@ -532,13 +532,13 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
-     * Deletes a existing EventStreamingGroup by ID
+     * Deletes an existing event stream consumer by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse> deleteEventStreamingGroup(
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse> deleteStreamConsumer(
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteEventStreamingGroupMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteStreamConsumerMethod(), getCallOptions()), request);
     }
   }
 
@@ -546,7 +546,7 @@ public final class EventNotificationServiceGrpc {
   private static final int METHODID_GET_EVENT_MESSAGE_BATCH = 1;
   private static final int METHODID_GET_EVENT_MESSAGE_BATCH_STREAM = 2;
   private static final int METHODID_ACKNOWLEDGE_MESSAGE_BATCH = 3;
-  private static final int METHODID_DELETE_EVENT_STREAMING_GROUP = 4;
+  private static final int METHODID_DELETE_STREAM_CONSUMER = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -581,9 +581,9 @@ public final class EventNotificationServiceGrpc {
           serviceImpl.acknowledgeMessageBatch((com.aruna.api.notification.services.v2.NotificationServiceProto.AcknowledgeMessageBatchRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.AcknowledgeMessageBatchResponse>) responseObserver);
           break;
-        case METHODID_DELETE_EVENT_STREAMING_GROUP:
-          serviceImpl.deleteEventStreamingGroup((com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse>) responseObserver);
+        case METHODID_DELETE_STREAM_CONSUMER:
+          serviceImpl.deleteStreamConsumer((com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -632,12 +632,12 @@ public final class EventNotificationServiceGrpc {
               com.aruna.api.notification.services.v2.NotificationServiceProto.AcknowledgeMessageBatchResponse>(
                 service, METHODID_ACKNOWLEDGE_MESSAGE_BATCH)))
         .addMethod(
-          getDeleteEventStreamingGroupMethod(),
+          getDeleteStreamConsumerMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest,
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse>(
-                service, METHODID_DELETE_EVENT_STREAMING_GROUP)))
+              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest,
+              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse>(
+                service, METHODID_DELETE_STREAM_CONSUMER)))
         .build();
   }
 
@@ -690,7 +690,7 @@ public final class EventNotificationServiceGrpc {
               .addMethod(getGetEventMessageBatchMethod())
               .addMethod(getGetEventMessageBatchStreamMethod())
               .addMethod(getAcknowledgeMessageBatchMethod())
-              .addMethod(getDeleteEventStreamingGroupMethod())
+              .addMethod(getDeleteStreamConsumerMethod())
               .build();
         }
       }

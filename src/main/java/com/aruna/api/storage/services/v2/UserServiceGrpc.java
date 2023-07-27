@@ -454,35 +454,66 @@ public final class UserServiceGrpc {
     return getGetAllUsersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest,
-      com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> getMergeUserAccountMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse> getGetS3CredentialsUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "MergeUserAccount",
-      requestType = com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.class,
-      responseType = com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetS3CredentialsUser",
+      requestType = com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest,
-      com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> getMergeUserAccountMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> getMergeUserAccountMethod;
-    if ((getMergeUserAccountMethod = UserServiceGrpc.getMergeUserAccountMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse> getGetS3CredentialsUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse> getGetS3CredentialsUserMethod;
+    if ((getGetS3CredentialsUserMethod = UserServiceGrpc.getGetS3CredentialsUserMethod) == null) {
       synchronized (UserServiceGrpc.class) {
-        if ((getMergeUserAccountMethod = UserServiceGrpc.getMergeUserAccountMethod) == null) {
-          UserServiceGrpc.getMergeUserAccountMethod = getMergeUserAccountMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest, com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse>newBuilder()
+        if ((getGetS3CredentialsUserMethod = UserServiceGrpc.getGetS3CredentialsUserMethod) == null) {
+          UserServiceGrpc.getGetS3CredentialsUserMethod = getGetS3CredentialsUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MergeUserAccount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetS3CredentialsUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest.getDefaultInstance()))
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("MergeUserAccount"))
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetS3CredentialsUser"))
               .build();
         }
       }
     }
-    return getMergeUserAccountMethod;
+    return getGetS3CredentialsUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> getGetDataproxyTokenUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDataproxyTokenUser",
+      requestType = com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> getGetDataproxyTokenUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> getGetDataproxyTokenUserMethod;
+    if ((getGetDataproxyTokenUserMethod = UserServiceGrpc.getGetDataproxyTokenUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getGetDataproxyTokenUserMethod = UserServiceGrpc.getGetDataproxyTokenUserMethod) == null) {
+          UserServiceGrpc.getGetDataproxyTokenUserMethod = getGetDataproxyTokenUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDataproxyTokenUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetDataproxyTokenUser"))
+              .build();
+        }
+      }
+    }
+    return getGetDataproxyTokenUserMethod;
   }
 
   /**
@@ -711,14 +742,26 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * MergeUserAccount
+     * GetS3Credentials
      * Status: ALPHA
-     * Get all users including permissions (Admin only)
+     * Gets s3 credentials for a specific user and data_proxy
      * </pre>
      */
-    default void mergeUserAccount(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMergeUserAccountMethod(), responseObserver);
+    default void getS3CredentialsUser(com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetS3CredentialsUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    default void getDataproxyTokenUser(com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataproxyTokenUserMethod(), responseObserver);
     }
   }
 
@@ -946,15 +989,28 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * MergeUserAccount
+     * GetS3Credentials
      * Status: ALPHA
-     * Get all users including permissions (Admin only)
+     * Gets s3 credentials for a specific user and data_proxy
      * </pre>
      */
-    public void mergeUserAccount(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> responseObserver) {
+    public void getS3CredentialsUser(com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getMergeUserAccountMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetS3CredentialsUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    public void getDataproxyTokenUser(com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDataproxyTokenUserMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1152,14 +1208,26 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * MergeUserAccount
+     * GetS3Credentials
      * Status: ALPHA
-     * Get all users including permissions (Admin only)
+     * Gets s3 credentials for a specific user and data_proxy
      * </pre>
      */
-    public com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse mergeUserAccount(com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request) {
+    public com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse getS3CredentialsUser(com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getMergeUserAccountMethod(), getCallOptions(), request);
+          getChannel(), getGetS3CredentialsUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse getDataproxyTokenUser(com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDataproxyTokenUserMethod(), getCallOptions(), request);
     }
   }
 
@@ -1371,15 +1439,28 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * MergeUserAccount
+     * GetS3Credentials
      * Status: ALPHA
-     * Get all users including permissions (Admin only)
+     * Gets s3 credentials for a specific user and data_proxy
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse> mergeUserAccount(
-        com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse> getS3CredentialsUser(
+        com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getMergeUserAccountMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetS3CredentialsUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetDataproxyToken
+     * Status: ALPHA
+     * Gets token for a specific user and data_proxy
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> getDataproxyTokenUser(
+        com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDataproxyTokenUserMethod(), getCallOptions()), request);
     }
   }
 
@@ -1397,7 +1478,8 @@ public final class UserServiceGrpc {
   private static final int METHODID_UPDATE_USER_EMAIL = 11;
   private static final int METHODID_GET_NOT_ACTIVATED_USERS = 12;
   private static final int METHODID_GET_ALL_USERS = 13;
-  private static final int METHODID_MERGE_USER_ACCOUNT = 14;
+  private static final int METHODID_GET_S3CREDENTIALS_USER = 14;
+  private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1472,9 +1554,13 @@ public final class UserServiceGrpc {
           serviceImpl.getAllUsers((com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersResponse>) responseObserver);
           break;
-        case METHODID_MERGE_USER_ACCOUNT:
-          serviceImpl.mergeUserAccount((com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse>) responseObserver);
+        case METHODID_GET_S3CREDENTIALS_USER:
+          serviceImpl.getS3CredentialsUser((com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse>) responseObserver);
+          break;
+        case METHODID_GET_DATAPROXY_TOKEN_USER:
+          serviceImpl.getDataproxyTokenUser((com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1593,12 +1679,19 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.UserServiceProto.GetAllUsersResponse>(
                 service, METHODID_GET_ALL_USERS)))
         .addMethod(
-          getMergeUserAccountMethod(),
+          getGetS3CredentialsUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountRequest,
-              com.aruna.api.storage.services.v2.UserServiceProto.MergeUserAccountResponse>(
-                service, METHODID_MERGE_USER_ACCOUNT)))
+              com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserRequest,
+              com.aruna.api.storage.services.v2.UserServiceProto.GetS3CredentialsUserResponse>(
+                service, METHODID_GET_S3CREDENTIALS_USER)))
+        .addMethod(
+          getGetDataproxyTokenUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest,
+              com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse>(
+                service, METHODID_GET_DATAPROXY_TOKEN_USER)))
         .build();
   }
 
@@ -1661,7 +1754,8 @@ public final class UserServiceGrpc {
               .addMethod(getUpdateUserEmailMethod())
               .addMethod(getGetNotActivatedUsersMethod())
               .addMethod(getGetAllUsersMethod())
-              .addMethod(getMergeUserAccountMethod())
+              .addMethod(getGetS3CredentialsUserMethod())
+              .addMethod(getGetDataproxyTokenUserMethod())
               .build();
         }
       }

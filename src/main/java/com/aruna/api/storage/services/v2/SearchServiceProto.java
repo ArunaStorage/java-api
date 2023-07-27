@@ -43,7 +43,13 @@ public final class SearchServiceProto {
         getFilterBytes();
 
     /**
-     * <code>int64 offset = 3 [json_name = "offset"];</code>
+     * <code>int64 limit = 3 [json_name = "limit"];</code>
+     * @return The limit.
+     */
+    long getLimit();
+
+    /**
+     * <code>int64 offset = 4 [json_name = "offset"];</code>
      * @return The offset.
      */
     long getOffset();
@@ -163,10 +169,21 @@ public final class SearchServiceProto {
       }
     }
 
-    public static final int OFFSET_FIELD_NUMBER = 3;
+    public static final int LIMIT_FIELD_NUMBER = 3;
+    private long limit_ = 0L;
+    /**
+     * <code>int64 limit = 3 [json_name = "limit"];</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public long getLimit() {
+      return limit_;
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 4;
     private long offset_ = 0L;
     /**
-     * <code>int64 offset = 3 [json_name = "offset"];</code>
+     * <code>int64 offset = 4 [json_name = "offset"];</code>
      * @return The offset.
      */
     @java.lang.Override
@@ -194,8 +211,11 @@ public final class SearchServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
+      if (limit_ != 0L) {
+        output.writeInt64(3, limit_);
+      }
       if (offset_ != 0L) {
-        output.writeInt64(3, offset_);
+        output.writeInt64(4, offset_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -212,9 +232,13 @@ public final class SearchServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
       }
+      if (limit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, limit_);
+      }
       if (offset_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, offset_);
+          .computeInt64Size(4, offset_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -235,6 +259,8 @@ public final class SearchServiceProto {
           .equals(other.getQuery())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
       if (getOffset()
           != other.getOffset()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -252,6 +278,9 @@ public final class SearchServiceProto {
       hash = (53 * hash) + getQuery().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLimit());
       hash = (37 * hash) + OFFSET_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getOffset());
@@ -388,6 +417,7 @@ public final class SearchServiceProto {
         bitField0_ = 0;
         query_ = "";
         filter_ = "";
+        limit_ = 0L;
         offset_ = 0L;
         return this;
       }
@@ -429,6 +459,9 @@ public final class SearchServiceProto {
           result.filter_ = filter_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.limit_ = limit_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.offset_ = offset_;
         }
       }
@@ -454,6 +487,9 @@ public final class SearchServiceProto {
           filter_ = other.filter_;
           bitField0_ |= 0x00000002;
           onChanged();
+        }
+        if (other.getLimit() != 0L) {
+          setLimit(other.getLimit());
         }
         if (other.getOffset() != 0L) {
           setOffset(other.getOffset());
@@ -495,10 +531,15 @@ public final class SearchServiceProto {
                 break;
               } // case 18
               case 24: {
-                offset_ = input.readInt64();
+                limit_ = input.readInt64();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
+              case 32: {
+                offset_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -660,9 +701,41 @@ public final class SearchServiceProto {
         return this;
       }
 
+      private long limit_ ;
+      /**
+       * <code>int64 limit = 3 [json_name = "limit"];</code>
+       * @return The limit.
+       */
+      @java.lang.Override
+      public long getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>int64 limit = 3 [json_name = "limit"];</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+
+        limit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 limit = 3 [json_name = "limit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        limit_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private long offset_ ;
       /**
-       * <code>int64 offset = 3 [json_name = "offset"];</code>
+       * <code>int64 offset = 4 [json_name = "offset"];</code>
        * @return The offset.
        */
       @java.lang.Override
@@ -670,23 +743,23 @@ public final class SearchServiceProto {
         return offset_;
       }
       /**
-       * <code>int64 offset = 3 [json_name = "offset"];</code>
+       * <code>int64 offset = 4 [json_name = "offset"];</code>
        * @param value The offset to set.
        * @return This builder for chaining.
        */
       public Builder setOffset(long value) {
 
         offset_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 offset = 3 [json_name = "offset"];</code>
+       * <code>int64 offset = 4 [json_name = "offset"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOffset() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         offset_ = 0L;
         onChanged();
         return this;
@@ -1803,6 +1876,1094 @@ public final class SearchServiceProto {
 
   }
 
+  public interface GetPublicResourceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetPublicResourceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetPublicResourceRequest}
+   */
+  public static final class GetPublicResourceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetPublicResourceRequest)
+      GetPublicResourceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetPublicResourceRequest.newBuilder() to construct.
+    private GetPublicResourceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetPublicResourceRequest() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPublicResourceRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.class, com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resourceId_ = "";
+    /**
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest other = (com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetPublicResourceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetPublicResourceRequest)
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.class, com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        resourceId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest build() {
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest buildPartial() {
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest result = new com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.resourceId_ = resourceId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest other) {
+        if (other == com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                resourceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        resourceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        resourceId_ = getDefaultInstance().getResourceId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 1 [json_name = "resourceId"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        resourceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetPublicResourceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetPublicResourceRequest)
+    private static final com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetPublicResourceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetPublicResourceRequest>() {
+      @java.lang.Override
+      public GetPublicResourceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetPublicResourceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetPublicResourceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetPublicResourceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetPublicResourceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+     * @return Whether the resources field is set.
+     */
+    boolean hasResources();
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+     * @return The resources.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.GenericResource getResources();
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder getResourcesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetPublicResourceResponse}
+   */
+  public static final class GetPublicResourceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetPublicResourceResponse)
+      GetPublicResourceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetPublicResourceResponse.newBuilder() to construct.
+    private GetPublicResourceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetPublicResourceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPublicResourceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.class, com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.Builder.class);
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 1;
+    private com.aruna.api.storage.models.v2.ModelsProto.GenericResource resources_;
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+     * @return Whether the resources field is set.
+     */
+    @java.lang.Override
+    public boolean hasResources() {
+      return resources_ != null;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+     * @return The resources.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.GenericResource getResources() {
+      return resources_ == null ? com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance() : resources_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder getResourcesOrBuilder() {
+      return resources_ == null ? com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance() : resources_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (resources_ != null) {
+        output.writeMessage(1, getResources());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (resources_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResources());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse other = (com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse) obj;
+
+      if (hasResources() != other.hasResources()) return false;
+      if (hasResources()) {
+        if (!getResources()
+            .equals(other.getResources())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResources()) {
+        hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+        hash = (53 * hash) + getResources().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetPublicResourceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetPublicResourceResponse)
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.class, com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        resources_ = null;
+        if (resourcesBuilder_ != null) {
+          resourcesBuilder_.dispose();
+          resourcesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse build() {
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse buildPartial() {
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse result = new com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.resources_ = resourcesBuilder_ == null
+              ? resources_
+              : resourcesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse other) {
+        if (other == com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse.getDefaultInstance()) return this;
+        if (other.hasResources()) {
+          mergeResources(other.getResources());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResourcesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.storage.models.v2.ModelsProto.GenericResource resources_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.GenericResource, com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder, com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder> resourcesBuilder_;
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       * @return Whether the resources field is set.
+       */
+      public boolean hasResources() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       * @return The resources.
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.GenericResource getResources() {
+        if (resourcesBuilder_ == null) {
+          return resources_ == null ? com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance() : resources_;
+        } else {
+          return resourcesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder setResources(com.aruna.api.storage.models.v2.ModelsProto.GenericResource value) {
+        if (resourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resources_ = value;
+        } else {
+          resourcesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder builderForValue) {
+        if (resourcesBuilder_ == null) {
+          resources_ = builderForValue.build();
+        } else {
+          resourcesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder mergeResources(com.aruna.api.storage.models.v2.ModelsProto.GenericResource value) {
+        if (resourcesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            resources_ != null &&
+            resources_ != com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance()) {
+            getResourcesBuilder().mergeFrom(value);
+          } else {
+            resources_ = value;
+          }
+        } else {
+          resourcesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder clearResources() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        resources_ = null;
+        if (resourcesBuilder_ != null) {
+          resourcesBuilder_.dispose();
+          resourcesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder getResourcesBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResourcesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder getResourcesOrBuilder() {
+        if (resourcesBuilder_ != null) {
+          return resourcesBuilder_.getMessageOrBuilder();
+        } else {
+          return resources_ == null ?
+              com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance() : resources_;
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource resources = 1 [json_name = "resources"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.GenericResource, com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder, com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder> 
+          getResourcesFieldBuilder() {
+        if (resourcesBuilder_ == null) {
+          resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.GenericResource, com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder, com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder>(
+                  getResources(),
+                  getParentForChildren(),
+                  isClean());
+          resources_ = null;
+        }
+        return resourcesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetPublicResourceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetPublicResourceResponse)
+    private static final com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetPublicResourceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetPublicResourceResponse>() {
+      @java.lang.Override
+      public GetPublicResourceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetPublicResourceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetPublicResourceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.SearchServiceProto.GetPublicResourceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_SearchResourcesRequest_descriptor;
   private static final 
@@ -1813,6 +2974,16 @@ public final class SearchServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_SearchResourcesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1825,25 +2996,34 @@ public final class SearchServiceProto {
       "\n2aruna/api/storage/services/v2/search_s" +
       "ervice.proto\022\035aruna.api.storage.services" +
       ".v2\032(aruna/api/storage/models/v2/models." +
-      "proto\032\034google/api/annotations.proto\"^\n\026S" +
+      "proto\032\034google/api/annotations.proto\"t\n\026S" +
       "earchResourcesRequest\022\024\n\005query\030\001 \001(\tR\005qu" +
-      "ery\022\026\n\006filter\030\002 \001(\tR\006filter\022\026\n\006offset\030\003 " +
-      "\001(\003R\006offset\"\255\001\n\027SearchResourcesResponse\022" +
-      "J\n\tresources\030\001 \003(\0132,.aruna.api.storage.m" +
-      "odels.v2.GenericResourceR\tresources\022\'\n\017e" +
-      "stimated_total\030\002 \001(\003R\016estimatedTotal\022\035\n\n" +
-      "last_index\030\003 \001(\003R\tlastIndex2\251\001\n\rSearchSe" +
-      "rvice\022\227\001\n\017SearchResources\0225.aruna.api.st" +
-      "orage.services.v2.SearchResourcesRequest" +
-      "\0326.aruna.api.storage.services.v2.SearchR" +
-      "esourcesResponse\"\025\202\323\344\223\002\017\"\n/v2/search:\001*B" +
-      "\216\002\n!com.aruna.api.storage.services.v2B\022S" +
-      "earchServiceProtoP\000Z<github.com/ArunaSto" +
-      "rage/go-api/aruna/api/storage/services/v" +
-      "2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2" +
-      "\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna" +
-      "\\Api\\Storage\\Services\\V2\\GPBMetadata\352\002!A" +
-      "runa::Api::Storage::Services::V2b\006proto3"
+      "ery\022\026\n\006filter\030\002 \001(\tR\006filter\022\024\n\005limit\030\003 \001" +
+      "(\003R\005limit\022\026\n\006offset\030\004 \001(\003R\006offset\"\255\001\n\027Se" +
+      "archResourcesResponse\022J\n\tresources\030\001 \003(\013" +
+      "2,.aruna.api.storage.models.v2.GenericRe" +
+      "sourceR\tresources\022\'\n\017estimated_total\030\002 \001" +
+      "(\003R\016estimatedTotal\022\035\n\nlast_index\030\003 \001(\003R\t" +
+      "lastIndex\";\n\030GetPublicResourceRequest\022\037\n" +
+      "\013resource_id\030\001 \001(\tR\nresourceId\"g\n\031GetPub" +
+      "licResourceResponse\022J\n\tresources\030\001 \001(\0132," +
+      ".aruna.api.storage.models.v2.GenericReso" +
+      "urceR\tresources2\324\002\n\rSearchService\022\227\001\n\017Se" +
+      "archResources\0225.aruna.api.storage.servic" +
+      "es.v2.SearchResourcesRequest\0326.aruna.api" +
+      ".storage.services.v2.SearchResourcesResp" +
+      "onse\"\025\202\323\344\223\002\017\"\n/v2/search:\001*\022\250\001\n\021GetPubli" +
+      "cResource\0227.aruna.api.storage.services.v" +
+      "2.GetPublicResourceRequest\0328.aruna.api.s" +
+      "torage.services.v2.GetPublicResourceResp" +
+      "onse\" \202\323\344\223\002\032\022\030/v2/public/{resource_id}B\216" +
+      "\002\n!com.aruna.api.storage.services.v2B\022Se" +
+      "archServiceProtoP\000Z<github.com/ArunaStor" +
+      "age/go-api/aruna/api/storage/services/v2" +
+      "\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2\312" +
+      "\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna\\" +
+      "Api\\Storage\\Services\\V2\\GPBMetadata\352\002!Ar" +
+      "una::Api::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1856,13 +3036,25 @@ public final class SearchServiceProto {
     internal_static_aruna_api_storage_services_v2_SearchResourcesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_SearchResourcesRequest_descriptor,
-        new java.lang.String[] { "Query", "Filter", "Offset", });
+        new java.lang.String[] { "Query", "Filter", "Limit", "Offset", });
     internal_static_aruna_api_storage_services_v2_SearchResourcesResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v2_SearchResourcesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_SearchResourcesResponse_descriptor,
         new java.lang.String[] { "Resources", "EstimatedTotal", "LastIndex", });
+    internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetPublicResourceRequest_descriptor,
+        new java.lang.String[] { "ResourceId", });
+    internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetPublicResourceResponse_descriptor,
+        new java.lang.String[] { "Resources", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

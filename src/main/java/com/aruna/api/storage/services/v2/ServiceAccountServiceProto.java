@@ -31,17 +31,17 @@ public final class ServiceAccountServiceProto {
         getNameBytes();
 
     /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
      * @return Whether the permission field is set.
      */
     boolean hasPermission();
     /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
      * @return The permission.
      */
     com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission();
     /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder();
   }
@@ -120,10 +120,10 @@ public final class ServiceAccountServiceProto {
       }
     }
 
-    public static final int PERMISSION_FIELD_NUMBER = 3;
+    public static final int PERMISSION_FIELD_NUMBER = 2;
     private com.aruna.api.storage.models.v2.ModelsProto.Permission permission_;
     /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
      * @return Whether the permission field is set.
      */
     @java.lang.Override
@@ -131,7 +131,7 @@ public final class ServiceAccountServiceProto {
       return permission_ != null;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
      * @return The permission.
      */
     @java.lang.Override
@@ -139,7 +139,7 @@ public final class ServiceAccountServiceProto {
       return permission_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance() : permission_;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
@@ -164,7 +164,7 @@ public final class ServiceAccountServiceProto {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (permission_ != null) {
-        output.writeMessage(3, getPermission());
+        output.writeMessage(2, getPermission());
       }
       getUnknownFields().writeTo(output);
     }
@@ -180,7 +180,7 @@ public final class ServiceAccountServiceProto {
       }
       if (permission_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getPermission());
+          .computeMessageSize(2, getPermission());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -452,13 +452,13 @@ public final class ServiceAccountServiceProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 26: {
+              case 18: {
                 input.readMessage(
                     getPermissionFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 26
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -552,14 +552,14 @@ public final class ServiceAccountServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> permissionBuilder_;
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        * @return Whether the permission field is set.
        */
       public boolean hasPermission() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        * @return The permission.
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission() {
@@ -570,7 +570,7 @@ public final class ServiceAccountServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       public Builder setPermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
         if (permissionBuilder_ == null) {
@@ -586,7 +586,7 @@ public final class ServiceAccountServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       public Builder setPermission(
           com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
@@ -600,7 +600,7 @@ public final class ServiceAccountServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       public Builder mergePermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
         if (permissionBuilder_ == null) {
@@ -619,7 +619,7 @@ public final class ServiceAccountServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       public Builder clearPermission() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -632,7 +632,7 @@ public final class ServiceAccountServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder getPermissionBuilder() {
         bitField0_ |= 0x00000002;
@@ -640,7 +640,7 @@ public final class ServiceAccountServiceProto {
         return getPermissionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
         if (permissionBuilder_ != null) {
@@ -651,7 +651,7 @@ public final class ServiceAccountServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.storage.models.v2.Permission permission = 3 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 2 [json_name = "permission"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
@@ -10955,6 +10955,2874 @@ public final class ServiceAccountServiceProto {
 
   }
 
+  public interface GetS3CredentialsSvcAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+     * @return The svcAccountId.
+     */
+    java.lang.String getSvcAccountId();
+    /**
+     * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+     * @return The bytes for svcAccountId.
+     */
+    com.google.protobuf.ByteString
+        getSvcAccountIdBytes();
+
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    java.lang.String getEndpointId();
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    com.google.protobuf.ByteString
+        getEndpointIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest}
+   */
+  public static final class GetS3CredentialsSvcAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest)
+      GetS3CredentialsSvcAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetS3CredentialsSvcAccountRequest.newBuilder() to construct.
+    private GetS3CredentialsSvcAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetS3CredentialsSvcAccountRequest() {
+      svcAccountId_ = "";
+      endpointId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetS3CredentialsSvcAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.Builder.class);
+    }
+
+    public static final int SVC_ACCOUNT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object svcAccountId_ = "";
+    /**
+     * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+     * @return The svcAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getSvcAccountId() {
+      java.lang.Object ref = svcAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        svcAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+     * @return The bytes for svcAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSvcAccountIdBytes() {
+      java.lang.Object ref = svcAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        svcAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpointId_ = "";
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpointId() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointIdBytes() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(svcAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, svcAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endpointId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(svcAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, svcAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endpointId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest other = (com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest) obj;
+
+      if (!getSvcAccountId()
+          .equals(other.getSvcAccountId())) return false;
+      if (!getEndpointId()
+          .equals(other.getEndpointId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SVC_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSvcAccountId().hashCode();
+      hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpointId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest)
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        svcAccountId_ = "";
+        endpointId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest build() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest buildPartial() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest result = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.svcAccountId_ = svcAccountId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endpointId_ = endpointId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest other) {
+        if (other == com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest.getDefaultInstance()) return this;
+        if (!other.getSvcAccountId().isEmpty()) {
+          svcAccountId_ = other.svcAccountId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEndpointId().isEmpty()) {
+          endpointId_ = other.endpointId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                svcAccountId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                endpointId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object svcAccountId_ = "";
+      /**
+       * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+       * @return The svcAccountId.
+       */
+      public java.lang.String getSvcAccountId() {
+        java.lang.Object ref = svcAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          svcAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+       * @return The bytes for svcAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getSvcAccountIdBytes() {
+        java.lang.Object ref = svcAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          svcAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+       * @param value The svcAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSvcAccountId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        svcAccountId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSvcAccountId() {
+        svcAccountId_ = getDefaultInstance().getSvcAccountId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string svc_account_id = 1 [json_name = "svcAccountId"];</code>
+       * @param value The bytes for svcAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSvcAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        svcAccountId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpointId_ = "";
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @return The endpointId.
+       */
+      public java.lang.String getEndpointId() {
+        java.lang.Object ref = endpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @return The bytes for endpointId.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointIdBytes() {
+        java.lang.Object ref = endpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @param value The endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpointId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpointId() {
+        endpointId_ = getDefaultInstance().getEndpointId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @param value The bytes for endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpointId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountRequest)
+    private static final com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetS3CredentialsSvcAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetS3CredentialsSvcAccountRequest>() {
+      @java.lang.Override
+      public GetS3CredentialsSvcAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetS3CredentialsSvcAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetS3CredentialsSvcAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetS3CredentialsSvcAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+     * @return The s3AccessKey.
+     */
+    java.lang.String getS3AccessKey();
+    /**
+     * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+     * @return The bytes for s3AccessKey.
+     */
+    com.google.protobuf.ByteString
+        getS3AccessKeyBytes();
+
+    /**
+     * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+     * @return The s3SecretKey.
+     */
+    java.lang.String getS3SecretKey();
+    /**
+     * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+     * @return The bytes for s3SecretKey.
+     */
+    com.google.protobuf.ByteString
+        getS3SecretKeyBytes();
+
+    /**
+     * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+     * @return The s3EndpointUrl.
+     */
+    java.lang.String getS3EndpointUrl();
+    /**
+     * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+     * @return The bytes for s3EndpointUrl.
+     */
+    com.google.protobuf.ByteString
+        getS3EndpointUrlBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse}
+   */
+  public static final class GetS3CredentialsSvcAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse)
+      GetS3CredentialsSvcAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetS3CredentialsSvcAccountResponse.newBuilder() to construct.
+    private GetS3CredentialsSvcAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetS3CredentialsSvcAccountResponse() {
+      s3AccessKey_ = "";
+      s3SecretKey_ = "";
+      s3EndpointUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetS3CredentialsSvcAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.Builder.class);
+    }
+
+    public static final int S3_ACCESS_KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object s3AccessKey_ = "";
+    /**
+     * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+     * @return The s3AccessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getS3AccessKey() {
+      java.lang.Object ref = s3AccessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        s3AccessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+     * @return The bytes for s3AccessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getS3AccessKeyBytes() {
+      java.lang.Object ref = s3AccessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        s3AccessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int S3_SECRET_KEY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object s3SecretKey_ = "";
+    /**
+     * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+     * @return The s3SecretKey.
+     */
+    @java.lang.Override
+    public java.lang.String getS3SecretKey() {
+      java.lang.Object ref = s3SecretKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        s3SecretKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+     * @return The bytes for s3SecretKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getS3SecretKeyBytes() {
+      java.lang.Object ref = s3SecretKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        s3SecretKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int S3_ENDPOINT_URL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object s3EndpointUrl_ = "";
+    /**
+     * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+     * @return The s3EndpointUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getS3EndpointUrl() {
+      java.lang.Object ref = s3EndpointUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        s3EndpointUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+     * @return The bytes for s3EndpointUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getS3EndpointUrlBytes() {
+      java.lang.Object ref = s3EndpointUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        s3EndpointUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3AccessKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, s3AccessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3SecretKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, s3SecretKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3EndpointUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, s3EndpointUrl_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3AccessKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, s3AccessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3SecretKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, s3SecretKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s3EndpointUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, s3EndpointUrl_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse other = (com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse) obj;
+
+      if (!getS3AccessKey()
+          .equals(other.getS3AccessKey())) return false;
+      if (!getS3SecretKey()
+          .equals(other.getS3SecretKey())) return false;
+      if (!getS3EndpointUrl()
+          .equals(other.getS3EndpointUrl())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + S3_ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getS3AccessKey().hashCode();
+      hash = (37 * hash) + S3_SECRET_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getS3SecretKey().hashCode();
+      hash = (37 * hash) + S3_ENDPOINT_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getS3EndpointUrl().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse)
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        s3AccessKey_ = "";
+        s3SecretKey_ = "";
+        s3EndpointUrl_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse build() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse buildPartial() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse result = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.s3AccessKey_ = s3AccessKey_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.s3SecretKey_ = s3SecretKey_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.s3EndpointUrl_ = s3EndpointUrl_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse other) {
+        if (other == com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse.getDefaultInstance()) return this;
+        if (!other.getS3AccessKey().isEmpty()) {
+          s3AccessKey_ = other.s3AccessKey_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getS3SecretKey().isEmpty()) {
+          s3SecretKey_ = other.s3SecretKey_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getS3EndpointUrl().isEmpty()) {
+          s3EndpointUrl_ = other.s3EndpointUrl_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                s3AccessKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                s3SecretKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                s3EndpointUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object s3AccessKey_ = "";
+      /**
+       * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+       * @return The s3AccessKey.
+       */
+      public java.lang.String getS3AccessKey() {
+        java.lang.Object ref = s3AccessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          s3AccessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+       * @return The bytes for s3AccessKey.
+       */
+      public com.google.protobuf.ByteString
+          getS3AccessKeyBytes() {
+        java.lang.Object ref = s3AccessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          s3AccessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+       * @param value The s3AccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3AccessKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        s3AccessKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS3AccessKey() {
+        s3AccessKey_ = getDefaultInstance().getS3AccessKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string s3_access_key = 1 [json_name = "s3AccessKey"];</code>
+       * @param value The bytes for s3AccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3AccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        s3AccessKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object s3SecretKey_ = "";
+      /**
+       * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+       * @return The s3SecretKey.
+       */
+      public java.lang.String getS3SecretKey() {
+        java.lang.Object ref = s3SecretKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          s3SecretKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+       * @return The bytes for s3SecretKey.
+       */
+      public com.google.protobuf.ByteString
+          getS3SecretKeyBytes() {
+        java.lang.Object ref = s3SecretKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          s3SecretKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+       * @param value The s3SecretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3SecretKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        s3SecretKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS3SecretKey() {
+        s3SecretKey_ = getDefaultInstance().getS3SecretKey();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string s3_secret_key = 2 [json_name = "s3SecretKey"];</code>
+       * @param value The bytes for s3SecretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3SecretKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        s3SecretKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object s3EndpointUrl_ = "";
+      /**
+       * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+       * @return The s3EndpointUrl.
+       */
+      public java.lang.String getS3EndpointUrl() {
+        java.lang.Object ref = s3EndpointUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          s3EndpointUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+       * @return The bytes for s3EndpointUrl.
+       */
+      public com.google.protobuf.ByteString
+          getS3EndpointUrlBytes() {
+        java.lang.Object ref = s3EndpointUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          s3EndpointUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+       * @param value The s3EndpointUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3EndpointUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        s3EndpointUrl_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS3EndpointUrl() {
+        s3EndpointUrl_ = getDefaultInstance().getS3EndpointUrl();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string s3_endpoint_url = 3 [json_name = "s3EndpointUrl"];</code>
+       * @param value The bytes for s3EndpointUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3EndpointUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        s3EndpointUrl_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetS3CredentialsSvcAccountResponse)
+    private static final com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetS3CredentialsSvcAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetS3CredentialsSvcAccountResponse>() {
+      @java.lang.Override
+      public GetS3CredentialsSvcAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetS3CredentialsSvcAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetS3CredentialsSvcAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetS3CredentialsSvcAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetDataproxyTokenSvcAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    java.lang.String getEndpointId();
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    com.google.protobuf.ByteString
+        getEndpointIdBytes();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+     * @return Whether the context field is set.
+     */
+    boolean hasContext();
+    /**
+     * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+     * @return The context.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.Context getContext();
+    /**
+     * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder getContextOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest}
+   */
+  public static final class GetDataproxyTokenSvcAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest)
+      GetDataproxyTokenSvcAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetDataproxyTokenSvcAccountRequest.newBuilder() to construct.
+    private GetDataproxyTokenSvcAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDataproxyTokenSvcAccountRequest() {
+      userId_ = "";
+      endpointId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDataproxyTokenSvcAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.Builder.class);
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpointId_ = "";
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The endpointId.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpointId() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+     * @return The bytes for endpointId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointIdBytes() {
+      java.lang.Object ref = endpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTEXT_FIELD_NUMBER = 3;
+    private com.aruna.api.storage.models.v2.ModelsProto.Context context_;
+    /**
+     * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+     * @return Whether the context field is set.
+     */
+    @java.lang.Override
+    public boolean hasContext() {
+      return context_ != null;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+     * @return The context.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.Context getContext() {
+      return context_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance() : context_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder getContextOrBuilder() {
+      return context_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance() : context_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endpointId_);
+      }
+      if (context_ != null) {
+        output.writeMessage(3, getContext());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endpointId_);
+      }
+      if (context_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getContext());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest other = (com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest) obj;
+
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!getEndpointId()
+          .equals(other.getEndpointId())) return false;
+      if (hasContext() != other.hasContext()) return false;
+      if (hasContext()) {
+        if (!getContext()
+            .equals(other.getContext())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpointId().hashCode();
+      if (hasContext()) {
+        hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getContext().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest)
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userId_ = "";
+        endpointId_ = "";
+        context_ = null;
+        if (contextBuilder_ != null) {
+          contextBuilder_.dispose();
+          contextBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest build() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest buildPartial() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest result = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endpointId_ = endpointId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.context_ = contextBuilder_ == null
+              ? context_
+              : contextBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest other) {
+        if (other == com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest.getDefaultInstance()) return this;
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEndpointId().isEmpty()) {
+          endpointId_ = other.endpointId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasContext()) {
+          mergeContext(other.getContext());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                endpointId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getContextFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpointId_ = "";
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @return The endpointId.
+       */
+      public java.lang.String getEndpointId() {
+        java.lang.Object ref = endpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @return The bytes for endpointId.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointIdBytes() {
+        java.lang.Object ref = endpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @param value The endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpointId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpointId() {
+        endpointId_ = getDefaultInstance().getEndpointId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_id = 2 [json_name = "endpointId"];</code>
+       * @param value The bytes for endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpointId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.aruna.api.storage.models.v2.ModelsProto.Context context_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Context, com.aruna.api.storage.models.v2.ModelsProto.Context.Builder, com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder> contextBuilder_;
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       * @return Whether the context field is set.
+       */
+      public boolean hasContext() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       * @return The context.
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.Context getContext() {
+        if (contextBuilder_ == null) {
+          return context_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance() : context_;
+        } else {
+          return contextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      public Builder setContext(com.aruna.api.storage.models.v2.ModelsProto.Context value) {
+        if (contextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          context_ = value;
+        } else {
+          contextBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      public Builder setContext(
+          com.aruna.api.storage.models.v2.ModelsProto.Context.Builder builderForValue) {
+        if (contextBuilder_ == null) {
+          context_ = builderForValue.build();
+        } else {
+          contextBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      public Builder mergeContext(com.aruna.api.storage.models.v2.ModelsProto.Context value) {
+        if (contextBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            context_ != null &&
+            context_ != com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance()) {
+            getContextBuilder().mergeFrom(value);
+          } else {
+            context_ = value;
+          }
+        } else {
+          contextBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      public Builder clearContext() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        context_ = null;
+        if (contextBuilder_ != null) {
+          contextBuilder_.dispose();
+          contextBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.Context.Builder getContextBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getContextFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder getContextOrBuilder() {
+        if (contextBuilder_ != null) {
+          return contextBuilder_.getMessageOrBuilder();
+        } else {
+          return context_ == null ?
+              com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance() : context_;
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Context context = 3 [json_name = "context"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Context, com.aruna.api.storage.models.v2.ModelsProto.Context.Builder, com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder> 
+          getContextFieldBuilder() {
+        if (contextBuilder_ == null) {
+          contextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.Context, com.aruna.api.storage.models.v2.ModelsProto.Context.Builder, com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder>(
+                  getContext(),
+                  getParentForChildren(),
+                  isClean());
+          context_ = null;
+        }
+        return contextBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountRequest)
+    private static final com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDataproxyTokenSvcAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetDataproxyTokenSvcAccountRequest>() {
+      @java.lang.Override
+      public GetDataproxyTokenSvcAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDataproxyTokenSvcAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDataproxyTokenSvcAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetDataproxyTokenSvcAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse}
+   */
+  public static final class GetDataproxyTokenSvcAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse)
+      GetDataproxyTokenSvcAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetDataproxyTokenSvcAccountResponse.newBuilder() to construct.
+    private GetDataproxyTokenSvcAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDataproxyTokenSvcAccountResponse() {
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDataproxyTokenSvcAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.Builder.class);
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse other = (com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse) obj;
+
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse)
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        token_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse build() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse buildPartial() {
+        com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse result = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.token_ = token_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse other) {
+        if (other == com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse.getDefaultInstance()) return this;
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                token_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object token_ = "";
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetDataproxyTokenSvcAccountResponse)
+    private static final com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDataproxyTokenSvcAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetDataproxyTokenSvcAccountResponse>() {
+      @java.lang.Override
+      public GetDataproxyTokenSvcAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDataproxyTokenSvcAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDataproxyTokenSvcAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetDataproxyTokenSvcAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_CreateServiceAccountRequest_descriptor;
   private static final 
@@ -11040,6 +13908,26 @@ public final class ServiceAccountServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_DeleteServiceAccountResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11055,7 +13943,7 @@ public final class ServiceAccountServiceProto {
       "2/models.proto\032\034google/api/annotations.p" +
       "roto\032\037google/protobuf/timestamp.proto\"z\n" +
       "\033CreateServiceAccountRequest\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\022G\n\npermission\030\003 \001(\0132\'.aruna.api" +
+      "(\tR\004name\022G\n\npermission\030\002 \001(\0132\'.aruna.api" +
       ".storage.models.v2.PermissionR\npermissio" +
       "n\"\223\001\n\016ServiceAccount\022$\n\016svc_account_id\030\001" +
       " \001(\tR\014svcAccountId\022\022\n\004name\030\002 \001(\tR\004name\022G" +
@@ -11097,49 +13985,72 @@ public final class ServiceAccountServiceProto {
       "leteServiceAccountTokensResponse\"C\n\033Dele" +
       "teServiceAccountRequest\022$\n\016svc_account_i" +
       "d\030\001 \001(\tR\014svcAccountId\"\036\n\034DeleteServiceAc" +
-      "countResponse2\245\r\n\025ServiceAccountService\022" +
-      "\257\001\n\024CreateServiceAccount\022:.aruna.api.sto" +
-      "rage.services.v2.CreateServiceAccountReq" +
-      "uest\032;.aruna.api.storage.services.v2.Cre" +
-      "ateServiceAccountResponse\"\036\202\323\344\223\002\030\"\023/v2/s" +
-      "ervice_account:\001*\022\325\001\n\031CreateServiceAccou" +
-      "ntToken\022?.aruna.api.storage.services.v2." +
-      "CreateServiceAccountTokenRequest\032@.aruna" +
-      ".api.storage.services.v2.CreateServiceAc" +
-      "countTokenResponse\"5\202\323\344\223\002/\"*/v2/service_" +
-      "account/{svc_account_id}/token:\001*\022\341\001\n\033Se" +
-      "tServiceAccountPermission\022A.aruna.api.st" +
-      "orage.services.v2.SetServiceAccountPermi" +
-      "ssionRequest\032B.aruna.api.storage.service" +
-      "s.v2.SetServiceAccountPermissionResponse" +
-      "\";\202\323\344\223\0025\0320/v2/service_account/{svc_accou" +
-      "nt_id}/permissions:\001*\022\324\001\n\026GetServiceAcco" +
-      "untToken\022<.aruna.api.storage.services.v2" +
-      ".GetServiceAccountTokenRequest\032=.aruna.a" +
-      "pi.storage.services.v2.GetServiceAccount" +
-      "TokenResponse\"=\202\323\344\223\0027\0225/v2/service_accou" +
-      "nt/{svc_account_id}/token/{token_id}\022\315\001\n" +
-      "\027GetServiceAccountTokens\022=.aruna.api.sto" +
-      "rage.services.v2.GetServiceAccountTokens" +
-      "Request\032>.aruna.api.storage.services.v2." +
-      "GetServiceAccountTokensResponse\"3\202\323\344\223\002-\022" +
-      "+/v2/service_account/{svc_account_id}/to" +
-      "kens\022\335\001\n\031DeleteServiceAccountToken\022?.aru" +
-      "na.api.storage.services.v2.DeleteService" +
-      "AccountTokenRequest\032@.aruna.api.storage." +
-      "services.v2.DeleteServiceAccountTokenRes" +
-      "ponse\"=\202\323\344\223\0027*5/v2/service_account/{svc_" +
-      "account_id}/token/{token_id}\022\326\001\n\032DeleteS" +
-      "erviceAccountTokens\022@.aruna.api.storage." +
-      "services.v2.DeleteServiceAccountTokensRe" +
-      "quest\032A.aruna.api.storage.services.v2.De" +
-      "leteServiceAccountTokensResponse\"3\202\323\344\223\002-" +
-      "*+/v2/service_account/{svc_account_id}/t" +
-      "okens\022\275\001\n\024DeleteServiceAccount\022:.aruna.a" +
-      "pi.storage.services.v2.DeleteServiceAcco" +
-      "untRequest\032;.aruna.api.storage.services." +
-      "v2.DeleteServiceAccountResponse\",\202\323\344\223\002&*" +
-      "$/v2/service_account/{svc_account_id}B\226\002" +
+      "countResponse\"j\n!GetS3CredentialsSvcAcco" +
+      "untRequest\022$\n\016svc_account_id\030\001 \001(\tR\014svcA" +
+      "ccountId\022\037\n\013endpoint_id\030\002 \001(\tR\nendpointI" +
+      "d\"\224\001\n\"GetS3CredentialsSvcAccountResponse" +
+      "\022\"\n\rs3_access_key\030\001 \001(\tR\013s3AccessKey\022\"\n\r" +
+      "s3_secret_key\030\002 \001(\tR\013s3SecretKey\022&\n\017s3_e" +
+      "ndpoint_url\030\003 \001(\tR\rs3EndpointUrl\"\236\001\n\"Get" +
+      "DataproxyTokenSvcAccountRequest\022\027\n\007user_" +
+      "id\030\001 \001(\tR\006userId\022\037\n\013endpoint_id\030\002 \001(\tR\ne" +
+      "ndpointId\022>\n\007context\030\003 \001(\0132$.aruna.api.s" +
+      "torage.models.v2.ContextR\007context\";\n#Get" +
+      "DataproxyTokenSvcAccountResponse\022\024\n\005toke" +
+      "n\030\001 \001(\tR\005token2\334\020\n\025ServiceAccountService" +
+      "\022\257\001\n\024CreateServiceAccount\022:.aruna.api.st" +
+      "orage.services.v2.CreateServiceAccountRe" +
+      "quest\032;.aruna.api.storage.services.v2.Cr" +
+      "eateServiceAccountResponse\"\036\202\323\344\223\002\030\"\023/v2/" +
+      "service_account:\001*\022\325\001\n\031CreateServiceAcco" +
+      "untToken\022?.aruna.api.storage.services.v2" +
+      ".CreateServiceAccountTokenRequest\032@.arun" +
+      "a.api.storage.services.v2.CreateServiceA" +
+      "ccountTokenResponse\"5\202\323\344\223\002/\"*/v2/service" +
+      "_account/{svc_account_id}/token:\001*\022\341\001\n\033S" +
+      "etServiceAccountPermission\022A.aruna.api.s" +
+      "torage.services.v2.SetServiceAccountPerm" +
+      "issionRequest\032B.aruna.api.storage.servic" +
+      "es.v2.SetServiceAccountPermissionRespons" +
+      "e\";\202\323\344\223\0025\0320/v2/service_account/{svc_acco" +
+      "unt_id}/permissions:\001*\022\324\001\n\026GetServiceAcc" +
+      "ountToken\022<.aruna.api.storage.services.v" +
+      "2.GetServiceAccountTokenRequest\032=.aruna." +
+      "api.storage.services.v2.GetServiceAccoun" +
+      "tTokenResponse\"=\202\323\344\223\0027\0225/v2/service_acco" +
+      "unt/{svc_account_id}/token/{token_id}\022\315\001" +
+      "\n\027GetServiceAccountTokens\022=.aruna.api.st" +
+      "orage.services.v2.GetServiceAccountToken" +
+      "sRequest\032>.aruna.api.storage.services.v2" +
+      ".GetServiceAccountTokensResponse\"3\202\323\344\223\002-" +
+      "\022+/v2/service_account/{svc_account_id}/t" +
+      "okens\022\335\001\n\031DeleteServiceAccountToken\022?.ar" +
+      "una.api.storage.services.v2.DeleteServic" +
+      "eAccountTokenRequest\032@.aruna.api.storage" +
+      ".services.v2.DeleteServiceAccountTokenRe" +
+      "sponse\"=\202\323\344\223\0027*5/v2/service_account/{svc" +
+      "_account_id}/token/{token_id}\022\326\001\n\032Delete" +
+      "ServiceAccountTokens\022@.aruna.api.storage" +
+      ".services.v2.DeleteServiceAccountTokensR" +
+      "equest\032A.aruna.api.storage.services.v2.D" +
+      "eleteServiceAccountTokensResponse\"3\202\323\344\223\002" +
+      "-*+/v2/service_account/{svc_account_id}/" +
+      "tokens\022\275\001\n\024DeleteServiceAccount\022:.aruna." +
+      "api.storage.services.v2.DeleteServiceAcc" +
+      "ountRequest\032;.aruna.api.storage.services" +
+      ".v2.DeleteServiceAccountResponse\",\202\323\344\223\002&" +
+      "*$/v2/service_account/{svc_account_id}\022\336" +
+      "\001\n\032GetS3CredentialsSvcAccount\022@.aruna.ap" +
+      "i.storage.services.v2.GetS3CredentialsSv" +
+      "cAccountRequest\032A.aruna.api.storage.serv" +
+      "ices.v2.GetS3CredentialsSvcAccountRespon" +
+      "se\";\202\323\344\223\0025\0223/v2/service_account/{svc_acc" +
+      "ount_id}/s3_credentials\022\323\001\n\033GetDataproxy" +
+      "TokenSvcAccount\022A.aruna.api.storage.serv" +
+      "ices.v2.GetDataproxyTokenSvcAccountReque" +
+      "st\032B.aruna.api.storage.services.v2.GetDa" +
+      "taproxyTokenSvcAccountResponse\"-\202\323\344\223\002\'\022%" +
+      "/v2/user/{svc_account_id}/proxy_tokenB\226\002" +
       "\n!com.aruna.api.storage.services.v2B\032Ser" +
       "viceAccountServiceProtoP\000Z<github.com/Ar" +
       "unaStorage/go-api/aruna/api/storage/serv" +
@@ -11258,6 +14169,30 @@ public final class ServiceAccountServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_DeleteServiceAccountResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountRequest_descriptor,
+        new java.lang.String[] { "SvcAccountId", "EndpointId", });
+    internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetS3CredentialsSvcAccountResponse_descriptor,
+        new java.lang.String[] { "S3AccessKey", "S3SecretKey", "S3EndpointUrl", });
+    internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountRequest_descriptor,
+        new java.lang.String[] { "UserId", "EndpointId", "Context", });
+    internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetDataproxyTokenSvcAccountResponse_descriptor,
+        new java.lang.String[] { "Token", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

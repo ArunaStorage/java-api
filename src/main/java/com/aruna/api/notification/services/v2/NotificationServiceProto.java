@@ -1788,15 +1788,21 @@ public final class NotificationServiceProto {
     com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceTargetOrBuilder getResourceOrBuilder();
 
     /**
-     * <code>bool user = 2 [json_name = "user"];</code>
+     * <code>string user = 2 [json_name = "user"];</code>
      * @return Whether the user field is set.
      */
     boolean hasUser();
     /**
-     * <code>bool user = 2 [json_name = "user"];</code>
+     * <code>string user = 2 [json_name = "user"];</code>
      * @return The user.
      */
-    boolean getUser();
+    java.lang.String getUser();
+    /**
+     * <code>string user = 2 [json_name = "user"];</code>
+     * @return The bytes for user.
+     */
+    com.google.protobuf.ByteString
+        getUserBytes();
 
     /**
      * <code>bool anouncements = 3 [json_name = "anouncements"];</code>
@@ -2033,23 +2039,54 @@ public final class NotificationServiceProto {
 
     public static final int USER_FIELD_NUMBER = 2;
     /**
-     * <code>bool user = 2 [json_name = "user"];</code>
+     * <code>string user = 2 [json_name = "user"];</code>
      * @return Whether the user field is set.
      */
-    @java.lang.Override
     public boolean hasUser() {
       return targetCase_ == 2;
     }
     /**
-     * <code>bool user = 2 [json_name = "user"];</code>
+     * <code>string user = 2 [json_name = "user"];</code>
      * @return The user.
      */
-    @java.lang.Override
-    public boolean getUser() {
+    public java.lang.String getUser() {
+      java.lang.Object ref = "";
       if (targetCase_ == 2) {
-        return (java.lang.Boolean) target_;
+        ref = target_;
       }
-      return false;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (targetCase_ == 2) {
+          target_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string user = 2 [json_name = "user"];</code>
+     * @return The bytes for user.
+     */
+    public com.google.protobuf.ByteString
+        getUserBytes() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 2) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (targetCase_ == 2) {
+          target_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ANOUNCEMENTS_FIELD_NUMBER = 3;
@@ -2216,8 +2253,7 @@ public final class NotificationServiceProto {
         output.writeMessage(1, (com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceTarget) target_);
       }
       if (targetCase_ == 2) {
-        output.writeBool(
-            2, (boolean)((java.lang.Boolean) target_));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, target_);
       }
       if (targetCase_ == 3) {
         output.writeBool(
@@ -2253,9 +2289,7 @@ public final class NotificationServiceProto {
           .computeMessageSize(1, (com.aruna.api.notification.services.v2.NotificationServiceProto.ResourceTarget) target_);
       }
       if (targetCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(
-              2, (boolean)((java.lang.Boolean) target_));
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, target_);
       }
       if (targetCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
@@ -2307,8 +2341,8 @@ public final class NotificationServiceProto {
               .equals(other.getResource())) return false;
           break;
         case 2:
-          if (getUser()
-              != other.getUser()) return false;
+          if (!getUser()
+              .equals(other.getUser())) return false;
           break;
         case 3:
           if (getAnouncements()
@@ -2359,8 +2393,7 @@ public final class NotificationServiceProto {
           break;
         case 2:
           hash = (37 * hash) + USER_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getUser());
+          hash = (53 * hash) + getUser().hashCode();
           break;
         case 3:
           hash = (37 * hash) + ANOUNCEMENTS_FIELD_NUMBER;
@@ -2622,7 +2655,9 @@ public final class NotificationServiceProto {
             break;
           }
           case USER: {
-            setUser(other.getUser());
+            targetCase_ = 2;
+            target_ = other.target_;
+            onChanged();
             break;
           }
           case ANOUNCEMENTS: {
@@ -2687,11 +2722,12 @@ public final class NotificationServiceProto {
                 targetCase_ = 1;
                 break;
               } // case 10
-              case 16: {
-                target_ = input.readBool();
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
                 targetCase_ = 2;
+                target_ = s;
                 break;
-              } // case 16
+              } // case 18
               case 24: {
                 target_ = input.readBool();
                 targetCase_ = 3;
@@ -2918,36 +2954,73 @@ public final class NotificationServiceProto {
       }
 
       /**
-       * <code>bool user = 2 [json_name = "user"];</code>
+       * <code>string user = 2 [json_name = "user"];</code>
        * @return Whether the user field is set.
        */
+      @java.lang.Override
       public boolean hasUser() {
         return targetCase_ == 2;
       }
       /**
-       * <code>bool user = 2 [json_name = "user"];</code>
+       * <code>string user = 2 [json_name = "user"];</code>
        * @return The user.
        */
-      public boolean getUser() {
+      @java.lang.Override
+      public java.lang.String getUser() {
+        java.lang.Object ref = "";
         if (targetCase_ == 2) {
-          return (java.lang.Boolean) target_;
+          ref = target_;
         }
-        return false;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (targetCase_ == 2) {
+            target_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>bool user = 2 [json_name = "user"];</code>
+       * <code>string user = 2 [json_name = "user"];</code>
+       * @return The bytes for user.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserBytes() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 2) {
+          ref = target_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (targetCase_ == 2) {
+            target_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user = 2 [json_name = "user"];</code>
        * @param value The user to set.
        * @return This builder for chaining.
        */
-      public Builder setUser(boolean value) {
-
+      public Builder setUser(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         targetCase_ = 2;
         target_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool user = 2 [json_name = "user"];</code>
+       * <code>string user = 2 [json_name = "user"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUser() {
@@ -2956,6 +3029,20 @@ public final class NotificationServiceProto {
           target_ = null;
           onChanged();
         }
+        return this;
+      }
+      /**
+       * <code>string user = 2 [json_name = "user"];</code>
+       * @param value The bytes for user to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetCase_ = 2;
+        target_ = value;
+        onChanged();
         return this;
       }
 
@@ -7883,8 +7970,8 @@ public final class NotificationServiceProto {
 
   }
 
-  public interface DeleteEventStreamingGroupRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest)
+  public interface DeleteStreamConsumerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.DeleteStreamConsumerRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7900,18 +7987,18 @@ public final class NotificationServiceProto {
         getStreamConsumerBytes();
   }
   /**
-   * Protobuf type {@code aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest}
+   * Protobuf type {@code aruna.api.notification.services.v2.DeleteStreamConsumerRequest}
    */
-  public static final class DeleteEventStreamingGroupRequest extends
+  public static final class DeleteStreamConsumerRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest)
-      DeleteEventStreamingGroupRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.DeleteStreamConsumerRequest)
+      DeleteStreamConsumerRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use DeleteEventStreamingGroupRequest.newBuilder() to construct.
-    private DeleteEventStreamingGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DeleteStreamConsumerRequest.newBuilder() to construct.
+    private DeleteStreamConsumerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DeleteEventStreamingGroupRequest() {
+    private DeleteStreamConsumerRequest() {
       streamConsumer_ = "";
     }
 
@@ -7919,20 +8006,20 @@ public final class NotificationServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new DeleteEventStreamingGroupRequest();
+      return new DeleteStreamConsumerRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_descriptor;
+      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_fieldAccessorTable
+      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.Builder.class);
+              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.Builder.class);
     }
 
     public static final int STREAM_CONSUMER_FIELD_NUMBER = 1;
@@ -8013,10 +8100,10 @@ public final class NotificationServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest)) {
+      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest)) {
         return super.equals(obj);
       }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest other = (com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest) obj;
+      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest other = (com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest) obj;
 
       if (!getStreamConsumer()
           .equals(other.getStreamConsumer())) return false;
@@ -8038,44 +8125,44 @@ public final class NotificationServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(byte[] data)
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(java.io.InputStream input)
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8083,26 +8170,26 @@ public final class NotificationServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseDelimitedFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8115,7 +8202,7 @@ public final class NotificationServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest prototype) {
+    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8131,26 +8218,26 @@ public final class NotificationServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest}
+     * Protobuf type {@code aruna.api.notification.services.v2.DeleteStreamConsumerRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.DeleteStreamConsumerRequest)
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_descriptor;
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_fieldAccessorTable
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.Builder.class);
+                com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.Builder.class);
       }
 
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.newBuilder()
+      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.newBuilder()
       private Builder() {
 
       }
@@ -8171,17 +8258,17 @@ public final class NotificationServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_descriptor;
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.getDefaultInstance();
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest getDefaultInstanceForType() {
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest result = buildPartial();
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest build() {
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8189,14 +8276,14 @@ public final class NotificationServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest result = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest(this);
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest buildPartial() {
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest result = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest result) {
+      private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.streamConsumer_ = streamConsumer_;
@@ -8205,16 +8292,16 @@ public final class NotificationServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest)other);
+        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest) {
+          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest other) {
+        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest.getDefaultInstance()) return this;
         if (!other.getStreamConsumer().isEmpty()) {
           streamConsumer_ = other.streamConsumer_;
           bitField0_ |= 0x00000001;
@@ -8352,23 +8439,23 @@ public final class NotificationServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest)
+      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.DeleteStreamConsumerRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.DeleteEventStreamingGroupRequest)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.DeleteStreamConsumerRequest)
+    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest();
+      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest();
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest getDefaultInstance() {
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteEventStreamingGroupRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteEventStreamingGroupRequest>() {
+    private static final com.google.protobuf.Parser<DeleteStreamConsumerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteStreamConsumerRequest>() {
       @java.lang.Override
-      public DeleteEventStreamingGroupRequest parsePartialFrom(
+      public DeleteStreamConsumerRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -8387,59 +8474,59 @@ public final class NotificationServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<DeleteEventStreamingGroupRequest> parser() {
+    public static com.google.protobuf.Parser<DeleteStreamConsumerRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DeleteEventStreamingGroupRequest> getParserForType() {
+    public com.google.protobuf.Parser<DeleteStreamConsumerRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupRequest getDefaultInstanceForType() {
+    public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface DeleteEventStreamingGroupResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse)
+  public interface DeleteStreamConsumerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.notification.services.v2.DeleteStreamConsumerResponse)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse}
+   * Protobuf type {@code aruna.api.notification.services.v2.DeleteStreamConsumerResponse}
    */
-  public static final class DeleteEventStreamingGroupResponse extends
+  public static final class DeleteStreamConsumerResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse)
-      DeleteEventStreamingGroupResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.notification.services.v2.DeleteStreamConsumerResponse)
+      DeleteStreamConsumerResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use DeleteEventStreamingGroupResponse.newBuilder() to construct.
-    private DeleteEventStreamingGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DeleteStreamConsumerResponse.newBuilder() to construct.
+    private DeleteStreamConsumerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DeleteEventStreamingGroupResponse() {
+    private DeleteStreamConsumerResponse() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new DeleteEventStreamingGroupResponse();
+      return new DeleteStreamConsumerResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_descriptor;
+      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_fieldAccessorTable
+      return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.Builder.class);
+              com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8475,10 +8562,10 @@ public final class NotificationServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse)) {
+      if (!(obj instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse)) {
         return super.equals(obj);
       }
-      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse other = (com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse) obj;
+      com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse other = (com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -8496,44 +8583,44 @@ public final class NotificationServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(byte[] data)
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(java.io.InputStream input)
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8541,26 +8628,26 @@ public final class NotificationServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseDelimitedFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse parseFrom(
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8573,7 +8660,7 @@ public final class NotificationServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse prototype) {
+    public static Builder newBuilder(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8589,26 +8676,26 @@ public final class NotificationServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse}
+     * Protobuf type {@code aruna.api.notification.services.v2.DeleteStreamConsumerResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse)
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.notification.services.v2.DeleteStreamConsumerResponse)
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_descriptor;
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_fieldAccessorTable
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.Builder.class);
+                com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.class, com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.Builder.class);
       }
 
-      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.newBuilder()
+      // Construct using com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.newBuilder()
       private Builder() {
 
       }
@@ -8627,17 +8714,17 @@ public final class NotificationServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_descriptor;
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse getDefaultInstanceForType() {
-        return com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.getDefaultInstance();
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse getDefaultInstanceForType() {
+        return com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse build() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse result = buildPartial();
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse build() {
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8645,24 +8732,24 @@ public final class NotificationServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse buildPartial() {
-        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse result = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse(this);
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse buildPartial() {
+        com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse result = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse(this);
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse) {
-          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse)other);
+        if (other instanceof com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse) {
+          return mergeFrom((com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse other) {
-        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse other) {
+        if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -8717,23 +8804,23 @@ public final class NotificationServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse)
+      // @@protoc_insertion_point(builder_scope:aruna.api.notification.services.v2.DeleteStreamConsumerResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.DeleteEventStreamingGroupResponse)
-    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.notification.services.v2.DeleteStreamConsumerResponse)
+    private static final com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse();
+      DEFAULT_INSTANCE = new com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse();
     }
 
-    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse getDefaultInstance() {
+    public static com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteEventStreamingGroupResponse>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteEventStreamingGroupResponse>() {
+    private static final com.google.protobuf.Parser<DeleteStreamConsumerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteStreamConsumerResponse>() {
       @java.lang.Override
-      public DeleteEventStreamingGroupResponse parsePartialFrom(
+      public DeleteStreamConsumerResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -8752,17 +8839,17 @@ public final class NotificationServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<DeleteEventStreamingGroupResponse> parser() {
+    public static com.google.protobuf.Parser<DeleteStreamConsumerResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DeleteEventStreamingGroupResponse> getParserForType() {
+    public com.google.protobuf.Parser<DeleteStreamConsumerResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteEventStreamingGroupResponse getDefaultInstanceForType() {
+    public com.aruna.api.notification.services.v2.NotificationServiceProto.DeleteStreamConsumerResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18232,15 +18319,15 @@ public final class NotificationServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_notification_services_v2_AcknowledgeMessageBatchResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_descriptor;
+    internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_fieldAccessorTable;
+      internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_descriptor;
+    internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_fieldAccessorTable;
+      internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_notification_services_v2_StreamFromSequence_descriptor;
   private static final 
@@ -18322,7 +18409,7 @@ public final class NotificationServiceProto {
       "ceVariant\"\247\004\n\033CreateStreamConsumerReques" +
       "t\022P\n\010resource\030\001 \001(\01322.aruna.api.notifica" +
       "tion.services.v2.ResourceTargetH\000R\010resou" +
-      "rce\022\024\n\004user\030\002 \001(\010H\000R\004user\022$\n\014anouncement" +
+      "rce\022\024\n\004user\030\002 \001(\tH\000R\004user\022$\n\014anouncement" +
       "s\030\003 \001(\010H\000R\014anouncements\022\022\n\003all\030\004 \001(\010H\000R\003" +
       "all\0221\n\024include_subresources\030\005 \001(\010R\023inclu" +
       "deSubresources\022N\n\nstream_all\030\006 \001(\0132-.aru" +
@@ -18349,88 +18436,87 @@ public final class NotificationServiceProto {
       "knowledgeMessageBatchRequest\022C\n\007replies\030" +
       "\001 \003(\0132).aruna.api.notification.services." +
       "v2.ReplyR\007replies\"!\n\037AcknowledgeMessageB" +
-      "atchResponse\"K\n DeleteEventStreamingGrou" +
-      "pRequest\022\'\n\017stream_consumer\030\001 \001(\tR\016strea" +
-      "mConsumer\"#\n!DeleteEventStreamingGroupRe" +
-      "sponse\"0\n\022StreamFromSequence\022\032\n\010sequence" +
-      "\030\001 \001(\004R\010sequence\"J\n\016StreamFromDate\0228\n\tti" +
-      "mestamp\030\001 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\ttimestamp\"\013\n\tStreamAll\"\264\002\n\014EventMessa" +
-      "ge\022Z\n\016resource_event\030\001 \001(\01321.aruna.api.n" +
-      "otification.services.v2.ResourceEventH\000R" +
-      "\rresourceEvent\022N\n\nuser_event\030\002 \001(\0132-.aru" +
-      "na.api.notification.services.v2.UserEven" +
-      "tH\000R\tuserEvent\022e\n\022announcement_event\030\003 \001" +
-      "(\01324.aruna.api.notification.services.v2." +
-      "AnouncementEventH\000R\021announcementEventB\021\n" +
-      "\017message_variant\"\361\001\n\rResourceEvent\022H\n\010re" +
-      "source\030\001 \001(\0132,.aruna.api.notification.se" +
-      "rvices.v2.ResourceR\010resource\022U\n\revent_va" +
-      "riant\030\002 \001(\01620.aruna.api.notification.ser" +
-      "vices.v2.EventVariantR\014eventVariant\022?\n\005r" +
-      "eply\030\003 \001(\0132).aruna.api.notification.serv" +
-      "ices.v2.ReplyR\005reply\"\330\001\n\tUserEvent\022\027\n\007us" +
-      "er_id\030\001 \001(\tR\006userId\022U\n\revent_variant\030\002 \001" +
-      "(\01620.aruna.api.notification.services.v2." +
-      "EventVariantR\014eventVariant\022\032\n\010checksum\030\003" +
-      " \001(\tR\010checksum\022?\n\005reply\030\004 \001(\0132).aruna.ap" +
-      "i.notification.services.v2.ReplyR\005reply\"" +
-      "E\n\005Reply\022\024\n\005reply\030\001 \001(\tR\005reply\022\022\n\004salt\030\002" +
-      " \001(\tR\004salt\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\251\001\n\021Sched" +
-      "uledDowntime\022\032\n\010location\030\001 \001(\tR\010location" +
-      "\022\034\n\tcomponent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003" +
-      " \001(\0132\032.google.protobuf.TimestampR\004from\022*" +
-      "\n\002to\030\004 \001(\0132\032.google.protobuf.TimestampR\002" +
-      "to\"g\n\nNewVersion\022\032\n\010location\030\001 \001(\tR\010loca" +
-      "tion\022\034\n\tcomponent\030\002 \001(\tR\tcomponent\022\037\n\013ne" +
-      "w_version\030\003 \001(\tR\nnewVersion\"#\n\tNewPubkey" +
-      "\022\026\n\006pubkey\030\001 \001(\tR\006pubkey\"\340\003\n\020Anouncement" +
-      "Event\022+\n\021new_data_proxy_id\030\001 \001(\tH\000R\016newD" +
-      "ataProxyId\0221\n\024remove_data_proxy_id\030\002 \001(\t" +
-      "H\000R\021removeDataProxyId\0221\n\024update_data_pro" +
-      "xy_id\030\003 \001(\tH\000R\021updateDataProxyId\022\037\n\nnew_" +
-      "pubkey\030\004 \001(\010H\000R\tnewPubkey\022%\n\rremove_pubk" +
-      "ey\030\005 \001(\010H\000R\014removePubkey\022S\n\010downtime\030\006 \001" +
-      "(\01325.aruna.api.notification.services.v2." +
-      "ScheduledDowntimeH\000R\010downtime\022J\n\007version" +
-      "\030\007 \001(\0132..aruna.api.notification.services" +
-      ".v2.NewVersionH\000R\007version\022?\n\005reply\030\010 \001(\013" +
+      "atchResponse\"F\n\033DeleteStreamConsumerRequ" +
+      "est\022\'\n\017stream_consumer\030\001 \001(\tR\016streamCons" +
+      "umer\"\036\n\034DeleteStreamConsumerResponse\"0\n\022" +
+      "StreamFromSequence\022\032\n\010sequence\030\001 \001(\004R\010se" +
+      "quence\"J\n\016StreamFromDate\0228\n\ttimestamp\030\001 " +
+      "\001(\0132\032.google.protobuf.TimestampR\ttimesta" +
+      "mp\"\013\n\tStreamAll\"\264\002\n\014EventMessage\022Z\n\016reso" +
+      "urce_event\030\001 \001(\01321.aruna.api.notificatio" +
+      "n.services.v2.ResourceEventH\000R\rresourceE" +
+      "vent\022N\n\nuser_event\030\002 \001(\0132-.aruna.api.not" +
+      "ification.services.v2.UserEventH\000R\tuserE" +
+      "vent\022e\n\022announcement_event\030\003 \001(\01324.aruna" +
+      ".api.notification.services.v2.Anouncemen" +
+      "tEventH\000R\021announcementEventB\021\n\017message_v" +
+      "ariant\"\361\001\n\rResourceEvent\022H\n\010resource\030\001 \001" +
+      "(\0132,.aruna.api.notification.services.v2." +
+      "ResourceR\010resource\022U\n\revent_variant\030\002 \001(" +
+      "\01620.aruna.api.notification.services.v2.E" +
+      "ventVariantR\014eventVariant\022?\n\005reply\030\003 \001(\013" +
       "2).aruna.api.notification.services.v2.Re" +
-      "plyR\005replyB\017\n\revent_variant*\233\001\n\014EventVar" +
-      "iant\022\035\n\031EVENT_VARIANT_UNSPECIFIED\020\000\022\031\n\025E" +
-      "VENT_VARIANT_CREATED\020\001\022\033\n\027EVENT_VARIANT_" +
-      "AVAILABLE\020\002\022\031\n\025EVENT_VARIANT_UPDATED\020\003\022\031" +
-      "\n\025EVENT_VARIANT_DELETED\020\0042\334\006\n\030EventNotif" +
-      "icationService\022\233\001\n\024CreateStreamConsumer\022" +
-      "?.aruna.api.notification.services.v2.Cre" +
-      "ateStreamConsumerRequest\032@.aruna.api.not" +
-      "ification.services.v2.CreateStreamConsum" +
-      "erResponse\"\000\022\233\001\n\024GetEventMessageBatch\022?." +
-      "aruna.api.notification.services.v2.GetEv" +
-      "entMessageBatchRequest\032@.aruna.api.notif" +
+      "plyR\005reply\"\330\001\n\tUserEvent\022\027\n\007user_id\030\001 \001(" +
+      "\tR\006userId\022U\n\revent_variant\030\002 \001(\01620.aruna" +
+      ".api.notification.services.v2.EventVaria" +
+      "ntR\014eventVariant\022\032\n\010checksum\030\003 \001(\tR\010chec" +
+      "ksum\022?\n\005reply\030\004 \001(\0132).aruna.api.notifica" +
+      "tion.services.v2.ReplyR\005reply\"E\n\005Reply\022\024" +
+      "\n\005reply\030\001 \001(\tR\005reply\022\022\n\004salt\030\002 \001(\tR\004salt" +
+      "\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\251\001\n\021ScheduledDownti" +
+      "me\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcompon" +
+      "ent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\004from\022*\n\002to\030\004 \001(\013" +
+      "2\032.google.protobuf.TimestampR\002to\"g\n\nNewV" +
+      "ersion\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tco" +
+      "mponent\030\002 \001(\tR\tcomponent\022\037\n\013new_version\030" +
+      "\003 \001(\tR\nnewVersion\"#\n\tNewPubkey\022\026\n\006pubkey" +
+      "\030\001 \001(\tR\006pubkey\"\340\003\n\020AnouncementEvent\022+\n\021n" +
+      "ew_data_proxy_id\030\001 \001(\tH\000R\016newDataProxyId" +
+      "\0221\n\024remove_data_proxy_id\030\002 \001(\tH\000R\021remove" +
+      "DataProxyId\0221\n\024update_data_proxy_id\030\003 \001(" +
+      "\tH\000R\021updateDataProxyId\022\037\n\nnew_pubkey\030\004 \001" +
+      "(\010H\000R\tnewPubkey\022%\n\rremove_pubkey\030\005 \001(\010H\000" +
+      "R\014removePubkey\022S\n\010downtime\030\006 \001(\01325.aruna" +
+      ".api.notification.services.v2.ScheduledD" +
+      "owntimeH\000R\010downtime\022J\n\007version\030\007 \001(\0132..a" +
+      "runa.api.notification.services.v2.NewVer" +
+      "sionH\000R\007version\022?\n\005reply\030\010 \001(\0132).aruna.a" +
+      "pi.notification.services.v2.ReplyR\005reply" +
+      "B\017\n\revent_variant*\233\001\n\014EventVariant\022\035\n\031EV" +
+      "ENT_VARIANT_UNSPECIFIED\020\000\022\031\n\025EVENT_VARIA" +
+      "NT_CREATED\020\001\022\033\n\027EVENT_VARIANT_AVAILABLE\020" +
+      "\002\022\031\n\025EVENT_VARIANT_UPDATED\020\003\022\031\n\025EVENT_VA" +
+      "RIANT_DELETED\020\0042\315\006\n\030EventNotificationSer" +
+      "vice\022\233\001\n\024CreateStreamConsumer\022?.aruna.ap" +
+      "i.notification.services.v2.CreateStreamC" +
+      "onsumerRequest\032@.aruna.api.notification." +
+      "services.v2.CreateStreamConsumerResponse" +
+      "\"\000\022\233\001\n\024GetEventMessageBatch\022?.aruna.api." +
+      "notification.services.v2.GetEventMessage" +
+      "BatchRequest\032@.aruna.api.notification.se" +
+      "rvices.v2.GetEventMessageBatchResponse\"\000" +
+      "\022\257\001\n\032GetEventMessageBatchStream\022E.aruna." +
+      "api.notification.services.v2.GetEventMes" +
+      "sageBatchStreamRequest\032F.aruna.api.notif" +
       "ication.services.v2.GetEventMessageBatch" +
-      "Response\"\000\022\257\001\n\032GetEventMessageBatchStrea" +
-      "m\022E.aruna.api.notification.services.v2.G" +
-      "etEventMessageBatchStreamRequest\032F.aruna" +
-      ".api.notification.services.v2.GetEventMe" +
-      "ssageBatchStreamResponse\"\0000\001\022\244\001\n\027Acknowl" +
-      "edgeMessageBatch\022B.aruna.api.notificatio" +
-      "n.services.v2.AcknowledgeMessageBatchReq" +
-      "uest\032C.aruna.api.notification.services.v" +
-      "2.AcknowledgeMessageBatchResponse\"\000\022\252\001\n\031" +
-      "DeleteEventStreamingGroup\022D.aruna.api.no" +
-      "tification.services.v2.DeleteEventStream" +
-      "ingGroupRequest\032E.aruna.api.notification" +
-      ".services.v2.DeleteEventStreamingGroupRe" +
-      "sponse\"\000B\262\002\n&com.aruna.api.notification." +
-      "services.v2B\030NotificationServiceProtoP\000Z" +
-      "Agithub.com/ArunaStorage/go-api/aruna/ap" +
-      "i/notification/services/v2\242\002\004AANS\252\002\"Arun" +
-      "a.Api.Notification.Services.V2\312\002\"Aruna\\A" +
-      "pi\\Notification\\Services\\V2\342\002.Aruna\\Api\\" +
-      "Notification\\Services\\V2\\GPBMetadata\352\002&A" +
-      "runa::Api::Notification::Services::V2b\006p" +
-      "roto3"
+      "StreamResponse\"\0000\001\022\244\001\n\027AcknowledgeMessag" +
+      "eBatch\022B.aruna.api.notification.services" +
+      ".v2.AcknowledgeMessageBatchRequest\032C.aru" +
+      "na.api.notification.services.v2.Acknowle" +
+      "dgeMessageBatchResponse\"\000\022\233\001\n\024DeleteStre" +
+      "amConsumer\022?.aruna.api.notification.serv" +
+      "ices.v2.DeleteStreamConsumerRequest\032@.ar" +
+      "una.api.notification.services.v2.DeleteS" +
+      "treamConsumerResponse\"\000B\262\002\n&com.aruna.ap" +
+      "i.notification.services.v2B\030Notification" +
+      "ServiceProtoP\000ZAgithub.com/ArunaStorage/" +
+      "go-api/aruna/api/notification/services/v" +
+      "2\242\002\004AANS\252\002\"Aruna.Api.Notification.Servic" +
+      "es.V2\312\002\"Aruna\\Api\\Notification\\Services\\" +
+      "V2\342\002.Aruna\\Api\\Notification\\Services\\V2\\" +
+      "GPBMetadata\352\002&Aruna::Api::Notification::" +
+      "Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18498,17 +18584,17 @@ public final class NotificationServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_AcknowledgeMessageBatchResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_descriptor =
+    internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_fieldAccessorTable = new
+    internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupRequest_descriptor,
+        internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerRequest_descriptor,
         new java.lang.String[] { "StreamConsumer", });
-    internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_descriptor =
+    internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_fieldAccessorTable = new
+    internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_notification_services_v2_DeleteEventStreamingGroupResponse_descriptor,
+        internal_static_aruna_api_notification_services_v2_DeleteStreamConsumerResponse_descriptor,
         new java.lang.String[] { });
     internal_static_aruna_api_notification_services_v2_StreamFromSequence_descriptor =
       getDescriptor().getMessageTypes().get(12);

@@ -1851,674 +1851,6 @@ public final class ModelsProto {
     // @@protoc_insertion_point(enum_scope:aruna.api.storage.models.v2.ResourceVariant)
   }
 
-  public interface ExternalIdOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.ExternalId)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string external_id = 1 [json_name = "externalId"];</code>
-     * @return The externalId.
-     */
-    java.lang.String getExternalId();
-    /**
-     * <code>string external_id = 1 [json_name = "externalId"];</code>
-     * @return The bytes for externalId.
-     */
-    com.google.protobuf.ByteString
-        getExternalIdBytes();
-
-    /**
-     * <code>string idp = 2 [json_name = "idp"];</code>
-     * @return The idp.
-     */
-    java.lang.String getIdp();
-    /**
-     * <code>string idp = 2 [json_name = "idp"];</code>
-     * @return The bytes for idp.
-     */
-    com.google.protobuf.ByteString
-        getIdpBytes();
-  }
-  /**
-   * Protobuf type {@code aruna.api.storage.models.v2.ExternalId}
-   */
-  public static final class ExternalId extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.models.v2.ExternalId)
-      ExternalIdOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ExternalId.newBuilder() to construct.
-    private ExternalId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ExternalId() {
-      externalId_ = "";
-      idp_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ExternalId();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_ExternalId_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_ExternalId_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.models.v2.ModelsProto.ExternalId.class, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder.class);
-    }
-
-    public static final int EXTERNAL_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object externalId_ = "";
-    /**
-     * <code>string external_id = 1 [json_name = "externalId"];</code>
-     * @return The externalId.
-     */
-    @java.lang.Override
-    public java.lang.String getExternalId() {
-      java.lang.Object ref = externalId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        externalId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string external_id = 1 [json_name = "externalId"];</code>
-     * @return The bytes for externalId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getExternalIdBytes() {
-      java.lang.Object ref = externalId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        externalId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int IDP_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object idp_ = "";
-    /**
-     * <code>string idp = 2 [json_name = "idp"];</code>
-     * @return The idp.
-     */
-    @java.lang.Override
-    public java.lang.String getIdp() {
-      java.lang.Object ref = idp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        idp_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string idp = 2 [json_name = "idp"];</code>
-     * @return The bytes for idp.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdpBytes() {
-      java.lang.Object ref = idp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        idp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, externalId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idp_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idp_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, externalId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idp_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idp_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.storage.models.v2.ModelsProto.ExternalId)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.storage.models.v2.ModelsProto.ExternalId other = (com.aruna.api.storage.models.v2.ModelsProto.ExternalId) obj;
-
-      if (!getExternalId()
-          .equals(other.getExternalId())) return false;
-      if (!getIdp()
-          .equals(other.getIdp())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getExternalId().hashCode();
-      hash = (37 * hash) + IDP_FIELD_NUMBER;
-      hash = (53 * hash) + getIdp().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.storage.models.v2.ModelsProto.ExternalId prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.storage.models.v2.ExternalId}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.models.v2.ExternalId)
-        com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_ExternalId_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_ExternalId_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.models.v2.ModelsProto.ExternalId.class, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder.class);
-      }
-
-      // Construct using com.aruna.api.storage.models.v2.ModelsProto.ExternalId.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        externalId_ = "";
-        idp_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_ExternalId_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId getDefaultInstanceForType() {
-        return com.aruna.api.storage.models.v2.ModelsProto.ExternalId.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId build() {
-        com.aruna.api.storage.models.v2.ModelsProto.ExternalId result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId buildPartial() {
-        com.aruna.api.storage.models.v2.ModelsProto.ExternalId result = new com.aruna.api.storage.models.v2.ModelsProto.ExternalId(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.storage.models.v2.ModelsProto.ExternalId result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.externalId_ = externalId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.idp_ = idp_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.models.v2.ModelsProto.ExternalId) {
-          return mergeFrom((com.aruna.api.storage.models.v2.ModelsProto.ExternalId)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.storage.models.v2.ModelsProto.ExternalId other) {
-        if (other == com.aruna.api.storage.models.v2.ModelsProto.ExternalId.getDefaultInstance()) return this;
-        if (!other.getExternalId().isEmpty()) {
-          externalId_ = other.externalId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getIdp().isEmpty()) {
-          idp_ = other.idp_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                externalId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                idp_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object externalId_ = "";
-      /**
-       * <code>string external_id = 1 [json_name = "externalId"];</code>
-       * @return The externalId.
-       */
-      public java.lang.String getExternalId() {
-        java.lang.Object ref = externalId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          externalId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string external_id = 1 [json_name = "externalId"];</code>
-       * @return The bytes for externalId.
-       */
-      public com.google.protobuf.ByteString
-          getExternalIdBytes() {
-        java.lang.Object ref = externalId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          externalId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string external_id = 1 [json_name = "externalId"];</code>
-       * @param value The externalId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExternalId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        externalId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string external_id = 1 [json_name = "externalId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExternalId() {
-        externalId_ = getDefaultInstance().getExternalId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string external_id = 1 [json_name = "externalId"];</code>
-       * @param value The bytes for externalId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExternalIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        externalId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object idp_ = "";
-      /**
-       * <code>string idp = 2 [json_name = "idp"];</code>
-       * @return The idp.
-       */
-      public java.lang.String getIdp() {
-        java.lang.Object ref = idp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          idp_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string idp = 2 [json_name = "idp"];</code>
-       * @return The bytes for idp.
-       */
-      public com.google.protobuf.ByteString
-          getIdpBytes() {
-        java.lang.Object ref = idp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          idp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string idp = 2 [json_name = "idp"];</code>
-       * @param value The idp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdp(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        idp_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string idp = 2 [json_name = "idp"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIdp() {
-        idp_ = getDefaultInstance().getIdp();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string idp = 2 [json_name = "idp"];</code>
-       * @param value The bytes for idp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdpBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        idp_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.models.v2.ExternalId)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.models.v2.ExternalId)
-    private static final com.aruna.api.storage.models.v2.ModelsProto.ExternalId DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.models.v2.ModelsProto.ExternalId();
-    }
-
-    public static com.aruna.api.storage.models.v2.ModelsProto.ExternalId getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ExternalId>
-        PARSER = new com.google.protobuf.AbstractParser<ExternalId>() {
-      @java.lang.Override
-      public ExternalId parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ExternalId> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ExternalId> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.ExternalId getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.User)
       com.google.protobuf.MessageOrBuilder {
@@ -2548,44 +1880,20 @@ public final class ModelsProto {
      * Oidc subject ID
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+     * <code>string external_id = 2 [json_name = "externalId"];</code>
+     * @return The externalId.
      */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalId> 
-        getExternalIdsList();
+    java.lang.String getExternalId();
     /**
      * <pre>
      * Oidc subject ID
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+     * <code>string external_id = 2 [json_name = "externalId"];</code>
+     * @return The bytes for externalId.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.ExternalId getExternalIds(int index);
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-     */
-    int getExternalIdsCount();
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-     */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder> 
-        getExternalIdsOrBuilderList();
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder getExternalIdsOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
 
     /**
      * <pre>
@@ -2665,6 +1973,10 @@ public final class ModelsProto {
     com.aruna.api.storage.models.v2.ModelsProto.UserAttributesOrBuilder getAttributesOrBuilder();
   }
   /**
+   * <pre>
+   * ------------- USERS &amp; PERMISSIONS -----------------------
+   * </pre>
+   *
    * Protobuf type {@code aruna.api.storage.models.v2.User}
    */
   public static final class User extends
@@ -2678,7 +1990,7 @@ public final class ModelsProto {
     }
     private User() {
       id_ = "";
-      externalIds_ = java.util.Collections.emptyList();
+      externalId_ = "";
       displayName_ = "";
       email_ = "";
     }
@@ -2750,65 +2062,51 @@ public final class ModelsProto {
       }
     }
 
-    public static final int EXTERNAL_IDS_FIELD_NUMBER = 2;
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalId> externalIds_;
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * Oidc subject ID
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+     * <code>string external_id = 2 [json_name = "externalId"];</code>
+     * @return The externalId.
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalId> getExternalIdsList() {
-      return externalIds_;
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * Oidc subject ID
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+     * <code>string external_id = 2 [json_name = "externalId"];</code>
+     * @return The bytes for externalId.
      */
     @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder> 
-        getExternalIdsOrBuilderList() {
-      return externalIds_;
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-     */
-    @java.lang.Override
-    public int getExternalIdsCount() {
-      return externalIds_.size();
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.ExternalId getExternalIds(int index) {
-      return externalIds_.get(index);
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder getExternalIdsOrBuilder(
-        int index) {
-      return externalIds_.get(index);
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int DISPLAY_NAME_FIELD_NUMBER = 3;
@@ -2975,8 +2273,8 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      for (int i = 0; i < externalIds_.size(); i++) {
-        output.writeMessage(2, externalIds_.get(i));
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, displayName_);
@@ -3002,9 +2300,8 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      for (int i = 0; i < externalIds_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, externalIds_.get(i));
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, displayName_);
@@ -3037,8 +2334,8 @@ public final class ModelsProto {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (!getExternalIdsList()
-          .equals(other.getExternalIdsList())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
       if (!getDisplayName()
           .equals(other.getDisplayName())) return false;
       if (getActive()
@@ -3063,10 +2360,8 @@ public final class ModelsProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      if (getExternalIdsCount() > 0) {
-        hash = (37 * hash) + EXTERNAL_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getExternalIdsList().hashCode();
-      }
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
       hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDisplayName().hashCode();
       hash = (37 * hash) + ACTIVE_FIELD_NUMBER;
@@ -3176,6 +2471,10 @@ public final class ModelsProto {
       return builder;
     }
     /**
+     * <pre>
+     * ------------- USERS &amp; PERMISSIONS -----------------------
+     * </pre>
+     *
      * Protobuf type {@code aruna.api.storage.models.v2.User}
      */
     public static final class Builder extends
@@ -3210,13 +2509,7 @@ public final class ModelsProto {
         super.clear();
         bitField0_ = 0;
         id_ = "";
-        if (externalIdsBuilder_ == null) {
-          externalIds_ = java.util.Collections.emptyList();
-        } else {
-          externalIds_ = null;
-          externalIdsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        externalId_ = "";
         displayName_ = "";
         active_ = false;
         email_ = "";
@@ -3251,28 +2544,18 @@ public final class ModelsProto {
       @java.lang.Override
       public com.aruna.api.storage.models.v2.ModelsProto.User buildPartial() {
         com.aruna.api.storage.models.v2.ModelsProto.User result = new com.aruna.api.storage.models.v2.ModelsProto.User(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.aruna.api.storage.models.v2.ModelsProto.User result) {
-        if (externalIdsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            externalIds_ = java.util.Collections.unmodifiableList(externalIds_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.externalIds_ = externalIds_;
-        } else {
-          result.externalIds_ = externalIdsBuilder_.build();
-        }
       }
 
       private void buildPartial0(com.aruna.api.storage.models.v2.ModelsProto.User result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.externalId_ = externalId_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.displayName_ = displayName_;
@@ -3307,31 +2590,10 @@ public final class ModelsProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (externalIdsBuilder_ == null) {
-          if (!other.externalIds_.isEmpty()) {
-            if (externalIds_.isEmpty()) {
-              externalIds_ = other.externalIds_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureExternalIdsIsMutable();
-              externalIds_.addAll(other.externalIds_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.externalIds_.isEmpty()) {
-            if (externalIdsBuilder_.isEmpty()) {
-              externalIdsBuilder_.dispose();
-              externalIdsBuilder_ = null;
-              externalIds_ = other.externalIds_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              externalIdsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getExternalIdsFieldBuilder() : null;
-            } else {
-              externalIdsBuilder_.addAllMessages(other.externalIds_);
-            }
-          }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
         }
         if (!other.getDisplayName().isEmpty()) {
           displayName_ = other.displayName_;
@@ -3381,16 +2643,8 @@ public final class ModelsProto {
                 break;
               } // case 10
               case 18: {
-                com.aruna.api.storage.models.v2.ModelsProto.ExternalId m =
-                    input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.ExternalId.parser(),
-                        extensionRegistry);
-                if (externalIdsBuilder_ == null) {
-                  ensureExternalIdsIsMutable();
-                  externalIds_.add(m);
-                } else {
-                  externalIdsBuilder_.addMessage(m);
-                }
+                externalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -3524,30 +2778,25 @@ public final class ModelsProto {
         return this;
       }
 
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalId> externalIds_ =
-        java.util.Collections.emptyList();
-      private void ensureExternalIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          externalIds_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.ExternalId>(externalIds_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.ExternalId, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder, com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder> externalIdsBuilder_;
-
+      private java.lang.Object externalId_ = "";
       /**
        * <pre>
        * Oidc subject ID
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+       * <code>string external_id = 2 [json_name = "externalId"];</code>
+       * @return The externalId.
        */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalId> getExternalIdsList() {
-        if (externalIdsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(externalIds_);
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
         } else {
-          return externalIdsBuilder_.getMessageList();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3555,13 +2804,20 @@ public final class ModelsProto {
        * Oidc subject ID
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+       * <code>string external_id = 2 [json_name = "externalId"];</code>
+       * @return The bytes for externalId.
        */
-      public int getExternalIdsCount() {
-        if (externalIdsBuilder_ == null) {
-          return externalIds_.size();
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
         } else {
-          return externalIdsBuilder_.getCount();
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
@@ -3569,34 +2825,16 @@ public final class ModelsProto {
        * Oidc subject ID
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+       * <code>string external_id = 2 [json_name = "externalId"];</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId getExternalIds(int index) {
-        if (externalIdsBuilder_ == null) {
-          return externalIds_.get(index);
-        } else {
-          return externalIdsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder setExternalIds(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalId value) {
-        if (externalIdsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExternalIdsIsMutable();
-          externalIds_.set(index, value);
-          onChanged();
-        } else {
-          externalIdsBuilder_.setMessage(index, value);
-        }
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        externalId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3604,17 +2842,13 @@ public final class ModelsProto {
        * Oidc subject ID
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+       * <code>string external_id = 2 [json_name = "externalId"];</code>
+       * @return This builder for chaining.
        */
-      public Builder setExternalIds(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder builderForValue) {
-        if (externalIdsBuilder_ == null) {
-          ensureExternalIdsIsMutable();
-          externalIds_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          externalIdsBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder clearExternalId() {
+        externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
         return this;
       }
       /**
@@ -3622,218 +2856,18 @@ public final class ModelsProto {
        * Oidc subject ID
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
+       * <code>string external_id = 2 [json_name = "externalId"];</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
        */
-      public Builder addExternalIds(com.aruna.api.storage.models.v2.ModelsProto.ExternalId value) {
-        if (externalIdsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExternalIdsIsMutable();
-          externalIds_.add(value);
-          onChanged();
-        } else {
-          externalIdsBuilder_.addMessage(value);
-        }
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        externalId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder addExternalIds(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalId value) {
-        if (externalIdsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExternalIdsIsMutable();
-          externalIds_.add(index, value);
-          onChanged();
-        } else {
-          externalIdsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder addExternalIds(
-          com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder builderForValue) {
-        if (externalIdsBuilder_ == null) {
-          ensureExternalIdsIsMutable();
-          externalIds_.add(builderForValue.build());
-          onChanged();
-        } else {
-          externalIdsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder addExternalIds(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder builderForValue) {
-        if (externalIdsBuilder_ == null) {
-          ensureExternalIdsIsMutable();
-          externalIds_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          externalIdsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder addAllExternalIds(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalId> values) {
-        if (externalIdsBuilder_ == null) {
-          ensureExternalIdsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, externalIds_);
-          onChanged();
-        } else {
-          externalIdsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder clearExternalIds() {
-        if (externalIdsBuilder_ == null) {
-          externalIds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          externalIdsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public Builder removeExternalIds(int index) {
-        if (externalIdsBuilder_ == null) {
-          ensureExternalIdsIsMutable();
-          externalIds_.remove(index);
-          onChanged();
-        } else {
-          externalIdsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder getExternalIdsBuilder(
-          int index) {
-        return getExternalIdsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder getExternalIdsOrBuilder(
-          int index) {
-        if (externalIdsBuilder_ == null) {
-          return externalIds_.get(index);  } else {
-          return externalIdsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder> 
-           getExternalIdsOrBuilderList() {
-        if (externalIdsBuilder_ != null) {
-          return externalIdsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(externalIds_);
-        }
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder addExternalIdsBuilder() {
-        return getExternalIdsFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.ExternalId.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder addExternalIdsBuilder(
-          int index) {
-        return getExternalIdsFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Oidc subject ID
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalId external_ids = 2 [json_name = "externalIds"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder> 
-           getExternalIdsBuilderList() {
-        return getExternalIdsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.ExternalId, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder, com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder> 
-          getExternalIdsFieldBuilder() {
-        if (externalIdsBuilder_ == null) {
-          externalIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.ExternalId, com.aruna.api.storage.models.v2.ModelsProto.ExternalId.Builder, com.aruna.api.storage.models.v2.ModelsProto.ExternalIdOrBuilder>(
-                  externalIds_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          externalIds_ = null;
-        }
-        return externalIdsBuilder_;
       }
 
       private java.lang.Object displayName_ = "";
@@ -5625,44 +4659,32 @@ public final class ModelsProto {
         getNameBytes();
 
     /**
-     * <code>string user_id = 3 [json_name = "userId"];</code>
-     * @return The userId.
-     */
-    java.lang.String getUserId();
-    /**
-     * <code>string user_id = 3 [json_name = "userId"];</code>
-     * @return The bytes for userId.
-     */
-    com.google.protobuf.ByteString
-        getUserIdBytes();
-
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
      * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
      * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 
@@ -5671,7 +4693,7 @@ public final class ModelsProto {
      * Tokens can either be personal or resource "specific"
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
      * @return Whether the permission field is set.
      */
     boolean hasPermission();
@@ -5680,7 +4702,7 @@ public final class ModelsProto {
      * Tokens can either be personal or resource "specific"
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
      * @return The permission.
      */
     com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission();
@@ -5689,24 +4711,9 @@ public final class ModelsProto {
      * Tokens can either be personal or resource "specific"
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-     * @return Whether the usedAt field is set.
-     */
-    boolean hasUsedAt();
-    /**
-     * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-     * @return The usedAt.
-     */
-    com.google.protobuf.Timestamp getUsedAt();
-    /**
-     * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getUsedAtOrBuilder();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Token}
@@ -5723,7 +4730,6 @@ public final class ModelsProto {
     private Token() {
       id_ = "";
       name_ = "";
-      userId_ = "";
     }
 
     @java.lang.Override
@@ -5824,49 +4830,10 @@ public final class ModelsProto {
       }
     }
 
-    public static final int USER_ID_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object userId_ = "";
-    /**
-     * <code>string user_id = 3 [json_name = "userId"];</code>
-     * @return The userId.
-     */
-    @java.lang.Override
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string user_id = 3 [json_name = "userId"];</code>
-     * @return The bytes for userId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CREATED_AT_FIELD_NUMBER = 4;
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     @java.lang.Override
@@ -5874,7 +4841,7 @@ public final class ModelsProto {
       return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     @java.lang.Override
@@ -5882,17 +4849,17 @@ public final class ModelsProto {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
-    public static final int EXPIRES_AT_FIELD_NUMBER = 5;
+    public static final int EXPIRES_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp expiresAt_;
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
      * @return Whether the expiresAt field is set.
      */
     @java.lang.Override
@@ -5900,7 +4867,7 @@ public final class ModelsProto {
       return expiresAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
      * @return The expiresAt.
      */
     @java.lang.Override
@@ -5908,21 +4875,21 @@ public final class ModelsProto {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
 
-    public static final int PERMISSION_FIELD_NUMBER = 6;
+    public static final int PERMISSION_FIELD_NUMBER = 5;
     private com.aruna.api.storage.models.v2.ModelsProto.Permission permission_;
     /**
      * <pre>
      * Tokens can either be personal or resource "specific"
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
      * @return Whether the permission field is set.
      */
     @java.lang.Override
@@ -5934,7 +4901,7 @@ public final class ModelsProto {
      * Tokens can either be personal or resource "specific"
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
      * @return The permission.
      */
     @java.lang.Override
@@ -5946,37 +4913,11 @@ public final class ModelsProto {
      * Tokens can either be personal or resource "specific"
      * </pre>
      *
-     * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+     * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
       return permission_ == null ? com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance() : permission_;
-    }
-
-    public static final int USED_AT_FIELD_NUMBER = 7;
-    private com.google.protobuf.Timestamp usedAt_;
-    /**
-     * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-     * @return Whether the usedAt field is set.
-     */
-    @java.lang.Override
-    public boolean hasUsedAt() {
-      return usedAt_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-     * @return The usedAt.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getUsedAt() {
-      return usedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : usedAt_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getUsedAtOrBuilder() {
-      return usedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : usedAt_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5999,20 +4940,14 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
-      }
       if (createdAt_ != null) {
-        output.writeMessage(4, getCreatedAt());
+        output.writeMessage(3, getCreatedAt());
       }
       if (expiresAt_ != null) {
-        output.writeMessage(5, getExpiresAt());
+        output.writeMessage(4, getExpiresAt());
       }
       if (permission_ != null) {
-        output.writeMessage(6, getPermission());
-      }
-      if (usedAt_ != null) {
-        output.writeMessage(7, getUsedAt());
+        output.writeMessage(5, getPermission());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6029,24 +4964,17 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
-      }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getCreatedAt());
+          .computeMessageSize(3, getCreatedAt());
       }
       if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getExpiresAt());
+          .computeMessageSize(4, getExpiresAt());
       }
       if (permission_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getPermission());
-      }
-      if (usedAt_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getUsedAt());
+          .computeMessageSize(5, getPermission());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6067,8 +4995,6 @@ public final class ModelsProto {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!getUserId()
-          .equals(other.getUserId())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -6083,11 +5009,6 @@ public final class ModelsProto {
       if (hasPermission()) {
         if (!getPermission()
             .equals(other.getPermission())) return false;
-      }
-      if (hasUsedAt() != other.hasUsedAt()) return false;
-      if (hasUsedAt()) {
-        if (!getUsedAt()
-            .equals(other.getUsedAt())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -6104,8 +5025,6 @@ public final class ModelsProto {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId().hashCode();
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -6117,10 +5036,6 @@ public final class ModelsProto {
       if (hasPermission()) {
         hash = (37 * hash) + PERMISSION_FIELD_NUMBER;
         hash = (53 * hash) + getPermission().hashCode();
-      }
-      if (hasUsedAt()) {
-        hash = (37 * hash) + USED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getUsedAt().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6255,7 +5170,6 @@ public final class ModelsProto {
         bitField0_ = 0;
         id_ = "";
         name_ = "";
-        userId_ = "";
         createdAt_ = null;
         if (createdAtBuilder_ != null) {
           createdAtBuilder_.dispose();
@@ -6270,11 +5184,6 @@ public final class ModelsProto {
         if (permissionBuilder_ != null) {
           permissionBuilder_.dispose();
           permissionBuilder_ = null;
-        }
-        usedAt_ = null;
-        if (usedAtBuilder_ != null) {
-          usedAtBuilder_.dispose();
-          usedAtBuilder_ = null;
         }
         return this;
       }
@@ -6316,27 +5225,19 @@ public final class ModelsProto {
           result.name_ = name_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.userId_ = userId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.expiresAt_ = expiresAtBuilder_ == null
               ? expiresAt_
               : expiresAtBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.permission_ = permissionBuilder_ == null
               ? permission_
               : permissionBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.usedAt_ = usedAtBuilder_ == null
-              ? usedAt_
-              : usedAtBuilder_.build();
         }
       }
 
@@ -6362,11 +5263,6 @@ public final class ModelsProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (!other.getUserId().isEmpty()) {
-          userId_ = other.userId_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
         }
@@ -6375,9 +5271,6 @@ public final class ModelsProto {
         }
         if (other.hasPermission()) {
           mergePermission(other.getPermission());
-        }
-        if (other.hasUsedAt()) {
-          mergeUsedAt(other.getUsedAt());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6416,38 +5309,26 @@ public final class ModelsProto {
                 break;
               } // case 18
               case 26: {
-                userId_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
-                    getCreatedAtFieldBuilder().getBuilder(),
+                    getExpiresAtFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
-                    getExpiresAtFieldBuilder().getBuilder(),
+                    getPermissionFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
-              case 50: {
-                input.readMessage(
-                    getPermissionFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              case 58: {
-                input.readMessage(
-                    getUsedAtFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6609,90 +5490,18 @@ public final class ModelsProto {
         return this;
       }
 
-      private java.lang.Object userId_ = "";
-      /**
-       * <code>string user_id = 3 [json_name = "userId"];</code>
-       * @return The userId.
-       */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 3 [json_name = "userId"];</code>
-       * @return The bytes for userId.
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 3 [json_name = "userId"];</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        userId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 3 [json_name = "userId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        userId_ = getDefaultInstance().getUserId();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 3 [json_name = "userId"];</code>
-       * @param value The bytes for userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        userId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -6703,7 +5512,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -6714,12 +5523,12 @@ public final class ModelsProto {
         } else {
           createdAtBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -6728,16 +5537,16 @@ public final class ModelsProto {
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             createdAt_ != null &&
             createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getCreatedAtBuilder().mergeFrom(value);
@@ -6747,15 +5556,15 @@ public final class ModelsProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         createdAt_ = null;
         if (createdAtBuilder_ != null) {
           createdAtBuilder_.dispose();
@@ -6765,15 +5574,15 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -6784,7 +5593,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -6804,14 +5613,14 @@ public final class ModelsProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        * @return The expiresAt.
        */
       public com.google.protobuf.Timestamp getExpiresAt() {
@@ -6822,7 +5631,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
@@ -6833,12 +5642,12 @@ public final class ModelsProto {
         } else {
           expiresAtBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       public Builder setExpiresAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -6847,16 +5656,16 @@ public final class ModelsProto {
         } else {
           expiresAtBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000008) != 0) &&
             expiresAt_ != null &&
             expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getExpiresAtBuilder().mergeFrom(value);
@@ -6866,15 +5675,15 @@ public final class ModelsProto {
         } else {
           expiresAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       public Builder clearExpiresAt() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         expiresAt_ = null;
         if (expiresAtBuilder_ != null) {
           expiresAtBuilder_.dispose();
@@ -6884,15 +5693,15 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return getExpiresAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
         if (expiresAtBuilder_ != null) {
@@ -6903,7 +5712,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 5 [json_name = "expiresAt"];</code>
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -6927,18 +5736,18 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        * @return Whether the permission field is set.
        */
       public boolean hasPermission() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        * @return The permission.
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission getPermission() {
@@ -6953,7 +5762,7 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       public Builder setPermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
         if (permissionBuilder_ == null) {
@@ -6964,7 +5773,7 @@ public final class ModelsProto {
         } else {
           permissionBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6973,7 +5782,7 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       public Builder setPermission(
           com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
@@ -6982,7 +5791,7 @@ public final class ModelsProto {
         } else {
           permissionBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6991,11 +5800,11 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       public Builder mergePermission(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
         if (permissionBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
+          if (((bitField0_ & 0x00000010) != 0) &&
             permission_ != null &&
             permission_ != com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance()) {
             getPermissionBuilder().mergeFrom(value);
@@ -7005,7 +5814,7 @@ public final class ModelsProto {
         } else {
           permissionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7014,10 +5823,10 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       public Builder clearPermission() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         permission_ = null;
         if (permissionBuilder_ != null) {
           permissionBuilder_.dispose();
@@ -7031,10 +5840,10 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder getPermissionBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getPermissionFieldBuilder().getBuilder();
       }
@@ -7043,7 +5852,7 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPermissionOrBuilder() {
         if (permissionBuilder_ != null) {
@@ -7058,7 +5867,7 @@ public final class ModelsProto {
        * Tokens can either be personal or resource "specific"
        * </pre>
        *
-       * <code>.aruna.api.storage.models.v2.Permission permission = 6 [json_name = "permission"];</code>
+       * <code>.aruna.api.storage.models.v2.Permission permission = 5 [json_name = "permission"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
@@ -7072,125 +5881,6 @@ public final class ModelsProto {
           permission_ = null;
         }
         return permissionBuilder_;
-      }
-
-      private com.google.protobuf.Timestamp usedAt_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> usedAtBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       * @return Whether the usedAt field is set.
-       */
-      public boolean hasUsedAt() {
-        return ((bitField0_ & 0x00000040) != 0);
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       * @return The usedAt.
-       */
-      public com.google.protobuf.Timestamp getUsedAt() {
-        if (usedAtBuilder_ == null) {
-          return usedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : usedAt_;
-        } else {
-          return usedAtBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      public Builder setUsedAt(com.google.protobuf.Timestamp value) {
-        if (usedAtBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          usedAt_ = value;
-        } else {
-          usedAtBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      public Builder setUsedAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (usedAtBuilder_ == null) {
-          usedAt_ = builderForValue.build();
-        } else {
-          usedAtBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      public Builder mergeUsedAt(com.google.protobuf.Timestamp value) {
-        if (usedAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            usedAt_ != null &&
-            usedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getUsedAtBuilder().mergeFrom(value);
-          } else {
-            usedAt_ = value;
-          }
-        } else {
-          usedAtBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      public Builder clearUsedAt() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        usedAt_ = null;
-        if (usedAtBuilder_ != null) {
-          usedAtBuilder_.dispose();
-          usedAtBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getUsedAtBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getUsedAtFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getUsedAtOrBuilder() {
-        if (usedAtBuilder_ != null) {
-          return usedAtBuilder_.getMessageOrBuilder();
-        } else {
-          return usedAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : usedAt_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp used_at = 7 [json_name = "usedAt"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getUsedAtFieldBuilder() {
-        if (usedAtBuilder_ == null) {
-          usedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getUsedAt(),
-                  getParentForChildren(),
-                  isClean());
-          usedAt_ = null;
-        }
-        return usedAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17318,6 +16008,1522 @@ public final class ModelsProto {
 
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.Endpoint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CopyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.Copy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resource = 1 [json_name = "resource"];</code>
+     * @return The resource.
+     */
+    java.lang.String getResource();
+    /**
+     * <code>string resource = 1 [json_name = "resource"];</code>
+     * @return The bytes for resource.
+     */
+    com.google.protobuf.ByteString
+        getResourceBytes();
+
+    /**
+     * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+     * @return The targetEndpoint.
+     */
+    java.lang.String getTargetEndpoint();
+    /**
+     * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+     * @return The bytes for targetEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getTargetEndpointBytes();
+
+    /**
+     * <code>bool push = 3 [json_name = "push"];</code>
+     * @return The push.
+     */
+    boolean getPush();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.models.v2.Copy}
+   */
+  public static final class Copy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.models.v2.Copy)
+      CopyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Copy.newBuilder() to construct.
+    private Copy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Copy() {
+      resource_ = "";
+      targetEndpoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Copy();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Copy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Copy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.models.v2.ModelsProto.Copy.class, com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder.class);
+    }
+
+    public static final int RESOURCE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resource_ = "";
+    /**
+     * <code>string resource = 1 [json_name = "resource"];</code>
+     * @return The resource.
+     */
+    @java.lang.Override
+    public java.lang.String getResource() {
+      java.lang.Object ref = resource_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resource_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource = 1 [json_name = "resource"];</code>
+     * @return The bytes for resource.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceBytes() {
+      java.lang.Object ref = resource_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resource_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGET_ENDPOINT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object targetEndpoint_ = "";
+    /**
+     * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+     * @return The targetEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getTargetEndpoint() {
+      java.lang.Object ref = targetEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        targetEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+     * @return The bytes for targetEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetEndpointBytes() {
+      java.lang.Object ref = targetEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        targetEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUSH_FIELD_NUMBER = 3;
+    private boolean push_ = false;
+    /**
+     * <code>bool push = 3 [json_name = "push"];</code>
+     * @return The push.
+     */
+    @java.lang.Override
+    public boolean getPush() {
+      return push_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resource_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resource_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetEndpoint_);
+      }
+      if (push_ != false) {
+        output.writeBool(3, push_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resource_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resource_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, targetEndpoint_);
+      }
+      if (push_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, push_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.models.v2.ModelsProto.Copy)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.models.v2.ModelsProto.Copy other = (com.aruna.api.storage.models.v2.ModelsProto.Copy) obj;
+
+      if (!getResource()
+          .equals(other.getResource())) return false;
+      if (!getTargetEndpoint()
+          .equals(other.getTargetEndpoint())) return false;
+      if (getPush()
+          != other.getPush()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getResource().hashCode();
+      hash = (37 * hash) + TARGET_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetEndpoint().hashCode();
+      hash = (37 * hash) + PUSH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPush());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.models.v2.ModelsProto.Copy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.models.v2.Copy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.models.v2.Copy)
+        com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Copy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Copy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.models.v2.ModelsProto.Copy.class, com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.models.v2.ModelsProto.Copy.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        resource_ = "";
+        targetEndpoint_ = "";
+        push_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Copy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Copy getDefaultInstanceForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Copy build() {
+        com.aruna.api.storage.models.v2.ModelsProto.Copy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Copy buildPartial() {
+        com.aruna.api.storage.models.v2.ModelsProto.Copy result = new com.aruna.api.storage.models.v2.ModelsProto.Copy(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.models.v2.ModelsProto.Copy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.resource_ = resource_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.targetEndpoint_ = targetEndpoint_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.push_ = push_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.models.v2.ModelsProto.Copy) {
+          return mergeFrom((com.aruna.api.storage.models.v2.ModelsProto.Copy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.models.v2.ModelsProto.Copy other) {
+        if (other == com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance()) return this;
+        if (!other.getResource().isEmpty()) {
+          resource_ = other.resource_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTargetEndpoint().isEmpty()) {
+          targetEndpoint_ = other.targetEndpoint_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getPush() != false) {
+          setPush(other.getPush());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                resource_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                targetEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                push_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object resource_ = "";
+      /**
+       * <code>string resource = 1 [json_name = "resource"];</code>
+       * @return The resource.
+       */
+      public java.lang.String getResource() {
+        java.lang.Object ref = resource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resource_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource = 1 [json_name = "resource"];</code>
+       * @return The bytes for resource.
+       */
+      public com.google.protobuf.ByteString
+          getResourceBytes() {
+        java.lang.Object ref = resource_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resource_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource = 1 [json_name = "resource"];</code>
+       * @param value The resource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        resource_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource = 1 [json_name = "resource"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResource() {
+        resource_ = getDefaultInstance().getResource();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource = 1 [json_name = "resource"];</code>
+       * @param value The bytes for resource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        resource_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object targetEndpoint_ = "";
+      /**
+       * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+       * @return The targetEndpoint.
+       */
+      public java.lang.String getTargetEndpoint() {
+        java.lang.Object ref = targetEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          targetEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+       * @return The bytes for targetEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getTargetEndpointBytes() {
+        java.lang.Object ref = targetEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          targetEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+       * @param value The targetEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        targetEndpoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetEndpoint() {
+        targetEndpoint_ = getDefaultInstance().getTargetEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string target_endpoint = 2 [json_name = "targetEndpoint"];</code>
+       * @param value The bytes for targetEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetEndpoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean push_ ;
+      /**
+       * <code>bool push = 3 [json_name = "push"];</code>
+       * @return The push.
+       */
+      @java.lang.Override
+      public boolean getPush() {
+        return push_;
+      }
+      /**
+       * <code>bool push = 3 [json_name = "push"];</code>
+       * @param value The push to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPush(boolean value) {
+
+        push_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool push = 3 [json_name = "push"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPush() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        push_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.models.v2.Copy)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.models.v2.Copy)
+    private static final com.aruna.api.storage.models.v2.ModelsProto.Copy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.models.v2.ModelsProto.Copy();
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Copy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Copy>
+        PARSER = new com.google.protobuf.AbstractParser<Copy>() {
+      @java.lang.Override
+      public Copy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Copy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Copy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.Copy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContextOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.Context)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+     * @return Whether the s3Credentials field is set.
+     */
+    boolean hasS3Credentials();
+    /**
+     * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+     * @return The s3Credentials.
+     */
+    boolean getS3Credentials();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+     * @return Whether the copy field is set.
+     */
+    boolean hasCopy();
+    /**
+     * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+     * @return The copy.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.Copy getCopy();
+    /**
+     * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder getCopyOrBuilder();
+
+    com.aruna.api.storage.models.v2.ModelsProto.Context.ContextCase getContextCase();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.models.v2.Context}
+   */
+  public static final class Context extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.models.v2.Context)
+      ContextOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Context.newBuilder() to construct.
+    private Context(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Context() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Context();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Context_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.models.v2.ModelsProto.Context.class, com.aruna.api.storage.models.v2.ModelsProto.Context.Builder.class);
+    }
+
+    private int contextCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object context_;
+    public enum ContextCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      S3_CREDENTIALS(1),
+      COPY(2),
+      CONTEXT_NOT_SET(0);
+      private final int value;
+      private ContextCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContextCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContextCase forNumber(int value) {
+        switch (value) {
+          case 1: return S3_CREDENTIALS;
+          case 2: return COPY;
+          case 0: return CONTEXT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContextCase
+    getContextCase() {
+      return ContextCase.forNumber(
+          contextCase_);
+    }
+
+    public static final int S3_CREDENTIALS_FIELD_NUMBER = 1;
+    /**
+     * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+     * @return Whether the s3Credentials field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3Credentials() {
+      return contextCase_ == 1;
+    }
+    /**
+     * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+     * @return The s3Credentials.
+     */
+    @java.lang.Override
+    public boolean getS3Credentials() {
+      if (contextCase_ == 1) {
+        return (java.lang.Boolean) context_;
+      }
+      return false;
+    }
+
+    public static final int COPY_FIELD_NUMBER = 2;
+    /**
+     * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+     * @return Whether the copy field is set.
+     */
+    @java.lang.Override
+    public boolean hasCopy() {
+      return contextCase_ == 2;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+     * @return The copy.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.Copy getCopy() {
+      if (contextCase_ == 2) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder getCopyOrBuilder() {
+      if (contextCase_ == 2) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contextCase_ == 1) {
+        output.writeBool(
+            1, (boolean)((java.lang.Boolean) context_));
+      }
+      if (contextCase_ == 2) {
+        output.writeMessage(2, (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contextCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              1, (boolean)((java.lang.Boolean) context_));
+      }
+      if (contextCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.models.v2.ModelsProto.Context)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.models.v2.ModelsProto.Context other = (com.aruna.api.storage.models.v2.ModelsProto.Context) obj;
+
+      if (!getContextCase().equals(other.getContextCase())) return false;
+      switch (contextCase_) {
+        case 1:
+          if (getS3Credentials()
+              != other.getS3Credentials()) return false;
+          break;
+        case 2:
+          if (!getCopy()
+              .equals(other.getCopy())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (contextCase_) {
+        case 1:
+          hash = (37 * hash) + S3_CREDENTIALS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getS3Credentials());
+          break;
+        case 2:
+          hash = (37 * hash) + COPY_FIELD_NUMBER;
+          hash = (53 * hash) + getCopy().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.models.v2.ModelsProto.Context prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.models.v2.Context}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.models.v2.Context)
+        com.aruna.api.storage.models.v2.ModelsProto.ContextOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Context_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.models.v2.ModelsProto.Context.class, com.aruna.api.storage.models.v2.ModelsProto.Context.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.models.v2.ModelsProto.Context.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (copyBuilder_ != null) {
+          copyBuilder_.clear();
+        }
+        contextCase_ = 0;
+        context_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_Context_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Context getDefaultInstanceForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Context build() {
+        com.aruna.api.storage.models.v2.ModelsProto.Context result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Context buildPartial() {
+        com.aruna.api.storage.models.v2.ModelsProto.Context result = new com.aruna.api.storage.models.v2.ModelsProto.Context(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.models.v2.ModelsProto.Context result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.aruna.api.storage.models.v2.ModelsProto.Context result) {
+        result.contextCase_ = contextCase_;
+        result.context_ = this.context_;
+        if (contextCase_ == 2 &&
+            copyBuilder_ != null) {
+          result.context_ = copyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.models.v2.ModelsProto.Context) {
+          return mergeFrom((com.aruna.api.storage.models.v2.ModelsProto.Context)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.models.v2.ModelsProto.Context other) {
+        if (other == com.aruna.api.storage.models.v2.ModelsProto.Context.getDefaultInstance()) return this;
+        switch (other.getContextCase()) {
+          case S3_CREDENTIALS: {
+            setS3Credentials(other.getS3Credentials());
+            break;
+          }
+          case COPY: {
+            mergeCopy(other.getCopy());
+            break;
+          }
+          case CONTEXT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                context_ = input.readBool();
+                contextCase_ = 1;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getCopyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contextCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int contextCase_ = 0;
+      private java.lang.Object context_;
+      public ContextCase
+          getContextCase() {
+        return ContextCase.forNumber(
+            contextCase_);
+      }
+
+      public Builder clearContext() {
+        contextCase_ = 0;
+        context_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+       * @return Whether the s3Credentials field is set.
+       */
+      public boolean hasS3Credentials() {
+        return contextCase_ == 1;
+      }
+      /**
+       * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+       * @return The s3Credentials.
+       */
+      public boolean getS3Credentials() {
+        if (contextCase_ == 1) {
+          return (java.lang.Boolean) context_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+       * @param value The s3Credentials to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS3Credentials(boolean value) {
+
+        contextCase_ = 1;
+        context_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool s3_credentials = 1 [json_name = "s3Credentials"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS3Credentials() {
+        if (contextCase_ == 1) {
+          contextCase_ = 0;
+          context_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Copy, com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder, com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder> copyBuilder_;
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       * @return Whether the copy field is set.
+       */
+      @java.lang.Override
+      public boolean hasCopy() {
+        return contextCase_ == 2;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       * @return The copy.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Copy getCopy() {
+        if (copyBuilder_ == null) {
+          if (contextCase_ == 2) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+        } else {
+          if (contextCase_ == 2) {
+            return copyBuilder_.getMessage();
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      public Builder setCopy(com.aruna.api.storage.models.v2.ModelsProto.Copy value) {
+        if (copyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          context_ = value;
+          onChanged();
+        } else {
+          copyBuilder_.setMessage(value);
+        }
+        contextCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      public Builder setCopy(
+          com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder builderForValue) {
+        if (copyBuilder_ == null) {
+          context_ = builderForValue.build();
+          onChanged();
+        } else {
+          copyBuilder_.setMessage(builderForValue.build());
+        }
+        contextCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      public Builder mergeCopy(com.aruna.api.storage.models.v2.ModelsProto.Copy value) {
+        if (copyBuilder_ == null) {
+          if (contextCase_ == 2 &&
+              context_ != com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance()) {
+            context_ = com.aruna.api.storage.models.v2.ModelsProto.Copy.newBuilder((com.aruna.api.storage.models.v2.ModelsProto.Copy) context_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            context_ = value;
+          }
+          onChanged();
+        } else {
+          if (contextCase_ == 2) {
+            copyBuilder_.mergeFrom(value);
+          } else {
+            copyBuilder_.setMessage(value);
+          }
+        }
+        contextCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      public Builder clearCopy() {
+        if (copyBuilder_ == null) {
+          if (contextCase_ == 2) {
+            contextCase_ = 0;
+            context_ = null;
+            onChanged();
+          }
+        } else {
+          if (contextCase_ == 2) {
+            contextCase_ = 0;
+            context_ = null;
+          }
+          copyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder getCopyBuilder() {
+        return getCopyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder getCopyOrBuilder() {
+        if ((contextCase_ == 2) && (copyBuilder_ != null)) {
+          return copyBuilder_.getMessageOrBuilder();
+        } else {
+          if (contextCase_ == 2) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Copy copy = 2 [json_name = "copy"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Copy, com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder, com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder> 
+          getCopyFieldBuilder() {
+        if (copyBuilder_ == null) {
+          if (!(contextCase_ == 2)) {
+            context_ = com.aruna.api.storage.models.v2.ModelsProto.Copy.getDefaultInstance();
+          }
+          copyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.Copy, com.aruna.api.storage.models.v2.ModelsProto.Copy.Builder, com.aruna.api.storage.models.v2.ModelsProto.CopyOrBuilder>(
+                  (com.aruna.api.storage.models.v2.ModelsProto.Copy) context_,
+                  getParentForChildren(),
+                  isClean());
+          context_ = null;
+        }
+        contextCase_ = 2;
+        onChanged();
+        return copyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.models.v2.Context)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.models.v2.Context)
+    private static final com.aruna.api.storage.models.v2.ModelsProto.Context DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.models.v2.ModelsProto.Context();
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.Context getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Context>
+        PARSER = new com.google.protobuf.AbstractParser<Context>() {
+      @java.lang.Override
+      public Context parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Context> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Context> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.Context getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -29688,11 +29894,6 @@ public final class ModelsProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_models_v2_ExternalId_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_models_v2_ExternalId_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_models_v2_User_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -29763,6 +29964,16 @@ public final class ModelsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_models_v2_Endpoint_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_models_v2_Copy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_models_v2_Copy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_models_v2_Context_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_models_v2_GenericResource_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -29798,327 +30009,334 @@ public final class ModelsProto {
     java.lang.String[] descriptorData = {
       "\n(aruna/api/storage/models/v2/models.pro" +
       "to\022\033aruna.api.storage.models.v2\032\037google/" +
-      "protobuf/timestamp.proto\"?\n\nExternalId\022\037" +
-      "\n\013external_id\030\001 \001(\tR\nexternalId\022\020\n\003idp\030\002" +
-      " \001(\tR\003idp\"\200\002\n\004User\022\016\n\002id\030\001 \001(\tR\002id\022J\n\014ex" +
-      "ternal_ids\030\002 \003(\0132\'.aruna.api.storage.mod" +
-      "els.v2.ExternalIdR\013externalIds\022!\n\014displa" +
-      "y_name\030\003 \001(\tR\013displayName\022\026\n\006active\030\004 \001(" +
-      "\010R\006active\022\024\n\005email\030\005 \001(\tR\005email\022K\n\nattri" +
-      "butes\030\006 \001(\0132+.aruna.api.storage.models.v" +
-      "2.UserAttributesR\nattributes\"\374\001\n\nPermiss" +
-      "ion\022\037\n\nproject_id\030\001 \001(\tH\000R\tprojectId\022%\n\r" +
-      "collection_id\030\002 \001(\tH\000R\014collectionId\022\037\n\nd" +
-      "ataset_id\030\003 \001(\tH\000R\tdatasetId\022\035\n\tobject_i" +
-      "d\030\004 \001(\tH\000R\010objectId\022W\n\020permission_level\030" +
-      "\006 \001(\0162,.aruna.api.storage.models.v2.Perm" +
-      "issionLevelR\017permissionLevelB\r\n\013resource" +
-      "_id\"\270\002\n\005Token\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 " +
-      "\001(\tR\004name\022\027\n\007user_id\030\003 \001(\tR\006userId\0229\n\ncr" +
-      "eated_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\tcreatedAt\0229\n\nexpires_at\030\005 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\texpiresAt\022G\n\nperm" +
-      "ission\030\006 \001(\0132\'.aruna.api.storage.models." +
-      "v2.PermissionR\npermission\0223\n\007used_at\030\007 \001" +
-      "(\0132\032.google.protobuf.TimestampR\006usedAt\"b" +
-      "\n\020CustomAttributes\022%\n\016attribute_name\030\001 \001" +
-      "(\tR\rattributeName\022\'\n\017attribute_value\030\002 \001" +
-      "(\tR\016attributeValue\"\320\002\n\016UserAttributes\022!\n" +
-      "\014global_admin\030\001 \001(\010R\013globalAdmin\022\'\n\017serv" +
-      "ice_account\030\002 \001(\010R\016serviceAccount\022:\n\006tok" +
-      "ens\030\003 \003(\0132\".aruna.api.storage.models.v2." +
-      "TokenR\006tokens\022Z\n\021custom_attributes\030\004 \003(\013" +
-      "2-.aruna.api.storage.models.v2.CustomAtt" +
-      "ributesR\020customAttributes\022Z\n\024personal_pe" +
-      "rmissions\030\005 \003(\0132\'.aruna.api.storage.mode" +
-      "ls.v2.PermissionR\023personalPermissions\"z\n" +
-      "\010KeyValue\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
-      "(\tR\005value\022F\n\007variant\030\003 \001(\0162,.aruna.api.s" +
-      "torage.models.v2.KeyValueVariantR\007varian" +
-      "t\"\260\001\n\010Relation\022K\n\010external\030\001 \001(\0132-.aruna" +
-      ".api.storage.models.v2.ExternalRelationH" +
-      "\000R\010external\022K\n\010internal\030\002 \001(\0132-.aruna.ap" +
-      "i.storage.models.v2.InternalRelationH\000R\010" +
-      "internalB\n\n\010relation\"\320\001\n\020ExternalRelatio" +
-      "n\022\036\n\nidentifier\030\001 \001(\tR\nidentifier\022]\n\017def" +
-      "ined_variant\030\002 \001(\01624.aruna.api.storage.m" +
-      "odels.v2.ExternalRelationVariantR\016define" +
-      "dVariant\022*\n\016custom_variant\030\003 \001(\tH\000R\rcust" +
-      "omVariant\210\001\001B\021\n\017_custom_variant\"\370\002\n\020Inte" +
-      "rnalRelation\022\037\n\013resource_id\030\001 \001(\tR\nresou" +
-      "rceId\022W\n\020resource_variant\030\002 \001(\0162,.aruna." +
-      "api.storage.models.v2.ResourceVariantR\017r" +
-      "esourceVariant\022]\n\017defined_variant\030\003 \001(\0162" +
-      "4.aruna.api.storage.models.v2.InternalRe" +
-      "lationVariantR\016definedVariant\022*\n\016custom_" +
-      "variant\030\004 \001(\tH\000R\rcustomVariant\210\001\001\022L\n\tdir" +
-      "ection\030\005 \001(\0162..aruna.api.storage.models." +
-      "v2.RelationDirectionR\tdirectionB\021\n\017_cust" +
-      "om_variant\"K\n\013PageRequest\022\037\n\013start_after" +
-      "\030\001 \001(\tR\nstartAfter\022\033\n\tpage_size\030\002 \001(\003R\010p" +
-      "ageSize\"p\n\005Stats\022\024\n\005count\030\001 \001(\003R\005count\022\022" +
-      "\n\004size\030\002 \001(\003R\004size\022=\n\014last_updated\030\003 \001(\013" +
-      "2\032.google.protobuf.TimestampR\013lastUpdate" +
-      "d\"X\n\004Hash\022<\n\003alg\030\001 \001(\0162*.aruna.api.stora" +
-      "ge.models.v2.HashalgorithmR\003alg\022\022\n\004hash\030" +
-      "\002 \001(\tR\004hash\"\304\001\n\022EndpointHostConfig\022\020\n\003ur" +
-      "l\030\001 \001(\tR\003url\022\035\n\nis_primary\030\002 \001(\010R\tisPrim" +
-      "ary\022\020\n\003ssl\030\003 \001(\010R\003ssl\022\026\n\006public\030\004 \001(\010R\006p" +
-      "ublic\022S\n\014host_variant\030\005 \001(\01620.aruna.api." +
-      "storage.models.v2.EndpointHostVariantR\013h" +
-      "ostVariant\"\262\002\n\010Endpoint\022\016\n\002id\030\001 \001(\tR\002id\022" +
-      "K\n\nep_variant\030\002 \001(\0162,.aruna.api.storage." +
-      "models.v2.EndpointVariantR\tepVariant\022\022\n\004" +
-      "name\030\003 \001(\tR\004name\022\033\n\tis_public\030\004 \001(\010R\010isP" +
-      "ublic\022D\n\006status\030\005 \001(\0162,.aruna.api.storag" +
-      "e.models.v2.ComponentStatusR\006status\022R\n\014h" +
-      "ost_configs\030\006 \003(\0132/.aruna.api.storage.mo" +
-      "dels.v2.EndpointHostConfigR\013hostConfigs\"" +
-      "\253\002\n\017GenericResource\022@\n\007project\030\001 \001(\0132$.a" +
-      "runa.api.storage.models.v2.ProjectH\000R\007pr" +
-      "oject\022I\n\ncollection\030\002 \001(\0132\'.aruna.api.st" +
-      "orage.models.v2.CollectionH\000R\ncollection" +
-      "\022@\n\007dataset\030\003 \001(\0132$.aruna.api.storage.mo" +
-      "dels.v2.DatasetH\000R\007dataset\022=\n\006object\030\004 \001" +
-      "(\0132#.aruna.api.storage.models.v2.ObjectH" +
-      "\000R\006objectB\n\n\010resource\"\214\004\n\007Project\022\016\n\002id\030" +
-      "\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descrip" +
-      "tion\030\003 \001(\tR\013description\022D\n\nkey_values\030\004 " +
-      "\003(\0132%.aruna.api.storage.models.v2.KeyVal" +
-      "ueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.aruna" +
-      ".api.storage.models.v2.RelationR\trelatio" +
-      "ns\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage.mo" +
-      "dels.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(\016" +
-      "2&.aruna.api.storage.models.v2.DataClass" +
-      "R\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google" +
-      ".protobuf.TimestampR\tcreatedAt\022\035\n\ncreate" +
-      "d_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#." +
-      "aruna.api.storage.models.v2.StatusR\006stat" +
-      "us\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\217\004\n\nCollect" +
-      "ion\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022" +
-      " \n\013description\030\003 \001(\tR\013description\022D\n\nkey" +
-      "_values\030\004 \003(\0132%.aruna.api.storage.models" +
-      ".v2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003" +
-      "(\0132%.aruna.api.storage.models.v2.Relatio" +
-      "nR\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api." +
-      "storage.models.v2.StatsR\005stats\022E\n\ndata_c" +
-      "lass\030\007 \001(\0162&.aruna.api.storage.models.v2" +
-      ".DataClassR\tdataClass\0229\n\ncreated_at\030\010 \001(" +
+      "protobuf/timestamp.proto\"\325\001\n\004User\022\016\n\002id\030" +
+      "\001 \001(\tR\002id\022\037\n\013external_id\030\002 \001(\tR\nexternal" +
+      "Id\022!\n\014display_name\030\003 \001(\tR\013displayName\022\026\n" +
+      "\006active\030\004 \001(\010R\006active\022\024\n\005email\030\005 \001(\tR\005em" +
+      "ail\022K\n\nattributes\030\006 \001(\0132+.aruna.api.stor" +
+      "age.models.v2.UserAttributesR\nattributes" +
+      "\"\374\001\n\nPermission\022\037\n\nproject_id\030\001 \001(\tH\000R\tp" +
+      "rojectId\022%\n\rcollection_id\030\002 \001(\tH\000R\014colle" +
+      "ctionId\022\037\n\ndataset_id\030\003 \001(\tH\000R\tdatasetId" +
+      "\022\035\n\tobject_id\030\004 \001(\tH\000R\010objectId\022W\n\020permi" +
+      "ssion_level\030\006 \001(\0162,.aruna.api.storage.mo" +
+      "dels.v2.PermissionLevelR\017permissionLevel" +
+      "B\r\n\013resource_id\"\352\001\n\005Token\022\016\n\002id\030\001 \001(\tR\002i" +
+      "d\022\022\n\004name\030\002 \001(\tR\004name\0229\n\ncreated_at\030\003 \001(" +
       "\0132\032.google.protobuf.TimestampR\tcreatedAt" +
-      "\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006statu" +
-      "s\030\n \001(\0162#.aruna.api.storage.models.v2.St" +
-      "atusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\214" +
-      "\004\n\007Dataset\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\t" +
-      "R\004name\022 \n\013description\030\003 \001(\tR\013description" +
-      "\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.storage" +
-      ".models.v2.KeyValueR\tkeyValues\022C\n\trelati" +
-      "ons\030\005 \003(\0132%.aruna.api.storage.models.v2." +
-      "RelationR\trelations\0228\n\005stats\030\006 \001(\0132\".aru" +
-      "na.api.storage.models.v2.StatsR\005stats\022E\n" +
-      "\ndata_class\030\007 \001(\0162&.aruna.api.storage.mo" +
-      "dels.v2.DataClassR\tdataClass\0229\n\ncreated_" +
-      "at\030\010 \001(\0132\032.google.protobuf.TimestampR\tcr" +
-      "eatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;" +
-      "\n\006status\030\n \001(\0162#.aruna.api.storage.model" +
-      "s.v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dy" +
-      "namic\"\255\004\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
-      "iption\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.s" +
-      "torage.models.v2.KeyValueR\tkeyValues\022C\n\t" +
-      "relations\030\005 \003(\0132%.aruna.api.storage.mode" +
-      "ls.v2.RelationR\trelations\022\037\n\013content_len" +
-      "\030\006 \001(\003R\ncontentLen\022E\n\ndata_class\030\007 \001(\0162&" +
-      ".aruna.api.storage.models.v2.DataClassR\t" +
-      "dataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tcreatedAt\022\035\n\ncreated_" +
-      "by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.ar" +
-      "una.api.storage.models.v2.StatusR\006status" +
-      "\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\0229\n\006hashes\030\014 \003" +
-      "(\0132!.aruna.api.storage.models.v2.HashR\006h" +
-      "ashes*\215\001\n\tDataClass\022\032\n\026DATA_CLASS_UNSPEC" +
-      "IFIED\020\000\022\025\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_C" +
-      "LASS_PRIVATE\020\002\022\030\n\024DATA_CLASS_WORKSPACE\020\004" +
-      "\022\033\n\027DATA_CLASS_CONFIDENTIAL\020\005*s\n\017Endpoin" +
-      "tVariant\022 \n\034ENDPOINT_VARIANT_UNSPECIFIED" +
-      "\020\000\022\037\n\033ENDPOINT_VARIANT_PERSISTENT\020\001\022\035\n\031E" +
-      "NDPOINT_VARIANT_VOLATILE\020\002*\200\001\n\023EndpointH" +
-      "ostVariant\022%\n!ENDPOINT_HOST_VARIANT_UNSP" +
-      "ECIFIED\020\000\022\037\n\033ENDPOINT_HOST_VARIANT_PROXY" +
-      "\020\001\022!\n\035ENDPOINT_HOST_VARIANT_BUNDLER\020\002*\276\001" +
-      "\n\017PermissionLevel\022 \n\034PERMISSION_LEVEL_UN" +
-      "SPECIFIED\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031" +
-      "\n\025PERMISSION_LEVEL_READ\020\003\022\033\n\027PERMISSION_" +
-      "LEVEL_APPEND\020\004\022\032\n\026PERMISSION_LEVEL_WRITE" +
-      "\020\005\022\032\n\026PERMISSION_LEVEL_ADMIN\020\006*\221\001\n\017KeyVa" +
-      "lueVariant\022!\n\035KEY_VALUE_VARIANT_UNSPECIF" +
-      "IED\020\000\022\033\n\027KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KE" +
-      "Y_VALUE_VARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VA" +
-      "LUE_VARIANT_HOOK\020\003*\267\001\n\027ExternalRelationV" +
-      "ariant\022)\n%EXTERNAL_RELATION_VARIANT_UNSP" +
-      "ECIFIED\020\000\022!\n\035EXTERNAL_RELATION_VARIANT_U" +
-      "RL\020\001\022(\n$EXTERNAL_RELATION_VARIANT_IDENTI" +
-      "FIER\020\002\022$\n EXTERNAL_RELATION_VARIANT_CUST" +
-      "OM\020\003*\257\002\n\027InternalRelationVariant\022)\n%INTE" +
-      "RNAL_RELATION_VARIANT_UNSPECIFIED\020\000\022(\n$I" +
-      "NTERNAL_RELATION_VARIANT_BELONGS_TO\020\001\022$\n" +
-      " INTERNAL_RELATION_VARIANT_ORIGIN\020\002\022%\n!I" +
-      "NTERNAL_RELATION_VARIANT_VERSION\020\003\022&\n\"IN" +
-      "TERNAL_RELATION_VARIANT_METADATA\020\004\022$\n IN" +
-      "TERNAL_RELATION_VARIANT_POLICY\020\005\022$\n INTE" +
-      "RNAL_RELATION_VARIANT_CUSTOM\020\006*x\n\021Relati" +
-      "onDirection\022\"\n\036RELATION_DIRECTION_UNSPEC" +
-      "IFIED\020\000\022\036\n\032RELATION_DIRECTION_INBOUND\020\001\022" +
-      "\037\n\033RELATION_DIRECTION_OUTBOUND\020\002*\273\001\n\016Res" +
-      "ourceAction\022\037\n\033RESOURCE_ACTION_UNSPECIFI" +
-      "ED\020\000\022\032\n\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESO" +
-      "URCE_ACTION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_" +
-      "UPDATE\020\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RE" +
-      "SOURCE_ACTION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STA" +
-      "TUS_UNSPECIFIED\020\000\022\027\n\023STATUS_INITIALIZING" +
-      "\020\001\022\025\n\021STATUS_VALIDATING\020\002\022\024\n\020STATUS_AVAI" +
-      "LABLE\020\003\022\026\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATU" +
-      "S_ERROR\020\005\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017Compon" +
-      "entStatus\022 \n\034COMPONENT_STATUS_UNSPECIFIE" +
-      "D\020\000\022!\n\035COMPONENT_STATUS_INITIALIZING\020\001\022\036" +
-      "\n\032COMPONENT_STATUS_AVAILABLE\020\002\022\035\n\031COMPON" +
-      "ENT_STATUS_DEGRADED\020\003\022 \n\034COMPONENT_STATU" +
-      "S_UNAVAILABLE\020\004\022 \n\034COMPONENT_STATUS_MAIN" +
-      "TENANCE\020\005*_\n\rHashalgorithm\022\035\n\031HASHALGORI" +
-      "THM_UNSPECIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001" +
-      "\022\030\n\024HASHALGORITHM_SHA256\020\002*\255\001\n\017ResourceV" +
-      "ariant\022 \n\034RESOURCE_VARIANT_UNSPECIFIED\020\000" +
-      "\022\034\n\030RESOURCE_VARIANT_PROJECT\020\001\022\037\n\033RESOUR" +
-      "CE_VARIANT_COLLECTION\020\002\022\034\n\030RESOURCE_VARI" +
-      "ANT_DATASET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT" +
-      "\020\004B\371\001\n\037com.aruna.api.storage.models.v2B\013" +
-      "ModelsProtoZ:github.com/ArunaStorage/go-" +
-      "api/aruna/api/storage/models/v2\242\002\004AASM\252\002" +
-      "\033Aruna.Api.Storage.Models.V2\312\002\033Aruna\\Api" +
-      "\\Storage\\Models\\V2\342\002\'Aruna\\Api\\Storage\\M" +
-      "odels\\V2\\GPBMetadata\352\002\037Aruna::Api::Stora" +
-      "ge::Models::V2b\006proto3"
+      "\0229\n\nexpires_at\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestampR\texpiresAt\022G\n\npermission\030\005 \001(\0132" +
+      "\'.aruna.api.storage.models.v2.Permission" +
+      "R\npermission\"b\n\020CustomAttributes\022%\n\016attr" +
+      "ibute_name\030\001 \001(\tR\rattributeName\022\'\n\017attri" +
+      "bute_value\030\002 \001(\tR\016attributeValue\"\320\002\n\016Use" +
+      "rAttributes\022!\n\014global_admin\030\001 \001(\010R\013globa" +
+      "lAdmin\022\'\n\017service_account\030\002 \001(\010R\016service" +
+      "Account\022:\n\006tokens\030\003 \003(\0132\".aruna.api.stor" +
+      "age.models.v2.TokenR\006tokens\022Z\n\021custom_at" +
+      "tributes\030\004 \003(\0132-.aruna.api.storage.model" +
+      "s.v2.CustomAttributesR\020customAttributes\022" +
+      "Z\n\024personal_permissions\030\005 \003(\0132\'.aruna.ap" +
+      "i.storage.models.v2.PermissionR\023personal" +
+      "Permissions\"z\n\010KeyValue\022\020\n\003key\030\001 \001(\tR\003ke" +
+      "y\022\024\n\005value\030\002 \001(\tR\005value\022F\n\007variant\030\003 \001(\016" +
+      "2,.aruna.api.storage.models.v2.KeyValueV" +
+      "ariantR\007variant\"\260\001\n\010Relation\022K\n\010external" +
+      "\030\001 \001(\0132-.aruna.api.storage.models.v2.Ext" +
+      "ernalRelationH\000R\010external\022K\n\010internal\030\002 " +
+      "\001(\0132-.aruna.api.storage.models.v2.Intern" +
+      "alRelationH\000R\010internalB\n\n\010relation\"\320\001\n\020E" +
+      "xternalRelation\022\036\n\nidentifier\030\001 \001(\tR\nide" +
+      "ntifier\022]\n\017defined_variant\030\002 \001(\01624.aruna" +
+      ".api.storage.models.v2.ExternalRelationV" +
+      "ariantR\016definedVariant\022*\n\016custom_variant" +
+      "\030\003 \001(\tH\000R\rcustomVariant\210\001\001B\021\n\017_custom_va" +
+      "riant\"\370\002\n\020InternalRelation\022\037\n\013resource_i" +
+      "d\030\001 \001(\tR\nresourceId\022W\n\020resource_variant\030" +
+      "\002 \001(\0162,.aruna.api.storage.models.v2.Reso" +
+      "urceVariantR\017resourceVariant\022]\n\017defined_" +
+      "variant\030\003 \001(\01624.aruna.api.storage.models" +
+      ".v2.InternalRelationVariantR\016definedVari" +
+      "ant\022*\n\016custom_variant\030\004 \001(\tH\000R\rcustomVar" +
+      "iant\210\001\001\022L\n\tdirection\030\005 \001(\0162..aruna.api.s" +
+      "torage.models.v2.RelationDirectionR\tdire" +
+      "ctionB\021\n\017_custom_variant\"K\n\013PageRequest\022" +
+      "\037\n\013start_after\030\001 \001(\tR\nstartAfter\022\033\n\tpage" +
+      "_size\030\002 \001(\003R\010pageSize\"p\n\005Stats\022\024\n\005count\030" +
+      "\001 \001(\003R\005count\022\022\n\004size\030\002 \001(\003R\004size\022=\n\014last" +
+      "_updated\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\013lastUpdated\"X\n\004Hash\022<\n\003alg\030\001 \001(\0162*.a" +
+      "runa.api.storage.models.v2.Hashalgorithm" +
+      "R\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n\022EndpointHo" +
+      "stConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n\nis_primary" +
+      "\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(\010R\003ssl\022\026\n\006p" +
+      "ublic\030\004 \001(\010R\006public\022S\n\014host_variant\030\005 \001(" +
+      "\01620.aruna.api.storage.models.v2.Endpoint" +
+      "HostVariantR\013hostVariant\"\262\002\n\010Endpoint\022\016\n" +
+      "\002id\030\001 \001(\tR\002id\022K\n\nep_variant\030\002 \001(\0162,.arun" +
+      "a.api.storage.models.v2.EndpointVariantR" +
+      "\tepVariant\022\022\n\004name\030\003 \001(\tR\004name\022\033\n\tis_pub" +
+      "lic\030\004 \001(\010R\010isPublic\022D\n\006status\030\005 \001(\0162,.ar" +
+      "una.api.storage.models.v2.ComponentStatu" +
+      "sR\006status\022R\n\014host_configs\030\006 \003(\0132/.aruna." +
+      "api.storage.models.v2.EndpointHostConfig" +
+      "R\013hostConfigs\"_\n\004Copy\022\032\n\010resource\030\001 \001(\tR" +
+      "\010resource\022\'\n\017target_endpoint\030\002 \001(\tR\016targ" +
+      "etEndpoint\022\022\n\004push\030\003 \001(\010R\004push\"v\n\007Contex" +
+      "t\022\'\n\016s3_credentials\030\001 \001(\010H\000R\rs3Credentia" +
+      "ls\0227\n\004copy\030\002 \001(\0132!.aruna.api.storage.mod" +
+      "els.v2.CopyH\000R\004copyB\t\n\007context\"\253\002\n\017Gener" +
+      "icResource\022@\n\007project\030\001 \001(\0132$.aruna.api." +
+      "storage.models.v2.ProjectH\000R\007project\022I\n\n" +
+      "collection\030\002 \001(\0132\'.aruna.api.storage.mod" +
+      "els.v2.CollectionH\000R\ncollection\022@\n\007datas" +
+      "et\030\003 \001(\0132$.aruna.api.storage.models.v2.D" +
+      "atasetH\000R\007dataset\022=\n\006object\030\004 \001(\0132#.arun" +
+      "a.api.storage.models.v2.ObjectH\000R\006object" +
+      "B\n\n\010resource\"\214\004\n\007Project\022\016\n\002id\030\001 \001(\tR\002id" +
+      "\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(" +
+      "\tR\013description\022D\n\nkey_values\030\004 \003(\0132%.aru" +
+      "na.api.storage.models.v2.KeyValueR\tkeyVa" +
+      "lues\022C\n\trelations\030\005 \003(\0132%.aruna.api.stor" +
+      "age.models.v2.RelationR\trelations\0228\n\005sta" +
+      "ts\030\006 \001(\0132\".aruna.api.storage.models.v2.S" +
+      "tatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&.aruna." +
+      "api.storage.models.v2.DataClassR\tdataCla" +
+      "ss\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf" +
+      ".TimestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(" +
+      "\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api" +
+      ".storage.models.v2.StatusR\006status\022\030\n\007dyn" +
+      "amic\030\013 \001(\010R\007dynamic\"\217\004\n\nCollection\022\016\n\002id" +
+      "\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descri" +
+      "ption\030\003 \001(\tR\013description\022D\n\nkey_values\030\004" +
+      " \003(\0132%.aruna.api.storage.models.v2.KeyVa" +
+      "lueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.arun" +
+      "a.api.storage.models.v2.RelationR\trelati" +
+      "ons\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage.m" +
+      "odels.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(" +
+      "\0162&.aruna.api.storage.models.v2.DataClas" +
+      "sR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tcreatedAt\022\035\n\ncreat" +
+      "ed_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#" +
+      ".aruna.api.storage.models.v2.StatusR\006sta" +
+      "tus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\214\004\n\007Datase" +
+      "t\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
+      "\013description\030\003 \001(\tR\013description\022D\n\nkey_v" +
+      "alues\030\004 \003(\0132%.aruna.api.storage.models.v" +
+      "2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003(\013" +
+      "2%.aruna.api.storage.models.v2.RelationR" +
+      "\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api.st" +
+      "orage.models.v2.StatsR\005stats\022E\n\ndata_cla" +
+      "ss\030\007 \001(\0162&.aruna.api.storage.models.v2.D" +
+      "ataClassR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tcreatedAt\022\035" +
+      "\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030" +
+      "\n \001(\0162#.aruna.api.storage.models.v2.Stat" +
+      "usR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\255\004\n" +
+      "\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004n" +
+      "ame\022 \n\013description\030\003 \001(\tR\013description\022D\n" +
+      "\nkey_values\030\004 \003(\0132%.aruna.api.storage.mo" +
+      "dels.v2.KeyValueR\tkeyValues\022C\n\trelations" +
+      "\030\005 \003(\0132%.aruna.api.storage.models.v2.Rel" +
+      "ationR\trelations\022\037\n\013content_len\030\006 \001(\003R\nc" +
+      "ontentLen\022E\n\ndata_class\030\007 \001(\0162&.aruna.ap" +
+      "i.storage.models.v2.DataClassR\tdataClass" +
+      "\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf.T" +
+      "imestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR" +
+      "\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api.s" +
+      "torage.models.v2.StatusR\006status\022\030\n\007dynam" +
+      "ic\030\013 \001(\010R\007dynamic\0229\n\006hashes\030\014 \003(\0132!.arun" +
+      "a.api.storage.models.v2.HashR\006hashes*\215\001\n" +
+      "\tDataClass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025" +
+      "\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIV" +
+      "ATE\020\002\022\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DATA_" +
+      "CLASS_CONFIDENTIAL\020\005*s\n\017EndpointVariant\022" +
+      " \n\034ENDPOINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033END" +
+      "POINT_VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOINT_V" +
+      "ARIANT_VOLATILE\020\002*\200\001\n\023EndpointHostVarian" +
+      "t\022%\n!ENDPOINT_HOST_VARIANT_UNSPECIFIED\020\000" +
+      "\022\037\n\033ENDPOINT_HOST_VARIANT_PROXY\020\001\022!\n\035END" +
+      "POINT_HOST_VARIANT_BUNDLER\020\002*\276\001\n\017Permiss" +
+      "ionLevel\022 \n\034PERMISSION_LEVEL_UNSPECIFIED" +
+      "\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031\n\025PERMISS" +
+      "ION_LEVEL_READ\020\003\022\033\n\027PERMISSION_LEVEL_APP" +
+      "END\020\004\022\032\n\026PERMISSION_LEVEL_WRITE\020\005\022\032\n\026PER" +
+      "MISSION_LEVEL_ADMIN\020\006*\221\001\n\017KeyValueVarian" +
+      "t\022!\n\035KEY_VALUE_VARIANT_UNSPECIFIED\020\000\022\033\n\027" +
+      "KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KEY_VALUE_V" +
+      "ARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VALUE_VARIA" +
+      "NT_HOOK\020\003*\267\001\n\027ExternalRelationVariant\022)\n" +
+      "%EXTERNAL_RELATION_VARIANT_UNSPECIFIED\020\000" +
+      "\022!\n\035EXTERNAL_RELATION_VARIANT_URL\020\001\022(\n$E" +
+      "XTERNAL_RELATION_VARIANT_IDENTIFIER\020\002\022$\n" +
+      " EXTERNAL_RELATION_VARIANT_CUSTOM\020\003*\257\002\n\027" +
+      "InternalRelationVariant\022)\n%INTERNAL_RELA" +
+      "TION_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL_R" +
+      "ELATION_VARIANT_BELONGS_TO\020\001\022$\n INTERNAL" +
+      "_RELATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL_R" +
+      "ELATION_VARIANT_VERSION\020\003\022&\n\"INTERNAL_RE" +
+      "LATION_VARIANT_METADATA\020\004\022$\n INTERNAL_RE" +
+      "LATION_VARIANT_POLICY\020\005\022$\n INTERNAL_RELA" +
+      "TION_VARIANT_CUSTOM\020\006*x\n\021RelationDirecti" +
+      "on\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000\022\036" +
+      "\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELATI" +
+      "ON_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceActi" +
+      "on\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n\026R" +
+      "ESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_ACTI" +
+      "ON_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020\003\022" +
+      "\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_AC" +
+      "TION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNSPE" +
+      "CIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021STA" +
+      "TUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003\022\026" +
+      "\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR\020\005" +
+      "\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStatus" +
+      "\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035CO" +
+      "MPONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPONE" +
+      "NT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STATU" +
+      "S_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVAIL" +
+      "ABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE\020\005" +
+      "*_\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNSPE" +
+      "CIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HASHA" +
+      "LGORITHM_SHA256\020\002*\255\001\n\017ResourceVariant\022 \n" +
+      "\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034\n\030RESOU" +
+      "RCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE_VARIAN" +
+      "T_COLLECTION\020\002\022\034\n\030RESOURCE_VARIANT_DATAS" +
+      "ET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004B\371\001\n\037co" +
+      "m.aruna.api.storage.models.v2B\013ModelsPro" +
+      "toZ:github.com/ArunaStorage/go-api/aruna" +
+      "/api/storage/models/v2\242\002\004AASM\252\002\033Aruna.Ap" +
+      "i.Storage.Models.V2\312\002\033Aruna\\Api\\Storage\\" +
+      "Models\\V2\342\002\'Aruna\\Api\\Storage\\Models\\V2\\" +
+      "GPBMetadata\352\002\037Aruna::Api::Storage::Model" +
+      "s::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_aruna_api_storage_models_v2_ExternalId_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_aruna_api_storage_models_v2_ExternalId_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_models_v2_ExternalId_descriptor,
-        new java.lang.String[] { "ExternalId", "Idp", });
     internal_static_aruna_api_storage_models_v2_User_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_aruna_api_storage_models_v2_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_User_descriptor,
-        new java.lang.String[] { "Id", "ExternalIds", "DisplayName", "Active", "Email", "Attributes", });
+        new java.lang.String[] { "Id", "ExternalId", "DisplayName", "Active", "Email", "Attributes", });
     internal_static_aruna_api_storage_models_v2_Permission_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_models_v2_Permission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Permission_descriptor,
         new java.lang.String[] { "ProjectId", "CollectionId", "DatasetId", "ObjectId", "PermissionLevel", "ResourceId", });
     internal_static_aruna_api_storage_models_v2_Token_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_aruna_api_storage_models_v2_Token_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Token_descriptor,
-        new java.lang.String[] { "Id", "Name", "UserId", "CreatedAt", "ExpiresAt", "Permission", "UsedAt", });
+        new java.lang.String[] { "Id", "Name", "CreatedAt", "ExpiresAt", "Permission", });
     internal_static_aruna_api_storage_models_v2_CustomAttributes_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_aruna_api_storage_models_v2_CustomAttributes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_CustomAttributes_descriptor,
         new java.lang.String[] { "AttributeName", "AttributeValue", });
     internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_aruna_api_storage_models_v2_UserAttributes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor,
         new java.lang.String[] { "GlobalAdmin", "ServiceAccount", "Tokens", "CustomAttributes", "PersonalPermissions", });
     internal_static_aruna_api_storage_models_v2_KeyValue_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_aruna_api_storage_models_v2_KeyValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_KeyValue_descriptor,
         new java.lang.String[] { "Key", "Value", "Variant", });
     internal_static_aruna_api_storage_models_v2_Relation_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_aruna_api_storage_models_v2_Relation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Relation_descriptor,
         new java.lang.String[] { "External", "Internal", "Relation", });
     internal_static_aruna_api_storage_models_v2_ExternalRelation_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_aruna_api_storage_models_v2_ExternalRelation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_ExternalRelation_descriptor,
         new java.lang.String[] { "Identifier", "DefinedVariant", "CustomVariant", "CustomVariant", });
     internal_static_aruna_api_storage_models_v2_InternalRelation_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_storage_models_v2_InternalRelation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_InternalRelation_descriptor,
         new java.lang.String[] { "ResourceId", "ResourceVariant", "DefinedVariant", "CustomVariant", "Direction", "CustomVariant", });
     internal_static_aruna_api_storage_models_v2_PageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_aruna_api_storage_models_v2_PageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_PageRequest_descriptor,
         new java.lang.String[] { "StartAfter", "PageSize", });
     internal_static_aruna_api_storage_models_v2_Stats_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_models_v2_Stats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Stats_descriptor,
         new java.lang.String[] { "Count", "Size", "LastUpdated", });
     internal_static_aruna_api_storage_models_v2_Hash_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_storage_models_v2_Hash_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Hash_descriptor,
         new java.lang.String[] { "Alg", "Hash", });
     internal_static_aruna_api_storage_models_v2_EndpointHostConfig_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aruna_api_storage_models_v2_EndpointHostConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_EndpointHostConfig_descriptor,
         new java.lang.String[] { "Url", "IsPrimary", "Ssl", "Public", "HostVariant", });
     internal_static_aruna_api_storage_models_v2_Endpoint_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_storage_models_v2_Endpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Endpoint_descriptor,
         new java.lang.String[] { "Id", "EpVariant", "Name", "IsPublic", "Status", "HostConfigs", });
-    internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
+    internal_static_aruna_api_storage_models_v2_Copy_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_aruna_api_storage_models_v2_Copy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_models_v2_Copy_descriptor,
+        new java.lang.String[] { "Resource", "TargetEndpoint", "Push", });
+    internal_static_aruna_api_storage_models_v2_Context_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_models_v2_Context_descriptor,
+        new java.lang.String[] { "S3Credentials", "Copy", "Context", });
+    internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aruna_api_storage_models_v2_GenericResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_GenericResource_descriptor,
         new java.lang.String[] { "Project", "Collection", "Dataset", "Object", "Resource", });
     internal_static_aruna_api_storage_models_v2_Project_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_storage_models_v2_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Project_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", });
     internal_static_aruna_api_storage_models_v2_Collection_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aruna_api_storage_models_v2_Collection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Collection_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", });
     internal_static_aruna_api_storage_models_v2_Dataset_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aruna_api_storage_models_v2_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Dataset_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", });
     internal_static_aruna_api_storage_models_v2_Object_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aruna_api_storage_models_v2_Object_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Object_descriptor,
