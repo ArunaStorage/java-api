@@ -6655,49 +6655,74 @@ public final class ModelsProto {
         int index);
 
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @return A list containing the trustedEndpoints.
+     */
+    java.util.List<java.lang.String>
+        getTrustedEndpointsList();
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @return The count of trustedEndpoints.
+     */
+    int getTrustedEndpointsCount();
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @param index The index of the element to return.
+     * @return The trustedEndpoints at the given index.
+     */
+    java.lang.String getTrustedEndpoints(int index);
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedEndpoints at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTrustedEndpointsBytes(int index);
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes> 
         getCustomAttributesList();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes getCustomAttributes(int index);
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     int getCustomAttributesCount();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder> 
         getCustomAttributesOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder getCustomAttributesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Permission> 
         getPersonalPermissionsList();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.Permission getPersonalPermissions(int index);
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     int getPersonalPermissionsCount();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
         getPersonalPermissionsOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPersonalPermissionsOrBuilder(
         int index);
@@ -6716,6 +6741,8 @@ public final class ModelsProto {
     }
     private UserAttributes() {
       tokens_ = java.util.Collections.emptyList();
+      trustedEndpoints_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       customAttributes_ = java.util.Collections.emptyList();
       personalPermissions_ = java.util.Collections.emptyList();
     }
@@ -6803,18 +6830,55 @@ public final class ModelsProto {
       return tokens_.get(index);
     }
 
-    public static final int CUSTOM_ATTRIBUTES_FIELD_NUMBER = 4;
+    public static final int TRUSTED_ENDPOINTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList trustedEndpoints_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @return A list containing the trustedEndpoints.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTrustedEndpointsList() {
+      return trustedEndpoints_;
+    }
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @return The count of trustedEndpoints.
+     */
+    public int getTrustedEndpointsCount() {
+      return trustedEndpoints_.size();
+    }
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @param index The index of the element to return.
+     * @return The trustedEndpoints at the given index.
+     */
+    public java.lang.String getTrustedEndpoints(int index) {
+      return trustedEndpoints_.get(index);
+    }
+    /**
+     * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedEndpoints at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTrustedEndpointsBytes(int index) {
+      return trustedEndpoints_.getByteString(index);
+    }
+
+    public static final int CUSTOM_ATTRIBUTES_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes> customAttributes_;
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes> getCustomAttributesList() {
       return customAttributes_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder> 
@@ -6822,21 +6886,21 @@ public final class ModelsProto {
       return customAttributes_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     @java.lang.Override
     public int getCustomAttributesCount() {
       return customAttributes_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes getCustomAttributes(int index) {
       return customAttributes_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder getCustomAttributesOrBuilder(
@@ -6844,18 +6908,18 @@ public final class ModelsProto {
       return customAttributes_.get(index);
     }
 
-    public static final int PERSONAL_PERMISSIONS_FIELD_NUMBER = 5;
+    public static final int PERSONAL_PERMISSIONS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Permission> personalPermissions_;
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Permission> getPersonalPermissionsList() {
       return personalPermissions_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
@@ -6863,21 +6927,21 @@ public final class ModelsProto {
       return personalPermissions_;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     @java.lang.Override
     public int getPersonalPermissionsCount() {
       return personalPermissions_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.Permission getPersonalPermissions(int index) {
       return personalPermissions_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPersonalPermissionsOrBuilder(
@@ -6908,11 +6972,14 @@ public final class ModelsProto {
       for (int i = 0; i < tokens_.size(); i++) {
         output.writeMessage(3, tokens_.get(i));
       }
+      for (int i = 0; i < trustedEndpoints_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, trustedEndpoints_.getRaw(i));
+      }
       for (int i = 0; i < customAttributes_.size(); i++) {
-        output.writeMessage(4, customAttributes_.get(i));
+        output.writeMessage(5, customAttributes_.get(i));
       }
       for (int i = 0; i < personalPermissions_.size(); i++) {
-        output.writeMessage(5, personalPermissions_.get(i));
+        output.writeMessage(6, personalPermissions_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -6935,13 +7002,21 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, tokens_.get(i));
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < trustedEndpoints_.size(); i++) {
+          dataSize += computeStringSizeNoTag(trustedEndpoints_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTrustedEndpointsList().size();
+      }
       for (int i = 0; i < customAttributes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, customAttributes_.get(i));
+          .computeMessageSize(5, customAttributes_.get(i));
       }
       for (int i = 0; i < personalPermissions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, personalPermissions_.get(i));
+          .computeMessageSize(6, personalPermissions_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6964,6 +7039,8 @@ public final class ModelsProto {
           != other.getServiceAccount()) return false;
       if (!getTokensList()
           .equals(other.getTokensList())) return false;
+      if (!getTrustedEndpointsList()
+          .equals(other.getTrustedEndpointsList())) return false;
       if (!getCustomAttributesList()
           .equals(other.getCustomAttributesList())) return false;
       if (!getPersonalPermissionsList()
@@ -6988,6 +7065,10 @@ public final class ModelsProto {
       if (getTokensCount() > 0) {
         hash = (37 * hash) + TOKENS_FIELD_NUMBER;
         hash = (53 * hash) + getTokensList().hashCode();
+      }
+      if (getTrustedEndpointsCount() > 0) {
+        hash = (37 * hash) + TRUSTED_ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrustedEndpointsList().hashCode();
       }
       if (getCustomAttributesCount() > 0) {
         hash = (37 * hash) + CUSTOM_ATTRIBUTES_FIELD_NUMBER;
@@ -7137,20 +7218,22 @@ public final class ModelsProto {
           tokensBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        trustedEndpoints_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         if (customAttributesBuilder_ == null) {
           customAttributes_ = java.util.Collections.emptyList();
         } else {
           customAttributes_ = null;
           customAttributesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (personalPermissionsBuilder_ == null) {
           personalPermissions_ = java.util.Collections.emptyList();
         } else {
           personalPermissions_ = null;
           personalPermissionsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -7194,18 +7277,18 @@ public final class ModelsProto {
           result.tokens_ = tokensBuilder_.build();
         }
         if (customAttributesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             customAttributes_ = java.util.Collections.unmodifiableList(customAttributes_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.customAttributes_ = customAttributes_;
         } else {
           result.customAttributes_ = customAttributesBuilder_.build();
         }
         if (personalPermissionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             personalPermissions_ = java.util.Collections.unmodifiableList(personalPermissions_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.personalPermissions_ = personalPermissions_;
         } else {
@@ -7220,6 +7303,10 @@ public final class ModelsProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.serviceAccount_ = serviceAccount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          trustedEndpoints_.makeImmutable();
+          result.trustedEndpoints_ = trustedEndpoints_;
         }
       }
 
@@ -7267,11 +7354,21 @@ public final class ModelsProto {
             }
           }
         }
+        if (!other.trustedEndpoints_.isEmpty()) {
+          if (trustedEndpoints_.isEmpty()) {
+            trustedEndpoints_ = other.trustedEndpoints_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureTrustedEndpointsIsMutable();
+            trustedEndpoints_.addAll(other.trustedEndpoints_);
+          }
+          onChanged();
+        }
         if (customAttributesBuilder_ == null) {
           if (!other.customAttributes_.isEmpty()) {
             if (customAttributes_.isEmpty()) {
               customAttributes_ = other.customAttributes_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureCustomAttributesIsMutable();
               customAttributes_.addAll(other.customAttributes_);
@@ -7284,7 +7381,7 @@ public final class ModelsProto {
               customAttributesBuilder_.dispose();
               customAttributesBuilder_ = null;
               customAttributes_ = other.customAttributes_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               customAttributesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCustomAttributesFieldBuilder() : null;
@@ -7297,7 +7394,7 @@ public final class ModelsProto {
           if (!other.personalPermissions_.isEmpty()) {
             if (personalPermissions_.isEmpty()) {
               personalPermissions_ = other.personalPermissions_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensurePersonalPermissionsIsMutable();
               personalPermissions_.addAll(other.personalPermissions_);
@@ -7310,7 +7407,7 @@ public final class ModelsProto {
               personalPermissionsBuilder_.dispose();
               personalPermissionsBuilder_ = null;
               personalPermissions_ = other.personalPermissions_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               personalPermissionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPersonalPermissionsFieldBuilder() : null;
@@ -7369,6 +7466,12 @@ public final class ModelsProto {
                 break;
               } // case 26
               case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTrustedEndpointsIsMutable();
+                trustedEndpoints_.add(s);
+                break;
+              } // case 34
+              case 42: {
                 com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes m =
                     input.readMessage(
                         com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.parser(),
@@ -7380,8 +7483,8 @@ public final class ModelsProto {
                   customAttributesBuilder_.addMessage(m);
                 }
                 break;
-              } // case 34
-              case 42: {
+              } // case 42
+              case 50: {
                 com.aruna.api.storage.models.v2.ModelsProto.Permission m =
                     input.readMessage(
                         com.aruna.api.storage.models.v2.ModelsProto.Permission.parser(),
@@ -7393,7 +7496,7 @@ public final class ModelsProto {
                   personalPermissionsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7715,12 +7818,123 @@ public final class ModelsProto {
         return tokensBuilder_;
       }
 
+      private com.google.protobuf.LazyStringArrayList trustedEndpoints_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTrustedEndpointsIsMutable() {
+        if (!trustedEndpoints_.isModifiable()) {
+          trustedEndpoints_ = new com.google.protobuf.LazyStringArrayList(trustedEndpoints_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @return A list containing the trustedEndpoints.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTrustedEndpointsList() {
+        trustedEndpoints_.makeImmutable();
+        return trustedEndpoints_;
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @return The count of trustedEndpoints.
+       */
+      public int getTrustedEndpointsCount() {
+        return trustedEndpoints_.size();
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @param index The index of the element to return.
+       * @return The trustedEndpoints at the given index.
+       */
+      public java.lang.String getTrustedEndpoints(int index) {
+        return trustedEndpoints_.get(index);
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the trustedEndpoints at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTrustedEndpointsBytes(int index) {
+        return trustedEndpoints_.getByteString(index);
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @param index The index to set the value at.
+       * @param value The trustedEndpoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustedEndpoints(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrustedEndpointsIsMutable();
+        trustedEndpoints_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @param value The trustedEndpoints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedEndpoints(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrustedEndpointsIsMutable();
+        trustedEndpoints_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @param values The trustedEndpoints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTrustedEndpoints(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTrustedEndpointsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, trustedEndpoints_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustedEndpoints() {
+        trustedEndpoints_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string trusted_endpoints = 4 [json_name = "trustedEndpoints"];</code>
+       * @param value The bytes of the trustedEndpoints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedEndpointsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureTrustedEndpointsIsMutable();
+        trustedEndpoints_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes> customAttributes_ =
         java.util.Collections.emptyList();
       private void ensureCustomAttributesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           customAttributes_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes>(customAttributes_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -7728,7 +7942,7 @@ public final class ModelsProto {
           com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder> customAttributesBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes> getCustomAttributesList() {
         if (customAttributesBuilder_ == null) {
@@ -7738,7 +7952,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public int getCustomAttributesCount() {
         if (customAttributesBuilder_ == null) {
@@ -7748,7 +7962,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes getCustomAttributes(int index) {
         if (customAttributesBuilder_ == null) {
@@ -7758,7 +7972,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder setCustomAttributes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes value) {
@@ -7775,7 +7989,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder setCustomAttributes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder builderForValue) {
@@ -7789,7 +8003,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder addCustomAttributes(com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes value) {
         if (customAttributesBuilder_ == null) {
@@ -7805,7 +8019,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder addCustomAttributes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes value) {
@@ -7822,7 +8036,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder addCustomAttributes(
           com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder builderForValue) {
@@ -7836,7 +8050,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder addCustomAttributes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder builderForValue) {
@@ -7850,7 +8064,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder addAllCustomAttributes(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes> values) {
@@ -7865,12 +8079,12 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder clearCustomAttributes() {
         if (customAttributesBuilder_ == null) {
           customAttributes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           customAttributesBuilder_.clear();
@@ -7878,7 +8092,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public Builder removeCustomAttributes(int index) {
         if (customAttributesBuilder_ == null) {
@@ -7891,14 +8105,14 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder getCustomAttributesBuilder(
           int index) {
         return getCustomAttributesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder getCustomAttributesOrBuilder(
           int index) {
@@ -7908,7 +8122,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder> 
            getCustomAttributesOrBuilderList() {
@@ -7919,14 +8133,14 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder addCustomAttributesBuilder() {
         return getCustomAttributesFieldBuilder().addBuilder(
             com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder addCustomAttributesBuilder(
           int index) {
@@ -7934,7 +8148,7 @@ public final class ModelsProto {
             index, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 4 [json_name = "customAttributes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.CustomAttributes custom_attributes = 5 [json_name = "customAttributes"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder> 
            getCustomAttributesBuilderList() {
@@ -7947,7 +8161,7 @@ public final class ModelsProto {
           customAttributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributes.Builder, com.aruna.api.storage.models.v2.ModelsProto.CustomAttributesOrBuilder>(
                   customAttributes_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           customAttributes_ = null;
@@ -7958,9 +8172,9 @@ public final class ModelsProto {
       private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Permission> personalPermissions_ =
         java.util.Collections.emptyList();
       private void ensurePersonalPermissionsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           personalPermissions_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Permission>(personalPermissions_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -7968,7 +8182,7 @@ public final class ModelsProto {
           com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> personalPermissionsBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Permission> getPersonalPermissionsList() {
         if (personalPermissionsBuilder_ == null) {
@@ -7978,7 +8192,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public int getPersonalPermissionsCount() {
         if (personalPermissionsBuilder_ == null) {
@@ -7988,7 +8202,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission getPersonalPermissions(int index) {
         if (personalPermissionsBuilder_ == null) {
@@ -7998,7 +8212,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder setPersonalPermissions(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
@@ -8015,7 +8229,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder setPersonalPermissions(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
@@ -8029,7 +8243,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder addPersonalPermissions(com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
         if (personalPermissionsBuilder_ == null) {
@@ -8045,7 +8259,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder addPersonalPermissions(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Permission value) {
@@ -8062,7 +8276,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder addPersonalPermissions(
           com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
@@ -8076,7 +8290,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder addPersonalPermissions(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder builderForValue) {
@@ -8090,7 +8304,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder addAllPersonalPermissions(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Permission> values) {
@@ -8105,12 +8319,12 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder clearPersonalPermissions() {
         if (personalPermissionsBuilder_ == null) {
           personalPermissions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           personalPermissionsBuilder_.clear();
@@ -8118,7 +8332,7 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public Builder removePersonalPermissions(int index) {
         if (personalPermissionsBuilder_ == null) {
@@ -8131,14 +8345,14 @@ public final class ModelsProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder getPersonalPermissionsBuilder(
           int index) {
         return getPersonalPermissionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder getPersonalPermissionsOrBuilder(
           int index) {
@@ -8148,7 +8362,7 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder> 
            getPersonalPermissionsOrBuilderList() {
@@ -8159,14 +8373,14 @@ public final class ModelsProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder addPersonalPermissionsBuilder() {
         return getPersonalPermissionsFieldBuilder().addBuilder(
             com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder addPersonalPermissionsBuilder(
           int index) {
@@ -8174,7 +8388,7 @@ public final class ModelsProto {
             index, com.aruna.api.storage.models.v2.ModelsProto.Permission.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 5 [json_name = "personalPermissions"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Permission personal_permissions = 6 [json_name = "personalPermissions"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder> 
            getPersonalPermissionsBuilderList() {
@@ -8187,7 +8401,7 @@ public final class ModelsProto {
           personalPermissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v2.ModelsProto.Permission, com.aruna.api.storage.models.v2.ModelsProto.Permission.Builder, com.aruna.api.storage.models.v2.ModelsProto.PermissionOrBuilder>(
                   personalPermissions_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           personalPermissions_ = null;
@@ -16013,6 +16227,624 @@ public final class ModelsProto {
 
   }
 
+  public interface DataEndpointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.DataEndpoint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Hint if the objects' project 
+     * is fully synced to the endpoint
+     * </pre>
+     *
+     * <code>bool full_synced = 2 [json_name = "fullSynced"];</code>
+     * @return The fullSynced.
+     */
+    boolean getFullSynced();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.models.v2.DataEndpoint}
+   */
+  public static final class DataEndpoint extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.models.v2.DataEndpoint)
+      DataEndpointOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataEndpoint.newBuilder() to construct.
+    private DataEndpoint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataEndpoint() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataEndpoint();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_DataEndpoint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.class, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FULL_SYNCED_FIELD_NUMBER = 2;
+    private boolean fullSynced_ = false;
+    /**
+     * <pre>
+     * Hint if the objects' project 
+     * is fully synced to the endpoint
+     * </pre>
+     *
+     * <code>bool full_synced = 2 [json_name = "fullSynced"];</code>
+     * @return The fullSynced.
+     */
+    @java.lang.Override
+    public boolean getFullSynced() {
+      return fullSynced_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (fullSynced_ != false) {
+        output.writeBool(2, fullSynced_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (fullSynced_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, fullSynced_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint other = (com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getFullSynced()
+          != other.getFullSynced()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + FULL_SYNCED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFullSynced());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.models.v2.DataEndpoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.models.v2.DataEndpoint)
+        com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_DataEndpoint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.class, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        fullSynced_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getDefaultInstanceForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint build() {
+        com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint buildPartial() {
+        com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint result = new com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fullSynced_ = fullSynced_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint) {
+          return mergeFrom((com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint other) {
+        if (other == com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getFullSynced() != false) {
+          setFullSynced(other.getFullSynced());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                fullSynced_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean fullSynced_ ;
+      /**
+       * <pre>
+       * Hint if the objects' project 
+       * is fully synced to the endpoint
+       * </pre>
+       *
+       * <code>bool full_synced = 2 [json_name = "fullSynced"];</code>
+       * @return The fullSynced.
+       */
+      @java.lang.Override
+      public boolean getFullSynced() {
+        return fullSynced_;
+      }
+      /**
+       * <pre>
+       * Hint if the objects' project 
+       * is fully synced to the endpoint
+       * </pre>
+       *
+       * <code>bool full_synced = 2 [json_name = "fullSynced"];</code>
+       * @param value The fullSynced to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullSynced(boolean value) {
+
+        fullSynced_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hint if the objects' project 
+       * is fully synced to the endpoint
+       * </pre>
+       *
+       * <code>bool full_synced = 2 [json_name = "fullSynced"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullSynced() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fullSynced_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.models.v2.DataEndpoint)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.models.v2.DataEndpoint)
+    private static final com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint();
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataEndpoint>
+        PARSER = new com.google.protobuf.AbstractParser<DataEndpoint>() {
+      @java.lang.Override
+      public DataEndpoint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataEndpoint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataEndpoint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CopyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.Copy)
       com.google.protobuf.MessageOrBuilder {
@@ -19083,6 +19915,30 @@ public final class ModelsProto {
      * @return The dynamic.
      */
     boolean getDynamic();
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> 
+        getEndpointsList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    int getEndpointsCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Project}
@@ -19105,6 +19961,7 @@ public final class ModelsProto {
       dataClass_ = 0;
       createdBy_ = "";
       status_ = 0;
+      endpoints_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -19520,6 +20377,47 @@ public final class ModelsProto {
       return dynamic_;
     }
 
+    public static final int ENDPOINTS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public int getEndpointsCount() {
+      return endpoints_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+      return endpoints_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index) {
+      return endpoints_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19566,6 +20464,9 @@ public final class ModelsProto {
       }
       if (dynamic_ != false) {
         output.writeBool(11, dynamic_);
+      }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        output.writeMessage(12, endpoints_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -19616,6 +20517,10 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, dynamic_);
       }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, endpoints_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19657,6 +20562,8 @@ public final class ModelsProto {
       if (status_ != other.status_) return false;
       if (getDynamic()
           != other.getDynamic()) return false;
+      if (!getEndpointsList()
+          .equals(other.getEndpointsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -19699,6 +20606,10 @@ public final class ModelsProto {
       hash = (37 * hash) + DYNAMIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDynamic());
+      if (getEndpointsCount() > 0) {
+        hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19861,6 +20772,13 @@ public final class ModelsProto {
         createdBy_ = "";
         status_ = 0;
         dynamic_ = false;
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+        } else {
+          endpoints_ = null;
+          endpointsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -19911,6 +20829,15 @@ public final class ModelsProto {
           result.relations_ = relations_;
         } else {
           result.relations_ = relationsBuilder_.build();
+        }
+        if (endpointsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.endpoints_ = endpoints_;
+        } else {
+          result.endpoints_ = endpointsBuilder_.build();
         }
       }
 
@@ -20048,6 +20975,32 @@ public final class ModelsProto {
         if (other.getDynamic() != false) {
           setDynamic(other.getDynamic());
         }
+        if (endpointsBuilder_ == null) {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpoints_.isEmpty()) {
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureEndpointsIsMutable();
+              endpoints_.addAll(other.endpoints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpointsBuilder_.isEmpty()) {
+              endpointsBuilder_.dispose();
+              endpointsBuilder_ = null;
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              endpointsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEndpointsFieldBuilder() : null;
+            } else {
+              endpointsBuilder_.addAllMessages(other.endpoints_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -20149,6 +21102,19 @@ public final class ModelsProto {
                 bitField0_ |= 0x00000400;
                 break;
               } // case 88
+              case 98: {
+                com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.parser(),
+                        extensionRegistry);
+                if (endpointsBuilder_ == null) {
+                  ensureEndpointsIsMutable();
+                  endpoints_.add(m);
+                } else {
+                  endpointsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -21493,6 +22459,246 @@ public final class ModelsProto {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_ =
+        java.util.Collections.emptyList();
+      private void ensureEndpointsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          endpoints_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint>(endpoints_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> endpointsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+        if (endpointsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        } else {
+          return endpointsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public int getEndpointsCount() {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.size();
+        } else {
+          return endpointsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);
+        } else {
+          return endpointsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addAllEndpoints(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> values) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, endpoints_);
+          onChanged();
+        } else {
+          endpointsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder clearEndpoints() {
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          endpointsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder removeEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.remove(index);
+          onChanged();
+        } else {
+          endpointsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder getEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+          int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);  } else {
+          return endpointsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+           getEndpointsOrBuilderList() {
+        if (endpointsBuilder_ != null) {
+          return endpointsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder() {
+        return getEndpointsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder> 
+           getEndpointsBuilderList() {
+        return getEndpointsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+          getEndpointsFieldBuilder() {
+        if (endpointsBuilder_ == null) {
+          endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder>(
+                  endpoints_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          endpoints_ = null;
+        }
+        return endpointsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21778,6 +22984,30 @@ public final class ModelsProto {
      * @return The dynamic.
      */
     boolean getDynamic();
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> 
+        getEndpointsList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    int getEndpointsCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Collection}
@@ -21800,6 +23030,7 @@ public final class ModelsProto {
       dataClass_ = 0;
       createdBy_ = "";
       status_ = 0;
+      endpoints_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -22223,6 +23454,47 @@ public final class ModelsProto {
       return dynamic_;
     }
 
+    public static final int ENDPOINTS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public int getEndpointsCount() {
+      return endpoints_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+      return endpoints_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index) {
+      return endpoints_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22269,6 +23541,9 @@ public final class ModelsProto {
       }
       if (dynamic_ != false) {
         output.writeBool(11, dynamic_);
+      }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        output.writeMessage(12, endpoints_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -22319,6 +23594,10 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, dynamic_);
       }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, endpoints_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -22360,6 +23639,8 @@ public final class ModelsProto {
       if (status_ != other.status_) return false;
       if (getDynamic()
           != other.getDynamic()) return false;
+      if (!getEndpointsList()
+          .equals(other.getEndpointsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -22402,6 +23683,10 @@ public final class ModelsProto {
       hash = (37 * hash) + DYNAMIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDynamic());
+      if (getEndpointsCount() > 0) {
+        hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22564,6 +23849,13 @@ public final class ModelsProto {
         createdBy_ = "";
         status_ = 0;
         dynamic_ = false;
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+        } else {
+          endpoints_ = null;
+          endpointsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -22614,6 +23906,15 @@ public final class ModelsProto {
           result.relations_ = relations_;
         } else {
           result.relations_ = relationsBuilder_.build();
+        }
+        if (endpointsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.endpoints_ = endpoints_;
+        } else {
+          result.endpoints_ = endpointsBuilder_.build();
         }
       }
 
@@ -22751,6 +24052,32 @@ public final class ModelsProto {
         if (other.getDynamic() != false) {
           setDynamic(other.getDynamic());
         }
+        if (endpointsBuilder_ == null) {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpoints_.isEmpty()) {
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureEndpointsIsMutable();
+              endpoints_.addAll(other.endpoints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpointsBuilder_.isEmpty()) {
+              endpointsBuilder_.dispose();
+              endpointsBuilder_ = null;
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              endpointsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEndpointsFieldBuilder() : null;
+            } else {
+              endpointsBuilder_.addAllMessages(other.endpoints_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -22852,6 +24179,19 @@ public final class ModelsProto {
                 bitField0_ |= 0x00000400;
                 break;
               } // case 88
+              case 98: {
+                com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.parser(),
+                        extensionRegistry);
+                if (endpointsBuilder_ == null) {
+                  ensureEndpointsIsMutable();
+                  endpoints_.add(m);
+                } else {
+                  endpointsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -24216,6 +25556,246 @@ public final class ModelsProto {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_ =
+        java.util.Collections.emptyList();
+      private void ensureEndpointsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          endpoints_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint>(endpoints_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> endpointsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+        if (endpointsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        } else {
+          return endpointsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public int getEndpointsCount() {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.size();
+        } else {
+          return endpointsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);
+        } else {
+          return endpointsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addAllEndpoints(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> values) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, endpoints_);
+          onChanged();
+        } else {
+          endpointsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder clearEndpoints() {
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          endpointsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder removeEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.remove(index);
+          onChanged();
+        } else {
+          endpointsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder getEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+          int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);  } else {
+          return endpointsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+           getEndpointsOrBuilderList() {
+        if (endpointsBuilder_ != null) {
+          return endpointsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder() {
+        return getEndpointsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder> 
+           getEndpointsBuilderList() {
+        return getEndpointsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+          getEndpointsFieldBuilder() {
+        if (endpointsBuilder_ == null) {
+          endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder>(
+                  endpoints_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          endpoints_ = null;
+        }
+        return endpointsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24477,6 +26057,30 @@ public final class ModelsProto {
      * @return The dynamic.
      */
     boolean getDynamic();
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> 
+        getEndpointsList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    int getEndpointsCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Dataset}
@@ -24499,6 +26103,7 @@ public final class ModelsProto {
       dataClass_ = 0;
       createdBy_ = "";
       status_ = 0;
+      endpoints_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -24898,6 +26503,47 @@ public final class ModelsProto {
       return dynamic_;
     }
 
+    public static final int ENDPOINTS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public int getEndpointsCount() {
+      return endpoints_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+      return endpoints_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index) {
+      return endpoints_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24944,6 +26590,9 @@ public final class ModelsProto {
       }
       if (dynamic_ != false) {
         output.writeBool(11, dynamic_);
+      }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        output.writeMessage(12, endpoints_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -24994,6 +26643,10 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, dynamic_);
       }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, endpoints_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -25035,6 +26688,8 @@ public final class ModelsProto {
       if (status_ != other.status_) return false;
       if (getDynamic()
           != other.getDynamic()) return false;
+      if (!getEndpointsList()
+          .equals(other.getEndpointsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -25077,6 +26732,10 @@ public final class ModelsProto {
       hash = (37 * hash) + DYNAMIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDynamic());
+      if (getEndpointsCount() > 0) {
+        hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -25239,6 +26898,13 @@ public final class ModelsProto {
         createdBy_ = "";
         status_ = 0;
         dynamic_ = false;
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+        } else {
+          endpoints_ = null;
+          endpointsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -25289,6 +26955,15 @@ public final class ModelsProto {
           result.relations_ = relations_;
         } else {
           result.relations_ = relationsBuilder_.build();
+        }
+        if (endpointsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.endpoints_ = endpoints_;
+        } else {
+          result.endpoints_ = endpointsBuilder_.build();
         }
       }
 
@@ -25426,6 +27101,32 @@ public final class ModelsProto {
         if (other.getDynamic() != false) {
           setDynamic(other.getDynamic());
         }
+        if (endpointsBuilder_ == null) {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpoints_.isEmpty()) {
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureEndpointsIsMutable();
+              endpoints_.addAll(other.endpoints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpointsBuilder_.isEmpty()) {
+              endpointsBuilder_.dispose();
+              endpointsBuilder_ = null;
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              endpointsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEndpointsFieldBuilder() : null;
+            } else {
+              endpointsBuilder_.addAllMessages(other.endpoints_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -25527,6 +27228,19 @@ public final class ModelsProto {
                 bitField0_ |= 0x00000400;
                 break;
               } // case 88
+              case 98: {
+                com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.parser(),
+                        extensionRegistry);
+                if (endpointsBuilder_ == null) {
+                  ensureEndpointsIsMutable();
+                  endpoints_.add(m);
+                } else {
+                  endpointsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -26831,6 +28545,246 @@ public final class ModelsProto {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_ =
+        java.util.Collections.emptyList();
+      private void ensureEndpointsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          endpoints_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint>(endpoints_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> endpointsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+        if (endpointsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        } else {
+          return endpointsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public int getEndpointsCount() {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.size();
+        } else {
+          return endpointsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);
+        } else {
+          return endpointsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addAllEndpoints(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> values) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, endpoints_);
+          onChanged();
+        } else {
+          endpointsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder clearEndpoints() {
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          endpointsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder removeEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.remove(index);
+          onChanged();
+        } else {
+          endpointsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder getEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+          int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);  } else {
+          return endpointsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+           getEndpointsOrBuilderList() {
+        if (endpointsBuilder_ != null) {
+          return endpointsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder() {
+        return getEndpointsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder> 
+           getEndpointsBuilderList() {
+        return getEndpointsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+          getEndpointsFieldBuilder() {
+        if (endpointsBuilder_ == null) {
+          endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder>(
+                  endpoints_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          endpoints_ = null;
+        }
+        return endpointsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -27089,11 +29043,35 @@ public final class ModelsProto {
     boolean getDynamic();
 
     /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> 
+        getEndpointsList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    int getEndpointsCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index);
+
+    /**
      * <pre>
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> 
         getHashesList();
@@ -27102,7 +29080,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.Hash getHashes(int index);
     /**
@@ -27110,7 +29088,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     int getHashesCount();
     /**
@@ -27118,7 +29096,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder> 
         getHashesOrBuilderList();
@@ -27127,7 +29105,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
         int index);
@@ -27153,6 +29131,7 @@ public final class ModelsProto {
       dataClass_ = 0;
       createdBy_ = "";
       status_ = 0;
+      endpoints_ = java.util.Collections.emptyList();
       hashes_ = java.util.Collections.emptyList();
     }
 
@@ -27542,7 +29521,48 @@ public final class ModelsProto {
       return dynamic_;
     }
 
-    public static final int HASHES_FIELD_NUMBER = 12;
+    public static final int ENDPOINTS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+        getEndpointsOrBuilderList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public int getEndpointsCount() {
+      return endpoints_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+      return endpoints_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+        int index) {
+      return endpoints_.get(index);
+    }
+
+    public static final int HASHES_FIELD_NUMBER = 13;
     @SuppressWarnings("serial")
     private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> hashes_;
     /**
@@ -27550,7 +29570,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> getHashesList() {
@@ -27561,7 +29581,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder> 
@@ -27573,7 +29593,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public int getHashesCount() {
@@ -27584,7 +29604,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.Hash getHashes(int index) {
@@ -27595,7 +29615,7 @@ public final class ModelsProto {
      * Object specific attributes
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
      */
     @java.lang.Override
     public com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
@@ -27650,8 +29670,11 @@ public final class ModelsProto {
       if (dynamic_ != false) {
         output.writeBool(11, dynamic_);
       }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        output.writeMessage(12, endpoints_.get(i));
+      }
       for (int i = 0; i < hashes_.size(); i++) {
-        output.writeMessage(12, hashes_.get(i));
+        output.writeMessage(13, hashes_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -27702,9 +29725,13 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, dynamic_);
       }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, endpoints_.get(i));
+      }
       for (int i = 0; i < hashes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, hashes_.get(i));
+          .computeMessageSize(13, hashes_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -27744,6 +29771,8 @@ public final class ModelsProto {
       if (status_ != other.status_) return false;
       if (getDynamic()
           != other.getDynamic()) return false;
+      if (!getEndpointsList()
+          .equals(other.getEndpointsList())) return false;
       if (!getHashesList()
           .equals(other.getHashesList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -27787,6 +29816,10 @@ public final class ModelsProto {
       hash = (37 * hash) + DYNAMIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDynamic());
+      if (getEndpointsCount() > 0) {
+        hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointsList().hashCode();
+      }
       if (getHashesCount() > 0) {
         hash = (37 * hash) + HASHES_FIELD_NUMBER;
         hash = (53 * hash) + getHashesList().hashCode();
@@ -27949,13 +29982,20 @@ public final class ModelsProto {
         createdBy_ = "";
         status_ = 0;
         dynamic_ = false;
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+        } else {
+          endpoints_ = null;
+          endpointsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
         if (hashesBuilder_ == null) {
           hashes_ = java.util.Collections.emptyList();
         } else {
           hashes_ = null;
           hashesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -28007,10 +30047,19 @@ public final class ModelsProto {
         } else {
           result.relations_ = relationsBuilder_.build();
         }
-        if (hashesBuilder_ == null) {
+        if (endpointsBuilder_ == null) {
           if (((bitField0_ & 0x00000800) != 0)) {
-            hashes_ = java.util.Collections.unmodifiableList(hashes_);
+            endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
             bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.endpoints_ = endpoints_;
+        } else {
+          result.endpoints_ = endpointsBuilder_.build();
+        }
+        if (hashesBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            hashes_ = java.util.Collections.unmodifiableList(hashes_);
+            bitField0_ = (bitField0_ & ~0x00001000);
           }
           result.hashes_ = hashes_;
         } else {
@@ -28150,11 +30199,37 @@ public final class ModelsProto {
         if (other.getDynamic() != false) {
           setDynamic(other.getDynamic());
         }
+        if (endpointsBuilder_ == null) {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpoints_.isEmpty()) {
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureEndpointsIsMutable();
+              endpoints_.addAll(other.endpoints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpointsBuilder_.isEmpty()) {
+              endpointsBuilder_.dispose();
+              endpointsBuilder_ = null;
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              endpointsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEndpointsFieldBuilder() : null;
+            } else {
+              endpointsBuilder_.addAllMessages(other.endpoints_);
+            }
+          }
+        }
         if (hashesBuilder_ == null) {
           if (!other.hashes_.isEmpty()) {
             if (hashes_.isEmpty()) {
               hashes_ = other.hashes_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00001000);
             } else {
               ensureHashesIsMutable();
               hashes_.addAll(other.hashes_);
@@ -28167,7 +30242,7 @@ public final class ModelsProto {
               hashesBuilder_.dispose();
               hashesBuilder_ = null;
               hashes_ = other.hashes_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00001000);
               hashesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHashesFieldBuilder() : null;
@@ -28276,6 +30351,19 @@ public final class ModelsProto {
                 break;
               } // case 88
               case 98: {
+                com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.parser(),
+                        extensionRegistry);
+                if (endpointsBuilder_ == null) {
+                  ensureEndpointsIsMutable();
+                  endpoints_.add(m);
+                } else {
+                  endpointsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 106: {
                 com.aruna.api.storage.models.v2.ModelsProto.Hash m =
                     input.readMessage(
                         com.aruna.api.storage.models.v2.ModelsProto.Hash.parser(),
@@ -28287,7 +30375,7 @@ public final class ModelsProto {
                   hashesBuilder_.addMessage(m);
                 }
                 break;
-              } // case 98
+              } // case 106
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -29518,12 +31606,252 @@ public final class ModelsProto {
         return this;
       }
 
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> endpoints_ =
+        java.util.Collections.emptyList();
+      private void ensureEndpointsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          endpoints_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint>(endpoints_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> endpointsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> getEndpointsList() {
+        if (endpointsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        } else {
+          return endpointsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public int getEndpointsCount() {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.size();
+        } else {
+          return endpointsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint getEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);
+        } else {
+          return endpointsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder addAllEndpoints(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint> values) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, endpoints_);
+          onChanged();
+        } else {
+          endpointsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder clearEndpoints() {
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          endpointsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public Builder removeEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.remove(index);
+          onChanged();
+        } else {
+          endpointsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder getEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
+          int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);  } else {
+          return endpointsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+           getEndpointsOrBuilderList() {
+        if (endpointsBuilder_ != null) {
+          return endpointsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder() {
+        return getEndpointsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder addEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.DataEndpoint endpoints = 12 [json_name = "endpoints"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder> 
+           getEndpointsBuilderList() {
+        return getEndpointsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder> 
+          getEndpointsFieldBuilder() {
+        if (endpointsBuilder_ == null) {
+          endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint, com.aruna.api.storage.models.v2.ModelsProto.DataEndpoint.Builder, com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder>(
+                  endpoints_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          endpoints_ = null;
+        }
+        return endpointsBuilder_;
+      }
+
       private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> hashes_ =
         java.util.Collections.emptyList();
       private void ensureHashesIsMutable() {
-        if (!((bitField0_ & 0x00000800) != 0)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           hashes_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Hash>(hashes_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00001000;
          }
       }
 
@@ -29535,7 +31863,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash> getHashesList() {
         if (hashesBuilder_ == null) {
@@ -29549,7 +31877,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public int getHashesCount() {
         if (hashesBuilder_ == null) {
@@ -29563,7 +31891,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash getHashes(int index) {
         if (hashesBuilder_ == null) {
@@ -29577,7 +31905,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder setHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash value) {
@@ -29598,7 +31926,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder setHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder builderForValue) {
@@ -29616,7 +31944,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder addHashes(com.aruna.api.storage.models.v2.ModelsProto.Hash value) {
         if (hashesBuilder_ == null) {
@@ -29636,7 +31964,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder addHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash value) {
@@ -29657,7 +31985,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder addHashes(
           com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder builderForValue) {
@@ -29675,7 +32003,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder addHashes(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder builderForValue) {
@@ -29693,7 +32021,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder addAllHashes(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Hash> values) {
@@ -29712,12 +32040,12 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder clearHashes() {
         if (hashesBuilder_ == null) {
           hashes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
           onChanged();
         } else {
           hashesBuilder_.clear();
@@ -29729,7 +32057,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public Builder removeHashes(int index) {
         if (hashesBuilder_ == null) {
@@ -29746,7 +32074,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder getHashesBuilder(
           int index) {
@@ -29757,7 +32085,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
           int index) {
@@ -29771,7 +32099,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder> 
            getHashesOrBuilderList() {
@@ -29786,7 +32114,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder addHashesBuilder() {
         return getHashesFieldBuilder().addBuilder(
@@ -29797,7 +32125,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder addHashesBuilder(
           int index) {
@@ -29809,7 +32137,7 @@ public final class ModelsProto {
        * Object specific attributes
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 12 [json_name = "hashes"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Hash hashes = 13 [json_name = "hashes"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder> 
            getHashesBuilderList() {
@@ -29822,7 +32150,7 @@ public final class ModelsProto {
           hashesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v2.ModelsProto.Hash, com.aruna.api.storage.models.v2.ModelsProto.Hash.Builder, com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder>(
                   hashes_,
-                  ((bitField0_ & 0x00000800) != 0),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           hashes_ = null;
@@ -29964,6 +32292,11 @@ public final class ModelsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_models_v2_Endpoint_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_models_v2_DataEndpoint_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_models_v2_Copy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -30029,186 +32362,196 @@ public final class ModelsProto {
       "\'.aruna.api.storage.models.v2.Permission" +
       "R\npermission\"b\n\020CustomAttributes\022%\n\016attr" +
       "ibute_name\030\001 \001(\tR\rattributeName\022\'\n\017attri" +
-      "bute_value\030\002 \001(\tR\016attributeValue\"\320\002\n\016Use" +
+      "bute_value\030\002 \001(\tR\016attributeValue\"\375\002\n\016Use" +
       "rAttributes\022!\n\014global_admin\030\001 \001(\010R\013globa" +
       "lAdmin\022\'\n\017service_account\030\002 \001(\010R\016service" +
       "Account\022:\n\006tokens\030\003 \003(\0132\".aruna.api.stor" +
-      "age.models.v2.TokenR\006tokens\022Z\n\021custom_at" +
-      "tributes\030\004 \003(\0132-.aruna.api.storage.model" +
-      "s.v2.CustomAttributesR\020customAttributes\022" +
-      "Z\n\024personal_permissions\030\005 \003(\0132\'.aruna.ap" +
-      "i.storage.models.v2.PermissionR\023personal" +
-      "Permissions\"z\n\010KeyValue\022\020\n\003key\030\001 \001(\tR\003ke" +
-      "y\022\024\n\005value\030\002 \001(\tR\005value\022F\n\007variant\030\003 \001(\016" +
-      "2,.aruna.api.storage.models.v2.KeyValueV" +
-      "ariantR\007variant\"\260\001\n\010Relation\022K\n\010external" +
-      "\030\001 \001(\0132-.aruna.api.storage.models.v2.Ext" +
-      "ernalRelationH\000R\010external\022K\n\010internal\030\002 " +
-      "\001(\0132-.aruna.api.storage.models.v2.Intern" +
-      "alRelationH\000R\010internalB\n\n\010relation\"\320\001\n\020E" +
-      "xternalRelation\022\036\n\nidentifier\030\001 \001(\tR\nide" +
-      "ntifier\022]\n\017defined_variant\030\002 \001(\01624.aruna" +
-      ".api.storage.models.v2.ExternalRelationV" +
-      "ariantR\016definedVariant\022*\n\016custom_variant" +
-      "\030\003 \001(\tH\000R\rcustomVariant\210\001\001B\021\n\017_custom_va" +
-      "riant\"\370\002\n\020InternalRelation\022\037\n\013resource_i" +
-      "d\030\001 \001(\tR\nresourceId\022W\n\020resource_variant\030" +
-      "\002 \001(\0162,.aruna.api.storage.models.v2.Reso" +
-      "urceVariantR\017resourceVariant\022]\n\017defined_" +
-      "variant\030\003 \001(\01624.aruna.api.storage.models" +
-      ".v2.InternalRelationVariantR\016definedVari" +
-      "ant\022*\n\016custom_variant\030\004 \001(\tH\000R\rcustomVar" +
-      "iant\210\001\001\022L\n\tdirection\030\005 \001(\0162..aruna.api.s" +
-      "torage.models.v2.RelationDirectionR\tdire" +
-      "ctionB\021\n\017_custom_variant\"K\n\013PageRequest\022" +
-      "\037\n\013start_after\030\001 \001(\tR\nstartAfter\022\033\n\tpage" +
-      "_size\030\002 \001(\003R\010pageSize\"p\n\005Stats\022\024\n\005count\030" +
-      "\001 \001(\003R\005count\022\022\n\004size\030\002 \001(\003R\004size\022=\n\014last" +
-      "_updated\030\003 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\013lastUpdated\"X\n\004Hash\022<\n\003alg\030\001 \001(\0162*.a" +
-      "runa.api.storage.models.v2.Hashalgorithm" +
-      "R\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n\022EndpointHo" +
-      "stConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n\nis_primary" +
-      "\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(\010R\003ssl\022\026\n\006p" +
-      "ublic\030\004 \001(\010R\006public\022S\n\014host_variant\030\005 \001(" +
-      "\01620.aruna.api.storage.models.v2.Endpoint" +
-      "HostVariantR\013hostVariant\"\262\002\n\010Endpoint\022\016\n" +
-      "\002id\030\001 \001(\tR\002id\022K\n\nep_variant\030\002 \001(\0162,.arun" +
-      "a.api.storage.models.v2.EndpointVariantR" +
-      "\tepVariant\022\022\n\004name\030\003 \001(\tR\004name\022\033\n\tis_pub" +
-      "lic\030\004 \001(\010R\010isPublic\022D\n\006status\030\005 \001(\0162,.ar" +
-      "una.api.storage.models.v2.ComponentStatu" +
-      "sR\006status\022R\n\014host_configs\030\006 \003(\0132/.aruna." +
-      "api.storage.models.v2.EndpointHostConfig" +
-      "R\013hostConfigs\"_\n\004Copy\022\032\n\010resource\030\001 \001(\tR" +
-      "\010resource\022\'\n\017target_endpoint\030\002 \001(\tR\016targ" +
-      "etEndpoint\022\022\n\004push\030\003 \001(\010R\004push\"v\n\007Contex" +
-      "t\022\'\n\016s3_credentials\030\001 \001(\010H\000R\rs3Credentia" +
-      "ls\0227\n\004copy\030\002 \001(\0132!.aruna.api.storage.mod" +
-      "els.v2.CopyH\000R\004copyB\t\n\007context\"\253\002\n\017Gener" +
-      "icResource\022@\n\007project\030\001 \001(\0132$.aruna.api." +
-      "storage.models.v2.ProjectH\000R\007project\022I\n\n" +
-      "collection\030\002 \001(\0132\'.aruna.api.storage.mod" +
-      "els.v2.CollectionH\000R\ncollection\022@\n\007datas" +
-      "et\030\003 \001(\0132$.aruna.api.storage.models.v2.D" +
-      "atasetH\000R\007dataset\022=\n\006object\030\004 \001(\0132#.arun" +
-      "a.api.storage.models.v2.ObjectH\000R\006object" +
-      "B\n\n\010resource\"\214\004\n\007Project\022\016\n\002id\030\001 \001(\tR\002id" +
-      "\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(" +
-      "\tR\013description\022D\n\nkey_values\030\004 \003(\0132%.aru" +
-      "na.api.storage.models.v2.KeyValueR\tkeyVa" +
-      "lues\022C\n\trelations\030\005 \003(\0132%.aruna.api.stor" +
-      "age.models.v2.RelationR\trelations\0228\n\005sta" +
-      "ts\030\006 \001(\0132\".aruna.api.storage.models.v2.S" +
-      "tatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&.aruna." +
-      "api.storage.models.v2.DataClassR\tdataCla" +
-      "ss\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf" +
-      ".TimestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(" +
-      "\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api" +
-      ".storage.models.v2.StatusR\006status\022\030\n\007dyn" +
-      "amic\030\013 \001(\010R\007dynamic\"\217\004\n\nCollection\022\016\n\002id" +
-      "\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descri" +
-      "ption\030\003 \001(\tR\013description\022D\n\nkey_values\030\004" +
-      " \003(\0132%.aruna.api.storage.models.v2.KeyVa" +
-      "lueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.arun" +
-      "a.api.storage.models.v2.RelationR\trelati" +
-      "ons\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage.m" +
-      "odels.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(" +
-      "\0162&.aruna.api.storage.models.v2.DataClas" +
-      "sR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\tcreatedAt\022\035\n\ncreat" +
-      "ed_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#" +
-      ".aruna.api.storage.models.v2.StatusR\006sta" +
-      "tus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\214\004\n\007Datase" +
-      "t\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
-      "\013description\030\003 \001(\tR\013description\022D\n\nkey_v" +
-      "alues\030\004 \003(\0132%.aruna.api.storage.models.v" +
-      "2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003(\013" +
-      "2%.aruna.api.storage.models.v2.RelationR" +
-      "\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api.st" +
-      "orage.models.v2.StatsR\005stats\022E\n\ndata_cla" +
-      "ss\030\007 \001(\0162&.aruna.api.storage.models.v2.D" +
-      "ataClassR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tcreatedAt\022\035" +
-      "\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030" +
-      "\n \001(\0162#.aruna.api.storage.models.v2.Stat" +
-      "usR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\"\255\004\n" +
-      "\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004n" +
-      "ame\022 \n\013description\030\003 \001(\tR\013description\022D\n" +
-      "\nkey_values\030\004 \003(\0132%.aruna.api.storage.mo" +
-      "dels.v2.KeyValueR\tkeyValues\022C\n\trelations" +
-      "\030\005 \003(\0132%.aruna.api.storage.models.v2.Rel" +
-      "ationR\trelations\022\037\n\013content_len\030\006 \001(\003R\nc" +
-      "ontentLen\022E\n\ndata_class\030\007 \001(\0162&.aruna.ap" +
-      "i.storage.models.v2.DataClassR\tdataClass" +
-      "\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf.T" +
-      "imestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR" +
-      "\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api.s" +
-      "torage.models.v2.StatusR\006status\022\030\n\007dynam" +
-      "ic\030\013 \001(\010R\007dynamic\0229\n\006hashes\030\014 \003(\0132!.arun" +
-      "a.api.storage.models.v2.HashR\006hashes*\215\001\n" +
-      "\tDataClass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025" +
-      "\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIV" +
-      "ATE\020\002\022\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DATA_" +
-      "CLASS_CONFIDENTIAL\020\005*s\n\017EndpointVariant\022" +
-      " \n\034ENDPOINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033END" +
-      "POINT_VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOINT_V" +
-      "ARIANT_VOLATILE\020\002*\200\001\n\023EndpointHostVarian" +
-      "t\022%\n!ENDPOINT_HOST_VARIANT_UNSPECIFIED\020\000" +
-      "\022\037\n\033ENDPOINT_HOST_VARIANT_PROXY\020\001\022!\n\035END" +
-      "POINT_HOST_VARIANT_BUNDLER\020\002*\276\001\n\017Permiss" +
-      "ionLevel\022 \n\034PERMISSION_LEVEL_UNSPECIFIED" +
-      "\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031\n\025PERMISS" +
-      "ION_LEVEL_READ\020\003\022\033\n\027PERMISSION_LEVEL_APP" +
-      "END\020\004\022\032\n\026PERMISSION_LEVEL_WRITE\020\005\022\032\n\026PER" +
-      "MISSION_LEVEL_ADMIN\020\006*\221\001\n\017KeyValueVarian" +
-      "t\022!\n\035KEY_VALUE_VARIANT_UNSPECIFIED\020\000\022\033\n\027" +
-      "KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KEY_VALUE_V" +
-      "ARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VALUE_VARIA" +
-      "NT_HOOK\020\003*\267\001\n\027ExternalRelationVariant\022)\n" +
-      "%EXTERNAL_RELATION_VARIANT_UNSPECIFIED\020\000" +
-      "\022!\n\035EXTERNAL_RELATION_VARIANT_URL\020\001\022(\n$E" +
-      "XTERNAL_RELATION_VARIANT_IDENTIFIER\020\002\022$\n" +
-      " EXTERNAL_RELATION_VARIANT_CUSTOM\020\003*\257\002\n\027" +
-      "InternalRelationVariant\022)\n%INTERNAL_RELA" +
-      "TION_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL_R" +
-      "ELATION_VARIANT_BELONGS_TO\020\001\022$\n INTERNAL" +
-      "_RELATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL_R" +
-      "ELATION_VARIANT_VERSION\020\003\022&\n\"INTERNAL_RE" +
-      "LATION_VARIANT_METADATA\020\004\022$\n INTERNAL_RE" +
-      "LATION_VARIANT_POLICY\020\005\022$\n INTERNAL_RELA" +
-      "TION_VARIANT_CUSTOM\020\006*x\n\021RelationDirecti" +
-      "on\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000\022\036" +
-      "\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELATI" +
-      "ON_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceActi" +
-      "on\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n\026R" +
-      "ESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_ACTI" +
-      "ON_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020\003\022" +
-      "\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_AC" +
-      "TION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNSPE" +
-      "CIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021STA" +
-      "TUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003\022\026" +
-      "\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR\020\005" +
-      "\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStatus" +
-      "\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035CO" +
-      "MPONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPONE" +
-      "NT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STATU" +
-      "S_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVAIL" +
-      "ABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE\020\005" +
-      "*_\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNSPE" +
-      "CIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HASHA" +
-      "LGORITHM_SHA256\020\002*\255\001\n\017ResourceVariant\022 \n" +
-      "\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034\n\030RESOU" +
-      "RCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE_VARIAN" +
-      "T_COLLECTION\020\002\022\034\n\030RESOURCE_VARIANT_DATAS" +
-      "ET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004B\371\001\n\037co" +
-      "m.aruna.api.storage.models.v2B\013ModelsPro" +
-      "toZ:github.com/ArunaStorage/go-api/aruna" +
-      "/api/storage/models/v2\242\002\004AASM\252\002\033Aruna.Ap" +
-      "i.Storage.Models.V2\312\002\033Aruna\\Api\\Storage\\" +
-      "Models\\V2\342\002\'Aruna\\Api\\Storage\\Models\\V2\\" +
-      "GPBMetadata\352\002\037Aruna::Api::Storage::Model" +
-      "s::V2b\006proto3"
+      "age.models.v2.TokenR\006tokens\022+\n\021trusted_e" +
+      "ndpoints\030\004 \003(\tR\020trustedEndpoints\022Z\n\021cust" +
+      "om_attributes\030\005 \003(\0132-.aruna.api.storage." +
+      "models.v2.CustomAttributesR\020customAttrib" +
+      "utes\022Z\n\024personal_permissions\030\006 \003(\0132\'.aru" +
+      "na.api.storage.models.v2.PermissionR\023per" +
+      "sonalPermissions\"z\n\010KeyValue\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\022F\n\007variant\030" +
+      "\003 \001(\0162,.aruna.api.storage.models.v2.KeyV" +
+      "alueVariantR\007variant\"\260\001\n\010Relation\022K\n\010ext" +
+      "ernal\030\001 \001(\0132-.aruna.api.storage.models.v" +
+      "2.ExternalRelationH\000R\010external\022K\n\010intern" +
+      "al\030\002 \001(\0132-.aruna.api.storage.models.v2.I" +
+      "nternalRelationH\000R\010internalB\n\n\010relation\"" +
+      "\320\001\n\020ExternalRelation\022\036\n\nidentifier\030\001 \001(\t" +
+      "R\nidentifier\022]\n\017defined_variant\030\002 \001(\01624." +
+      "aruna.api.storage.models.v2.ExternalRela" +
+      "tionVariantR\016definedVariant\022*\n\016custom_va" +
+      "riant\030\003 \001(\tH\000R\rcustomVariant\210\001\001B\021\n\017_cust" +
+      "om_variant\"\370\002\n\020InternalRelation\022\037\n\013resou" +
+      "rce_id\030\001 \001(\tR\nresourceId\022W\n\020resource_var" +
+      "iant\030\002 \001(\0162,.aruna.api.storage.models.v2" +
+      ".ResourceVariantR\017resourceVariant\022]\n\017def" +
+      "ined_variant\030\003 \001(\01624.aruna.api.storage.m" +
+      "odels.v2.InternalRelationVariantR\016define" +
+      "dVariant\022*\n\016custom_variant\030\004 \001(\tH\000R\rcust" +
+      "omVariant\210\001\001\022L\n\tdirection\030\005 \001(\0162..aruna." +
+      "api.storage.models.v2.RelationDirectionR" +
+      "\tdirectionB\021\n\017_custom_variant\"K\n\013PageReq" +
+      "uest\022\037\n\013start_after\030\001 \001(\tR\nstartAfter\022\033\n" +
+      "\tpage_size\030\002 \001(\003R\010pageSize\"p\n\005Stats\022\024\n\005c" +
+      "ount\030\001 \001(\003R\005count\022\022\n\004size\030\002 \001(\003R\004size\022=\n" +
+      "\014last_updated\030\003 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\013lastUpdated\"X\n\004Hash\022<\n\003alg\030\001 \001(" +
+      "\0162*.aruna.api.storage.models.v2.Hashalgo" +
+      "rithmR\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n\022Endpo" +
+      "intHostConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n\nis_pr" +
+      "imary\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(\010R\003ssl" +
+      "\022\026\n\006public\030\004 \001(\010R\006public\022S\n\014host_variant" +
+      "\030\005 \001(\01620.aruna.api.storage.models.v2.End" +
+      "pointHostVariantR\013hostVariant\"\262\002\n\010Endpoi" +
+      "nt\022\016\n\002id\030\001 \001(\tR\002id\022K\n\nep_variant\030\002 \001(\0162," +
+      ".aruna.api.storage.models.v2.EndpointVar" +
+      "iantR\tepVariant\022\022\n\004name\030\003 \001(\tR\004name\022\033\n\ti" +
+      "s_public\030\004 \001(\010R\010isPublic\022D\n\006status\030\005 \001(\016" +
+      "2,.aruna.api.storage.models.v2.Component" +
+      "StatusR\006status\022R\n\014host_configs\030\006 \003(\0132/.a" +
+      "runa.api.storage.models.v2.EndpointHostC" +
+      "onfigR\013hostConfigs\"?\n\014DataEndpoint\022\016\n\002id" +
+      "\030\001 \001(\tR\002id\022\037\n\013full_synced\030\002 \001(\010R\nfullSyn" +
+      "ced\"_\n\004Copy\022\032\n\010resource\030\001 \001(\tR\010resource\022" +
+      "\'\n\017target_endpoint\030\002 \001(\tR\016targetEndpoint" +
+      "\022\022\n\004push\030\003 \001(\010R\004push\"v\n\007Context\022\'\n\016s3_cr" +
+      "edentials\030\001 \001(\010H\000R\rs3Credentials\0227\n\004copy" +
+      "\030\002 \001(\0132!.aruna.api.storage.models.v2.Cop" +
+      "yH\000R\004copyB\t\n\007context\"\253\002\n\017GenericResource" +
+      "\022@\n\007project\030\001 \001(\0132$.aruna.api.storage.mo" +
+      "dels.v2.ProjectH\000R\007project\022I\n\ncollection" +
+      "\030\002 \001(\0132\'.aruna.api.storage.models.v2.Col" +
+      "lectionH\000R\ncollection\022@\n\007dataset\030\003 \001(\0132$" +
+      ".aruna.api.storage.models.v2.DatasetH\000R\007" +
+      "dataset\022=\n\006object\030\004 \001(\0132#.aruna.api.stor" +
+      "age.models.v2.ObjectH\000R\006objectB\n\n\010resour" +
+      "ce\"\325\004\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002" +
+      " \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descrip" +
+      "tion\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.sto" +
+      "rage.models.v2.KeyValueR\tkeyValues\022C\n\tre" +
+      "lations\030\005 \003(\0132%.aruna.api.storage.models" +
+      ".v2.RelationR\trelations\0228\n\005stats\030\006 \001(\0132\"" +
+      ".aruna.api.storage.models.v2.StatsR\005stat" +
+      "s\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.storag" +
+      "e.models.v2.DataClassR\tdataClass\0229\n\ncrea" +
+      "ted_at\030\010 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreated" +
+      "By\022;\n\006status\030\n \001(\0162#.aruna.api.storage.m" +
+      "odels.v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010" +
+      "R\007dynamic\022G\n\tendpoints\030\014 \003(\0132).aruna.api" +
+      ".storage.models.v2.DataEndpointR\tendpoin" +
+      "ts\"\330\004\n\nCollection\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004nam" +
+      "e\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013desc" +
+      "ription\022D\n\nkey_values\030\004 \003(\0132%.aruna.api." +
+      "storage.models.v2.KeyValueR\tkeyValues\022C\n" +
+      "\trelations\030\005 \003(\0132%.aruna.api.storage.mod" +
+      "els.v2.RelationR\trelations\0228\n\005stats\030\006 \001(" +
+      "\0132\".aruna.api.storage.models.v2.StatsR\005s" +
+      "tats\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.sto" +
+      "rage.models.v2.DataClassR\tdataClass\0229\n\nc" +
+      "reated_at\030\010 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcrea" +
+      "tedBy\022;\n\006status\030\n \001(\0162#.aruna.api.storag" +
+      "e.models.v2.StatusR\006status\022\030\n\007dynamic\030\013 " +
+      "\001(\010R\007dynamic\022G\n\tendpoints\030\014 \003(\0132).aruna." +
+      "api.storage.models.v2.DataEndpointR\tendp" +
+      "oints\"\325\004\n\007Dataset\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004nam" +
+      "e\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013desc" +
+      "ription\022D\n\nkey_values\030\004 \003(\0132%.aruna.api." +
+      "storage.models.v2.KeyValueR\tkeyValues\022C\n" +
+      "\trelations\030\005 \003(\0132%.aruna.api.storage.mod" +
+      "els.v2.RelationR\trelations\0228\n\005stats\030\006 \001(" +
+      "\0132\".aruna.api.storage.models.v2.StatsR\005s" +
+      "tats\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.sto" +
+      "rage.models.v2.DataClassR\tdataClass\0229\n\nc" +
+      "reated_at\030\010 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcrea" +
+      "tedBy\022;\n\006status\030\n \001(\0162#.aruna.api.storag" +
+      "e.models.v2.StatusR\006status\022\030\n\007dynamic\030\013 " +
+      "\001(\010R\007dynamic\022G\n\tendpoints\030\014 \003(\0132).aruna." +
+      "api.storage.models.v2.DataEndpointR\tendp" +
+      "oints\"\366\004\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
+      "iption\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.s" +
+      "torage.models.v2.KeyValueR\tkeyValues\022C\n\t" +
+      "relations\030\005 \003(\0132%.aruna.api.storage.mode" +
+      "ls.v2.RelationR\trelations\022\037\n\013content_len" +
+      "\030\006 \001(\003R\ncontentLen\022E\n\ndata_class\030\007 \001(\0162&" +
+      ".aruna.api.storage.models.v2.DataClassR\t" +
+      "dataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\tcreatedAt\022\035\n\ncreated_" +
+      "by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.ar" +
+      "una.api.storage.models.v2.StatusR\006status" +
+      "\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpoints\030" +
+      "\014 \003(\0132).aruna.api.storage.models.v2.Data" +
+      "EndpointR\tendpoints\0229\n\006hashes\030\r \003(\0132!.ar" +
+      "una.api.storage.models.v2.HashR\006hashes*\215" +
+      "\001\n\tDataClass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000" +
+      "\022\025\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PR" +
+      "IVATE\020\002\022\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DAT" +
+      "A_CLASS_CONFIDENTIAL\020\005*s\n\017EndpointVarian" +
+      "t\022 \n\034ENDPOINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033E" +
+      "NDPOINT_VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOINT" +
+      "_VARIANT_VOLATILE\020\002*\200\001\n\023EndpointHostVari" +
+      "ant\022%\n!ENDPOINT_HOST_VARIANT_UNSPECIFIED" +
+      "\020\000\022\037\n\033ENDPOINT_HOST_VARIANT_PROXY\020\001\022!\n\035E" +
+      "NDPOINT_HOST_VARIANT_BUNDLER\020\002*\276\001\n\017Permi" +
+      "ssionLevel\022 \n\034PERMISSION_LEVEL_UNSPECIFI" +
+      "ED\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031\n\025PERMI" +
+      "SSION_LEVEL_READ\020\003\022\033\n\027PERMISSION_LEVEL_A" +
+      "PPEND\020\004\022\032\n\026PERMISSION_LEVEL_WRITE\020\005\022\032\n\026P" +
+      "ERMISSION_LEVEL_ADMIN\020\006*\221\001\n\017KeyValueVari" +
+      "ant\022!\n\035KEY_VALUE_VARIANT_UNSPECIFIED\020\000\022\033" +
+      "\n\027KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KEY_VALUE" +
+      "_VARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VALUE_VAR" +
+      "IANT_HOOK\020\003*\267\001\n\027ExternalRelationVariant\022" +
+      ")\n%EXTERNAL_RELATION_VARIANT_UNSPECIFIED" +
+      "\020\000\022!\n\035EXTERNAL_RELATION_VARIANT_URL\020\001\022(\n" +
+      "$EXTERNAL_RELATION_VARIANT_IDENTIFIER\020\002\022" +
+      "$\n EXTERNAL_RELATION_VARIANT_CUSTOM\020\003*\257\002" +
+      "\n\027InternalRelationVariant\022)\n%INTERNAL_RE" +
+      "LATION_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL" +
+      "_RELATION_VARIANT_BELONGS_TO\020\001\022$\n INTERN" +
+      "AL_RELATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL" +
+      "_RELATION_VARIANT_VERSION\020\003\022&\n\"INTERNAL_" +
+      "RELATION_VARIANT_METADATA\020\004\022$\n INTERNAL_" +
+      "RELATION_VARIANT_POLICY\020\005\022$\n INTERNAL_RE" +
+      "LATION_VARIANT_CUSTOM\020\006*x\n\021RelationDirec" +
+      "tion\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000" +
+      "\022\036\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELA" +
+      "TION_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceAc" +
+      "tion\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n" +
+      "\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_AC" +
+      "TION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020" +
+      "\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_" +
+      "ACTION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021S" +
+      "TATUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003" +
+      "\022\026\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR" +
+      "\020\005\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStat" +
+      "us\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035" +
+      "COMPONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPO" +
+      "NENT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STA" +
+      "TUS_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVA" +
+      "ILABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE" +
+      "\020\005*_\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNS" +
+      "PECIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HAS" +
+      "HALGORITHM_SHA256\020\002*\255\001\n\017ResourceVariant\022" +
+      " \n\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034\n\030RES" +
+      "OURCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE_VARI" +
+      "ANT_COLLECTION\020\002\022\034\n\030RESOURCE_VARIANT_DAT" +
+      "ASET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004B\371\001\n\037" +
+      "com.aruna.api.storage.models.v2B\013ModelsP" +
+      "rotoZ:github.com/ArunaStorage/go-api/aru" +
+      "na/api/storage/models/v2\242\002\004AASM\252\002\033Aruna." +
+      "Api.Storage.Models.V2\312\002\033Aruna\\Api\\Storag" +
+      "e\\Models\\V2\342\002\'Aruna\\Api\\Storage\\Models\\V" +
+      "2\\GPBMetadata\352\002\037Aruna::Api::Storage::Mod" +
+      "els::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30244,7 +32587,7 @@ public final class ModelsProto {
     internal_static_aruna_api_storage_models_v2_UserAttributes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor,
-        new java.lang.String[] { "GlobalAdmin", "ServiceAccount", "Tokens", "CustomAttributes", "PersonalPermissions", });
+        new java.lang.String[] { "GlobalAdmin", "ServiceAccount", "Tokens", "TrustedEndpoints", "CustomAttributes", "PersonalPermissions", });
     internal_static_aruna_api_storage_models_v2_KeyValue_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_aruna_api_storage_models_v2_KeyValue_fieldAccessorTable = new
@@ -30299,48 +32642,54 @@ public final class ModelsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Endpoint_descriptor,
         new java.lang.String[] { "Id", "EpVariant", "Name", "IsPublic", "Status", "HostConfigs", });
-    internal_static_aruna_api_storage_models_v2_Copy_descriptor =
+    internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_aruna_api_storage_models_v2_DataEndpoint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor,
+        new java.lang.String[] { "Id", "FullSynced", });
+    internal_static_aruna_api_storage_models_v2_Copy_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_aruna_api_storage_models_v2_Copy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Copy_descriptor,
         new java.lang.String[] { "Resource", "TargetEndpoint", "Push", });
     internal_static_aruna_api_storage_models_v2_Context_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Context_descriptor,
         new java.lang.String[] { "S3Credentials", "Copy", "Context", });
     internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_storage_models_v2_GenericResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_GenericResource_descriptor,
         new java.lang.String[] { "Project", "Collection", "Dataset", "Object", "Resource", });
     internal_static_aruna_api_storage_models_v2_Project_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aruna_api_storage_models_v2_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Project_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", });
     internal_static_aruna_api_storage_models_v2_Collection_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aruna_api_storage_models_v2_Collection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Collection_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", });
     internal_static_aruna_api_storage_models_v2_Dataset_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aruna_api_storage_models_v2_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Dataset_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", });
     internal_static_aruna_api_storage_models_v2_Object_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_aruna_api_storage_models_v2_Object_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Object_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "ContentLen", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Hashes", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "ContentLen", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "Hashes", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

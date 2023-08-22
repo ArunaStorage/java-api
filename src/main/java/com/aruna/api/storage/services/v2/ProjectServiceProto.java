@@ -164,6 +164,26 @@ public final class ProjectServiceProto {
      * @return The dataClass.
      */
     com.aruna.api.storage.models.v2.ModelsProto.DataClass getDataClass();
+
+    /**
+     * <pre>
+     * Preferred endpoint
+     * </pre>
+     *
+     * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+     * @return The preferredEndpoint.
+     */
+    java.lang.String getPreferredEndpoint();
+    /**
+     * <pre>
+     * Preferred endpoint
+     * </pre>
+     *
+     * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+     * @return The bytes for preferredEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getPreferredEndpointBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.CreateProjectRequest}
@@ -183,6 +203,7 @@ public final class ProjectServiceProto {
       keyValues_ = java.util.Collections.emptyList();
       externalRelations_ = java.util.Collections.emptyList();
       dataClass_ = 0;
+      preferredEndpoint_ = "";
     }
 
     @java.lang.Override
@@ -447,6 +468,53 @@ public final class ProjectServiceProto {
       return result == null ? com.aruna.api.storage.models.v2.ModelsProto.DataClass.UNRECOGNIZED : result;
     }
 
+    public static final int PREFERRED_ENDPOINT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object preferredEndpoint_ = "";
+    /**
+     * <pre>
+     * Preferred endpoint
+     * </pre>
+     *
+     * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+     * @return The preferredEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getPreferredEndpoint() {
+      java.lang.Object ref = preferredEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        preferredEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Preferred endpoint
+     * </pre>
+     *
+     * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+     * @return The bytes for preferredEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPreferredEndpointBytes() {
+      java.lang.Object ref = preferredEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        preferredEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -476,6 +544,9 @@ public final class ProjectServiceProto {
       if (dataClass_ != com.aruna.api.storage.models.v2.ModelsProto.DataClass.DATA_CLASS_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, dataClass_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preferredEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, preferredEndpoint_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -503,6 +574,9 @@ public final class ProjectServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, dataClass_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preferredEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, preferredEndpoint_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -527,6 +601,8 @@ public final class ProjectServiceProto {
       if (!getExternalRelationsList()
           .equals(other.getExternalRelationsList())) return false;
       if (dataClass_ != other.dataClass_) return false;
+      if (!getPreferredEndpoint()
+          .equals(other.getPreferredEndpoint())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -552,6 +628,8 @@ public final class ProjectServiceProto {
       }
       hash = (37 * hash) + DATA_CLASS_FIELD_NUMBER;
       hash = (53 * hash) + dataClass_;
+      hash = (37 * hash) + PREFERRED_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getPreferredEndpoint().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -700,6 +778,7 @@ public final class ProjectServiceProto {
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         dataClass_ = 0;
+        preferredEndpoint_ = "";
         return this;
       }
 
@@ -763,6 +842,9 @@ public final class ProjectServiceProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.dataClass_ = dataClass_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.preferredEndpoint_ = preferredEndpoint_;
         }
       }
 
@@ -843,6 +925,11 @@ public final class ProjectServiceProto {
         if (other.dataClass_ != 0) {
           setDataClassValue(other.getDataClassValue());
         }
+        if (!other.getPreferredEndpoint().isEmpty()) {
+          preferredEndpoint_ = other.preferredEndpoint_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -910,6 +997,11 @@ public final class ProjectServiceProto {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
+              case 50: {
+                preferredEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1804,6 +1896,98 @@ public final class ProjectServiceProto {
       public Builder clearDataClass() {
         bitField0_ = (bitField0_ & ~0x00000010);
         dataClass_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object preferredEndpoint_ = "";
+      /**
+       * <pre>
+       * Preferred endpoint
+       * </pre>
+       *
+       * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+       * @return The preferredEndpoint.
+       */
+      public java.lang.String getPreferredEndpoint() {
+        java.lang.Object ref = preferredEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          preferredEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Preferred endpoint
+       * </pre>
+       *
+       * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+       * @return The bytes for preferredEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getPreferredEndpointBytes() {
+        java.lang.Object ref = preferredEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          preferredEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Preferred endpoint
+       * </pre>
+       *
+       * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+       * @param value The preferredEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreferredEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        preferredEndpoint_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred endpoint
+       * </pre>
+       *
+       * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreferredEndpoint() {
+        preferredEndpoint_ = getDefaultInstance().getPreferredEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred endpoint
+       * </pre>
+       *
+       * <code>string preferred_endpoint = 6 [json_name = "preferredEndpoint"];</code>
+       * @param value The bytes for preferredEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreferredEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        preferredEndpoint_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -12877,104 +13061,106 @@ public final class ProjectServiceProto {
       "s.v2\032(aruna/api/storage/models/v2/models" +
       ".proto\032\034google/api/annotations.proto\032.pr" +
       "otoc-gen-openapiv2/options/annotations.p" +
-      "roto\"\267\002\n\024CreateProjectRequest\022\022\n\004name\030\001 " +
+      "roto\"\346\002\n\024CreateProjectRequest\022\022\n\004name\030\001 " +
       "\001(\tR\004name\022 \n\013description\030\002 \001(\tR\013descript" +
       "ion\022D\n\nkey_values\030\003 \003(\0132%.aruna.api.stor" +
       "age.models.v2.KeyValueR\tkeyValues\022\\\n\022ext" +
       "ernal_relations\030\004 \003(\0132-.aruna.api.storag" +
       "e.models.v2.ExternalRelationR\021externalRe" +
       "lations\022E\n\ndata_class\030\005 \001(\0162&.aruna.api." +
-      "storage.models.v2.DataClassR\tdataClass\"W" +
-      "\n\025CreateProjectResponse\022>\n\007project\030\001 \001(\013" +
-      "2$.aruna.api.storage.models.v2.ProjectR\007" +
-      "project\"2\n\021GetProjectRequest\022\035\n\nproject_" +
-      "id\030\001 \001(\tR\tprojectId\"T\n\022GetProjectRespons" +
+      "storage.models.v2.DataClassR\tdataClass\022-" +
+      "\n\022preferred_endpoint\030\006 \001(\tR\021preferredEnd" +
+      "point\"W\n\025CreateProjectResponse\022>\n\007projec" +
+      "t\030\001 \001(\0132$.aruna.api.storage.models.v2.Pr" +
+      "ojectR\007project\"2\n\021GetProjectRequest\022\035\n\np" +
+      "roject_id\030\001 \001(\tR\tprojectId\"T\n\022GetProject" +
+      "Response\022>\n\007project\030\001 \001(\0132$.aruna.api.st" +
+      "orage.models.v2.ProjectR\007project\"5\n\022GetP" +
+      "rojectsRequest\022\037\n\013project_ids\030\001 \003(\tR\npro" +
+      "jectIds\"W\n\023GetProjectsResponse\022@\n\010projec" +
+      "ts\030\001 \003(\0132$.aruna.api.storage.models.v2.P" +
+      "rojectR\010projects\"5\n\024DeleteProjectRequest" +
+      "\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\"\027\n\025Delet" +
+      "eProjectResponse\"M\n\030UpdateProjectNameReq" +
+      "uest\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\022\022\n\004n" +
+      "ame\030\002 \001(\tR\004name\"[\n\031UpdateProjectNameResp" +
+      "onse\022>\n\007project\030\001 \001(\0132$.aruna.api.storag" +
+      "e.models.v2.ProjectR\007project\"b\n\037UpdatePr" +
+      "ojectDescriptionRequest\022\035\n\nproject_id\030\001 " +
+      "\001(\tR\tprojectId\022 \n\013description\030\002 \001(\tR\013des" +
+      "cription\"b\n UpdateProjectDescriptionResp" +
+      "onse\022>\n\007project\030\001 \001(\0132$.aruna.api.storag" +
+      "e.models.v2.ProjectR\007project\"\336\001\n\035UpdateP" +
+      "rojectKeyValuesRequest\022\035\n\nproject_id\030\001 \001" +
+      "(\tR\tprojectId\022K\n\016add_key_values\030\002 \003(\0132%." +
+      "aruna.api.storage.models.v2.KeyValueR\014ad" +
+      "dKeyValues\022Q\n\021remove_key_values\030\003 \003(\0132%." +
+      "aruna.api.storage.models.v2.KeyValueR\017re" +
+      "moveKeyValues\"`\n\036UpdateProjectKeyValuesR" +
+      "esponse\022>\n\007project\030\001 \001(\0132$.aruna.api.sto" +
+      "rage.models.v2.ProjectR\007project\"\205\001\n\035Upda" +
+      "teProjectDataClassRequest\022\035\n\nproject_id\030" +
+      "\001 \001(\tR\tprojectId\022E\n\ndata_class\030\002 \001(\0162&.a" +
+      "runa.api.storage.models.v2.DataClassR\tda" +
+      "taClass\"`\n\036UpdateProjectDataClassRespons" +
       "e\022>\n\007project\030\001 \001(\0132$.aruna.api.storage.m" +
-      "odels.v2.ProjectR\007project\"5\n\022GetProjects" +
-      "Request\022\037\n\013project_ids\030\001 \003(\tR\nprojectIds" +
-      "\"W\n\023GetProjectsResponse\022@\n\010projects\030\001 \003(" +
-      "\0132$.aruna.api.storage.models.v2.ProjectR" +
-      "\010projects\"5\n\024DeleteProjectRequest\022\035\n\npro" +
-      "ject_id\030\001 \001(\tR\tprojectId\"\027\n\025DeleteProjec" +
-      "tResponse\"M\n\030UpdateProjectNameRequest\022\035\n" +
-      "\nproject_id\030\001 \001(\tR\tprojectId\022\022\n\004name\030\002 \001" +
-      "(\tR\004name\"[\n\031UpdateProjectNameResponse\022>\n" +
-      "\007project\030\001 \001(\0132$.aruna.api.storage.model" +
-      "s.v2.ProjectR\007project\"b\n\037UpdateProjectDe" +
-      "scriptionRequest\022\035\n\nproject_id\030\001 \001(\tR\tpr" +
-      "ojectId\022 \n\013description\030\002 \001(\tR\013descriptio" +
-      "n\"b\n UpdateProjectDescriptionResponse\022>\n" +
-      "\007project\030\001 \001(\0132$.aruna.api.storage.model" +
-      "s.v2.ProjectR\007project\"\336\001\n\035UpdateProjectK" +
-      "eyValuesRequest\022\035\n\nproject_id\030\001 \001(\tR\tpro" +
-      "jectId\022K\n\016add_key_values\030\002 \003(\0132%.aruna.a" +
-      "pi.storage.models.v2.KeyValueR\014addKeyVal" +
-      "ues\022Q\n\021remove_key_values\030\003 \003(\0132%.aruna.a" +
-      "pi.storage.models.v2.KeyValueR\017removeKey" +
-      "Values\"`\n\036UpdateProjectKeyValuesResponse" +
-      "\022>\n\007project\030\001 \001(\0132$.aruna.api.storage.mo" +
-      "dels.v2.ProjectR\007project\"\205\001\n\035UpdateProje" +
-      "ctDataClassRequest\022\035\n\nproject_id\030\001 \001(\tR\t" +
-      "projectId\022E\n\ndata_class\030\002 \001(\0162&.aruna.ap" +
-      "i.storage.models.v2.DataClassR\tdataClass" +
-      "\"`\n\036UpdateProjectDataClassResponse\022>\n\007pr" +
-      "oject\030\001 \001(\0132$.aruna.api.storage.models.v" +
-      "2.ProjectR\007project\"6\n\025ArchiveProjectRequ" +
-      "est\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\"X\n\026Ar" +
-      "chiveProjectResponse\022>\n\007project\030\001 \001(\0132$." +
-      "aruna.api.storage.models.v2.ProjectR\007pro" +
-      "ject2\246\014\n\016ProjectService\022\222\001\n\rCreateProjec" +
-      "t\0223.aruna.api.storage.services.v2.Create" +
-      "ProjectRequest\0324.aruna.api.storage.servi" +
-      "ces.v2.CreateProjectResponse\"\026\202\323\344\223\002\020\"\013/v" +
-      "2/project:\001*\022\223\001\n\nGetProject\0220.aruna.api." +
-      "storage.services.v2.GetProjectRequest\0321." +
-      "aruna.api.storage.services.v2.GetProject" +
-      "Response\" \202\323\344\223\002\032\022\030/v2/project/{project_i" +
-      "d}\022\212\001\n\013GetProjects\0221.aruna.api.storage.s" +
-      "ervices.v2.GetProjectsRequest\0322.aruna.ap" +
-      "i.storage.services.v2.GetProjectsRespons" +
-      "e\"\024\202\323\344\223\002\016\022\014/v2/projects\022\234\001\n\rDeleteProjec" +
-      "t\0223.aruna.api.storage.services.v2.Delete" +
-      "ProjectRequest\0324.aruna.api.storage.servi" +
-      "ces.v2.DeleteProjectResponse\" \202\323\344\223\002\032*\030/v" +
-      "2/project/{project_id}\022\260\001\n\021UpdateProject" +
-      "Name\0227.aruna.api.storage.services.v2.Upd" +
-      "ateProjectNameRequest\0328.aruna.api.storag" +
-      "e.services.v2.UpdateProjectNameResponse\"" +
-      "(\202\323\344\223\002\"2\035/v2/project/{project_id}/name:\001" +
-      "*\022\314\001\n\030UpdateProjectDescription\022>.aruna.a" +
-      "pi.storage.services.v2.UpdateProjectDesc" +
-      "riptionRequest\032?.aruna.api.storage.servi" +
-      "ces.v2.UpdateProjectDescriptionResponse\"" +
-      "/\202\323\344\223\002)2$/v2/project/{project_id}/descri" +
-      "ption:\001*\022\305\001\n\026UpdateProjectKeyValues\022<.ar" +
-      "una.api.storage.services.v2.UpdateProjec" +
-      "tKeyValuesRequest\032=.aruna.api.storage.se" +
-      "rvices.v2.UpdateProjectKeyValuesResponse" +
-      "\".\202\323\344\223\002(2#/v2/project/{project_id}/key_v" +
-      "alues:\001*\022\305\001\n\026UpdateProjectDataClass\022<.ar" +
-      "una.api.storage.services.v2.UpdateProjec" +
-      "tDataClassRequest\032=.aruna.api.storage.se" +
-      "rvices.v2.UpdateProjectDataClassResponse" +
-      "\".\202\323\344\223\002(2#/v2/project/{project_id}/data_" +
-      "class:\001*\022\252\001\n\016ArchiveProject\0224.aruna.api." +
-      "storage.services.v2.ArchiveProjectReques" +
-      "t\0325.aruna.api.storage.services.v2.Archiv" +
-      "eProjectResponse\"+\202\323\344\223\002%\" /v2/project/{p" +
-      "roject_id}/archive:\001*B\347\003\n!com.aruna.api." +
-      "storage.services.v2B\023ProjectServiceProto" +
-      "P\000Z<github.com/ArunaStorage/go-api/aruna" +
-      "/api/storage/services/v2\242\002\004AASS\252\002\035Aruna." +
-      "Api.Storage.Services.V2\312\002\035Aruna\\Api\\Stor" +
-      "age\\Services\\V2\342\002)Aruna\\Api\\Storage\\Serv" +
-      "ices\\V2\\GPBMetadata\352\002!Aruna::Api::Storag" +
-      "e::Services::V2\222A\324\001\0224\n#Aruna Object Stor" +
-      "age (AOS) REST API2\r2.0.0-alpha.8*\001\0022\020ap" +
-      "plication/json:\020application/jsonZ`\n^\n\rAc" +
-      "cessKeyAuth\022M\010\002\0228Authentication token, p" +
-      "refixed by Bearer: Bearer <token>\032\rAutho" +
-      "rization \002b\023\n\021\n\rAccessKeyAuth\022\000b\006proto3"
+      "odels.v2.ProjectR\007project\"6\n\025ArchiveProj" +
+      "ectRequest\022\035\n\nproject_id\030\001 \001(\tR\tprojectI" +
+      "d\"X\n\026ArchiveProjectResponse\022>\n\007project\030\001" +
+      " \001(\0132$.aruna.api.storage.models.v2.Proje" +
+      "ctR\007project2\246\014\n\016ProjectService\022\222\001\n\rCreat" +
+      "eProject\0223.aruna.api.storage.services.v2" +
+      ".CreateProjectRequest\0324.aruna.api.storag" +
+      "e.services.v2.CreateProjectResponse\"\026\202\323\344" +
+      "\223\002\020\"\013/v2/project:\001*\022\223\001\n\nGetProject\0220.aru" +
+      "na.api.storage.services.v2.GetProjectReq" +
+      "uest\0321.aruna.api.storage.services.v2.Get" +
+      "ProjectResponse\" \202\323\344\223\002\032\022\030/v2/project/{pr" +
+      "oject_id}\022\212\001\n\013GetProjects\0221.aruna.api.st" +
+      "orage.services.v2.GetProjectsRequest\0322.a" +
+      "runa.api.storage.services.v2.GetProjects" +
+      "Response\"\024\202\323\344\223\002\016\022\014/v2/projects\022\234\001\n\rDelet" +
+      "eProject\0223.aruna.api.storage.services.v2" +
+      ".DeleteProjectRequest\0324.aruna.api.storag" +
+      "e.services.v2.DeleteProjectResponse\" \202\323\344" +
+      "\223\002\032*\030/v2/project/{project_id}\022\260\001\n\021Update" +
+      "ProjectName\0227.aruna.api.storage.services" +
+      ".v2.UpdateProjectNameRequest\0328.aruna.api" +
+      ".storage.services.v2.UpdateProjectNameRe" +
+      "sponse\"(\202\323\344\223\002\"2\035/v2/project/{project_id}" +
+      "/name:\001*\022\314\001\n\030UpdateProjectDescription\022>." +
+      "aruna.api.storage.services.v2.UpdateProj" +
+      "ectDescriptionRequest\032?.aruna.api.storag" +
+      "e.services.v2.UpdateProjectDescriptionRe" +
+      "sponse\"/\202\323\344\223\002)2$/v2/project/{project_id}" +
+      "/description:\001*\022\305\001\n\026UpdateProjectKeyValu" +
+      "es\022<.aruna.api.storage.services.v2.Updat" +
+      "eProjectKeyValuesRequest\032=.aruna.api.sto" +
+      "rage.services.v2.UpdateProjectKeyValuesR" +
+      "esponse\".\202\323\344\223\002(2#/v2/project/{project_id" +
+      "}/key_values:\001*\022\305\001\n\026UpdateProjectDataCla" +
+      "ss\022<.aruna.api.storage.services.v2.Updat" +
+      "eProjectDataClassRequest\032=.aruna.api.sto" +
+      "rage.services.v2.UpdateProjectDataClassR" +
+      "esponse\".\202\323\344\223\002(2#/v2/project/{project_id" +
+      "}/data_class:\001*\022\252\001\n\016ArchiveProject\0224.aru" +
+      "na.api.storage.services.v2.ArchiveProjec" +
+      "tRequest\0325.aruna.api.storage.services.v2" +
+      ".ArchiveProjectResponse\"+\202\323\344\223\002%\" /v2/pro" +
+      "ject/{project_id}/archive:\001*B\347\003\n!com.aru" +
+      "na.api.storage.services.v2B\023ProjectServi" +
+      "ceProtoP\000Z<github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/storage/services/v2\242\002\004AASS\252\002" +
+      "\035Aruna.Api.Storage.Services.V2\312\002\035Aruna\\A" +
+      "pi\\Storage\\Services\\V2\342\002)Aruna\\Api\\Stora" +
+      "ge\\Services\\V2\\GPBMetadata\352\002!Aruna::Api:" +
+      ":Storage::Services::V2\222A\324\001\0224\n#Aruna Obje" +
+      "ct Storage (AOS) REST API2\r2.0.0-alpha.9" +
+      "*\001\0022\020application/json:\020application/jsonZ" +
+      "`\n^\n\rAccessKeyAuth\022M\010\002\0228Authentication t" +
+      "oken, prefixed by Bearer: Bearer <token>" +
+      "\032\rAuthorization \002b\023\n\021\n\rAccessKeyAuth\022\000b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12988,7 +13174,7 @@ public final class ProjectServiceProto {
     internal_static_aruna_api_storage_services_v2_CreateProjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateProjectRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", "KeyValues", "ExternalRelations", "DataClass", });
+        new java.lang.String[] { "Name", "Description", "KeyValues", "ExternalRelations", "DataClass", "PreferredEndpoint", });
     internal_static_aruna_api_storage_services_v2_CreateProjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v2_CreateProjectResponse_fieldAccessorTable = new

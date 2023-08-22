@@ -81,35 +81,35 @@ public final class EventNotificationServiceGrpc {
     return getGetEventMessageBatchMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest,
-      com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse> getGetEventMessageBatchStreamMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest,
+      com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse> getGetEventMessageStreamMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetEventMessageBatchStream",
-      requestType = com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest.class,
-      responseType = com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetEventMessageStream",
+      requestType = com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest.class,
+      responseType = com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest,
-      com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse> getGetEventMessageBatchStreamMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse> getGetEventMessageBatchStreamMethod;
-    if ((getGetEventMessageBatchStreamMethod = EventNotificationServiceGrpc.getGetEventMessageBatchStreamMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest,
+      com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse> getGetEventMessageStreamMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse> getGetEventMessageStreamMethod;
+    if ((getGetEventMessageStreamMethod = EventNotificationServiceGrpc.getGetEventMessageStreamMethod) == null) {
       synchronized (EventNotificationServiceGrpc.class) {
-        if ((getGetEventMessageBatchStreamMethod = EventNotificationServiceGrpc.getGetEventMessageBatchStreamMethod) == null) {
-          EventNotificationServiceGrpc.getGetEventMessageBatchStreamMethod = getGetEventMessageBatchStreamMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse>newBuilder()
+        if ((getGetEventMessageStreamMethod = EventNotificationServiceGrpc.getGetEventMessageStreamMethod) == null) {
+          EventNotificationServiceGrpc.getGetEventMessageStreamMethod = getGetEventMessageStreamMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest, com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEventMessageBatchStream"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEventMessageStream"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest.getDefaultInstance()))
+                  com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EventNotificationServiceMethodDescriptorSupplier("GetEventMessageBatchStream"))
+                  com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EventNotificationServiceMethodDescriptorSupplier("GetEventMessageStream"))
               .build();
         }
       }
     }
-    return getGetEventMessageBatchStreamMethod;
+    return getGetEventMessageStreamMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.notification.services.v2.NotificationServiceProto.AcknowledgeMessageBatchRequest,
@@ -240,9 +240,9 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Reads a set of messages from a given stream group 
+     * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
     default void getEventMessageBatch(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchRequest request,
@@ -253,14 +253,14 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Opens a stream which pushes each received notification individual and just-in-time.
+     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
-    default void getEventMessageBatchStream(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEventMessageBatchStreamMethod(), responseObserver);
+    default void getEventMessageStream(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEventMessageStreamMethod(), responseObserver);
     }
 
     /**
@@ -337,9 +337,9 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Reads a set of messages from a given stream group 
+     * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
     public void getEventMessageBatch(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchRequest request,
@@ -351,15 +351,15 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Opens a stream which pushes each received notification individual and just-in-time.
+     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
-    public void getEventMessageBatchStream(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse> responseObserver) {
+    public void getEventMessageStream(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getGetEventMessageBatchStreamMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetEventMessageStreamMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -422,9 +422,9 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Reads a set of messages from a given stream group 
+     * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
     public com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchResponse getEventMessageBatch(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchRequest request) {
@@ -435,15 +435,15 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Opens a stream which pushes each received notification individual and just-in-time.
+     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
-    public java.util.Iterator<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse> getEventMessageBatchStream(
-        com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest request) {
+    public java.util.Iterator<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse> getEventMessageStream(
+        com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getGetEventMessageBatchStreamMethod(), getCallOptions(), request);
+          getChannel(), getGetEventMessageStreamMethod(), getCallOptions(), request);
     }
 
     /**
@@ -505,9 +505,9 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
-     * Reads a set of messages from a given stream group
-     * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification
-     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message
+     * Reads a set of messages from a given stream group 
+     * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
+     * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchResponse> getEventMessageBatch(
@@ -544,7 +544,7 @@ public final class EventNotificationServiceGrpc {
 
   private static final int METHODID_CREATE_STREAM_CONSUMER = 0;
   private static final int METHODID_GET_EVENT_MESSAGE_BATCH = 1;
-  private static final int METHODID_GET_EVENT_MESSAGE_BATCH_STREAM = 2;
+  private static final int METHODID_GET_EVENT_MESSAGE_STREAM = 2;
   private static final int METHODID_ACKNOWLEDGE_MESSAGE_BATCH = 3;
   private static final int METHODID_DELETE_STREAM_CONSUMER = 4;
 
@@ -573,9 +573,9 @@ public final class EventNotificationServiceGrpc {
           serviceImpl.getEventMessageBatch((com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchResponse>) responseObserver);
           break;
-        case METHODID_GET_EVENT_MESSAGE_BATCH_STREAM:
-          serviceImpl.getEventMessageBatchStream((com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse>) responseObserver);
+        case METHODID_GET_EVENT_MESSAGE_STREAM:
+          serviceImpl.getEventMessageStream((com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse>) responseObserver);
           break;
         case METHODID_ACKNOWLEDGE_MESSAGE_BATCH:
           serviceImpl.acknowledgeMessageBatch((com.aruna.api.notification.services.v2.NotificationServiceProto.AcknowledgeMessageBatchRequest) request,
@@ -618,12 +618,12 @@ public final class EventNotificationServiceGrpc {
               com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchResponse>(
                 service, METHODID_GET_EVENT_MESSAGE_BATCH)))
         .addMethod(
-          getGetEventMessageBatchStreamMethod(),
+          getGetEventMessageStreamMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamRequest,
-              com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageBatchStreamResponse>(
-                service, METHODID_GET_EVENT_MESSAGE_BATCH_STREAM)))
+              com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamRequest,
+              com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse>(
+                service, METHODID_GET_EVENT_MESSAGE_STREAM)))
         .addMethod(
           getAcknowledgeMessageBatchMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -688,7 +688,7 @@ public final class EventNotificationServiceGrpc {
               .setSchemaDescriptor(new EventNotificationServiceFileDescriptorSupplier())
               .addMethod(getCreateStreamConsumerMethod())
               .addMethod(getGetEventMessageBatchMethod())
-              .addMethod(getGetEventMessageBatchStreamMethod())
+              .addMethod(getGetEventMessageStreamMethod())
               .addMethod(getAcknowledgeMessageBatchMethod())
               .addMethod(getDeleteStreamConsumerMethod())
               .build();
