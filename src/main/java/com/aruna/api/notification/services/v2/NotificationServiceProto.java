@@ -39,6 +39,10 @@ public final class NotificationServiceProto {
      * <code>EVENT_VARIANT_DELETED = 4;</code>
      */
     EVENT_VARIANT_DELETED(4),
+    /**
+     * <code>EVENT_VARIANT_SNAPSHOTTED = 5;</code>
+     */
+    EVENT_VARIANT_SNAPSHOTTED(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -62,6 +66,10 @@ public final class NotificationServiceProto {
      * <code>EVENT_VARIANT_DELETED = 4;</code>
      */
     public static final int EVENT_VARIANT_DELETED_VALUE = 4;
+    /**
+     * <code>EVENT_VARIANT_SNAPSHOTTED = 5;</code>
+     */
+    public static final int EVENT_VARIANT_SNAPSHOTTED_VALUE = 5;
 
 
     public final int getNumber() {
@@ -93,6 +101,7 @@ public final class NotificationServiceProto {
         case 2: return EVENT_VARIANT_AVAILABLE;
         case 3: return EVENT_VARIANT_UPDATED;
         case 4: return EVENT_VARIANT_DELETED;
+        case 5: return EVENT_VARIANT_SNAPSHOTTED;
         default: return null;
       }
     }
@@ -18077,40 +18086,40 @@ public final class NotificationServiceProto {
       ".aruna.api.notification.services.v2.NewV" +
       "ersionH\000R\007version\022?\n\005reply\030\010 \001(\0132).aruna" +
       ".api.notification.services.v2.ReplyR\005rep" +
-      "lyB\017\n\revent_variant*\233\001\n\014EventVariant\022\035\n\031" +
+      "lyB\017\n\revent_variant*\272\001\n\014EventVariant\022\035\n\031" +
       "EVENT_VARIANT_UNSPECIFIED\020\000\022\031\n\025EVENT_VAR" +
       "IANT_CREATED\020\001\022\033\n\027EVENT_VARIANT_AVAILABL" +
       "E\020\002\022\031\n\025EVENT_VARIANT_UPDATED\020\003\022\031\n\025EVENT_" +
-      "VARIANT_DELETED\020\0042\276\006\n\030EventNotificationS" +
-      "ervice\022\233\001\n\024CreateStreamConsumer\022?.aruna." +
-      "api.notification.services.v2.CreateStrea" +
-      "mConsumerRequest\032@.aruna.api.notificatio" +
-      "n.services.v2.CreateStreamConsumerRespon" +
-      "se\"\000\022\233\001\n\024GetEventMessageBatch\022?.aruna.ap" +
-      "i.notification.services.v2.GetEventMessa" +
-      "geBatchRequest\032@.aruna.api.notification." +
-      "services.v2.GetEventMessageBatchResponse" +
-      "\"\000\022\240\001\n\025GetEventMessageStream\022@.aruna.api" +
-      ".notification.services.v2.GetEventMessag" +
-      "eStreamRequest\032A.aruna.api.notification." +
-      "services.v2.GetEventMessageStreamRespons" +
-      "e\"\0000\001\022\244\001\n\027AcknowledgeMessageBatch\022B.arun" +
-      "a.api.notification.services.v2.Acknowled" +
-      "geMessageBatchRequest\032C.aruna.api.notifi" +
-      "cation.services.v2.AcknowledgeMessageBat" +
-      "chResponse\"\000\022\233\001\n\024DeleteStreamConsumer\022?." +
-      "aruna.api.notification.services.v2.Delet" +
-      "eStreamConsumerRequest\032@.aruna.api.notif" +
-      "ication.services.v2.DeleteStreamConsumer" +
-      "Response\"\000B\262\002\n&com.aruna.api.notificatio" +
-      "n.services.v2B\030NotificationServiceProtoP" +
-      "\000ZAgithub.com/ArunaStorage/go-api/aruna/" +
-      "api/notification/services/v2\242\002\004AANS\252\002\"Ar" +
-      "una.Api.Notification.Services.V2\312\002\"Aruna" +
-      "\\Api\\Notification\\Services\\V2\342\002.Aruna\\Ap" +
-      "i\\Notification\\Services\\V2\\GPBMetadata\352\002" +
-      "&Aruna::Api::Notification::Services::V2b" +
-      "\006proto3"
+      "VARIANT_DELETED\020\004\022\035\n\031EVENT_VARIANT_SNAPS" +
+      "HOTTED\020\0052\276\006\n\030EventNotificationService\022\233\001" +
+      "\n\024CreateStreamConsumer\022?.aruna.api.notif" +
+      "ication.services.v2.CreateStreamConsumer" +
+      "Request\032@.aruna.api.notification.service" +
+      "s.v2.CreateStreamConsumerResponse\"\000\022\233\001\n\024" +
+      "GetEventMessageBatch\022?.aruna.api.notific" +
+      "ation.services.v2.GetEventMessageBatchRe" +
+      "quest\032@.aruna.api.notification.services." +
+      "v2.GetEventMessageBatchResponse\"\000\022\240\001\n\025Ge" +
+      "tEventMessageStream\022@.aruna.api.notifica" +
+      "tion.services.v2.GetEventMessageStreamRe" +
+      "quest\032A.aruna.api.notification.services." +
+      "v2.GetEventMessageStreamResponse\"\0000\001\022\244\001\n" +
+      "\027AcknowledgeMessageBatch\022B.aruna.api.not" +
+      "ification.services.v2.AcknowledgeMessage" +
+      "BatchRequest\032C.aruna.api.notification.se" +
+      "rvices.v2.AcknowledgeMessageBatchRespons" +
+      "e\"\000\022\233\001\n\024DeleteStreamConsumer\022?.aruna.api" +
+      ".notification.services.v2.DeleteStreamCo" +
+      "nsumerRequest\032@.aruna.api.notification.s" +
+      "ervices.v2.DeleteStreamConsumerResponse\"" +
+      "\000B\262\002\n&com.aruna.api.notification.service" +
+      "s.v2B\030NotificationServiceProtoP\000ZAgithub" +
+      ".com/ArunaStorage/go-api/aruna/api/notif" +
+      "ication/services/v2\242\002\004AANS\252\002\"Aruna.Api.N" +
+      "otification.Services.V2\312\002\"Aruna\\Api\\Noti" +
+      "fication\\Services\\V2\342\002.Aruna\\Api\\Notific" +
+      "ation\\Services\\V2\\GPBMetadata\352\002&Aruna::A" +
+      "pi::Notification::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
