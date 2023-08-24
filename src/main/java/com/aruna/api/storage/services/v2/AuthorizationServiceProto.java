@@ -5791,8 +5791,8 @@ public final class AuthorizationServiceProto {
 
   }
 
-  public interface UpdateAuthorizationsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.UpdateAuthorizationsRequest)
+  public interface UpdateAuthorizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.UpdateAuthorizationRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5831,18 +5831,18 @@ public final class AuthorizationServiceProto {
     com.aruna.api.storage.models.v2.ModelsProto.PermissionLevel getPermissionLevel();
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationsRequest}
+   * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationRequest}
    */
-  public static final class UpdateAuthorizationsRequest extends
+  public static final class UpdateAuthorizationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.UpdateAuthorizationsRequest)
-      UpdateAuthorizationsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.UpdateAuthorizationRequest)
+      UpdateAuthorizationRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use UpdateAuthorizationsRequest.newBuilder() to construct.
-    private UpdateAuthorizationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UpdateAuthorizationRequest.newBuilder() to construct.
+    private UpdateAuthorizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private UpdateAuthorizationsRequest() {
+    private UpdateAuthorizationRequest() {
       resourceId_ = "";
       userId_ = "";
       permissionLevel_ = 0;
@@ -5852,20 +5852,20 @@ public final class AuthorizationServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new UpdateAuthorizationsRequest();
+      return new UpdateAuthorizationRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_descriptor;
+      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_fieldAccessorTable
+      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.Builder.class);
+              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.Builder.class);
     }
 
     public static final int RESOURCE_ID_FIELD_NUMBER = 1;
@@ -6016,10 +6016,10 @@ public final class AuthorizationServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest other = (com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest) obj;
+      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest other = (com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest) obj;
 
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
@@ -6048,44 +6048,44 @@ public final class AuthorizationServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6093,26 +6093,26 @@ public final class AuthorizationServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6125,7 +6125,7 @@ public final class AuthorizationServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6141,26 +6141,26 @@ public final class AuthorizationServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationsRequest}
+     * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.UpdateAuthorizationsRequest)
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.UpdateAuthorizationRequest)
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_descriptor;
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_fieldAccessorTable
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.Builder.class);
+                com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.newBuilder()
+      // Construct using com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.newBuilder()
       private Builder() {
 
       }
@@ -6183,17 +6183,17 @@ public final class AuthorizationServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_descriptor;
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.getDefaultInstance();
+      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest build() {
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest result = buildPartial();
+      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest build() {
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6201,14 +6201,14 @@ public final class AuthorizationServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest buildPartial() {
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest result = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest(this);
+      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest buildPartial() {
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest result = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest result) {
+      private void buildPartial0(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.resourceId_ = resourceId_;
@@ -6223,16 +6223,16 @@ public final class AuthorizationServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest) {
-          return mergeFrom((com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest)other);
+        if (other instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest other) {
-        if (other == com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest other) {
+        if (other == com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.getDefaultInstance()) return this;
         if (!other.getResourceId().isEmpty()) {
           resourceId_ = other.resourceId_;
           bitField0_ |= 0x00000001;
@@ -6513,23 +6513,23 @@ public final class AuthorizationServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.UpdateAuthorizationsRequest)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.UpdateAuthorizationRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.UpdateAuthorizationsRequest)
-    private static final com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.UpdateAuthorizationRequest)
+    private static final com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest();
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest getDefaultInstance() {
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UpdateAuthorizationsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthorizationsRequest>() {
+    private static final com.google.protobuf.Parser<UpdateAuthorizationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthorizationRequest>() {
       @java.lang.Override
-      public UpdateAuthorizationsRequest parsePartialFrom(
+      public UpdateAuthorizationRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6548,24 +6548,24 @@ public final class AuthorizationServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<UpdateAuthorizationsRequest> parser() {
+    public static com.google.protobuf.Parser<UpdateAuthorizationRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<UpdateAuthorizationsRequest> getParserForType() {
+    public com.google.protobuf.Parser<UpdateAuthorizationRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface UpdateAuthorizationsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.UpdateAuthorizationsResponse)
+  public interface UpdateAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.UpdateAuthorizationResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6584,38 +6584,38 @@ public final class AuthorizationServiceProto {
     com.aruna.api.storage.services.v2.AuthorizationServiceProto.UserPermissionOrBuilder getUserPermissionOrBuilder();
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationsResponse}
+   * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationResponse}
    */
-  public static final class UpdateAuthorizationsResponse extends
+  public static final class UpdateAuthorizationResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.UpdateAuthorizationsResponse)
-      UpdateAuthorizationsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.UpdateAuthorizationResponse)
+      UpdateAuthorizationResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use UpdateAuthorizationsResponse.newBuilder() to construct.
-    private UpdateAuthorizationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UpdateAuthorizationResponse.newBuilder() to construct.
+    private UpdateAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private UpdateAuthorizationsResponse() {
+    private UpdateAuthorizationResponse() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new UpdateAuthorizationsResponse();
+      return new UpdateAuthorizationResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_descriptor;
+      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_fieldAccessorTable
+      return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.Builder.class);
+              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.Builder.class);
     }
 
     public static final int USER_PERMISSION_FIELD_NUMBER = 1;
@@ -6684,10 +6684,10 @@ public final class AuthorizationServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse other = (com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse) obj;
+      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse other = (com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse) obj;
 
       if (hasUserPermission() != other.hasUserPermission()) return false;
       if (hasUserPermission()) {
@@ -6714,44 +6714,44 @@ public final class AuthorizationServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6759,26 +6759,26 @@ public final class AuthorizationServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse parseFrom(
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6791,7 +6791,7 @@ public final class AuthorizationServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6807,26 +6807,26 @@ public final class AuthorizationServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationsResponse}
+     * Protobuf type {@code aruna.api.storage.services.v2.UpdateAuthorizationResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.UpdateAuthorizationsResponse)
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.UpdateAuthorizationResponse)
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_descriptor;
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_fieldAccessorTable
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.Builder.class);
+                com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.class, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.newBuilder()
+      // Construct using com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.newBuilder()
       private Builder() {
 
       }
@@ -6851,17 +6851,17 @@ public final class AuthorizationServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_descriptor;
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.getDefaultInstance();
+      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse build() {
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse result = buildPartial();
+      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse build() {
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6869,14 +6869,14 @@ public final class AuthorizationServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse buildPartial() {
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse result = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse(this);
+      public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse buildPartial() {
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse result = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse result) {
+      private void buildPartial0(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.userPermission_ = userPermissionBuilder_ == null
@@ -6887,16 +6887,16 @@ public final class AuthorizationServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse) {
-          return mergeFrom((com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse)other);
+        if (other instanceof com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse other) {
-        if (other == com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse other) {
+        if (other == com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.getDefaultInstance()) return this;
         if (other.hasUserPermission()) {
           mergeUserPermission(other.getUserPermission());
         }
@@ -7081,23 +7081,23 @@ public final class AuthorizationServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.UpdateAuthorizationsResponse)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.UpdateAuthorizationResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.UpdateAuthorizationsResponse)
-    private static final com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.UpdateAuthorizationResponse)
+    private static final com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse();
     }
 
-    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse getDefaultInstance() {
+    public static com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UpdateAuthorizationsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthorizationsResponse>() {
+    private static final com.google.protobuf.Parser<UpdateAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthorizationResponse>() {
       @java.lang.Override
-      public UpdateAuthorizationsResponse parsePartialFrom(
+      public UpdateAuthorizationResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7116,17 +7116,17 @@ public final class AuthorizationServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<UpdateAuthorizationsResponse> parser() {
+    public static com.google.protobuf.Parser<UpdateAuthorizationResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<UpdateAuthorizationsResponse> getParserForType() {
+    public com.google.protobuf.Parser<UpdateAuthorizationResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7173,15 +7173,15 @@ public final class AuthorizationServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_DeleteAuthorizationResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_descriptor;
+    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_descriptor;
+    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7220,39 +7220,39 @@ public final class AuthorizationServiceProto {
       "ceAuthorizationR\016authorizations\"V\n\032Delet" +
       "eAuthorizationRequest\022\037\n\013resource_id\030\001 \001" +
       "(\tR\nresourceId\022\027\n\007user_id\030\002 \001(\tR\006userId\"" +
-      "\035\n\033DeleteAuthorizationResponse\"\260\001\n\033Updat" +
-      "eAuthorizationsRequest\022\037\n\013resource_id\030\001 " +
-      "\001(\tR\nresourceId\022\027\n\007user_id\030\002 \001(\tR\006userId" +
-      "\022W\n\020permission_level\030\003 \001(\0162,.aruna.api.s" +
-      "torage.models.v2.PermissionLevelR\017permis" +
-      "sionLevel\"v\n\034UpdateAuthorizationsRespons" +
-      "e\022V\n\017user_permission\030\001 \001(\0132-.aruna.api.s" +
-      "torage.services.v2.UserPermissionR\016userP" +
-      "ermission2\241\005\n\024AuthorizationService\022\241\001\n\023C" +
-      "reateAuthorization\0229.aruna.api.storage.s" +
-      "ervices.v2.CreateAuthorizationRequest\032:." +
-      "aruna.api.storage.services.v2.CreateAuth" +
-      "orizationResponse\"\023\202\323\344\223\002\r\"\010/v2/auth:\001*\022\231" +
-      "\001\n\021GetAuthorizations\0227.aruna.api.storage" +
-      ".services.v2.GetAuthorizationsRequest\0328." +
-      "aruna.api.storage.services.v2.GetAuthori" +
-      "zationsResponse\"\021\202\323\344\223\002\013\022\t/v2/auths\022\241\001\n\023D" +
-      "eleteAuthorization\0229.aruna.api.storage.s" +
-      "ervices.v2.DeleteAuthorizationRequest\032:." +
-      "aruna.api.storage.services.v2.DeleteAuth" +
-      "orizationResponse\"\023\202\323\344\223\002\r*\010/v2/auth:\001*\022\244" +
-      "\001\n\024UpdateAuthorizations\022:.aruna.api.stor" +
-      "age.services.v2.UpdateAuthorizationsRequ" +
-      "est\032;.aruna.api.storage.services.v2.Upda" +
-      "teAuthorizationsResponse\"\023\202\323\344\223\002\r2\010/v2/au" +
-      "th:\001*B\225\002\n!com.aruna.api.storage.services" +
-      ".v2B\031AuthorizationServiceProtoP\000Z<github" +
-      ".com/ArunaStorage/go-api/aruna/api/stora" +
-      "ge/services/v2\242\002\004AASS\252\002\035Aruna.Api.Storag" +
-      "e.Services.V2\312\002\035Aruna\\Api\\Storage\\Servic" +
-      "es\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GP" +
-      "BMetadata\352\002!Aruna::Api::Storage::Service" +
-      "s::V2b\006proto3"
+      "\035\n\033DeleteAuthorizationResponse\"\257\001\n\032Updat" +
+      "eAuthorizationRequest\022\037\n\013resource_id\030\001 \001" +
+      "(\tR\nresourceId\022\027\n\007user_id\030\002 \001(\tR\006userId\022" +
+      "W\n\020permission_level\030\003 \001(\0162,.aruna.api.st" +
+      "orage.models.v2.PermissionLevelR\017permiss" +
+      "ionLevel\"u\n\033UpdateAuthorizationResponse\022" +
+      "V\n\017user_permission\030\001 \001(\0132-.aruna.api.sto" +
+      "rage.services.v2.UserPermissionR\016userPer" +
+      "mission2\236\005\n\024AuthorizationService\022\241\001\n\023Cre" +
+      "ateAuthorization\0229.aruna.api.storage.ser" +
+      "vices.v2.CreateAuthorizationRequest\032:.ar" +
+      "una.api.storage.services.v2.CreateAuthor" +
+      "izationResponse\"\023\202\323\344\223\002\r\"\010/v2/auth:\001*\022\231\001\n" +
+      "\021GetAuthorizations\0227.aruna.api.storage.s" +
+      "ervices.v2.GetAuthorizationsRequest\0328.ar" +
+      "una.api.storage.services.v2.GetAuthoriza" +
+      "tionsResponse\"\021\202\323\344\223\002\013\022\t/v2/auths\022\241\001\n\023Del" +
+      "eteAuthorization\0229.aruna.api.storage.ser" +
+      "vices.v2.DeleteAuthorizationRequest\032:.ar" +
+      "una.api.storage.services.v2.DeleteAuthor" +
+      "izationResponse\"\023\202\323\344\223\002\r*\010/v2/auth:\001*\022\241\001\n" +
+      "\023UpdateAuthorization\0229.aruna.api.storage" +
+      ".services.v2.UpdateAuthorizationRequest\032" +
+      ":.aruna.api.storage.services.v2.UpdateAu" +
+      "thorizationResponse\"\023\202\323\344\223\002\r2\010/v2/auth:\001*" +
+      "B\225\002\n!com.aruna.api.storage.services.v2B\031" +
+      "AuthorizationServiceProtoP\000Z<github.com/" +
+      "ArunaStorage/go-api/aruna/api/storage/se" +
+      "rvices/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Ser" +
+      "vices.V2\312\002\035Aruna\\Api\\Storage\\Services\\V2" +
+      "\342\002)Aruna\\Api\\Storage\\Services\\V2\\GPBMeta" +
+      "data\352\002!Aruna::Api::Storage::Services::V2" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7308,17 +7308,17 @@ public final class AuthorizationServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_DeleteAuthorizationResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_descriptor =
+    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsRequest_descriptor,
+        internal_static_aruna_api_storage_services_v2_UpdateAuthorizationRequest_descriptor,
         new java.lang.String[] { "ResourceId", "UserId", "PermissionLevel", });
-    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_descriptor =
+    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_UpdateAuthorizationsResponse_descriptor,
+        internal_static_aruna_api_storage_services_v2_UpdateAuthorizationResponse_descriptor,
         new java.lang.String[] { "UserPermission", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

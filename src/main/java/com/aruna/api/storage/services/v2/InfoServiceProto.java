@@ -6950,772 +6950,32 @@ public final class InfoServiceProto {
 
   }
 
-  public interface PubkeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.Pubkey)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    int getId();
-
-    /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return The key.
-     */
-    java.lang.String getKey();
-    /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return The bytes for key.
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <code>string location = 3 [json_name = "location"];</code>
-     * @return The location.
-     */
-    java.lang.String getLocation();
-    /**
-     * <code>string location = 3 [json_name = "location"];</code>
-     * @return The bytes for location.
-     */
-    com.google.protobuf.ByteString
-        getLocationBytes();
-  }
-  /**
-   * Protobuf type {@code aruna.api.storage.services.v2.Pubkey}
-   */
-  public static final class Pubkey extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.Pubkey)
-      PubkeyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Pubkey.newBuilder() to construct.
-    private Pubkey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Pubkey() {
-      key_ = "";
-      location_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Pubkey();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_Pubkey_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_Pubkey_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.class, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private int id_ = 0;
-    /**
-     * <code>int32 id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public int getId() {
-      return id_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object key_ = "";
-    /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return The key.
-     */
-    @java.lang.Override
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string key = 2 [json_name = "key"];</code>
-     * @return The bytes for key.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOCATION_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object location_ = "";
-    /**
-     * <code>string location = 3 [json_name = "location"];</code>
-     * @return The location.
-     */
-    @java.lang.Override
-    public java.lang.String getLocation() {
-      java.lang.Object ref = location_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        location_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string location = 3 [json_name = "location"];</code>
-     * @return The bytes for location.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLocationBytes() {
-      java.lang.Object ref = location_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        location_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, location_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, location_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey other = (com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey) obj;
-
-      if (getId()
-          != other.getId()) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getLocation()
-          .equals(other.getLocation())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-      hash = (53 * hash) + getLocation().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.storage.services.v2.Pubkey}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.Pubkey)
-        com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_Pubkey_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_Pubkey_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.class, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder.class);
-      }
-
-      // Construct using com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = 0;
-        key_ = "";
-        location_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_Pubkey_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey build() {
-        com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey buildPartial() {
-        com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey result = new com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.key_ = key_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.location_ = location_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey) {
-          return mergeFrom((com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey other) {
-        if (other == com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
-          setId(other.getId());
-        }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getLocation().isEmpty()) {
-          location_ = other.location_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                id_ = input.readInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                key_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                location_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int id_ ;
-      /**
-       * <code>int32 id = 1 [json_name = "id"];</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>int32 id = 1 [json_name = "id"];</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(int value) {
-
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 id = 1 [json_name = "id"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <code>string key = 2 [json_name = "key"];</code>
-       * @return The key.
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string key = 2 [json_name = "key"];</code>
-       * @return The bytes for key.
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string key = 2 [json_name = "key"];</code>
-       * @param value The key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        key_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 2 [json_name = "key"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKey() {
-        key_ = getDefaultInstance().getKey();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 2 [json_name = "key"];</code>
-       * @param value The bytes for key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        key_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object location_ = "";
-      /**
-       * <code>string location = 3 [json_name = "location"];</code>
-       * @return The location.
-       */
-      public java.lang.String getLocation() {
-        java.lang.Object ref = location_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          location_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string location = 3 [json_name = "location"];</code>
-       * @return The bytes for location.
-       */
-      public com.google.protobuf.ByteString
-          getLocationBytes() {
-        java.lang.Object ref = location_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          location_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string location = 3 [json_name = "location"];</code>
-       * @param value The location to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocation(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        location_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string location = 3 [json_name = "location"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLocation() {
-        location_ = getDefaultInstance().getLocation();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string location = 3 [json_name = "location"];</code>
-       * @param value The bytes for location to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocationBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        location_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.Pubkey)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.Pubkey)
-    private static final com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey();
-    }
-
-    public static com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Pubkey>
-        PARSER = new com.google.protobuf.AbstractParser<Pubkey>() {
-      @java.lang.Override
-      public Pubkey parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Pubkey> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Pubkey> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface GetPubkeysResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetPubkeysResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
-    java.util.List<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey> 
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Pubkey> 
         getPubkeysList();
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
-    com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey getPubkeys(int index);
+    com.aruna.api.storage.models.v2.ModelsProto.Pubkey getPubkeys(int index);
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
     int getPubkeysCount();
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
-    java.util.List<? extends com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder> 
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> 
         getPubkeysOrBuilderList();
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
-    com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder getPubkeysOrBuilder(
+    com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder getPubkeysOrBuilder(
         int index);
   }
   /**
@@ -7756,41 +7016,41 @@ public final class InfoServiceProto {
 
     public static final int PUBKEYS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey> pubkeys_;
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Pubkey> pubkeys_;
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey> getPubkeysList() {
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Pubkey> getPubkeysList() {
       return pubkeys_;
     }
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder> 
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> 
         getPubkeysOrBuilderList() {
       return pubkeys_;
     }
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
     @java.lang.Override
     public int getPubkeysCount() {
       return pubkeys_.size();
     }
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey getPubkeys(int index) {
+    public com.aruna.api.storage.models.v2.ModelsProto.Pubkey getPubkeys(int index) {
       return pubkeys_.get(index);
     }
     /**
-     * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder getPubkeysOrBuilder(
+    public com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder getPubkeysOrBuilder(
         int index) {
       return pubkeys_.get(index);
     }
@@ -8108,9 +7368,9 @@ public final class InfoServiceProto {
                 done = true;
                 break;
               case 10: {
-                com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey m =
+                com.aruna.api.storage.models.v2.ModelsProto.Pubkey m =
                     input.readMessage(
-                        com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.parser(),
+                        com.aruna.api.storage.models.v2.ModelsProto.Pubkey.parser(),
                         extensionRegistry);
                 if (pubkeysBuilder_ == null) {
                   ensurePubkeysIsMutable();
@@ -8137,22 +7397,22 @@ public final class InfoServiceProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey> pubkeys_ =
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Pubkey> pubkeys_ =
         java.util.Collections.emptyList();
       private void ensurePubkeysIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          pubkeys_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey>(pubkeys_);
+          pubkeys_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Pubkey>(pubkeys_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder, com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder> pubkeysBuilder_;
+          com.aruna.api.storage.models.v2.ModelsProto.Pubkey, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder, com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> pubkeysBuilder_;
 
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public java.util.List<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey> getPubkeysList() {
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Pubkey> getPubkeysList() {
         if (pubkeysBuilder_ == null) {
           return java.util.Collections.unmodifiableList(pubkeys_);
         } else {
@@ -8160,7 +7420,7 @@ public final class InfoServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public int getPubkeysCount() {
         if (pubkeysBuilder_ == null) {
@@ -8170,9 +7430,9 @@ public final class InfoServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey getPubkeys(int index) {
+      public com.aruna.api.storage.models.v2.ModelsProto.Pubkey getPubkeys(int index) {
         if (pubkeysBuilder_ == null) {
           return pubkeys_.get(index);
         } else {
@@ -8180,10 +7440,10 @@ public final class InfoServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder setPubkeys(
-          int index, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey value) {
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Pubkey value) {
         if (pubkeysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8197,10 +7457,10 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder setPubkeys(
-          int index, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder builderForValue) {
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder builderForValue) {
         if (pubkeysBuilder_ == null) {
           ensurePubkeysIsMutable();
           pubkeys_.set(index, builderForValue.build());
@@ -8211,9 +7471,9 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public Builder addPubkeys(com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey value) {
+      public Builder addPubkeys(com.aruna.api.storage.models.v2.ModelsProto.Pubkey value) {
         if (pubkeysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8227,10 +7487,10 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder addPubkeys(
-          int index, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey value) {
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Pubkey value) {
         if (pubkeysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8244,10 +7504,10 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder addPubkeys(
-          com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder builderForValue) {
+          com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder builderForValue) {
         if (pubkeysBuilder_ == null) {
           ensurePubkeysIsMutable();
           pubkeys_.add(builderForValue.build());
@@ -8258,10 +7518,10 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder addPubkeys(
-          int index, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder builderForValue) {
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder builderForValue) {
         if (pubkeysBuilder_ == null) {
           ensurePubkeysIsMutable();
           pubkeys_.add(index, builderForValue.build());
@@ -8272,10 +7532,10 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder addAllPubkeys(
-          java.lang.Iterable<? extends com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey> values) {
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Pubkey> values) {
         if (pubkeysBuilder_ == null) {
           ensurePubkeysIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8287,7 +7547,7 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder clearPubkeys() {
         if (pubkeysBuilder_ == null) {
@@ -8300,7 +7560,7 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
       public Builder removePubkeys(int index) {
         if (pubkeysBuilder_ == null) {
@@ -8313,16 +7573,16 @@ public final class InfoServiceProto {
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder getPubkeysBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder getPubkeysBuilder(
           int index) {
         return getPubkeysFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder getPubkeysOrBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder getPubkeysOrBuilder(
           int index) {
         if (pubkeysBuilder_ == null) {
           return pubkeys_.get(index);  } else {
@@ -8330,9 +7590,9 @@ public final class InfoServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public java.util.List<? extends com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder> 
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> 
            getPubkeysOrBuilderList() {
         if (pubkeysBuilder_ != null) {
           return pubkeysBuilder_.getMessageOrBuilderList();
@@ -8341,33 +7601,33 @@ public final class InfoServiceProto {
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder addPubkeysBuilder() {
+      public com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder addPubkeysBuilder() {
         return getPubkeysFieldBuilder().addBuilder(
-            com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.getDefaultInstance());
+            com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder addPubkeysBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder addPubkeysBuilder(
           int index) {
         return getPubkeysFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.getDefaultInstance());
+            index, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance());
       }
       /**
-       * <code>repeated .aruna.api.storage.services.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Pubkey pubkeys = 1 [json_name = "pubkeys"];</code>
        */
-      public java.util.List<com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder> 
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder> 
            getPubkeysBuilderList() {
         return getPubkeysFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder, com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder> 
+          com.aruna.api.storage.models.v2.ModelsProto.Pubkey, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder, com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> 
           getPubkeysFieldBuilder() {
         if (pubkeysBuilder_ == null) {
           pubkeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey, com.aruna.api.storage.services.v2.InfoServiceProto.Pubkey.Builder, com.aruna.api.storage.services.v2.InfoServiceProto.PubkeyOrBuilder>(
+              com.aruna.api.storage.models.v2.ModelsProto.Pubkey, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder, com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder>(
                   pubkeys_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -8491,11 +7751,6 @@ public final class InfoServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_GetPubkeysRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_Pubkey_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_Pubkey_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_GetPubkeysResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8536,30 +7791,28 @@ public final class InfoServiceProto {
       "\"r\n\030GetStorageStatusResponse\022V\n\017location" +
       "_status\030\001 \003(\0132-.aruna.api.storage.servic" +
       "es.v2.LocationStatusR\016locationStatus\"\023\n\021" +
-      "GetPubkeysRequest\"F\n\006Pubkey\022\016\n\002id\030\001 \001(\005R" +
-      "\002id\022\020\n\003key\030\002 \001(\tR\003key\022\032\n\010location\030\003 \001(\tR" +
-      "\010location\"U\n\022GetPubkeysResponse\022?\n\007pubke" +
-      "ys\030\001 \003(\0132%.aruna.api.storage.services.v2" +
-      ".PubkeyR\007pubkeys2\346\003\n\024StorageStatusServic" +
-      "e\022\240\001\n\021GetStorageVersion\0227.aruna.api.stor" +
-      "age.services.v2.GetStorageVersionRequest" +
-      "\0328.aruna.api.storage.services.v2.GetStor" +
-      "ageVersionResponse\"\030\202\323\344\223\002\022\022\020/v2/info/ver" +
-      "sion\022\234\001\n\020GetStorageStatus\0226.aruna.api.st" +
-      "orage.services.v2.GetStorageStatusReques" +
-      "t\0327.aruna.api.storage.services.v2.GetSto" +
-      "rageStatusResponse\"\027\202\323\344\223\002\021\022\017/v2/info/sta" +
-      "tus\022\213\001\n\nGetPubkeys\0220.aruna.api.storage.s" +
-      "ervices.v2.GetPubkeysRequest\0321.aruna.api" +
-      ".storage.services.v2.GetPubkeysResponse\"" +
-      "\030\202\323\344\223\002\022\022\020/v2/info/pubkeysB\214\002\n!com.aruna." +
-      "api.storage.services.v2B\020InfoServiceProt" +
-      "oP\000Z<github.com/ArunaStorage/go-api/arun" +
-      "a/api/storage/services/v2\242\002\004AASS\252\002\035Aruna" +
-      ".Api.Storage.Services.V2\312\002\035Aruna\\Api\\Sto" +
-      "rage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Ser" +
-      "vices\\V2\\GPBMetadata\352\002!Aruna::Api::Stora" +
-      "ge::Services::V2b\006proto3"
+      "GetPubkeysRequest\"S\n\022GetPubkeysResponse\022" +
+      "=\n\007pubkeys\030\001 \003(\0132#.aruna.api.storage.mod" +
+      "els.v2.PubkeyR\007pubkeys2\346\003\n\024StorageStatus" +
+      "Service\022\240\001\n\021GetStorageVersion\0227.aruna.ap" +
+      "i.storage.services.v2.GetStorageVersionR" +
+      "equest\0328.aruna.api.storage.services.v2.G" +
+      "etStorageVersionResponse\"\030\202\323\344\223\002\022\022\020/v2/in" +
+      "fo/version\022\234\001\n\020GetStorageStatus\0226.aruna." +
+      "api.storage.services.v2.GetStorageStatus" +
+      "Request\0327.aruna.api.storage.services.v2." +
+      "GetStorageStatusResponse\"\027\202\323\344\223\002\021\022\017/v2/in" +
+      "fo/status\022\213\001\n\nGetPubkeys\0220.aruna.api.sto" +
+      "rage.services.v2.GetPubkeysRequest\0321.aru" +
+      "na.api.storage.services.v2.GetPubkeysRes" +
+      "ponse\"\030\202\323\344\223\002\022\022\020/v2/info/pubkeysB\214\002\n!com." +
+      "aruna.api.storage.services.v2B\020InfoServi" +
+      "ceProtoP\000Z<github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/storage/services/v2\242\002\004AASS\252\002" +
+      "\035Aruna.Api.Storage.Services.V2\312\002\035Aruna\\A" +
+      "pi\\Storage\\Services\\V2\342\002)Aruna\\Api\\Stora" +
+      "ge\\Services\\V2\\GPBMetadata\352\002!Aruna::Api:" +
+      ":Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8627,14 +7880,8 @@ public final class InfoServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetPubkeysRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_storage_services_v2_Pubkey_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_aruna_api_storage_services_v2_Pubkey_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_Pubkey_descriptor,
-        new java.lang.String[] { "Id", "Key", "Location", });
     internal_static_aruna_api_storage_services_v2_GetPubkeysResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_services_v2_GetPubkeysResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetPubkeysResponse_descriptor,

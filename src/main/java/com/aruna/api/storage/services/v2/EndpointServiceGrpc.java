@@ -57,7 +57,7 @@ public final class EndpointServiceGrpc {
       fullMethodName = SERVICE_NAME + '/' + "FullSyncEndpoint",
       requestType = com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest.class,
       responseType = com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest,
       com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> getFullSyncEndpointMethod() {
     io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> getFullSyncEndpointMethod;
@@ -66,7 +66,7 @@ public final class EndpointServiceGrpc {
         if ((getFullSyncEndpointMethod = EndpointServiceGrpc.getFullSyncEndpointMethod) == null) {
           EndpointServiceGrpc.getFullSyncEndpointMethod = getFullSyncEndpointMethod =
               io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FullSyncEndpoint"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -392,7 +392,7 @@ public final class EndpointServiceGrpc {
      */
     public void fullSyncEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getFullSyncEndpointMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -492,8 +492,9 @@ public final class EndpointServiceGrpc {
      * Requests a full sync of all endpoint related data
      * </pre>
      */
-    public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse fullSyncEndpoint(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public java.util.Iterator<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> fullSyncEndpoint(
+        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getFullSyncEndpointMethod(), getCallOptions(), request);
     }
 
@@ -581,19 +582,6 @@ public final class EndpointServiceGrpc {
         com.aruna.api.storage.services.v2.EndpointServiceProto.CreateEndpointRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateEndpointMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * FullSyncEndpoint
-     * Status: BETA
-     * Requests a full sync of all endpoint related data
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse> fullSyncEndpoint(
-        com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFullSyncEndpointMethod(), getCallOptions()), request);
     }
 
     /**
@@ -727,7 +715,7 @@ public final class EndpointServiceGrpc {
                 service, METHODID_CREATE_ENDPOINT)))
         .addMethod(
           getFullSyncEndpointMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointRequest,
               com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse>(

@@ -112,35 +112,35 @@ public final class AuthorizationServiceGrpc {
     return getDeleteAuthorizationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest,
-      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse> getUpdateAuthorizationsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest,
+      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse> getUpdateAuthorizationMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateAuthorizations",
-      requestType = com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.class,
-      responseType = com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAuthorization",
+      requestType = com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.class,
+      responseType = com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest,
-      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse> getUpdateAuthorizationsMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse> getUpdateAuthorizationsMethod;
-    if ((getUpdateAuthorizationsMethod = AuthorizationServiceGrpc.getUpdateAuthorizationsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest,
+      com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse> getUpdateAuthorizationMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse> getUpdateAuthorizationMethod;
+    if ((getUpdateAuthorizationMethod = AuthorizationServiceGrpc.getUpdateAuthorizationMethod) == null) {
       synchronized (AuthorizationServiceGrpc.class) {
-        if ((getUpdateAuthorizationsMethod = AuthorizationServiceGrpc.getUpdateAuthorizationsMethod) == null) {
-          AuthorizationServiceGrpc.getUpdateAuthorizationsMethod = getUpdateAuthorizationsMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse>newBuilder()
+        if ((getUpdateAuthorizationMethod = AuthorizationServiceGrpc.getUpdateAuthorizationMethod) == null) {
+          AuthorizationServiceGrpc.getUpdateAuthorizationMethod = getUpdateAuthorizationMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest, com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthorizations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthorization"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest.getDefaultInstance()))
+                  com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AuthorizationServiceMethodDescriptorSupplier("UpdateAuthorizations"))
+                  com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AuthorizationServiceMethodDescriptorSupplier("UpdateAuthorization"))
               .build();
         }
       }
     }
-    return getUpdateAuthorizationsMethod;
+    return getUpdateAuthorizationMethod;
   }
 
   /**
@@ -241,9 +241,9 @@ public final class AuthorizationServiceGrpc {
      * specific resource 
      * </pre>
      */
-    default void updateAuthorizations(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthorizationsMethod(), responseObserver);
+    default void updateAuthorization(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthorizationMethod(), responseObserver);
     }
   }
 
@@ -331,10 +331,10 @@ public final class AuthorizationServiceGrpc {
      * specific resource 
      * </pre>
      */
-    public void updateAuthorizations(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse> responseObserver) {
+    public void updateAuthorization(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateAuthorizationsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateAuthorizationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -404,9 +404,9 @@ public final class AuthorizationServiceGrpc {
      * specific resource 
      * </pre>
      */
-    public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse updateAuthorizations(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest request) {
+    public com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse updateAuthorization(com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateAuthorizationsMethod(), getCallOptions(), request);
+          getChannel(), getUpdateAuthorizationMethod(), getCallOptions(), request);
     }
   }
 
@@ -479,17 +479,17 @@ public final class AuthorizationServiceGrpc {
      * specific resource 
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse> updateAuthorizations(
-        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse> updateAuthorization(
+        com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateAuthorizationsMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateAuthorizationMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE_AUTHORIZATION = 0;
   private static final int METHODID_GET_AUTHORIZATIONS = 1;
   private static final int METHODID_DELETE_AUTHORIZATION = 2;
-  private static final int METHODID_UPDATE_AUTHORIZATIONS = 3;
+  private static final int METHODID_UPDATE_AUTHORIZATION = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -520,9 +520,9 @@ public final class AuthorizationServiceGrpc {
           serviceImpl.deleteAuthorization((com.aruna.api.storage.services.v2.AuthorizationServiceProto.DeleteAuthorizationRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.DeleteAuthorizationResponse>) responseObserver);
           break;
-        case METHODID_UPDATE_AUTHORIZATIONS:
-          serviceImpl.updateAuthorizations((com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse>) responseObserver);
+        case METHODID_UPDATE_AUTHORIZATION:
+          serviceImpl.updateAuthorization((com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -564,12 +564,12 @@ public final class AuthorizationServiceGrpc {
               com.aruna.api.storage.services.v2.AuthorizationServiceProto.DeleteAuthorizationResponse>(
                 service, METHODID_DELETE_AUTHORIZATION)))
         .addMethod(
-          getUpdateAuthorizationsMethod(),
+          getUpdateAuthorizationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsRequest,
-              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationsResponse>(
-                service, METHODID_UPDATE_AUTHORIZATIONS)))
+              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationRequest,
+              com.aruna.api.storage.services.v2.AuthorizationServiceProto.UpdateAuthorizationResponse>(
+                service, METHODID_UPDATE_AUTHORIZATION)))
         .build();
   }
 
@@ -621,7 +621,7 @@ public final class AuthorizationServiceGrpc {
               .addMethod(getCreateAuthorizationMethod())
               .addMethod(getGetAuthorizationsMethod())
               .addMethod(getDeleteAuthorizationMethod())
-              .addMethod(getUpdateAuthorizationsMethod())
+              .addMethod(getUpdateAuthorizationMethod())
               .build();
         }
       }

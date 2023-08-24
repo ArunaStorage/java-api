@@ -5899,19 +5899,19 @@ public final class NotificationServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
-     * @return Whether the messages field is set.
+     * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
+     * @return Whether the message field is set.
      */
-    boolean hasMessages();
+    boolean hasMessage();
     /**
-     * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
-     * @return The messages.
+     * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
+     * @return The message.
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage getMessages();
+    com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage getMessage();
     /**
-     * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+     * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
      */
-    com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder getMessagesOrBuilder();
+    com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder getMessageOrBuilder();
   }
   /**
    * Protobuf type {@code aruna.api.notification.services.v2.GetEventMessageStreamResponse}
@@ -5948,30 +5948,30 @@ public final class NotificationServiceProto {
               com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse.class, com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse.Builder.class);
     }
 
-    public static final int MESSAGES_FIELD_NUMBER = 1;
-    private com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage messages_;
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage message_;
     /**
-     * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
-     * @return Whether the messages field is set.
+     * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
+     * @return Whether the message field is set.
      */
     @java.lang.Override
-    public boolean hasMessages() {
-      return messages_ != null;
+    public boolean hasMessage() {
+      return message_ != null;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
-     * @return The messages.
+     * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
+     * @return The message.
      */
     @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage getMessages() {
-      return messages_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : messages_;
+    public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage getMessage() {
+      return message_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : message_;
     }
     /**
-     * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+     * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder getMessagesOrBuilder() {
-      return messages_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : messages_;
+    public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder getMessageOrBuilder() {
+      return message_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : message_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5988,8 +5988,8 @@ public final class NotificationServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messages_ != null) {
-        output.writeMessage(1, getMessages());
+      if (message_ != null) {
+        output.writeMessage(1, getMessage());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6000,9 +6000,9 @@ public final class NotificationServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (messages_ != null) {
+      if (message_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMessages());
+          .computeMessageSize(1, getMessage());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6019,10 +6019,10 @@ public final class NotificationServiceProto {
       }
       com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse other = (com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse) obj;
 
-      if (hasMessages() != other.hasMessages()) return false;
-      if (hasMessages()) {
-        if (!getMessages()
-            .equals(other.getMessages())) return false;
+      if (hasMessage() != other.hasMessage()) return false;
+      if (hasMessage()) {
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -6035,9 +6035,9 @@ public final class NotificationServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMessages()) {
-        hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getMessages().hashCode();
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6170,10 +6170,10 @@ public final class NotificationServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        messages_ = null;
-        if (messagesBuilder_ != null) {
-          messagesBuilder_.dispose();
-          messagesBuilder_ = null;
+        message_ = null;
+        if (messageBuilder_ != null) {
+          messageBuilder_.dispose();
+          messageBuilder_ = null;
         }
         return this;
       }
@@ -6209,9 +6209,9 @@ public final class NotificationServiceProto {
       private void buildPartial0(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.messages_ = messagesBuilder_ == null
-              ? messages_
-              : messagesBuilder_.build();
+          result.message_ = messageBuilder_ == null
+              ? message_
+              : messageBuilder_.build();
         }
       }
 
@@ -6227,8 +6227,8 @@ public final class NotificationServiceProto {
 
       public Builder mergeFrom(com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse other) {
         if (other == com.aruna.api.notification.services.v2.NotificationServiceProto.GetEventMessageStreamResponse.getDefaultInstance()) return this;
-        if (other.hasMessages()) {
-          mergeMessages(other.getMessages());
+        if (other.hasMessage()) {
+          mergeMessage(other.getMessage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6258,7 +6258,7 @@ public final class NotificationServiceProto {
                 break;
               case 10: {
                 input.readMessage(
-                    getMessagesFieldBuilder().getBuilder(),
+                    getMessageFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
@@ -6280,123 +6280,123 @@ public final class NotificationServiceProto {
       }
       private int bitField0_;
 
-      private com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage messages_;
+      private com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage message_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder> messagesBuilder_;
+          com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder> messageBuilder_;
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
-       * @return Whether the messages field is set.
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
+       * @return Whether the message field is set.
        */
-      public boolean hasMessages() {
+      public boolean hasMessage() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
-       * @return The messages.
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
+       * @return The message.
        */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage getMessages() {
-        if (messagesBuilder_ == null) {
-          return messages_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : messages_;
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage getMessage() {
+        if (messageBuilder_ == null) {
+          return message_ == null ? com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : message_;
         } else {
-          return messagesBuilder_.getMessage();
+          return messageBuilder_.getMessage();
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
-      public Builder setMessages(com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage value) {
-        if (messagesBuilder_ == null) {
+      public Builder setMessage(com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage value) {
+        if (messageBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          messages_ = value;
+          message_ = value;
         } else {
-          messagesBuilder_.setMessage(value);
+          messageBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
-      public Builder setMessages(
+      public Builder setMessage(
           com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder builderForValue) {
-        if (messagesBuilder_ == null) {
-          messages_ = builderForValue.build();
+        if (messageBuilder_ == null) {
+          message_ = builderForValue.build();
         } else {
-          messagesBuilder_.setMessage(builderForValue.build());
+          messageBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
-      public Builder mergeMessages(com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage value) {
-        if (messagesBuilder_ == null) {
+      public Builder mergeMessage(com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage value) {
+        if (messageBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
-            messages_ != null &&
-            messages_ != com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance()) {
-            getMessagesBuilder().mergeFrom(value);
+            message_ != null &&
+            message_ != com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance()) {
+            getMessageBuilder().mergeFrom(value);
           } else {
-            messages_ = value;
+            message_ = value;
           }
         } else {
-          messagesBuilder_.mergeFrom(value);
+          messageBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
-      public Builder clearMessages() {
+      public Builder clearMessage() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        messages_ = null;
-        if (messagesBuilder_ != null) {
-          messagesBuilder_.dispose();
-          messagesBuilder_ = null;
+        message_ = null;
+        if (messageBuilder_ != null) {
+          messageBuilder_.dispose();
+          messageBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder getMessagesBuilder() {
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder getMessageBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
-        return getMessagesFieldBuilder().getBuilder();
+        return getMessageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
-      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder getMessagesOrBuilder() {
-        if (messagesBuilder_ != null) {
-          return messagesBuilder_.getMessageOrBuilder();
+      public com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder getMessageOrBuilder() {
+        if (messageBuilder_ != null) {
+          return messageBuilder_.getMessageOrBuilder();
         } else {
-          return messages_ == null ?
-              com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : messages_;
+          return message_ == null ?
+              com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.getDefaultInstance() : message_;
         }
       }
       /**
-       * <code>.aruna.api.notification.services.v2.EventMessage messages = 1 [json_name = "messages"];</code>
+       * <code>.aruna.api.notification.services.v2.EventMessage message = 1 [json_name = "message"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder> 
-          getMessagesFieldBuilder() {
-        if (messagesBuilder_ == null) {
-          messagesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getMessageFieldBuilder() {
+        if (messageBuilder_ == null) {
+          messageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessage.Builder, com.aruna.api.notification.services.v2.NotificationServiceProto.EventMessageOrBuilder>(
-                  getMessages(),
+                  getMessage(),
                   getParentForChildren(),
                   isClean());
-          messages_ = null;
+          message_ = null;
         }
-        return messagesBuilder_;
+        return messageBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18033,93 +18033,93 @@ public final class NotificationServiceProto {
       ".api.notification.services.v2.EventMessa" +
       "geR\010messages\"G\n\034GetEventMessageStreamReq" +
       "uest\022\'\n\017stream_consumer\030\001 \001(\tR\016streamCon" +
-      "sumer\"m\n\035GetEventMessageStreamResponse\022L" +
-      "\n\010messages\030\001 \001(\01320.aruna.api.notificatio" +
-      "n.services.v2.EventMessageR\010messages\"e\n\036" +
-      "AcknowledgeMessageBatchRequest\022C\n\007replie" +
-      "s\030\001 \003(\0132).aruna.api.notification.service" +
-      "s.v2.ReplyR\007replies\"!\n\037AcknowledgeMessag" +
-      "eBatchResponse\"F\n\033DeleteStreamConsumerRe" +
-      "quest\022\'\n\017stream_consumer\030\001 \001(\tR\016streamCo" +
-      "nsumer\"\036\n\034DeleteStreamConsumerResponse\"0" +
-      "\n\022StreamFromSequence\022\032\n\010sequence\030\001 \001(\004R\010" +
-      "sequence\"J\n\016StreamFromDate\0228\n\ttimestamp\030" +
-      "\001 \001(\0132\032.google.protobuf.TimestampR\ttimes" +
-      "tamp\"\013\n\tStreamAll\"\264\002\n\014EventMessage\022Z\n\016re" +
-      "source_event\030\001 \001(\01321.aruna.api.notificat" +
-      "ion.services.v2.ResourceEventH\000R\rresourc" +
-      "eEvent\022N\n\nuser_event\030\002 \001(\0132-.aruna.api.n" +
-      "otification.services.v2.UserEventH\000R\tuse" +
-      "rEvent\022e\n\022announcement_event\030\003 \001(\01324.aru" +
-      "na.api.notification.services.v2.Anouncem" +
-      "entEventH\000R\021announcementEventB\021\n\017message" +
-      "_variant\"\361\001\n\rResourceEvent\022H\n\010resource\030\001" +
-      " \001(\0132,.aruna.api.notification.services.v" +
-      "2.ResourceR\010resource\022U\n\revent_variant\030\002 " +
-      "\001(\01620.aruna.api.notification.services.v2" +
-      ".EventVariantR\014eventVariant\022?\n\005reply\030\003 \001" +
-      "(\0132).aruna.api.notification.services.v2." +
-      "ReplyR\005reply\"\330\001\n\tUserEvent\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\022U\n\revent_variant\030\002 \001(\01620.aru" +
-      "na.api.notification.services.v2.EventVar" +
-      "iantR\014eventVariant\022\032\n\010checksum\030\003 \001(\tR\010ch" +
-      "ecksum\022?\n\005reply\030\004 \001(\0132).aruna.api.notifi" +
-      "cation.services.v2.ReplyR\005reply\"E\n\005Reply" +
-      "\022\024\n\005reply\030\001 \001(\tR\005reply\022\022\n\004salt\030\002 \001(\tR\004sa" +
-      "lt\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\251\001\n\021ScheduledDown" +
-      "time\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcomp" +
-      "onent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\004from\022*\n\002to\030\004 \001" +
-      "(\0132\032.google.protobuf.TimestampR\002to\"g\n\nNe" +
-      "wVersion\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\t" +
-      "component\030\002 \001(\tR\tcomponent\022\037\n\013new_versio" +
-      "n\030\003 \001(\tR\nnewVersion\"#\n\tNewPubkey\022\026\n\006pubk" +
-      "ey\030\001 \001(\tR\006pubkey\"\340\003\n\020AnouncementEvent\022+\n" +
-      "\021new_data_proxy_id\030\001 \001(\tH\000R\016newDataProxy" +
-      "Id\0221\n\024remove_data_proxy_id\030\002 \001(\tH\000R\021remo" +
-      "veDataProxyId\0221\n\024update_data_proxy_id\030\003 " +
-      "\001(\tH\000R\021updateDataProxyId\022\037\n\nnew_pubkey\030\004" +
-      " \001(\005H\000R\tnewPubkey\022%\n\rremove_pubkey\030\005 \001(\005" +
-      "H\000R\014removePubkey\022S\n\010downtime\030\006 \001(\01325.aru" +
-      "na.api.notification.services.v2.Schedule" +
-      "dDowntimeH\000R\010downtime\022J\n\007version\030\007 \001(\0132." +
-      ".aruna.api.notification.services.v2.NewV" +
-      "ersionH\000R\007version\022?\n\005reply\030\010 \001(\0132).aruna" +
-      ".api.notification.services.v2.ReplyR\005rep" +
-      "lyB\017\n\revent_variant*\272\001\n\014EventVariant\022\035\n\031" +
-      "EVENT_VARIANT_UNSPECIFIED\020\000\022\031\n\025EVENT_VAR" +
-      "IANT_CREATED\020\001\022\033\n\027EVENT_VARIANT_AVAILABL" +
-      "E\020\002\022\031\n\025EVENT_VARIANT_UPDATED\020\003\022\031\n\025EVENT_" +
-      "VARIANT_DELETED\020\004\022\035\n\031EVENT_VARIANT_SNAPS" +
-      "HOTTED\020\0052\276\006\n\030EventNotificationService\022\233\001" +
-      "\n\024CreateStreamConsumer\022?.aruna.api.notif" +
-      "ication.services.v2.CreateStreamConsumer" +
-      "Request\032@.aruna.api.notification.service" +
-      "s.v2.CreateStreamConsumerResponse\"\000\022\233\001\n\024" +
-      "GetEventMessageBatch\022?.aruna.api.notific" +
-      "ation.services.v2.GetEventMessageBatchRe" +
+      "sumer\"k\n\035GetEventMessageStreamResponse\022J" +
+      "\n\007message\030\001 \001(\01320.aruna.api.notification" +
+      ".services.v2.EventMessageR\007message\"e\n\036Ac" +
+      "knowledgeMessageBatchRequest\022C\n\007replies\030" +
+      "\001 \003(\0132).aruna.api.notification.services." +
+      "v2.ReplyR\007replies\"!\n\037AcknowledgeMessageB" +
+      "atchResponse\"F\n\033DeleteStreamConsumerRequ" +
+      "est\022\'\n\017stream_consumer\030\001 \001(\tR\016streamCons" +
+      "umer\"\036\n\034DeleteStreamConsumerResponse\"0\n\022" +
+      "StreamFromSequence\022\032\n\010sequence\030\001 \001(\004R\010se" +
+      "quence\"J\n\016StreamFromDate\0228\n\ttimestamp\030\001 " +
+      "\001(\0132\032.google.protobuf.TimestampR\ttimesta" +
+      "mp\"\013\n\tStreamAll\"\264\002\n\014EventMessage\022Z\n\016reso" +
+      "urce_event\030\001 \001(\01321.aruna.api.notificatio" +
+      "n.services.v2.ResourceEventH\000R\rresourceE" +
+      "vent\022N\n\nuser_event\030\002 \001(\0132-.aruna.api.not" +
+      "ification.services.v2.UserEventH\000R\tuserE" +
+      "vent\022e\n\022announcement_event\030\003 \001(\01324.aruna" +
+      ".api.notification.services.v2.Anouncemen" +
+      "tEventH\000R\021announcementEventB\021\n\017message_v" +
+      "ariant\"\361\001\n\rResourceEvent\022H\n\010resource\030\001 \001" +
+      "(\0132,.aruna.api.notification.services.v2." +
+      "ResourceR\010resource\022U\n\revent_variant\030\002 \001(" +
+      "\01620.aruna.api.notification.services.v2.E" +
+      "ventVariantR\014eventVariant\022?\n\005reply\030\003 \001(\013" +
+      "2).aruna.api.notification.services.v2.Re" +
+      "plyR\005reply\"\330\001\n\tUserEvent\022\027\n\007user_id\030\001 \001(" +
+      "\tR\006userId\022U\n\revent_variant\030\002 \001(\01620.aruna" +
+      ".api.notification.services.v2.EventVaria" +
+      "ntR\014eventVariant\022\032\n\010checksum\030\003 \001(\tR\010chec" +
+      "ksum\022?\n\005reply\030\004 \001(\0132).aruna.api.notifica" +
+      "tion.services.v2.ReplyR\005reply\"E\n\005Reply\022\024" +
+      "\n\005reply\030\001 \001(\tR\005reply\022\022\n\004salt\030\002 \001(\tR\004salt" +
+      "\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\251\001\n\021ScheduledDownti" +
+      "me\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcompon" +
+      "ent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\004from\022*\n\002to\030\004 \001(\013" +
+      "2\032.google.protobuf.TimestampR\002to\"g\n\nNewV" +
+      "ersion\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tco" +
+      "mponent\030\002 \001(\tR\tcomponent\022\037\n\013new_version\030" +
+      "\003 \001(\tR\nnewVersion\"#\n\tNewPubkey\022\026\n\006pubkey" +
+      "\030\001 \001(\tR\006pubkey\"\340\003\n\020AnouncementEvent\022+\n\021n" +
+      "ew_data_proxy_id\030\001 \001(\tH\000R\016newDataProxyId" +
+      "\0221\n\024remove_data_proxy_id\030\002 \001(\tH\000R\021remove" +
+      "DataProxyId\0221\n\024update_data_proxy_id\030\003 \001(" +
+      "\tH\000R\021updateDataProxyId\022\037\n\nnew_pubkey\030\004 \001" +
+      "(\005H\000R\tnewPubkey\022%\n\rremove_pubkey\030\005 \001(\005H\000" +
+      "R\014removePubkey\022S\n\010downtime\030\006 \001(\01325.aruna" +
+      ".api.notification.services.v2.ScheduledD" +
+      "owntimeH\000R\010downtime\022J\n\007version\030\007 \001(\0132..a" +
+      "runa.api.notification.services.v2.NewVer" +
+      "sionH\000R\007version\022?\n\005reply\030\010 \001(\0132).aruna.a" +
+      "pi.notification.services.v2.ReplyR\005reply" +
+      "B\017\n\revent_variant*\272\001\n\014EventVariant\022\035\n\031EV" +
+      "ENT_VARIANT_UNSPECIFIED\020\000\022\031\n\025EVENT_VARIA" +
+      "NT_CREATED\020\001\022\033\n\027EVENT_VARIANT_AVAILABLE\020" +
+      "\002\022\031\n\025EVENT_VARIANT_UPDATED\020\003\022\031\n\025EVENT_VA" +
+      "RIANT_DELETED\020\004\022\035\n\031EVENT_VARIANT_SNAPSHO" +
+      "TTED\020\0052\276\006\n\030EventNotificationService\022\233\001\n\024" +
+      "CreateStreamConsumer\022?.aruna.api.notific" +
+      "ation.services.v2.CreateStreamConsumerRe" +
       "quest\032@.aruna.api.notification.services." +
-      "v2.GetEventMessageBatchResponse\"\000\022\240\001\n\025Ge" +
-      "tEventMessageStream\022@.aruna.api.notifica" +
-      "tion.services.v2.GetEventMessageStreamRe" +
-      "quest\032A.aruna.api.notification.services." +
-      "v2.GetEventMessageStreamResponse\"\0000\001\022\244\001\n" +
-      "\027AcknowledgeMessageBatch\022B.aruna.api.not" +
-      "ification.services.v2.AcknowledgeMessage" +
-      "BatchRequest\032C.aruna.api.notification.se" +
-      "rvices.v2.AcknowledgeMessageBatchRespons" +
-      "e\"\000\022\233\001\n\024DeleteStreamConsumer\022?.aruna.api" +
-      ".notification.services.v2.DeleteStreamCo" +
-      "nsumerRequest\032@.aruna.api.notification.s" +
-      "ervices.v2.DeleteStreamConsumerResponse\"" +
-      "\000B\262\002\n&com.aruna.api.notification.service" +
-      "s.v2B\030NotificationServiceProtoP\000ZAgithub" +
-      ".com/ArunaStorage/go-api/aruna/api/notif" +
-      "ication/services/v2\242\002\004AANS\252\002\"Aruna.Api.N" +
-      "otification.Services.V2\312\002\"Aruna\\Api\\Noti" +
-      "fication\\Services\\V2\342\002.Aruna\\Api\\Notific" +
-      "ation\\Services\\V2\\GPBMetadata\352\002&Aruna::A" +
-      "pi::Notification::Services::V2b\006proto3"
+      "v2.CreateStreamConsumerResponse\"\000\022\233\001\n\024Ge" +
+      "tEventMessageBatch\022?.aruna.api.notificat" +
+      "ion.services.v2.GetEventMessageBatchRequ" +
+      "est\032@.aruna.api.notification.services.v2" +
+      ".GetEventMessageBatchResponse\"\000\022\240\001\n\025GetE" +
+      "ventMessageStream\022@.aruna.api.notificati" +
+      "on.services.v2.GetEventMessageStreamRequ" +
+      "est\032A.aruna.api.notification.services.v2" +
+      ".GetEventMessageStreamResponse\"\0000\001\022\244\001\n\027A" +
+      "cknowledgeMessageBatch\022B.aruna.api.notif" +
+      "ication.services.v2.AcknowledgeMessageBa" +
+      "tchRequest\032C.aruna.api.notification.serv" +
+      "ices.v2.AcknowledgeMessageBatchResponse\"" +
+      "\000\022\233\001\n\024DeleteStreamConsumer\022?.aruna.api.n" +
+      "otification.services.v2.DeleteStreamCons" +
+      "umerRequest\032@.aruna.api.notification.ser" +
+      "vices.v2.DeleteStreamConsumerResponse\"\000B" +
+      "\262\002\n&com.aruna.api.notification.services." +
+      "v2B\030NotificationServiceProtoP\000ZAgithub.c" +
+      "om/ArunaStorage/go-api/aruna/api/notific" +
+      "ation/services/v2\242\002\004AANS\252\002\"Aruna.Api.Not" +
+      "ification.Services.V2\312\002\"Aruna\\Api\\Notifi" +
+      "cation\\Services\\V2\342\002.Aruna\\Api\\Notificat" +
+      "ion\\Services\\V2\\GPBMetadata\352\002&Aruna::Api" +
+      "::Notification::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18174,7 +18174,7 @@ public final class NotificationServiceProto {
     internal_static_aruna_api_notification_services_v2_GetEventMessageStreamResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_GetEventMessageStreamResponse_descriptor,
-        new java.lang.String[] { "Messages", });
+        new java.lang.String[] { "Message", });
     internal_static_aruna_api_notification_services_v2_AcknowledgeMessageBatchRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_notification_services_v2_AcknowledgeMessageBatchRequest_fieldAccessorTable = new

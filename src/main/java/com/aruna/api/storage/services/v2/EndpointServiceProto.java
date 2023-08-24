@@ -2476,16 +2476,51 @@ public final class EndpointServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The url.
+     * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+     * @return Whether the genericResource field is set.
      */
-    java.lang.String getUrl();
+    boolean hasGenericResource();
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The bytes for url.
+     * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+     * @return The genericResource.
      */
-    com.google.protobuf.ByteString
-        getUrlBytes();
+    com.aruna.api.storage.models.v2.ModelsProto.GenericResource getGenericResource();
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder getGenericResourceOrBuilder();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+     * @return Whether the user field is set.
+     */
+    boolean hasUser();
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+     * @return The user.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.User getUser();
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder getUserOrBuilder();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+     * @return Whether the pubkey field is set.
+     */
+    boolean hasPubkey();
+    /**
+     * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+     * @return The pubkey.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.Pubkey getPubkey();
+    /**
+     * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder getPubkeyOrBuilder();
+
+    com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.TargetCase getTargetCase();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.FullSyncEndpointResponse}
@@ -2500,7 +2535,6 @@ public final class EndpointServiceProto {
       super(builder);
     }
     private FullSyncEndpointResponse() {
-      url_ = "";
     }
 
     @java.lang.Override
@@ -2523,43 +2557,141 @@ public final class EndpointServiceProto {
               com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.class, com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.Builder.class);
     }
 
-    public static final int URL_FIELD_NUMBER = 1;
+    private int targetCase_ = 0;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object url_ = "";
+    private java.lang.Object target_;
+    public enum TargetCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      GENERIC_RESOURCE(1),
+      USER(2),
+      PUBKEY(3),
+      TARGET_NOT_SET(0);
+      private final int value;
+      private TargetCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TargetCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TargetCase forNumber(int value) {
+        switch (value) {
+          case 1: return GENERIC_RESOURCE;
+          case 2: return USER;
+          case 3: return PUBKEY;
+          case 0: return TARGET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TargetCase
+    getTargetCase() {
+      return TargetCase.forNumber(
+          targetCase_);
+    }
+
+    public static final int GENERIC_RESOURCE_FIELD_NUMBER = 1;
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The url.
+     * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+     * @return Whether the genericResource field is set.
      */
     @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
+    public boolean hasGenericResource() {
+      return targetCase_ == 1;
     }
     /**
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The bytes for url.
+     * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+     * @return The genericResource.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    public com.aruna.api.storage.models.v2.ModelsProto.GenericResource getGenericResource() {
+      if (targetCase_ == 1) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_;
       }
+      return com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder getGenericResourceOrBuilder() {
+      if (targetCase_ == 1) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance();
+    }
+
+    public static final int USER_FIELD_NUMBER = 2;
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+     * @return Whether the user field is set.
+     */
+    @java.lang.Override
+    public boolean hasUser() {
+      return targetCase_ == 2;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+     * @return The user.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.User getUser() {
+      if (targetCase_ == 2) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.User) target_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder getUserOrBuilder() {
+      if (targetCase_ == 2) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.User) target_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance();
+    }
+
+    public static final int PUBKEY_FIELD_NUMBER = 3;
+    /**
+     * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+     * @return Whether the pubkey field is set.
+     */
+    @java.lang.Override
+    public boolean hasPubkey() {
+      return targetCase_ == 3;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+     * @return The pubkey.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.Pubkey getPubkey() {
+      if (targetCase_ == 3) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder getPubkeyOrBuilder() {
+      if (targetCase_ == 3) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2576,8 +2708,14 @@ public final class EndpointServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+      if (targetCase_ == 1) {
+        output.writeMessage(1, (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_);
+      }
+      if (targetCase_ == 2) {
+        output.writeMessage(2, (com.aruna.api.storage.models.v2.ModelsProto.User) target_);
+      }
+      if (targetCase_ == 3) {
+        output.writeMessage(3, (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2588,8 +2726,17 @@ public final class EndpointServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+      if (targetCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_);
+      }
+      if (targetCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.aruna.api.storage.models.v2.ModelsProto.User) target_);
+      }
+      if (targetCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2606,8 +2753,23 @@ public final class EndpointServiceProto {
       }
       com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse other = (com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse) obj;
 
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
+      if (!getTargetCase().equals(other.getTargetCase())) return false;
+      switch (targetCase_) {
+        case 1:
+          if (!getGenericResource()
+              .equals(other.getGenericResource())) return false;
+          break;
+        case 2:
+          if (!getUser()
+              .equals(other.getUser())) return false;
+          break;
+        case 3:
+          if (!getPubkey()
+              .equals(other.getPubkey())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2619,8 +2781,22 @@ public final class EndpointServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
+      switch (targetCase_) {
+        case 1:
+          hash = (37 * hash) + GENERIC_RESOURCE_FIELD_NUMBER;
+          hash = (53 * hash) + getGenericResource().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + USER_FIELD_NUMBER;
+          hash = (53 * hash) + getUser().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
+          hash = (53 * hash) + getPubkey().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2752,7 +2928,17 @@ public final class EndpointServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        url_ = "";
+        if (genericResourceBuilder_ != null) {
+          genericResourceBuilder_.clear();
+        }
+        if (userBuilder_ != null) {
+          userBuilder_.clear();
+        }
+        if (pubkeyBuilder_ != null) {
+          pubkeyBuilder_.clear();
+        }
+        targetCase_ = 0;
+        target_ = null;
         return this;
       }
 
@@ -2780,14 +2966,29 @@ public final class EndpointServiceProto {
       public com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse buildPartial() {
         com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse result = new com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
       private void buildPartial0(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.url_ = url_;
+      }
+
+      private void buildPartialOneofs(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse result) {
+        result.targetCase_ = targetCase_;
+        result.target_ = this.target_;
+        if (targetCase_ == 1 &&
+            genericResourceBuilder_ != null) {
+          result.target_ = genericResourceBuilder_.build();
+        }
+        if (targetCase_ == 2 &&
+            userBuilder_ != null) {
+          result.target_ = userBuilder_.build();
+        }
+        if (targetCase_ == 3 &&
+            pubkeyBuilder_ != null) {
+          result.target_ = pubkeyBuilder_.build();
         }
       }
 
@@ -2803,10 +3004,22 @@ public final class EndpointServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse other) {
         if (other == com.aruna.api.storage.services.v2.EndpointServiceProto.FullSyncEndpointResponse.getDefaultInstance()) return this;
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        switch (other.getTargetCase()) {
+          case GENERIC_RESOURCE: {
+            mergeGenericResource(other.getGenericResource());
+            break;
+          }
+          case USER: {
+            mergeUser(other.getUser());
+            break;
+          }
+          case PUBKEY: {
+            mergePubkey(other.getPubkey());
+            break;
+          }
+          case TARGET_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2835,10 +3048,26 @@ public final class EndpointServiceProto {
                 done = true;
                 break;
               case 10: {
-                url_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
+                input.readMessage(
+                    getGenericResourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                targetCase_ = 1;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getUserFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                targetCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPubkeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                targetCase_ = 3;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2854,78 +3083,447 @@ public final class EndpointServiceProto {
         } // finally
         return this;
       }
+      private int targetCase_ = 0;
+      private java.lang.Object target_;
+      public TargetCase
+          getTargetCase() {
+        return TargetCase.forNumber(
+            targetCase_);
+      }
+
+      public Builder clearTarget() {
+        targetCase_ = 0;
+        target_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
-      private java.lang.Object url_ = "";
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.GenericResource, com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder, com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder> genericResourceBuilder_;
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
-       * @return The url.
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       * @return Whether the genericResource field is set.
        */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
+      @java.lang.Override
+      public boolean hasGenericResource() {
+        return targetCase_ == 1;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       * @return The genericResource.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.GenericResource getGenericResource() {
+        if (genericResourceBuilder_ == null) {
+          if (targetCase_ == 1) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance();
         } else {
-          return (java.lang.String) ref;
+          if (targetCase_ == 1) {
+            return genericResourceBuilder_.getMessage();
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance();
         }
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
-       * @return The bytes for url.
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
        */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
+      public Builder setGenericResource(com.aruna.api.storage.models.v2.ModelsProto.GenericResource value) {
+        if (genericResourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          genericResourceBuilder_.setMessage(value);
+        }
+        targetCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       */
+      public Builder setGenericResource(
+          com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder builderForValue) {
+        if (genericResourceBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          genericResourceBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       */
+      public Builder mergeGenericResource(com.aruna.api.storage.models.v2.ModelsProto.GenericResource value) {
+        if (genericResourceBuilder_ == null) {
+          if (targetCase_ == 1 &&
+              target_ != com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance()) {
+            target_ = com.aruna.api.storage.models.v2.ModelsProto.GenericResource.newBuilder((com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 1) {
+            genericResourceBuilder_.mergeFrom(value);
+          } else {
+            genericResourceBuilder_.setMessage(value);
+          }
+        }
+        targetCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       */
+      public Builder clearGenericResource() {
+        if (genericResourceBuilder_ == null) {
+          if (targetCase_ == 1) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 1) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          genericResourceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder getGenericResourceBuilder() {
+        return getGenericResourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder getGenericResourceOrBuilder() {
+        if ((targetCase_ == 1) && (genericResourceBuilder_ != null)) {
+          return genericResourceBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 1) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance();
         }
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.storage.models.v2.GenericResource generic_resource = 1 [json_name = "genericResource"];</code>
        */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        url_ = value;
-        bitField0_ |= 0x00000001;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.GenericResource, com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder, com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder> 
+          getGenericResourceFieldBuilder() {
+        if (genericResourceBuilder_ == null) {
+          if (!(targetCase_ == 1)) {
+            target_ = com.aruna.api.storage.models.v2.ModelsProto.GenericResource.getDefaultInstance();
+          }
+          genericResourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.GenericResource, com.aruna.api.storage.models.v2.ModelsProto.GenericResource.Builder, com.aruna.api.storage.models.v2.ModelsProto.GenericResourceOrBuilder>(
+                  (com.aruna.api.storage.models.v2.ModelsProto.GenericResource) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 1;
         onChanged();
+        return genericResourceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.User, com.aruna.api.storage.models.v2.ModelsProto.User.Builder, com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder> userBuilder_;
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       * @return Whether the user field is set.
+       */
+      @java.lang.Override
+      public boolean hasUser() {
+        return targetCase_ == 2;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       * @return The user.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.User getUser() {
+        if (userBuilder_ == null) {
+          if (targetCase_ == 2) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.User) target_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance();
+        } else {
+          if (targetCase_ == 2) {
+            return userBuilder_.getMessage();
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       */
+      public Builder setUser(com.aruna.api.storage.models.v2.ModelsProto.User value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          userBuilder_.setMessage(value);
+        }
+        targetCase_ = 2;
         return this;
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
-       * @return This builder for chaining.
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
        */
-      public Builder clearUrl() {
-        url_ = getDefaultInstance().getUrl();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+      public Builder setUser(
+          com.aruna.api.storage.models.v2.ModelsProto.User.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 2;
         return this;
       }
       /**
-       * <code>string url = 1 [json_name = "url"];</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
        */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        url_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      public Builder mergeUser(com.aruna.api.storage.models.v2.ModelsProto.User value) {
+        if (userBuilder_ == null) {
+          if (targetCase_ == 2 &&
+              target_ != com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance()) {
+            target_ = com.aruna.api.storage.models.v2.ModelsProto.User.newBuilder((com.aruna.api.storage.models.v2.ModelsProto.User) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 2) {
+            userBuilder_.mergeFrom(value);
+          } else {
+            userBuilder_.setMessage(value);
+          }
+        }
+        targetCase_ = 2;
         return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       */
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          if (targetCase_ == 2) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 2) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          userBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.User.Builder getUserBuilder() {
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder getUserOrBuilder() {
+        if ((targetCase_ == 2) && (userBuilder_ != null)) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 2) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.User) target_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.User user = 2 [json_name = "user"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.User, com.aruna.api.storage.models.v2.ModelsProto.User.Builder, com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          if (!(targetCase_ == 2)) {
+            target_ = com.aruna.api.storage.models.v2.ModelsProto.User.getDefaultInstance();
+          }
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.User, com.aruna.api.storage.models.v2.ModelsProto.User.Builder, com.aruna.api.storage.models.v2.ModelsProto.UserOrBuilder>(
+                  (com.aruna.api.storage.models.v2.ModelsProto.User) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 2;
+        onChanged();
+        return userBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Pubkey, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder, com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> pubkeyBuilder_;
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       * @return Whether the pubkey field is set.
+       */
+      @java.lang.Override
+      public boolean hasPubkey() {
+        return targetCase_ == 3;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       * @return The pubkey.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Pubkey getPubkey() {
+        if (pubkeyBuilder_ == null) {
+          if (targetCase_ == 3) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance();
+        } else {
+          if (targetCase_ == 3) {
+            return pubkeyBuilder_.getMessage();
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      public Builder setPubkey(com.aruna.api.storage.models.v2.ModelsProto.Pubkey value) {
+        if (pubkeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          pubkeyBuilder_.setMessage(value);
+        }
+        targetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      public Builder setPubkey(
+          com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder builderForValue) {
+        if (pubkeyBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          pubkeyBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      public Builder mergePubkey(com.aruna.api.storage.models.v2.ModelsProto.Pubkey value) {
+        if (pubkeyBuilder_ == null) {
+          if (targetCase_ == 3 &&
+              target_ != com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance()) {
+            target_ = com.aruna.api.storage.models.v2.ModelsProto.Pubkey.newBuilder((com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 3) {
+            pubkeyBuilder_.mergeFrom(value);
+          } else {
+            pubkeyBuilder_.setMessage(value);
+          }
+        }
+        targetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      public Builder clearPubkey() {
+        if (pubkeyBuilder_ == null) {
+          if (targetCase_ == 3) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 3) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          pubkeyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder getPubkeyBuilder() {
+        return getPubkeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder getPubkeyOrBuilder() {
+        if ((targetCase_ == 3) && (pubkeyBuilder_ != null)) {
+          return pubkeyBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 3) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Pubkey pubkey = 3 [json_name = "pubkey"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Pubkey, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder, com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder> 
+          getPubkeyFieldBuilder() {
+        if (pubkeyBuilder_ == null) {
+          if (!(targetCase_ == 3)) {
+            target_ = com.aruna.api.storage.models.v2.ModelsProto.Pubkey.getDefaultInstance();
+          }
+          pubkeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.Pubkey, com.aruna.api.storage.models.v2.ModelsProto.Pubkey.Builder, com.aruna.api.storage.models.v2.ModelsProto.PubkeyOrBuilder>(
+                  (com.aruna.api.storage.models.v2.ModelsProto.Pubkey) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 3;
+        onChanged();
+        return pubkeyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7775,52 +8373,57 @@ public final class EndpointServiceProto {
       "nfigR\013hostConfigs\"[\n\026CreateEndpointRespo" +
       "nse\022A\n\010endpoint\030\001 \001(\0132%.aruna.api.storag" +
       "e.models.v2.EndpointR\010endpoint\"\031\n\027FullSy" +
-      "ncEndpointRequest\",\n\030FullSyncEndpointRes" +
-      "ponse\022\020\n\003url\030\001 \001(\tR\003url\"j\n\022GetEndpointRe" +
-      "quest\022%\n\rendpoint_name\030\001 \001(\tH\000R\014endpoint" +
-      "Name\022!\n\013endpoint_id\030\002 \001(\tH\000R\nendpointIdB" +
-      "\n\n\010endpoint\"X\n\023GetEndpointResponse\022A\n\010en" +
-      "dpoint\030\001 \001(\0132%.aruna.api.storage.models." +
-      "v2.EndpointR\010endpoint\"\025\n\023GetEndpointsReq" +
-      "uest\"[\n\024GetEndpointsResponse\022C\n\tendpoint" +
-      "s\030\001 \003(\0132%.aruna.api.storage.models.v2.En" +
-      "dpointR\tendpoints\"8\n\025DeleteEndpointReque" +
-      "st\022\037\n\013endpoint_id\030\001 \001(\tR\nendpointId\"\030\n\026D" +
-      "eleteEndpointResponse\"\033\n\031GetDefaultEndpo" +
-      "intRequest\"_\n\032GetDefaultEndpointResponse" +
-      "\022A\n\010endpoint\030\001 \001(\0132%.aruna.api.storage.m" +
-      "odels.v2.EndpointR\010endpoint2\267\007\n\017Endpoint" +
-      "Service\022\226\001\n\016CreateEndpoint\0224.aruna.api.s" +
-      "torage.services.v2.CreateEndpointRequest" +
-      "\0325.aruna.api.storage.services.v2.CreateE" +
-      "ndpointResponse\"\027\202\323\344\223\002\021\"\014/v2/endpoint:\001*" +
-      "\022\236\001\n\020FullSyncEndpoint\0226.aruna.api.storag" +
-      "e.services.v2.FullSyncEndpointRequest\0327." +
-      "aruna.api.storage.services.v2.FullSyncEn" +
-      "dpointResponse\"\031\202\323\344\223\002\023\022\021/v2/endpoint/syn" +
-      "c\022\212\001\n\013GetEndpoint\0221.aruna.api.storage.se" +
-      "rvices.v2.GetEndpointRequest\0322.aruna.api" +
-      ".storage.services.v2.GetEndpointResponse" +
-      "\"\024\202\323\344\223\002\016\022\014/v2/endpoint\022\216\001\n\014GetEndpoints\022" +
-      "2.aruna.api.storage.services.v2.GetEndpo" +
-      "intsRequest\0323.aruna.api.storage.services" +
-      ".v2.GetEndpointsResponse\"\025\202\323\344\223\002\017\022\r/v2/en" +
-      "dpoints\022\241\001\n\016DeleteEndpoint\0224.aruna.api.s" +
-      "torage.services.v2.DeleteEndpointRequest" +
-      "\0325.aruna.api.storage.services.v2.DeleteE" +
-      "ndpointResponse\"\"\202\323\344\223\002\034*\032/v2/endpoint/{e" +
-      "ndpoint_id}\022\247\001\n\022GetDefaultEndpoint\0228.aru" +
-      "na.api.storage.services.v2.GetDefaultEnd" +
-      "pointRequest\0329.aruna.api.storage.service" +
-      "s.v2.GetDefaultEndpointResponse\"\034\202\323\344\223\002\026\022" +
-      "\024/v2/endpoint/defaultB\220\002\n!com.aruna.api." +
-      "storage.services.v2B\024EndpointServiceProt" +
-      "oP\000Z<github.com/ArunaStorage/go-api/arun" +
-      "a/api/storage/services/v2\242\002\004AASS\252\002\035Aruna" +
-      ".Api.Storage.Services.V2\312\002\035Aruna\\Api\\Sto" +
-      "rage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Ser" +
-      "vices\\V2\\GPBMetadata\352\002!Aruna::Api::Stora" +
-      "ge::Services::V2b\006proto3"
+      "ncEndpointRequest\"\367\001\n\030FullSyncEndpointRe" +
+      "sponse\022Y\n\020generic_resource\030\001 \001(\0132,.aruna" +
+      ".api.storage.models.v2.GenericResourceH\000" +
+      "R\017genericResource\0227\n\004user\030\002 \001(\0132!.aruna." +
+      "api.storage.models.v2.UserH\000R\004user\022=\n\006pu" +
+      "bkey\030\003 \001(\0132#.aruna.api.storage.models.v2" +
+      ".PubkeyH\000R\006pubkeyB\010\n\006target\"j\n\022GetEndpoi" +
+      "ntRequest\022%\n\rendpoint_name\030\001 \001(\tH\000R\014endp" +
+      "ointName\022!\n\013endpoint_id\030\002 \001(\tH\000R\nendpoin" +
+      "tIdB\n\n\010endpoint\"X\n\023GetEndpointResponse\022A" +
+      "\n\010endpoint\030\001 \001(\0132%.aruna.api.storage.mod" +
+      "els.v2.EndpointR\010endpoint\"\025\n\023GetEndpoint" +
+      "sRequest\"[\n\024GetEndpointsResponse\022C\n\tendp" +
+      "oints\030\001 \003(\0132%.aruna.api.storage.models.v" +
+      "2.EndpointR\tendpoints\"8\n\025DeleteEndpointR" +
+      "equest\022\037\n\013endpoint_id\030\001 \001(\tR\nendpointId\"" +
+      "\030\n\026DeleteEndpointResponse\"\033\n\031GetDefaultE" +
+      "ndpointRequest\"_\n\032GetDefaultEndpointResp" +
+      "onse\022A\n\010endpoint\030\001 \001(\0132%.aruna.api.stora" +
+      "ge.models.v2.EndpointR\010endpoint2\271\007\n\017Endp" +
+      "ointService\022\226\001\n\016CreateEndpoint\0224.aruna.a" +
+      "pi.storage.services.v2.CreateEndpointReq" +
+      "uest\0325.aruna.api.storage.services.v2.Cre" +
+      "ateEndpointResponse\"\027\202\323\344\223\002\021\"\014/v2/endpoin" +
+      "t:\001*\022\240\001\n\020FullSyncEndpoint\0226.aruna.api.st" +
+      "orage.services.v2.FullSyncEndpointReques" +
+      "t\0327.aruna.api.storage.services.v2.FullSy" +
+      "ncEndpointResponse\"\031\202\323\344\223\002\023\022\021/v2/endpoint" +
+      "/sync0\001\022\212\001\n\013GetEndpoint\0221.aruna.api.stor" +
+      "age.services.v2.GetEndpointRequest\0322.aru" +
+      "na.api.storage.services.v2.GetEndpointRe" +
+      "sponse\"\024\202\323\344\223\002\016\022\014/v2/endpoint\022\216\001\n\014GetEndp" +
+      "oints\0222.aruna.api.storage.services.v2.Ge" +
+      "tEndpointsRequest\0323.aruna.api.storage.se" +
+      "rvices.v2.GetEndpointsResponse\"\025\202\323\344\223\002\017\022\r" +
+      "/v2/endpoints\022\241\001\n\016DeleteEndpoint\0224.aruna" +
+      ".api.storage.services.v2.DeleteEndpointR" +
+      "equest\0325.aruna.api.storage.services.v2.D" +
+      "eleteEndpointResponse\"\"\202\323\344\223\002\034*\032/v2/endpo" +
+      "int/{endpoint_id}\022\247\001\n\022GetDefaultEndpoint" +
+      "\0228.aruna.api.storage.services.v2.GetDefa" +
+      "ultEndpointRequest\0329.aruna.api.storage.s" +
+      "ervices.v2.GetDefaultEndpointResponse\"\034\202" +
+      "\323\344\223\002\026\022\024/v2/endpoint/defaultB\220\002\n!com.arun" +
+      "a.api.storage.services.v2B\024EndpointServi" +
+      "ceProtoP\000Z<github.com/ArunaStorage/go-ap" +
+      "i/aruna/api/storage/services/v2\242\002\004AASS\252\002" +
+      "\035Aruna.Api.Storage.Services.V2\312\002\035Aruna\\A" +
+      "pi\\Storage\\Services\\V2\342\002)Aruna\\Api\\Stora" +
+      "ge\\Services\\V2\\GPBMetadata\352\002!Aruna::Api:" +
+      ":Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7851,7 +8454,7 @@ public final class EndpointServiceProto {
     internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_FullSyncEndpointResponse_descriptor,
-        new java.lang.String[] { "Url", });
+        new java.lang.String[] { "GenericResource", "User", "Pubkey", "Target", });
     internal_static_aruna_api_storage_services_v2_GetEndpointRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_aruna_api_storage_services_v2_GetEndpointRequest_fieldAccessorTable = new
