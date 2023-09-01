@@ -132,45 +132,37 @@ public final class HooksServiceProto {
   }
 
   /**
-   * Protobuf enum {@code aruna.api.hooks.services.v2.InternalAction}
+   * Protobuf enum {@code aruna.api.hooks.services.v2.Method}
    */
-  public enum InternalAction
+  public enum Method
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>INTERNAL_ACTION_UNSPECIFIED = 0;</code>
+     * <code>METHOD_UNSPECIFIED = 0;</code>
      */
-    INTERNAL_ACTION_UNSPECIFIED(0),
+    METHOD_UNSPECIFIED(0),
     /**
-     * <code>INTERNAL_ACTION_ADD_LABEL = 1;</code>
+     * <code>METHOD_PUT = 1;</code>
      */
-    INTERNAL_ACTION_ADD_LABEL(1),
+    METHOD_PUT(1),
     /**
-     * <code>INTERNAL_ACTION_ADD_HOOK = 2;</code>
+     * <code>METHOD_POST = 2;</code>
      */
-    INTERNAL_ACTION_ADD_HOOK(2),
-    /**
-     * <code>INTERNAL_ACTION_CREATE_RELATION = 3;</code>
-     */
-    INTERNAL_ACTION_CREATE_RELATION(3),
+    METHOD_POST(2),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>INTERNAL_ACTION_UNSPECIFIED = 0;</code>
+     * <code>METHOD_UNSPECIFIED = 0;</code>
      */
-    public static final int INTERNAL_ACTION_UNSPECIFIED_VALUE = 0;
+    public static final int METHOD_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>INTERNAL_ACTION_ADD_LABEL = 1;</code>
+     * <code>METHOD_PUT = 1;</code>
      */
-    public static final int INTERNAL_ACTION_ADD_LABEL_VALUE = 1;
+    public static final int METHOD_PUT_VALUE = 1;
     /**
-     * <code>INTERNAL_ACTION_ADD_HOOK = 2;</code>
+     * <code>METHOD_POST = 2;</code>
      */
-    public static final int INTERNAL_ACTION_ADD_HOOK_VALUE = 2;
-    /**
-     * <code>INTERNAL_ACTION_CREATE_RELATION = 3;</code>
-     */
-    public static final int INTERNAL_ACTION_CREATE_RELATION_VALUE = 3;
+    public static final int METHOD_POST_VALUE = 2;
 
 
     public final int getNumber() {
@@ -187,7 +179,7 @@ public final class HooksServiceProto {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static InternalAction valueOf(int value) {
+    public static Method valueOf(int value) {
       return forNumber(value);
     }
 
@@ -195,25 +187,24 @@ public final class HooksServiceProto {
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static InternalAction forNumber(int value) {
+    public static Method forNumber(int value) {
       switch (value) {
-        case 0: return INTERNAL_ACTION_UNSPECIFIED;
-        case 1: return INTERNAL_ACTION_ADD_LABEL;
-        case 2: return INTERNAL_ACTION_ADD_HOOK;
-        case 3: return INTERNAL_ACTION_CREATE_RELATION;
+        case 0: return METHOD_UNSPECIFIED;
+        case 1: return METHOD_PUT;
+        case 2: return METHOD_POST;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<InternalAction>
+    public static com.google.protobuf.Internal.EnumLiteMap<Method>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        InternalAction> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<InternalAction>() {
-            public InternalAction findValueByNumber(int number) {
-              return InternalAction.forNumber(number);
+        Method> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Method>() {
+            public Method findValueByNumber(int number) {
+              return Method.forNumber(number);
             }
           };
 
@@ -234,9 +225,9 @@ public final class HooksServiceProto {
       return com.aruna.api.hooks.services.v2.HooksServiceProto.getDescriptor().getEnumTypes().get(1);
     }
 
-    private static final InternalAction[] VALUES = values();
+    private static final Method[] VALUES = values();
 
-    public static InternalAction valueOf(
+    public static Method valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -250,11 +241,11 @@ public final class HooksServiceProto {
 
     private final int value;
 
-    private InternalAction(int value) {
+    private Method(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:aruna.api.hooks.services.v2.InternalAction)
+    // @@protoc_insertion_point(enum_scope:aruna.api.hooks.services.v2.Method)
   }
 
   public interface TriggerOrBuilder extends
@@ -1072,6 +1063,17 @@ public final class HooksServiceProto {
      */
     com.google.protobuf.ByteString
         getJsonTemplateBytes();
+
+    /**
+     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    int getMethodValue();
+    /**
+     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * @return The method.
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.Method getMethod();
   }
   /**
    * Protobuf type {@code aruna.api.hooks.services.v2.ExternalHook}
@@ -1088,6 +1090,7 @@ public final class HooksServiceProto {
     private ExternalHook() {
       url_ = "";
       jsonTemplate_ = "";
+      method_ = 0;
     }
 
     @java.lang.Override
@@ -1214,6 +1217,24 @@ public final class HooksServiceProto {
       }
     }
 
+    public static final int METHOD_FIELD_NUMBER = 4;
+    private int method_ = 0;
+    /**
+     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    @java.lang.Override public int getMethodValue() {
+      return method_;
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override public com.aruna.api.hooks.services.v2.HooksServiceProto.Method getMethod() {
+      com.aruna.api.hooks.services.v2.HooksServiceProto.Method result = com.aruna.api.hooks.services.v2.HooksServiceProto.Method.forNumber(method_);
+      return result == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Method.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1237,6 +1258,9 @@ public final class HooksServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonTemplate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jsonTemplate_);
       }
+      if (method_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Method.METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, method_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1255,6 +1279,10 @@ public final class HooksServiceProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonTemplate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jsonTemplate_);
+      }
+      if (method_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Method.METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, method_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1280,6 +1308,7 @@ public final class HooksServiceProto {
       }
       if (!getJsonTemplate()
           .equals(other.getJsonTemplate())) return false;
+      if (method_ != other.method_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1299,6 +1328,8 @@ public final class HooksServiceProto {
       }
       hash = (37 * hash) + JSON_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getJsonTemplate().hashCode();
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + method_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1437,6 +1468,7 @@ public final class HooksServiceProto {
           credentialsBuilder_ = null;
         }
         jsonTemplate_ = "";
+        method_ = 0;
         return this;
       }
 
@@ -1481,6 +1513,9 @@ public final class HooksServiceProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.jsonTemplate_ = jsonTemplate_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.method_ = method_;
+        }
       }
 
       @java.lang.Override
@@ -1507,6 +1542,9 @@ public final class HooksServiceProto {
           jsonTemplate_ = other.jsonTemplate_;
           bitField0_ |= 0x00000004;
           onChanged();
+        }
+        if (other.method_ != 0) {
+          setMethodValue(other.getMethodValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1551,6 +1589,11 @@ public final class HooksServiceProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                method_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1830,6 +1873,59 @@ public final class HooksServiceProto {
         onChanged();
         return this;
       }
+
+      private int method_ = 0;
+      /**
+       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * @return The enum numeric value on the wire for method.
+       */
+      @java.lang.Override public int getMethodValue() {
+        return method_;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * @param value The enum numeric value on the wire for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodValue(int value) {
+        method_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * @return The method.
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Method getMethod() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.Method result = com.aruna.api.hooks.services.v2.HooksServiceProto.Method.forNumber(method_);
+        return result == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Method.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(com.aruna.api.hooks.services.v2.HooksServiceProto.Method value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        method_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        method_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1894,76 +1990,48 @@ public final class HooksServiceProto {
 
   }
 
-  public interface InternalHookOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.InternalHook)
+  public interface AddLabelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.AddLabel)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-     * @return The enum numeric value on the wire for internalAction.
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
      */
-    int getInternalActionValue();
+    java.lang.String getKey();
     /**
-     * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-     * @return The internalAction.
-     */
-    com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction getInternalAction();
-
-    /**
-     * <pre>
-     * Either key or target ID
-     * </pre>
-     *
-     * <code>string target_id = 2 [json_name = "targetId"];</code>
-     * @return The targetId.
-     */
-    java.lang.String getTargetId();
-    /**
-     * <pre>
-     * Either key or target ID
-     * </pre>
-     *
-     * <code>string target_id = 2 [json_name = "targetId"];</code>
-     * @return The bytes for targetId.
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
      */
     com.google.protobuf.ByteString
-        getTargetIdBytes();
+        getKeyBytes();
 
     /**
-     * <pre>
-     * Optional value
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
-     * <pre>
-     * Optional value
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     com.google.protobuf.ByteString
         getValueBytes();
   }
   /**
-   * Protobuf type {@code aruna.api.hooks.services.v2.InternalHook}
+   * Protobuf type {@code aruna.api.hooks.services.v2.AddLabel}
    */
-  public static final class InternalHook extends
+  public static final class AddLabel extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.InternalHook)
-      InternalHookOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.AddLabel)
+      AddLabelOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use InternalHook.newBuilder() to construct.
-    private InternalHook(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AddLabel.newBuilder() to construct.
+    private AddLabel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private InternalHook() {
-      internalAction_ = 0;
-      targetId_ = "";
+    private AddLabel() {
+      key_ = "";
       value_ = "";
     }
 
@@ -1971,96 +2039,66 @@ public final class HooksServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new InternalHook();
+      return new AddLabel();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_InternalHook_descriptor;
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_InternalHook_fieldAccessorTable
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddLabel_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook.class, com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook.Builder.class);
+              com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder.class);
     }
 
-    public static final int INTERNAL_ACTION_FIELD_NUMBER = 1;
-    private int internalAction_ = 0;
-    /**
-     * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-     * @return The enum numeric value on the wire for internalAction.
-     */
-    @java.lang.Override public int getInternalActionValue() {
-      return internalAction_;
-    }
-    /**
-     * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-     * @return The internalAction.
-     */
-    @java.lang.Override public com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction getInternalAction() {
-      com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction result = com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction.forNumber(internalAction_);
-      return result == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction.UNRECOGNIZED : result;
-    }
-
-    public static final int TARGET_ID_FIELD_NUMBER = 2;
+    public static final int KEY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object targetId_ = "";
+    private volatile java.lang.Object key_ = "";
     /**
-     * <pre>
-     * Either key or target ID
-     * </pre>
-     *
-     * <code>string target_id = 2 [json_name = "targetId"];</code>
-     * @return The targetId.
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
      */
     @java.lang.Override
-    public java.lang.String getTargetId() {
-      java.lang.Object ref = targetId_;
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        targetId_ = s;
+        key_ = s;
         return s;
       }
     }
     /**
-     * <pre>
-     * Either key or target ID
-     * </pre>
-     *
-     * <code>string target_id = 2 [json_name = "targetId"];</code>
-     * @return The bytes for targetId.
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTargetIdBytes() {
-      java.lang.Object ref = targetId_;
+        getKeyBytes() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        targetId_ = b;
+        key_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int VALUE_FIELD_NUMBER = 3;
+    public static final int VALUE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
     /**
-     * <pre>
-     * Optional value
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -2077,11 +2115,7 @@ public final class HooksServiceProto {
       }
     }
     /**
-     * <pre>
-     * Optional value
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     @java.lang.Override
@@ -2113,14 +2147,11 @@ public final class HooksServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (internalAction_ != com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction.INTERNAL_ACTION_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, internalAction_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2131,15 +2162,1436 @@ public final class HooksServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (internalAction_ != com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction.INTERNAL_ACTION_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, internalAction_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, targetId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel other = (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.AddLabel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.AddLabel)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddLabel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel result = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.AddLabel)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.AddLabel)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddLabel>
+        PARSER = new com.google.protobuf.AbstractParser<AddLabel>() {
+      @java.lang.Override
+      public AddLabel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddLabel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddLabel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddHookOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.AddHook)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.AddHook}
+   */
+  public static final class AddHook extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.AddHook)
+      AddHookOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddHook.newBuilder() to construct.
+    private AddHook(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddHook() {
+      key_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddHook();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddHook_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddHook_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook other = (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.AddHook}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.AddHook)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddHook_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddHook_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddHook_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook result = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.AddHook)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.AddHook)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddHook>
+        PARSER = new com.google.protobuf.AbstractParser<AddHook>() {
+      @java.lang.Override
+      public AddHook parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddHook> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddHook> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InternalHookOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.InternalHook)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+     * @return Whether the addLabel field is set.
+     */
+    boolean hasAddLabel();
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+     * @return The addLabel.
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel getAddLabel();
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder getAddLabelOrBuilder();
+
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+     * @return Whether the addHook field is set.
+     */
+    boolean hasAddHook();
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+     * @return The addHook.
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook getAddHook();
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder getAddHookOrBuilder();
+
+    /**
+     * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+     * @return Whether the addRelation field is set.
+     */
+    boolean hasAddRelation();
+    /**
+     * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+     * @return The addRelation.
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.Relation getAddRelation();
+    /**
+     * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getAddRelationOrBuilder();
+
+    com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook.InternalActionCase getInternalActionCase();
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.InternalHook}
+   */
+  public static final class InternalHook extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.InternalHook)
+      InternalHookOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InternalHook.newBuilder() to construct.
+    private InternalHook(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InternalHook() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InternalHook();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_InternalHook_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_InternalHook_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook.class, com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook.Builder.class);
+    }
+
+    private int internalActionCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object internalAction_;
+    public enum InternalActionCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ADD_LABEL(1),
+      ADD_HOOK(2),
+      ADD_RELATION(3),
+      INTERNALACTION_NOT_SET(0);
+      private final int value;
+      private InternalActionCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InternalActionCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static InternalActionCase forNumber(int value) {
+        switch (value) {
+          case 1: return ADD_LABEL;
+          case 2: return ADD_HOOK;
+          case 3: return ADD_RELATION;
+          case 0: return INTERNALACTION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public InternalActionCase
+    getInternalActionCase() {
+      return InternalActionCase.forNumber(
+          internalActionCase_);
+    }
+
+    public static final int ADD_LABEL_FIELD_NUMBER = 1;
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+     * @return Whether the addLabel field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddLabel() {
+      return internalActionCase_ == 1;
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+     * @return The addLabel.
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel getAddLabel() {
+      if (internalActionCase_ == 1) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder getAddLabelOrBuilder() {
+      if (internalActionCase_ == 1) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
+    }
+
+    public static final int ADD_HOOK_FIELD_NUMBER = 2;
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+     * @return Whether the addHook field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddHook() {
+      return internalActionCase_ == 2;
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+     * @return The addHook.
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook getAddHook() {
+      if (internalActionCase_ == 2) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder getAddHookOrBuilder() {
+      if (internalActionCase_ == 2) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
+    }
+
+    public static final int ADD_RELATION_FIELD_NUMBER = 3;
+    /**
+     * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+     * @return Whether the addRelation field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddRelation() {
+      return internalActionCase_ == 3;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+     * @return The addRelation.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.Relation getAddRelation() {
+      if (internalActionCase_ == 3) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getAddRelationOrBuilder() {
+      if (internalActionCase_ == 3) {
+         return (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_;
+      }
+      return com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (internalActionCase_ == 1) {
+        output.writeMessage(1, (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_);
+      }
+      if (internalActionCase_ == 2) {
+        output.writeMessage(2, (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_);
+      }
+      if (internalActionCase_ == 3) {
+        output.writeMessage(3, (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (internalActionCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_);
+      }
+      if (internalActionCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_);
+      }
+      if (internalActionCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2156,11 +3608,23 @@ public final class HooksServiceProto {
       }
       com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook other = (com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook) obj;
 
-      if (internalAction_ != other.internalAction_) return false;
-      if (!getTargetId()
-          .equals(other.getTargetId())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
+      if (!getInternalActionCase().equals(other.getInternalActionCase())) return false;
+      switch (internalActionCase_) {
+        case 1:
+          if (!getAddLabel()
+              .equals(other.getAddLabel())) return false;
+          break;
+        case 2:
+          if (!getAddHook()
+              .equals(other.getAddHook())) return false;
+          break;
+        case 3:
+          if (!getAddRelation()
+              .equals(other.getAddRelation())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2172,12 +3636,22 @@ public final class HooksServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + INTERNAL_ACTION_FIELD_NUMBER;
-      hash = (53 * hash) + internalAction_;
-      hash = (37 * hash) + TARGET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getTargetId().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
+      switch (internalActionCase_) {
+        case 1:
+          hash = (37 * hash) + ADD_LABEL_FIELD_NUMBER;
+          hash = (53 * hash) + getAddLabel().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + ADD_HOOK_FIELD_NUMBER;
+          hash = (53 * hash) + getAddHook().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + ADD_RELATION_FIELD_NUMBER;
+          hash = (53 * hash) + getAddRelation().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2309,9 +3783,17 @@ public final class HooksServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        internalAction_ = 0;
-        targetId_ = "";
-        value_ = "";
+        if (addLabelBuilder_ != null) {
+          addLabelBuilder_.clear();
+        }
+        if (addHookBuilder_ != null) {
+          addHookBuilder_.clear();
+        }
+        if (addRelationBuilder_ != null) {
+          addRelationBuilder_.clear();
+        }
+        internalActionCase_ = 0;
+        internalAction_ = null;
         return this;
       }
 
@@ -2339,20 +3821,29 @@ public final class HooksServiceProto {
       public com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook buildPartial() {
         com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook result = new com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
       private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.internalAction_ = internalAction_;
+      }
+
+      private void buildPartialOneofs(com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook result) {
+        result.internalActionCase_ = internalActionCase_;
+        result.internalAction_ = this.internalAction_;
+        if (internalActionCase_ == 1 &&
+            addLabelBuilder_ != null) {
+          result.internalAction_ = addLabelBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.targetId_ = targetId_;
+        if (internalActionCase_ == 2 &&
+            addHookBuilder_ != null) {
+          result.internalAction_ = addHookBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.value_ = value_;
+        if (internalActionCase_ == 3 &&
+            addRelationBuilder_ != null) {
+          result.internalAction_ = addRelationBuilder_.build();
         }
       }
 
@@ -2368,18 +3859,22 @@ public final class HooksServiceProto {
 
       public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook other) {
         if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.InternalHook.getDefaultInstance()) return this;
-        if (other.internalAction_ != 0) {
-          setInternalActionValue(other.getInternalActionValue());
-        }
-        if (!other.getTargetId().isEmpty()) {
-          targetId_ = other.targetId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          bitField0_ |= 0x00000004;
-          onChanged();
+        switch (other.getInternalActionCase()) {
+          case ADD_LABEL: {
+            mergeAddLabel(other.getAddLabel());
+            break;
+          }
+          case ADD_HOOK: {
+            mergeAddHook(other.getAddHook());
+            break;
+          }
+          case ADD_RELATION: {
+            mergeAddRelation(other.getAddRelation());
+            break;
+          }
+          case INTERNALACTION_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2407,19 +3902,25 @@ public final class HooksServiceProto {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                internalAction_ = input.readEnum();
-                bitField0_ |= 0x00000001;
+              case 10: {
+                input.readMessage(
+                    getAddLabelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                internalActionCase_ = 1;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
-                targetId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+                input.readMessage(
+                    getAddHookFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                internalActionCase_ = 2;
                 break;
               } // case 18
               case 26: {
-                value_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                input.readMessage(
+                    getAddRelationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                internalActionCase_ = 3;
                 break;
               } // case 26
               default: {
@@ -2437,243 +3938,447 @@ public final class HooksServiceProto {
         } // finally
         return this;
       }
+      private int internalActionCase_ = 0;
+      private java.lang.Object internalAction_;
+      public InternalActionCase
+          getInternalActionCase() {
+        return InternalActionCase.forNumber(
+            internalActionCase_);
+      }
+
+      public Builder clearInternalAction() {
+        internalActionCase_ = 0;
+        internalAction_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
-      private int internalAction_ = 0;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder> addLabelBuilder_;
       /**
-       * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-       * @return The enum numeric value on the wire for internalAction.
-       */
-      @java.lang.Override public int getInternalActionValue() {
-        return internalAction_;
-      }
-      /**
-       * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-       * @param value The enum numeric value on the wire for internalAction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInternalActionValue(int value) {
-        internalAction_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-       * @return The internalAction.
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       * @return Whether the addLabel field is set.
        */
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction getInternalAction() {
-        com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction result = com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction.forNumber(internalAction_);
-        return result == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction.UNRECOGNIZED : result;
+      public boolean hasAddLabel() {
+        return internalActionCase_ == 1;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-       * @param value The internalAction to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       * @return The addLabel.
        */
-      public Builder setInternalAction(com.aruna.api.hooks.services.v2.HooksServiceProto.InternalAction value) {
-        if (value == null) {
-          throw new NullPointerException();
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel getAddLabel() {
+        if (addLabelBuilder_ == null) {
+          if (internalActionCase_ == 1) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
+        } else {
+          if (internalActionCase_ == 1) {
+            return addLabelBuilder_.getMessage();
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
         }
-        bitField0_ |= 0x00000001;
-        internalAction_ = value.getNumber();
-        onChanged();
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       */
+      public Builder setAddLabel(com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel value) {
+        if (addLabelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internalAction_ = value;
+          onChanged();
+        } else {
+          addLabelBuilder_.setMessage(value);
+        }
+        internalActionCase_ = 1;
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.InternalAction internal_action = 1 [json_name = "internalAction"];</code>
-       * @return This builder for chaining.
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
        */
-      public Builder clearInternalAction() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        internalAction_ = 0;
-        onChanged();
+      public Builder setAddLabel(
+          com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder builderForValue) {
+        if (addLabelBuilder_ == null) {
+          internalAction_ = builderForValue.build();
+          onChanged();
+        } else {
+          addLabelBuilder_.setMessage(builderForValue.build());
+        }
+        internalActionCase_ = 1;
         return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       */
+      public Builder mergeAddLabel(com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel value) {
+        if (addLabelBuilder_ == null) {
+          if (internalActionCase_ == 1 &&
+              internalAction_ != com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance()) {
+            internalAction_ = com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.newBuilder((com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            internalAction_ = value;
+          }
+          onChanged();
+        } else {
+          if (internalActionCase_ == 1) {
+            addLabelBuilder_.mergeFrom(value);
+          } else {
+            addLabelBuilder_.setMessage(value);
+          }
+        }
+        internalActionCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       */
+      public Builder clearAddLabel() {
+        if (addLabelBuilder_ == null) {
+          if (internalActionCase_ == 1) {
+            internalActionCase_ = 0;
+            internalAction_ = null;
+            onChanged();
+          }
+        } else {
+          if (internalActionCase_ == 1) {
+            internalActionCase_ = 0;
+            internalAction_ = null;
+          }
+          addLabelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder getAddLabelBuilder() {
+        return getAddLabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder getAddLabelOrBuilder() {
+        if ((internalActionCase_ == 1) && (addLabelBuilder_ != null)) {
+          return addLabelBuilder_.getMessageOrBuilder();
+        } else {
+          if (internalActionCase_ == 1) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddLabel add_label = 1 [json_name = "addLabel"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder> 
+          getAddLabelFieldBuilder() {
+        if (addLabelBuilder_ == null) {
+          if (!(internalActionCase_ == 1)) {
+            internalAction_ = com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.getDefaultInstance();
+          }
+          addLabelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabelOrBuilder>(
+                  (com.aruna.api.hooks.services.v2.HooksServiceProto.AddLabel) internalAction_,
+                  getParentForChildren(),
+                  isClean());
+          internalAction_ = null;
+        }
+        internalActionCase_ = 1;
+        onChanged();
+        return addLabelBuilder_;
       }
 
-      private java.lang.Object targetId_ = "";
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder> addHookBuilder_;
       /**
-       * <pre>
-       * Either key or target ID
-       * </pre>
-       *
-       * <code>string target_id = 2 [json_name = "targetId"];</code>
-       * @return The targetId.
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       * @return Whether the addHook field is set.
        */
-      public java.lang.String getTargetId() {
-        java.lang.Object ref = targetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          targetId_ = s;
-          return s;
+      @java.lang.Override
+      public boolean hasAddHook() {
+        return internalActionCase_ == 2;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       * @return The addHook.
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook getAddHook() {
+        if (addHookBuilder_ == null) {
+          if (internalActionCase_ == 2) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
         } else {
-          return (java.lang.String) ref;
+          if (internalActionCase_ == 2) {
+            return addHookBuilder_.getMessage();
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
         }
       }
       /**
-       * <pre>
-       * Either key or target ID
-       * </pre>
-       *
-       * <code>string target_id = 2 [json_name = "targetId"];</code>
-       * @return The bytes for targetId.
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
        */
-      public com.google.protobuf.ByteString
-          getTargetIdBytes() {
-        java.lang.Object ref = targetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          targetId_ = b;
-          return b;
+      public Builder setAddHook(com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook value) {
+        if (addHookBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internalAction_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          addHookBuilder_.setMessage(value);
+        }
+        internalActionCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       */
+      public Builder setAddHook(
+          com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder builderForValue) {
+        if (addHookBuilder_ == null) {
+          internalAction_ = builderForValue.build();
+          onChanged();
+        } else {
+          addHookBuilder_.setMessage(builderForValue.build());
+        }
+        internalActionCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       */
+      public Builder mergeAddHook(com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook value) {
+        if (addHookBuilder_ == null) {
+          if (internalActionCase_ == 2 &&
+              internalAction_ != com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance()) {
+            internalAction_ = com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.newBuilder((com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            internalAction_ = value;
+          }
+          onChanged();
+        } else {
+          if (internalActionCase_ == 2) {
+            addHookBuilder_.mergeFrom(value);
+          } else {
+            addHookBuilder_.setMessage(value);
+          }
+        }
+        internalActionCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       */
+      public Builder clearAddHook() {
+        if (addHookBuilder_ == null) {
+          if (internalActionCase_ == 2) {
+            internalActionCase_ = 0;
+            internalAction_ = null;
+            onChanged();
+          }
+        } else {
+          if (internalActionCase_ == 2) {
+            internalActionCase_ = 0;
+            internalAction_ = null;
+          }
+          addHookBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder getAddHookBuilder() {
+        return getAddHookFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder getAddHookOrBuilder() {
+        if ((internalActionCase_ == 2) && (addHookBuilder_ != null)) {
+          return addHookBuilder_.getMessageOrBuilder();
+        } else {
+          if (internalActionCase_ == 2) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
         }
       }
       /**
-       * <pre>
-       * Either key or target ID
-       * </pre>
-       *
-       * <code>string target_id = 2 [json_name = "targetId"];</code>
-       * @param value The targetId to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.hooks.services.v2.AddHook add_hook = 2 [json_name = "addHook"];</code>
        */
-      public Builder setTargetId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        targetId_ = value;
-        bitField0_ |= 0x00000002;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder> 
+          getAddHookFieldBuilder() {
+        if (addHookBuilder_ == null) {
+          if (!(internalActionCase_ == 2)) {
+            internalAction_ = com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.getDefaultInstance();
+          }
+          addHookBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.AddHookOrBuilder>(
+                  (com.aruna.api.hooks.services.v2.HooksServiceProto.AddHook) internalAction_,
+                  getParentForChildren(),
+                  isClean());
+          internalAction_ = null;
+        }
+        internalActionCase_ = 2;
         onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Either key or target ID
-       * </pre>
-       *
-       * <code>string target_id = 2 [json_name = "targetId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTargetId() {
-        targetId_ = getDefaultInstance().getTargetId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Either key or target ID
-       * </pre>
-       *
-       * <code>string target_id = 2 [json_name = "targetId"];</code>
-       * @param value The bytes for targetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTargetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        targetId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
+        return addHookBuilder_;
       }
 
-      private java.lang.Object value_ = "";
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> addRelationBuilder_;
       /**
-       * <pre>
-       * Optional value
-       * </pre>
-       *
-       * <code>string value = 3 [json_name = "value"];</code>
-       * @return The value.
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       * @return Whether the addRelation field is set.
        */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
+      @java.lang.Override
+      public boolean hasAddRelation() {
+        return internalActionCase_ == 3;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       * @return The addRelation.
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.Relation getAddRelation() {
+        if (addRelationBuilder_ == null) {
+          if (internalActionCase_ == 3) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance();
         } else {
-          return (java.lang.String) ref;
+          if (internalActionCase_ == 3) {
+            return addRelationBuilder_.getMessage();
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance();
         }
       }
       /**
-       * <pre>
-       * Optional value
-       * </pre>
-       *
-       * <code>string value = 3 [json_name = "value"];</code>
-       * @return The bytes for value.
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
        */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
+      public Builder setAddRelation(com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
+        if (addRelationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internalAction_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          addRelationBuilder_.setMessage(value);
+        }
+        internalActionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       */
+      public Builder setAddRelation(
+          com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
+        if (addRelationBuilder_ == null) {
+          internalAction_ = builderForValue.build();
+          onChanged();
+        } else {
+          addRelationBuilder_.setMessage(builderForValue.build());
+        }
+        internalActionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       */
+      public Builder mergeAddRelation(com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
+        if (addRelationBuilder_ == null) {
+          if (internalActionCase_ == 3 &&
+              internalAction_ != com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance()) {
+            internalAction_ = com.aruna.api.storage.models.v2.ModelsProto.Relation.newBuilder((com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            internalAction_ = value;
+          }
+          onChanged();
+        } else {
+          if (internalActionCase_ == 3) {
+            addRelationBuilder_.mergeFrom(value);
+          } else {
+            addRelationBuilder_.setMessage(value);
+          }
+        }
+        internalActionCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       */
+      public Builder clearAddRelation() {
+        if (addRelationBuilder_ == null) {
+          if (internalActionCase_ == 3) {
+            internalActionCase_ = 0;
+            internalAction_ = null;
+            onChanged();
+          }
+        } else {
+          if (internalActionCase_ == 3) {
+            internalActionCase_ = 0;
+            internalAction_ = null;
+          }
+          addRelationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder getAddRelationBuilder() {
+        return getAddRelationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getAddRelationOrBuilder() {
+        if ((internalActionCase_ == 3) && (addRelationBuilder_ != null)) {
+          return addRelationBuilder_.getMessageOrBuilder();
+        } else {
+          if (internalActionCase_ == 3) {
+            return (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_;
+          }
+          return com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance();
         }
       }
       /**
-       * <pre>
-       * Optional value
-       * </pre>
-       *
-       * <code>string value = 3 [json_name = "value"];</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.storage.models.v2.Relation add_relation = 3 [json_name = "addRelation"];</code>
        */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        value_ = value;
-        bitField0_ |= 0x00000004;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
+          getAddRelationFieldBuilder() {
+        if (addRelationBuilder_ == null) {
+          if (!(internalActionCase_ == 3)) {
+            internalAction_ = com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance();
+          }
+          addRelationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder>(
+                  (com.aruna.api.storage.models.v2.ModelsProto.Relation) internalAction_,
+                  getParentForChildren(),
+                  isClean());
+          internalAction_ = null;
+        }
+        internalActionCase_ = 3;
         onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional value
-       * </pre>
-       *
-       * <code>string value = 3 [json_name = "value"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        value_ = getDefaultInstance().getValue();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional value
-       * </pre>
-       *
-       * <code>string value = 3 [json_name = "value"];</code>
-       * @param value The bytes for value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        value_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
+        return addRelationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6609,6 +8314,54 @@ public final class HooksServiceProto {
      */
     com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
         int index);
+
+    /**
+     * <code>string secret = 4 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    java.lang.String getSecret();
+    /**
+     * <code>string secret = 4 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    com.google.protobuf.ByteString
+        getSecretBytes();
+
+    /**
+     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * @return The hookId.
+     */
+    java.lang.String getHookId();
+    /**
+     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * @return The bytes for hookId.
+     */
+    com.google.protobuf.ByteString
+        getHookIdBytes();
+
+    /**
+     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * @return The objectId.
+     */
+    java.lang.String getObjectId();
+    /**
+     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * @return The bytes for objectId.
+     */
+    com.google.protobuf.ByteString
+        getObjectIdBytes();
+
+    /**
+     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * @return The pubkeySerial.
+     */
+    java.lang.String getPubkeySerial();
+    /**
+     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * @return The bytes for pubkeySerial.
+     */
+    com.google.protobuf.ByteString
+        getPubkeySerialBytes();
   }
   /**
    * Protobuf type {@code aruna.api.hooks.services.v2.HookCallbackRequest}
@@ -6625,6 +8378,10 @@ public final class HooksServiceProto {
     private HookCallbackRequest() {
       addKeyValues_ = java.util.Collections.emptyList();
       removeKeyValues_ = java.util.Collections.emptyList();
+      secret_ = "";
+      hookId_ = "";
+      objectId_ = "";
+      pubkeySerial_ = "";
     }
 
     @java.lang.Override
@@ -6740,6 +8497,162 @@ public final class HooksServiceProto {
       return removeKeyValues_.get(index);
     }
 
+    public static final int SECRET_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secret_ = "";
+    /**
+     * <code>string secret = 4 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    @java.lang.Override
+    public java.lang.String getSecret() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secret_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret = 4 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretBytes() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOOK_ID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hookId_ = "";
+    /**
+     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * @return The hookId.
+     */
+    @java.lang.Override
+    public java.lang.String getHookId() {
+      java.lang.Object ref = hookId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hookId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * @return The bytes for hookId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHookIdBytes() {
+      java.lang.Object ref = hookId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hookId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OBJECT_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object objectId_ = "";
+    /**
+     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * @return The objectId.
+     */
+    @java.lang.Override
+    public java.lang.String getObjectId() {
+      java.lang.Object ref = objectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        objectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * @return The bytes for objectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getObjectIdBytes() {
+      java.lang.Object ref = objectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBKEY_SERIAL_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pubkeySerial_ = "";
+    /**
+     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * @return The pubkeySerial.
+     */
+    @java.lang.Override
+    public java.lang.String getPubkeySerial() {
+      java.lang.Object ref = pubkeySerial_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pubkeySerial_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * @return The bytes for pubkeySerial.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPubkeySerialBytes() {
+      java.lang.Object ref = pubkeySerial_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pubkeySerial_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6763,6 +8676,18 @@ public final class HooksServiceProto {
       for (int i = 0; i < removeKeyValues_.size(); i++) {
         output.writeMessage(3, removeKeyValues_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, secret_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, hookId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, objectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkeySerial_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pubkeySerial_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6783,6 +8708,18 @@ public final class HooksServiceProto {
       for (int i = 0; i < removeKeyValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, removeKeyValues_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, secret_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, hookId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, objectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkeySerial_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pubkeySerial_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6805,6 +8742,14 @@ public final class HooksServiceProto {
           .equals(other.getAddKeyValuesList())) return false;
       if (!getRemoveKeyValuesList()
           .equals(other.getRemoveKeyValuesList())) return false;
+      if (!getSecret()
+          .equals(other.getSecret())) return false;
+      if (!getHookId()
+          .equals(other.getHookId())) return false;
+      if (!getObjectId()
+          .equals(other.getObjectId())) return false;
+      if (!getPubkeySerial()
+          .equals(other.getPubkeySerial())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6827,6 +8772,14 @@ public final class HooksServiceProto {
         hash = (37 * hash) + REMOVE_KEY_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getRemoveKeyValuesList().hashCode();
       }
+      hash = (37 * hash) + SECRET_FIELD_NUMBER;
+      hash = (53 * hash) + getSecret().hashCode();
+      hash = (37 * hash) + HOOK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHookId().hashCode();
+      hash = (37 * hash) + OBJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getObjectId().hashCode();
+      hash = (37 * hash) + PUBKEY_SERIAL_FIELD_NUMBER;
+      hash = (53 * hash) + getPubkeySerial().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6973,6 +8926,10 @@ public final class HooksServiceProto {
           removeKeyValuesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        secret_ = "";
+        hookId_ = "";
+        objectId_ = "";
+        pubkeySerial_ = "";
         return this;
       }
 
@@ -7030,6 +8987,18 @@ public final class HooksServiceProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.success_ = success_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.secret_ = secret_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.hookId_ = hookId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.objectId_ = objectId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.pubkeySerial_ = pubkeySerial_;
         }
       }
 
@@ -7100,6 +9069,26 @@ public final class HooksServiceProto {
             }
           }
         }
+        if (!other.getSecret().isEmpty()) {
+          secret_ = other.secret_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getHookId().isEmpty()) {
+          hookId_ = other.hookId_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getObjectId().isEmpty()) {
+          objectId_ = other.objectId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getPubkeySerial().isEmpty()) {
+          pubkeySerial_ = other.pubkeySerial_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -7157,6 +9146,26 @@ public final class HooksServiceProto {
                 }
                 break;
               } // case 26
+              case 34: {
+                secret_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                hookId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                objectId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                pubkeySerial_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7684,6 +9693,294 @@ public final class HooksServiceProto {
           removeKeyValues_ = null;
         }
         return removeKeyValuesBuilder_;
+      }
+
+      private java.lang.Object secret_ = "";
+      /**
+       * <code>string secret = 4 [json_name = "secret"];</code>
+       * @return The secret.
+       */
+      public java.lang.String getSecret() {
+        java.lang.Object ref = secret_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secret_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret = 4 [json_name = "secret"];</code>
+       * @return The bytes for secret.
+       */
+      public com.google.protobuf.ByteString
+          getSecretBytes() {
+        java.lang.Object ref = secret_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secret_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret = 4 [json_name = "secret"];</code>
+       * @param value The secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecret(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        secret_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 4 [json_name = "secret"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecret() {
+        secret_ = getDefaultInstance().getSecret();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 4 [json_name = "secret"];</code>
+       * @param value The bytes for secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        secret_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hookId_ = "";
+      /**
+       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * @return The hookId.
+       */
+      public java.lang.String getHookId() {
+        java.lang.Object ref = hookId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hookId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * @return The bytes for hookId.
+       */
+      public com.google.protobuf.ByteString
+          getHookIdBytes() {
+        java.lang.Object ref = hookId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hookId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * @param value The hookId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hookId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHookId() {
+        hookId_ = getDefaultInstance().getHookId();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * @param value The bytes for hookId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hookId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object objectId_ = "";
+      /**
+       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * @return The objectId.
+       */
+      public java.lang.String getObjectId() {
+        java.lang.Object ref = objectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * @return The bytes for objectId.
+       */
+      public com.google.protobuf.ByteString
+          getObjectIdBytes() {
+        java.lang.Object ref = objectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * @param value The objectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        objectId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearObjectId() {
+        objectId_ = getDefaultInstance().getObjectId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * @param value The bytes for objectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        objectId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pubkeySerial_ = "";
+      /**
+       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * @return The pubkeySerial.
+       */
+      public java.lang.String getPubkeySerial() {
+        java.lang.Object ref = pubkeySerial_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pubkeySerial_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * @return The bytes for pubkeySerial.
+       */
+      public com.google.protobuf.ByteString
+          getPubkeySerialBytes() {
+        java.lang.Object ref = pubkeySerial_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pubkeySerial_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * @param value The pubkeySerial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubkeySerial(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubkeySerial_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubkeySerial() {
+        pubkeySerial_ = getDefaultInstance().getPubkeySerial();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * @param value The bytes for pubkeySerial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubkeySerialBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pubkeySerial_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10380,6 +12677,16 @@ public final class HooksServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_hooks_services_v2_ExternalHook_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_AddLabel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_AddHook_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_AddHook_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_hooks_services_v2_InternalHook_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10454,70 +12761,77 @@ public final class HooksServiceProto {
       "storage/models/v2/models.proto\"~\n\007Trigge" +
       "r\022K\n\014trigger_type\030\001 \001(\0162(.aruna.api.hook" +
       "s.services.v2.TriggerTypeR\013triggerType\022\020" +
-      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\221" +
+      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\316" +
       "\001\n\014ExternalHook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013cre" +
       "dentials\030\002 \001(\0132(.aruna.api.hooks.service" +
       "s.v2.CredentialsR\013credentials\022#\n\rjson_te" +
-      "mplate\030\003 \001(\tR\014jsonTemplate\"\227\001\n\014InternalH" +
-      "ook\022T\n\017internal_action\030\001 \001(\0162+.aruna.api" +
-      ".hooks.services.v2.InternalActionR\016inter" +
-      "nalAction\022\033\n\ttarget_id\030\002 \001(\tR\010targetId\022\024" +
-      "\n\005value\030\003 \001(\tR\005value\"\267\001\n\004Hook\022P\n\rexterna" +
-      "l_hook\030\001 \001(\0132).aruna.api.hooks.services." +
-      "v2.ExternalHookH\000R\014externalHook\022P\n\rinter" +
-      "nal_hook\030\002 \001(\0132).aruna.api.hooks.service" +
-      "s.v2.InternalHookH\000R\014internalHookB\013\n\thoo" +
-      "k_type\"#\n\013Credentials\022\024\n\005token\030\001 \001(\tR\005to" +
-      "ken\"\303\001\n\021CreateHookRequest\022>\n\007trigger\030\001 \001" +
-      "(\0132$.aruna.api.hooks.services.v2.Trigger" +
-      "R\007trigger\0225\n\004hook\030\002 \001(\0132!.aruna.api.hook" +
-      "s.services.v2.HookR\004hook\022\030\n\007timeout\030\003 \001(" +
-      "\004R\007timeout\022\035\n\nproject_id\030\004 \001(\tR\tprojectI" +
-      "d\"-\n\022CreateHookResponse\022\027\n\007hook_id\030\001 \001(\t" +
-      "R\006hookId\",\n\021DeleteHookRequest\022\027\n\007hook_id" +
-      "\030\001 \001(\tR\006hookId\"\024\n\022DeleteHookResponse\"\317\001\n" +
-      "\023HookCallbackRequest\022\030\n\007success\030\001 \001(\010R\007s" +
-      "uccess\022K\n\016add_key_values\030\002 \003(\0132%.aruna.a" +
-      "pi.storage.models.v2.KeyValueR\014addKeyVal" +
-      "ues\022Q\n\021remove_key_values\030\003 \003(\0132%.aruna.a" +
-      "pi.storage.models.v2.KeyValueR\017removeKey" +
-      "Values\"\026\n\024HookCallbackResponse\"1\n\020ListHo" +
-      "oksRequest\022\035\n\nproject_id\030\001 \001(\tR\tprojectI" +
-      "d\"\264\001\n\010HookInfo\022\027\n\007hook_id\030\001 \001(\tR\006hookId\022" +
-      "5\n\004hook\030\002 \001(\0132!.aruna.api.hooks.services" +
-      ".v2.HookR\004hook\022>\n\007trigger\030\003 \001(\0132$.aruna." +
-      "api.hooks.services.v2.TriggerR\007trigger\022\030" +
-      "\n\007timeout\030\004 \001(\004R\007timeout\"P\n\021ListHooksRes" +
-      "ponse\022;\n\005infos\030\001 \003(\0132%.aruna.api.hooks.s" +
-      "ervices.v2.HookInfoR\005infos*i\n\013TriggerTyp" +
-      "e\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\033\n\027TRIGG" +
-      "ER_TYPE_HOOK_ADDED\020\001\022\037\n\033TRIGGER_TYPE_OBJ" +
-      "ECT_CREATED\020\002*\223\001\n\016InternalAction\022\037\n\033INTE" +
-      "RNAL_ACTION_UNSPECIFIED\020\000\022\035\n\031INTERNAL_AC" +
-      "TION_ADD_LABEL\020\001\022\034\n\030INTERNAL_ACTION_ADD_" +
-      "HOOK\020\002\022#\n\037INTERNAL_ACTION_CREATE_RELATIO" +
-      "N\020\0032\305\004\n\014HooksService\022\202\001\n\nCreateHook\022..ar" +
-      "una.api.hooks.services.v2.CreateHookRequ" +
-      "est\032/.aruna.api.hooks.services.v2.Create" +
-      "HookResponse\"\023\202\323\344\223\002\r\"\010/v2/hook:\001*\022\222\001\n\tLi" +
-      "stHooks\022-.aruna.api.hooks.services.v2.Li" +
-      "stHooksRequest\032..aruna.api.hooks.service" +
-      "s.v2.ListHooksResponse\"&\202\323\344\223\002 \022\036/v2/hook" +
-      "s/project/{project_id}\022\211\001\n\nDeleteHook\022.." +
-      "aruna.api.hooks.services.v2.DeleteHookRe" +
-      "quest\032/.aruna.api.hooks.services.v2.Dele" +
-      "teHookResponse\"\032\202\323\344\223\002\024*\022/v2/hook/{hook_i" +
-      "d}\022\216\001\n\014HookCallback\0220.aruna.api.hooks.se" +
-      "rvices.v2.HookCallbackRequest\0321.aruna.ap" +
-      "i.hooks.services.v2.HookCallbackResponse" +
-      "\"\031\202\323\344\223\002\023*\021/v2/hook/callbackB\203\002\n\037com.arun" +
-      "a.api.hooks.services.v2B\021HooksServicePro" +
-      "toP\000Z<github.com/ArunaStorage/go-api/aru" +
-      "na/api/storage/services/v2\242\002\004AAHS\252\002\033Arun" +
-      "a.Api.Hooks.Services.V2\312\002\033Aruna\\Api\\Hook" +
-      "s\\Services\\V2\342\002\'Aruna\\Api\\Hooks\\Services" +
-      "\\V2\\GPBMetadata\352\002\037Aruna::Api::Hooks::Ser" +
-      "vices::V2b\006proto3"
+      "mplate\030\003 \001(\tR\014jsonTemplate\022;\n\006method\030\004 \001" +
+      "(\0162#.aruna.api.hooks.services.v2.MethodR" +
+      "\006method\"2\n\010AddLabel\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
+      "\005value\030\002 \001(\tR\005value\"1\n\007AddHook\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"\366\001\n\014Inter" +
+      "nalHook\022D\n\tadd_label\030\001 \001(\0132%.aruna.api.h" +
+      "ooks.services.v2.AddLabelH\000R\010addLabel\022A\n" +
+      "\010add_hook\030\002 \001(\0132$.aruna.api.hooks.servic" +
+      "es.v2.AddHookH\000R\007addHook\022J\n\014add_relation" +
+      "\030\003 \001(\0132%.aruna.api.storage.models.v2.Rel" +
+      "ationH\000R\013addRelationB\021\n\017internal_action\"" +
+      "\267\001\n\004Hook\022P\n\rexternal_hook\030\001 \001(\0132).aruna." +
+      "api.hooks.services.v2.ExternalHookH\000R\014ex" +
+      "ternalHook\022P\n\rinternal_hook\030\002 \001(\0132).arun" +
+      "a.api.hooks.services.v2.InternalHookH\000R\014" +
+      "internalHookB\013\n\thook_type\"#\n\013Credentials" +
+      "\022\024\n\005token\030\001 \001(\tR\005token\"\303\001\n\021CreateHookReq" +
+      "uest\022>\n\007trigger\030\001 \001(\0132$.aruna.api.hooks." +
+      "services.v2.TriggerR\007trigger\0225\n\004hook\030\002 \001" +
+      "(\0132!.aruna.api.hooks.services.v2.HookR\004h" +
+      "ook\022\030\n\007timeout\030\003 \001(\004R\007timeout\022\035\n\nproject" +
+      "_id\030\004 \001(\tR\tprojectId\"-\n\022CreateHookRespon" +
+      "se\022\027\n\007hook_id\030\001 \001(\tR\006hookId\",\n\021DeleteHoo" +
+      "kRequest\022\027\n\007hook_id\030\001 \001(\tR\006hookId\"\024\n\022Del" +
+      "eteHookResponse\"\302\002\n\023HookCallbackRequest\022" +
+      "\030\n\007success\030\001 \001(\010R\007success\022K\n\016add_key_val" +
+      "ues\030\002 \003(\0132%.aruna.api.storage.models.v2." +
+      "KeyValueR\014addKeyValues\022Q\n\021remove_key_val" +
+      "ues\030\003 \003(\0132%.aruna.api.storage.models.v2." +
+      "KeyValueR\017removeKeyValues\022\026\n\006secret\030\004 \001(" +
+      "\tR\006secret\022\027\n\007hook_id\030\005 \001(\tR\006hookId\022\033\n\tob" +
+      "ject_id\030\006 \001(\tR\010objectId\022#\n\rpubkey_serial" +
+      "\030\007 \001(\tR\014pubkeySerial\"\026\n\024HookCallbackResp" +
+      "onse\"1\n\020ListHooksRequest\022\035\n\nproject_id\030\001" +
+      " \001(\tR\tprojectId\"\264\001\n\010HookInfo\022\027\n\007hook_id\030" +
+      "\001 \001(\tR\006hookId\0225\n\004hook\030\002 \001(\0132!.aruna.api." +
+      "hooks.services.v2.HookR\004hook\022>\n\007trigger\030" +
+      "\003 \001(\0132$.aruna.api.hooks.services.v2.Trig" +
+      "gerR\007trigger\022\030\n\007timeout\030\004 \001(\004R\007timeout\"P" +
+      "\n\021ListHooksResponse\022;\n\005infos\030\001 \003(\0132%.aru" +
+      "na.api.hooks.services.v2.HookInfoR\005infos" +
+      "*i\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIF" +
+      "IED\020\000\022\033\n\027TRIGGER_TYPE_HOOK_ADDED\020\001\022\037\n\033TR" +
+      "IGGER_TYPE_OBJECT_CREATED\020\002*A\n\006Method\022\026\n" +
+      "\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_PUT\020\001\022\017\n" +
+      "\013METHOD_POST\020\0022\305\004\n\014HooksService\022\202\001\n\nCrea" +
+      "teHook\022..aruna.api.hooks.services.v2.Cre" +
+      "ateHookRequest\032/.aruna.api.hooks.service" +
+      "s.v2.CreateHookResponse\"\023\202\323\344\223\002\r\"\010/v2/hoo" +
+      "k:\001*\022\222\001\n\tListHooks\022-.aruna.api.hooks.ser" +
+      "vices.v2.ListHooksRequest\032..aruna.api.ho" +
+      "oks.services.v2.ListHooksResponse\"&\202\323\344\223\002" +
+      " \022\036/v2/hooks/project/{project_id}\022\211\001\n\nDe" +
+      "leteHook\022..aruna.api.hooks.services.v2.D" +
+      "eleteHookRequest\032/.aruna.api.hooks.servi" +
+      "ces.v2.DeleteHookResponse\"\032\202\323\344\223\002\024*\022/v2/h" +
+      "ook/{hook_id}\022\216\001\n\014HookCallback\0220.aruna.a" +
+      "pi.hooks.services.v2.HookCallbackRequest" +
+      "\0321.aruna.api.hooks.services.v2.HookCallb" +
+      "ackResponse\"\031\202\323\344\223\002\023*\021/v2/hook/callbackB\203" +
+      "\002\n\037com.aruna.api.hooks.services.v2B\021Hook" +
+      "sServiceProtoP\000Z<github.com/ArunaStorage" +
+      "/go-api/aruna/api/storage/services/v2\242\002\004" +
+      "AAHS\252\002\033Aruna.Api.Hooks.Services.V2\312\002\033Aru" +
+      "na\\Api\\Hooks\\Services\\V2\342\002\'Aruna\\Api\\Hoo" +
+      "ks\\Services\\V2\\GPBMetadata\352\002\037Aruna::Api:" +
+      ":Hooks::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10536,75 +12850,87 @@ public final class HooksServiceProto {
     internal_static_aruna_api_hooks_services_v2_ExternalHook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_ExternalHook_descriptor,
-        new java.lang.String[] { "Url", "Credentials", "JsonTemplate", });
-    internal_static_aruna_api_hooks_services_v2_InternalHook_descriptor =
+        new java.lang.String[] { "Url", "Credentials", "JsonTemplate", "Method", });
+    internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_aruna_api_hooks_services_v2_AddLabel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_aruna_api_hooks_services_v2_AddHook_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_aruna_api_hooks_services_v2_AddHook_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_AddHook_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_aruna_api_hooks_services_v2_InternalHook_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_aruna_api_hooks_services_v2_InternalHook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_InternalHook_descriptor,
-        new java.lang.String[] { "InternalAction", "TargetId", "Value", });
+        new java.lang.String[] { "AddLabel", "AddHook", "AddRelation", "InternalAction", });
     internal_static_aruna_api_hooks_services_v2_Hook_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_aruna_api_hooks_services_v2_Hook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_Hook_descriptor,
         new java.lang.String[] { "ExternalHook", "InternalHook", "HookType", });
     internal_static_aruna_api_hooks_services_v2_Credentials_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_aruna_api_hooks_services_v2_Credentials_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_Credentials_descriptor,
         new java.lang.String[] { "Token", });
     internal_static_aruna_api_hooks_services_v2_CreateHookRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_aruna_api_hooks_services_v2_CreateHookRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_CreateHookRequest_descriptor,
         new java.lang.String[] { "Trigger", "Hook", "Timeout", "ProjectId", });
     internal_static_aruna_api_hooks_services_v2_CreateHookResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_hooks_services_v2_CreateHookResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_CreateHookResponse_descriptor,
         new java.lang.String[] { "HookId", });
     internal_static_aruna_api_hooks_services_v2_DeleteHookRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_aruna_api_hooks_services_v2_DeleteHookRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_DeleteHookRequest_descriptor,
         new java.lang.String[] { "HookId", });
     internal_static_aruna_api_hooks_services_v2_DeleteHookResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_hooks_services_v2_DeleteHookResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_DeleteHookResponse_descriptor,
         new java.lang.String[] { });
     internal_static_aruna_api_hooks_services_v2_HookCallbackRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_hooks_services_v2_HookCallbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_HookCallbackRequest_descriptor,
-        new java.lang.String[] { "Success", "AddKeyValues", "RemoveKeyValues", });
+        new java.lang.String[] { "Success", "AddKeyValues", "RemoveKeyValues", "Secret", "HookId", "ObjectId", "PubkeySerial", });
     internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_descriptor,
         new java.lang.String[] { });
     internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_hooks_services_v2_ListHooksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor,
         new java.lang.String[] { "ProjectId", });
     internal_static_aruna_api_hooks_services_v2_HookInfo_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_aruna_api_hooks_services_v2_HookInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_HookInfo_descriptor,
         new java.lang.String[] { "HookId", "Hook", "Trigger", "Timeout", });
     internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_aruna_api_hooks_services_v2_ListHooksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor,
