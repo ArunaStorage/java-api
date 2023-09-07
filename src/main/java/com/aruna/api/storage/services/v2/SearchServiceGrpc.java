@@ -77,6 +77,37 @@ public final class SearchServiceGrpc {
     return getGetResourceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest,
+      com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> getGetResourcesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetResources",
+      requestType = com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest.class,
+      responseType = com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest,
+      com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> getGetResourcesMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest, com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> getGetResourcesMethod;
+    if ((getGetResourcesMethod = SearchServiceGrpc.getGetResourcesMethod) == null) {
+      synchronized (SearchServiceGrpc.class) {
+        if ((getGetResourcesMethod = SearchServiceGrpc.getGetResourcesMethod) == null) {
+          SearchServiceGrpc.getGetResourcesMethod = getGetResourcesMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest, com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetResources"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SearchServiceMethodDescriptorSupplier("GetResources"))
+              .build();
+        }
+      }
+    }
+    return getGetResourcesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -140,14 +171,26 @@ public final class SearchServiceGrpc {
 
     /**
      * <pre>
-     * GetPublicResource
+     * GetResource
      * Status: BETA
-     * Retrieves a public resource by its ID.
+     * Retrieves resource by its ID.
      * </pre>
      */
     default void getResource(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetResourceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetResources
+     * Status: BETA
+     * Retrieves resources by a list of IDs.
+     * </pre>
+     */
+    default void getResources(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetResourcesMethod(), responseObserver);
     }
   }
 
@@ -194,15 +237,28 @@ public final class SearchServiceGrpc {
 
     /**
      * <pre>
-     * GetPublicResource
+     * GetResource
      * Status: BETA
-     * Retrieves a public resource by its ID.
+     * Retrieves resource by its ID.
      * </pre>
      */
     public void getResource(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetResourceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetResources
+     * Status: BETA
+     * Retrieves resources by a list of IDs.
+     * </pre>
+     */
+    public void getResources(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetResourcesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -237,14 +293,26 @@ public final class SearchServiceGrpc {
 
     /**
      * <pre>
-     * GetPublicResource
+     * GetResource
      * Status: BETA
-     * Retrieves a public resource by its ID.
+     * Retrieves resource by its ID.
      * </pre>
      */
     public com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceResponse getResource(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetResources
+     * Status: BETA
+     * Retrieves resources by a list of IDs.
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse getResources(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetResourcesMethod(), getCallOptions(), request);
     }
   }
 
@@ -280,9 +348,9 @@ public final class SearchServiceGrpc {
 
     /**
      * <pre>
-     * GetPublicResource
+     * GetResource
      * Status: BETA
-     * Retrieves a public resource by its ID.
+     * Retrieves resource by its ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceResponse> getResource(
@@ -290,10 +358,24 @@ public final class SearchServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetResourceMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetResources
+     * Status: BETA
+     * Retrieves resources by a list of IDs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> getResources(
+        com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetResourcesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH_RESOURCES = 0;
   private static final int METHODID_GET_RESOURCE = 1;
+  private static final int METHODID_GET_RESOURCES = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -319,6 +401,10 @@ public final class SearchServiceGrpc {
         case METHODID_GET_RESOURCE:
           serviceImpl.getResource((com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceResponse>) responseObserver);
+          break;
+        case METHODID_GET_RESOURCES:
+          serviceImpl.getResources((com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -352,6 +438,13 @@ public final class SearchServiceGrpc {
               com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceRequest,
               com.aruna.api.storage.services.v2.SearchServiceProto.GetResourceResponse>(
                 service, METHODID_GET_RESOURCE)))
+        .addMethod(
+          getGetResourcesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest,
+              com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse>(
+                service, METHODID_GET_RESOURCES)))
         .build();
   }
 
@@ -402,6 +495,7 @@ public final class SearchServiceGrpc {
               .setSchemaDescriptor(new SearchServiceFileDescriptorSupplier())
               .addMethod(getSearchResourcesMethod())
               .addMethod(getGetResourceMethod())
+              .addMethod(getGetResourcesMethod())
               .build();
         }
       }

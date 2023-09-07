@@ -19548,6 +19548,3430 @@ public final class UserServiceProto {
 
   }
 
+  public interface GetPersonalNotificationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetPersonalNotificationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetPersonalNotificationsRequest}
+   */
+  public static final class GetPersonalNotificationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetPersonalNotificationsRequest)
+      GetPersonalNotificationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetPersonalNotificationsRequest.newBuilder() to construct.
+    private GetPersonalNotificationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetPersonalNotificationsRequest() {
+      userId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPersonalNotificationsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.class, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.Builder.class);
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest other = (com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest) obj;
+
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetPersonalNotificationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetPersonalNotificationsRequest)
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.class, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest result = new com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userId_ = userId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.getDefaultInstance()) return this;
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetPersonalNotificationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetPersonalNotificationsRequest)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetPersonalNotificationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetPersonalNotificationsRequest>() {
+      @java.lang.Override
+      public GetPersonalNotificationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetPersonalNotificationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetPersonalNotificationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReferencesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.References)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * UserRequestAccess
+     * </pre>
+     *
+     * <code>string ref_type = 1 [json_name = "refType"];</code>
+     * @return The refType.
+     */
+    java.lang.String getRefType();
+    /**
+     * <pre>
+     * UserRequestAccess
+     * </pre>
+     *
+     * <code>string ref_type = 1 [json_name = "refType"];</code>
+     * @return The bytes for refType.
+     */
+    com.google.protobuf.ByteString
+        getRefTypeBytes();
+
+    /**
+     * <pre>
+     * "User A"
+     * </pre>
+     *
+     * <code>string ref_name = 2 [json_name = "refName"];</code>
+     * @return The refName.
+     */
+    java.lang.String getRefName();
+    /**
+     * <pre>
+     * "User A"
+     * </pre>
+     *
+     * <code>string ref_name = 2 [json_name = "refName"];</code>
+     * @return The bytes for refName.
+     */
+    com.google.protobuf.ByteString
+        getRefNameBytes();
+
+    /**
+     * <pre>
+     * 0123AAA123AAA (id)
+     * </pre>
+     *
+     * <code>string ref_value = 3 [json_name = "refValue"];</code>
+     * @return The refValue.
+     */
+    java.lang.String getRefValue();
+    /**
+     * <pre>
+     * 0123AAA123AAA (id)
+     * </pre>
+     *
+     * <code>string ref_value = 3 [json_name = "refValue"];</code>
+     * @return The bytes for refValue.
+     */
+    com.google.protobuf.ByteString
+        getRefValueBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.References}
+   */
+  public static final class References extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.References)
+      ReferencesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use References.newBuilder() to construct.
+    private References(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private References() {
+      refType_ = "";
+      refName_ = "";
+      refValue_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new References();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.UserServiceProto.References.class, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder.class);
+    }
+
+    public static final int REF_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object refType_ = "";
+    /**
+     * <pre>
+     * UserRequestAccess
+     * </pre>
+     *
+     * <code>string ref_type = 1 [json_name = "refType"];</code>
+     * @return The refType.
+     */
+    @java.lang.Override
+    public java.lang.String getRefType() {
+      java.lang.Object ref = refType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        refType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * UserRequestAccess
+     * </pre>
+     *
+     * <code>string ref_type = 1 [json_name = "refType"];</code>
+     * @return The bytes for refType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRefTypeBytes() {
+      java.lang.Object ref = refType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        refType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REF_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object refName_ = "";
+    /**
+     * <pre>
+     * "User A"
+     * </pre>
+     *
+     * <code>string ref_name = 2 [json_name = "refName"];</code>
+     * @return The refName.
+     */
+    @java.lang.Override
+    public java.lang.String getRefName() {
+      java.lang.Object ref = refName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        refName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * "User A"
+     * </pre>
+     *
+     * <code>string ref_name = 2 [json_name = "refName"];</code>
+     * @return The bytes for refName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRefNameBytes() {
+      java.lang.Object ref = refName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        refName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REF_VALUE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object refValue_ = "";
+    /**
+     * <pre>
+     * 0123AAA123AAA (id)
+     * </pre>
+     *
+     * <code>string ref_value = 3 [json_name = "refValue"];</code>
+     * @return The refValue.
+     */
+    @java.lang.Override
+    public java.lang.String getRefValue() {
+      java.lang.Object ref = refValue_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        refValue_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 0123AAA123AAA (id)
+     * </pre>
+     *
+     * <code>string ref_value = 3 [json_name = "refValue"];</code>
+     * @return The bytes for refValue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRefValueBytes() {
+      java.lang.Object ref = refValue_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        refValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, refType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, refName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refValue_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, refValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, refType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, refName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refValue_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, refValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.References)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.UserServiceProto.References other = (com.aruna.api.storage.services.v2.UserServiceProto.References) obj;
+
+      if (!getRefType()
+          .equals(other.getRefType())) return false;
+      if (!getRefName()
+          .equals(other.getRefName())) return false;
+      if (!getRefValue()
+          .equals(other.getRefValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REF_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getRefType().hashCode();
+      hash = (37 * hash) + REF_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRefName().hashCode();
+      hash = (37 * hash) + REF_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getRefValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.References prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.References}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.References)
+        com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.UserServiceProto.References.class, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.References.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        refType_ = "";
+        refName_ = "";
+        refValue_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.References getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.References build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.References result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.References buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.References result = new com.aruna.api.storage.services.v2.UserServiceProto.References(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.References result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.refType_ = refType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.refName_ = refName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.refValue_ = refValue_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.References) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.References)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.References other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance()) return this;
+        if (!other.getRefType().isEmpty()) {
+          refType_ = other.refType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRefName().isEmpty()) {
+          refName_ = other.refName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRefValue().isEmpty()) {
+          refValue_ = other.refValue_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                refType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                refName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                refValue_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object refType_ = "";
+      /**
+       * <pre>
+       * UserRequestAccess
+       * </pre>
+       *
+       * <code>string ref_type = 1 [json_name = "refType"];</code>
+       * @return The refType.
+       */
+      public java.lang.String getRefType() {
+        java.lang.Object ref = refType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          refType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UserRequestAccess
+       * </pre>
+       *
+       * <code>string ref_type = 1 [json_name = "refType"];</code>
+       * @return The bytes for refType.
+       */
+      public com.google.protobuf.ByteString
+          getRefTypeBytes() {
+        java.lang.Object ref = refType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          refType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UserRequestAccess
+       * </pre>
+       *
+       * <code>string ref_type = 1 [json_name = "refType"];</code>
+       * @param value The refType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        refType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UserRequestAccess
+       * </pre>
+       *
+       * <code>string ref_type = 1 [json_name = "refType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRefType() {
+        refType_ = getDefaultInstance().getRefType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UserRequestAccess
+       * </pre>
+       *
+       * <code>string ref_type = 1 [json_name = "refType"];</code>
+       * @param value The bytes for refType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        refType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object refName_ = "";
+      /**
+       * <pre>
+       * "User A"
+       * </pre>
+       *
+       * <code>string ref_name = 2 [json_name = "refName"];</code>
+       * @return The refName.
+       */
+      public java.lang.String getRefName() {
+        java.lang.Object ref = refName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          refName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * "User A"
+       * </pre>
+       *
+       * <code>string ref_name = 2 [json_name = "refName"];</code>
+       * @return The bytes for refName.
+       */
+      public com.google.protobuf.ByteString
+          getRefNameBytes() {
+        java.lang.Object ref = refName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          refName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * "User A"
+       * </pre>
+       *
+       * <code>string ref_name = 2 [json_name = "refName"];</code>
+       * @param value The refName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        refName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "User A"
+       * </pre>
+       *
+       * <code>string ref_name = 2 [json_name = "refName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRefName() {
+        refName_ = getDefaultInstance().getRefName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "User A"
+       * </pre>
+       *
+       * <code>string ref_name = 2 [json_name = "refName"];</code>
+       * @param value The bytes for refName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        refName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object refValue_ = "";
+      /**
+       * <pre>
+       * 0123AAA123AAA (id)
+       * </pre>
+       *
+       * <code>string ref_value = 3 [json_name = "refValue"];</code>
+       * @return The refValue.
+       */
+      public java.lang.String getRefValue() {
+        java.lang.Object ref = refValue_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          refValue_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 0123AAA123AAA (id)
+       * </pre>
+       *
+       * <code>string ref_value = 3 [json_name = "refValue"];</code>
+       * @return The bytes for refValue.
+       */
+      public com.google.protobuf.ByteString
+          getRefValueBytes() {
+        java.lang.Object ref = refValue_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          refValue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 0123AAA123AAA (id)
+       * </pre>
+       *
+       * <code>string ref_value = 3 [json_name = "refValue"];</code>
+       * @param value The refValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        refValue_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 0123AAA123AAA (id)
+       * </pre>
+       *
+       * <code>string ref_value = 3 [json_name = "refValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRefValue() {
+        refValue_ = getDefaultInstance().getRefValue();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 0123AAA123AAA (id)
+       * </pre>
+       *
+       * <code>string ref_value = 3 [json_name = "refValue"];</code>
+       * @param value The bytes for refValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        refValue_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.References)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.References)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.References DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.References();
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.References getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<References>
+        PARSER = new com.google.protobuf.AbstractParser<References>() {
+      @java.lang.Override
+      public References parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<References> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<References> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.References getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.UserNotification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Request access
+     * </pre>
+     *
+     * <code>string variant = 1 [json_name = "variant"];</code>
+     * @return The variant.
+     */
+    java.lang.String getVariant();
+    /**
+     * <pre>
+     * Request access
+     * </pre>
+     *
+     * <code>string variant = 1 [json_name = "variant"];</code>
+     * @return The bytes for variant.
+     */
+    com.google.protobuf.ByteString
+        getVariantBytes();
+
+    /**
+     * <pre>
+     * User A has requested access for resource B
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <pre>
+     * User A has requested access for resource B
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> 
+        getRefsList();
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    com.aruna.api.storage.services.v2.UserServiceProto.References getRefs(int index);
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    int getRefsCount();
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+        getRefsOrBuilderList();
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder getRefsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.UserNotification}
+   */
+  public static final class UserNotification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.UserNotification)
+      UserNotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserNotification.newBuilder() to construct.
+    private UserNotification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserNotification() {
+      variant_ = "";
+      message_ = "";
+      refs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserNotification();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_UserNotification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_UserNotification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.class, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder.class);
+    }
+
+    public static final int VARIANT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object variant_ = "";
+    /**
+     * <pre>
+     * Request access
+     * </pre>
+     *
+     * <code>string variant = 1 [json_name = "variant"];</code>
+     * @return The variant.
+     */
+    @java.lang.Override
+    public java.lang.String getVariant() {
+      java.lang.Object ref = variant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        variant_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Request access
+     * </pre>
+     *
+     * <code>string variant = 1 [json_name = "variant"];</code>
+     * @return The bytes for variant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVariantBytes() {
+      java.lang.Object ref = variant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        variant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
+    /**
+     * <pre>
+     * User A has requested access for resource B
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User A has requested access for resource B
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REFS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> refs_;
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> getRefsList() {
+      return refs_;
+    }
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+        getRefsOrBuilderList() {
+      return refs_;
+    }
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    @java.lang.Override
+    public int getRefsCount() {
+      return refs_.size();
+    }
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.References getRefs(int index) {
+      return refs_.get(index);
+    }
+    /**
+     * <pre>
+     * References to resource in the "message"
+     * </pre>
+     *
+     * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder getRefsOrBuilder(
+        int index) {
+      return refs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variant_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, variant_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
+      for (int i = 0; i < refs_.size(); i++) {
+        output.writeMessage(3, refs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variant_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, variant_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      for (int i = 0; i < refs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, refs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.UserNotification)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.UserServiceProto.UserNotification other = (com.aruna.api.storage.services.v2.UserServiceProto.UserNotification) obj;
+
+      if (!getVariant()
+          .equals(other.getVariant())) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!getRefsList()
+          .equals(other.getRefsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VARIANT_FIELD_NUMBER;
+      hash = (53 * hash) + getVariant().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      if (getRefsCount() > 0) {
+        hash = (37 * hash) + REFS_FIELD_NUMBER;
+        hash = (53 * hash) + getRefsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.UserNotification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.UserNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.UserNotification)
+        com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_UserNotification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_UserNotification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.class, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        variant_ = "";
+        message_ = "";
+        if (refsBuilder_ == null) {
+          refs_ = java.util.Collections.emptyList();
+        } else {
+          refs_ = null;
+          refsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_UserNotification_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.UserNotification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.UserNotification result = new com.aruna.api.storage.services.v2.UserServiceProto.UserNotification(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.storage.services.v2.UserServiceProto.UserNotification result) {
+        if (refsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            refs_ = java.util.Collections.unmodifiableList(refs_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.refs_ = refs_;
+        } else {
+          result.refs_ = refsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.UserNotification result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.variant_ = variant_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.message_ = message_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.UserNotification) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.UserNotification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.UserNotification other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.getDefaultInstance()) return this;
+        if (!other.getVariant().isEmpty()) {
+          variant_ = other.variant_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (refsBuilder_ == null) {
+          if (!other.refs_.isEmpty()) {
+            if (refs_.isEmpty()) {
+              refs_ = other.refs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRefsIsMutable();
+              refs_.addAll(other.refs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.refs_.isEmpty()) {
+            if (refsBuilder_.isEmpty()) {
+              refsBuilder_.dispose();
+              refsBuilder_ = null;
+              refs_ = other.refs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              refsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRefsFieldBuilder() : null;
+            } else {
+              refsBuilder_.addAllMessages(other.refs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                variant_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                message_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.aruna.api.storage.services.v2.UserServiceProto.References m =
+                    input.readMessage(
+                        com.aruna.api.storage.services.v2.UserServiceProto.References.parser(),
+                        extensionRegistry);
+                if (refsBuilder_ == null) {
+                  ensureRefsIsMutable();
+                  refs_.add(m);
+                } else {
+                  refsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object variant_ = "";
+      /**
+       * <pre>
+       * Request access
+       * </pre>
+       *
+       * <code>string variant = 1 [json_name = "variant"];</code>
+       * @return The variant.
+       */
+      public java.lang.String getVariant() {
+        java.lang.Object ref = variant_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          variant_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Request access
+       * </pre>
+       *
+       * <code>string variant = 1 [json_name = "variant"];</code>
+       * @return The bytes for variant.
+       */
+      public com.google.protobuf.ByteString
+          getVariantBytes() {
+        java.lang.Object ref = variant_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          variant_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Request access
+       * </pre>
+       *
+       * <code>string variant = 1 [json_name = "variant"];</code>
+       * @param value The variant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVariant(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        variant_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Request access
+       * </pre>
+       *
+       * <code>string variant = 1 [json_name = "variant"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVariant() {
+        variant_ = getDefaultInstance().getVariant();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Request access
+       * </pre>
+       *
+       * <code>string variant = 1 [json_name = "variant"];</code>
+       * @param value The bytes for variant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVariantBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        variant_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <pre>
+       * User A has requested access for resource B
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User A has requested access for resource B
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User A has requested access for resource B
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        message_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User A has requested access for resource B
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User A has requested access for resource B
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        message_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> refs_ =
+        java.util.Collections.emptyList();
+      private void ensureRefsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          refs_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.UserServiceProto.References>(refs_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v2.UserServiceProto.References, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> refsBuilder_;
+
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> getRefsList() {
+        if (refsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(refs_);
+        } else {
+          return refsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public int getRefsCount() {
+        if (refsBuilder_ == null) {
+          return refs_.size();
+        } else {
+          return refsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.References getRefs(int index) {
+        if (refsBuilder_ == null) {
+          return refs_.get(index);
+        } else {
+          return refsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder setRefs(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.References value) {
+        if (refsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRefsIsMutable();
+          refs_.set(index, value);
+          onChanged();
+        } else {
+          refsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder setRefs(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder builderForValue) {
+        if (refsBuilder_ == null) {
+          ensureRefsIsMutable();
+          refs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          refsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder addRefs(com.aruna.api.storage.services.v2.UserServiceProto.References value) {
+        if (refsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRefsIsMutable();
+          refs_.add(value);
+          onChanged();
+        } else {
+          refsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder addRefs(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.References value) {
+        if (refsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRefsIsMutable();
+          refs_.add(index, value);
+          onChanged();
+        } else {
+          refsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder addRefs(
+          com.aruna.api.storage.services.v2.UserServiceProto.References.Builder builderForValue) {
+        if (refsBuilder_ == null) {
+          ensureRefsIsMutable();
+          refs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          refsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder addRefs(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder builderForValue) {
+        if (refsBuilder_ == null) {
+          ensureRefsIsMutable();
+          refs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          refsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder addAllRefs(
+          java.lang.Iterable<? extends com.aruna.api.storage.services.v2.UserServiceProto.References> values) {
+        if (refsBuilder_ == null) {
+          ensureRefsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, refs_);
+          onChanged();
+        } else {
+          refsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder clearRefs() {
+        if (refsBuilder_ == null) {
+          refs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          refsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public Builder removeRefs(int index) {
+        if (refsBuilder_ == null) {
+          ensureRefsIsMutable();
+          refs_.remove(index);
+          onChanged();
+        } else {
+          refsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.References.Builder getRefsBuilder(
+          int index) {
+        return getRefsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder getRefsOrBuilder(
+          int index) {
+        if (refsBuilder_ == null) {
+          return refs_.get(index);  } else {
+          return refsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+           getRefsOrBuilderList() {
+        if (refsBuilder_ != null) {
+          return refsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(refs_);
+        }
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.References.Builder addRefsBuilder() {
+        return getRefsFieldBuilder().addBuilder(
+            com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.References.Builder addRefsBuilder(
+          int index) {
+        return getRefsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * References to resource in the "message"
+       * </pre>
+       *
+       * <code>repeated .aruna.api.storage.services.v2.References refs = 3 [json_name = "refs"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References.Builder> 
+           getRefsBuilderList() {
+        return getRefsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v2.UserServiceProto.References, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+          getRefsFieldBuilder() {
+        if (refsBuilder_ == null) {
+          refsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.services.v2.UserServiceProto.References, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder>(
+                  refs_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          refs_ = null;
+        }
+        return refsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.UserNotification)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.UserNotification)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.UserNotification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.UserNotification();
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.UserNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserNotification>
+        PARSER = new com.google.protobuf.AbstractParser<UserNotification>() {
+      @java.lang.Override
+      public UserNotification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserNotification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserNotification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetPersonalNotificationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetPersonalNotificationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification> 
+        getNotificationsList();
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    com.aruna.api.storage.services.v2.UserServiceProto.UserNotification getNotifications(int index);
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    int getNotificationsCount();
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder> 
+        getNotificationsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder getNotificationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetPersonalNotificationsResponse}
+   */
+  public static final class GetPersonalNotificationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetPersonalNotificationsResponse)
+      GetPersonalNotificationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetPersonalNotificationsResponse.newBuilder() to construct.
+    private GetPersonalNotificationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetPersonalNotificationsResponse() {
+      notifications_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPersonalNotificationsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.class, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.Builder.class);
+    }
+
+    public static final int NOTIFICATIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification> notifications_;
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification> getNotificationsList() {
+      return notifications_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder> 
+        getNotificationsOrBuilderList() {
+      return notifications_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    @java.lang.Override
+    public int getNotificationsCount() {
+      return notifications_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification getNotifications(int index) {
+      return notifications_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder getNotificationsOrBuilder(
+        int index) {
+      return notifications_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < notifications_.size(); i++) {
+        output.writeMessage(1, notifications_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < notifications_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, notifications_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse other = (com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse) obj;
+
+      if (!getNotificationsList()
+          .equals(other.getNotificationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getNotificationsCount() > 0) {
+        hash = (37 * hash) + NOTIFICATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getNotificationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetPersonalNotificationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetPersonalNotificationsResponse)
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.class, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (notificationsBuilder_ == null) {
+          notifications_ = java.util.Collections.emptyList();
+        } else {
+          notifications_ = null;
+          notificationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse result = new com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse result) {
+        if (notificationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            notifications_ = java.util.Collections.unmodifiableList(notifications_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.notifications_ = notifications_;
+        } else {
+          result.notifications_ = notificationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.getDefaultInstance()) return this;
+        if (notificationsBuilder_ == null) {
+          if (!other.notifications_.isEmpty()) {
+            if (notifications_.isEmpty()) {
+              notifications_ = other.notifications_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureNotificationsIsMutable();
+              notifications_.addAll(other.notifications_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.notifications_.isEmpty()) {
+            if (notificationsBuilder_.isEmpty()) {
+              notificationsBuilder_.dispose();
+              notificationsBuilder_ = null;
+              notifications_ = other.notifications_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              notificationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNotificationsFieldBuilder() : null;
+            } else {
+              notificationsBuilder_.addAllMessages(other.notifications_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.aruna.api.storage.services.v2.UserServiceProto.UserNotification m =
+                    input.readMessage(
+                        com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.parser(),
+                        extensionRegistry);
+                if (notificationsBuilder_ == null) {
+                  ensureNotificationsIsMutable();
+                  notifications_.add(m);
+                } else {
+                  notificationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification> notifications_ =
+        java.util.Collections.emptyList();
+      private void ensureNotificationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          notifications_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification>(notifications_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v2.UserServiceProto.UserNotification, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder, com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder> notificationsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification> getNotificationsList() {
+        if (notificationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(notifications_);
+        } else {
+          return notificationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public int getNotificationsCount() {
+        if (notificationsBuilder_ == null) {
+          return notifications_.size();
+        } else {
+          return notificationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification getNotifications(int index) {
+        if (notificationsBuilder_ == null) {
+          return notifications_.get(index);
+        } else {
+          return notificationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder setNotifications(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification value) {
+        if (notificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNotificationsIsMutable();
+          notifications_.set(index, value);
+          onChanged();
+        } else {
+          notificationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder setNotifications(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder builderForValue) {
+        if (notificationsBuilder_ == null) {
+          ensureNotificationsIsMutable();
+          notifications_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          notificationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder addNotifications(com.aruna.api.storage.services.v2.UserServiceProto.UserNotification value) {
+        if (notificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNotificationsIsMutable();
+          notifications_.add(value);
+          onChanged();
+        } else {
+          notificationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder addNotifications(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification value) {
+        if (notificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNotificationsIsMutable();
+          notifications_.add(index, value);
+          onChanged();
+        } else {
+          notificationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder addNotifications(
+          com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder builderForValue) {
+        if (notificationsBuilder_ == null) {
+          ensureNotificationsIsMutable();
+          notifications_.add(builderForValue.build());
+          onChanged();
+        } else {
+          notificationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder addNotifications(
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder builderForValue) {
+        if (notificationsBuilder_ == null) {
+          ensureNotificationsIsMutable();
+          notifications_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          notificationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder addAllNotifications(
+          java.lang.Iterable<? extends com.aruna.api.storage.services.v2.UserServiceProto.UserNotification> values) {
+        if (notificationsBuilder_ == null) {
+          ensureNotificationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, notifications_);
+          onChanged();
+        } else {
+          notificationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder clearNotifications() {
+        if (notificationsBuilder_ == null) {
+          notifications_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          notificationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public Builder removeNotifications(int index) {
+        if (notificationsBuilder_ == null) {
+          ensureNotificationsIsMutable();
+          notifications_.remove(index);
+          onChanged();
+        } else {
+          notificationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder getNotificationsBuilder(
+          int index) {
+        return getNotificationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder getNotificationsOrBuilder(
+          int index) {
+        if (notificationsBuilder_ == null) {
+          return notifications_.get(index);  } else {
+          return notificationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder> 
+           getNotificationsOrBuilderList() {
+        if (notificationsBuilder_ != null) {
+          return notificationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(notifications_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder addNotificationsBuilder() {
+        return getNotificationsFieldBuilder().addBuilder(
+            com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder addNotificationsBuilder(
+          int index) {
+        return getNotificationsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.UserNotification notifications = 1 [json_name = "notifications"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder> 
+           getNotificationsBuilderList() {
+        return getNotificationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v2.UserServiceProto.UserNotification, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder, com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder> 
+          getNotificationsFieldBuilder() {
+        if (notificationsBuilder_ == null) {
+          notificationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.services.v2.UserServiceProto.UserNotification, com.aruna.api.storage.services.v2.UserServiceProto.UserNotification.Builder, com.aruna.api.storage.services.v2.UserServiceProto.UserNotificationOrBuilder>(
+                  notifications_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          notifications_ = null;
+        }
+        return notificationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetPersonalNotificationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetPersonalNotificationsResponse)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetPersonalNotificationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetPersonalNotificationsResponse>() {
+      @java.lang.Override
+      public GetPersonalNotificationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetPersonalNotificationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetPersonalNotificationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_RegisterUserRequest_descriptor;
   private static final 
@@ -19708,6 +23132,26 @@ public final class UserServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_GetDataproxyTokenUserResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_References_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_UserNotification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_UserNotification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19777,79 +23221,95 @@ public final class UserServiceProto {
       " \001(\tR\nendpointId\022>\n\007context\030\003 \001(\0132$.arun" +
       "a.api.storage.models.v2.ContextR\007context" +
       "\"5\n\035GetDataproxyTokenUserResponse\022\024\n\005tok" +
-      "en\030\001 \001(\tR\005token2\264\024\n\013UserService\022\225\001\n\014Regi" +
-      "sterUser\0222.aruna.api.storage.services.v2" +
-      ".RegisterUserRequest\0323.aruna.api.storage" +
-      ".services.v2.RegisterUserResponse\"\034\202\323\344\223\002" +
-      "\026\"\021/v2/auth/register:\001*\022\247\001\n\016DeactivateUs" +
-      "er\0224.aruna.api.storage.services.v2.Deact" +
-      "ivateUserRequest\0325.aruna.api.storage.ser" +
-      "vices.v2.DeactivateUserResponse\"(\202\323\344\223\002\"2" +
-      "\035/v2/user/{user_id}/deactivate:\001*\022\237\001\n\014Ac" +
-      "tivateUser\0222.aruna.api.storage.services." +
-      "v2.ActivateUserRequest\0323.aruna.api.stora" +
-      "ge.services.v2.ActivateUserResponse\"&\202\323\344" +
-      "\223\002 2\033/v2/user/{user_id}/activate:\001*\022\230\001\n\016" +
-      "CreateAPIToken\0224.aruna.api.storage.servi" +
-      "ces.v2.CreateAPITokenRequest\0325.aruna.api" +
-      ".storage.services.v2.CreateAPITokenRespo" +
-      "nse\"\031\202\323\344\223\002\023\"\016/v2/auth/token:\001*\022\227\001\n\013GetAP" +
-      "IToken\0221.aruna.api.storage.services.v2.G" +
-      "etAPITokenRequest\0322.aruna.api.storage.se" +
-      "rvices.v2.GetAPITokenResponse\"!\202\323\344\223\002\033\022\031/" +
-      "v2/auth/token/{token_id}\022\220\001\n\014GetAPIToken" +
-      "s\0222.aruna.api.storage.services.v2.GetAPI" +
-      "TokensRequest\0323.aruna.api.storage.servic" +
-      "es.v2.GetAPITokensResponse\"\027\202\323\344\223\002\021\022\017/v2/" +
-      "auth/tokens\022\240\001\n\016DeleteAPIToken\0224.aruna.a" +
-      "pi.storage.services.v2.DeleteAPITokenReq" +
-      "uest\0325.aruna.api.storage.services.v2.Del" +
-      "eteAPITokenResponse\"!\202\323\344\223\002\033*\031/v2/auth/to" +
-      "ken/{token_id}\022\231\001\n\017DeleteAPITokens\0225.aru" +
-      "na.api.storage.services.v2.DeleteAPIToke" +
-      "nsRequest\0326.aruna.api.storage.services.v" +
-      "2.DeleteAPITokensResponse\"\027\202\323\344\223\002\021*\017/v2/a" +
-      "uth/tokens\022z\n\007GetUser\022-.aruna.api.storag" +
-      "e.services.v2.GetUserRequest\032..aruna.api" +
-      ".storage.services.v2.GetUserResponse\"\020\202\323" +
-      "\344\223\002\n\022\010/v2/user\022\233\001\n\017GetUserRedacted\0225.aru" +
-      "na.api.storage.services.v2.GetUserRedact" +
-      "edRequest\0326.aruna.api.storage.services.v" +
-      "2.GetUserRedactedResponse\"\031\202\323\344\223\002\023\022\021/v2/u" +
-      "ser/redacted\022\276\001\n\025UpdateUserDisplayName\022;" +
-      ".aruna.api.storage.services.v2.UpdateUse" +
-      "rDisplayNameRequest\032<.aruna.api.storage." +
-      "services.v2.UpdateUserDisplayNameRespons" +
-      "e\"*\202\323\344\223\002$2\037/v2/user/{user_id}/display_na" +
-      "me:\001*\022\245\001\n\017UpdateUserEmail\0225.aruna.api.st" +
-      "orage.services.v2.UpdateUserEmailRequest" +
-      "\0326.aruna.api.storage.services.v2.UpdateU" +
-      "serEmailResponse\"#\202\323\344\223\002\0352\030/v2/user/{user" +
-      "_id}/email:\001*\022\257\001\n\024GetNotActivatedUsers\022:" +
-      ".aruna.api.storage.services.v2.GetNotAct" +
-      "ivatedUsersRequest\032;.aruna.api.storage.s" +
-      "ervices.v2.GetNotActivatedUsersResponse\"" +
-      "\036\202\323\344\223\002\030\022\026/v2/user/not_activated\022\212\001\n\013GetA" +
-      "llUsers\0221.aruna.api.storage.services.v2." +
-      "GetAllUsersRequest\0322.aruna.api.storage.s" +
-      "ervices.v2.GetAllUsersResponse\"\024\202\323\344\223\002\016\022\014" +
-      "/v2/user/all\022\272\001\n\024GetS3CredentialsUser\022:." +
-      "aruna.api.storage.services.v2.GetS3Crede" +
-      "ntialsUserRequest\032;.aruna.api.storage.se" +
-      "rvices.v2.GetS3CredentialsUserResponse\")" +
-      "\202\323\344\223\002#\022!/v2/user/{user_id}/s3_credential" +
-      "s\022\272\001\n\025GetDataproxyTokenUser\022;.aruna.api." +
-      "storage.services.v2.GetDataproxyTokenUse" +
-      "rRequest\032<.aruna.api.storage.services.v2" +
-      ".GetDataproxyTokenUserResponse\"&\202\323\344\223\002 \022\036" +
-      "/v2/user/{user_id}/proxy_tokenB\214\002\n!com.a" +
-      "runa.api.storage.services.v2B\020UserServic" +
-      "eProtoP\000Z<github.com/ArunaStorage/go-api" +
-      "/aruna/api/storage/services/v2\242\002\004AASS\252\002\035" +
-      "Aruna.Api.Storage.Services.V2\312\002\035Aruna\\Ap" +
-      "i\\Storage\\Services\\V2\342\002)Aruna\\Api\\Storag" +
-      "e\\Services\\V2\\GPBMetadata\352\002!Aruna::Api::" +
-      "Storage::Services::V2b\006proto3"
+      "en\030\001 \001(\tR\005token\":\n\037GetPersonalNotificati" +
+      "onsRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"_\n\nR" +
+      "eferences\022\031\n\010ref_type\030\001 \001(\tR\007refType\022\031\n\010" +
+      "ref_name\030\002 \001(\tR\007refName\022\033\n\tref_value\030\003 \001" +
+      "(\tR\010refValue\"\205\001\n\020UserNotification\022\030\n\007var" +
+      "iant\030\001 \001(\tR\007variant\022\030\n\007message\030\002 \001(\tR\007me" +
+      "ssage\022=\n\004refs\030\003 \003(\0132).aruna.api.storage." +
+      "services.v2.ReferencesR\004refs\"y\n GetPerso" +
+      "nalNotificationsResponse\022U\n\rnotification" +
+      "s\030\001 \003(\0132/.aruna.api.storage.services.v2." +
+      "UserNotificationR\rnotifications2\374\025\n\013User" +
+      "Service\022\225\001\n\014RegisterUser\0222.aruna.api.sto" +
+      "rage.services.v2.RegisterUserRequest\0323.a" +
+      "runa.api.storage.services.v2.RegisterUse" +
+      "rResponse\"\034\202\323\344\223\002\026\"\021/v2/auth/register:\001*\022" +
+      "\247\001\n\016DeactivateUser\0224.aruna.api.storage.s" +
+      "ervices.v2.DeactivateUserRequest\0325.aruna" +
+      ".api.storage.services.v2.DeactivateUserR" +
+      "esponse\"(\202\323\344\223\002\"2\035/v2/user/{user_id}/deac" +
+      "tivate:\001*\022\237\001\n\014ActivateUser\0222.aruna.api.s" +
+      "torage.services.v2.ActivateUserRequest\0323" +
+      ".aruna.api.storage.services.v2.ActivateU" +
+      "serResponse\"&\202\323\344\223\002 2\033/v2/user/{user_id}/" +
+      "activate:\001*\022\230\001\n\016CreateAPIToken\0224.aruna.a" +
+      "pi.storage.services.v2.CreateAPITokenReq" +
+      "uest\0325.aruna.api.storage.services.v2.Cre" +
+      "ateAPITokenResponse\"\031\202\323\344\223\002\023\"\016/v2/auth/to" +
+      "ken:\001*\022\227\001\n\013GetAPIToken\0221.aruna.api.stora" +
+      "ge.services.v2.GetAPITokenRequest\0322.arun" +
+      "a.api.storage.services.v2.GetAPITokenRes" +
+      "ponse\"!\202\323\344\223\002\033\022\031/v2/auth/token/{token_id}" +
+      "\022\220\001\n\014GetAPITokens\0222.aruna.api.storage.se" +
+      "rvices.v2.GetAPITokensRequest\0323.aruna.ap" +
+      "i.storage.services.v2.GetAPITokensRespon" +
+      "se\"\027\202\323\344\223\002\021\022\017/v2/auth/tokens\022\240\001\n\016DeleteAP" +
+      "IToken\0224.aruna.api.storage.services.v2.D" +
+      "eleteAPITokenRequest\0325.aruna.api.storage" +
+      ".services.v2.DeleteAPITokenResponse\"!\202\323\344" +
+      "\223\002\033*\031/v2/auth/token/{token_id}\022\231\001\n\017Delet" +
+      "eAPITokens\0225.aruna.api.storage.services." +
+      "v2.DeleteAPITokensRequest\0326.aruna.api.st" +
+      "orage.services.v2.DeleteAPITokensRespons" +
+      "e\"\027\202\323\344\223\002\021*\017/v2/auth/tokens\022z\n\007GetUser\022-." +
+      "aruna.api.storage.services.v2.GetUserReq" +
+      "uest\032..aruna.api.storage.services.v2.Get" +
+      "UserResponse\"\020\202\323\344\223\002\n\022\010/v2/user\022\233\001\n\017GetUs" +
+      "erRedacted\0225.aruna.api.storage.services." +
+      "v2.GetUserRedactedRequest\0326.aruna.api.st" +
+      "orage.services.v2.GetUserRedactedRespons" +
+      "e\"\031\202\323\344\223\002\023\022\021/v2/user/redacted\022\276\001\n\025UpdateU" +
+      "serDisplayName\022;.aruna.api.storage.servi" +
+      "ces.v2.UpdateUserDisplayNameRequest\032<.ar" +
+      "una.api.storage.services.v2.UpdateUserDi" +
+      "splayNameResponse\"*\202\323\344\223\002$2\037/v2/user/{use" +
+      "r_id}/display_name:\001*\022\245\001\n\017UpdateUserEmai" +
+      "l\0225.aruna.api.storage.services.v2.Update" +
+      "UserEmailRequest\0326.aruna.api.storage.ser" +
+      "vices.v2.UpdateUserEmailResponse\"#\202\323\344\223\002\035" +
+      "2\030/v2/user/{user_id}/email:\001*\022\257\001\n\024GetNot" +
+      "ActivatedUsers\022:.aruna.api.storage.servi" +
+      "ces.v2.GetNotActivatedUsersRequest\032;.aru" +
+      "na.api.storage.services.v2.GetNotActivat" +
+      "edUsersResponse\"\036\202\323\344\223\002\030\022\026/v2/user/not_ac" +
+      "tivated\022\212\001\n\013GetAllUsers\0221.aruna.api.stor" +
+      "age.services.v2.GetAllUsersRequest\0322.aru" +
+      "na.api.storage.services.v2.GetAllUsersRe" +
+      "sponse\"\024\202\323\344\223\002\016\022\014/v2/user/all\022\272\001\n\024GetS3Cr" +
+      "edentialsUser\022:.aruna.api.storage.servic" +
+      "es.v2.GetS3CredentialsUserRequest\032;.arun" +
+      "a.api.storage.services.v2.GetS3Credentia" +
+      "lsUserResponse\")\202\323\344\223\002#\022!/v2/user/{user_i" +
+      "d}/s3_credentials\022\272\001\n\025GetDataproxyTokenU" +
+      "ser\022;.aruna.api.storage.services.v2.GetD" +
+      "ataproxyTokenUserRequest\032<.aruna.api.sto" +
+      "rage.services.v2.GetDataproxyTokenUserRe" +
+      "sponse\"&\202\323\344\223\002 \022\036/v2/user/{user_id}/proxy" +
+      "_token\022\305\001\n\030GetPersonalNotifications\022>.ar" +
+      "una.api.storage.services.v2.GetPersonalN" +
+      "otificationsRequest\032?.aruna.api.storage." +
+      "services.v2.GetPersonalNotificationsResp" +
+      "onse\"(\202\323\344\223\002\"\022 /v2/user/{user_id}/notific" +
+      "ationsB\214\002\n!com.aruna.api.storage.service" +
+      "s.v2B\020UserServiceProtoP\000Z<github.com/Aru" +
+      "naStorage/go-api/aruna/api/storage/servi" +
+      "ces/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Servic" +
+      "es.V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)" +
+      "Aruna\\Api\\Storage\\Services\\V2\\GPBMetadat" +
+      "a\352\002!Aruna::Api::Storage::Services::V2b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20050,6 +23510,30 @@ public final class UserServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetDataproxyTokenUserResponse_descriptor,
         new java.lang.String[] { "Token", });
+    internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor,
+        new java.lang.String[] { "UserId", });
+    internal_static_aruna_api_storage_services_v2_References_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_References_descriptor,
+        new java.lang.String[] { "RefType", "RefName", "RefValue", });
+    internal_static_aruna_api_storage_services_v2_UserNotification_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_aruna_api_storage_services_v2_UserNotification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_UserNotification_descriptor,
+        new java.lang.String[] { "Variant", "Message", "Refs", });
+    internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor,
+        new java.lang.String[] { "Notifications", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

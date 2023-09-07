@@ -8352,16 +8352,10 @@ public final class HooksServiceProto {
         getObjectIdBytes();
 
     /**
-     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
      * @return The pubkeySerial.
      */
-    java.lang.String getPubkeySerial();
-    /**
-     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
-     * @return The bytes for pubkeySerial.
-     */
-    com.google.protobuf.ByteString
-        getPubkeySerialBytes();
+    int getPubkeySerial();
   }
   /**
    * Protobuf type {@code aruna.api.hooks.services.v2.HookCallbackRequest}
@@ -8381,7 +8375,6 @@ public final class HooksServiceProto {
       secret_ = "";
       hookId_ = "";
       objectId_ = "";
-      pubkeySerial_ = "";
     }
 
     @java.lang.Override
@@ -8615,42 +8608,14 @@ public final class HooksServiceProto {
     }
 
     public static final int PUBKEY_SERIAL_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object pubkeySerial_ = "";
+    private int pubkeySerial_ = 0;
     /**
-     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
      * @return The pubkeySerial.
      */
     @java.lang.Override
-    public java.lang.String getPubkeySerial() {
-      java.lang.Object ref = pubkeySerial_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pubkeySerial_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
-     * @return The bytes for pubkeySerial.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPubkeySerialBytes() {
-      java.lang.Object ref = pubkeySerial_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pubkeySerial_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getPubkeySerial() {
+      return pubkeySerial_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8685,8 +8650,8 @@ public final class HooksServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, objectId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkeySerial_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pubkeySerial_);
+      if (pubkeySerial_ != 0) {
+        output.writeInt32(7, pubkeySerial_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8718,8 +8683,9 @@ public final class HooksServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, objectId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubkeySerial_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pubkeySerial_);
+      if (pubkeySerial_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, pubkeySerial_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8748,8 +8714,8 @@ public final class HooksServiceProto {
           .equals(other.getHookId())) return false;
       if (!getObjectId()
           .equals(other.getObjectId())) return false;
-      if (!getPubkeySerial()
-          .equals(other.getPubkeySerial())) return false;
+      if (getPubkeySerial()
+          != other.getPubkeySerial()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8779,7 +8745,7 @@ public final class HooksServiceProto {
       hash = (37 * hash) + OBJECT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getObjectId().hashCode();
       hash = (37 * hash) + PUBKEY_SERIAL_FIELD_NUMBER;
-      hash = (53 * hash) + getPubkeySerial().hashCode();
+      hash = (53 * hash) + getPubkeySerial();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8929,7 +8895,7 @@ public final class HooksServiceProto {
         secret_ = "";
         hookId_ = "";
         objectId_ = "";
-        pubkeySerial_ = "";
+        pubkeySerial_ = 0;
         return this;
       }
 
@@ -9084,10 +9050,8 @@ public final class HooksServiceProto {
           bitField0_ |= 0x00000020;
           onChanged();
         }
-        if (!other.getPubkeySerial().isEmpty()) {
-          pubkeySerial_ = other.pubkeySerial_;
-          bitField0_ |= 0x00000040;
-          onChanged();
+        if (other.getPubkeySerial() != 0) {
+          setPubkeySerial(other.getPubkeySerial());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -9161,11 +9125,11 @@ public final class HooksServiceProto {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
-              case 58: {
-                pubkeySerial_ = input.readStringRequireUtf8();
+              case 56: {
+                pubkeySerial_ = input.readInt32();
                 bitField0_ |= 0x00000040;
                 break;
-              } // case 58
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9911,74 +9875,34 @@ public final class HooksServiceProto {
         return this;
       }
 
-      private java.lang.Object pubkeySerial_ = "";
+      private int pubkeySerial_ ;
       /**
-       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
        * @return The pubkeySerial.
        */
-      public java.lang.String getPubkeySerial() {
-        java.lang.Object ref = pubkeySerial_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pubkeySerial_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getPubkeySerial() {
+        return pubkeySerial_;
       }
       /**
-       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
-       * @return The bytes for pubkeySerial.
-       */
-      public com.google.protobuf.ByteString
-          getPubkeySerialBytes() {
-        java.lang.Object ref = pubkeySerial_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pubkeySerial_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
        * @param value The pubkeySerial to set.
        * @return This builder for chaining.
        */
-      public Builder setPubkeySerial(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+      public Builder setPubkeySerial(int value) {
+
         pubkeySerial_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPubkeySerial() {
-        pubkeySerial_ = getDefaultInstance().getPubkeySerial();
         bitField0_ = (bitField0_ & ~0x00000040);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
-       * @param value The bytes for pubkeySerial to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPubkeySerialBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        pubkeySerial_ = value;
-        bitField0_ |= 0x00000040;
+        pubkeySerial_ = 0;
         onChanged();
         return this;
       }
@@ -12797,7 +12721,7 @@ public final class HooksServiceProto {
       "KeyValueR\017removeKeyValues\022\026\n\006secret\030\004 \001(" +
       "\tR\006secret\022\027\n\007hook_id\030\005 \001(\tR\006hookId\022\033\n\tob" +
       "ject_id\030\006 \001(\tR\010objectId\022#\n\rpubkey_serial" +
-      "\030\007 \001(\tR\014pubkeySerial\"\026\n\024HookCallbackResp" +
+      "\030\007 \001(\005R\014pubkeySerial\"\026\n\024HookCallbackResp" +
       "onse\"1\n\020ListHooksRequest\022\035\n\nproject_id\030\001" +
       " \001(\tR\tprojectId\"\264\001\n\010HookInfo\022\027\n\007hook_id\030" +
       "\001 \001(\tR\006hookId\0225\n\004hook\030\002 \001(\0132!.aruna.api." +

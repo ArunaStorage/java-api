@@ -114,6 +114,68 @@ public final class StorageStatusServiceGrpc {
     return getGetPubkeysMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest,
+      com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse> getGetAnouncementsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAnouncements",
+      requestType = com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest,
+      com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse> getGetAnouncementsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest, com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse> getGetAnouncementsMethod;
+    if ((getGetAnouncementsMethod = StorageStatusServiceGrpc.getGetAnouncementsMethod) == null) {
+      synchronized (StorageStatusServiceGrpc.class) {
+        if ((getGetAnouncementsMethod = StorageStatusServiceGrpc.getGetAnouncementsMethod) == null) {
+          StorageStatusServiceGrpc.getGetAnouncementsMethod = getGetAnouncementsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest, com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAnouncements"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StorageStatusServiceMethodDescriptorSupplier("GetAnouncements"))
+              .build();
+        }
+      }
+    }
+    return getGetAnouncementsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest,
+      com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse> getSetAnouncementsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAnouncements",
+      requestType = com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest,
+      com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse> getSetAnouncementsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest, com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse> getSetAnouncementsMethod;
+    if ((getSetAnouncementsMethod = StorageStatusServiceGrpc.getSetAnouncementsMethod) == null) {
+      synchronized (StorageStatusServiceGrpc.class) {
+        if ((getSetAnouncementsMethod = StorageStatusServiceGrpc.getSetAnouncementsMethod) == null) {
+          StorageStatusServiceGrpc.getSetAnouncementsMethod = getSetAnouncementsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest, com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAnouncements"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StorageStatusServiceMethodDescriptorSupplier("SetAnouncements"))
+              .build();
+        }
+      }
+    }
+    return getSetAnouncementsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -199,6 +261,20 @@ public final class StorageStatusServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPubkeysMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getAnouncements(com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnouncementsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void setAnouncements(com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAnouncementsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -274,6 +350,22 @@ public final class StorageStatusServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPubkeysMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getAnouncements(com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAnouncementsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void setAnouncements(com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAnouncementsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -328,6 +420,20 @@ public final class StorageStatusServiceGrpc {
     public com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse getPubkeys(com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPubkeysMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse getAnouncements(com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAnouncementsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse setAnouncements(com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAnouncementsMethod(), getCallOptions(), request);
     }
   }
 
@@ -387,11 +493,29 @@ public final class StorageStatusServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPubkeysMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse> getAnouncements(
+        com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAnouncementsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse> setAnouncements(
+        com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAnouncementsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_STORAGE_VERSION = 0;
   private static final int METHODID_GET_STORAGE_STATUS = 1;
   private static final int METHODID_GET_PUBKEYS = 2;
+  private static final int METHODID_GET_ANOUNCEMENTS = 3;
+  private static final int METHODID_SET_ANOUNCEMENTS = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -421,6 +545,14 @@ public final class StorageStatusServiceGrpc {
         case METHODID_GET_PUBKEYS:
           serviceImpl.getPubkeys((com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse>) responseObserver);
+          break;
+        case METHODID_GET_ANOUNCEMENTS:
+          serviceImpl.getAnouncements((com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse>) responseObserver);
+          break;
+        case METHODID_SET_ANOUNCEMENTS:
+          serviceImpl.setAnouncements((com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -461,6 +593,20 @@ public final class StorageStatusServiceGrpc {
               com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysRequest,
               com.aruna.api.storage.services.v2.InfoServiceProto.GetPubkeysResponse>(
                 service, METHODID_GET_PUBKEYS)))
+        .addMethod(
+          getGetAnouncementsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsRequest,
+              com.aruna.api.storage.services.v2.InfoServiceProto.GetAnouncementsResponse>(
+                service, METHODID_GET_ANOUNCEMENTS)))
+        .addMethod(
+          getSetAnouncementsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsRequest,
+              com.aruna.api.storage.services.v2.InfoServiceProto.SetAnouncementsResponse>(
+                service, METHODID_SET_ANOUNCEMENTS)))
         .build();
   }
 
@@ -512,6 +658,8 @@ public final class StorageStatusServiceGrpc {
               .addMethod(getGetStorageVersionMethod())
               .addMethod(getGetStorageStatusMethod())
               .addMethod(getGetPubkeysMethod())
+              .addMethod(getGetAnouncementsMethod())
+              .addMethod(getSetAnouncementsMethod())
               .build();
         }
       }

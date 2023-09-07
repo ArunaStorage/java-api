@@ -516,6 +516,37 @@ public final class UserServiceGrpc {
     return getGetDataproxyTokenUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> getGetPersonalNotificationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPersonalNotifications",
+      requestType = com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> getGetPersonalNotificationsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> getGetPersonalNotificationsMethod;
+    if ((getGetPersonalNotificationsMethod = UserServiceGrpc.getGetPersonalNotificationsMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getGetPersonalNotificationsMethod = UserServiceGrpc.getGetPersonalNotificationsMethod) == null) {
+          UserServiceGrpc.getGetPersonalNotificationsMethod = getGetPersonalNotificationsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPersonalNotifications"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetPersonalNotifications"))
+              .build();
+        }
+      }
+    }
+    return getGetPersonalNotificationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -762,6 +793,13 @@ public final class UserServiceGrpc {
     default void getDataproxyTokenUser(com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataproxyTokenUserMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getPersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPersonalNotificationsMethod(), responseObserver);
     }
   }
 
@@ -1012,6 +1050,14 @@ public final class UserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDataproxyTokenUserMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getPersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPersonalNotificationsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1228,6 +1274,13 @@ public final class UserServiceGrpc {
     public com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse getDataproxyTokenUser(com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDataproxyTokenUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse getPersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPersonalNotificationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1462,6 +1515,14 @@ public final class UserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDataproxyTokenUserMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> getPersonalNotifications(
+        com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPersonalNotificationsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_USER = 0;
@@ -1480,6 +1541,7 @@ public final class UserServiceGrpc {
   private static final int METHODID_GET_ALL_USERS = 13;
   private static final int METHODID_GET_S3CREDENTIALS_USER = 14;
   private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 15;
+  private static final int METHODID_GET_PERSONAL_NOTIFICATIONS = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1561,6 +1623,10 @@ public final class UserServiceGrpc {
         case METHODID_GET_DATAPROXY_TOKEN_USER:
           serviceImpl.getDataproxyTokenUser((com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse>) responseObserver);
+          break;
+        case METHODID_GET_PERSONAL_NOTIFICATIONS:
+          serviceImpl.getPersonalNotifications((com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1692,6 +1758,13 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserRequest,
               com.aruna.api.storage.services.v2.UserServiceProto.GetDataproxyTokenUserResponse>(
                 service, METHODID_GET_DATAPROXY_TOKEN_USER)))
+        .addMethod(
+          getGetPersonalNotificationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest,
+              com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse>(
+                service, METHODID_GET_PERSONAL_NOTIFICATIONS)))
         .build();
   }
 
@@ -1756,6 +1829,7 @@ public final class UserServiceGrpc {
               .addMethod(getGetAllUsersMethod())
               .addMethod(getGetS3CredentialsUserMethod())
               .addMethod(getGetDataproxyTokenUserMethod())
+              .addMethod(getGetPersonalNotificationsMethod())
               .build();
         }
       }

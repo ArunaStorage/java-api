@@ -13155,7 +13155,7 @@ public final class ProjectServiceProto {
       "pi\\Storage\\Services\\V2\342\002)Aruna\\Api\\Stora" +
       "ge\\Services\\V2\\GPBMetadata\352\002!Aruna::Api:" +
       ":Storage::Services::V2\222A\323\001\0223\n#Aruna Obje" +
-      "ct Storage (AOS) REST API2\0142.0.0-beta.2*" +
+      "ct Storage (AOS) REST API2\0142.0.0-beta.3*" +
       "\001\0022\020application/json:\020application/jsonZ`" +
       "\n^\n\rAccessKeyAuth\022M\010\002\0228Authentication to" +
       "ken, prefixed by Bearer: Bearer <token>\032" +
