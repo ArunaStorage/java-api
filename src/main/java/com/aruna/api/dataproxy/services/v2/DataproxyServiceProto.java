@@ -10568,6 +10568,12311 @@ public final class DataproxyServiceProto {
 
   }
 
+  public interface ObjectLocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.ObjectLocation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    java.lang.String getBucket();
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    com.google.protobuf.ByteString
+        getBucketBytes();
+
+    /**
+     * <code>string key = 2 [json_name = "key"];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 2 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+     * @return The uploadId.
+     */
+    java.lang.String getUploadId();
+    /**
+     * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+     * @return The bytes for uploadId.
+     */
+    com.google.protobuf.ByteString
+        getUploadIdBytes();
+
+    /**
+     * <code>string content_length = 4 [json_name = "contentLength"];</code>
+     * @return The contentLength.
+     */
+    java.lang.String getContentLength();
+    /**
+     * <code>string content_length = 4 [json_name = "contentLength"];</code>
+     * @return The bytes for contentLength.
+     */
+    com.google.protobuf.ByteString
+        getContentLengthBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.ObjectLocation}
+   */
+  public static final class ObjectLocation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.ObjectLocation)
+      ObjectLocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ObjectLocation.newBuilder() to construct.
+    private ObjectLocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ObjectLocation() {
+      bucket_ = "";
+      key_ = "";
+      uploadId_ = "";
+      contentLength_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ObjectLocation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder.class);
+    }
+
+    public static final int BUCKET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bucket_ = "";
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    @java.lang.Override
+    public java.lang.String getBucket() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBucketBytes() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 2 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 2 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPLOAD_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uploadId_ = "";
+    /**
+     * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+     * @return The uploadId.
+     */
+    @java.lang.Override
+    public java.lang.String getUploadId() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uploadId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+     * @return The bytes for uploadId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUploadIdBytes() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_LENGTH_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contentLength_ = "";
+    /**
+     * <code>string content_length = 4 [json_name = "contentLength"];</code>
+     * @return The contentLength.
+     */
+    @java.lang.Override
+    public java.lang.String getContentLength() {
+      java.lang.Object ref = contentLength_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contentLength_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string content_length = 4 [json_name = "contentLength"];</code>
+     * @return The bytes for contentLength.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentLengthBytes() {
+      java.lang.Object ref = contentLength_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentLength_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uploadId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uploadId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentLength_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, contentLength_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uploadId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uploadId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentLength_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contentLength_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation) obj;
+
+      if (!getBucket()
+          .equals(other.getBucket())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getUploadId()
+          .equals(other.getUploadId())) return false;
+      if (!getContentLength()
+          .equals(other.getContentLength())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getBucket().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + UPLOAD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUploadId().hashCode();
+      hash = (37 * hash) + CONTENT_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + getContentLength().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.ObjectLocation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.ObjectLocation)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bucket_ = "";
+        key_ = "";
+        uploadId_ = "";
+        contentLength_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bucket_ = bucket_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.uploadId_ = uploadId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contentLength_ = contentLength_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) return this;
+        if (!other.getBucket().isEmpty()) {
+          bucket_ = other.bucket_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUploadId().isEmpty()) {
+          uploadId_ = other.uploadId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getContentLength().isEmpty()) {
+          contentLength_ = other.contentLength_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bucket_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                uploadId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                contentLength_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object bucket_ = "";
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bucket.
+       */
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bytes for bucket.
+       */
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucket(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucket() {
+        bucket_ = getDefaultInstance().getBucket();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bytes for bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 2 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 2 [json_name = "key"];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 2 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 2 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 2 [json_name = "key"];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uploadId_ = "";
+      /**
+       * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+       * @return The uploadId.
+       */
+      public java.lang.String getUploadId() {
+        java.lang.Object ref = uploadId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uploadId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+       * @return The bytes for uploadId.
+       */
+      public com.google.protobuf.ByteString
+          getUploadIdBytes() {
+        java.lang.Object ref = uploadId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uploadId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+       * @param value The uploadId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uploadId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadId() {
+        uploadId_ = getDefaultInstance().getUploadId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string upload_id = 3 [json_name = "uploadId"];</code>
+       * @param value The bytes for uploadId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uploadId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentLength_ = "";
+      /**
+       * <code>string content_length = 4 [json_name = "contentLength"];</code>
+       * @return The contentLength.
+       */
+      public java.lang.String getContentLength() {
+        java.lang.Object ref = contentLength_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentLength_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string content_length = 4 [json_name = "contentLength"];</code>
+       * @return The bytes for contentLength.
+       */
+      public com.google.protobuf.ByteString
+          getContentLengthBytes() {
+        java.lang.Object ref = contentLength_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentLength_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string content_length = 4 [json_name = "contentLength"];</code>
+       * @param value The contentLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentLength(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentLength_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_length = 4 [json_name = "contentLength"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentLength() {
+        contentLength_ = getDefaultInstance().getContentLength();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_length = 4 [json_name = "contentLength"];</code>
+       * @param value The bytes for contentLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentLengthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentLength_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.ObjectLocation)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.ObjectLocation)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ObjectLocation>
+        PARSER = new com.google.protobuf.AbstractParser<ObjectLocation>() {
+      @java.lang.Override
+      public ObjectLocation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ObjectLocation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ObjectLocation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PutObjectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.PutObjectRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.PutObjectRequest}
+   */
+  public static final class PutObjectRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.PutObjectRequest)
+      PutObjectRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PutObjectRequest.newBuilder() to construct.
+    private PutObjectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PutObjectRequest() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PutObjectRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.PutObjectRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.PutObjectRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.PutObjectRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.PutObjectRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PutObjectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PutObjectRequest>() {
+      @java.lang.Override
+      public PutObjectRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PutObjectRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PutObjectRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PutObjectResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.PutObjectResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.PutObjectResponse}
+   */
+  public static final class PutObjectResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.PutObjectResponse)
+      PutObjectResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PutObjectResponse.newBuilder() to construct.
+    private PutObjectResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PutObjectResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PutObjectResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.PutObjectResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.PutObjectResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.PutObjectResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.PutObjectResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PutObjectResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PutObjectResponse>() {
+      @java.lang.Override
+      public PutObjectResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PutObjectResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PutObjectResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.PutObjectResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetObjectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.GetObjectRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.GetObjectRequest}
+   */
+  public static final class GetObjectRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.GetObjectRequest)
+      GetObjectRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetObjectRequest.newBuilder() to construct.
+    private GetObjectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetObjectRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetObjectRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.GetObjectRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.GetObjectRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.GetObjectRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.GetObjectRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetObjectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetObjectRequest>() {
+      @java.lang.Override
+      public GetObjectRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetObjectRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetObjectRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetObjectResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.GetObjectResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.GetObjectResponse}
+   */
+  public static final class GetObjectResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.GetObjectResponse)
+      GetObjectResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetObjectResponse.newBuilder() to construct.
+    private GetObjectResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetObjectResponse() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetObjectResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.Builder.class);
+    }
+
+    public static final int DATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!data_.isEmpty()) {
+        output.writeBytes(1, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse) obj;
+
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.GetObjectResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.GetObjectResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse.getDefaultInstance()) return this;
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.GetObjectResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.GetObjectResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetObjectResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetObjectResponse>() {
+      @java.lang.Override
+      public GetObjectResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetObjectResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetObjectResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.GetObjectResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeadObjectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.HeadObjectRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.HeadObjectRequest}
+   */
+  public static final class HeadObjectRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.HeadObjectRequest)
+      HeadObjectRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HeadObjectRequest.newBuilder() to construct.
+    private HeadObjectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HeadObjectRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HeadObjectRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.HeadObjectRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.HeadObjectRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.HeadObjectRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.HeadObjectRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HeadObjectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<HeadObjectRequest>() {
+      @java.lang.Override
+      public HeadObjectRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HeadObjectRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeadObjectRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeadObjectResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.HeadObjectResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string content_length = 1 [json_name = "contentLength"];</code>
+     * @return The contentLength.
+     */
+    java.lang.String getContentLength();
+    /**
+     * <code>string content_length = 1 [json_name = "contentLength"];</code>
+     * @return The bytes for contentLength.
+     */
+    com.google.protobuf.ByteString
+        getContentLengthBytes();
+
+    /**
+     * <code>bool exists = 2 [json_name = "exists"];</code>
+     * @return The exists.
+     */
+    boolean getExists();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.HeadObjectResponse}
+   */
+  public static final class HeadObjectResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.HeadObjectResponse)
+      HeadObjectResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HeadObjectResponse.newBuilder() to construct.
+    private HeadObjectResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HeadObjectResponse() {
+      contentLength_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HeadObjectResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.Builder.class);
+    }
+
+    public static final int CONTENT_LENGTH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contentLength_ = "";
+    /**
+     * <code>string content_length = 1 [json_name = "contentLength"];</code>
+     * @return The contentLength.
+     */
+    @java.lang.Override
+    public java.lang.String getContentLength() {
+      java.lang.Object ref = contentLength_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contentLength_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string content_length = 1 [json_name = "contentLength"];</code>
+     * @return The bytes for contentLength.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentLengthBytes() {
+      java.lang.Object ref = contentLength_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentLength_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXISTS_FIELD_NUMBER = 2;
+    private boolean exists_ = false;
+    /**
+     * <code>bool exists = 2 [json_name = "exists"];</code>
+     * @return The exists.
+     */
+    @java.lang.Override
+    public boolean getExists() {
+      return exists_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentLength_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contentLength_);
+      }
+      if (exists_ != false) {
+        output.writeBool(2, exists_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentLength_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contentLength_);
+      }
+      if (exists_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, exists_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse) obj;
+
+      if (!getContentLength()
+          .equals(other.getContentLength())) return false;
+      if (getExists()
+          != other.getExists()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTENT_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + getContentLength().hashCode();
+      hash = (37 * hash) + EXISTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExists());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.HeadObjectResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.HeadObjectResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contentLength_ = "";
+        exists_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contentLength_ = contentLength_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.exists_ = exists_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse.getDefaultInstance()) return this;
+        if (!other.getContentLength().isEmpty()) {
+          contentLength_ = other.contentLength_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getExists() != false) {
+          setExists(other.getExists());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contentLength_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                exists_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contentLength_ = "";
+      /**
+       * <code>string content_length = 1 [json_name = "contentLength"];</code>
+       * @return The contentLength.
+       */
+      public java.lang.String getContentLength() {
+        java.lang.Object ref = contentLength_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentLength_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string content_length = 1 [json_name = "contentLength"];</code>
+       * @return The bytes for contentLength.
+       */
+      public com.google.protobuf.ByteString
+          getContentLengthBytes() {
+        java.lang.Object ref = contentLength_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentLength_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string content_length = 1 [json_name = "contentLength"];</code>
+       * @param value The contentLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentLength(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentLength_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_length = 1 [json_name = "contentLength"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentLength() {
+        contentLength_ = getDefaultInstance().getContentLength();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_length = 1 [json_name = "contentLength"];</code>
+       * @param value The bytes for contentLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentLengthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentLength_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean exists_ ;
+      /**
+       * <code>bool exists = 2 [json_name = "exists"];</code>
+       * @return The exists.
+       */
+      @java.lang.Override
+      public boolean getExists() {
+        return exists_;
+      }
+      /**
+       * <code>bool exists = 2 [json_name = "exists"];</code>
+       * @param value The exists to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExists(boolean value) {
+
+        exists_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool exists = 2 [json_name = "exists"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExists() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        exists_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.HeadObjectResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.HeadObjectResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HeadObjectResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HeadObjectResponse>() {
+      @java.lang.Override
+      public HeadObjectResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HeadObjectResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeadObjectResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.HeadObjectResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InitMultiPartUploadRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest}
+   */
+  public static final class InitMultiPartUploadRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest)
+      InitMultiPartUploadRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InitMultiPartUploadRequest.newBuilder() to construct.
+    private InitMultiPartUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InitMultiPartUploadRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InitMultiPartUploadRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.InitMultiPartUploadRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InitMultiPartUploadRequest>
+        PARSER = new com.google.protobuf.AbstractParser<InitMultiPartUploadRequest>() {
+      @java.lang.Override
+      public InitMultiPartUploadRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InitMultiPartUploadRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InitMultiPartUploadRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InitMultiPartUploadResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+     * @return The uploadId.
+     */
+    java.lang.String getUploadId();
+    /**
+     * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+     * @return The bytes for uploadId.
+     */
+    com.google.protobuf.ByteString
+        getUploadIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse}
+   */
+  public static final class InitMultiPartUploadResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse)
+      InitMultiPartUploadResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InitMultiPartUploadResponse.newBuilder() to construct.
+    private InitMultiPartUploadResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InitMultiPartUploadResponse() {
+      uploadId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InitMultiPartUploadResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.Builder.class);
+    }
+
+    public static final int UPLOAD_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uploadId_ = "";
+    /**
+     * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+     * @return The uploadId.
+     */
+    @java.lang.Override
+    public java.lang.String getUploadId() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uploadId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+     * @return The bytes for uploadId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUploadIdBytes() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uploadId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uploadId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uploadId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uploadId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse) obj;
+
+      if (!getUploadId()
+          .equals(other.getUploadId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UPLOAD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUploadId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uploadId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uploadId_ = uploadId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse.getDefaultInstance()) return this;
+        if (!other.getUploadId().isEmpty()) {
+          uploadId_ = other.uploadId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uploadId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uploadId_ = "";
+      /**
+       * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+       * @return The uploadId.
+       */
+      public java.lang.String getUploadId() {
+        java.lang.Object ref = uploadId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uploadId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+       * @return The bytes for uploadId.
+       */
+      public com.google.protobuf.ByteString
+          getUploadIdBytes() {
+        java.lang.Object ref = uploadId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uploadId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+       * @param value The uploadId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uploadId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadId() {
+        uploadId_ = getDefaultInstance().getUploadId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string upload_id = 1 [json_name = "uploadId"];</code>
+       * @param value The bytes for uploadId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uploadId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.InitMultiPartUploadResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InitMultiPartUploadResponse>
+        PARSER = new com.google.protobuf.AbstractParser<InitMultiPartUploadResponse>() {
+      @java.lang.Override
+      public InitMultiPartUploadResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InitMultiPartUploadResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InitMultiPartUploadResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitMultiPartUploadResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadPartRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.UploadPartRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>int32 part_number = 3 [json_name = "partNumber"];</code>
+     * @return The partNumber.
+     */
+    int getPartNumber();
+
+    /**
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.UploadPartRequest}
+   */
+  public static final class UploadPartRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.UploadPartRequest)
+      UploadPartRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadPartRequest.newBuilder() to construct.
+    private UploadPartRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadPartRequest() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadPartRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    public static final int PART_NUMBER_FIELD_NUMBER = 3;
+    private int partNumber_ = 0;
+    /**
+     * <code>int32 part_number = 3 [json_name = "partNumber"];</code>
+     * @return The partNumber.
+     */
+    @java.lang.Override
+    public int getPartNumber() {
+      return partNumber_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      if (partNumber_ != 0) {
+        output.writeInt32(3, partNumber_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(4, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      if (partNumber_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, partNumber_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (getPartNumber()
+          != other.getPartNumber()) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (37 * hash) + PART_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getPartNumber();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.UploadPartRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.UploadPartRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        partNumber_ = 0;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.partNumber_ = partNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        if (other.getPartNumber() != 0) {
+          setPartNumber(other.getPartNumber());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 24: {
+                partNumber_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 24
+              case 34: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+
+      private int partNumber_ ;
+      /**
+       * <code>int32 part_number = 3 [json_name = "partNumber"];</code>
+       * @return The partNumber.
+       */
+      @java.lang.Override
+      public int getPartNumber() {
+        return partNumber_;
+      }
+      /**
+       * <code>int32 part_number = 3 [json_name = "partNumber"];</code>
+       * @param value The partNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartNumber(int value) {
+
+        partNumber_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 part_number = 3 [json_name = "partNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        partNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.UploadPartRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.UploadPartRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadPartRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UploadPartRequest>() {
+      @java.lang.Override
+      public UploadPartRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadPartRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadPartRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadPartResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.UploadPartResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string etag = 1 [json_name = "etag"];</code>
+     * @return The etag.
+     */
+    java.lang.String getEtag();
+    /**
+     * <code>string etag = 1 [json_name = "etag"];</code>
+     * @return The bytes for etag.
+     */
+    com.google.protobuf.ByteString
+        getEtagBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.UploadPartResponse}
+   */
+  public static final class UploadPartResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.UploadPartResponse)
+      UploadPartResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadPartResponse.newBuilder() to construct.
+    private UploadPartResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadPartResponse() {
+      etag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadPartResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.Builder.class);
+    }
+
+    public static final int ETAG_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object etag_ = "";
+    /**
+     * <code>string etag = 1 [json_name = "etag"];</code>
+     * @return The etag.
+     */
+    @java.lang.Override
+    public java.lang.String getEtag() {
+      java.lang.Object ref = etag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        etag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string etag = 1 [json_name = "etag"];</code>
+     * @return The bytes for etag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEtagBytes() {
+      java.lang.Object ref = etag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        etag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, etag_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, etag_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse) obj;
+
+      if (!getEtag()
+          .equals(other.getEtag())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ETAG_FIELD_NUMBER;
+      hash = (53 * hash) + getEtag().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.UploadPartResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.UploadPartResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        etag_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.etag_ = etag_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse.getDefaultInstance()) return this;
+        if (!other.getEtag().isEmpty()) {
+          etag_ = other.etag_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                etag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object etag_ = "";
+      /**
+       * <code>string etag = 1 [json_name = "etag"];</code>
+       * @return The etag.
+       */
+      public java.lang.String getEtag() {
+        java.lang.Object ref = etag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          etag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string etag = 1 [json_name = "etag"];</code>
+       * @return The bytes for etag.
+       */
+      public com.google.protobuf.ByteString
+          getEtagBytes() {
+        java.lang.Object ref = etag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          etag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string etag = 1 [json_name = "etag"];</code>
+       * @param value The etag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        etag_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string etag = 1 [json_name = "etag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEtag() {
+        etag_ = getDefaultInstance().getEtag();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string etag = 1 [json_name = "etag"];</code>
+       * @param value The bytes for etag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        etag_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.UploadPartResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.UploadPartResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadPartResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UploadPartResponse>() {
+      @java.lang.Override
+      public UploadPartResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadPartResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadPartResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.UploadPartResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CompletedPartOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.CompletedPart)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 part_number = 1 [json_name = "partNumber"];</code>
+     * @return The partNumber.
+     */
+    int getPartNumber();
+
+    /**
+     * <code>string etag = 2 [json_name = "etag"];</code>
+     * @return The etag.
+     */
+    java.lang.String getEtag();
+    /**
+     * <code>string etag = 2 [json_name = "etag"];</code>
+     * @return The bytes for etag.
+     */
+    com.google.protobuf.ByteString
+        getEtagBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.CompletedPart}
+   */
+  public static final class CompletedPart extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.CompletedPart)
+      CompletedPartOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CompletedPart.newBuilder() to construct.
+    private CompletedPart(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CompletedPart() {
+      etag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompletedPart();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompletedPart_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompletedPart_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder.class);
+    }
+
+    public static final int PART_NUMBER_FIELD_NUMBER = 1;
+    private int partNumber_ = 0;
+    /**
+     * <code>int32 part_number = 1 [json_name = "partNumber"];</code>
+     * @return The partNumber.
+     */
+    @java.lang.Override
+    public int getPartNumber() {
+      return partNumber_;
+    }
+
+    public static final int ETAG_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object etag_ = "";
+    /**
+     * <code>string etag = 2 [json_name = "etag"];</code>
+     * @return The etag.
+     */
+    @java.lang.Override
+    public java.lang.String getEtag() {
+      java.lang.Object ref = etag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        etag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string etag = 2 [json_name = "etag"];</code>
+     * @return The bytes for etag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEtagBytes() {
+      java.lang.Object ref = etag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        etag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (partNumber_ != 0) {
+        output.writeInt32(1, partNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, etag_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (partNumber_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, partNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, etag_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart) obj;
+
+      if (getPartNumber()
+          != other.getPartNumber()) return false;
+      if (!getEtag()
+          .equals(other.getEtag())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PART_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getPartNumber();
+      hash = (37 * hash) + ETAG_FIELD_NUMBER;
+      hash = (53 * hash) + getEtag().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.CompletedPart}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.CompletedPart)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompletedPart_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompletedPart_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        partNumber_ = 0;
+        etag_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompletedPart_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.partNumber_ = partNumber_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.etag_ = etag_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.getDefaultInstance()) return this;
+        if (other.getPartNumber() != 0) {
+          setPartNumber(other.getPartNumber());
+        }
+        if (!other.getEtag().isEmpty()) {
+          etag_ = other.etag_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                partNumber_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                etag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int partNumber_ ;
+      /**
+       * <code>int32 part_number = 1 [json_name = "partNumber"];</code>
+       * @return The partNumber.
+       */
+      @java.lang.Override
+      public int getPartNumber() {
+        return partNumber_;
+      }
+      /**
+       * <code>int32 part_number = 1 [json_name = "partNumber"];</code>
+       * @param value The partNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartNumber(int value) {
+
+        partNumber_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 part_number = 1 [json_name = "partNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        partNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object etag_ = "";
+      /**
+       * <code>string etag = 2 [json_name = "etag"];</code>
+       * @return The etag.
+       */
+      public java.lang.String getEtag() {
+        java.lang.Object ref = etag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          etag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string etag = 2 [json_name = "etag"];</code>
+       * @return The bytes for etag.
+       */
+      public com.google.protobuf.ByteString
+          getEtagBytes() {
+        java.lang.Object ref = etag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          etag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string etag = 2 [json_name = "etag"];</code>
+       * @param value The etag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        etag_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string etag = 2 [json_name = "etag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEtag() {
+        etag_ = getDefaultInstance().getEtag();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string etag = 2 [json_name = "etag"];</code>
+       * @param value The bytes for etag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        etag_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.CompletedPart)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.CompletedPart)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CompletedPart>
+        PARSER = new com.google.protobuf.AbstractParser<CompletedPart>() {
+      @java.lang.Override
+      public CompletedPart parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CompletedPart> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CompletedPart> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CompleteMultiPartUploadRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    java.util.List<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart> 
+        getCompletedPartsList();
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart getCompletedParts(int index);
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    int getCompletedPartsCount();
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    java.util.List<? extends com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder> 
+        getCompletedPartsOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder getCompletedPartsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest}
+   */
+  public static final class CompleteMultiPartUploadRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest)
+      CompleteMultiPartUploadRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CompleteMultiPartUploadRequest.newBuilder() to construct.
+    private CompleteMultiPartUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CompleteMultiPartUploadRequest() {
+      completedParts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompleteMultiPartUploadRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    public static final int COMPLETED_PARTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart> completedParts_;
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart> getCompletedPartsList() {
+      return completedParts_;
+    }
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder> 
+        getCompletedPartsOrBuilderList() {
+      return completedParts_;
+    }
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    @java.lang.Override
+    public int getCompletedPartsCount() {
+      return completedParts_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart getCompletedParts(int index) {
+      return completedParts_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder getCompletedPartsOrBuilder(
+        int index) {
+      return completedParts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      for (int i = 0; i < completedParts_.size(); i++) {
+        output.writeMessage(2, completedParts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      for (int i = 0; i < completedParts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, completedParts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getCompletedPartsList()
+          .equals(other.getCompletedPartsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      if (getCompletedPartsCount() > 0) {
+        hash = (37 * hash) + COMPLETED_PARTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletedPartsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        if (completedPartsBuilder_ == null) {
+          completedParts_ = java.util.Collections.emptyList();
+        } else {
+          completedParts_ = null;
+          completedPartsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest result) {
+        if (completedPartsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            completedParts_ = java.util.Collections.unmodifiableList(completedParts_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.completedParts_ = completedParts_;
+        } else {
+          result.completedParts_ = completedPartsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        if (completedPartsBuilder_ == null) {
+          if (!other.completedParts_.isEmpty()) {
+            if (completedParts_.isEmpty()) {
+              completedParts_ = other.completedParts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCompletedPartsIsMutable();
+              completedParts_.addAll(other.completedParts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.completedParts_.isEmpty()) {
+            if (completedPartsBuilder_.isEmpty()) {
+              completedPartsBuilder_.dispose();
+              completedPartsBuilder_ = null;
+              completedParts_ = other.completedParts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              completedPartsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCompletedPartsFieldBuilder() : null;
+            } else {
+              completedPartsBuilder_.addAllMessages(other.completedParts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart m =
+                    input.readMessage(
+                        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.parser(),
+                        extensionRegistry);
+                if (completedPartsBuilder_ == null) {
+                  ensureCompletedPartsIsMutable();
+                  completedParts_.add(m);
+                } else {
+                  completedPartsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+
+      private java.util.List<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart> completedParts_ =
+        java.util.Collections.emptyList();
+      private void ensureCompletedPartsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          completedParts_ = new java.util.ArrayList<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart>(completedParts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder> completedPartsBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public java.util.List<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart> getCompletedPartsList() {
+        if (completedPartsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(completedParts_);
+        } else {
+          return completedPartsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public int getCompletedPartsCount() {
+        if (completedPartsBuilder_ == null) {
+          return completedParts_.size();
+        } else {
+          return completedPartsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart getCompletedParts(int index) {
+        if (completedPartsBuilder_ == null) {
+          return completedParts_.get(index);
+        } else {
+          return completedPartsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder setCompletedParts(
+          int index, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart value) {
+        if (completedPartsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompletedPartsIsMutable();
+          completedParts_.set(index, value);
+          onChanged();
+        } else {
+          completedPartsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder setCompletedParts(
+          int index, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder builderForValue) {
+        if (completedPartsBuilder_ == null) {
+          ensureCompletedPartsIsMutable();
+          completedParts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          completedPartsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder addCompletedParts(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart value) {
+        if (completedPartsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompletedPartsIsMutable();
+          completedParts_.add(value);
+          onChanged();
+        } else {
+          completedPartsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder addCompletedParts(
+          int index, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart value) {
+        if (completedPartsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompletedPartsIsMutable();
+          completedParts_.add(index, value);
+          onChanged();
+        } else {
+          completedPartsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder addCompletedParts(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder builderForValue) {
+        if (completedPartsBuilder_ == null) {
+          ensureCompletedPartsIsMutable();
+          completedParts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          completedPartsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder addCompletedParts(
+          int index, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder builderForValue) {
+        if (completedPartsBuilder_ == null) {
+          ensureCompletedPartsIsMutable();
+          completedParts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          completedPartsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder addAllCompletedParts(
+          java.lang.Iterable<? extends com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart> values) {
+        if (completedPartsBuilder_ == null) {
+          ensureCompletedPartsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, completedParts_);
+          onChanged();
+        } else {
+          completedPartsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder clearCompletedParts() {
+        if (completedPartsBuilder_ == null) {
+          completedParts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          completedPartsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public Builder removeCompletedParts(int index) {
+        if (completedPartsBuilder_ == null) {
+          ensureCompletedPartsIsMutable();
+          completedParts_.remove(index);
+          onChanged();
+        } else {
+          completedPartsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder getCompletedPartsBuilder(
+          int index) {
+        return getCompletedPartsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder getCompletedPartsOrBuilder(
+          int index) {
+        if (completedPartsBuilder_ == null) {
+          return completedParts_.get(index);  } else {
+          return completedPartsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder> 
+           getCompletedPartsOrBuilderList() {
+        if (completedPartsBuilder_ != null) {
+          return completedPartsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(completedParts_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder addCompletedPartsBuilder() {
+        return getCompletedPartsFieldBuilder().addBuilder(
+            com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder addCompletedPartsBuilder(
+          int index) {
+        return getCompletedPartsFieldBuilder().addBuilder(
+            index, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.dataproxy.services.v2.CompletedPart completed_parts = 2 [json_name = "completedParts"];</code>
+       */
+      public java.util.List<com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder> 
+           getCompletedPartsBuilderList() {
+        return getCompletedPartsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder> 
+          getCompletedPartsFieldBuilder() {
+        if (completedPartsBuilder_ == null) {
+          completedPartsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPart.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompletedPartOrBuilder>(
+                  completedParts_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          completedParts_ = null;
+        }
+        return completedPartsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CompleteMultiPartUploadRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CompleteMultiPartUploadRequest>() {
+      @java.lang.Override
+      public CompleteMultiPartUploadRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CompleteMultiPartUploadRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CompleteMultiPartUploadRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CompleteMultiPartUploadResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse}
+   */
+  public static final class CompleteMultiPartUploadResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse)
+      CompleteMultiPartUploadResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CompleteMultiPartUploadResponse.newBuilder() to construct.
+    private CompleteMultiPartUploadResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CompleteMultiPartUploadResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompleteMultiPartUploadResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.CompleteMultiPartUploadResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CompleteMultiPartUploadResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CompleteMultiPartUploadResponse>() {
+      @java.lang.Override
+      public CompleteMultiPartUploadResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CompleteMultiPartUploadResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CompleteMultiPartUploadResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CompleteMultiPartUploadResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateBucketRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.CreateBucketRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    java.lang.String getBucket();
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    com.google.protobuf.ByteString
+        getBucketBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.CreateBucketRequest}
+   */
+  public static final class CreateBucketRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.CreateBucketRequest)
+      CreateBucketRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateBucketRequest.newBuilder() to construct.
+    private CreateBucketRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateBucketRequest() {
+      bucket_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateBucketRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.Builder.class);
+    }
+
+    public static final int BUCKET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bucket_ = "";
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    @java.lang.Override
+    public java.lang.String getBucket() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBucketBytes() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest) obj;
+
+      if (!getBucket()
+          .equals(other.getBucket())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getBucket().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.CreateBucketRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.CreateBucketRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bucket_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bucket_ = bucket_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest.getDefaultInstance()) return this;
+        if (!other.getBucket().isEmpty()) {
+          bucket_ = other.bucket_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bucket_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object bucket_ = "";
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bucket.
+       */
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bytes for bucket.
+       */
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucket(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucket() {
+        bucket_ = getDefaultInstance().getBucket();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bytes for bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.CreateBucketRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.CreateBucketRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateBucketRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateBucketRequest>() {
+      @java.lang.Override
+      public CreateBucketRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateBucketRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateBucketRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateBucketResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.CreateBucketResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.CreateBucketResponse}
+   */
+  public static final class CreateBucketResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.CreateBucketResponse)
+      CreateBucketResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateBucketResponse.newBuilder() to construct.
+    private CreateBucketResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateBucketResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateBucketResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.CreateBucketResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.CreateBucketResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.CreateBucketResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.CreateBucketResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateBucketResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CreateBucketResponse>() {
+      @java.lang.Override
+      public CreateBucketResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateBucketResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateBucketResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.CreateBucketResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteBucketRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.DeleteBucketRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    java.lang.String getBucket();
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    com.google.protobuf.ByteString
+        getBucketBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteBucketRequest}
+   */
+  public static final class DeleteBucketRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.DeleteBucketRequest)
+      DeleteBucketRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteBucketRequest.newBuilder() to construct.
+    private DeleteBucketRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteBucketRequest() {
+      bucket_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBucketRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.Builder.class);
+    }
+
+    public static final int BUCKET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bucket_ = "";
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bucket.
+     */
+    @java.lang.Override
+    public java.lang.String getBucket() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bucket = 1 [json_name = "bucket"];</code>
+     * @return The bytes for bucket.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBucketBytes() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest) obj;
+
+      if (!getBucket()
+          .equals(other.getBucket())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getBucket().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteBucketRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.DeleteBucketRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bucket_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bucket_ = bucket_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest.getDefaultInstance()) return this;
+        if (!other.getBucket().isEmpty()) {
+          bucket_ = other.bucket_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bucket_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object bucket_ = "";
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bucket.
+       */
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return The bytes for bucket.
+       */
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucket(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucket() {
+        bucket_ = getDefaultInstance().getBucket();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bucket = 1 [json_name = "bucket"];</code>
+       * @param value The bytes for bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bucket_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.DeleteBucketRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.DeleteBucketRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteBucketRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBucketRequest>() {
+      @java.lang.Override
+      public DeleteBucketRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteBucketRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteBucketRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteBucketResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.DeleteBucketResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteBucketResponse}
+   */
+  public static final class DeleteBucketResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.DeleteBucketResponse)
+      DeleteBucketResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteBucketResponse.newBuilder() to construct.
+    private DeleteBucketResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteBucketResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBucketResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteBucketResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.DeleteBucketResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.DeleteBucketResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.DeleteBucketResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteBucketResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBucketResponse>() {
+      @java.lang.Override
+      public DeleteBucketResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteBucketResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteBucketResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteBucketResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteObjectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.DeleteObjectRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteObjectRequest}
+   */
+  public static final class DeleteObjectRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.DeleteObjectRequest)
+      DeleteObjectRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteObjectRequest.newBuilder() to construct.
+    private DeleteObjectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteObjectRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteObjectRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteObjectRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.DeleteObjectRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.DeleteObjectRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.DeleteObjectRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteObjectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteObjectRequest>() {
+      @java.lang.Override
+      public DeleteObjectRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteObjectRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteObjectRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteObjectResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.DeleteObjectResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteObjectResponse}
+   */
+  public static final class DeleteObjectResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.DeleteObjectResponse)
+      DeleteObjectResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteObjectResponse.newBuilder() to construct.
+    private DeleteObjectResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteObjectResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteObjectResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.DeleteObjectResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.DeleteObjectResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.DeleteObjectResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.DeleteObjectResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteObjectResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteObjectResponse>() {
+      @java.lang.Override
+      public DeleteObjectResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteObjectResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteObjectResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.DeleteObjectResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InitLocationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.InitLocationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string object_name = 1 [json_name = "objectName"];</code>
+     * @return The objectName.
+     */
+    java.lang.String getObjectName();
+    /**
+     * <code>string object_name = 1 [json_name = "objectName"];</code>
+     * @return The bytes for objectName.
+     */
+    com.google.protobuf.ByteString
+        getObjectNameBytes();
+
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     * @return The size.
+     */
+    long getSize();
+
+    /**
+     * <code>bool is_temporary = 3 [json_name = "isTemporary"];</code>
+     * @return The isTemporary.
+     */
+    boolean getIsTemporary();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.InitLocationRequest}
+   */
+  public static final class InitLocationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.InitLocationRequest)
+      InitLocationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InitLocationRequest.newBuilder() to construct.
+    private InitLocationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InitLocationRequest() {
+      objectName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InitLocationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.Builder.class);
+    }
+
+    public static final int OBJECT_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object objectName_ = "";
+    /**
+     * <code>string object_name = 1 [json_name = "objectName"];</code>
+     * @return The objectName.
+     */
+    @java.lang.Override
+    public java.lang.String getObjectName() {
+      java.lang.Object ref = objectName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        objectName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string object_name = 1 [json_name = "objectName"];</code>
+     * @return The bytes for objectName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getObjectNameBytes() {
+      java.lang.Object ref = objectName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIZE_FIELD_NUMBER = 2;
+    private long size_ = 0L;
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     * @return The size.
+     */
+    @java.lang.Override
+    public long getSize() {
+      return size_;
+    }
+
+    public static final int IS_TEMPORARY_FIELD_NUMBER = 3;
+    private boolean isTemporary_ = false;
+    /**
+     * <code>bool is_temporary = 3 [json_name = "isTemporary"];</code>
+     * @return The isTemporary.
+     */
+    @java.lang.Override
+    public boolean getIsTemporary() {
+      return isTemporary_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, objectName_);
+      }
+      if (size_ != 0L) {
+        output.writeInt64(2, size_);
+      }
+      if (isTemporary_ != false) {
+        output.writeBool(3, isTemporary_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, objectName_);
+      }
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, size_);
+      }
+      if (isTemporary_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isTemporary_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest) obj;
+
+      if (!getObjectName()
+          .equals(other.getObjectName())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (getIsTemporary()
+          != other.getIsTemporary()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OBJECT_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getObjectName().hashCode();
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
+      hash = (37 * hash) + IS_TEMPORARY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsTemporary());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.InitLocationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.InitLocationRequest)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        objectName_ = "";
+        size_ = 0L;
+        isTemporary_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.objectName_ = objectName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.size_ = size_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isTemporary_ = isTemporary_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest.getDefaultInstance()) return this;
+        if (!other.getObjectName().isEmpty()) {
+          objectName_ = other.objectName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
+        }
+        if (other.getIsTemporary() != false) {
+          setIsTemporary(other.getIsTemporary());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                objectName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                size_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                isTemporary_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object objectName_ = "";
+      /**
+       * <code>string object_name = 1 [json_name = "objectName"];</code>
+       * @return The objectName.
+       */
+      public java.lang.String getObjectName() {
+        java.lang.Object ref = objectName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string object_name = 1 [json_name = "objectName"];</code>
+       * @return The bytes for objectName.
+       */
+      public com.google.protobuf.ByteString
+          getObjectNameBytes() {
+        java.lang.Object ref = objectName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string object_name = 1 [json_name = "objectName"];</code>
+       * @param value The objectName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        objectName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string object_name = 1 [json_name = "objectName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearObjectName() {
+        objectName_ = getDefaultInstance().getObjectName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string object_name = 1 [json_name = "objectName"];</code>
+       * @param value The bytes for objectName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        objectName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long size_ ;
+      /**
+       * <code>int64 size = 2 [json_name = "size"];</code>
+       * @return The size.
+       */
+      @java.lang.Override
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <code>int64 size = 2 [json_name = "size"];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSize(long value) {
+
+        size_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 size = 2 [json_name = "size"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSize() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        size_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean isTemporary_ ;
+      /**
+       * <code>bool is_temporary = 3 [json_name = "isTemporary"];</code>
+       * @return The isTemporary.
+       */
+      @java.lang.Override
+      public boolean getIsTemporary() {
+        return isTemporary_;
+      }
+      /**
+       * <code>bool is_temporary = 3 [json_name = "isTemporary"];</code>
+       * @param value The isTemporary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsTemporary(boolean value) {
+
+        isTemporary_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_temporary = 3 [json_name = "isTemporary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsTemporary() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isTemporary_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.InitLocationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.InitLocationRequest)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InitLocationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<InitLocationRequest>() {
+      @java.lang.Override
+      public InitLocationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InitLocationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InitLocationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InitLocationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.dataproxy.services.v2.InitLocationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation();
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.dataproxy.services.v2.InitLocationResponse}
+   */
+  public static final class InitLocationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.dataproxy.services.v2.InitLocationResponse)
+      InitLocationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InitLocationResponse.newBuilder() to construct.
+    private InitLocationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InitLocationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InitLocationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse other = (com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse) obj;
+
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.dataproxy.services.v2.InitLocationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.dataproxy.services.v2.InitLocationResponse)
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.class, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse getDefaultInstanceForType() {
+        return com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse build() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse buildPartial() {
+        com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse result = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse) {
+          return mergeFrom((com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse other) {
+        if (other == com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> locationBuilder_;
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            location_ != null &&
+            location_ != com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <code>.aruna.api.dataproxy.services.v2.ObjectLocation location = 1 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocation.Builder, com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.ObjectLocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.dataproxy.services.v2.InitLocationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.dataproxy.services.v2.InitLocationResponse)
+    private static final com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse();
+    }
+
+    public static com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InitLocationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<InitLocationResponse>() {
+      @java.lang.Override
+      public InitLocationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InitLocationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InitLocationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.DataproxyServiceProto.InitLocationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_dataproxy_services_v2_DataProxyInfo_descriptor;
   private static final 
@@ -10648,6 +22953,116 @@ public final class DataproxyServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_dataproxy_services_v2_ReplicationStatusResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_CompletedPart_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_CompletedPart_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10699,43 +23114,119 @@ public final class DataproxyServiceProto {
       "icationStatusResponse\022J\n\006status\030\001 \001(\01622." +
       "aruna.api.dataproxy.services.v2.Replicat" +
       "ionStatusR\006status\022\030\n\007message\030\002 \001(\tR\007mess" +
-      "age*\266\001\n\021ReplicationStatus\022\"\n\036REPLICATION" +
-      "_STATUS_UNSPECIFIED\020\000\022\036\n\032REPLICATION_STA" +
-      "TUS_PENDING\020\001\022\036\n\032REPLICATION_STATUS_RUNN" +
-      "ING\020\002\022\037\n\033REPLICATION_STATUS_FINISHED\020\003\022\034" +
-      "\n\030REPLICATION_STATUS_ERROR\020\0042\255\002\n\020Datapro" +
-      "xyService\022\217\001\n\022RequestReplication\022:.aruna" +
-      ".api.dataproxy.services.v2.RequestReplic" +
-      "ationRequest\032;.aruna.api.dataproxy.servi" +
-      "ces.v2.RequestReplicationResponse\"\000\022\206\001\n\017" +
-      "InitReplication\0227.aruna.api.dataproxy.se" +
-      "rvices.v2.InitReplicationRequest\0328.aruna" +
-      ".api.dataproxy.services.v2.InitReplicati" +
-      "onResponse\"\0002\217\005\n\024DataproxyUserService\022\235\001" +
-      "\n\016GetCredentials\0226.aruna.api.dataproxy.s" +
-      "ervices.v2.GetCredentialsRequest\0327.aruna" +
-      ".api.dataproxy.services.v2.GetCredential" +
-      "sResponse\"\032\202\323\344\223\002\024\"\017/v2/credentials:\001*\022\225\001" +
-      "\n\013PushReplica\0223.aruna.api.dataproxy.serv" +
-      "ices.v2.PushReplicaRequest\0324.aruna.api.d" +
-      "ataproxy.services.v2.PushReplicaResponse" +
-      "\"\033\202\323\344\223\002\025\"\020/v2/replica/push:\001*\022\225\001\n\013PullRe" +
-      "plica\0223.aruna.api.dataproxy.services.v2." +
-      "PullReplicaRequest\0324.aruna.api.dataproxy" +
-      ".services.v2.PullReplicaResponse\"\033\202\323\344\223\002\025" +
-      "\"\020/v2/replica/pull:\001*\022\246\001\n\021ReplicationSta" +
-      "tus\0229.aruna.api.dataproxy.services.v2.Re" +
-      "plicationStatusRequest\032:.aruna.api.datap" +
-      "roxy.services.v2.ReplicationStatusRespon" +
-      "se\"\032\202\323\344\223\002\024\022\022/v2/replica/statusB\235\002\n#com.a" +
-      "runa.api.dataproxy.services.v2B\025Dataprox" +
-      "yServiceProtoP\000Z>github.com/ArunaStorage" +
-      "/go-api/aruna/api/dataproxy/services/v2\242" +
-      "\002\004AADS\252\002\037Aruna.Api.Dataproxy.Services.V2" +
-      "\312\002\037Aruna\\Api\\Dataproxy\\Services\\V2\342\002+Aru" +
-      "na\\Api\\Dataproxy\\Services\\V2\\GPBMetadata" +
-      "\352\002#Aruna::Api::Dataproxy::Services::V2b\006" +
-      "proto3"
+      "age\"~\n\016ObjectLocation\022\026\n\006bucket\030\001 \001(\tR\006b" +
+      "ucket\022\020\n\003key\030\002 \001(\tR\003key\022\033\n\tupload_id\030\003 \001" +
+      "(\tR\010uploadId\022%\n\016content_length\030\004 \001(\tR\rco" +
+      "ntentLength\"s\n\020PutObjectRequest\022K\n\010locat" +
+      "ion\030\001 \001(\0132/.aruna.api.dataproxy.services" +
+      ".v2.ObjectLocationR\010location\022\022\n\004data\030\002 \001" +
+      "(\014R\004data\"\023\n\021PutObjectResponse\"_\n\020GetObje" +
+      "ctRequest\022K\n\010location\030\001 \001(\0132/.aruna.api." +
+      "dataproxy.services.v2.ObjectLocationR\010lo" +
+      "cation\"\'\n\021GetObjectResponse\022\022\n\004data\030\001 \001(" +
+      "\014R\004data\"`\n\021HeadObjectRequest\022K\n\010location" +
+      "\030\001 \001(\0132/.aruna.api.dataproxy.services.v2" +
+      ".ObjectLocationR\010location\"S\n\022HeadObjectR" +
+      "esponse\022%\n\016content_length\030\001 \001(\tR\rcontent" +
+      "Length\022\026\n\006exists\030\002 \001(\010R\006exists\"i\n\032InitMu" +
+      "ltiPartUploadRequest\022K\n\010location\030\001 \001(\0132/" +
+      ".aruna.api.dataproxy.services.v2.ObjectL" +
+      "ocationR\010location\":\n\033InitMultiPartUpload" +
+      "Response\022\033\n\tupload_id\030\001 \001(\tR\010uploadId\"\225\001" +
+      "\n\021UploadPartRequest\022K\n\010location\030\001 \001(\0132/." +
+      "aruna.api.dataproxy.services.v2.ObjectLo" +
+      "cationR\010location\022\037\n\013part_number\030\003 \001(\005R\np" +
+      "artNumber\022\022\n\004data\030\004 \001(\014R\004data\"(\n\022UploadP" +
+      "artResponse\022\022\n\004etag\030\001 \001(\tR\004etag\"D\n\rCompl" +
+      "etedPart\022\037\n\013part_number\030\001 \001(\005R\npartNumbe" +
+      "r\022\022\n\004etag\030\002 \001(\tR\004etag\"\306\001\n\036CompleteMultiP" +
+      "artUploadRequest\022K\n\010location\030\001 \001(\0132/.aru" +
+      "na.api.dataproxy.services.v2.ObjectLocat" +
+      "ionR\010location\022W\n\017completed_parts\030\002 \003(\0132." +
+      ".aruna.api.dataproxy.services.v2.Complet" +
+      "edPartR\016completedParts\"!\n\037CompleteMultiP" +
+      "artUploadResponse\"-\n\023CreateBucketRequest" +
+      "\022\026\n\006bucket\030\001 \001(\tR\006bucket\"\026\n\024CreateBucket" +
+      "Response\"-\n\023DeleteBucketRequest\022\026\n\006bucke" +
+      "t\030\001 \001(\tR\006bucket\"\026\n\024DeleteBucketResponse\"" +
+      "b\n\023DeleteObjectRequest\022K\n\010location\030\001 \001(\013" +
+      "2/.aruna.api.dataproxy.services.v2.Objec" +
+      "tLocationR\010location\"\026\n\024DeleteObjectRespo" +
+      "nse\"m\n\023InitLocationRequest\022\037\n\013object_nam" +
+      "e\030\001 \001(\tR\nobjectName\022\022\n\004size\030\002 \001(\003R\004size\022" +
+      "!\n\014is_temporary\030\003 \001(\010R\013isTemporary\"c\n\024In" +
+      "itLocationResponse\022K\n\010location\030\001 \001(\0132/.a" +
+      "runa.api.dataproxy.services.v2.ObjectLoc" +
+      "ationR\010location*\266\001\n\021ReplicationStatus\022\"\n" +
+      "\036REPLICATION_STATUS_UNSPECIFIED\020\000\022\036\n\032REP" +
+      "LICATION_STATUS_PENDING\020\001\022\036\n\032REPLICATION" +
+      "_STATUS_RUNNING\020\002\022\037\n\033REPLICATION_STATUS_" +
+      "FINISHED\020\003\022\034\n\030REPLICATION_STATUS_ERROR\020\004" +
+      "2\255\002\n\020DataproxyService\022\217\001\n\022RequestReplica" +
+      "tion\022:.aruna.api.dataproxy.services.v2.R" +
+      "equestReplicationRequest\032;.aruna.api.dat" +
+      "aproxy.services.v2.RequestReplicationRes" +
+      "ponse\"\000\022\206\001\n\017InitReplication\0227.aruna.api." +
+      "dataproxy.services.v2.InitReplicationReq" +
+      "uest\0328.aruna.api.dataproxy.services.v2.I" +
+      "nitReplicationResponse\"\0002\257\n\n\027DataproxyBa" +
+      "ckendService\022v\n\tPutObject\0221.aruna.api.da" +
+      "taproxy.services.v2.PutObjectRequest\0322.a" +
+      "runa.api.dataproxy.services.v2.PutObject" +
+      "Response\"\000(\001\022v\n\tGetObject\0221.aruna.api.da" +
+      "taproxy.services.v2.GetObjectRequest\0322.a" +
+      "runa.api.dataproxy.services.v2.GetObject" +
+      "Response\"\0000\001\022w\n\nHeadObject\0222.aruna.api.d" +
+      "ataproxy.services.v2.HeadObjectRequest\0323" +
+      ".aruna.api.dataproxy.services.v2.HeadObj" +
+      "ectResponse\"\000\022\222\001\n\023InitMultiPartUpload\022;." +
+      "aruna.api.dataproxy.services.v2.InitMult" +
+      "iPartUploadRequest\032<.aruna.api.dataproxy" +
+      ".services.v2.InitMultiPartUploadResponse" +
+      "\"\000\022y\n\nUploadPart\0222.aruna.api.dataproxy.s" +
+      "ervices.v2.UploadPartRequest\0323.aruna.api" +
+      ".dataproxy.services.v2.UploadPartRespons" +
+      "e\"\000(\001\022\236\001\n\027CompleteMultiPartUpload\022?.arun" +
+      "a.api.dataproxy.services.v2.CompleteMult" +
+      "iPartUploadRequest\032@.aruna.api.dataproxy" +
+      ".services.v2.CompleteMultiPartUploadResp" +
+      "onse\"\000\022}\n\014CreateBucket\0224.aruna.api.datap" +
+      "roxy.services.v2.CreateBucketRequest\0325.a" +
+      "runa.api.dataproxy.services.v2.CreateBuc" +
+      "ketResponse\"\000\022}\n\014DeleteBucket\0224.aruna.ap" +
+      "i.dataproxy.services.v2.DeleteBucketRequ" +
+      "est\0325.aruna.api.dataproxy.services.v2.De" +
+      "leteBucketResponse\"\000\022}\n\014DeleteObject\0224.a" +
+      "runa.api.dataproxy.services.v2.DeleteObj" +
+      "ectRequest\0325.aruna.api.dataproxy.service" +
+      "s.v2.DeleteObjectResponse\"\000\022}\n\014InitLocat" +
+      "ion\0224.aruna.api.dataproxy.services.v2.In" +
+      "itLocationRequest\0325.aruna.api.dataproxy." +
+      "services.v2.InitLocationResponse\"\0002\217\005\n\024D" +
+      "ataproxyUserService\022\235\001\n\016GetCredentials\0226" +
+      ".aruna.api.dataproxy.services.v2.GetCred" +
+      "entialsRequest\0327.aruna.api.dataproxy.ser" +
+      "vices.v2.GetCredentialsResponse\"\032\202\323\344\223\002\024\"" +
+      "\017/v2/credentials:\001*\022\225\001\n\013PushReplica\0223.ar" +
+      "una.api.dataproxy.services.v2.PushReplic" +
+      "aRequest\0324.aruna.api.dataproxy.services." +
+      "v2.PushReplicaResponse\"\033\202\323\344\223\002\025\"\020/v2/repl" +
+      "ica/push:\001*\022\225\001\n\013PullReplica\0223.aruna.api." +
+      "dataproxy.services.v2.PullReplicaRequest" +
+      "\0324.aruna.api.dataproxy.services.v2.PullR" +
+      "eplicaResponse\"\033\202\323\344\223\002\025\"\020/v2/replica/pull" +
+      ":\001*\022\246\001\n\021ReplicationStatus\0229.aruna.api.da" +
+      "taproxy.services.v2.ReplicationStatusReq" +
+      "uest\032:.aruna.api.dataproxy.services.v2.R" +
+      "eplicationStatusResponse\"\032\202\323\344\223\002\024\022\022/v2/re" +
+      "plica/statusB\235\002\n#com.aruna.api.dataproxy" +
+      ".services.v2B\025DataproxyServiceProtoP\000Z>g" +
+      "ithub.com/ArunaStorage/go-api/aruna/api/" +
+      "dataproxy/services/v2\242\002\004AADS\252\002\037Aruna.Api" +
+      ".Dataproxy.Services.V2\312\002\037Aruna\\Api\\Datap" +
+      "roxy\\Services\\V2\342\002+Aruna\\Api\\Dataproxy\\S" +
+      "ervices\\V2\\GPBMetadata\352\002#Aruna::Api::Dat" +
+      "aproxy::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10838,6 +23329,138 @@ public final class DataproxyServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_dataproxy_services_v2_ReplicationStatusResponse_descriptor,
         new java.lang.String[] { "Status", "Message", });
+    internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_ObjectLocation_descriptor,
+        new java.lang.String[] { "Bucket", "Key", "UploadId", "ContentLength", });
+    internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_PutObjectRequest_descriptor,
+        new java.lang.String[] { "Location", "Data", });
+    internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_PutObjectResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_GetObjectRequest_descriptor,
+        new java.lang.String[] { "Location", });
+    internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_GetObjectResponse_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_HeadObjectRequest_descriptor,
+        new java.lang.String[] { "Location", });
+    internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_HeadObjectResponse_descriptor,
+        new java.lang.String[] { "ContentLength", "Exists", });
+    internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadRequest_descriptor,
+        new java.lang.String[] { "Location", });
+    internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_InitMultiPartUploadResponse_descriptor,
+        new java.lang.String[] { "UploadId", });
+    internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_UploadPartRequest_descriptor,
+        new java.lang.String[] { "Location", "PartNumber", "Data", });
+    internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_UploadPartResponse_descriptor,
+        new java.lang.String[] { "Etag", });
+    internal_static_aruna_api_dataproxy_services_v2_CompletedPart_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_aruna_api_dataproxy_services_v2_CompletedPart_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_CompletedPart_descriptor,
+        new java.lang.String[] { "PartNumber", "Etag", });
+    internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadRequest_descriptor,
+        new java.lang.String[] { "Location", "CompletedParts", });
+    internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_CompleteMultiPartUploadResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_CreateBucketRequest_descriptor,
+        new java.lang.String[] { "Bucket", });
+    internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_CreateBucketResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_DeleteBucketRequest_descriptor,
+        new java.lang.String[] { "Bucket", });
+    internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_DeleteBucketResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_DeleteObjectRequest_descriptor,
+        new java.lang.String[] { "Location", });
+    internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_DeleteObjectResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_InitLocationRequest_descriptor,
+        new java.lang.String[] { "ObjectName", "Size", "IsTemporary", });
+    internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_dataproxy_services_v2_InitLocationResponse_descriptor,
+        new java.lang.String[] { "Location", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

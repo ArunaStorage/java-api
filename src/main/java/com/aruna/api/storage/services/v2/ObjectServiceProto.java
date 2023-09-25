@@ -8874,7 +8874,7 @@ public final class ObjectServiceProto {
 
     /**
      * <pre>
-     * 
+     * object description
      * </pre>
      *
      * <code>optional string description = 3 [json_name = "description"];</code>
@@ -8883,7 +8883,7 @@ public final class ObjectServiceProto {
     boolean hasDescription();
     /**
      * <pre>
-     * 
+     * object description
      * </pre>
      *
      * <code>optional string description = 3 [json_name = "description"];</code>
@@ -8892,7 +8892,7 @@ public final class ObjectServiceProto {
     java.lang.String getDescription();
     /**
      * <pre>
-     * 
+     * object description
      * </pre>
      *
      * <code>optional string description = 3 [json_name = "description"];</code>
@@ -9082,6 +9082,16 @@ public final class ObjectServiceProto {
      */
     com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Force new object revision
+     * </pre>
+     *
+     * <code>bool force_revision = 13 [json_name = "forceRevision"];</code>
+     * @return The forceRevision.
+     */
+    boolean getForceRevision();
 
     com.aruna.api.storage.services.v2.ObjectServiceProto.UpdateObjectRequest.ParentCase getParentCase();
   }
@@ -9283,7 +9293,7 @@ public final class ObjectServiceProto {
     private volatile java.lang.Object description_ = "";
     /**
      * <pre>
-     * 
+     * object description
      * </pre>
      *
      * <code>optional string description = 3 [json_name = "description"];</code>
@@ -9295,7 +9305,7 @@ public final class ObjectServiceProto {
     }
     /**
      * <pre>
-     * 
+     * object description
      * </pre>
      *
      * <code>optional string description = 3 [json_name = "description"];</code>
@@ -9316,7 +9326,7 @@ public final class ObjectServiceProto {
     }
     /**
      * <pre>
-     * 
+     * object description
      * </pre>
      *
      * <code>optional string description = 3 [json_name = "description"];</code>
@@ -9682,6 +9692,21 @@ public final class ObjectServiceProto {
       return hashes_.get(index);
     }
 
+    public static final int FORCE_REVISION_FIELD_NUMBER = 13;
+    private boolean forceRevision_ = false;
+    /**
+     * <pre>
+     * Force new object revision
+     * </pre>
+     *
+     * <code>bool force_revision = 13 [json_name = "forceRevision"];</code>
+     * @return The forceRevision.
+     */
+    @java.lang.Override
+    public boolean getForceRevision() {
+      return forceRevision_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9726,6 +9751,9 @@ public final class ObjectServiceProto {
       for (int i = 0; i < hashes_.size(); i++) {
         output.writeMessage(12, hashes_.get(i));
       }
+      if (forceRevision_ != false) {
+        output.writeBool(13, forceRevision_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -9769,6 +9797,10 @@ public final class ObjectServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, hashes_.get(i));
       }
+      if (forceRevision_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, forceRevision_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9803,6 +9835,8 @@ public final class ObjectServiceProto {
       if (dataClass_ != other.dataClass_) return false;
       if (!getHashesList()
           .equals(other.getHashesList())) return false;
+      if (getForceRevision()
+          != other.getForceRevision()) return false;
       if (!getParentCase().equals(other.getParentCase())) return false;
       switch (parentCase_) {
         case 8:
@@ -9855,6 +9889,9 @@ public final class ObjectServiceProto {
         hash = (37 * hash) + HASHES_FIELD_NUMBER;
         hash = (53 * hash) + getHashesList().hashCode();
       }
+      hash = (37 * hash) + FORCE_REVISION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getForceRevision());
       switch (parentCase_) {
         case 8:
           hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
@@ -10027,6 +10064,7 @@ public final class ObjectServiceProto {
           hashesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000200);
+        forceRevision_ = false;
         parentCase_ = 0;
         parent_ = null;
         return this;
@@ -10108,6 +10146,9 @@ public final class ObjectServiceProto {
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.dataClass_ = dataClass_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.forceRevision_ = forceRevision_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -10224,6 +10265,9 @@ public final class ObjectServiceProto {
               hashesBuilder_.addAllMessages(other.hashes_);
             }
           }
+        }
+        if (other.getForceRevision() != false) {
+          setForceRevision(other.getForceRevision());
         }
         switch (other.getParentCase()) {
           case PROJECT_ID: {
@@ -10351,6 +10395,11 @@ public final class ObjectServiceProto {
                 }
                 break;
               } // case 98
+              case 104: {
+                forceRevision_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -10581,7 +10630,7 @@ public final class ObjectServiceProto {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * 
+       * object description
        * </pre>
        *
        * <code>optional string description = 3 [json_name = "description"];</code>
@@ -10592,7 +10641,7 @@ public final class ObjectServiceProto {
       }
       /**
        * <pre>
-       * 
+       * object description
        * </pre>
        *
        * <code>optional string description = 3 [json_name = "description"];</code>
@@ -10612,7 +10661,7 @@ public final class ObjectServiceProto {
       }
       /**
        * <pre>
-       * 
+       * object description
        * </pre>
        *
        * <code>optional string description = 3 [json_name = "description"];</code>
@@ -10633,7 +10682,7 @@ public final class ObjectServiceProto {
       }
       /**
        * <pre>
-       * 
+       * object description
        * </pre>
        *
        * <code>optional string description = 3 [json_name = "description"];</code>
@@ -10650,7 +10699,7 @@ public final class ObjectServiceProto {
       }
       /**
        * <pre>
-       * 
+       * object description
        * </pre>
        *
        * <code>optional string description = 3 [json_name = "description"];</code>
@@ -10664,7 +10713,7 @@ public final class ObjectServiceProto {
       }
       /**
        * <pre>
-       * 
+       * object description
        * </pre>
        *
        * <code>optional string description = 3 [json_name = "description"];</code>
@@ -11895,6 +11944,50 @@ public final class ObjectServiceProto {
           hashes_ = null;
         }
         return hashesBuilder_;
+      }
+
+      private boolean forceRevision_ ;
+      /**
+       * <pre>
+       * Force new object revision
+       * </pre>
+       *
+       * <code>bool force_revision = 13 [json_name = "forceRevision"];</code>
+       * @return The forceRevision.
+       */
+      @java.lang.Override
+      public boolean getForceRevision() {
+        return forceRevision_;
+      }
+      /**
+       * <pre>
+       * Force new object revision
+       * </pre>
+       *
+       * <code>bool force_revision = 13 [json_name = "forceRevision"];</code>
+       * @param value The forceRevision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForceRevision(boolean value) {
+
+        forceRevision_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Force new object revision
+       * </pre>
+       *
+       * <code>bool force_revision = 13 [json_name = "forceRevision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForceRevision() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        forceRevision_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21591,7 +21684,7 @@ public final class ObjectServiceProto {
       "rvices.v2.CompletedPartsR\016completedParts" +
       "\"Z\n\033FinishObjectStagingResponse\022;\n\006objec" +
       "t\030\001 \001(\0132#.aruna.api.storage.models.v2.Ob" +
-      "jectR\006object\"\240\004\n\023UpdateObjectRequest\022\033\n\t" +
+      "jectR\006object\"\307\004\n\023UpdateObjectRequest\022\033\n\t" +
       "object_id\030\001 \001(\tR\010objectId\022\027\n\004name\030\002 \001(\tH" +
       "\001R\004name\210\001\001\022%\n\013description\030\003 \001(\tH\002R\013descr" +
       "iption\210\001\001\022K\n\016add_key_values\030\004 \003(\0132%.arun" +
@@ -21604,79 +21697,80 @@ public final class ObjectServiceProto {
       "lection_id\030\t \001(\tH\000R\014collectionId\022\037\n\ndata" +
       "set_id\030\n \001(\tH\000R\tdatasetId\0229\n\006hashes\030\014 \003(" +
       "\0132!.aruna.api.storage.models.v2.HashR\006ha" +
-      "shesB\010\n\006parentB\007\n\005_nameB\016\n\014_description\"" +
-      "v\n\024UpdateObjectResponse\022;\n\006object\030\001 \001(\0132" +
-      "#.aruna.api.storage.models.v2.ObjectR\006ob" +
-      "ject\022!\n\014new_revision\030\002 \001(\010R\013newRevision\"" +
-      "\244\001\n\022CloneObjectRequest\022\033\n\tobject_id\030\001 \001(" +
-      "\tR\010objectId\022\037\n\nproject_id\030\002 \001(\tH\000R\tproje" +
-      "ctId\022%\n\rcollection_id\030\003 \001(\tH\000R\014collectio" +
-      "nId\022\037\n\ndataset_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006" +
-      "parent\"R\n\023CloneObjectResponse\022;\n\006object\030" +
-      "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
-      "ctR\006object\"Y\n\023DeleteObjectRequest\022\033\n\tobj" +
-      "ect_id\030\001 \001(\tR\010objectId\022%\n\016with_revisions" +
-      "\030\002 \001(\010R\rwithRevisions\"\026\n\024DeleteObjectRes" +
-      "ponse\"/\n\020GetObjectRequest\022\033\n\tobject_id\030\001" +
-      " \001(\tR\010objectId\"P\n\021GetObjectResponse\022;\n\006o" +
-      "bject\030\001 \001(\0132#.aruna.api.storage.models.v" +
-      "2.ObjectR\006object\"2\n\021GetObjectsRequest\022\035\n" +
-      "\nobject_ids\030\001 \003(\tR\tobjectIds\"S\n\022GetObjec" +
-      "tsResponse\022=\n\007objects\030\001 \003(\0132#.aruna.api." +
-      "storage.models.v2.ObjectR\007objects\"8\n\031Get" +
-      "ObjectRevisionsRequest\022\033\n\tobject_id\030\002 \001(" +
-      "\tR\010objectId\"[\n\032GetObjectRevisionsRespons" +
-      "e\022=\n\007objects\030\001 \003(\0132#.aruna.api.storage.m" +
-      "odels.v2.ObjectR\007objects\"=\n\036GetLatestObj" +
-      "ectRevisionRequest\022\033\n\tobject_id\030\001 \001(\tR\010o" +
-      "bjectId\"^\n\037GetLatestObjectRevisionRespon" +
-      "se\022;\n\006object\030\001 \001(\0132#.aruna.api.storage.m" +
-      "odels.v2.ObjectR\006object\"]\n\031GetObjectEndp" +
-      "ointsRequest\022#\n\rcollection_id\030\001 \001(\tR\014col" +
-      "lectionId\022\033\n\tobject_id\030\002 \001(\tR\010objectId2\220" +
-      "\013\n\rObjectService\022\216\001\n\014CreateObject\0222.arun" +
-      "a.api.storage.services.v2.CreateObjectRe" +
-      "quest\0323.aruna.api.storage.services.v2.Cr" +
-      "eateObjectResponse\"\025\202\323\344\223\002\017\"\n/v2/object:\001" +
-      "*\022\236\001\n\014GetUploadURL\0222.aruna.api.storage.s" +
-      "ervices.v2.GetUploadURLRequest\0323.aruna.a" +
-      "pi.storage.services.v2.GetUploadURLRespo" +
-      "nse\"%\202\323\344\223\002\037\022\035/v2/object/{object_id}/uplo" +
-      "ad\022\246\001\n\016GetDownloadURL\0224.aruna.api.storag" +
-      "e.services.v2.GetDownloadURLRequest\0325.ar" +
-      "una.api.storage.services.v2.GetDownloadU" +
-      "RLResponse\"\'\202\323\344\223\002!\022\037/v2/object/{object_i" +
-      "d}/download\022\266\001\n\023FinishObjectStaging\0229.ar" +
-      "una.api.storage.services.v2.FinishObject" +
-      "StagingRequest\032:.aruna.api.storage.servi" +
-      "ces.v2.FinishObjectStagingResponse\"(\202\323\344\223" +
-      "\002\"2\035/v2/object/{object_id}/finish:\001*\022\232\001\n" +
-      "\014UpdateObject\0222.aruna.api.storage.servic" +
-      "es.v2.UpdateObjectRequest\0323.aruna.api.st" +
-      "orage.services.v2.UpdateObjectResponse\"!" +
-      "\202\323\344\223\002\033\"\026/v2/object/{object_id}:\001*\022\226\001\n\013Cl" +
-      "oneObject\0221.aruna.api.storage.services.v" +
-      "2.CloneObjectRequest\0322.aruna.api.storage" +
-      ".services.v2.CloneObjectResponse\" \202\323\344\223\002\032" +
-      "\"\025/v2/{object_id}/clone:\001*\022\232\001\n\014DeleteObj" +
-      "ect\0222.aruna.api.storage.services.v2.Dele" +
-      "teObjectRequest\0323.aruna.api.storage.serv" +
-      "ices.v2.DeleteObjectResponse\"!\202\323\344\223\002\033*\026/v" +
-      "2/object/{object_id}:\001*\022\216\001\n\tGetObject\022/." +
-      "aruna.api.storage.services.v2.GetObjectR" +
-      "equest\0320.aruna.api.storage.services.v2.G" +
-      "etObjectResponse\"\036\202\323\344\223\002\030\022\026/v2/object/{ob" +
-      "ject_id}\022\206\001\n\nGetObjects\0220.aruna.api.stor" +
-      "age.services.v2.GetObjectsRequest\0321.arun" +
-      "a.api.storage.services.v2.GetObjectsResp" +
-      "onse\"\023\202\323\344\223\002\r\022\013/v2/objectsB\216\002\n!com.aruna." +
-      "api.storage.services.v2B\022ObjectServicePr" +
-      "otoP\000Z<github.com/ArunaStorage/go-api/ar" +
-      "una/api/storage/services/v2\242\002\004AASS\252\002\035Aru" +
-      "na.Api.Storage.Services.V2\312\002\035Aruna\\Api\\S" +
-      "torage\\Services\\V2\342\002)Aruna\\Api\\Storage\\S" +
-      "ervices\\V2\\GPBMetadata\352\002!Aruna::Api::Sto" +
-      "rage::Services::V2b\006proto3"
+      "shes\022%\n\016force_revision\030\r \001(\010R\rforceRevis" +
+      "ionB\010\n\006parentB\007\n\005_nameB\016\n\014_description\"v" +
+      "\n\024UpdateObjectResponse\022;\n\006object\030\001 \001(\0132#" +
+      ".aruna.api.storage.models.v2.ObjectR\006obj" +
+      "ect\022!\n\014new_revision\030\002 \001(\010R\013newRevision\"\244" +
+      "\001\n\022CloneObjectRequest\022\033\n\tobject_id\030\001 \001(\t" +
+      "R\010objectId\022\037\n\nproject_id\030\002 \001(\tH\000R\tprojec" +
+      "tId\022%\n\rcollection_id\030\003 \001(\tH\000R\014collection" +
+      "Id\022\037\n\ndataset_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006p" +
+      "arent\"R\n\023CloneObjectResponse\022;\n\006object\030\001" +
+      " \001(\0132#.aruna.api.storage.models.v2.Objec" +
+      "tR\006object\"Y\n\023DeleteObjectRequest\022\033\n\tobje" +
+      "ct_id\030\001 \001(\tR\010objectId\022%\n\016with_revisions\030" +
+      "\002 \001(\010R\rwithRevisions\"\026\n\024DeleteObjectResp" +
+      "onse\"/\n\020GetObjectRequest\022\033\n\tobject_id\030\001 " +
+      "\001(\tR\010objectId\"P\n\021GetObjectResponse\022;\n\006ob" +
+      "ject\030\001 \001(\0132#.aruna.api.storage.models.v2" +
+      ".ObjectR\006object\"2\n\021GetObjectsRequest\022\035\n\n" +
+      "object_ids\030\001 \003(\tR\tobjectIds\"S\n\022GetObject" +
+      "sResponse\022=\n\007objects\030\001 \003(\0132#.aruna.api.s" +
+      "torage.models.v2.ObjectR\007objects\"8\n\031GetO" +
+      "bjectRevisionsRequest\022\033\n\tobject_id\030\002 \001(\t" +
+      "R\010objectId\"[\n\032GetObjectRevisionsResponse" +
+      "\022=\n\007objects\030\001 \003(\0132#.aruna.api.storage.mo" +
+      "dels.v2.ObjectR\007objects\"=\n\036GetLatestObje" +
+      "ctRevisionRequest\022\033\n\tobject_id\030\001 \001(\tR\010ob" +
+      "jectId\"^\n\037GetLatestObjectRevisionRespons" +
+      "e\022;\n\006object\030\001 \001(\0132#.aruna.api.storage.mo" +
+      "dels.v2.ObjectR\006object\"]\n\031GetObjectEndpo" +
+      "intsRequest\022#\n\rcollection_id\030\001 \001(\tR\014coll" +
+      "ectionId\022\033\n\tobject_id\030\002 \001(\tR\010objectId2\220\013" +
+      "\n\rObjectService\022\216\001\n\014CreateObject\0222.aruna" +
+      ".api.storage.services.v2.CreateObjectReq" +
+      "uest\0323.aruna.api.storage.services.v2.Cre" +
+      "ateObjectResponse\"\025\202\323\344\223\002\017\"\n/v2/object:\001*" +
+      "\022\236\001\n\014GetUploadURL\0222.aruna.api.storage.se" +
+      "rvices.v2.GetUploadURLRequest\0323.aruna.ap" +
+      "i.storage.services.v2.GetUploadURLRespon" +
+      "se\"%\202\323\344\223\002\037\022\035/v2/object/{object_id}/uploa" +
+      "d\022\246\001\n\016GetDownloadURL\0224.aruna.api.storage" +
+      ".services.v2.GetDownloadURLRequest\0325.aru" +
+      "na.api.storage.services.v2.GetDownloadUR" +
+      "LResponse\"\'\202\323\344\223\002!\022\037/v2/object/{object_id" +
+      "}/download\022\266\001\n\023FinishObjectStaging\0229.aru" +
+      "na.api.storage.services.v2.FinishObjectS" +
+      "tagingRequest\032:.aruna.api.storage.servic" +
+      "es.v2.FinishObjectStagingResponse\"(\202\323\344\223\002" +
+      "\"2\035/v2/object/{object_id}/finish:\001*\022\232\001\n\014" +
+      "UpdateObject\0222.aruna.api.storage.service" +
+      "s.v2.UpdateObjectRequest\0323.aruna.api.sto" +
+      "rage.services.v2.UpdateObjectResponse\"!\202" +
+      "\323\344\223\002\033\"\026/v2/object/{object_id}:\001*\022\226\001\n\013Clo" +
+      "neObject\0221.aruna.api.storage.services.v2" +
+      ".CloneObjectRequest\0322.aruna.api.storage." +
+      "services.v2.CloneObjectResponse\" \202\323\344\223\002\032\"" +
+      "\025/v2/{object_id}/clone:\001*\022\232\001\n\014DeleteObje" +
+      "ct\0222.aruna.api.storage.services.v2.Delet" +
+      "eObjectRequest\0323.aruna.api.storage.servi" +
+      "ces.v2.DeleteObjectResponse\"!\202\323\344\223\002\033*\026/v2" +
+      "/object/{object_id}:\001*\022\216\001\n\tGetObject\022/.a" +
+      "runa.api.storage.services.v2.GetObjectRe" +
+      "quest\0320.aruna.api.storage.services.v2.Ge" +
+      "tObjectResponse\"\036\202\323\344\223\002\030\022\026/v2/object/{obj" +
+      "ect_id}\022\206\001\n\nGetObjects\0220.aruna.api.stora" +
+      "ge.services.v2.GetObjectsRequest\0321.aruna" +
+      ".api.storage.services.v2.GetObjectsRespo" +
+      "nse\"\023\202\323\344\223\002\r\022\013/v2/objectsB\216\002\n!com.aruna.a" +
+      "pi.storage.services.v2B\022ObjectServicePro" +
+      "toP\000Z<github.com/ArunaStorage/go-api/aru" +
+      "na/api/storage/services/v2\242\002\004AASS\252\002\035Arun" +
+      "a.Api.Storage.Services.V2\312\002\035Aruna\\Api\\St" +
+      "orage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Se" +
+      "rvices\\V2\\GPBMetadata\352\002!Aruna::Api::Stor" +
+      "age::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21743,7 +21837,7 @@ public final class ObjectServiceProto {
     internal_static_aruna_api_storage_services_v2_UpdateObjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_UpdateObjectRequest_descriptor,
-        new java.lang.String[] { "ObjectId", "Name", "Description", "AddKeyValues", "RemoveKeyValues", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "Parent", "Name", "Description", });
+        new java.lang.String[] { "ObjectId", "Name", "Description", "AddKeyValues", "RemoveKeyValues", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "ForceRevision", "Parent", "Name", "Description", });
     internal_static_aruna_api_storage_services_v2_UpdateObjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_services_v2_UpdateObjectResponse_fieldAccessorTable = new

@@ -40,7 +40,7 @@ public final class WorkspaceServiceProto {
 
     /**
      * <pre>
-     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
      * </pre>
      *
      * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -49,7 +49,7 @@ public final class WorkspaceServiceProto {
     java.lang.String getPrefix();
     /**
      * <pre>
-     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
      * </pre>
      *
      * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -80,47 +80,105 @@ public final class WorkspaceServiceProto {
 
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @return A list containing the hookIds.
      */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> 
-        getKeyValuesList();
+    java.util.List<java.lang.String>
+        getHookIdsList();
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @return The count of hookIds.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.KeyValue getKeyValues(int index);
+    int getHookIdsCount();
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @param index The index of the element to return.
+     * @return The hookIds at the given index.
      */
-    int getKeyValuesCount();
+    java.lang.String getHookIds(int index);
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hookIds at the given index.
      */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-        getKeyValuesOrBuilderList();
+    com.google.protobuf.ByteString
+        getHookIdsBytes(int index);
+
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Description of the workspace
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getKeyValuesOrBuilder(
-        int index);
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the workspace
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @return A list containing the endpointId.
+     */
+    java.util.List<java.lang.String>
+        getEndpointIdList();
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @return The count of endpointId.
+     */
+    int getEndpointIdCount();
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @param index The index of the element to return.
+     * @return The endpointId at the given index.
+     */
+    java.lang.String getEndpointId(int index);
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the endpointId at the given index.
+     */
+    com.google.protobuf.ByteString
+        getEndpointIdBytes(int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.CreateWorkspaceTemplateRequest}
@@ -138,7 +196,11 @@ public final class WorkspaceServiceProto {
       ownerId_ = "";
       prefix_ = "";
       name_ = "";
-      keyValues_ = java.util.Collections.emptyList();
+      hookIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      description_ = "";
+      endpointId_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -213,7 +275,7 @@ public final class WorkspaceServiceProto {
     private volatile java.lang.Object prefix_ = "";
     /**
      * <pre>
-     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
      * </pre>
      *
      * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -234,7 +296,7 @@ public final class WorkspaceServiceProto {
     }
     /**
      * <pre>
-     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+     * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
      * </pre>
      *
      * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -302,65 +364,157 @@ public final class WorkspaceServiceProto {
       }
     }
 
-    public static final int KEY_VALUES_FIELD_NUMBER = 4;
+    public static final int HOOK_IDS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> keyValues_;
+    private com.google.protobuf.LazyStringArrayList hookIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @return A list containing the hookIds.
      */
-    @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getKeyValuesList() {
-      return keyValues_;
+    public com.google.protobuf.ProtocolStringList
+        getHookIdsList() {
+      return hookIds_;
     }
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @return The count of hookIds.
      */
-    @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-        getKeyValuesOrBuilderList() {
-      return keyValues_;
+    public int getHookIdsCount() {
+      return hookIds_.size();
     }
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @param index The index of the element to return.
+     * @return The hookIds at the given index.
      */
-    @java.lang.Override
-    public int getKeyValuesCount() {
-      return keyValues_.size();
+    public java.lang.String getHookIds(int index) {
+      return hookIds_.get(index);
     }
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Hooks that are added to created workspaces
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hookIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getHookIdsBytes(int index) {
+      return hookIds_.getByteString(index);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Description of the workspace
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getKeyValues(int index) {
-      return keyValues_.get(index);
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Key values / hooks that must be added to each participant of the workspace
+     * Description of the workspace
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getKeyValuesOrBuilder(
-        int index) {
-      return keyValues_.get(index);
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_ID_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList endpointId_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @return A list containing the endpointId.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEndpointIdList() {
+      return endpointId_;
+    }
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @return The count of endpointId.
+     */
+    public int getEndpointIdCount() {
+      return endpointId_.size();
+    }
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @param index The index of the element to return.
+     * @return The endpointId at the given index.
+     */
+    public java.lang.String getEndpointId(int index) {
+      return endpointId_.get(index);
+    }
+    /**
+     * <pre>
+     * Endpoint ids that are used for this template
+     * </pre>
+     *
+     * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the endpointId at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEndpointIdBytes(int index) {
+      return endpointId_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -386,8 +540,14 @@ public final class WorkspaceServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      for (int i = 0; i < keyValues_.size(); i++) {
-        output.writeMessage(4, keyValues_.get(i));
+      for (int i = 0; i < hookIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, hookIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+      }
+      for (int i = 0; i < endpointId_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, endpointId_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -407,9 +567,24 @@ public final class WorkspaceServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      for (int i = 0; i < keyValues_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, keyValues_.get(i));
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hookIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hookIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHookIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < endpointId_.size(); i++) {
+          dataSize += computeStringSizeNoTag(endpointId_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getEndpointIdList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -432,8 +607,12 @@ public final class WorkspaceServiceProto {
           .equals(other.getPrefix())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!getKeyValuesList()
-          .equals(other.getKeyValuesList())) return false;
+      if (!getHookIdsList()
+          .equals(other.getHookIdsList())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getEndpointIdList()
+          .equals(other.getEndpointIdList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -451,9 +630,15 @@ public final class WorkspaceServiceProto {
       hash = (53 * hash) + getPrefix().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      if (getKeyValuesCount() > 0) {
-        hash = (37 * hash) + KEY_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getKeyValuesList().hashCode();
+      if (getHookIdsCount() > 0) {
+        hash = (37 * hash) + HOOK_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHookIdsList().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getEndpointIdCount() > 0) {
+        hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointIdList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -589,13 +774,11 @@ public final class WorkspaceServiceProto {
         ownerId_ = "";
         prefix_ = "";
         name_ = "";
-        if (keyValuesBuilder_ == null) {
-          keyValues_ = java.util.Collections.emptyList();
-        } else {
-          keyValues_ = null;
-          keyValuesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        hookIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        description_ = "";
+        endpointId_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -622,22 +805,9 @@ public final class WorkspaceServiceProto {
       @java.lang.Override
       public com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest buildPartial() {
         com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest result) {
-        if (keyValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            keyValues_ = java.util.Collections.unmodifiableList(keyValues_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.keyValues_ = keyValues_;
-        } else {
-          result.keyValues_ = keyValuesBuilder_.build();
-        }
       }
 
       private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest result) {
@@ -650,6 +820,17 @@ public final class WorkspaceServiceProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          hookIds_.makeImmutable();
+          result.hookIds_ = hookIds_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          endpointId_.makeImmutable();
+          result.endpointId_ = endpointId_;
         }
       }
 
@@ -680,31 +861,30 @@ public final class WorkspaceServiceProto {
           bitField0_ |= 0x00000004;
           onChanged();
         }
-        if (keyValuesBuilder_ == null) {
-          if (!other.keyValues_.isEmpty()) {
-            if (keyValues_.isEmpty()) {
-              keyValues_ = other.keyValues_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureKeyValuesIsMutable();
-              keyValues_.addAll(other.keyValues_);
-            }
-            onChanged();
+        if (!other.hookIds_.isEmpty()) {
+          if (hookIds_.isEmpty()) {
+            hookIds_ = other.hookIds_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureHookIdsIsMutable();
+            hookIds_.addAll(other.hookIds_);
           }
-        } else {
-          if (!other.keyValues_.isEmpty()) {
-            if (keyValuesBuilder_.isEmpty()) {
-              keyValuesBuilder_.dispose();
-              keyValuesBuilder_ = null;
-              keyValues_ = other.keyValues_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              keyValuesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getKeyValuesFieldBuilder() : null;
-            } else {
-              keyValuesBuilder_.addAllMessages(other.keyValues_);
-            }
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.endpointId_.isEmpty()) {
+          if (endpointId_.isEmpty()) {
+            endpointId_ = other.endpointId_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureEndpointIdIsMutable();
+            endpointId_.addAll(other.endpointId_);
           }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -747,19 +927,23 @@ public final class WorkspaceServiceProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                com.aruna.api.storage.models.v2.ModelsProto.KeyValue m =
-                    input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.KeyValue.parser(),
-                        extensionRegistry);
-                if (keyValuesBuilder_ == null) {
-                  ensureKeyValuesIsMutable();
-                  keyValues_.add(m);
-                } else {
-                  keyValuesBuilder_.addMessage(m);
-                }
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureHookIdsIsMutable();
+                hookIds_.add(s);
                 break;
-              } // case 34
+              } // case 42
+              case 50: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureEndpointIdIsMutable();
+                endpointId_.add(s);
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -872,7 +1056,7 @@ public final class WorkspaceServiceProto {
       private java.lang.Object prefix_ = "";
       /**
        * <pre>
-       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
        * </pre>
        *
        * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -892,7 +1076,7 @@ public final class WorkspaceServiceProto {
       }
       /**
        * <pre>
-       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
        * </pre>
        *
        * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -913,7 +1097,7 @@ public final class WorkspaceServiceProto {
       }
       /**
        * <pre>
-       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
        * </pre>
        *
        * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -930,7 +1114,7 @@ public final class WorkspaceServiceProto {
       }
       /**
        * <pre>
-       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
        * </pre>
        *
        * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -944,7 +1128,7 @@ public final class WorkspaceServiceProto {
       }
       /**
        * <pre>
-       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2 
+       * Short prefix for each workspace_project (will be prepended by a random id) example: test-i12ashj9g2
        * </pre>
        *
        * <code>string prefix = 2 [json_name = "prefix"];</code>
@@ -1053,316 +1237,390 @@ public final class WorkspaceServiceProto {
         return this;
       }
 
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> keyValues_ =
-        java.util.Collections.emptyList();
-      private void ensureKeyValuesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          keyValues_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.KeyValue>(keyValues_);
-          bitField0_ |= 0x00000008;
-         }
+      private com.google.protobuf.LazyStringArrayList hookIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureHookIdsIsMutable() {
+        if (!hookIds_.isModifiable()) {
+          hookIds_ = new com.google.protobuf.LazyStringArrayList(hookIds_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @return A list containing the hookIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHookIdsList() {
+        hookIds_.makeImmutable();
+        return hookIds_;
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @return The count of hookIds.
+       */
+      public int getHookIdsCount() {
+        return hookIds_.size();
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @param index The index of the element to return.
+       * @return The hookIds at the given index.
+       */
+      public java.lang.String getHookIds(int index) {
+        return hookIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the hookIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getHookIdsBytes(int index) {
+        return hookIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The hookIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureHookIdsIsMutable();
+        hookIds_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @param value The hookIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addHookIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureHookIdsIsMutable();
+        hookIds_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @param values The hookIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllHookIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHookIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hookIds_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHookIds() {
+        hookIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hooks that are added to created workspaces
+       * </pre>
+       *
+       * <code>repeated string hook_ids = 5 [json_name = "hookIds"];</code>
+       * @param value The bytes of the hookIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addHookIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureHookIdsIsMutable();
+        hookIds_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> keyValuesBuilder_;
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the workspace
+       * </pre>
+       *
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the workspace
+       * </pre>
+       *
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the workspace
+       * </pre>
+       *
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the workspace
+       * </pre>
+       *
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the workspace
+       * </pre>
+       *
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
 
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getKeyValuesList() {
-        if (keyValuesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(keyValues_);
-        } else {
-          return keyValuesBuilder_.getMessageList();
+      private com.google.protobuf.LazyStringArrayList endpointId_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureEndpointIdIsMutable() {
+        if (!endpointId_.isModifiable()) {
+          endpointId_ = new com.google.protobuf.LazyStringArrayList(endpointId_);
         }
+        bitField0_ |= 0x00000020;
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @return A list containing the endpointId.
        */
-      public int getKeyValuesCount() {
-        if (keyValuesBuilder_ == null) {
-          return keyValues_.size();
-        } else {
-          return keyValuesBuilder_.getCount();
-        }
+      public com.google.protobuf.ProtocolStringList
+          getEndpointIdList() {
+        endpointId_.makeImmutable();
+        return endpointId_;
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @return The count of endpointId.
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getKeyValues(int index) {
-        if (keyValuesBuilder_ == null) {
-          return keyValues_.get(index);
-        } else {
-          return keyValuesBuilder_.getMessage(index);
-        }
+      public int getEndpointIdCount() {
+        return endpointId_.size();
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @param index The index of the element to return.
+       * @return The endpointId at the given index.
        */
-      public Builder setKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (keyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureKeyValuesIsMutable();
-          keyValues_.set(index, value);
-          onChanged();
-        } else {
-          keyValuesBuilder_.setMessage(index, value);
-        }
+      public java.lang.String getEndpointId(int index) {
+        return endpointId_.get(index);
+      }
+      /**
+       * <pre>
+       * Endpoint ids that are used for this template
+       * </pre>
+       *
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the endpointId at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointIdBytes(int index) {
+        return endpointId_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Endpoint ids that are used for this template
+       * </pre>
+       *
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @param index The index to set the value at.
+       * @param value The endpointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointId(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureEndpointIdIsMutable();
+        endpointId_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @param value The endpointId to add.
+       * @return This builder for chaining.
        */
-      public Builder setKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (keyValuesBuilder_ == null) {
-          ensureKeyValuesIsMutable();
-          keyValues_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          keyValuesBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder addEndpointId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureEndpointIdIsMutable();
+        endpointId_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @param values The endpointId to add.
+       * @return This builder for chaining.
        */
-      public Builder addKeyValues(com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (keyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureKeyValuesIsMutable();
-          keyValues_.add(value);
-          onChanged();
-        } else {
-          keyValuesBuilder_.addMessage(value);
-        }
+      public Builder addAllEndpointId(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEndpointIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, endpointId_);
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @return This builder for chaining.
        */
-      public Builder addKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (keyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureKeyValuesIsMutable();
-          keyValues_.add(index, value);
-          onChanged();
-        } else {
-          keyValuesBuilder_.addMessage(index, value);
-        }
+      public Builder clearEndpointId() {
+        endpointId_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
+       * Endpoint ids that are used for this template
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
+       * <code>repeated string endpoint_id = 7 [json_name = "endpointId"];</code>
+       * @param value The bytes of the endpointId to add.
+       * @return This builder for chaining.
        */
-      public Builder addKeyValues(
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (keyValuesBuilder_ == null) {
-          ensureKeyValuesIsMutable();
-          keyValues_.add(builderForValue.build());
-          onChanged();
-        } else {
-          keyValuesBuilder_.addMessage(builderForValue.build());
-        }
+      public Builder addEndpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureEndpointIdIsMutable();
+        endpointId_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public Builder addKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (keyValuesBuilder_ == null) {
-          ensureKeyValuesIsMutable();
-          keyValues_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          keyValuesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public Builder addAllKeyValues(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValue> values) {
-        if (keyValuesBuilder_ == null) {
-          ensureKeyValuesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, keyValues_);
-          onChanged();
-        } else {
-          keyValuesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public Builder clearKeyValues() {
-        if (keyValuesBuilder_ == null) {
-          keyValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          keyValuesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public Builder removeKeyValues(int index) {
-        if (keyValuesBuilder_ == null) {
-          ensureKeyValuesIsMutable();
-          keyValues_.remove(index);
-          onChanged();
-        } else {
-          keyValuesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder getKeyValuesBuilder(
-          int index) {
-        return getKeyValuesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getKeyValuesOrBuilder(
-          int index) {
-        if (keyValuesBuilder_ == null) {
-          return keyValues_.get(index);  } else {
-          return keyValuesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-           getKeyValuesOrBuilderList() {
-        if (keyValuesBuilder_ != null) {
-          return keyValuesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(keyValues_);
-        }
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addKeyValuesBuilder() {
-        return getKeyValuesFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addKeyValuesBuilder(
-          int index) {
-        return getKeyValuesFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Key values / hooks that must be added to each participant of the workspace
-       * </pre>
-       *
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue key_values = 4 [json_name = "keyValues"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder> 
-           getKeyValuesBuilderList() {
-        return getKeyValuesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-          getKeyValuesFieldBuilder() {
-        if (keyValuesBuilder_ == null) {
-          keyValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder>(
-                  keyValues_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          keyValues_ = null;
-        }
-        return keyValuesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1433,16 +1691,16 @@ public final class WorkspaceServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string template_name = 1 [json_name = "templateName"];</code>
-     * @return The templateName.
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The templateId.
      */
-    java.lang.String getTemplateName();
+    java.lang.String getTemplateId();
     /**
-     * <code>string template_name = 1 [json_name = "templateName"];</code>
-     * @return The bytes for templateName.
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The bytes for templateId.
      */
     com.google.protobuf.ByteString
-        getTemplateNameBytes();
+        getTemplateIdBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.CreateWorkspaceTemplateResponse}
@@ -1457,7 +1715,7 @@ public final class WorkspaceServiceProto {
       super(builder);
     }
     private CreateWorkspaceTemplateResponse() {
-      templateName_ = "";
+      templateId_ = "";
     }
 
     @java.lang.Override
@@ -1480,39 +1738,39 @@ public final class WorkspaceServiceProto {
               com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse.Builder.class);
     }
 
-    public static final int TEMPLATE_NAME_FIELD_NUMBER = 1;
+    public static final int TEMPLATE_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object templateName_ = "";
+    private volatile java.lang.Object templateId_ = "";
     /**
-     * <code>string template_name = 1 [json_name = "templateName"];</code>
-     * @return The templateName.
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The templateId.
      */
     @java.lang.Override
-    public java.lang.String getTemplateName() {
-      java.lang.Object ref = templateName_;
+    public java.lang.String getTemplateId() {
+      java.lang.Object ref = templateId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        templateName_ = s;
+        templateId_ = s;
         return s;
       }
     }
     /**
-     * <code>string template_name = 1 [json_name = "templateName"];</code>
-     * @return The bytes for templateName.
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The bytes for templateId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTemplateNameBytes() {
-      java.lang.Object ref = templateName_;
+        getTemplateIdBytes() {
+      java.lang.Object ref = templateId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        templateName_ = b;
+        templateId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1533,8 +1791,8 @@ public final class WorkspaceServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, templateName_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, templateId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1545,8 +1803,8 @@ public final class WorkspaceServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, templateName_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, templateId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1563,8 +1821,8 @@ public final class WorkspaceServiceProto {
       }
       com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse) obj;
 
-      if (!getTemplateName()
-          .equals(other.getTemplateName())) return false;
+      if (!getTemplateId()
+          .equals(other.getTemplateId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1576,8 +1834,8 @@ public final class WorkspaceServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TEMPLATE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getTemplateName().hashCode();
+      hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1709,7 +1967,7 @@ public final class WorkspaceServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        templateName_ = "";
+        templateId_ = "";
         return this;
       }
 
@@ -1744,7 +2002,7 @@ public final class WorkspaceServiceProto {
       private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.templateName_ = templateName_;
+          result.templateId_ = templateId_;
         }
       }
 
@@ -1760,8 +2018,8 @@ public final class WorkspaceServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse other) {
         if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse.getDefaultInstance()) return this;
-        if (!other.getTemplateName().isEmpty()) {
-          templateName_ = other.templateName_;
+        if (!other.getTemplateId().isEmpty()) {
+          templateId_ = other.templateId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -1792,7 +2050,7 @@ public final class WorkspaceServiceProto {
                 done = true;
                 break;
               case 10: {
-                templateName_ = input.readStringRequireUtf8();
+                templateId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -1813,73 +2071,73 @@ public final class WorkspaceServiceProto {
       }
       private int bitField0_;
 
-      private java.lang.Object templateName_ = "";
+      private java.lang.Object templateId_ = "";
       /**
-       * <code>string template_name = 1 [json_name = "templateName"];</code>
-       * @return The templateName.
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return The templateId.
        */
-      public java.lang.String getTemplateName() {
-        java.lang.Object ref = templateName_;
+      public java.lang.String getTemplateId() {
+        java.lang.Object ref = templateId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          templateName_ = s;
+          templateId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string template_name = 1 [json_name = "templateName"];</code>
-       * @return The bytes for templateName.
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return The bytes for templateId.
        */
       public com.google.protobuf.ByteString
-          getTemplateNameBytes() {
-        java.lang.Object ref = templateName_;
+          getTemplateIdBytes() {
+        java.lang.Object ref = templateId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          templateName_ = b;
+          templateId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string template_name = 1 [json_name = "templateName"];</code>
-       * @param value The templateName to set.
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @param value The templateId to set.
        * @return This builder for chaining.
        */
-      public Builder setTemplateName(
+      public Builder setTemplateId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        templateName_ = value;
+        templateId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string template_name = 1 [json_name = "templateName"];</code>
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearTemplateName() {
-        templateName_ = getDefaultInstance().getTemplateName();
+      public Builder clearTemplateId() {
+        templateId_ = getDefaultInstance().getTemplateId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string template_name = 1 [json_name = "templateName"];</code>
-       * @param value The bytes for templateName to set.
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @param value The bytes for templateId to set.
        * @return This builder for chaining.
        */
-      public Builder setTemplateNameBytes(
+      public Builder setTemplateIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        templateName_ = value;
+        templateId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -1948,21 +2206,4545 @@ public final class WorkspaceServiceProto {
 
   }
 
+  public interface GetWorkspaceTemplateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetWorkspaceTemplateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The templateId.
+     */
+    java.lang.String getTemplateId();
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The bytes for templateId.
+     */
+    com.google.protobuf.ByteString
+        getTemplateIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetWorkspaceTemplateRequest}
+   */
+  public static final class GetWorkspaceTemplateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetWorkspaceTemplateRequest)
+      GetWorkspaceTemplateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetWorkspaceTemplateRequest.newBuilder() to construct.
+    private GetWorkspaceTemplateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetWorkspaceTemplateRequest() {
+      templateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetWorkspaceTemplateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.Builder.class);
+    }
+
+    public static final int TEMPLATE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object templateId_ = "";
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The templateId.
+     */
+    @java.lang.Override
+    public java.lang.String getTemplateId() {
+      java.lang.Object ref = templateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The bytes for templateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemplateIdBytes() {
+      java.lang.Object ref = templateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, templateId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, templateId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest) obj;
+
+      if (!getTemplateId()
+          .equals(other.getTemplateId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetWorkspaceTemplateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetWorkspaceTemplateRequest)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        templateId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.templateId_ = templateId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.getDefaultInstance()) return this;
+        if (!other.getTemplateId().isEmpty()) {
+          templateId_ = other.templateId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                templateId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object templateId_ = "";
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return The templateId.
+       */
+      public java.lang.String getTemplateId() {
+        java.lang.Object ref = templateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          templateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return The bytes for templateId.
+       */
+      public com.google.protobuf.ByteString
+          getTemplateIdBytes() {
+        java.lang.Object ref = templateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          templateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @param value The templateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        templateId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemplateId() {
+        templateId_ = getDefaultInstance().getTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @param value The bytes for templateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        templateId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetWorkspaceTemplateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetWorkspaceTemplateRequest)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetWorkspaceTemplateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetWorkspaceTemplateRequest>() {
+      @java.lang.Override
+      public GetWorkspaceTemplateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetWorkspaceTemplateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetWorkspaceTemplateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetWorkspaceTemplateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetWorkspaceTemplateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     * @return Whether the workspaces field is set.
+     */
+    boolean hasWorkspaces();
+    /**
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     * @return The workspaces.
+     */
+    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces();
+    /**
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.GetWorkspaceTemplateResponse}
+   */
+  public static final class GetWorkspaceTemplateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetWorkspaceTemplateResponse)
+      GetWorkspaceTemplateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetWorkspaceTemplateResponse.newBuilder() to construct.
+    private GetWorkspaceTemplateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetWorkspaceTemplateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetWorkspaceTemplateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.Builder.class);
+    }
+
+    public static final int WORKSPACES_FIELD_NUMBER = 1;
+    private com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo workspaces_;
+    /**
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     * @return Whether the workspaces field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkspaces() {
+      return workspaces_ != null;
+    }
+    /**
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     * @return The workspaces.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces() {
+      return workspaces_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+    }
+    /**
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder() {
+      return workspaces_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (workspaces_ != null) {
+        output.writeMessage(1, getWorkspaces());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (workspaces_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getWorkspaces());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse) obj;
+
+      if (hasWorkspaces() != other.hasWorkspaces()) return false;
+      if (hasWorkspaces()) {
+        if (!getWorkspaces()
+            .equals(other.getWorkspaces())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWorkspaces()) {
+        hash = (37 * hash) + WORKSPACES_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkspaces().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.GetWorkspaceTemplateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetWorkspaceTemplateResponse)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        workspaces_ = null;
+        if (workspacesBuilder_ != null) {
+          workspacesBuilder_.dispose();
+          workspacesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.workspaces_ = workspacesBuilder_ == null
+              ? workspaces_
+              : workspacesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.getDefaultInstance()) return this;
+        if (other.hasWorkspaces()) {
+          mergeWorkspaces(other.getWorkspaces());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getWorkspacesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo workspaces_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> workspacesBuilder_;
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * @return Whether the workspaces field is set.
+       */
+      public boolean hasWorkspaces() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * @return The workspaces.
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces() {
+        if (workspacesBuilder_ == null) {
+          return workspaces_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+        } else {
+          return workspacesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder setWorkspaces(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          workspaces_ = value;
+        } else {
+          workspacesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder setWorkspaces(
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder builderForValue) {
+        if (workspacesBuilder_ == null) {
+          workspaces_ = builderForValue.build();
+        } else {
+          workspacesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder mergeWorkspaces(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspacesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            workspaces_ != null &&
+            workspaces_ != com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance()) {
+            getWorkspacesBuilder().mergeFrom(value);
+          } else {
+            workspaces_ = value;
+          }
+        } else {
+          workspacesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder clearWorkspaces() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workspaces_ = null;
+        if (workspacesBuilder_ != null) {
+          workspacesBuilder_.dispose();
+          workspacesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder getWorkspacesBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getWorkspacesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder() {
+        if (workspacesBuilder_ != null) {
+          return workspacesBuilder_.getMessageOrBuilder();
+        } else {
+          return workspaces_ == null ?
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+        }
+      }
+      /**
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> 
+          getWorkspacesFieldBuilder() {
+        if (workspacesBuilder_ == null) {
+          workspacesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder>(
+                  getWorkspaces(),
+                  getParentForChildren(),
+                  isClean());
+          workspaces_ = null;
+        }
+        return workspacesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetWorkspaceTemplateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetWorkspaceTemplateResponse)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetWorkspaceTemplateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetWorkspaceTemplateResponse>() {
+      @java.lang.Override
+      public GetWorkspaceTemplateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetWorkspaceTemplateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetWorkspaceTemplateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteWorkspaceTemplateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The templateId.
+     */
+    java.lang.String getTemplateId();
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The bytes for templateId.
+     */
+    com.google.protobuf.ByteString
+        getTemplateIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest}
+   */
+  public static final class DeleteWorkspaceTemplateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest)
+      DeleteWorkspaceTemplateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteWorkspaceTemplateRequest.newBuilder() to construct.
+    private DeleteWorkspaceTemplateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteWorkspaceTemplateRequest() {
+      templateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteWorkspaceTemplateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.Builder.class);
+    }
+
+    public static final int TEMPLATE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object templateId_ = "";
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The templateId.
+     */
+    @java.lang.Override
+    public java.lang.String getTemplateId() {
+      java.lang.Object ref = templateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string template_id = 1 [json_name = "templateId"];</code>
+     * @return The bytes for templateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemplateIdBytes() {
+      java.lang.Object ref = templateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, templateId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, templateId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest) obj;
+
+      if (!getTemplateId()
+          .equals(other.getTemplateId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        templateId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.templateId_ = templateId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.getDefaultInstance()) return this;
+        if (!other.getTemplateId().isEmpty()) {
+          templateId_ = other.templateId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                templateId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object templateId_ = "";
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return The templateId.
+       */
+      public java.lang.String getTemplateId() {
+        java.lang.Object ref = templateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          templateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return The bytes for templateId.
+       */
+      public com.google.protobuf.ByteString
+          getTemplateIdBytes() {
+        java.lang.Object ref = templateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          templateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @param value The templateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        templateId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemplateId() {
+        templateId_ = getDefaultInstance().getTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string template_id = 1 [json_name = "templateId"];</code>
+       * @param value The bytes for templateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        templateId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.DeleteWorkspaceTemplateRequest)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteWorkspaceTemplateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteWorkspaceTemplateRequest>() {
+      @java.lang.Override
+      public DeleteWorkspaceTemplateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteWorkspaceTemplateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteWorkspaceTemplateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteWorkspaceTemplateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse}
+   */
+  public static final class DeleteWorkspaceTemplateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse)
+      DeleteWorkspaceTemplateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteWorkspaceTemplateResponse.newBuilder() to construct.
+    private DeleteWorkspaceTemplateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteWorkspaceTemplateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteWorkspaceTemplateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.DeleteWorkspaceTemplateResponse)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteWorkspaceTemplateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteWorkspaceTemplateResponse>() {
+      @java.lang.Override
+      public DeleteWorkspaceTemplateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteWorkspaceTemplateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteWorkspaceTemplateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListOwnedWorkspaceTemplatesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest}
+   */
+  public static final class ListOwnedWorkspaceTemplatesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest)
+      ListOwnedWorkspaceTemplatesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListOwnedWorkspaceTemplatesRequest.newBuilder() to construct.
+    private ListOwnedWorkspaceTemplatesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListOwnedWorkspaceTemplatesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOwnedWorkspaceTemplatesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesRequest)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListOwnedWorkspaceTemplatesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListOwnedWorkspaceTemplatesRequest>() {
+      @java.lang.Override
+      public ListOwnedWorkspaceTemplatesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListOwnedWorkspaceTemplatesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListOwnedWorkspaceTemplatesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListOwnedWorkspaceTemplatesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    java.util.List<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo> 
+        getWorkspacesList();
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces(int index);
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    int getWorkspacesCount();
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> 
+        getWorkspacesOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse}
+   */
+  public static final class ListOwnedWorkspaceTemplatesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse)
+      ListOwnedWorkspaceTemplatesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListOwnedWorkspaceTemplatesResponse.newBuilder() to construct.
+    private ListOwnedWorkspaceTemplatesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListOwnedWorkspaceTemplatesResponse() {
+      workspaces_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOwnedWorkspaceTemplatesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.Builder.class);
+    }
+
+    public static final int WORKSPACES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo> workspaces_;
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo> getWorkspacesList() {
+      return workspaces_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> 
+        getWorkspacesOrBuilderList() {
+      return workspaces_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    @java.lang.Override
+    public int getWorkspacesCount() {
+      return workspaces_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces(int index) {
+      return workspaces_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder(
+        int index) {
+      return workspaces_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < workspaces_.size(); i++) {
+        output.writeMessage(1, workspaces_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < workspaces_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, workspaces_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse) obj;
+
+      if (!getWorkspacesList()
+          .equals(other.getWorkspacesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getWorkspacesCount() > 0) {
+        hash = (37 * hash) + WORKSPACES_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkspacesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (workspacesBuilder_ == null) {
+          workspaces_ = java.util.Collections.emptyList();
+        } else {
+          workspaces_ = null;
+          workspacesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse result) {
+        if (workspacesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            workspaces_ = java.util.Collections.unmodifiableList(workspaces_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.workspaces_ = workspaces_;
+        } else {
+          result.workspaces_ = workspacesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.getDefaultInstance()) return this;
+        if (workspacesBuilder_ == null) {
+          if (!other.workspaces_.isEmpty()) {
+            if (workspaces_.isEmpty()) {
+              workspaces_ = other.workspaces_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureWorkspacesIsMutable();
+              workspaces_.addAll(other.workspaces_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.workspaces_.isEmpty()) {
+            if (workspacesBuilder_.isEmpty()) {
+              workspacesBuilder_.dispose();
+              workspacesBuilder_ = null;
+              workspaces_ = other.workspaces_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              workspacesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWorkspacesFieldBuilder() : null;
+            } else {
+              workspacesBuilder_.addAllMessages(other.workspaces_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo m =
+                    input.readMessage(
+                        com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.parser(),
+                        extensionRegistry);
+                if (workspacesBuilder_ == null) {
+                  ensureWorkspacesIsMutable();
+                  workspaces_.add(m);
+                } else {
+                  workspacesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo> workspaces_ =
+        java.util.Collections.emptyList();
+      private void ensureWorkspacesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          workspaces_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo>(workspaces_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> workspacesBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo> getWorkspacesList() {
+        if (workspacesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(workspaces_);
+        } else {
+          return workspacesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public int getWorkspacesCount() {
+        if (workspacesBuilder_ == null) {
+          return workspaces_.size();
+        } else {
+          return workspacesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces(int index) {
+        if (workspacesBuilder_ == null) {
+          return workspaces_.get(index);
+        } else {
+          return workspacesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder setWorkspaces(
+          int index, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWorkspacesIsMutable();
+          workspaces_.set(index, value);
+          onChanged();
+        } else {
+          workspacesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder setWorkspaces(
+          int index, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder builderForValue) {
+        if (workspacesBuilder_ == null) {
+          ensureWorkspacesIsMutable();
+          workspaces_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          workspacesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder addWorkspaces(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWorkspacesIsMutable();
+          workspaces_.add(value);
+          onChanged();
+        } else {
+          workspacesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder addWorkspaces(
+          int index, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWorkspacesIsMutable();
+          workspaces_.add(index, value);
+          onChanged();
+        } else {
+          workspacesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder addWorkspaces(
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder builderForValue) {
+        if (workspacesBuilder_ == null) {
+          ensureWorkspacesIsMutable();
+          workspaces_.add(builderForValue.build());
+          onChanged();
+        } else {
+          workspacesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder addWorkspaces(
+          int index, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder builderForValue) {
+        if (workspacesBuilder_ == null) {
+          ensureWorkspacesIsMutable();
+          workspaces_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          workspacesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder addAllWorkspaces(
+          java.lang.Iterable<? extends com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo> values) {
+        if (workspacesBuilder_ == null) {
+          ensureWorkspacesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, workspaces_);
+          onChanged();
+        } else {
+          workspacesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder clearWorkspaces() {
+        if (workspacesBuilder_ == null) {
+          workspaces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          workspacesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public Builder removeWorkspaces(int index) {
+        if (workspacesBuilder_ == null) {
+          ensureWorkspacesIsMutable();
+          workspaces_.remove(index);
+          onChanged();
+        } else {
+          workspacesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder getWorkspacesBuilder(
+          int index) {
+        return getWorkspacesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder(
+          int index) {
+        if (workspacesBuilder_ == null) {
+          return workspaces_.get(index);  } else {
+          return workspacesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> 
+           getWorkspacesOrBuilderList() {
+        if (workspacesBuilder_ != null) {
+          return workspacesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(workspaces_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder addWorkspacesBuilder() {
+        return getWorkspacesFieldBuilder().addBuilder(
+            com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder addWorkspacesBuilder(
+          int index) {
+        return getWorkspacesFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder> 
+           getWorkspacesBuilderList() {
+        return getWorkspacesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> 
+          getWorkspacesFieldBuilder() {
+        if (workspacesBuilder_ == null) {
+          workspacesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder>(
+                  workspaces_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          workspaces_ = null;
+        }
+        return workspacesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.ListOwnedWorkspaceTemplatesResponse)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListOwnedWorkspaceTemplatesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListOwnedWorkspaceTemplatesResponse>() {
+      @java.lang.Override
+      public ListOwnedWorkspaceTemplatesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListOwnedWorkspaceTemplatesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListOwnedWorkspaceTemplatesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WorkspaceInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.WorkspaceInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+     * @return The workspaceId.
+     */
+    java.lang.String getWorkspaceId();
+    /**
+     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+     * @return The bytes for workspaceId.
+     */
+    com.google.protobuf.ByteString
+        getWorkspaceIdBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string owner = 4 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 4 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string prefix = 5 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <code>string prefix = 5 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
+
+    /**
+     * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+     * @return The hookIds.
+     */
+    java.lang.String getHookIds();
+    /**
+     * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+     * @return The bytes for hookIds.
+     */
+    com.google.protobuf.ByteString
+        getHookIdsBytes();
+
+    /**
+     * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+     * @return The endpointIds.
+     */
+    java.lang.String getEndpointIds();
+    /**
+     * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+     * @return The bytes for endpointIds.
+     */
+    com.google.protobuf.ByteString
+        getEndpointIdsBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.services.v2.WorkspaceInfo}
+   */
+  public static final class WorkspaceInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.WorkspaceInfo)
+      WorkspaceInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkspaceInfo.newBuilder() to construct.
+    private WorkspaceInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkspaceInfo() {
+      workspaceId_ = "";
+      name_ = "";
+      description_ = "";
+      owner_ = "";
+      prefix_ = "";
+      hookIds_ = "";
+      endpointIds_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkspaceInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_WorkspaceInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_WorkspaceInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder.class);
+    }
+
+    public static final int WORKSPACE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object workspaceId_ = "";
+    /**
+     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+     * @return The workspaceId.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkspaceId() {
+      java.lang.Object ref = workspaceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workspaceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+     * @return The bytes for workspaceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkspaceIdBytes() {
+      java.lang.Object ref = workspaceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workspaceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 4 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 4 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object prefix_ = "";
+    /**
+     * <code>string prefix = 5 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string prefix = 5 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOOK_IDS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hookIds_ = "";
+    /**
+     * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+     * @return The hookIds.
+     */
+    @java.lang.Override
+    public java.lang.String getHookIds() {
+      java.lang.Object ref = hookIds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hookIds_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+     * @return The bytes for hookIds.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHookIdsBytes() {
+      java.lang.Object ref = hookIds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hookIds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_IDS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpointIds_ = "";
+    /**
+     * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+     * @return The endpointIds.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpointIds() {
+      java.lang.Object ref = endpointIds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpointIds_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+     * @return The bytes for endpointIds.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointIdsBytes() {
+      java.lang.Object ref = endpointIds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpointIds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workspaceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workspaceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, prefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookIds_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, hookIds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointIds_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, endpointIds_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workspaceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workspaceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, prefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookIds_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, hookIds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpointIds_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, endpointIds_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo) obj;
+
+      if (!getWorkspaceId()
+          .equals(other.getWorkspaceId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPrefix()
+          .equals(other.getPrefix())) return false;
+      if (!getHookIds()
+          .equals(other.getHookIds())) return false;
+      if (!getEndpointIds()
+          .equals(other.getEndpointIds())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKSPACE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkspaceId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPrefix().hashCode();
+      hash = (37 * hash) + HOOK_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getHookIds().hashCode();
+      hash = (37 * hash) + ENDPOINT_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpointIds().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.services.v2.WorkspaceInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.WorkspaceInfo)
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_WorkspaceInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_WorkspaceInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        workspaceId_ = "";
+        name_ = "";
+        description_ = "";
+        owner_ = "";
+        prefix_ = "";
+        hookIds_ = "";
+        endpointIds_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_WorkspaceInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo build() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo buildPartial() {
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.workspaceId_ = workspaceId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.prefix_ = prefix_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.hookIds_ = hookIds_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.endpointIds_ = endpointIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo) {
+          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo other) {
+        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance()) return this;
+        if (!other.getWorkspaceId().isEmpty()) {
+          workspaceId_ = other.workspaceId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getPrefix().isEmpty()) {
+          prefix_ = other.prefix_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getHookIds().isEmpty()) {
+          hookIds_ = other.hookIds_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getEndpointIds().isEmpty()) {
+          endpointIds_ = other.endpointIds_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                workspaceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                prefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                hookIds_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                endpointIds_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object workspaceId_ = "";
+      /**
+       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+       * @return The workspaceId.
+       */
+      public java.lang.String getWorkspaceId() {
+        java.lang.Object ref = workspaceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workspaceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+       * @return The bytes for workspaceId.
+       */
+      public com.google.protobuf.ByteString
+          getWorkspaceIdBytes() {
+        java.lang.Object ref = workspaceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workspaceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+       * @param value The workspaceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        workspaceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkspaceId() {
+        workspaceId_ = getDefaultInstance().getWorkspaceId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
+       * @param value The bytes for workspaceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        workspaceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 4 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 4 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 4 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 4 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 4 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object prefix_ = "";
+      /**
+       * <code>string prefix = 5 [json_name = "prefix"];</code>
+       * @return The prefix.
+       */
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string prefix = 5 [json_name = "prefix"];</code>
+       * @return The bytes for prefix.
+       */
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string prefix = 5 [json_name = "prefix"];</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        prefix_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string prefix = 5 [json_name = "prefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        prefix_ = getDefaultInstance().getPrefix();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string prefix = 5 [json_name = "prefix"];</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        prefix_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hookIds_ = "";
+      /**
+       * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+       * @return The hookIds.
+       */
+      public java.lang.String getHookIds() {
+        java.lang.Object ref = hookIds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hookIds_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+       * @return The bytes for hookIds.
+       */
+      public com.google.protobuf.ByteString
+          getHookIdsBytes() {
+        java.lang.Object ref = hookIds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hookIds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+       * @param value The hookIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hookIds_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHookIds() {
+        hookIds_ = getDefaultInstance().getHookIds();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hook_ids = 6 [json_name = "hookIds"];</code>
+       * @param value The bytes for hookIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hookIds_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpointIds_ = "";
+      /**
+       * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+       * @return The endpointIds.
+       */
+      public java.lang.String getEndpointIds() {
+        java.lang.Object ref = endpointIds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpointIds_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+       * @return The bytes for endpointIds.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointIdsBytes() {
+        java.lang.Object ref = endpointIds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpointIds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+       * @param value The endpointIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpointIds_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpointIds() {
+        endpointIds_ = getDefaultInstance().getEndpointIds();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint_ids = 7 [json_name = "endpointIds"];</code>
+       * @param value The bytes for endpointIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpointIds_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.WorkspaceInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.WorkspaceInfo)
+    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo();
+    }
+
+    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkspaceInfo>
+        PARSER = new com.google.protobuf.AbstractParser<WorkspaceInfo>() {
+      @java.lang.Override
+      public WorkspaceInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkspaceInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkspaceInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateWorkspaceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.CreateWorkspaceRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Workspace template id
+     * </pre>
+     *
      * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
      * @return The workspaceTemplate.
      */
     java.lang.String getWorkspaceTemplate();
     /**
+     * <pre>
+     * Workspace template id
+     * </pre>
+     *
      * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
      * @return The bytes for workspaceTemplate.
      */
     com.google.protobuf.ByteString
         getWorkspaceTemplateBytes();
+
+    /**
+     * <pre>
+     * Description of this workspace instance
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of this workspace instance
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.CreateWorkspaceRequest}
@@ -1978,6 +6760,7 @@ public final class WorkspaceServiceProto {
     }
     private CreateWorkspaceRequest() {
       workspaceTemplate_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -2004,6 +6787,10 @@ public final class WorkspaceServiceProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object workspaceTemplate_ = "";
     /**
+     * <pre>
+     * Workspace template id
+     * </pre>
+     *
      * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
      * @return The workspaceTemplate.
      */
@@ -2021,6 +6808,10 @@ public final class WorkspaceServiceProto {
       }
     }
     /**
+     * <pre>
+     * Workspace template id
+     * </pre>
+     *
      * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
      * @return The bytes for workspaceTemplate.
      */
@@ -2033,6 +6824,53 @@ public final class WorkspaceServiceProto {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         workspaceTemplate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Description of this workspace instance
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of this workspace instance
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2056,6 +6894,9 @@ public final class WorkspaceServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workspaceTemplate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workspaceTemplate_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2067,6 +6908,9 @@ public final class WorkspaceServiceProto {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workspaceTemplate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workspaceTemplate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2085,6 +6929,8 @@ public final class WorkspaceServiceProto {
 
       if (!getWorkspaceTemplate()
           .equals(other.getWorkspaceTemplate())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2098,6 +6944,8 @@ public final class WorkspaceServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + WORKSPACE_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getWorkspaceTemplate().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2230,6 +7078,7 @@ public final class WorkspaceServiceProto {
         super.clear();
         bitField0_ = 0;
         workspaceTemplate_ = "";
+        description_ = "";
         return this;
       }
 
@@ -2266,6 +7115,9 @@ public final class WorkspaceServiceProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.workspaceTemplate_ = workspaceTemplate_;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
       }
 
       @java.lang.Override
@@ -2283,6 +7135,11 @@ public final class WorkspaceServiceProto {
         if (!other.getWorkspaceTemplate().isEmpty()) {
           workspaceTemplate_ = other.workspaceTemplate_;
           bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2316,6 +7173,11 @@ public final class WorkspaceServiceProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2335,6 +7197,10 @@ public final class WorkspaceServiceProto {
 
       private java.lang.Object workspaceTemplate_ = "";
       /**
+       * <pre>
+       * Workspace template id
+       * </pre>
+       *
        * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
        * @return The workspaceTemplate.
        */
@@ -2351,6 +7217,10 @@ public final class WorkspaceServiceProto {
         }
       }
       /**
+       * <pre>
+       * Workspace template id
+       * </pre>
+       *
        * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
        * @return The bytes for workspaceTemplate.
        */
@@ -2368,6 +7238,10 @@ public final class WorkspaceServiceProto {
         }
       }
       /**
+       * <pre>
+       * Workspace template id
+       * </pre>
+       *
        * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
        * @param value The workspaceTemplate to set.
        * @return This builder for chaining.
@@ -2381,6 +7255,10 @@ public final class WorkspaceServiceProto {
         return this;
       }
       /**
+       * <pre>
+       * Workspace template id
+       * </pre>
+       *
        * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
        * @return This builder for chaining.
        */
@@ -2391,6 +7269,10 @@ public final class WorkspaceServiceProto {
         return this;
       }
       /**
+       * <pre>
+       * Workspace template id
+       * </pre>
+       *
        * <code>string workspace_template = 1 [json_name = "workspaceTemplate"];</code>
        * @param value The bytes for workspaceTemplate to set.
        * @return This builder for chaining.
@@ -2401,6 +7283,98 @@ public final class WorkspaceServiceProto {
         checkByteStringIsUtf8(value);
         workspaceTemplate_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of this workspace instance
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of this workspace instance
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of this workspace instance
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of this workspace instance
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of this workspace instance
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5404,1075 +10378,6 @@ public final class WorkspaceServiceProto {
 
   }
 
-  public interface MoveWorkspaceDataRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.MoveWorkspaceDataRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * This will update all objects as "non_workspace" and move the root to another project
-     * </pre>
-     *
-     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-     * @return The workspaceId.
-     */
-    java.lang.String getWorkspaceId();
-    /**
-     * <pre>
-     * This will update all objects as "non_workspace" and move the root to another project
-     * </pre>
-     *
-     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-     * @return The bytes for workspaceId.
-     */
-    com.google.protobuf.ByteString
-        getWorkspaceIdBytes();
-
-    /**
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
-     * @return The projectId.
-     */
-    java.lang.String getProjectId();
-    /**
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
-     */
-    com.google.protobuf.ByteString
-        getProjectIdBytes();
-  }
-  /**
-   * Protobuf type {@code aruna.api.storage.services.v2.MoveWorkspaceDataRequest}
-   */
-  public static final class MoveWorkspaceDataRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.MoveWorkspaceDataRequest)
-      MoveWorkspaceDataRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveWorkspaceDataRequest.newBuilder() to construct.
-    private MoveWorkspaceDataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MoveWorkspaceDataRequest() {
-      workspaceId_ = "";
-      projectId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveWorkspaceDataRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.Builder.class);
-    }
-
-    public static final int WORKSPACE_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object workspaceId_ = "";
-    /**
-     * <pre>
-     * This will update all objects as "non_workspace" and move the root to another project
-     * </pre>
-     *
-     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-     * @return The workspaceId.
-     */
-    @java.lang.Override
-    public java.lang.String getWorkspaceId() {
-      java.lang.Object ref = workspaceId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        workspaceId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * This will update all objects as "non_workspace" and move the root to another project
-     * </pre>
-     *
-     * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-     * @return The bytes for workspaceId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWorkspaceIdBytes() {
-      java.lang.Object ref = workspaceId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        workspaceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PROJECT_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object projectId_ = "";
-    /**
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
-     * @return The projectId.
-     */
-    @java.lang.Override
-    public java.lang.String getProjectId() {
-      java.lang.Object ref = projectId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProjectIdBytes() {
-      java.lang.Object ref = projectId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workspaceId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workspaceId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, projectId_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workspaceId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workspaceId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, projectId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest) obj;
-
-      if (!getWorkspaceId()
-          .equals(other.getWorkspaceId())) return false;
-      if (!getProjectId()
-          .equals(other.getProjectId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WORKSPACE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWorkspaceId().hashCode();
-      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getProjectId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.storage.services.v2.MoveWorkspaceDataRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.MoveWorkspaceDataRequest)
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.Builder.class);
-      }
-
-      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        workspaceId_ = "";
-        projectId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest build() {
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest buildPartial() {
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.workspaceId_ = workspaceId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.projectId_ = projectId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest) {
-          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest other) {
-        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.getDefaultInstance()) return this;
-        if (!other.getWorkspaceId().isEmpty()) {
-          workspaceId_ = other.workspaceId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getProjectId().isEmpty()) {
-          projectId_ = other.projectId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                workspaceId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                projectId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object workspaceId_ = "";
-      /**
-       * <pre>
-       * This will update all objects as "non_workspace" and move the root to another project
-       * </pre>
-       *
-       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-       * @return The workspaceId.
-       */
-      public java.lang.String getWorkspaceId() {
-        java.lang.Object ref = workspaceId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          workspaceId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * This will update all objects as "non_workspace" and move the root to another project
-       * </pre>
-       *
-       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-       * @return The bytes for workspaceId.
-       */
-      public com.google.protobuf.ByteString
-          getWorkspaceIdBytes() {
-        java.lang.Object ref = workspaceId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          workspaceId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * This will update all objects as "non_workspace" and move the root to another project
-       * </pre>
-       *
-       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-       * @param value The workspaceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkspaceId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        workspaceId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * This will update all objects as "non_workspace" and move the root to another project
-       * </pre>
-       *
-       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWorkspaceId() {
-        workspaceId_ = getDefaultInstance().getWorkspaceId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * This will update all objects as "non_workspace" and move the root to another project
-       * </pre>
-       *
-       * <code>string workspace_id = 1 [json_name = "workspaceId"];</code>
-       * @param value The bytes for workspaceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorkspaceIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        workspaceId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object projectId_ = "";
-      /**
-       * <code>string project_id = 2 [json_name = "projectId"];</code>
-       * @return The projectId.
-       */
-      public java.lang.String getProjectId() {
-        java.lang.Object ref = projectId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          projectId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string project_id = 2 [json_name = "projectId"];</code>
-       * @return The bytes for projectId.
-       */
-      public com.google.protobuf.ByteString
-          getProjectIdBytes() {
-        java.lang.Object ref = projectId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          projectId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string project_id = 2 [json_name = "projectId"];</code>
-       * @param value The projectId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProjectId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        projectId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string project_id = 2 [json_name = "projectId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProjectId() {
-        projectId_ = getDefaultInstance().getProjectId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string project_id = 2 [json_name = "projectId"];</code>
-       * @param value The bytes for projectId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProjectIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        projectId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.MoveWorkspaceDataRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.MoveWorkspaceDataRequest)
-    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest();
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<MoveWorkspaceDataRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MoveWorkspaceDataRequest>() {
-      @java.lang.Override
-      public MoveWorkspaceDataRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<MoveWorkspaceDataRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveWorkspaceDataRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MoveWorkspaceDataResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.MoveWorkspaceDataResponse)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code aruna.api.storage.services.v2.MoveWorkspaceDataResponse}
-   */
-  public static final class MoveWorkspaceDataResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.MoveWorkspaceDataResponse)
-      MoveWorkspaceDataResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveWorkspaceDataResponse.newBuilder() to construct.
-    private MoveWorkspaceDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MoveWorkspaceDataResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveWorkspaceDataResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse)) {
-        return super.equals(obj);
-      }
-      com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code aruna.api.storage.services.v2.MoveWorkspaceDataResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.MoveWorkspaceDataResponse)
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.Builder.class);
-      }
-
-      // Construct using com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse build() {
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse buildPartial() {
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse result = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse) {
-          return mergeFrom((com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse other) {
-        if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.MoveWorkspaceDataResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.MoveWorkspaceDataResponse)
-    private static final com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse();
-    }
-
-    public static com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<MoveWorkspaceDataResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MoveWorkspaceDataResponse>() {
-      @java.lang.Override
-      public MoveWorkspaceDataResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<MoveWorkspaceDataResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveWorkspaceDataResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateRequest_descriptor;
   private static final 
@@ -6483,6 +10388,41 @@ public final class WorkspaceServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_WorkspaceInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_WorkspaceInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceRequest_descriptor;
   private static final 
@@ -6513,16 +10453,6 @@ public final class WorkspaceServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_ClaimWorkspaceResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6534,63 +10464,85 @@ public final class WorkspaceServiceProto {
     java.lang.String[] descriptorData = {
       "\n5aruna/api/storage/services/v2/workspac" +
       "e_service.proto\022\035aruna.api.storage.servi" +
-      "ces.v2\032(aruna/api/storage/models/v2/mode" +
-      "ls.proto\032\034google/api/annotations.proto\"\255" +
-      "\001\n\036CreateWorkspaceTemplateRequest\022\031\n\010own" +
-      "er_id\030\001 \001(\tR\007ownerId\022\026\n\006prefix\030\002 \001(\tR\006pr" +
-      "efix\022\022\n\004name\030\003 \001(\tR\004name\022D\n\nkey_values\030\004" +
-      " \003(\0132%.aruna.api.storage.models.v2.KeyVa" +
-      "lueR\tkeyValues\"F\n\037CreateWorkspaceTemplat" +
-      "eResponse\022#\n\rtemplate_name\030\001 \001(\tR\014templa" +
-      "teName\"G\n\026CreateWorkspaceRequest\022-\n\022work" +
-      "space_template\030\001 \001(\tR\021workspaceTemplate\"" +
-      "\220\001\n\027CreateWorkspaceResponse\022!\n\014workspace" +
-      "_id\030\001 \001(\tR\013workspaceId\022\024\n\005token\030\002 \001(\tR\005t" +
-      "oken\022\035\n\naccess_key\030\003 \001(\tR\taccessKey\022\035\n\ns" +
-      "ecret_key\030\004 \001(\tR\tsecretKey\";\n\026DeleteWork" +
-      "spaceRequest\022!\n\014workspace_id\030\001 \001(\tR\013work" +
-      "spaceId\"\031\n\027DeleteWorkspaceResponse\"P\n\025Cl" +
-      "aimWorkspaceRequest\022!\n\014workspace_id\030\001 \001(" +
-      "\tR\013workspaceId\022\024\n\005token\030\002 \001(\tR\005token\"\030\n\026" +
-      "ClaimWorkspaceResponse\"\\\n\030MoveWorkspaceD" +
-      "ataRequest\022!\n\014workspace_id\030\001 \001(\tR\013worksp" +
-      "aceId\022\035\n\nproject_id\030\002 \001(\tR\tprojectId\"\033\n\031" +
-      "MoveWorkspaceDataResponse2\214\007\n\020WorkspaceS" +
-      "ervice\022\273\001\n\027CreateWorkspaceTemplate\022=.aru" +
-      "na.api.storage.services.v2.CreateWorkspa" +
-      "ceTemplateRequest\032>.aruna.api.storage.se" +
-      "rvices.v2.CreateWorkspaceTemplateRespons" +
-      "e\"!\202\323\344\223\002\033\"\026/v2/workspace/template:\001*\022\232\001\n" +
-      "\017CreateWorkspace\0225.aruna.api.storage.ser" +
-      "vices.v2.CreateWorkspaceRequest\0326.aruna." +
-      "api.storage.services.v2.CreateWorkspaceR" +
-      "esponse\"\030\202\323\344\223\002\022\"\r/v2/workspace:\001*\022\251\001\n\017De" +
-      "leteWorkspace\0225.aruna.api.storage.servic" +
-      "es.v2.DeleteWorkspaceRequest\0326.aruna.api" +
-      ".storage.services.v2.DeleteWorkspaceResp" +
-      "onse\"\'\202\323\344\223\002!*\034/v2/workspace/{workspace_i" +
-      "d}:\001*\022\254\001\n\016ClaimWorkspace\0224.aruna.api.sto" +
-      "rage.services.v2.ClaimWorkspaceRequest\0325" +
-      ".aruna.api.storage.services.v2.ClaimWork" +
-      "spaceResponse\"-\202\323\344\223\002\'\"\"/v2/workspace/{wo" +
-      "rkspace_id}/claim:\001*\022\301\001\n\021MoveWorkspaceDa" +
-      "ta\0227.aruna.api.storage.services.v2.MoveW" +
-      "orkspaceDataRequest\0328.aruna.api.storage." +
-      "services.v2.MoveWorkspaceDataResponse\"9\202" +
-      "\323\344\223\0023\"./v2/workspace/{workspace_id}/move" +
-      "/{project_id}:\001*B\221\002\n!com.aruna.api.stora" +
-      "ge.services.v2B\025WorkspaceServiceProtoP\000Z" +
-      "<github.com/ArunaStorage/go-api/aruna/ap" +
-      "i/storage/services/v2\242\002\004AASS\252\002\035Aruna.Api" +
-      ".Storage.Services.V2\312\002\035Aruna\\Api\\Storage" +
-      "\\Services\\V2\342\002)Aruna\\Api\\Storage\\Service" +
-      "s\\V2\\GPBMetadata\352\002!Aruna::Api::Storage::" +
-      "Services::V2b\006proto3"
+      "ces.v2\032\034google/api/annotations.proto\"\305\001\n" +
+      "\036CreateWorkspaceTemplateRequest\022\031\n\010owner" +
+      "_id\030\001 \001(\tR\007ownerId\022\026\n\006prefix\030\002 \001(\tR\006pref" +
+      "ix\022\022\n\004name\030\003 \001(\tR\004name\022\031\n\010hook_ids\030\005 \003(\t" +
+      "R\007hookIds\022 \n\013description\030\006 \001(\tR\013descript" +
+      "ion\022\037\n\013endpoint_id\030\007 \003(\tR\nendpointId\"B\n\037" +
+      "CreateWorkspaceTemplateResponse\022\037\n\013templ" +
+      "ate_id\030\001 \001(\tR\ntemplateId\">\n\033GetWorkspace" +
+      "TemplateRequest\022\037\n\013template_id\030\001 \001(\tR\nte" +
+      "mplateId\"l\n\034GetWorkspaceTemplateResponse" +
+      "\022L\n\nworkspaces\030\001 \001(\0132,.aruna.api.storage" +
+      ".services.v2.WorkspaceInfoR\nworkspaces\"A" +
+      "\n\036DeleteWorkspaceTemplateRequest\022\037\n\013temp" +
+      "late_id\030\001 \001(\tR\ntemplateId\"!\n\037DeleteWorks" +
+      "paceTemplateResponse\"$\n\"ListOwnedWorkspa" +
+      "ceTemplatesRequest\"s\n#ListOwnedWorkspace" +
+      "TemplatesResponse\022L\n\nworkspaces\030\001 \003(\0132,." +
+      "aruna.api.storage.services.v2.WorkspaceI" +
+      "nfoR\nworkspaces\"\324\001\n\rWorkspaceInfo\022!\n\014wor" +
+      "kspace_id\030\001 \001(\tR\013workspaceId\022\022\n\004name\030\002 \001" +
+      "(\tR\004name\022 \n\013description\030\003 \001(\tR\013descripti" +
+      "on\022\024\n\005owner\030\004 \001(\tR\005owner\022\026\n\006prefix\030\005 \001(\t" +
+      "R\006prefix\022\031\n\010hook_ids\030\006 \001(\tR\007hookIds\022!\n\014e" +
+      "ndpoint_ids\030\007 \001(\tR\013endpointIds\"i\n\026Create" +
+      "WorkspaceRequest\022-\n\022workspace_template\030\001" +
+      " \001(\tR\021workspaceTemplate\022 \n\013description\030\002" +
+      " \001(\tR\013description\"\220\001\n\027CreateWorkspaceRes" +
+      "ponse\022!\n\014workspace_id\030\001 \001(\tR\013workspaceId" +
+      "\022\024\n\005token\030\002 \001(\tR\005token\022\035\n\naccess_key\030\003 \001" +
+      "(\tR\taccessKey\022\035\n\nsecret_key\030\004 \001(\tR\tsecre" +
+      "tKey\";\n\026DeleteWorkspaceRequest\022!\n\014worksp" +
+      "ace_id\030\001 \001(\tR\013workspaceId\"\031\n\027DeleteWorks" +
+      "paceResponse\"P\n\025ClaimWorkspaceRequest\022!\n" +
+      "\014workspace_id\030\001 \001(\tR\013workspaceId\022\024\n\005toke" +
+      "n\030\002 \001(\tR\005token\"\030\n\026ClaimWorkspaceResponse" +
+      "2\241\n\n\020WorkspaceService\022\273\001\n\027CreateWorkspac" +
+      "eTemplate\022=.aruna.api.storage.services.v" +
+      "2.CreateWorkspaceTemplateRequest\032>.aruna" +
+      ".api.storage.services.v2.CreateWorkspace" +
+      "TemplateResponse\"!\202\323\344\223\002\033\"\026/v2/workspace/" +
+      "template:\001*\022\300\001\n\024GetWorkspaceTemplate\022:.a" +
+      "runa.api.storage.services.v2.GetWorkspac" +
+      "eTemplateRequest\032;.aruna.api.storage.ser" +
+      "vices.v2.GetWorkspaceTemplateResponse\"/\202" +
+      "\323\344\223\002)\022$/v2/workspace/template/{template_" +
+      "id}:\001*\022\307\001\n\033ListOwnedWorkspaceTemplates\022A" +
+      ".aruna.api.storage.services.v2.ListOwned" +
+      "WorkspaceTemplatesRequest\032B.aruna.api.st" +
+      "orage.services.v2.ListOwnedWorkspaceTemp" +
+      "latesResponse\"!\202\323\344\223\002\033\022\026/v2/workspace/tem" +
+      "plate:\001*\022\311\001\n\027DeleteWorkspaceTemplate\022=.a" +
+      "runa.api.storage.services.v2.DeleteWorks" +
+      "paceTemplateRequest\032>.aruna.api.storage." +
+      "services.v2.DeleteWorkspaceTemplateRespo" +
+      "nse\"/\202\323\344\223\002)*$/v2/workspace/template/{tem" +
+      "plate_id}:\001*\022\232\001\n\017CreateWorkspace\0225.aruna" +
+      ".api.storage.services.v2.CreateWorkspace" +
+      "Request\0326.aruna.api.storage.services.v2." +
+      "CreateWorkspaceResponse\"\030\202\323\344\223\002\022\"\r/v2/wor" +
+      "kspace:\001*\022\251\001\n\017DeleteWorkspace\0225.aruna.ap" +
+      "i.storage.services.v2.DeleteWorkspaceReq" +
+      "uest\0326.aruna.api.storage.services.v2.Del" +
+      "eteWorkspaceResponse\"\'\202\323\344\223\002!*\034/v2/worksp" +
+      "ace/{workspace_id}:\001*\022\254\001\n\016ClaimWorkspace" +
+      "\0224.aruna.api.storage.services.v2.ClaimWo" +
+      "rkspaceRequest\0325.aruna.api.storage.servi" +
+      "ces.v2.ClaimWorkspaceResponse\"-\202\323\344\223\002\'\"\"/" +
+      "v2/workspace/{workspace_id}/claim:\001*B\221\002\n" +
+      "!com.aruna.api.storage.services.v2B\025Work" +
+      "spaceServiceProtoP\000Z<github.com/ArunaSto" +
+      "rage/go-api/aruna/api/storage/services/v" +
+      "2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2" +
+      "\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna" +
+      "\\Api\\Storage\\Services\\V2\\GPBMetadata\352\002!A" +
+      "runa::Api::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.aruna.api.storage.models.v2.ModelsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateRequest_descriptor =
@@ -6598,67 +10550,96 @@ public final class WorkspaceServiceProto {
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateRequest_descriptor,
-        new java.lang.String[] { "OwnerId", "Prefix", "Name", "KeyValues", });
+        new java.lang.String[] { "OwnerId", "Prefix", "Name", "HookIds", "Description", "EndpointId", });
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateResponse_descriptor,
-        new java.lang.String[] { "TemplateName", });
-    internal_static_aruna_api_storage_services_v2_CreateWorkspaceRequest_descriptor =
+        new java.lang.String[] { "TemplateId", });
+    internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateRequest_descriptor,
+        new java.lang.String[] { "TemplateId", });
+    internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor,
+        new java.lang.String[] { "Workspaces", });
+    internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor,
+        new java.lang.String[] { "TemplateId", });
+    internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_ListOwnedWorkspaceTemplatesResponse_descriptor,
+        new java.lang.String[] { "Workspaces", });
+    internal_static_aruna_api_storage_services_v2_WorkspaceInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_aruna_api_storage_services_v2_WorkspaceInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_WorkspaceInfo_descriptor,
+        new java.lang.String[] { "WorkspaceId", "Name", "Description", "Owner", "Prefix", "HookIds", "EndpointIds", });
+    internal_static_aruna_api_storage_services_v2_CreateWorkspaceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateWorkspaceRequest_descriptor,
-        new java.lang.String[] { "WorkspaceTemplate", });
+        new java.lang.String[] { "WorkspaceTemplate", "Description", });
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateWorkspaceResponse_descriptor,
         new java.lang.String[] { "WorkspaceId", "Token", "AccessKey", "SecretKey", });
     internal_static_aruna_api_storage_services_v2_DeleteWorkspaceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_storage_services_v2_DeleteWorkspaceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_DeleteWorkspaceRequest_descriptor,
         new java.lang.String[] { "WorkspaceId", });
     internal_static_aruna_api_storage_services_v2_DeleteWorkspaceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aruna_api_storage_services_v2_DeleteWorkspaceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_DeleteWorkspaceResponse_descriptor,
         new java.lang.String[] { });
     internal_static_aruna_api_storage_services_v2_ClaimWorkspaceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_storage_services_v2_ClaimWorkspaceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_ClaimWorkspaceRequest_descriptor,
         new java.lang.String[] { "WorkspaceId", "Token", });
     internal_static_aruna_api_storage_services_v2_ClaimWorkspaceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_aruna_api_storage_services_v2_ClaimWorkspaceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_ClaimWorkspaceResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataRequest_descriptor,
-        new java.lang.String[] { "WorkspaceId", "ProjectId", });
-    internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_MoveWorkspaceDataResponse_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.aruna.api.storage.models.v2.ModelsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

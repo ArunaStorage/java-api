@@ -108,6 +108,37 @@ public final class SearchServiceGrpc {
     return getGetResourcesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest,
+      com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse> getRequestResourceAccessMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RequestResourceAccess",
+      requestType = com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest.class,
+      responseType = com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest,
+      com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse> getRequestResourceAccessMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest, com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse> getRequestResourceAccessMethod;
+    if ((getRequestResourceAccessMethod = SearchServiceGrpc.getRequestResourceAccessMethod) == null) {
+      synchronized (SearchServiceGrpc.class) {
+        if ((getRequestResourceAccessMethod = SearchServiceGrpc.getRequestResourceAccessMethod) == null) {
+          SearchServiceGrpc.getRequestResourceAccessMethod = getRequestResourceAccessMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest, com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RequestResourceAccess"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SearchServiceMethodDescriptorSupplier("RequestResourceAccess"))
+              .build();
+        }
+      }
+    }
+    return getRequestResourceAccessMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -192,6 +223,18 @@ public final class SearchServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetResourcesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * RequestResourceAccess
+     * Status: ALPHA
+     * Requests access to resources
+     * </pre>
+     */
+    default void requestResourceAccess(com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRequestResourceAccessMethod(), responseObserver);
+    }
   }
 
   /**
@@ -260,6 +303,19 @@ public final class SearchServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetResourcesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * RequestResourceAccess
+     * Status: ALPHA
+     * Requests access to resources
+     * </pre>
+     */
+    public void requestResourceAccess(com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRequestResourceAccessMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -313,6 +369,18 @@ public final class SearchServiceGrpc {
     public com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse getResources(com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetResourcesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RequestResourceAccess
+     * Status: ALPHA
+     * Requests access to resources
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse requestResourceAccess(com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRequestResourceAccessMethod(), getCallOptions(), request);
     }
   }
 
@@ -371,11 +439,25 @@ public final class SearchServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetResourcesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * RequestResourceAccess
+     * Status: ALPHA
+     * Requests access to resources
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse> requestResourceAccess(
+        com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRequestResourceAccessMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH_RESOURCES = 0;
   private static final int METHODID_GET_RESOURCE = 1;
   private static final int METHODID_GET_RESOURCES = 2;
+  private static final int METHODID_REQUEST_RESOURCE_ACCESS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -405,6 +487,10 @@ public final class SearchServiceGrpc {
         case METHODID_GET_RESOURCES:
           serviceImpl.getResources((com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse>) responseObserver);
+          break;
+        case METHODID_REQUEST_RESOURCE_ACCESS:
+          serviceImpl.requestResourceAccess((com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -445,6 +531,13 @@ public final class SearchServiceGrpc {
               com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesRequest,
               com.aruna.api.storage.services.v2.SearchServiceProto.GetResourcesResponse>(
                 service, METHODID_GET_RESOURCES)))
+        .addMethod(
+          getRequestResourceAccessMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessRequest,
+              com.aruna.api.storage.services.v2.SearchServiceProto.RequestResourceAccessResponse>(
+                service, METHODID_REQUEST_RESOURCE_ACCESS)))
         .build();
   }
 
@@ -496,6 +589,7 @@ public final class SearchServiceGrpc {
               .addMethod(getSearchResourcesMethod())
               .addMethod(getGetResourceMethod())
               .addMethod(getGetResourcesMethod())
+              .addMethod(getRequestResourceAccessMethod())
               .build();
         }
       }

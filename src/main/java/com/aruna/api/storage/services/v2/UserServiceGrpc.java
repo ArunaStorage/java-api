@@ -547,6 +547,37 @@ public final class UserServiceGrpc {
     return getGetPersonalNotificationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse> getAcknowledgePersonalNotificationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AcknowledgePersonalNotifications",
+      requestType = com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest,
+      com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse> getAcknowledgePersonalNotificationsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest, com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse> getAcknowledgePersonalNotificationsMethod;
+    if ((getAcknowledgePersonalNotificationsMethod = UserServiceGrpc.getAcknowledgePersonalNotificationsMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getAcknowledgePersonalNotificationsMethod = UserServiceGrpc.getAcknowledgePersonalNotificationsMethod) == null) {
+          UserServiceGrpc.getAcknowledgePersonalNotificationsMethod = getAcknowledgePersonalNotificationsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest, com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AcknowledgePersonalNotifications"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AcknowledgePersonalNotifications"))
+              .build();
+        }
+      }
+    }
+    return getAcknowledgePersonalNotificationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -796,10 +827,27 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPersonalNotifications
+     * Status: ALPHA
+     * Fetches personal notifications
+     * </pre>
      */
     default void getPersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPersonalNotificationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AcknowledgePersonalNotifications
+     * Status: ALPHA
+     * Acknowledges personal notifications
+     * </pre>
+     */
+    default void acknowledgePersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAcknowledgePersonalNotificationsMethod(), responseObserver);
     }
   }
 
@@ -1052,11 +1100,29 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPersonalNotifications
+     * Status: ALPHA
+     * Fetches personal notifications
+     * </pre>
      */
     public void getPersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPersonalNotificationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AcknowledgePersonalNotifications
+     * Status: ALPHA
+     * Acknowledges personal notifications
+     * </pre>
+     */
+    public void acknowledgePersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAcknowledgePersonalNotificationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1277,10 +1343,27 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPersonalNotifications
+     * Status: ALPHA
+     * Fetches personal notifications
+     * </pre>
      */
     public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse getPersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPersonalNotificationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AcknowledgePersonalNotifications
+     * Status: ALPHA
+     * Acknowledges personal notifications
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse acknowledgePersonalNotifications(com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAcknowledgePersonalNotificationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1517,11 +1600,29 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPersonalNotifications
+     * Status: ALPHA
+     * Fetches personal notifications
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse> getPersonalNotifications(
         com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPersonalNotificationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AcknowledgePersonalNotifications
+     * Status: ALPHA
+     * Acknowledges personal notifications
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse> acknowledgePersonalNotifications(
+        com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAcknowledgePersonalNotificationsMethod(), getCallOptions()), request);
     }
   }
 
@@ -1542,6 +1643,7 @@ public final class UserServiceGrpc {
   private static final int METHODID_GET_S3CREDENTIALS_USER = 14;
   private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 15;
   private static final int METHODID_GET_PERSONAL_NOTIFICATIONS = 16;
+  private static final int METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1627,6 +1729,10 @@ public final class UserServiceGrpc {
         case METHODID_GET_PERSONAL_NOTIFICATIONS:
           serviceImpl.getPersonalNotifications((com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse>) responseObserver);
+          break;
+        case METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS:
+          serviceImpl.acknowledgePersonalNotifications((com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1765,6 +1871,13 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest,
               com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsResponse>(
                 service, METHODID_GET_PERSONAL_NOTIFICATIONS)))
+        .addMethod(
+          getAcknowledgePersonalNotificationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest,
+              com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsResponse>(
+                service, METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS)))
         .build();
   }
 
@@ -1830,6 +1943,7 @@ public final class UserServiceGrpc {
               .addMethod(getGetS3CredentialsUserMethod())
               .addMethod(getGetDataproxyTokenUserMethod())
               .addMethod(getGetPersonalNotificationsMethod())
+              .addMethod(getAcknowledgePersonalNotificationsMethod())
               .build();
         }
       }

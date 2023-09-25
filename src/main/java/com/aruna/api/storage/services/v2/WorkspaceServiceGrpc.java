@@ -49,6 +49,99 @@ public final class WorkspaceServiceGrpc {
     return getCreateWorkspaceTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest,
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse> getGetWorkspaceTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetWorkspaceTemplate",
+      requestType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.class,
+      responseType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest,
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse> getGetWorkspaceTemplateMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse> getGetWorkspaceTemplateMethod;
+    if ((getGetWorkspaceTemplateMethod = WorkspaceServiceGrpc.getGetWorkspaceTemplateMethod) == null) {
+      synchronized (WorkspaceServiceGrpc.class) {
+        if ((getGetWorkspaceTemplateMethod = WorkspaceServiceGrpc.getGetWorkspaceTemplateMethod) == null) {
+          WorkspaceServiceGrpc.getGetWorkspaceTemplateMethod = getGetWorkspaceTemplateMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWorkspaceTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WorkspaceServiceMethodDescriptorSupplier("GetWorkspaceTemplate"))
+              .build();
+        }
+      }
+    }
+    return getGetWorkspaceTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest,
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse> getListOwnedWorkspaceTemplatesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOwnedWorkspaceTemplates",
+      requestType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.class,
+      responseType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest,
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse> getListOwnedWorkspaceTemplatesMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse> getListOwnedWorkspaceTemplatesMethod;
+    if ((getListOwnedWorkspaceTemplatesMethod = WorkspaceServiceGrpc.getListOwnedWorkspaceTemplatesMethod) == null) {
+      synchronized (WorkspaceServiceGrpc.class) {
+        if ((getListOwnedWorkspaceTemplatesMethod = WorkspaceServiceGrpc.getListOwnedWorkspaceTemplatesMethod) == null) {
+          WorkspaceServiceGrpc.getListOwnedWorkspaceTemplatesMethod = getListOwnedWorkspaceTemplatesMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOwnedWorkspaceTemplates"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WorkspaceServiceMethodDescriptorSupplier("ListOwnedWorkspaceTemplates"))
+              .build();
+        }
+      }
+    }
+    return getListOwnedWorkspaceTemplatesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest,
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse> getDeleteWorkspaceTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteWorkspaceTemplate",
+      requestType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.class,
+      responseType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest,
+      com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse> getDeleteWorkspaceTemplateMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse> getDeleteWorkspaceTemplateMethod;
+    if ((getDeleteWorkspaceTemplateMethod = WorkspaceServiceGrpc.getDeleteWorkspaceTemplateMethod) == null) {
+      synchronized (WorkspaceServiceGrpc.class) {
+        if ((getDeleteWorkspaceTemplateMethod = WorkspaceServiceGrpc.getDeleteWorkspaceTemplateMethod) == null) {
+          WorkspaceServiceGrpc.getDeleteWorkspaceTemplateMethod = getDeleteWorkspaceTemplateMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteWorkspaceTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WorkspaceServiceMethodDescriptorSupplier("DeleteWorkspaceTemplate"))
+              .build();
+        }
+      }
+    }
+    return getDeleteWorkspaceTemplateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceRequest,
       com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceResponse> getCreateWorkspaceMethod;
 
@@ -142,37 +235,6 @@ public final class WorkspaceServiceGrpc {
     return getClaimWorkspaceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest,
-      com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse> getMoveWorkspaceDataMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "MoveWorkspaceData",
-      requestType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.class,
-      responseType = com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest,
-      com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse> getMoveWorkspaceDataMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse> getMoveWorkspaceDataMethod;
-    if ((getMoveWorkspaceDataMethod = WorkspaceServiceGrpc.getMoveWorkspaceDataMethod) == null) {
-      synchronized (WorkspaceServiceGrpc.class) {
-        if ((getMoveWorkspaceDataMethod = WorkspaceServiceGrpc.getMoveWorkspaceDataMethod) == null) {
-          WorkspaceServiceGrpc.getMoveWorkspaceDataMethod = getMoveWorkspaceDataMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest, com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveWorkspaceData"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WorkspaceServiceMethodDescriptorSupplier("MoveWorkspaceData"))
-              .build();
-        }
-      }
-    }
-    return getMoveWorkspaceDataMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -238,6 +300,45 @@ public final class WorkspaceServiceGrpc {
 
     /**
      * <pre>
+     * GetWorkspaceTemplatesById 
+     * 
+     *  Status: ALPHA
+     * Gets workspace template by id
+     * </pre>
+     */
+    default void getWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWorkspaceTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListOwnedWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Lists owned workspace templates
+     * </pre>
+     */
+    default void listOwnedWorkspaceTemplates(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOwnedWorkspaceTemplatesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Deletes specified workspace templates
+     * </pre>
+     */
+    default void deleteWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWorkspaceTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateWorkspace
      * Status: ALPHA
      * A new request to create a personal anonymous workspace
@@ -270,18 +371,6 @@ public final class WorkspaceServiceGrpc {
     default void claimWorkspace(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ClaimWorkspaceRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ClaimWorkspaceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClaimWorkspaceMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * MoveWorkspaceData
-     * Status: ALPHA
-     * Claims an anonymous workspace
-     * </pre>
-     */
-    default void moveWorkspaceData(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveWorkspaceDataMethod(), responseObserver);
     }
   }
 
@@ -333,6 +422,48 @@ public final class WorkspaceServiceGrpc {
 
     /**
      * <pre>
+     * GetWorkspaceTemplatesById 
+     * 
+     *  Status: ALPHA
+     * Gets workspace template by id
+     * </pre>
+     */
+    public void getWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetWorkspaceTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListOwnedWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Lists owned workspace templates
+     * </pre>
+     */
+    public void listOwnedWorkspaceTemplates(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOwnedWorkspaceTemplatesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Deletes specified workspace templates
+     * </pre>
+     */
+    public void deleteWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteWorkspaceTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateWorkspace
      * Status: ALPHA
      * A new request to create a personal anonymous workspace
@@ -369,19 +500,6 @@ public final class WorkspaceServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getClaimWorkspaceMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * MoveWorkspaceData
-     * Status: ALPHA
-     * Claims an anonymous workspace
-     * </pre>
-     */
-    public void moveWorkspaceData(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getMoveWorkspaceDataMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -413,6 +531,45 @@ public final class WorkspaceServiceGrpc {
     public com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse createWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateWorkspaceTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetWorkspaceTemplatesById 
+     * 
+     *  Status: ALPHA
+     * Gets workspace template by id
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse getWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetWorkspaceTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListOwnedWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Lists owned workspace templates
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse listOwnedWorkspaceTemplates(com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOwnedWorkspaceTemplatesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Deletes specified workspace templates
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse deleteWorkspaceTemplate(com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteWorkspaceTemplateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -450,18 +607,6 @@ public final class WorkspaceServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getClaimWorkspaceMethod(), getCallOptions(), request);
     }
-
-    /**
-     * <pre>
-     * MoveWorkspaceData
-     * Status: ALPHA
-     * Claims an anonymous workspace
-     * </pre>
-     */
-    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse moveWorkspaceData(com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getMoveWorkspaceDataMethod(), getCallOptions(), request);
-    }
   }
 
   /**
@@ -494,6 +639,48 @@ public final class WorkspaceServiceGrpc {
         com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateWorkspaceTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetWorkspaceTemplatesById 
+     * 
+     *  Status: ALPHA
+     * Gets workspace template by id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse> getWorkspaceTemplate(
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetWorkspaceTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListOwnedWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Lists owned workspace templates
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse> listOwnedWorkspaceTemplates(
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOwnedWorkspaceTemplatesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteWorkspaceTemplates
+     * 
+     *  Status: ALPHA
+     * Deletes specified workspace templates
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse> deleteWorkspaceTemplate(
+        com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteWorkspaceTemplateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -534,26 +721,15 @@ public final class WorkspaceServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getClaimWorkspaceMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * MoveWorkspaceData
-     * Status: ALPHA
-     * Claims an anonymous workspace
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse> moveWorkspaceData(
-        com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getMoveWorkspaceDataMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_WORKSPACE_TEMPLATE = 0;
-  private static final int METHODID_CREATE_WORKSPACE = 1;
-  private static final int METHODID_DELETE_WORKSPACE = 2;
-  private static final int METHODID_CLAIM_WORKSPACE = 3;
-  private static final int METHODID_MOVE_WORKSPACE_DATA = 4;
+  private static final int METHODID_GET_WORKSPACE_TEMPLATE = 1;
+  private static final int METHODID_LIST_OWNED_WORKSPACE_TEMPLATES = 2;
+  private static final int METHODID_DELETE_WORKSPACE_TEMPLATE = 3;
+  private static final int METHODID_CREATE_WORKSPACE = 4;
+  private static final int METHODID_DELETE_WORKSPACE = 5;
+  private static final int METHODID_CLAIM_WORKSPACE = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -576,6 +752,18 @@ public final class WorkspaceServiceGrpc {
           serviceImpl.createWorkspaceTemplate((com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse>) responseObserver);
           break;
+        case METHODID_GET_WORKSPACE_TEMPLATE:
+          serviceImpl.getWorkspaceTemplate((com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse>) responseObserver);
+          break;
+        case METHODID_LIST_OWNED_WORKSPACE_TEMPLATES:
+          serviceImpl.listOwnedWorkspaceTemplates((com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_WORKSPACE_TEMPLATE:
+          serviceImpl.deleteWorkspaceTemplate((com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse>) responseObserver);
+          break;
         case METHODID_CREATE_WORKSPACE:
           serviceImpl.createWorkspace((com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceResponse>) responseObserver);
@@ -587,10 +775,6 @@ public final class WorkspaceServiceGrpc {
         case METHODID_CLAIM_WORKSPACE:
           serviceImpl.claimWorkspace((com.aruna.api.storage.services.v2.WorkspaceServiceProto.ClaimWorkspaceRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.ClaimWorkspaceResponse>) responseObserver);
-          break;
-        case METHODID_MOVE_WORKSPACE_DATA:
-          serviceImpl.moveWorkspaceData((com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -618,6 +802,27 @@ public final class WorkspaceServiceGrpc {
               com.aruna.api.storage.services.v2.WorkspaceServiceProto.CreateWorkspaceTemplateResponse>(
                 service, METHODID_CREATE_WORKSPACE_TEMPLATE)))
         .addMethod(
+          getGetWorkspaceTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateRequest,
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse>(
+                service, METHODID_GET_WORKSPACE_TEMPLATE)))
+        .addMethod(
+          getListOwnedWorkspaceTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesRequest,
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.ListOwnedWorkspaceTemplatesResponse>(
+                service, METHODID_LIST_OWNED_WORKSPACE_TEMPLATES)))
+        .addMethod(
+          getDeleteWorkspaceTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateRequest,
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.DeleteWorkspaceTemplateResponse>(
+                service, METHODID_DELETE_WORKSPACE_TEMPLATE)))
+        .addMethod(
           getCreateWorkspaceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -638,13 +843,6 @@ public final class WorkspaceServiceGrpc {
               com.aruna.api.storage.services.v2.WorkspaceServiceProto.ClaimWorkspaceRequest,
               com.aruna.api.storage.services.v2.WorkspaceServiceProto.ClaimWorkspaceResponse>(
                 service, METHODID_CLAIM_WORKSPACE)))
-        .addMethod(
-          getMoveWorkspaceDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataRequest,
-              com.aruna.api.storage.services.v2.WorkspaceServiceProto.MoveWorkspaceDataResponse>(
-                service, METHODID_MOVE_WORKSPACE_DATA)))
         .build();
   }
 
@@ -694,10 +892,12 @@ public final class WorkspaceServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new WorkspaceServiceFileDescriptorSupplier())
               .addMethod(getCreateWorkspaceTemplateMethod())
+              .addMethod(getGetWorkspaceTemplateMethod())
+              .addMethod(getListOwnedWorkspaceTemplatesMethod())
+              .addMethod(getDeleteWorkspaceTemplateMethod())
               .addMethod(getCreateWorkspaceMethod())
               .addMethod(getDeleteWorkspaceMethod())
               .addMethod(getClaimWorkspaceMethod())
-              .addMethod(getMoveWorkspaceDataMethod())
               .build();
         }
       }

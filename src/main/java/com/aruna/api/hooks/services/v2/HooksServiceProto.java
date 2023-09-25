@@ -31,6 +31,18 @@ public final class HooksServiceProto {
      * <code>TRIGGER_TYPE_OBJECT_CREATED = 2;</code>
      */
     TRIGGER_TYPE_OBJECT_CREATED(2),
+    /**
+     * <code>TRIGGER_TYPE_LABEL_ADDED = 3;</code>
+     */
+    TRIGGER_TYPE_LABEL_ADDED(3),
+    /**
+     * <code>TRIGGER_TYPE_STATIC_LABEL_ADDED = 4;</code>
+     */
+    TRIGGER_TYPE_STATIC_LABEL_ADDED(4),
+    /**
+     * <code>TRIGGER_TYPE_HOOK_STATUS_CHANGED = 5;</code>
+     */
+    TRIGGER_TYPE_HOOK_STATUS_CHANGED(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -46,6 +58,18 @@ public final class HooksServiceProto {
      * <code>TRIGGER_TYPE_OBJECT_CREATED = 2;</code>
      */
     public static final int TRIGGER_TYPE_OBJECT_CREATED_VALUE = 2;
+    /**
+     * <code>TRIGGER_TYPE_LABEL_ADDED = 3;</code>
+     */
+    public static final int TRIGGER_TYPE_LABEL_ADDED_VALUE = 3;
+    /**
+     * <code>TRIGGER_TYPE_STATIC_LABEL_ADDED = 4;</code>
+     */
+    public static final int TRIGGER_TYPE_STATIC_LABEL_ADDED_VALUE = 4;
+    /**
+     * <code>TRIGGER_TYPE_HOOK_STATUS_CHANGED = 5;</code>
+     */
+    public static final int TRIGGER_TYPE_HOOK_STATUS_CHANGED_VALUE = 5;
 
 
     public final int getNumber() {
@@ -75,6 +99,9 @@ public final class HooksServiceProto {
         case 0: return TRIGGER_TYPE_UNSPECIFIED;
         case 1: return TRIGGER_TYPE_HOOK_ADDED;
         case 2: return TRIGGER_TYPE_OBJECT_CREATED;
+        case 3: return TRIGGER_TYPE_LABEL_ADDED;
+        case 4: return TRIGGER_TYPE_STATIC_LABEL_ADDED;
+        case 5: return TRIGGER_TYPE_HOOK_STATUS_CHANGED;
         default: return null;
       }
     }
@@ -1053,24 +1080,70 @@ public final class HooksServiceProto {
     com.aruna.api.hooks.services.v2.HooksServiceProto.CredentialsOrBuilder getCredentialsOrBuilder();
 
     /**
-     * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-     * @return The jsonTemplate.
+     * <pre>
+     * If empty a basic JSON template will be used
+     * </pre>
+     *
+     * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+     * @return Whether the customTemplate field is set.
      */
-    java.lang.String getJsonTemplate();
+    boolean hasCustomTemplate();
     /**
-     * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-     * @return The bytes for jsonTemplate.
+     * <pre>
+     * If empty a basic JSON template will be used
+     * </pre>
+     *
+     * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+     * @return The customTemplate.
+     */
+    java.lang.String getCustomTemplate();
+    /**
+     * <pre>
+     * If empty a basic JSON template will be used
+     * </pre>
+     *
+     * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+     * @return The bytes for customTemplate.
      */
     com.google.protobuf.ByteString
-        getJsonTemplateBytes();
+        getCustomTemplateBytes();
 
     /**
-     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * <pre>
+     * Optional Project/Collection/Dataset where hooks can upload results.
+     * </pre>
+     *
+     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+     * @return Whether the resultObject field is set.
+     */
+    boolean hasResultObject();
+    /**
+     * <pre>
+     * Optional Project/Collection/Dataset where hooks can upload results.
+     * </pre>
+     *
+     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+     * @return The resultObject.
+     */
+    java.lang.String getResultObject();
+    /**
+     * <pre>
+     * Optional Project/Collection/Dataset where hooks can upload results.
+     * </pre>
+     *
+     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+     * @return The bytes for resultObject.
+     */
+    com.google.protobuf.ByteString
+        getResultObjectBytes();
+
+    /**
+     * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The enum numeric value on the wire for method.
      */
     int getMethodValue();
     /**
-     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The method.
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.Method getMethod();
@@ -1089,7 +1162,8 @@ public final class HooksServiceProto {
     }
     private ExternalHook() {
       url_ = "";
-      jsonTemplate_ = "";
+      customTemplate_ = "";
+      resultObject_ = "";
       method_ = 0;
     }
 
@@ -1113,6 +1187,7 @@ public final class HooksServiceProto {
               com.aruna.api.hooks.services.v2.HooksServiceProto.ExternalHook.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ExternalHook.Builder.class);
     }
 
+    private int bitField0_;
     public static final int URL_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object url_ = "";
@@ -1178,56 +1253,135 @@ public final class HooksServiceProto {
       return credentials_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Credentials.getDefaultInstance() : credentials_;
     }
 
-    public static final int JSON_TEMPLATE_FIELD_NUMBER = 3;
+    public static final int CUSTOM_TEMPLATE_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object jsonTemplate_ = "";
+    private volatile java.lang.Object customTemplate_ = "";
     /**
-     * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-     * @return The jsonTemplate.
+     * <pre>
+     * If empty a basic JSON template will be used
+     * </pre>
+     *
+     * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+     * @return Whether the customTemplate field is set.
      */
     @java.lang.Override
-    public java.lang.String getJsonTemplate() {
-      java.lang.Object ref = jsonTemplate_;
+    public boolean hasCustomTemplate() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * If empty a basic JSON template will be used
+     * </pre>
+     *
+     * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+     * @return The customTemplate.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomTemplate() {
+      java.lang.Object ref = customTemplate_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jsonTemplate_ = s;
+        customTemplate_ = s;
         return s;
       }
     }
     /**
-     * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-     * @return The bytes for jsonTemplate.
+     * <pre>
+     * If empty a basic JSON template will be used
+     * </pre>
+     *
+     * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+     * @return The bytes for customTemplate.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getJsonTemplateBytes() {
-      java.lang.Object ref = jsonTemplate_;
+        getCustomTemplateBytes() {
+      java.lang.Object ref = customTemplate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jsonTemplate_ = b;
+        customTemplate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int METHOD_FIELD_NUMBER = 4;
+    public static final int RESULT_OBJECT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resultObject_ = "";
+    /**
+     * <pre>
+     * Optional Project/Collection/Dataset where hooks can upload results.
+     * </pre>
+     *
+     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+     * @return Whether the resultObject field is set.
+     */
+    @java.lang.Override
+    public boolean hasResultObject() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Optional Project/Collection/Dataset where hooks can upload results.
+     * </pre>
+     *
+     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+     * @return The resultObject.
+     */
+    @java.lang.Override
+    public java.lang.String getResultObject() {
+      java.lang.Object ref = resultObject_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resultObject_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional Project/Collection/Dataset where hooks can upload results.
+     * </pre>
+     *
+     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+     * @return The bytes for resultObject.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultObjectBytes() {
+      java.lang.Object ref = resultObject_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resultObject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 5;
     private int method_ = 0;
     /**
-     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The enum numeric value on the wire for method.
      */
     @java.lang.Override public int getMethodValue() {
       return method_;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+     * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The method.
      */
     @java.lang.Override public com.aruna.api.hooks.services.v2.HooksServiceProto.Method getMethod() {
@@ -1255,11 +1409,14 @@ public final class HooksServiceProto {
       if (credentials_ != null) {
         output.writeMessage(2, getCredentials());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonTemplate_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jsonTemplate_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customTemplate_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, resultObject_);
       }
       if (method_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Method.METHOD_UNSPECIFIED.getNumber()) {
-        output.writeEnum(4, method_);
+        output.writeEnum(5, method_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1277,12 +1434,15 @@ public final class HooksServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCredentials());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonTemplate_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jsonTemplate_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customTemplate_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, resultObject_);
       }
       if (method_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Method.METHOD_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, method_);
+          .computeEnumSize(5, method_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1306,8 +1466,16 @@ public final class HooksServiceProto {
         if (!getCredentials()
             .equals(other.getCredentials())) return false;
       }
-      if (!getJsonTemplate()
-          .equals(other.getJsonTemplate())) return false;
+      if (hasCustomTemplate() != other.hasCustomTemplate()) return false;
+      if (hasCustomTemplate()) {
+        if (!getCustomTemplate()
+            .equals(other.getCustomTemplate())) return false;
+      }
+      if (hasResultObject() != other.hasResultObject()) return false;
+      if (hasResultObject()) {
+        if (!getResultObject()
+            .equals(other.getResultObject())) return false;
+      }
       if (method_ != other.method_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1326,8 +1494,14 @@ public final class HooksServiceProto {
         hash = (37 * hash) + CREDENTIALS_FIELD_NUMBER;
         hash = (53 * hash) + getCredentials().hashCode();
       }
-      hash = (37 * hash) + JSON_TEMPLATE_FIELD_NUMBER;
-      hash = (53 * hash) + getJsonTemplate().hashCode();
+      if (hasCustomTemplate()) {
+        hash = (37 * hash) + CUSTOM_TEMPLATE_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomTemplate().hashCode();
+      }
+      if (hasResultObject()) {
+        hash = (37 * hash) + RESULT_OBJECT_FIELD_NUMBER;
+        hash = (53 * hash) + getResultObject().hashCode();
+      }
       hash = (37 * hash) + METHOD_FIELD_NUMBER;
       hash = (53 * hash) + method_;
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1467,7 +1641,8 @@ public final class HooksServiceProto {
           credentialsBuilder_.dispose();
           credentialsBuilder_ = null;
         }
-        jsonTemplate_ = "";
+        customTemplate_ = "";
+        resultObject_ = "";
         method_ = 0;
         return this;
       }
@@ -1510,12 +1685,19 @@ public final class HooksServiceProto {
               ? credentials_
               : credentialsBuilder_.build();
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.jsonTemplate_ = jsonTemplate_;
+          result.customTemplate_ = customTemplate_;
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.resultObject_ = resultObject_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.method_ = method_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1538,9 +1720,14 @@ public final class HooksServiceProto {
         if (other.hasCredentials()) {
           mergeCredentials(other.getCredentials());
         }
-        if (!other.getJsonTemplate().isEmpty()) {
-          jsonTemplate_ = other.jsonTemplate_;
+        if (other.hasCustomTemplate()) {
+          customTemplate_ = other.customTemplate_;
           bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasResultObject()) {
+          resultObject_ = other.resultObject_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.method_ != 0) {
@@ -1585,15 +1772,20 @@ public final class HooksServiceProto {
                 break;
               } // case 18
               case 26: {
-                jsonTemplate_ = input.readStringRequireUtf8();
+                customTemplate_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 32: {
-                method_ = input.readEnum();
+              case 34: {
+                resultObject_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
+              case 40: {
+                method_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1802,99 +1994,233 @@ public final class HooksServiceProto {
         return credentialsBuilder_;
       }
 
-      private java.lang.Object jsonTemplate_ = "";
+      private java.lang.Object customTemplate_ = "";
       /**
-       * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-       * @return The jsonTemplate.
+       * <pre>
+       * If empty a basic JSON template will be used
+       * </pre>
+       *
+       * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+       * @return Whether the customTemplate field is set.
        */
-      public java.lang.String getJsonTemplate() {
-        java.lang.Object ref = jsonTemplate_;
+      public boolean hasCustomTemplate() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * If empty a basic JSON template will be used
+       * </pre>
+       *
+       * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+       * @return The customTemplate.
+       */
+      public java.lang.String getCustomTemplate() {
+        java.lang.Object ref = customTemplate_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          jsonTemplate_ = s;
+          customTemplate_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-       * @return The bytes for jsonTemplate.
+       * <pre>
+       * If empty a basic JSON template will be used
+       * </pre>
+       *
+       * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+       * @return The bytes for customTemplate.
        */
       public com.google.protobuf.ByteString
-          getJsonTemplateBytes() {
-        java.lang.Object ref = jsonTemplate_;
+          getCustomTemplateBytes() {
+        java.lang.Object ref = customTemplate_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          jsonTemplate_ = b;
+          customTemplate_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-       * @param value The jsonTemplate to set.
+       * <pre>
+       * If empty a basic JSON template will be used
+       * </pre>
+       *
+       * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+       * @param value The customTemplate to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonTemplate(
+      public Builder setCustomTemplate(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        jsonTemplate_ = value;
+        customTemplate_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
+       * <pre>
+       * If empty a basic JSON template will be used
+       * </pre>
+       *
+       * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearJsonTemplate() {
-        jsonTemplate_ = getDefaultInstance().getJsonTemplate();
+      public Builder clearCustomTemplate() {
+        customTemplate_ = getDefaultInstance().getCustomTemplate();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string json_template = 3 [json_name = "jsonTemplate"];</code>
-       * @param value The bytes for jsonTemplate to set.
+       * <pre>
+       * If empty a basic JSON template will be used
+       * </pre>
+       *
+       * <code>optional string custom_template = 3 [json_name = "customTemplate"];</code>
+       * @param value The bytes for customTemplate to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonTemplateBytes(
+      public Builder setCustomTemplateBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        jsonTemplate_ = value;
+        customTemplate_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resultObject_ = "";
+      /**
+       * <pre>
+       * Optional Project/Collection/Dataset where hooks can upload results.
+       * </pre>
+       *
+       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+       * @return Whether the resultObject field is set.
+       */
+      public boolean hasResultObject() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Optional Project/Collection/Dataset where hooks can upload results.
+       * </pre>
+       *
+       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+       * @return The resultObject.
+       */
+      public java.lang.String getResultObject() {
+        java.lang.Object ref = resultObject_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resultObject_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional Project/Collection/Dataset where hooks can upload results.
+       * </pre>
+       *
+       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+       * @return The bytes for resultObject.
+       */
+      public com.google.protobuf.ByteString
+          getResultObjectBytes() {
+        java.lang.Object ref = resultObject_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resultObject_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional Project/Collection/Dataset where hooks can upload results.
+       * </pre>
+       *
+       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+       * @param value The resultObject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultObject(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        resultObject_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional Project/Collection/Dataset where hooks can upload results.
+       * </pre>
+       *
+       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResultObject() {
+        resultObject_ = getDefaultInstance().getResultObject();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional Project/Collection/Dataset where hooks can upload results.
+       * </pre>
+       *
+       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
+       * @param value The bytes for resultObject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultObjectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        resultObject_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private int method_ = 0;
       /**
-       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @return The enum numeric value on the wire for method.
        */
       @java.lang.Override public int getMethodValue() {
         return method_;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @param value The enum numeric value on the wire for method to set.
        * @return This builder for chaining.
        */
       public Builder setMethodValue(int value) {
         method_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @return The method.
        */
       @java.lang.Override
@@ -1903,7 +2229,7 @@ public final class HooksServiceProto {
         return result == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Method.UNRECOGNIZED : result;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @param value The method to set.
        * @return This builder for chaining.
        */
@@ -1911,17 +2237,17 @@ public final class HooksServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         method_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Method method = 4 [json_name = "method"];</code>
+       * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMethod() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         method_ = 0;
         onChanged();
         return this;
@@ -5872,52 +6198,89 @@ public final class HooksServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
      * @return Whether the trigger field is set.
      */
     boolean hasTrigger();
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
      * @return The trigger.
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger getTrigger();
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder getTriggerOrBuilder();
 
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
      * @return Whether the hook field is set.
      */
     boolean hasHook();
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
      * @return The hook.
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.Hook getHook();
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder getHookOrBuilder();
 
     /**
-     * <code>uint64 timeout = 3 [json_name = "timeout"];</code>
+     * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
      * @return The timeout.
      */
     long getTimeout();
 
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return The projectId.
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @return A list containing the projectIds.
      */
-    java.lang.String getProjectId();
+    java.util.List<java.lang.String>
+        getProjectIdsList();
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @return The count of projectIds.
+     */
+    int getProjectIdsCount();
+    /**
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    java.lang.String getProjectIds(int index);
+    /**
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
      */
     com.google.protobuf.ByteString
-        getProjectIdBytes();
+        getProjectIdsBytes(int index);
+
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code aruna.api.hooks.services.v2.CreateHookRequest}
@@ -5932,7 +6295,10 @@ public final class HooksServiceProto {
       super(builder);
     }
     private CreateHookRequest() {
-      projectId_ = "";
+      name_ = "";
+      projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      description_ = "";
     }
 
     @java.lang.Override
@@ -5955,10 +6321,49 @@ public final class HooksServiceProto {
               com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest.Builder.class);
     }
 
-    public static final int TRIGGER_FIELD_NUMBER = 1;
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRIGGER_FIELD_NUMBER = 2;
     private com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger trigger_;
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
      * @return Whether the trigger field is set.
      */
     @java.lang.Override
@@ -5966,7 +6371,7 @@ public final class HooksServiceProto {
       return trigger_ != null;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
      * @return The trigger.
      */
     @java.lang.Override
@@ -5974,17 +6379,17 @@ public final class HooksServiceProto {
       return trigger_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.getDefaultInstance() : trigger_;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
      */
     @java.lang.Override
     public com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder getTriggerOrBuilder() {
       return trigger_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.getDefaultInstance() : trigger_;
     }
 
-    public static final int HOOK_FIELD_NUMBER = 2;
+    public static final int HOOK_FIELD_NUMBER = 3;
     private com.aruna.api.hooks.services.v2.HooksServiceProto.Hook hook_;
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
      * @return Whether the hook field is set.
      */
     @java.lang.Override
@@ -5992,7 +6397,7 @@ public final class HooksServiceProto {
       return hook_ != null;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
      * @return The hook.
      */
     @java.lang.Override
@@ -6000,17 +6405,17 @@ public final class HooksServiceProto {
       return hook_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.getDefaultInstance() : hook_;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
      */
     @java.lang.Override
     public com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder getHookOrBuilder() {
       return hook_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.getDefaultInstance() : hook_;
     }
 
-    public static final int TIMEOUT_FIELD_NUMBER = 3;
+    public static final int TIMEOUT_FIELD_NUMBER = 4;
     private long timeout_ = 0L;
     /**
-     * <code>uint64 timeout = 3 [json_name = "timeout"];</code>
+     * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
      * @return The timeout.
      */
     @java.lang.Override
@@ -6018,39 +6423,76 @@ public final class HooksServiceProto {
       return timeout_;
     }
 
-    public static final int PROJECT_ID_FIELD_NUMBER = 4;
+    public static final int PROJECT_IDS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object projectId_ = "";
+    private com.google.protobuf.LazyStringArrayList projectIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return The projectId.
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @return A list containing the projectIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProjectIdsList() {
+      return projectIds_;
+    }
+    /**
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @return The count of projectIds.
+     */
+    public int getProjectIdsCount() {
+      return projectIds_.size();
+    }
+    /**
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    public java.lang.String getProjectIds(int index) {
+      return projectIds_.get(index);
+    }
+    /**
+     * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdsBytes(int index) {
+      return projectIds_.getByteString(index);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
      */
     @java.lang.Override
-    public java.lang.String getProjectId() {
-      java.lang.Object ref = projectId_;
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        projectId_ = s;
+        description_ = s;
         return s;
       }
     }
     /**
-     * <code>string project_id = 4 [json_name = "projectId"];</code>
-     * @return The bytes for projectId.
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProjectIdBytes() {
-      java.lang.Object ref = projectId_;
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        projectId_ = b;
+        description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -6071,17 +6513,23 @@ public final class HooksServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
       if (trigger_ != null) {
-        output.writeMessage(1, getTrigger());
+        output.writeMessage(2, getTrigger());
       }
       if (hook_ != null) {
-        output.writeMessage(2, getHook());
+        output.writeMessage(3, getHook());
       }
       if (timeout_ != 0L) {
-        output.writeUInt64(3, timeout_);
+        output.writeUInt64(4, timeout_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, projectId_);
+      for (int i = 0; i < projectIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, projectIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -6092,20 +6540,31 @@ public final class HooksServiceProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
       if (trigger_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTrigger());
+          .computeMessageSize(2, getTrigger());
       }
       if (hook_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getHook());
+          .computeMessageSize(3, getHook());
       }
       if (timeout_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, timeout_);
+          .computeUInt64Size(4, timeout_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, projectId_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < projectIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(projectIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProjectIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6122,6 +6581,8 @@ public final class HooksServiceProto {
       }
       com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest other = (com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest) obj;
 
+      if (!getName()
+          .equals(other.getName())) return false;
       if (hasTrigger() != other.hasTrigger()) return false;
       if (hasTrigger()) {
         if (!getTrigger()
@@ -6134,8 +6595,10 @@ public final class HooksServiceProto {
       }
       if (getTimeout()
           != other.getTimeout()) return false;
-      if (!getProjectId()
-          .equals(other.getProjectId())) return false;
+      if (!getProjectIdsList()
+          .equals(other.getProjectIdsList())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6147,6 +6610,8 @@ public final class HooksServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       if (hasTrigger()) {
         hash = (37 * hash) + TRIGGER_FIELD_NUMBER;
         hash = (53 * hash) + getTrigger().hashCode();
@@ -6158,8 +6623,12 @@ public final class HooksServiceProto {
       hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTimeout());
-      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getProjectId().hashCode();
+      if (getProjectIdsCount() > 0) {
+        hash = (37 * hash) + PROJECT_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectIdsList().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6291,6 +6760,7 @@ public final class HooksServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        name_ = "";
         trigger_ = null;
         if (triggerBuilder_ != null) {
           triggerBuilder_.dispose();
@@ -6302,7 +6772,9 @@ public final class HooksServiceProto {
           hookBuilder_ = null;
         }
         timeout_ = 0L;
-        projectId_ = "";
+        projectIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        description_ = "";
         return this;
       }
 
@@ -6337,20 +6809,27 @@ public final class HooksServiceProto {
       private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.trigger_ = triggerBuilder_ == null
               ? trigger_
               : triggerBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.hook_ = hookBuilder_ == null
               ? hook_
               : hookBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeout_ = timeout_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.projectId_ = projectId_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          projectIds_.makeImmutable();
+          result.projectIds_ = projectIds_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.description_ = description_;
         }
       }
 
@@ -6366,6 +6845,11 @@ public final class HooksServiceProto {
 
       public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest other) {
         if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.CreateHookRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (other.hasTrigger()) {
           mergeTrigger(other.getTrigger());
         }
@@ -6375,9 +6859,19 @@ public final class HooksServiceProto {
         if (other.getTimeout() != 0L) {
           setTimeout(other.getTimeout());
         }
-        if (!other.getProjectId().isEmpty()) {
-          projectId_ = other.projectId_;
-          bitField0_ |= 0x00000008;
+        if (!other.projectIds_.isEmpty()) {
+          if (projectIds_.isEmpty()) {
+            projectIds_ = other.projectIds_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureProjectIdsIsMutable();
+            projectIds_.addAll(other.projectIds_);
+          }
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6407,29 +6901,40 @@ public final class HooksServiceProto {
                 done = true;
                 break;
               case 10: {
-                input.readMessage(
-                    getTriggerFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
-                    getHookFieldBuilder().getBuilder(),
+                    getTriggerFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 24: {
-                timeout_ = input.readUInt64();
+              case 26: {
+                input.readMessage(
+                    getHookFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 24
-              case 34: {
-                projectId_ = input.readStringRequireUtf8();
+              } // case 26
+              case 32: {
+                timeout_ = input.readUInt64();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 34
+              } // case 32
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureProjectIdsIsMutable();
+                projectIds_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6447,18 +6952,90 @@ public final class HooksServiceProto {
       }
       private int bitField0_;
 
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger trigger_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger, com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder> triggerBuilder_;
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        * @return Whether the trigger field is set.
        */
       public boolean hasTrigger() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        * @return The trigger.
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger getTrigger() {
@@ -6469,7 +7046,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       public Builder setTrigger(com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger value) {
         if (triggerBuilder_ == null) {
@@ -6480,12 +7057,12 @@ public final class HooksServiceProto {
         } else {
           triggerBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       public Builder setTrigger(
           com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder builderForValue) {
@@ -6494,16 +7071,16 @@ public final class HooksServiceProto {
         } else {
           triggerBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       public Builder mergeTrigger(com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger value) {
         if (triggerBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
+          if (((bitField0_ & 0x00000002) != 0) &&
             trigger_ != null &&
             trigger_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.getDefaultInstance()) {
             getTriggerBuilder().mergeFrom(value);
@@ -6513,15 +7090,15 @@ public final class HooksServiceProto {
         } else {
           triggerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       public Builder clearTrigger() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         trigger_ = null;
         if (triggerBuilder_ != null) {
           triggerBuilder_.dispose();
@@ -6531,15 +7108,15 @@ public final class HooksServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder getTriggerBuilder() {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTriggerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder getTriggerOrBuilder() {
         if (triggerBuilder_ != null) {
@@ -6550,7 +7127,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 1 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 2 [json_name = "trigger"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger, com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder> 
@@ -6570,14 +7147,14 @@ public final class HooksServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Hook, com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder> hookBuilder_;
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        * @return Whether the hook field is set.
        */
       public boolean hasHook() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        * @return The hook.
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Hook getHook() {
@@ -6588,7 +7165,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       public Builder setHook(com.aruna.api.hooks.services.v2.HooksServiceProto.Hook value) {
         if (hookBuilder_ == null) {
@@ -6599,12 +7176,12 @@ public final class HooksServiceProto {
         } else {
           hookBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       public Builder setHook(
           com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder builderForValue) {
@@ -6613,16 +7190,16 @@ public final class HooksServiceProto {
         } else {
           hookBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       public Builder mergeHook(com.aruna.api.hooks.services.v2.HooksServiceProto.Hook value) {
         if (hookBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             hook_ != null &&
             hook_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.getDefaultInstance()) {
             getHookBuilder().mergeFrom(value);
@@ -6632,15 +7209,15 @@ public final class HooksServiceProto {
         } else {
           hookBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       public Builder clearHook() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         hook_ = null;
         if (hookBuilder_ != null) {
           hookBuilder_.dispose();
@@ -6650,15 +7227,15 @@ public final class HooksServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder getHookBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getHookFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder getHookOrBuilder() {
         if (hookBuilder_ != null) {
@@ -6669,7 +7246,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 3 [json_name = "hook"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Hook, com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder> 
@@ -6687,7 +7264,7 @@ public final class HooksServiceProto {
 
       private long timeout_ ;
       /**
-       * <code>uint64 timeout = 3 [json_name = "timeout"];</code>
+       * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
        * @return The timeout.
        */
       @java.lang.Override
@@ -6695,96 +7272,207 @@ public final class HooksServiceProto {
         return timeout_;
       }
       /**
-       * <code>uint64 timeout = 3 [json_name = "timeout"];</code>
+       * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
        * @param value The timeout to set.
        * @return This builder for chaining.
        */
       public Builder setTimeout(long value) {
 
         timeout_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 timeout = 3 [json_name = "timeout"];</code>
+       * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTimeout() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         timeout_ = 0L;
         onChanged();
         return this;
       }
 
-      private java.lang.Object projectId_ = "";
+      private com.google.protobuf.LazyStringArrayList projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureProjectIdsIsMutable() {
+        if (!projectIds_.isModifiable()) {
+          projectIds_ = new com.google.protobuf.LazyStringArrayList(projectIds_);
+        }
+        bitField0_ |= 0x00000010;
+      }
       /**
-       * <code>string project_id = 4 [json_name = "projectId"];</code>
-       * @return The projectId.
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @return A list containing the projectIds.
        */
-      public java.lang.String getProjectId() {
-        java.lang.Object ref = projectId_;
+      public com.google.protobuf.ProtocolStringList
+          getProjectIdsList() {
+        projectIds_.makeImmutable();
+        return projectIds_;
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @return The count of projectIds.
+       */
+      public int getProjectIdsCount() {
+        return projectIds_.size();
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @param index The index of the element to return.
+       * @return The projectIds at the given index.
+       */
+      public java.lang.String getProjectIds(int index) {
+        return projectIds_.get(index);
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the projectIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdsBytes(int index) {
+        return projectIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The projectIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProjectIdsIsMutable();
+        projectIds_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @param value The projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProjectIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProjectIdsIsMutable();
+        projectIds_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @param values The projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllProjectIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProjectIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, projectIds_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectIds() {
+        projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 5 [json_name = "projectIds"];</code>
+       * @param value The bytes of the projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProjectIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureProjectIdsIsMutable();
+        projectIds_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          projectId_ = s;
+          description_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string project_id = 4 [json_name = "projectId"];</code>
-       * @return The bytes for projectId.
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
-          getProjectIdBytes() {
-        java.lang.Object ref = projectId_;
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          projectId_ = b;
+          description_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string project_id = 4 [json_name = "projectId"];</code>
-       * @param value The projectId to set.
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The description to set.
        * @return This builder for chaining.
        */
-      public Builder setProjectId(
+      public Builder setDescription(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        projectId_ = value;
-        bitField0_ |= 0x00000008;
+        description_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>string project_id = 4 [json_name = "projectId"];</code>
+       * <code>string description = 6 [json_name = "description"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearProjectId() {
-        projectId_ = getDefaultInstance().getProjectId();
-        bitField0_ = (bitField0_ & ~0x00000008);
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>string project_id = 4 [json_name = "projectId"];</code>
-       * @param value The bytes for projectId to set.
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
-      public Builder setProjectIdBytes(
+      public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        projectId_ = value;
-        bitField0_ |= 0x00000008;
+        description_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -8262,100 +8950,78 @@ public final class HooksServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool success = 1 [json_name = "success"];</code>
-     * @return The success.
+     * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+     * @return Whether the finished field is set.
      */
-    boolean getSuccess();
+    boolean hasFinished();
+    /**
+     * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+     * @return The finished.
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.Finished getFinished();
+    /**
+     * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder getFinishedOrBuilder();
 
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+     * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+     * @return Whether the error field is set.
      */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> 
-        getAddKeyValuesList();
+    boolean hasError();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+     * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+     * @return The error.
      */
-    com.aruna.api.storage.models.v2.ModelsProto.KeyValue getAddKeyValues(int index);
+    com.aruna.api.hooks.services.v2.HooksServiceProto.Error getError();
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+     * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
      */
-    int getAddKeyValuesCount();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-        getAddKeyValuesOrBuilderList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getAddKeyValuesOrBuilder(
-        int index);
+    com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder getErrorOrBuilder();
 
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> 
-        getRemoveKeyValuesList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.KeyValue getRemoveKeyValues(int index);
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    int getRemoveKeyValuesCount();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-        getRemoveKeyValuesOrBuilderList();
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
-        int index);
-
-    /**
-     * <code>string secret = 4 [json_name = "secret"];</code>
+     * <code>string secret = 3 [json_name = "secret"];</code>
      * @return The secret.
      */
     java.lang.String getSecret();
     /**
-     * <code>string secret = 4 [json_name = "secret"];</code>
+     * <code>string secret = 3 [json_name = "secret"];</code>
      * @return The bytes for secret.
      */
     com.google.protobuf.ByteString
         getSecretBytes();
 
     /**
-     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * <code>string hook_id = 4 [json_name = "hookId"];</code>
      * @return The hookId.
      */
     java.lang.String getHookId();
     /**
-     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * <code>string hook_id = 4 [json_name = "hookId"];</code>
      * @return The bytes for hookId.
      */
     com.google.protobuf.ByteString
         getHookIdBytes();
 
     /**
-     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * <code>string object_id = 5 [json_name = "objectId"];</code>
      * @return The objectId.
      */
     java.lang.String getObjectId();
     /**
-     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * <code>string object_id = 5 [json_name = "objectId"];</code>
      * @return The bytes for objectId.
      */
     com.google.protobuf.ByteString
         getObjectIdBytes();
 
     /**
-     * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * <code>int32 pubkey_serial = 6 [json_name = "pubkeySerial"];</code>
      * @return The pubkeySerial.
      */
     int getPubkeySerial();
+
+    com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest.StatusCase getStatusCase();
   }
   /**
    * Protobuf type {@code aruna.api.hooks.services.v2.HookCallbackRequest}
@@ -8370,8 +9036,6 @@ public final class HooksServiceProto {
       super(builder);
     }
     private HookCallbackRequest() {
-      addKeyValues_ = java.util.Collections.emptyList();
-      removeKeyValues_ = java.util.Collections.emptyList();
       secret_ = "";
       hookId_ = "";
       objectId_ = "";
@@ -8397,104 +9061,115 @@ public final class HooksServiceProto {
               com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest.Builder.class);
     }
 
-    public static final int SUCCESS_FIELD_NUMBER = 1;
-    private boolean success_ = false;
-    /**
-     * <code>bool success = 1 [json_name = "success"];</code>
-     * @return The success.
-     */
-    @java.lang.Override
-    public boolean getSuccess() {
-      return success_;
-    }
-
-    public static final int ADD_KEY_VALUES_FIELD_NUMBER = 2;
+    private int statusCase_ = 0;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> addKeyValues_;
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getAddKeyValuesList() {
-      return addKeyValues_;
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-        getAddKeyValuesOrBuilderList() {
-      return addKeyValues_;
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    @java.lang.Override
-    public int getAddKeyValuesCount() {
-      return addKeyValues_.size();
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getAddKeyValues(int index) {
-      return addKeyValues_.get(index);
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getAddKeyValuesOrBuilder(
-        int index) {
-      return addKeyValues_.get(index);
+    private java.lang.Object status_;
+    public enum StatusCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FINISHED(1),
+      ERROR(2),
+      STATUS_NOT_SET(0);
+      private final int value;
+      private StatusCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StatusCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StatusCase forNumber(int value) {
+        switch (value) {
+          case 1: return FINISHED;
+          case 2: return ERROR;
+          case 0: return STATUS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public StatusCase
+    getStatusCase() {
+      return StatusCase.forNumber(
+          statusCase_);
     }
 
-    public static final int REMOVE_KEY_VALUES_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> removeKeyValues_;
+    public static final int FINISHED_FIELD_NUMBER = 1;
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+     * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+     * @return Whether the finished field is set.
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getRemoveKeyValuesList() {
-      return removeKeyValues_;
+    public boolean hasFinished() {
+      return statusCase_ == 1;
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+     * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+     * @return The finished.
      */
     @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-        getRemoveKeyValuesOrBuilderList() {
-      return removeKeyValues_;
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished getFinished() {
+      if (statusCase_ == 1) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
     }
     /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+     * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
      */
     @java.lang.Override
-    public int getRemoveKeyValuesCount() {
-      return removeKeyValues_.size();
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getRemoveKeyValues(int index) {
-      return removeKeyValues_.get(index);
-    }
-    /**
-     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
-        int index) {
-      return removeKeyValues_.get(index);
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder getFinishedOrBuilder() {
+      if (statusCase_ == 1) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
     }
 
-    public static final int SECRET_FIELD_NUMBER = 4;
+    public static final int ERROR_FIELD_NUMBER = 2;
+    /**
+     * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+     * @return Whether the error field is set.
+     */
+    @java.lang.Override
+    public boolean hasError() {
+      return statusCase_ == 2;
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.Error getError() {
+      if (statusCase_ == 2) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
+    }
+    /**
+     * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder getErrorOrBuilder() {
+      if (statusCase_ == 2) {
+         return (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_;
+      }
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
+    }
+
+    public static final int SECRET_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object secret_ = "";
     /**
-     * <code>string secret = 4 [json_name = "secret"];</code>
+     * <code>string secret = 3 [json_name = "secret"];</code>
      * @return The secret.
      */
     @java.lang.Override
@@ -8511,7 +9186,7 @@ public final class HooksServiceProto {
       }
     }
     /**
-     * <code>string secret = 4 [json_name = "secret"];</code>
+     * <code>string secret = 3 [json_name = "secret"];</code>
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -8529,11 +9204,11 @@ public final class HooksServiceProto {
       }
     }
 
-    public static final int HOOK_ID_FIELD_NUMBER = 5;
+    public static final int HOOK_ID_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object hookId_ = "";
     /**
-     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * <code>string hook_id = 4 [json_name = "hookId"];</code>
      * @return The hookId.
      */
     @java.lang.Override
@@ -8550,7 +9225,7 @@ public final class HooksServiceProto {
       }
     }
     /**
-     * <code>string hook_id = 5 [json_name = "hookId"];</code>
+     * <code>string hook_id = 4 [json_name = "hookId"];</code>
      * @return The bytes for hookId.
      */
     @java.lang.Override
@@ -8568,11 +9243,11 @@ public final class HooksServiceProto {
       }
     }
 
-    public static final int OBJECT_ID_FIELD_NUMBER = 6;
+    public static final int OBJECT_ID_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private volatile java.lang.Object objectId_ = "";
     /**
-     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * <code>string object_id = 5 [json_name = "objectId"];</code>
      * @return The objectId.
      */
     @java.lang.Override
@@ -8589,7 +9264,7 @@ public final class HooksServiceProto {
       }
     }
     /**
-     * <code>string object_id = 6 [json_name = "objectId"];</code>
+     * <code>string object_id = 5 [json_name = "objectId"];</code>
      * @return The bytes for objectId.
      */
     @java.lang.Override
@@ -8607,10 +9282,10 @@ public final class HooksServiceProto {
       }
     }
 
-    public static final int PUBKEY_SERIAL_FIELD_NUMBER = 7;
+    public static final int PUBKEY_SERIAL_FIELD_NUMBER = 6;
     private int pubkeySerial_ = 0;
     /**
-     * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+     * <code>int32 pubkey_serial = 6 [json_name = "pubkeySerial"];</code>
      * @return The pubkeySerial.
      */
     @java.lang.Override
@@ -8632,26 +9307,23 @@ public final class HooksServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (success_ != false) {
-        output.writeBool(1, success_);
+      if (statusCase_ == 1) {
+        output.writeMessage(1, (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_);
       }
-      for (int i = 0; i < addKeyValues_.size(); i++) {
-        output.writeMessage(2, addKeyValues_.get(i));
-      }
-      for (int i = 0; i < removeKeyValues_.size(); i++) {
-        output.writeMessage(3, removeKeyValues_.get(i));
+      if (statusCase_ == 2) {
+        output.writeMessage(2, (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, secret_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secret_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, hookId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, hookId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, objectId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, objectId_);
       }
       if (pubkeySerial_ != 0) {
-        output.writeInt32(7, pubkeySerial_);
+        output.writeInt32(6, pubkeySerial_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8662,30 +9334,26 @@ public final class HooksServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (success_ != false) {
+      if (statusCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, success_);
+          .computeMessageSize(1, (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_);
       }
-      for (int i = 0; i < addKeyValues_.size(); i++) {
+      if (statusCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, addKeyValues_.get(i));
-      }
-      for (int i = 0; i < removeKeyValues_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, removeKeyValues_.get(i));
+          .computeMessageSize(2, (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, secret_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secret_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, hookId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, hookId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, objectId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, objectId_);
       }
       if (pubkeySerial_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, pubkeySerial_);
+          .computeInt32Size(6, pubkeySerial_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8702,12 +9370,6 @@ public final class HooksServiceProto {
       }
       com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest other = (com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest) obj;
 
-      if (getSuccess()
-          != other.getSuccess()) return false;
-      if (!getAddKeyValuesList()
-          .equals(other.getAddKeyValuesList())) return false;
-      if (!getRemoveKeyValuesList()
-          .equals(other.getRemoveKeyValuesList())) return false;
       if (!getSecret()
           .equals(other.getSecret())) return false;
       if (!getHookId()
@@ -8716,6 +9378,19 @@ public final class HooksServiceProto {
           .equals(other.getObjectId())) return false;
       if (getPubkeySerial()
           != other.getPubkeySerial()) return false;
+      if (!getStatusCase().equals(other.getStatusCase())) return false;
+      switch (statusCase_) {
+        case 1:
+          if (!getFinished()
+              .equals(other.getFinished())) return false;
+          break;
+        case 2:
+          if (!getError()
+              .equals(other.getError())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8727,17 +9402,6 @@ public final class HooksServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSuccess());
-      if (getAddKeyValuesCount() > 0) {
-        hash = (37 * hash) + ADD_KEY_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getAddKeyValuesList().hashCode();
-      }
-      if (getRemoveKeyValuesCount() > 0) {
-        hash = (37 * hash) + REMOVE_KEY_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getRemoveKeyValuesList().hashCode();
-      }
       hash = (37 * hash) + SECRET_FIELD_NUMBER;
       hash = (53 * hash) + getSecret().hashCode();
       hash = (37 * hash) + HOOK_ID_FIELD_NUMBER;
@@ -8746,6 +9410,18 @@ public final class HooksServiceProto {
       hash = (53 * hash) + getObjectId().hashCode();
       hash = (37 * hash) + PUBKEY_SERIAL_FIELD_NUMBER;
       hash = (53 * hash) + getPubkeySerial();
+      switch (statusCase_) {
+        case 1:
+          hash = (37 * hash) + FINISHED_FIELD_NUMBER;
+          hash = (53 * hash) + getFinished().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + ERROR_FIELD_NUMBER;
+          hash = (53 * hash) + getError().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8877,25 +9553,18 @@ public final class HooksServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        success_ = false;
-        if (addKeyValuesBuilder_ == null) {
-          addKeyValues_ = java.util.Collections.emptyList();
-        } else {
-          addKeyValues_ = null;
-          addKeyValuesBuilder_.clear();
+        if (finishedBuilder_ != null) {
+          finishedBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (removeKeyValuesBuilder_ == null) {
-          removeKeyValues_ = java.util.Collections.emptyList();
-        } else {
-          removeKeyValues_ = null;
-          removeKeyValuesBuilder_.clear();
+        if (errorBuilder_ != null) {
+          errorBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         secret_ = "";
         hookId_ = "";
         objectId_ = "";
         pubkeySerial_ = 0;
+        statusCase_ = 0;
+        status_ = null;
         return this;
       }
 
@@ -8922,49 +9591,38 @@ public final class HooksServiceProto {
       @java.lang.Override
       public com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest buildPartial() {
         com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest result = new com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest result) {
-        if (addKeyValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            addKeyValues_ = java.util.Collections.unmodifiableList(addKeyValues_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.addKeyValues_ = addKeyValues_;
-        } else {
-          result.addKeyValues_ = addKeyValuesBuilder_.build();
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.secret_ = secret_;
         }
-        if (removeKeyValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            removeKeyValues_ = java.util.Collections.unmodifiableList(removeKeyValues_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.removeKeyValues_ = removeKeyValues_;
-        } else {
-          result.removeKeyValues_ = removeKeyValuesBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.hookId_ = hookId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.objectId_ = objectId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.pubkeySerial_ = pubkeySerial_;
         }
       }
 
-      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.success_ = success_;
+      private void buildPartialOneofs(com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest result) {
+        result.statusCase_ = statusCase_;
+        result.status_ = this.status_;
+        if (statusCase_ == 1 &&
+            finishedBuilder_ != null) {
+          result.status_ = finishedBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.secret_ = secret_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.hookId_ = hookId_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.objectId_ = objectId_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.pubkeySerial_ = pubkeySerial_;
+        if (statusCase_ == 2 &&
+            errorBuilder_ != null) {
+          result.status_ = errorBuilder_.build();
         }
       }
 
@@ -8980,78 +9638,36 @@ public final class HooksServiceProto {
 
       public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest other) {
         if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest.getDefaultInstance()) return this;
-        if (other.getSuccess() != false) {
-          setSuccess(other.getSuccess());
-        }
-        if (addKeyValuesBuilder_ == null) {
-          if (!other.addKeyValues_.isEmpty()) {
-            if (addKeyValues_.isEmpty()) {
-              addKeyValues_ = other.addKeyValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureAddKeyValuesIsMutable();
-              addKeyValues_.addAll(other.addKeyValues_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.addKeyValues_.isEmpty()) {
-            if (addKeyValuesBuilder_.isEmpty()) {
-              addKeyValuesBuilder_.dispose();
-              addKeyValuesBuilder_ = null;
-              addKeyValues_ = other.addKeyValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              addKeyValuesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAddKeyValuesFieldBuilder() : null;
-            } else {
-              addKeyValuesBuilder_.addAllMessages(other.addKeyValues_);
-            }
-          }
-        }
-        if (removeKeyValuesBuilder_ == null) {
-          if (!other.removeKeyValues_.isEmpty()) {
-            if (removeKeyValues_.isEmpty()) {
-              removeKeyValues_ = other.removeKeyValues_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureRemoveKeyValuesIsMutable();
-              removeKeyValues_.addAll(other.removeKeyValues_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.removeKeyValues_.isEmpty()) {
-            if (removeKeyValuesBuilder_.isEmpty()) {
-              removeKeyValuesBuilder_.dispose();
-              removeKeyValuesBuilder_ = null;
-              removeKeyValues_ = other.removeKeyValues_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              removeKeyValuesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRemoveKeyValuesFieldBuilder() : null;
-            } else {
-              removeKeyValuesBuilder_.addAllMessages(other.removeKeyValues_);
-            }
-          }
-        }
         if (!other.getSecret().isEmpty()) {
           secret_ = other.secret_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getHookId().isEmpty()) {
           hookId_ = other.hookId_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getObjectId().isEmpty()) {
           objectId_ = other.objectId_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.getPubkeySerial() != 0) {
           setPubkeySerial(other.getPubkeySerial());
+        }
+        switch (other.getStatusCase()) {
+          case FINISHED: {
+            mergeFinished(other.getFinished());
+            break;
+          }
+          case ERROR: {
+            mergeError(other.getError());
+            break;
+          }
+          case STATUS_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -9079,57 +9695,40 @@ public final class HooksServiceProto {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                success_ = input.readBool();
-                bitField0_ |= 0x00000001;
+              case 10: {
+                input.readMessage(
+                    getFinishedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                statusCase_ = 1;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
-                com.aruna.api.storage.models.v2.ModelsProto.KeyValue m =
-                    input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.KeyValue.parser(),
-                        extensionRegistry);
-                if (addKeyValuesBuilder_ == null) {
-                  ensureAddKeyValuesIsMutable();
-                  addKeyValues_.add(m);
-                } else {
-                  addKeyValuesBuilder_.addMessage(m);
-                }
+                input.readMessage(
+                    getErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                statusCase_ = 2;
                 break;
               } // case 18
               case 26: {
-                com.aruna.api.storage.models.v2.ModelsProto.KeyValue m =
-                    input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.KeyValue.parser(),
-                        extensionRegistry);
-                if (removeKeyValuesBuilder_ == null) {
-                  ensureRemoveKeyValuesIsMutable();
-                  removeKeyValues_.add(m);
-                } else {
-                  removeKeyValuesBuilder_.addMessage(m);
-                }
+                secret_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
-                secret_ = input.readStringRequireUtf8();
+                hookId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
-                hookId_ = input.readStringRequireUtf8();
+                objectId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
-              case 50: {
-                objectId_ = input.readStringRequireUtf8();
+              case 48: {
+                pubkeySerial_ = input.readInt32();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 50
-              case 56: {
-                pubkeySerial_ = input.readInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 56
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9145,523 +9744,310 @@ public final class HooksServiceProto {
         } // finally
         return this;
       }
+      private int statusCase_ = 0;
+      private java.lang.Object status_;
+      public StatusCase
+          getStatusCase() {
+        return StatusCase.forNumber(
+            statusCase_);
+      }
+
+      public Builder clearStatus() {
+        statusCase_ = 0;
+        status_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
-      private boolean success_ ;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.Finished, com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder> finishedBuilder_;
       /**
-       * <code>bool success = 1 [json_name = "success"];</code>
-       * @return The success.
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+       * @return Whether the finished field is set.
        */
       @java.lang.Override
-      public boolean getSuccess() {
-        return success_;
+      public boolean hasFinished() {
+        return statusCase_ == 1;
       }
       /**
-       * <code>bool success = 1 [json_name = "success"];</code>
-       * @param value The success to set.
-       * @return This builder for chaining.
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+       * @return The finished.
        */
-      public Builder setSuccess(boolean value) {
-
-        success_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool success = 1 [json_name = "success"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSuccess() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        success_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> addKeyValues_ =
-        java.util.Collections.emptyList();
-      private void ensureAddKeyValuesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          addKeyValues_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.KeyValue>(addKeyValues_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> addKeyValuesBuilder_;
-
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getAddKeyValuesList() {
-        if (addKeyValuesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(addKeyValues_);
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished getFinished() {
+        if (finishedBuilder_ == null) {
+          if (statusCase_ == 1) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
         } else {
-          return addKeyValuesBuilder_.getMessageList();
+          if (statusCase_ == 1) {
+            return finishedBuilder_.getMessage();
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
        */
-      public int getAddKeyValuesCount() {
-        if (addKeyValuesBuilder_ == null) {
-          return addKeyValues_.size();
-        } else {
-          return addKeyValuesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getAddKeyValues(int index) {
-        if (addKeyValuesBuilder_ == null) {
-          return addKeyValues_.get(index);
-        } else {
-          return addKeyValuesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public Builder setAddKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (addKeyValuesBuilder_ == null) {
+      public Builder setFinished(com.aruna.api.hooks.services.v2.HooksServiceProto.Finished value) {
+        if (finishedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.set(index, value);
+          status_ = value;
           onChanged();
         } else {
-          addKeyValuesBuilder_.setMessage(index, value);
+          finishedBuilder_.setMessage(value);
         }
+        statusCase_ = 1;
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
        */
-      public Builder setAddKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (addKeyValuesBuilder_ == null) {
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.set(index, builderForValue.build());
+      public Builder setFinished(
+          com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder builderForValue) {
+        if (finishedBuilder_ == null) {
+          status_ = builderForValue.build();
           onChanged();
         } else {
-          addKeyValuesBuilder_.setMessage(index, builderForValue.build());
+          finishedBuilder_.setMessage(builderForValue.build());
         }
+        statusCase_ = 1;
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
        */
-      public Builder addAddKeyValues(com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (addKeyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public Builder mergeFinished(com.aruna.api.hooks.services.v2.HooksServiceProto.Finished value) {
+        if (finishedBuilder_ == null) {
+          if (statusCase_ == 1 &&
+              status_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance()) {
+            status_ = com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.newBuilder((com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            status_ = value;
           }
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.add(value);
           onChanged();
         } else {
-          addKeyValuesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public Builder addAddKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (addKeyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+          if (statusCase_ == 1) {
+            finishedBuilder_.mergeFrom(value);
+          } else {
+            finishedBuilder_.setMessage(value);
           }
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.add(index, value);
-          onChanged();
+        }
+        statusCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+       */
+      public Builder clearFinished() {
+        if (finishedBuilder_ == null) {
+          if (statusCase_ == 1) {
+            statusCase_ = 0;
+            status_ = null;
+            onChanged();
+          }
         } else {
-          addKeyValuesBuilder_.addMessage(index, value);
+          if (statusCase_ == 1) {
+            statusCase_ = 0;
+            status_ = null;
+          }
+          finishedBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
        */
-      public Builder addAddKeyValues(
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (addKeyValuesBuilder_ == null) {
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.add(builderForValue.build());
-          onChanged();
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder getFinishedBuilder() {
+        return getFinishedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder getFinishedOrBuilder() {
+        if ((statusCase_ == 1) && (finishedBuilder_ != null)) {
+          return finishedBuilder_.getMessageOrBuilder();
         } else {
-          addKeyValuesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public Builder addAddKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (addKeyValuesBuilder_ == null) {
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          addKeyValuesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public Builder addAllAddKeyValues(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValue> values) {
-        if (addKeyValuesBuilder_ == null) {
-          ensureAddKeyValuesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, addKeyValues_);
-          onChanged();
-        } else {
-          addKeyValuesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public Builder clearAddKeyValues() {
-        if (addKeyValuesBuilder_ == null) {
-          addKeyValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          addKeyValuesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public Builder removeAddKeyValues(int index) {
-        if (addKeyValuesBuilder_ == null) {
-          ensureAddKeyValuesIsMutable();
-          addKeyValues_.remove(index);
-          onChanged();
-        } else {
-          addKeyValuesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder getAddKeyValuesBuilder(
-          int index) {
-        return getAddKeyValuesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getAddKeyValuesOrBuilder(
-          int index) {
-        if (addKeyValuesBuilder_ == null) {
-          return addKeyValues_.get(index);  } else {
-          return addKeyValuesBuilder_.getMessageOrBuilder(index);
+          if (statusCase_ == 1) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Finished finished = 1 [json_name = "finished"];</code>
        */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-           getAddKeyValuesOrBuilderList() {
-        if (addKeyValuesBuilder_ != null) {
-          return addKeyValuesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(addKeyValues_);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addAddKeyValuesBuilder() {
-        return getAddKeyValuesFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addAddKeyValuesBuilder(
-          int index) {
-        return getAddKeyValuesFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 2 [json_name = "addKeyValues"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder> 
-           getAddKeyValuesBuilderList() {
-        return getAddKeyValuesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-          getAddKeyValuesFieldBuilder() {
-        if (addKeyValuesBuilder_ == null) {
-          addKeyValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder>(
-                  addKeyValues_,
-                  ((bitField0_ & 0x00000002) != 0),
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.Finished, com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder> 
+          getFinishedFieldBuilder() {
+        if (finishedBuilder_ == null) {
+          if (!(statusCase_ == 1)) {
+            status_ = com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
+          }
+          finishedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.hooks.services.v2.HooksServiceProto.Finished, com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder>(
+                  (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) status_,
                   getParentForChildren(),
                   isClean());
-          addKeyValues_ = null;
+          status_ = null;
         }
-        return addKeyValuesBuilder_;
+        statusCase_ = 1;
+        onChanged();
+        return finishedBuilder_;
       }
 
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> removeKeyValues_ =
-        java.util.Collections.emptyList();
-      private void ensureRemoveKeyValuesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          removeKeyValues_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.KeyValue>(removeKeyValues_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> removeKeyValuesBuilder_;
-
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.Error, com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder> errorBuilder_;
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+       * @return Whether the error field is set.
        */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getRemoveKeyValuesList() {
-        if (removeKeyValuesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(removeKeyValues_);
+      @java.lang.Override
+      public boolean hasError() {
+        return statusCase_ == 2;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Error getError() {
+        if (errorBuilder_ == null) {
+          if (statusCase_ == 2) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
         } else {
-          return removeKeyValuesBuilder_.getMessageList();
+          if (statusCase_ == 2) {
+            return errorBuilder_.getMessage();
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
        */
-      public int getRemoveKeyValuesCount() {
-        if (removeKeyValuesBuilder_ == null) {
-          return removeKeyValues_.size();
-        } else {
-          return removeKeyValuesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getRemoveKeyValues(int index) {
-        if (removeKeyValuesBuilder_ == null) {
-          return removeKeyValues_.get(index);
-        } else {
-          return removeKeyValuesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public Builder setRemoveKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (removeKeyValuesBuilder_ == null) {
+      public Builder setError(com.aruna.api.hooks.services.v2.HooksServiceProto.Error value) {
+        if (errorBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.set(index, value);
+          status_ = value;
           onChanged();
         } else {
-          removeKeyValuesBuilder_.setMessage(index, value);
+          errorBuilder_.setMessage(value);
         }
+        statusCase_ = 2;
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
        */
-      public Builder setRemoveKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (removeKeyValuesBuilder_ == null) {
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.set(index, builderForValue.build());
+      public Builder setError(
+          com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          status_ = builderForValue.build();
           onChanged();
         } else {
-          removeKeyValuesBuilder_.setMessage(index, builderForValue.build());
+          errorBuilder_.setMessage(builderForValue.build());
         }
+        statusCase_ = 2;
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
        */
-      public Builder addRemoveKeyValues(com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (removeKeyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public Builder mergeError(com.aruna.api.hooks.services.v2.HooksServiceProto.Error value) {
+        if (errorBuilder_ == null) {
+          if (statusCase_ == 2 &&
+              status_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance()) {
+            status_ = com.aruna.api.hooks.services.v2.HooksServiceProto.Error.newBuilder((com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            status_ = value;
           }
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.add(value);
           onChanged();
         } else {
-          removeKeyValuesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public Builder addRemoveKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
-        if (removeKeyValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+          if (statusCase_ == 2) {
+            errorBuilder_.mergeFrom(value);
+          } else {
+            errorBuilder_.setMessage(value);
           }
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.add(index, value);
-          onChanged();
+        }
+        statusCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+       */
+      public Builder clearError() {
+        if (errorBuilder_ == null) {
+          if (statusCase_ == 2) {
+            statusCase_ = 0;
+            status_ = null;
+            onChanged();
+          }
         } else {
-          removeKeyValuesBuilder_.addMessage(index, value);
+          if (statusCase_ == 2) {
+            statusCase_ = 0;
+            status_ = null;
+          }
+          errorBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
        */
-      public Builder addRemoveKeyValues(
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (removeKeyValuesBuilder_ == null) {
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.add(builderForValue.build());
-          onChanged();
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder getErrorBuilder() {
+        return getErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
+       */
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder getErrorOrBuilder() {
+        if ((statusCase_ == 2) && (errorBuilder_ != null)) {
+          return errorBuilder_.getMessageOrBuilder();
         } else {
-          removeKeyValuesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public Builder addRemoveKeyValues(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
-        if (removeKeyValuesBuilder_ == null) {
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          removeKeyValuesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public Builder addAllRemoveKeyValues(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValue> values) {
-        if (removeKeyValuesBuilder_ == null) {
-          ensureRemoveKeyValuesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, removeKeyValues_);
-          onChanged();
-        } else {
-          removeKeyValuesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public Builder clearRemoveKeyValues() {
-        if (removeKeyValuesBuilder_ == null) {
-          removeKeyValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          removeKeyValuesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public Builder removeRemoveKeyValues(int index) {
-        if (removeKeyValuesBuilder_ == null) {
-          ensureRemoveKeyValuesIsMutable();
-          removeKeyValues_.remove(index);
-          onChanged();
-        } else {
-          removeKeyValuesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder getRemoveKeyValuesBuilder(
-          int index) {
-        return getRemoveKeyValuesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
-          int index) {
-        if (removeKeyValuesBuilder_ == null) {
-          return removeKeyValues_.get(index);  } else {
-          return removeKeyValuesBuilder_.getMessageOrBuilder(index);
+          if (statusCase_ == 2) {
+            return (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_;
+          }
+          return com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
         }
       }
       /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
+       * <code>.aruna.api.hooks.services.v2.Error error = 2 [json_name = "error"];</code>
        */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-           getRemoveKeyValuesOrBuilderList() {
-        if (removeKeyValuesBuilder_ != null) {
-          return removeKeyValuesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(removeKeyValues_);
-        }
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addRemoveKeyValuesBuilder() {
-        return getRemoveKeyValuesFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addRemoveKeyValuesBuilder(
-          int index) {
-        return getRemoveKeyValuesFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 3 [json_name = "removeKeyValues"];</code>
-       */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder> 
-           getRemoveKeyValuesBuilderList() {
-        return getRemoveKeyValuesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
-          getRemoveKeyValuesFieldBuilder() {
-        if (removeKeyValuesBuilder_ == null) {
-          removeKeyValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder>(
-                  removeKeyValues_,
-                  ((bitField0_ & 0x00000004) != 0),
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.Error, com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder> 
+          getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          if (!(statusCase_ == 2)) {
+            status_ = com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
+          }
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.aruna.api.hooks.services.v2.HooksServiceProto.Error, com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder>(
+                  (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) status_,
                   getParentForChildren(),
                   isClean());
-          removeKeyValues_ = null;
+          status_ = null;
         }
-        return removeKeyValuesBuilder_;
+        statusCase_ = 2;
+        onChanged();
+        return errorBuilder_;
       }
 
       private java.lang.Object secret_ = "";
       /**
-       * <code>string secret = 4 [json_name = "secret"];</code>
+       * <code>string secret = 3 [json_name = "secret"];</code>
        * @return The secret.
        */
       public java.lang.String getSecret() {
@@ -9677,7 +10063,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>string secret = 4 [json_name = "secret"];</code>
+       * <code>string secret = 3 [json_name = "secret"];</code>
        * @return The bytes for secret.
        */
       public com.google.protobuf.ByteString
@@ -9694,7 +10080,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>string secret = 4 [json_name = "secret"];</code>
+       * <code>string secret = 3 [json_name = "secret"];</code>
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -9702,22 +10088,22 @@ public final class HooksServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         secret_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string secret = 4 [json_name = "secret"];</code>
+       * <code>string secret = 3 [json_name = "secret"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSecret() {
         secret_ = getDefaultInstance().getSecret();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string secret = 4 [json_name = "secret"];</code>
+       * <code>string secret = 3 [json_name = "secret"];</code>
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -9726,14 +10112,14 @@ public final class HooksServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         secret_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object hookId_ = "";
       /**
-       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * <code>string hook_id = 4 [json_name = "hookId"];</code>
        * @return The hookId.
        */
       public java.lang.String getHookId() {
@@ -9749,7 +10135,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * <code>string hook_id = 4 [json_name = "hookId"];</code>
        * @return The bytes for hookId.
        */
       public com.google.protobuf.ByteString
@@ -9766,7 +10152,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * <code>string hook_id = 4 [json_name = "hookId"];</code>
        * @param value The hookId to set.
        * @return This builder for chaining.
        */
@@ -9774,22 +10160,22 @@ public final class HooksServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         hookId_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * <code>string hook_id = 4 [json_name = "hookId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHookId() {
         hookId_ = getDefaultInstance().getHookId();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string hook_id = 5 [json_name = "hookId"];</code>
+       * <code>string hook_id = 4 [json_name = "hookId"];</code>
        * @param value The bytes for hookId to set.
        * @return This builder for chaining.
        */
@@ -9798,14 +10184,14 @@ public final class HooksServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         hookId_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private java.lang.Object objectId_ = "";
       /**
-       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * <code>string object_id = 5 [json_name = "objectId"];</code>
        * @return The objectId.
        */
       public java.lang.String getObjectId() {
@@ -9821,7 +10207,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * <code>string object_id = 5 [json_name = "objectId"];</code>
        * @return The bytes for objectId.
        */
       public com.google.protobuf.ByteString
@@ -9838,7 +10224,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * <code>string object_id = 5 [json_name = "objectId"];</code>
        * @param value The objectId to set.
        * @return This builder for chaining.
        */
@@ -9846,22 +10232,22 @@ public final class HooksServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         objectId_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * <code>string object_id = 5 [json_name = "objectId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearObjectId() {
         objectId_ = getDefaultInstance().getObjectId();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
-       * <code>string object_id = 6 [json_name = "objectId"];</code>
+       * <code>string object_id = 5 [json_name = "objectId"];</code>
        * @param value The bytes for objectId to set.
        * @return This builder for chaining.
        */
@@ -9870,14 +10256,14 @@ public final class HooksServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         objectId_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
 
       private int pubkeySerial_ ;
       /**
-       * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * <code>int32 pubkey_serial = 6 [json_name = "pubkeySerial"];</code>
        * @return The pubkeySerial.
        */
       @java.lang.Override
@@ -9885,23 +10271,23 @@ public final class HooksServiceProto {
         return pubkeySerial_;
       }
       /**
-       * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * <code>int32 pubkey_serial = 6 [json_name = "pubkeySerial"];</code>
        * @param value The pubkeySerial to set.
        * @return This builder for chaining.
        */
       public Builder setPubkeySerial(int value) {
 
         pubkeySerial_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 pubkey_serial = 7 [json_name = "pubkeySerial"];</code>
+       * <code>int32 pubkey_serial = 6 [json_name = "pubkeySerial"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPubkeySerial() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         pubkeySerial_ = 0;
         onChanged();
         return this;
@@ -9965,6 +10351,1650 @@ public final class HooksServiceProto {
 
     @java.lang.Override
     public com.aruna.api.hooks.services.v2.HooksServiceProto.HookCallbackRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FinishedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.Finished)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> 
+        getAddKeyValuesList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.KeyValue getAddKeyValues(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    int getAddKeyValuesCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+        getAddKeyValuesOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getAddKeyValuesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> 
+        getRemoveKeyValuesList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.KeyValue getRemoveKeyValues(int index);
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    int getRemoveKeyValuesCount();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+        getRemoveKeyValuesOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.Finished}
+   */
+  public static final class Finished extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.Finished)
+      FinishedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Finished.newBuilder() to construct.
+    private Finished(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Finished() {
+      addKeyValues_ = java.util.Collections.emptyList();
+      removeKeyValues_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Finished();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Finished_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Finished_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.class, com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder.class);
+    }
+
+    public static final int ADD_KEY_VALUES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> addKeyValues_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getAddKeyValuesList() {
+      return addKeyValues_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+        getAddKeyValuesOrBuilderList() {
+      return addKeyValues_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    @java.lang.Override
+    public int getAddKeyValuesCount() {
+      return addKeyValues_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getAddKeyValues(int index) {
+      return addKeyValues_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getAddKeyValuesOrBuilder(
+        int index) {
+      return addKeyValues_.get(index);
+    }
+
+    public static final int REMOVE_KEY_VALUES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> removeKeyValues_;
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getRemoveKeyValuesList() {
+      return removeKeyValues_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+        getRemoveKeyValuesOrBuilderList() {
+      return removeKeyValues_;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    @java.lang.Override
+    public int getRemoveKeyValuesCount() {
+      return removeKeyValues_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getRemoveKeyValues(int index) {
+      return removeKeyValues_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
+        int index) {
+      return removeKeyValues_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < addKeyValues_.size(); i++) {
+        output.writeMessage(1, addKeyValues_.get(i));
+      }
+      for (int i = 0; i < removeKeyValues_.size(); i++) {
+        output.writeMessage(2, removeKeyValues_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < addKeyValues_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, addKeyValues_.get(i));
+      }
+      for (int i = 0; i < removeKeyValues_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, removeKeyValues_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.Finished)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.Finished other = (com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) obj;
+
+      if (!getAddKeyValuesList()
+          .equals(other.getAddKeyValuesList())) return false;
+      if (!getRemoveKeyValuesList()
+          .equals(other.getRemoveKeyValuesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAddKeyValuesCount() > 0) {
+        hash = (37 * hash) + ADD_KEY_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getAddKeyValuesList().hashCode();
+      }
+      if (getRemoveKeyValuesCount() > 0) {
+        hash = (37 * hash) + REMOVE_KEY_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getRemoveKeyValuesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.Finished prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.Finished}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.Finished)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.FinishedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Finished_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Finished_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.class, com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (addKeyValuesBuilder_ == null) {
+          addKeyValues_ = java.util.Collections.emptyList();
+        } else {
+          addKeyValues_ = null;
+          addKeyValuesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (removeKeyValuesBuilder_ == null) {
+          removeKeyValues_ = java.util.Collections.emptyList();
+        } else {
+          removeKeyValues_ = null;
+          removeKeyValuesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Finished_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.Finished result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.Finished result = new com.aruna.api.hooks.services.v2.HooksServiceProto.Finished(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.hooks.services.v2.HooksServiceProto.Finished result) {
+        if (addKeyValuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            addKeyValues_ = java.util.Collections.unmodifiableList(addKeyValues_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.addKeyValues_ = addKeyValues_;
+        } else {
+          result.addKeyValues_ = addKeyValuesBuilder_.build();
+        }
+        if (removeKeyValuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            removeKeyValues_ = java.util.Collections.unmodifiableList(removeKeyValues_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.removeKeyValues_ = removeKeyValues_;
+        } else {
+          result.removeKeyValues_ = removeKeyValuesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.Finished result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.Finished) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.Finished)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.Finished other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.Finished.getDefaultInstance()) return this;
+        if (addKeyValuesBuilder_ == null) {
+          if (!other.addKeyValues_.isEmpty()) {
+            if (addKeyValues_.isEmpty()) {
+              addKeyValues_ = other.addKeyValues_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAddKeyValuesIsMutable();
+              addKeyValues_.addAll(other.addKeyValues_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.addKeyValues_.isEmpty()) {
+            if (addKeyValuesBuilder_.isEmpty()) {
+              addKeyValuesBuilder_.dispose();
+              addKeyValuesBuilder_ = null;
+              addKeyValues_ = other.addKeyValues_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              addKeyValuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAddKeyValuesFieldBuilder() : null;
+            } else {
+              addKeyValuesBuilder_.addAllMessages(other.addKeyValues_);
+            }
+          }
+        }
+        if (removeKeyValuesBuilder_ == null) {
+          if (!other.removeKeyValues_.isEmpty()) {
+            if (removeKeyValues_.isEmpty()) {
+              removeKeyValues_ = other.removeKeyValues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRemoveKeyValuesIsMutable();
+              removeKeyValues_.addAll(other.removeKeyValues_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.removeKeyValues_.isEmpty()) {
+            if (removeKeyValuesBuilder_.isEmpty()) {
+              removeKeyValuesBuilder_.dispose();
+              removeKeyValuesBuilder_ = null;
+              removeKeyValues_ = other.removeKeyValues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              removeKeyValuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRemoveKeyValuesFieldBuilder() : null;
+            } else {
+              removeKeyValuesBuilder_.addAllMessages(other.removeKeyValues_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.aruna.api.storage.models.v2.ModelsProto.KeyValue m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v2.ModelsProto.KeyValue.parser(),
+                        extensionRegistry);
+                if (addKeyValuesBuilder_ == null) {
+                  ensureAddKeyValuesIsMutable();
+                  addKeyValues_.add(m);
+                } else {
+                  addKeyValuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.aruna.api.storage.models.v2.ModelsProto.KeyValue m =
+                    input.readMessage(
+                        com.aruna.api.storage.models.v2.ModelsProto.KeyValue.parser(),
+                        extensionRegistry);
+                if (removeKeyValuesBuilder_ == null) {
+                  ensureRemoveKeyValuesIsMutable();
+                  removeKeyValues_.add(m);
+                } else {
+                  removeKeyValuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> addKeyValues_ =
+        java.util.Collections.emptyList();
+      private void ensureAddKeyValuesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          addKeyValues_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.KeyValue>(addKeyValues_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> addKeyValuesBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getAddKeyValuesList() {
+        if (addKeyValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(addKeyValues_);
+        } else {
+          return addKeyValuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public int getAddKeyValuesCount() {
+        if (addKeyValuesBuilder_ == null) {
+          return addKeyValues_.size();
+        } else {
+          return addKeyValuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getAddKeyValues(int index) {
+        if (addKeyValuesBuilder_ == null) {
+          return addKeyValues_.get(index);
+        } else {
+          return addKeyValuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder setAddKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
+        if (addKeyValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.set(index, value);
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder setAddKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
+        if (addKeyValuesBuilder_ == null) {
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder addAddKeyValues(com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
+        if (addKeyValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.add(value);
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder addAddKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
+        if (addKeyValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.add(index, value);
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder addAddKeyValues(
+          com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
+        if (addKeyValuesBuilder_ == null) {
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.add(builderForValue.build());
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder addAddKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
+        if (addKeyValuesBuilder_ == null) {
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder addAllAddKeyValues(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValue> values) {
+        if (addKeyValuesBuilder_ == null) {
+          ensureAddKeyValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, addKeyValues_);
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder clearAddKeyValues() {
+        if (addKeyValuesBuilder_ == null) {
+          addKeyValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public Builder removeAddKeyValues(int index) {
+        if (addKeyValuesBuilder_ == null) {
+          ensureAddKeyValuesIsMutable();
+          addKeyValues_.remove(index);
+          onChanged();
+        } else {
+          addKeyValuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder getAddKeyValuesBuilder(
+          int index) {
+        return getAddKeyValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getAddKeyValuesOrBuilder(
+          int index) {
+        if (addKeyValuesBuilder_ == null) {
+          return addKeyValues_.get(index);  } else {
+          return addKeyValuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+           getAddKeyValuesOrBuilderList() {
+        if (addKeyValuesBuilder_ != null) {
+          return addKeyValuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(addKeyValues_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addAddKeyValuesBuilder() {
+        return getAddKeyValuesFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addAddKeyValuesBuilder(
+          int index) {
+        return getAddKeyValuesFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue add_key_values = 1 [json_name = "addKeyValues"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder> 
+           getAddKeyValuesBuilderList() {
+        return getAddKeyValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+          getAddKeyValuesFieldBuilder() {
+        if (addKeyValuesBuilder_ == null) {
+          addKeyValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder>(
+                  addKeyValues_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          addKeyValues_ = null;
+        }
+        return addKeyValuesBuilder_;
+      }
+
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> removeKeyValues_ =
+        java.util.Collections.emptyList();
+      private void ensureRemoveKeyValuesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          removeKeyValues_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.KeyValue>(removeKeyValues_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> removeKeyValuesBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue> getRemoveKeyValuesList() {
+        if (removeKeyValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(removeKeyValues_);
+        } else {
+          return removeKeyValuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public int getRemoveKeyValuesCount() {
+        if (removeKeyValuesBuilder_ == null) {
+          return removeKeyValues_.size();
+        } else {
+          return removeKeyValuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue getRemoveKeyValues(int index) {
+        if (removeKeyValuesBuilder_ == null) {
+          return removeKeyValues_.get(index);
+        } else {
+          return removeKeyValuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder setRemoveKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
+        if (removeKeyValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.set(index, value);
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder setRemoveKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
+        if (removeKeyValuesBuilder_ == null) {
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder addRemoveKeyValues(com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
+        if (removeKeyValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.add(value);
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder addRemoveKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue value) {
+        if (removeKeyValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.add(index, value);
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder addRemoveKeyValues(
+          com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
+        if (removeKeyValuesBuilder_ == null) {
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.add(builderForValue.build());
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder addRemoveKeyValues(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder builderForValue) {
+        if (removeKeyValuesBuilder_ == null) {
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder addAllRemoveKeyValues(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValue> values) {
+        if (removeKeyValuesBuilder_ == null) {
+          ensureRemoveKeyValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, removeKeyValues_);
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder clearRemoveKeyValues() {
+        if (removeKeyValuesBuilder_ == null) {
+          removeKeyValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public Builder removeRemoveKeyValues(int index) {
+        if (removeKeyValuesBuilder_ == null) {
+          ensureRemoveKeyValuesIsMutable();
+          removeKeyValues_.remove(index);
+          onChanged();
+        } else {
+          removeKeyValuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder getRemoveKeyValuesBuilder(
+          int index) {
+        return getRemoveKeyValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder getRemoveKeyValuesOrBuilder(
+          int index) {
+        if (removeKeyValuesBuilder_ == null) {
+          return removeKeyValues_.get(index);  } else {
+          return removeKeyValuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+           getRemoveKeyValuesOrBuilderList() {
+        if (removeKeyValuesBuilder_ != null) {
+          return removeKeyValuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(removeKeyValues_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addRemoveKeyValuesBuilder() {
+        return getRemoveKeyValuesFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder addRemoveKeyValuesBuilder(
+          int index) {
+        return getRemoveKeyValuesFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.storage.models.v2.KeyValue remove_key_values = 2 [json_name = "removeKeyValues"];</code>
+       */
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder> 
+           getRemoveKeyValuesBuilderList() {
+        return getRemoveKeyValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder> 
+          getRemoveKeyValuesFieldBuilder() {
+        if (removeKeyValuesBuilder_ == null) {
+          removeKeyValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.KeyValue, com.aruna.api.storage.models.v2.ModelsProto.KeyValue.Builder, com.aruna.api.storage.models.v2.ModelsProto.KeyValueOrBuilder>(
+                  removeKeyValues_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          removeKeyValues_ = null;
+        }
+        return removeKeyValuesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.Finished)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.Finished)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.Finished DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.Finished();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Finished getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Finished>
+        PARSER = new com.google.protobuf.AbstractParser<Finished>() {
+      @java.lang.Override
+      public Finished parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Finished> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Finished> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.Finished getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ErrorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.Error)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string error = 1 [json_name = "error"];</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 1 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.Error}
+   */
+  public static final class Error extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.Error)
+      ErrorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Error.newBuilder() to construct.
+    private Error(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Error() {
+      error_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Error();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Error_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Error_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.Error.class, com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder.class);
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object error_ = "";
+    /**
+     * <code>string error = 1 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 1 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, error_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, error_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.Error)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.Error other = (com.aruna.api.hooks.services.v2.HooksServiceProto.Error) obj;
+
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.Error prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.Error}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.Error)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ErrorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Error_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Error_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.Error.class, com.aruna.api.hooks.services.v2.HooksServiceProto.Error.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.Error.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        error_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_Error_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Error getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Error build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.Error result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.Error buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.Error result = new com.aruna.api.hooks.services.v2.HooksServiceProto.Error(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.Error result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.error_ = error_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.Error) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.Error)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.Error other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.Error.getDefaultInstance()) return this;
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                error_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 1 [json_name = "error"];</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 1 [json_name = "error"];</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 1 [json_name = "error"];</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        error_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 1 [json_name = "error"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        error_ = getDefaultInstance().getError();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 1 [json_name = "error"];</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        error_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.Error)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.Error)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.Error DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.Error();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.Error getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Error>
+        PARSER = new com.google.protobuf.AbstractParser<Error>() {
+      @java.lang.Override
+      public Error parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Error> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Error> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.Error getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10335,8 +12365,8 @@ public final class HooksServiceProto {
 
   }
 
-  public interface ListHooksRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.ListHooksRequest)
+  public interface ListProjectHooksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.ListProjectHooksRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10352,18 +12382,18 @@ public final class HooksServiceProto {
         getProjectIdBytes();
   }
   /**
-   * Protobuf type {@code aruna.api.hooks.services.v2.ListHooksRequest}
+   * Protobuf type {@code aruna.api.hooks.services.v2.ListProjectHooksRequest}
    */
-  public static final class ListHooksRequest extends
+  public static final class ListProjectHooksRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.ListHooksRequest)
-      ListHooksRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.ListProjectHooksRequest)
+      ListProjectHooksRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ListHooksRequest.newBuilder() to construct.
-    private ListHooksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ListProjectHooksRequest.newBuilder() to construct.
+    private ListProjectHooksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ListHooksRequest() {
+    private ListProjectHooksRequest() {
       projectId_ = "";
     }
 
@@ -10371,20 +12401,20 @@ public final class HooksServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ListHooksRequest();
+      return new ListProjectHooksRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor;
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksRequest_fieldAccessorTable
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.Builder.class);
+              com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.Builder.class);
     }
 
     public static final int PROJECT_ID_FIELD_NUMBER = 1;
@@ -10465,10 +12495,10 @@ public final class HooksServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest)) {
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest)) {
         return super.equals(obj);
       }
-      com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest other = (com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest) obj;
+      com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest other = (com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest) obj;
 
       if (!getProjectId()
           .equals(other.getProjectId())) return false;
@@ -10490,44 +12520,44 @@ public final class HooksServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(byte[] data)
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(java.io.InputStream input)
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10535,26 +12565,26 @@ public final class HooksServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseDelimitedFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10567,7 +12597,7 @@ public final class HooksServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest prototype) {
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10583,26 +12613,26 @@ public final class HooksServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.hooks.services.v2.ListHooksRequest}
+     * Protobuf type {@code aruna.api.hooks.services.v2.ListProjectHooksRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.ListHooksRequest)
-        com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.ListProjectHooksRequest)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor;
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksRequest_fieldAccessorTable
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.Builder.class);
+                com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.Builder.class);
       }
 
-      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.newBuilder()
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.newBuilder()
       private Builder() {
 
       }
@@ -10623,17 +12653,17 @@ public final class HooksServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor;
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest getDefaultInstanceForType() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.getDefaultInstance();
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest build() {
-        com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest result = buildPartial();
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10641,14 +12671,14 @@ public final class HooksServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest buildPartial() {
-        com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest result = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest(this);
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest result = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest result) {
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.projectId_ = projectId_;
@@ -10657,16 +12687,16 @@ public final class HooksServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest) {
-          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest)other);
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest other) {
-        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest.getDefaultInstance()) return this;
         if (!other.getProjectId().isEmpty()) {
           projectId_ = other.projectId_;
           bitField0_ |= 0x00000001;
@@ -10804,23 +12834,23 @@ public final class HooksServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.ListHooksRequest)
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.ListProjectHooksRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.ListHooksRequest)
-    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.ListProjectHooksRequest)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest();
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest();
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest getDefaultInstance() {
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListHooksRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListHooksRequest>() {
+    private static final com.google.protobuf.Parser<ListProjectHooksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListProjectHooksRequest>() {
       @java.lang.Override
-      public ListHooksRequest parsePartialFrom(
+      public ListProjectHooksRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -10839,17 +12869,537 @@ public final class HooksServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<ListHooksRequest> parser() {
+    public static com.google.protobuf.Parser<ListProjectHooksRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ListHooksRequest> getParserForType() {
+    public com.google.protobuf.Parser<ListProjectHooksRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksRequest getDefaultInstanceForType() {
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListOwnedHooksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.ListOwnedHooksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.ListOwnedHooksRequest}
+   */
+  public static final class ListOwnedHooksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.ListOwnedHooksRequest)
+      ListOwnedHooksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListOwnedHooksRequest.newBuilder() to construct.
+    private ListOwnedHooksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListOwnedHooksRequest() {
+      userId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOwnedHooksRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.Builder.class);
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest other = (com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest) obj;
+
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.ListOwnedHooksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.ListOwnedHooksRequest)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest result = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userId_ = userId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest.getDefaultInstance()) return this;
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1 [json_name = "userId"];</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.ListOwnedHooksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.ListOwnedHooksRequest)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListOwnedHooksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListOwnedHooksRequest>() {
+      @java.lang.Override
+      public ListOwnedHooksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListOwnedHooksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListOwnedHooksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10872,37 +13422,86 @@ public final class HooksServiceProto {
         getHookIdBytes();
 
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return A list containing the projectIds.
+     */
+    java.util.List<java.lang.String>
+        getProjectIdsList();
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return The count of projectIds.
+     */
+    int getProjectIdsCount();
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    java.lang.String getProjectIds(int index);
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdsBytes(int index);
+
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
      * @return Whether the hook field is set.
      */
     boolean hasHook();
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
      * @return The hook.
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.Hook getHook();
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder getHookOrBuilder();
 
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
      * @return Whether the trigger field is set.
      */
     boolean hasTrigger();
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
      * @return The trigger.
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger getTrigger();
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
      */
     com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder getTriggerOrBuilder();
 
     /**
-     * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
+     * <code>uint64 timeout = 7 [json_name = "timeout"];</code>
      * @return The timeout.
      */
     long getTimeout();
@@ -10921,6 +13520,10 @@ public final class HooksServiceProto {
     }
     private HookInfo() {
       hookId_ = "";
+      projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -10982,10 +13585,125 @@ public final class HooksServiceProto {
       }
     }
 
-    public static final int HOOK_FIELD_NUMBER = 2;
+    public static final int PROJECT_IDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList projectIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return A list containing the projectIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProjectIdsList() {
+      return projectIds_;
+    }
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return The count of projectIds.
+     */
+    public int getProjectIdsCount() {
+      return projectIds_.size();
+    }
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    public java.lang.String getProjectIds(int index) {
+      return projectIds_.get(index);
+    }
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdsBytes(int index) {
+      return projectIds_.getByteString(index);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOOK_FIELD_NUMBER = 5;
     private com.aruna.api.hooks.services.v2.HooksServiceProto.Hook hook_;
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
      * @return Whether the hook field is set.
      */
     @java.lang.Override
@@ -10993,7 +13711,7 @@ public final class HooksServiceProto {
       return hook_ != null;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
      * @return The hook.
      */
     @java.lang.Override
@@ -11001,17 +13719,17 @@ public final class HooksServiceProto {
       return hook_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.getDefaultInstance() : hook_;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+     * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
      */
     @java.lang.Override
     public com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder getHookOrBuilder() {
       return hook_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.getDefaultInstance() : hook_;
     }
 
-    public static final int TRIGGER_FIELD_NUMBER = 3;
+    public static final int TRIGGER_FIELD_NUMBER = 6;
     private com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger trigger_;
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
      * @return Whether the trigger field is set.
      */
     @java.lang.Override
@@ -11019,7 +13737,7 @@ public final class HooksServiceProto {
       return trigger_ != null;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
      * @return The trigger.
      */
     @java.lang.Override
@@ -11027,17 +13745,17 @@ public final class HooksServiceProto {
       return trigger_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.getDefaultInstance() : trigger_;
     }
     /**
-     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+     * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
      */
     @java.lang.Override
     public com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder getTriggerOrBuilder() {
       return trigger_ == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.getDefaultInstance() : trigger_;
     }
 
-    public static final int TIMEOUT_FIELD_NUMBER = 4;
+    public static final int TIMEOUT_FIELD_NUMBER = 7;
     private long timeout_ = 0L;
     /**
-     * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
+     * <code>uint64 timeout = 7 [json_name = "timeout"];</code>
      * @return The timeout.
      */
     @java.lang.Override
@@ -11062,14 +13780,23 @@ public final class HooksServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hookId_);
       }
+      for (int i = 0; i < projectIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, projectIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
       if (hook_ != null) {
-        output.writeMessage(2, getHook());
+        output.writeMessage(5, getHook());
       }
       if (trigger_ != null) {
-        output.writeMessage(3, getTrigger());
+        output.writeMessage(6, getTrigger());
       }
       if (timeout_ != 0L) {
-        output.writeUInt64(4, timeout_);
+        output.writeUInt64(7, timeout_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -11083,17 +13810,31 @@ public final class HooksServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hookId_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < projectIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(projectIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProjectIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
       if (hook_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getHook());
+          .computeMessageSize(5, getHook());
       }
       if (trigger_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getTrigger());
+          .computeMessageSize(6, getTrigger());
       }
       if (timeout_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, timeout_);
+          .computeUInt64Size(7, timeout_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -11112,6 +13853,12 @@ public final class HooksServiceProto {
 
       if (!getHookId()
           .equals(other.getHookId())) return false;
+      if (!getProjectIdsList()
+          .equals(other.getProjectIdsList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (hasHook() != other.hasHook()) return false;
       if (hasHook()) {
         if (!getHook()
@@ -11137,6 +13884,14 @@ public final class HooksServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + HOOK_ID_FIELD_NUMBER;
       hash = (53 * hash) + getHookId().hashCode();
+      if (getProjectIdsCount() > 0) {
+        hash = (37 * hash) + PROJECT_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectIdsList().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       if (hasHook()) {
         hash = (37 * hash) + HOOK_FIELD_NUMBER;
         hash = (53 * hash) + getHook().hashCode();
@@ -11280,6 +14035,10 @@ public final class HooksServiceProto {
         super.clear();
         bitField0_ = 0;
         hookId_ = "";
+        projectIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        name_ = "";
+        description_ = "";
         hook_ = null;
         if (hookBuilder_ != null) {
           hookBuilder_.dispose();
@@ -11328,16 +14087,26 @@ public final class HooksServiceProto {
           result.hookId_ = hookId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          projectIds_.makeImmutable();
+          result.projectIds_ = projectIds_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.hook_ = hookBuilder_ == null
               ? hook_
               : hookBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.trigger_ = triggerBuilder_ == null
               ? trigger_
               : triggerBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.timeout_ = timeout_;
         }
       }
@@ -11357,6 +14126,26 @@ public final class HooksServiceProto {
         if (!other.getHookId().isEmpty()) {
           hookId_ = other.hookId_;
           bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.projectIds_.isEmpty()) {
+          if (projectIds_.isEmpty()) {
+            projectIds_ = other.projectIds_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureProjectIdsIsMutable();
+            projectIds_.addAll(other.projectIds_);
+          }
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasHook()) {
@@ -11400,24 +14189,40 @@ public final class HooksServiceProto {
                 break;
               } // case 10
               case 18: {
-                input.readMessage(
-                    getHookFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureProjectIdsIsMutable();
+                projectIds_.add(s);
                 break;
               } // case 18
               case 26: {
-                input.readMessage(
-                    getTriggerFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 32: {
-                timeout_ = input.readUInt64();
+              case 34: {
+                description_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getHookFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getTriggerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                timeout_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -11507,18 +14312,273 @@ public final class HooksServiceProto {
         return this;
       }
 
+      private com.google.protobuf.LazyStringArrayList projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureProjectIdsIsMutable() {
+        if (!projectIds_.isModifiable()) {
+          projectIds_ = new com.google.protobuf.LazyStringArrayList(projectIds_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @return A list containing the projectIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getProjectIdsList() {
+        projectIds_.makeImmutable();
+        return projectIds_;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @return The count of projectIds.
+       */
+      public int getProjectIdsCount() {
+        return projectIds_.size();
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param index The index of the element to return.
+       * @return The projectIds at the given index.
+       */
+      public java.lang.String getProjectIds(int index) {
+        return projectIds_.get(index);
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the projectIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdsBytes(int index) {
+        return projectIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The projectIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProjectIdsIsMutable();
+        projectIds_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param value The projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProjectIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProjectIdsIsMutable();
+        projectIds_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param values The projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllProjectIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProjectIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, projectIds_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectIds() {
+        projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param value The bytes of the projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProjectIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureProjectIdsIsMutable();
+        projectIds_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
       private com.aruna.api.hooks.services.v2.HooksServiceProto.Hook hook_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Hook, com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder> hookBuilder_;
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        * @return Whether the hook field is set.
        */
       public boolean hasHook() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        * @return The hook.
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Hook getHook() {
@@ -11529,7 +14589,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       public Builder setHook(com.aruna.api.hooks.services.v2.HooksServiceProto.Hook value) {
         if (hookBuilder_ == null) {
@@ -11540,12 +14600,12 @@ public final class HooksServiceProto {
         } else {
           hookBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       public Builder setHook(
           com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder builderForValue) {
@@ -11554,16 +14614,16 @@ public final class HooksServiceProto {
         } else {
           hookBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       public Builder mergeHook(com.aruna.api.hooks.services.v2.HooksServiceProto.Hook value) {
         if (hookBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
+          if (((bitField0_ & 0x00000010) != 0) &&
             hook_ != null &&
             hook_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.getDefaultInstance()) {
             getHookBuilder().mergeFrom(value);
@@ -11573,15 +14633,15 @@ public final class HooksServiceProto {
         } else {
           hookBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       public Builder clearHook() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         hook_ = null;
         if (hookBuilder_ != null) {
           hookBuilder_.dispose();
@@ -11591,15 +14651,15 @@ public final class HooksServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder getHookBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getHookFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder getHookOrBuilder() {
         if (hookBuilder_ != null) {
@@ -11610,7 +14670,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Hook hook = 2 [json_name = "hook"];</code>
+       * <code>.aruna.api.hooks.services.v2.Hook hook = 5 [json_name = "hook"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Hook, com.aruna.api.hooks.services.v2.HooksServiceProto.Hook.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookOrBuilder> 
@@ -11630,14 +14690,14 @@ public final class HooksServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger, com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder> triggerBuilder_;
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        * @return Whether the trigger field is set.
        */
       public boolean hasTrigger() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        * @return The trigger.
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger getTrigger() {
@@ -11648,7 +14708,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       public Builder setTrigger(com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger value) {
         if (triggerBuilder_ == null) {
@@ -11659,12 +14719,12 @@ public final class HooksServiceProto {
         } else {
           triggerBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       public Builder setTrigger(
           com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder builderForValue) {
@@ -11673,16 +14733,16 @@ public final class HooksServiceProto {
         } else {
           triggerBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       public Builder mergeTrigger(com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger value) {
         if (triggerBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
+          if (((bitField0_ & 0x00000020) != 0) &&
             trigger_ != null &&
             trigger_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.getDefaultInstance()) {
             getTriggerBuilder().mergeFrom(value);
@@ -11692,15 +14752,15 @@ public final class HooksServiceProto {
         } else {
           triggerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       public Builder clearTrigger() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000020);
         trigger_ = null;
         if (triggerBuilder_ != null) {
           triggerBuilder_.dispose();
@@ -11710,15 +14770,15 @@ public final class HooksServiceProto {
         return this;
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder getTriggerBuilder() {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000020;
         onChanged();
         return getTriggerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       public com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder getTriggerOrBuilder() {
         if (triggerBuilder_ != null) {
@@ -11729,7 +14789,7 @@ public final class HooksServiceProto {
         }
       }
       /**
-       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 3 [json_name = "trigger"];</code>
+       * <code>.aruna.api.hooks.services.v2.Trigger trigger = 6 [json_name = "trigger"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger, com.aruna.api.hooks.services.v2.HooksServiceProto.Trigger.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.TriggerOrBuilder> 
@@ -11747,7 +14807,7 @@ public final class HooksServiceProto {
 
       private long timeout_ ;
       /**
-       * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
+       * <code>uint64 timeout = 7 [json_name = "timeout"];</code>
        * @return The timeout.
        */
       @java.lang.Override
@@ -11755,23 +14815,23 @@ public final class HooksServiceProto {
         return timeout_;
       }
       /**
-       * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
+       * <code>uint64 timeout = 7 [json_name = "timeout"];</code>
        * @param value The timeout to set.
        * @return This builder for chaining.
        */
       public Builder setTimeout(long value) {
 
         timeout_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 timeout = 4 [json_name = "timeout"];</code>
+       * <code>uint64 timeout = 7 [json_name = "timeout"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTimeout() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000040);
         timeout_ = 0L;
         onChanged();
         return this;
@@ -11840,8 +14900,8 @@ public final class HooksServiceProto {
 
   }
 
-  public interface ListHooksResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.ListHooksResponse)
+  public interface ListProjectHooksResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.ListProjectHooksResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -11869,18 +14929,18 @@ public final class HooksServiceProto {
         int index);
   }
   /**
-   * Protobuf type {@code aruna.api.hooks.services.v2.ListHooksResponse}
+   * Protobuf type {@code aruna.api.hooks.services.v2.ListProjectHooksResponse}
    */
-  public static final class ListHooksResponse extends
+  public static final class ListProjectHooksResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.ListHooksResponse)
-      ListHooksResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.ListProjectHooksResponse)
+      ListProjectHooksResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ListHooksResponse.newBuilder() to construct.
-    private ListHooksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ListProjectHooksResponse.newBuilder() to construct.
+    private ListProjectHooksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ListHooksResponse() {
+    private ListProjectHooksResponse() {
       infos_ = java.util.Collections.emptyList();
     }
 
@@ -11888,20 +14948,20 @@ public final class HooksServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ListHooksResponse();
+      return new ListProjectHooksResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor;
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksResponse_fieldAccessorTable
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.Builder.class);
+              com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.Builder.class);
     }
 
     public static final int INFOS_FIELD_NUMBER = 1;
@@ -11985,10 +15045,10 @@ public final class HooksServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse)) {
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse)) {
         return super.equals(obj);
       }
-      com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse other = (com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse) obj;
+      com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse other = (com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse) obj;
 
       if (!getInfosList()
           .equals(other.getInfosList())) return false;
@@ -12012,44 +15072,44 @@ public final class HooksServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(byte[] data)
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(java.io.InputStream input)
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12057,26 +15117,26 @@ public final class HooksServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseDelimitedFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse parseFrom(
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12089,7 +15149,7 @@ public final class HooksServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse prototype) {
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12105,26 +15165,26 @@ public final class HooksServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.hooks.services.v2.ListHooksResponse}
+     * Protobuf type {@code aruna.api.hooks.services.v2.ListProjectHooksResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.ListHooksResponse)
-        com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.ListProjectHooksResponse)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor;
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksResponse_fieldAccessorTable
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.Builder.class);
+                com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.Builder.class);
       }
 
-      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.newBuilder()
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.newBuilder()
       private Builder() {
 
       }
@@ -12151,17 +15211,17 @@ public final class HooksServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor;
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse getDefaultInstanceForType() {
-        return com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.getDefaultInstance();
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse build() {
-        com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse result = buildPartial();
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12169,15 +15229,15 @@ public final class HooksServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse buildPartial() {
-        com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse result = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse(this);
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse result = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse result) {
+      private void buildPartialRepeatedFields(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse result) {
         if (infosBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             infos_ = java.util.Collections.unmodifiableList(infos_);
@@ -12189,22 +15249,22 @@ public final class HooksServiceProto {
         }
       }
 
-      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse result) {
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse result) {
         int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse) {
-          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse)other);
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse other) {
-        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse.getDefaultInstance()) return this;
         if (infosBuilder_ == null) {
           if (!other.infos_.isEmpty()) {
             if (infos_.isEmpty()) {
@@ -12539,23 +15599,23 @@ public final class HooksServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.ListHooksResponse)
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.ListProjectHooksResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.ListHooksResponse)
-    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.ListProjectHooksResponse)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse();
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse();
     }
 
-    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse getDefaultInstance() {
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListHooksResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListHooksResponse>() {
+    private static final com.google.protobuf.Parser<ListProjectHooksResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListProjectHooksResponse>() {
       @java.lang.Override
-      public ListHooksResponse parsePartialFrom(
+      public ListProjectHooksResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -12574,17 +15634,1866 @@ public final class HooksServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<ListHooksResponse> parser() {
+    public static com.google.protobuf.Parser<ListProjectHooksResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ListHooksResponse> getParserForType() {
+    public com.google.protobuf.Parser<ListProjectHooksResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.hooks.services.v2.HooksServiceProto.ListHooksResponse getDefaultInstanceForType() {
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.ListProjectHooksResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListOwnedHooksResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.ListOwnedHooksResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    java.util.List<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo> 
+        getInfosList();
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo getInfos(int index);
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    int getInfosCount();
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    java.util.List<? extends com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder> 
+        getInfosOrBuilderList();
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder getInfosOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.ListOwnedHooksResponse}
+   */
+  public static final class ListOwnedHooksResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.ListOwnedHooksResponse)
+      ListOwnedHooksResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListOwnedHooksResponse.newBuilder() to construct.
+    private ListOwnedHooksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListOwnedHooksResponse() {
+      infos_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListOwnedHooksResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.Builder.class);
+    }
+
+    public static final int INFOS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo> infos_;
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo> getInfosList() {
+      return infos_;
+    }
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder> 
+        getInfosOrBuilderList() {
+      return infos_;
+    }
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    @java.lang.Override
+    public int getInfosCount() {
+      return infos_.size();
+    }
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo getInfos(int index) {
+      return infos_.get(index);
+    }
+    /**
+     * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder getInfosOrBuilder(
+        int index) {
+      return infos_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < infos_.size(); i++) {
+        output.writeMessage(1, infos_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < infos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, infos_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse other = (com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse) obj;
+
+      if (!getInfosList()
+          .equals(other.getInfosList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInfosCount() > 0) {
+        hash = (37 * hash) + INFOS_FIELD_NUMBER;
+        hash = (53 * hash) + getInfosList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.ListOwnedHooksResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.ListOwnedHooksResponse)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (infosBuilder_ == null) {
+          infos_ = java.util.Collections.emptyList();
+        } else {
+          infos_ = null;
+          infosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse result = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse result) {
+        if (infosBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            infos_ = java.util.Collections.unmodifiableList(infos_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.infos_ = infos_;
+        } else {
+          result.infos_ = infosBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse.getDefaultInstance()) return this;
+        if (infosBuilder_ == null) {
+          if (!other.infos_.isEmpty()) {
+            if (infos_.isEmpty()) {
+              infos_ = other.infos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInfosIsMutable();
+              infos_.addAll(other.infos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.infos_.isEmpty()) {
+            if (infosBuilder_.isEmpty()) {
+              infosBuilder_.dispose();
+              infosBuilder_ = null;
+              infos_ = other.infos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              infosBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInfosFieldBuilder() : null;
+            } else {
+              infosBuilder_.addAllMessages(other.infos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo m =
+                    input.readMessage(
+                        com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.parser(),
+                        extensionRegistry);
+                if (infosBuilder_ == null) {
+                  ensureInfosIsMutable();
+                  infos_.add(m);
+                } else {
+                  infosBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo> infos_ =
+        java.util.Collections.emptyList();
+      private void ensureInfosIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          infos_ = new java.util.ArrayList<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo>(infos_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder> infosBuilder_;
+
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public java.util.List<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo> getInfosList() {
+        if (infosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(infos_);
+        } else {
+          return infosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public int getInfosCount() {
+        if (infosBuilder_ == null) {
+          return infos_.size();
+        } else {
+          return infosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo getInfos(int index) {
+        if (infosBuilder_ == null) {
+          return infos_.get(index);
+        } else {
+          return infosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder setInfos(
+          int index, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.set(index, value);
+          onChanged();
+        } else {
+          infosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder setInfos(
+          int index, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder addInfos(com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.add(value);
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder addInfos(
+          int index, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.add(index, value);
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder addInfos(
+          com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder addInfos(
+          int index, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder addAllInfos(
+          java.lang.Iterable<? extends com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo> values) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, infos_);
+          onChanged();
+        } else {
+          infosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder clearInfos() {
+        if (infosBuilder_ == null) {
+          infos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          infosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public Builder removeInfos(int index) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.remove(index);
+          onChanged();
+        } else {
+          infosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder getInfosBuilder(
+          int index) {
+        return getInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder getInfosOrBuilder(
+          int index) {
+        if (infosBuilder_ == null) {
+          return infos_.get(index);  } else {
+          return infosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public java.util.List<? extends com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder> 
+           getInfosOrBuilderList() {
+        if (infosBuilder_ != null) {
+          return infosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(infos_);
+        }
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder addInfosBuilder() {
+        return getInfosFieldBuilder().addBuilder(
+            com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder addInfosBuilder(
+          int index) {
+        return getInfosFieldBuilder().addBuilder(
+            index, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aruna.api.hooks.services.v2.HookInfo infos = 1 [json_name = "infos"];</code>
+       */
+      public java.util.List<com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder> 
+           getInfosBuilderList() {
+        return getInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder> 
+          getInfosFieldBuilder() {
+        if (infosBuilder_ == null) {
+          infosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfo.Builder, com.aruna.api.hooks.services.v2.HooksServiceProto.HookInfoOrBuilder>(
+                  infos_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          infos_ = null;
+        }
+        return infosBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.ListOwnedHooksResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.ListOwnedHooksResponse)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListOwnedHooksResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListOwnedHooksResponse>() {
+      @java.lang.Override
+      public ListOwnedHooksResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListOwnedHooksResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListOwnedHooksResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.ListOwnedHooksResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddProjectsToHookRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.AddProjectsToHookRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hook_id = 1 [json_name = "hookId"];</code>
+     * @return The hookId.
+     */
+    java.lang.String getHookId();
+    /**
+     * <code>string hook_id = 1 [json_name = "hookId"];</code>
+     * @return The bytes for hookId.
+     */
+    com.google.protobuf.ByteString
+        getHookIdBytes();
+
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return A list containing the projectIds.
+     */
+    java.util.List<java.lang.String>
+        getProjectIdsList();
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return The count of projectIds.
+     */
+    int getProjectIdsCount();
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    java.lang.String getProjectIds(int index);
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.AddProjectsToHookRequest}
+   */
+  public static final class AddProjectsToHookRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.AddProjectsToHookRequest)
+      AddProjectsToHookRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddProjectsToHookRequest.newBuilder() to construct.
+    private AddProjectsToHookRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddProjectsToHookRequest() {
+      hookId_ = "";
+      projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddProjectsToHookRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.Builder.class);
+    }
+
+    public static final int HOOK_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hookId_ = "";
+    /**
+     * <code>string hook_id = 1 [json_name = "hookId"];</code>
+     * @return The hookId.
+     */
+    @java.lang.Override
+    public java.lang.String getHookId() {
+      java.lang.Object ref = hookId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hookId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hook_id = 1 [json_name = "hookId"];</code>
+     * @return The bytes for hookId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHookIdBytes() {
+      java.lang.Object ref = hookId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hookId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECT_IDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList projectIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return A list containing the projectIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProjectIdsList() {
+      return projectIds_;
+    }
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @return The count of projectIds.
+     */
+    public int getProjectIdsCount() {
+      return projectIds_.size();
+    }
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the element to return.
+     * @return The projectIds at the given index.
+     */
+    public java.lang.String getProjectIds(int index) {
+      return projectIds_.get(index);
+    }
+    /**
+     * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the projectIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdsBytes(int index) {
+      return projectIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hookId_);
+      }
+      for (int i = 0; i < projectIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, projectIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hookId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hookId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < projectIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(projectIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProjectIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest other = (com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest) obj;
+
+      if (!getHookId()
+          .equals(other.getHookId())) return false;
+      if (!getProjectIdsList()
+          .equals(other.getProjectIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOOK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHookId().hashCode();
+      if (getProjectIdsCount() > 0) {
+        hash = (37 * hash) + PROJECT_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.AddProjectsToHookRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.AddProjectsToHookRequest)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hookId_ = "";
+        projectIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest result = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hookId_ = hookId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          projectIds_.makeImmutable();
+          result.projectIds_ = projectIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest.getDefaultInstance()) return this;
+        if (!other.getHookId().isEmpty()) {
+          hookId_ = other.hookId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.projectIds_.isEmpty()) {
+          if (projectIds_.isEmpty()) {
+            projectIds_ = other.projectIds_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureProjectIdsIsMutable();
+            projectIds_.addAll(other.projectIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                hookId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureProjectIdsIsMutable();
+                projectIds_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object hookId_ = "";
+      /**
+       * <code>string hook_id = 1 [json_name = "hookId"];</code>
+       * @return The hookId.
+       */
+      public java.lang.String getHookId() {
+        java.lang.Object ref = hookId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hookId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hook_id = 1 [json_name = "hookId"];</code>
+       * @return The bytes for hookId.
+       */
+      public com.google.protobuf.ByteString
+          getHookIdBytes() {
+        java.lang.Object ref = hookId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hookId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hook_id = 1 [json_name = "hookId"];</code>
+       * @param value The hookId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hookId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hook_id = 1 [json_name = "hookId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHookId() {
+        hookId_ = getDefaultInstance().getHookId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hook_id = 1 [json_name = "hookId"];</code>
+       * @param value The bytes for hookId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHookIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hookId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureProjectIdsIsMutable() {
+        if (!projectIds_.isModifiable()) {
+          projectIds_ = new com.google.protobuf.LazyStringArrayList(projectIds_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @return A list containing the projectIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getProjectIdsList() {
+        projectIds_.makeImmutable();
+        return projectIds_;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @return The count of projectIds.
+       */
+      public int getProjectIdsCount() {
+        return projectIds_.size();
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param index The index of the element to return.
+       * @return The projectIds at the given index.
+       */
+      public java.lang.String getProjectIds(int index) {
+        return projectIds_.get(index);
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the projectIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdsBytes(int index) {
+        return projectIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The projectIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProjectIdsIsMutable();
+        projectIds_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param value The projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProjectIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProjectIdsIsMutable();
+        projectIds_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param values The projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllProjectIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProjectIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, projectIds_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectIds() {
+        projectIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string project_ids = 2 [json_name = "projectIds"];</code>
+       * @param value The bytes of the projectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProjectIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureProjectIdsIsMutable();
+        projectIds_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.AddProjectsToHookRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.AddProjectsToHookRequest)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddProjectsToHookRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddProjectsToHookRequest>() {
+      @java.lang.Override
+      public AddProjectsToHookRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddProjectsToHookRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddProjectsToHookRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddProjectsToHookResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.hooks.services.v2.AddProjectsToHookResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code aruna.api.hooks.services.v2.AddProjectsToHookResponse}
+   */
+  public static final class AddProjectsToHookResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.hooks.services.v2.AddProjectsToHookResponse)
+      AddProjectsToHookResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddProjectsToHookResponse.newBuilder() to construct.
+    private AddProjectsToHookResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddProjectsToHookResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddProjectsToHookResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse other = (com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.hooks.services.v2.AddProjectsToHookResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.hooks.services.v2.AddProjectsToHookResponse)
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.class, com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.Builder.class);
+      }
+
+      // Construct using com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse getDefaultInstanceForType() {
+        return com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse build() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse buildPartial() {
+        com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse result = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse) {
+          return mergeFrom((com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse other) {
+        if (other == com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.hooks.services.v2.AddProjectsToHookResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.hooks.services.v2.AddProjectsToHookResponse)
+    private static final com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse();
+    }
+
+    public static com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddProjectsToHookResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AddProjectsToHookResponse>() {
+      @java.lang.Override
+      public AddProjectsToHookResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddProjectsToHookResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddProjectsToHookResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.hooks.services.v2.HooksServiceProto.AddProjectsToHookResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12651,25 +17560,55 @@ public final class HooksServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_hooks_services_v2_HookCallbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_Finished_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_Finished_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_Error_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_Error_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor;
+    internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_hooks_services_v2_ListHooksRequest_fieldAccessorTable;
+      internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_hooks_services_v2_HookInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_hooks_services_v2_HookInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor;
+    internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_hooks_services_v2_ListHooksResponse_fieldAccessorTable;
+      internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12685,77 +17624,105 @@ public final class HooksServiceProto {
       "storage/models/v2/models.proto\"~\n\007Trigge" +
       "r\022K\n\014trigger_type\030\001 \001(\0162(.aruna.api.hook" +
       "s.services.v2.TriggerTypeR\013triggerType\022\020" +
-      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\316" +
-      "\001\n\014ExternalHook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013cre" +
+      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\247" +
+      "\002\n\014ExternalHook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013cre" +
       "dentials\030\002 \001(\0132(.aruna.api.hooks.service" +
-      "s.v2.CredentialsR\013credentials\022#\n\rjson_te" +
-      "mplate\030\003 \001(\tR\014jsonTemplate\022;\n\006method\030\004 \001" +
-      "(\0162#.aruna.api.hooks.services.v2.MethodR" +
-      "\006method\"2\n\010AddLabel\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\tR\005value\"1\n\007AddHook\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"\366\001\n\014Inter" +
-      "nalHook\022D\n\tadd_label\030\001 \001(\0132%.aruna.api.h" +
-      "ooks.services.v2.AddLabelH\000R\010addLabel\022A\n" +
-      "\010add_hook\030\002 \001(\0132$.aruna.api.hooks.servic" +
-      "es.v2.AddHookH\000R\007addHook\022J\n\014add_relation" +
-      "\030\003 \001(\0132%.aruna.api.storage.models.v2.Rel" +
-      "ationH\000R\013addRelationB\021\n\017internal_action\"" +
-      "\267\001\n\004Hook\022P\n\rexternal_hook\030\001 \001(\0132).aruna." +
-      "api.hooks.services.v2.ExternalHookH\000R\014ex" +
-      "ternalHook\022P\n\rinternal_hook\030\002 \001(\0132).arun" +
-      "a.api.hooks.services.v2.InternalHookH\000R\014" +
-      "internalHookB\013\n\thook_type\"#\n\013Credentials" +
-      "\022\024\n\005token\030\001 \001(\tR\005token\"\303\001\n\021CreateHookReq" +
-      "uest\022>\n\007trigger\030\001 \001(\0132$.aruna.api.hooks." +
-      "services.v2.TriggerR\007trigger\0225\n\004hook\030\002 \001" +
-      "(\0132!.aruna.api.hooks.services.v2.HookR\004h" +
-      "ook\022\030\n\007timeout\030\003 \001(\004R\007timeout\022\035\n\nproject" +
-      "_id\030\004 \001(\tR\tprojectId\"-\n\022CreateHookRespon" +
-      "se\022\027\n\007hook_id\030\001 \001(\tR\006hookId\",\n\021DeleteHoo" +
-      "kRequest\022\027\n\007hook_id\030\001 \001(\tR\006hookId\"\024\n\022Del" +
-      "eteHookResponse\"\302\002\n\023HookCallbackRequest\022" +
-      "\030\n\007success\030\001 \001(\010R\007success\022K\n\016add_key_val" +
-      "ues\030\002 \003(\0132%.aruna.api.storage.models.v2." +
-      "KeyValueR\014addKeyValues\022Q\n\021remove_key_val" +
-      "ues\030\003 \003(\0132%.aruna.api.storage.models.v2." +
-      "KeyValueR\017removeKeyValues\022\026\n\006secret\030\004 \001(" +
-      "\tR\006secret\022\027\n\007hook_id\030\005 \001(\tR\006hookId\022\033\n\tob" +
-      "ject_id\030\006 \001(\tR\010objectId\022#\n\rpubkey_serial" +
-      "\030\007 \001(\005R\014pubkeySerial\"\026\n\024HookCallbackResp" +
-      "onse\"1\n\020ListHooksRequest\022\035\n\nproject_id\030\001" +
-      " \001(\tR\tprojectId\"\264\001\n\010HookInfo\022\027\n\007hook_id\030" +
-      "\001 \001(\tR\006hookId\0225\n\004hook\030\002 \001(\0132!.aruna.api." +
-      "hooks.services.v2.HookR\004hook\022>\n\007trigger\030" +
-      "\003 \001(\0132$.aruna.api.hooks.services.v2.Trig" +
-      "gerR\007trigger\022\030\n\007timeout\030\004 \001(\004R\007timeout\"P" +
-      "\n\021ListHooksResponse\022;\n\005infos\030\001 \003(\0132%.aru" +
-      "na.api.hooks.services.v2.HookInfoR\005infos" +
-      "*i\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIF" +
-      "IED\020\000\022\033\n\027TRIGGER_TYPE_HOOK_ADDED\020\001\022\037\n\033TR" +
-      "IGGER_TYPE_OBJECT_CREATED\020\002*A\n\006Method\022\026\n" +
-      "\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_PUT\020\001\022\017\n" +
-      "\013METHOD_POST\020\0022\305\004\n\014HooksService\022\202\001\n\nCrea" +
-      "teHook\022..aruna.api.hooks.services.v2.Cre" +
-      "ateHookRequest\032/.aruna.api.hooks.service" +
-      "s.v2.CreateHookResponse\"\023\202\323\344\223\002\r\"\010/v2/hoo" +
-      "k:\001*\022\222\001\n\tListHooks\022-.aruna.api.hooks.ser" +
-      "vices.v2.ListHooksRequest\032..aruna.api.ho" +
-      "oks.services.v2.ListHooksResponse\"&\202\323\344\223\002" +
-      " \022\036/v2/hooks/project/{project_id}\022\211\001\n\nDe" +
-      "leteHook\022..aruna.api.hooks.services.v2.D" +
-      "eleteHookRequest\032/.aruna.api.hooks.servi" +
-      "ces.v2.DeleteHookResponse\"\032\202\323\344\223\002\024*\022/v2/h" +
-      "ook/{hook_id}\022\216\001\n\014HookCallback\0220.aruna.a" +
-      "pi.hooks.services.v2.HookCallbackRequest" +
-      "\0321.aruna.api.hooks.services.v2.HookCallb" +
-      "ackResponse\"\031\202\323\344\223\002\023*\021/v2/hook/callbackB\203" +
-      "\002\n\037com.aruna.api.hooks.services.v2B\021Hook" +
-      "sServiceProtoP\000Z<github.com/ArunaStorage" +
-      "/go-api/aruna/api/storage/services/v2\242\002\004" +
-      "AAHS\252\002\033Aruna.Api.Hooks.Services.V2\312\002\033Aru" +
-      "na\\Api\\Hooks\\Services\\V2\342\002\'Aruna\\Api\\Hoo" +
-      "ks\\Services\\V2\\GPBMetadata\352\002\037Aruna::Api:" +
-      ":Hooks::Services::V2b\006proto3"
+      "s.v2.CredentialsR\013credentials\022,\n\017custom_" +
+      "template\030\003 \001(\tH\000R\016customTemplate\210\001\001\022(\n\rr" +
+      "esult_object\030\004 \001(\tH\001R\014resultObject\210\001\001\022;\n" +
+      "\006method\030\005 \001(\0162#.aruna.api.hooks.services" +
+      ".v2.MethodR\006methodB\022\n\020_custom_templateB\020" +
+      "\n\016_result_object\"2\n\010AddLabel\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"1\n\007AddHook\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"" +
+      "\366\001\n\014InternalHook\022D\n\tadd_label\030\001 \001(\0132%.ar" +
+      "una.api.hooks.services.v2.AddLabelH\000R\010ad" +
+      "dLabel\022A\n\010add_hook\030\002 \001(\0132$.aruna.api.hoo" +
+      "ks.services.v2.AddHookH\000R\007addHook\022J\n\014add" +
+      "_relation\030\003 \001(\0132%.aruna.api.storage.mode" +
+      "ls.v2.RelationH\000R\013addRelationB\021\n\017interna" +
+      "l_action\"\267\001\n\004Hook\022P\n\rexternal_hook\030\001 \001(\013" +
+      "2).aruna.api.hooks.services.v2.ExternalH" +
+      "ookH\000R\014externalHook\022P\n\rinternal_hook\030\002 \001" +
+      "(\0132).aruna.api.hooks.services.v2.Interna" +
+      "lHookH\000R\014internalHookB\013\n\thook_type\"#\n\013Cr" +
+      "edentials\022\024\n\005token\030\001 \001(\tR\005token\"\373\001\n\021Crea" +
+      "teHookRequest\022\022\n\004name\030\001 \001(\tR\004name\022>\n\007tri" +
+      "gger\030\002 \001(\0132$.aruna.api.hooks.services.v2" +
+      ".TriggerR\007trigger\0225\n\004hook\030\003 \001(\0132!.aruna." +
+      "api.hooks.services.v2.HookR\004hook\022\030\n\007time" +
+      "out\030\004 \001(\004R\007timeout\022\037\n\013project_ids\030\005 \003(\tR" +
+      "\nprojectIds\022 \n\013description\030\006 \001(\tR\013descri" +
+      "ption\"-\n\022CreateHookResponse\022\027\n\007hook_id\030\001" +
+      " \001(\tR\006hookId\",\n\021DeleteHookRequest\022\027\n\007hoo" +
+      "k_id\030\001 \001(\tR\006hookId\"\024\n\022DeleteHookResponse" +
+      "\"\223\002\n\023HookCallbackRequest\022C\n\010finished\030\001 \001" +
+      "(\0132%.aruna.api.hooks.services.v2.Finishe" +
+      "dH\000R\010finished\022:\n\005error\030\002 \001(\0132\".aruna.api" +
+      ".hooks.services.v2.ErrorH\000R\005error\022\026\n\006sec" +
+      "ret\030\003 \001(\tR\006secret\022\027\n\007hook_id\030\004 \001(\tR\006hook" +
+      "Id\022\033\n\tobject_id\030\005 \001(\tR\010objectId\022#\n\rpubke" +
+      "y_serial\030\006 \001(\005R\014pubkeySerialB\010\n\006status\"\252" +
+      "\001\n\010Finished\022K\n\016add_key_values\030\001 \003(\0132%.ar" +
+      "una.api.storage.models.v2.KeyValueR\014addK" +
+      "eyValues\022Q\n\021remove_key_values\030\002 \003(\0132%.ar" +
+      "una.api.storage.models.v2.KeyValueR\017remo" +
+      "veKeyValues\"\035\n\005Error\022\024\n\005error\030\001 \001(\tR\005err" +
+      "or\"\026\n\024HookCallbackResponse\"8\n\027ListProjec" +
+      "tHooksRequest\022\035\n\nproject_id\030\001 \001(\tR\tproje" +
+      "ctId\"0\n\025ListOwnedHooksRequest\022\027\n\007user_id" +
+      "\030\001 \001(\tR\006userId\"\213\002\n\010HookInfo\022\027\n\007hook_id\030\001" +
+      " \001(\tR\006hookId\022\037\n\013project_ids\030\002 \003(\tR\nproje" +
+      "ctIds\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description" +
+      "\030\004 \001(\tR\013description\0225\n\004hook\030\005 \001(\0132!.arun" +
+      "a.api.hooks.services.v2.HookR\004hook\022>\n\007tr" +
+      "igger\030\006 \001(\0132$.aruna.api.hooks.services.v" +
+      "2.TriggerR\007trigger\022\030\n\007timeout\030\007 \001(\004R\007tim" +
+      "eout\"W\n\030ListProjectHooksResponse\022;\n\005info" +
+      "s\030\001 \003(\0132%.aruna.api.hooks.services.v2.Ho" +
+      "okInfoR\005infos\"U\n\026ListOwnedHooksResponse\022" +
+      ";\n\005infos\030\001 \003(\0132%.aruna.api.hooks.service" +
+      "s.v2.HookInfoR\005infos\"T\n\030AddProjectsToHoo" +
+      "kRequest\022\027\n\007hook_id\030\001 \001(\tR\006hookId\022\037\n\013pro" +
+      "ject_ids\030\002 \003(\tR\nprojectIds\"\033\n\031AddProject" +
+      "sToHookResponse*\322\001\n\013TriggerType\022\034\n\030TRIGG" +
+      "ER_TYPE_UNSPECIFIED\020\000\022\033\n\027TRIGGER_TYPE_HO" +
+      "OK_ADDED\020\001\022\037\n\033TRIGGER_TYPE_OBJECT_CREATE" +
+      "D\020\002\022\034\n\030TRIGGER_TYPE_LABEL_ADDED\020\003\022#\n\037TRI" +
+      "GGER_TYPE_STATIC_LABEL_ADDED\020\004\022$\n TRIGGE" +
+      "R_TYPE_HOOK_STATUS_CHANGED\020\005*A\n\006Method\022\026" +
+      "\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_PUT\020\001\022\017" +
+      "\n\013METHOD_POST\020\0022\252\007\n\014HooksService\022\202\001\n\nCre" +
+      "ateHook\022..aruna.api.hooks.services.v2.Cr" +
+      "eateHookRequest\032/.aruna.api.hooks.servic" +
+      "es.v2.CreateHookResponse\"\023\202\323\344\223\002\r\"\010/v2/ho" +
+      "ok:\001*\022\256\001\n\021AddProjectsToHook\0225.aruna.api." +
+      "hooks.services.v2.AddProjectsToHookReque" +
+      "st\0326.aruna.api.hooks.services.v2.AddProj" +
+      "ectsToHookResponse\"*\202\323\344\223\002$\"\037/v2/hook/{ho" +
+      "ok_id}/{project_id}:\001*\022\247\001\n\020ListProjectHo" +
+      "oks\0224.aruna.api.hooks.services.v2.ListPr" +
+      "ojectHooksRequest\0325.aruna.api.hooks.serv" +
+      "ices.v2.ListProjectHooksResponse\"&\202\323\344\223\002 " +
+      "\022\036/v2/hooks/project/{project_id}\022\234\001\n\016Lis" +
+      "tOwnedHooks\0222.aruna.api.hooks.services.v" +
+      "2.ListOwnedHooksRequest\0323.aruna.api.hook" +
+      "s.services.v2.ListOwnedHooksResponse\"!\202\323" +
+      "\344\223\002\033\022\031/v2/hooks/owner/{user_id}\022\211\001\n\nDele" +
+      "teHook\022..aruna.api.hooks.services.v2.Del" +
+      "eteHookRequest\032/.aruna.api.hooks.service" +
+      "s.v2.DeleteHookResponse\"\032\202\323\344\223\002\024*\022/v2/hoo" +
+      "k/{hook_id}\022\216\001\n\014HookCallback\0220.aruna.api" +
+      ".hooks.services.v2.HookCallbackRequest\0321" +
+      ".aruna.api.hooks.services.v2.HookCallbac" +
+      "kResponse\"\031\202\323\344\223\002\023*\021/v2/hook/callbackB\203\002\n" +
+      "\037com.aruna.api.hooks.services.v2B\021HooksS" +
+      "erviceProtoP\000Z<github.com/ArunaStorage/g" +
+      "o-api/aruna/api/storage/services/v2\242\002\004AA" +
+      "HS\252\002\033Aruna.Api.Hooks.Services.V2\312\002\033Aruna" +
+      "\\Api\\Hooks\\Services\\V2\342\002\'Aruna\\Api\\Hooks" +
+      "\\Services\\V2\\GPBMetadata\352\002\037Aruna::Api::H" +
+      "ooks::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12774,7 +17741,7 @@ public final class HooksServiceProto {
     internal_static_aruna_api_hooks_services_v2_ExternalHook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_ExternalHook_descriptor,
-        new java.lang.String[] { "Url", "Credentials", "JsonTemplate", "Method", });
+        new java.lang.String[] { "Url", "Credentials", "CustomTemplate", "ResultObject", "Method", "CustomTemplate", "ResultObject", });
     internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_aruna_api_hooks_services_v2_AddLabel_fieldAccessorTable = new
@@ -12810,7 +17777,7 @@ public final class HooksServiceProto {
     internal_static_aruna_api_hooks_services_v2_CreateHookRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_CreateHookRequest_descriptor,
-        new java.lang.String[] { "Trigger", "Hook", "Timeout", "ProjectId", });
+        new java.lang.String[] { "Name", "Trigger", "Hook", "Timeout", "ProjectIds", "Description", });
     internal_static_aruna_api_hooks_services_v2_CreateHookResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_hooks_services_v2_CreateHookResponse_fieldAccessorTable = new
@@ -12834,31 +17801,67 @@ public final class HooksServiceProto {
     internal_static_aruna_api_hooks_services_v2_HookCallbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_HookCallbackRequest_descriptor,
-        new java.lang.String[] { "Success", "AddKeyValues", "RemoveKeyValues", "Secret", "HookId", "ObjectId", "PubkeySerial", });
-    internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_descriptor =
+        new java.lang.String[] { "Finished", "Error", "Secret", "HookId", "ObjectId", "PubkeySerial", "Status", });
+    internal_static_aruna_api_hooks_services_v2_Finished_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_aruna_api_hooks_services_v2_Finished_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_Finished_descriptor,
+        new java.lang.String[] { "AddKeyValues", "RemoveKeyValues", });
+    internal_static_aruna_api_hooks_services_v2_Error_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_aruna_api_hooks_services_v2_Error_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_Error_descriptor,
+        new java.lang.String[] { "Error", });
+    internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_HookCallbackResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_aruna_api_hooks_services_v2_ListHooksRequest_fieldAccessorTable = new
+    internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_hooks_services_v2_ListHooksRequest_descriptor,
+        internal_static_aruna_api_hooks_services_v2_ListProjectHooksRequest_descriptor,
         new java.lang.String[] { "ProjectId", });
+    internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_ListOwnedHooksRequest_descriptor,
+        new java.lang.String[] { "UserId", });
     internal_static_aruna_api_hooks_services_v2_HookInfo_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_hooks_services_v2_HookInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_HookInfo_descriptor,
-        new java.lang.String[] { "HookId", "Hook", "Trigger", "Timeout", });
-    internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_aruna_api_hooks_services_v2_ListHooksResponse_fieldAccessorTable = new
+        new java.lang.String[] { "HookId", "ProjectIds", "Name", "Description", "Hook", "Trigger", "Timeout", });
+    internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_hooks_services_v2_ListHooksResponse_descriptor,
+        internal_static_aruna_api_hooks_services_v2_ListProjectHooksResponse_descriptor,
         new java.lang.String[] { "Infos", });
+    internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_ListOwnedHooksResponse_descriptor,
+        new java.lang.String[] { "Infos", });
+    internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_AddProjectsToHookRequest_descriptor,
+        new java.lang.String[] { "HookId", "ProjectIds", });
+    internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_hooks_services_v2_AddProjectsToHookResponse_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
