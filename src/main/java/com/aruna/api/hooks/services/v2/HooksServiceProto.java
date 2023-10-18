@@ -1110,39 +1110,18 @@ public final class HooksServiceProto {
 
     /**
      * <pre>
-     * Optional Project/Collection/Dataset where hooks can upload results.
+     * TODO: Optional request headers
      * </pre>
      *
-     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-     * @return Whether the resultObject field is set.
-     */
-    boolean hasResultObject();
-    /**
-     * <pre>
-     * Optional Project/Collection/Dataset where hooks can upload results.
-     * </pre>
-     *
-     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-     * @return The resultObject.
-     */
-    java.lang.String getResultObject();
-    /**
-     * <pre>
-     * Optional Project/Collection/Dataset where hooks can upload results.
-     * </pre>
-     *
-     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-     * @return The bytes for resultObject.
-     */
-    com.google.protobuf.ByteString
-        getResultObjectBytes();
-
-    /**
      * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The enum numeric value on the wire for method.
      */
     int getMethodValue();
     /**
+     * <pre>
+     * TODO: Optional request headers
+     * </pre>
+     *
      * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The method.
      */
@@ -1163,7 +1142,6 @@ public final class HooksServiceProto {
     private ExternalHook() {
       url_ = "";
       customTemplate_ = "";
-      resultObject_ = "";
       method_ = 0;
     }
 
@@ -1312,68 +1290,13 @@ public final class HooksServiceProto {
       }
     }
 
-    public static final int RESULT_OBJECT_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object resultObject_ = "";
-    /**
-     * <pre>
-     * Optional Project/Collection/Dataset where hooks can upload results.
-     * </pre>
-     *
-     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-     * @return Whether the resultObject field is set.
-     */
-    @java.lang.Override
-    public boolean hasResultObject() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * Optional Project/Collection/Dataset where hooks can upload results.
-     * </pre>
-     *
-     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-     * @return The resultObject.
-     */
-    @java.lang.Override
-    public java.lang.String getResultObject() {
-      java.lang.Object ref = resultObject_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        resultObject_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Optional Project/Collection/Dataset where hooks can upload results.
-     * </pre>
-     *
-     * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-     * @return The bytes for resultObject.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getResultObjectBytes() {
-      java.lang.Object ref = resultObject_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        resultObject_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int METHOD_FIELD_NUMBER = 5;
     private int method_ = 0;
     /**
+     * <pre>
+     * TODO: Optional request headers
+     * </pre>
+     *
      * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The enum numeric value on the wire for method.
      */
@@ -1381,6 +1304,10 @@ public final class HooksServiceProto {
       return method_;
     }
     /**
+     * <pre>
+     * TODO: Optional request headers
+     * </pre>
+     *
      * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
      * @return The method.
      */
@@ -1412,9 +1339,6 @@ public final class HooksServiceProto {
       if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customTemplate_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, resultObject_);
-      }
       if (method_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Method.METHOD_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, method_);
       }
@@ -1436,9 +1360,6 @@ public final class HooksServiceProto {
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customTemplate_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, resultObject_);
       }
       if (method_ != com.aruna.api.hooks.services.v2.HooksServiceProto.Method.METHOD_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -1471,11 +1392,6 @@ public final class HooksServiceProto {
         if (!getCustomTemplate()
             .equals(other.getCustomTemplate())) return false;
       }
-      if (hasResultObject() != other.hasResultObject()) return false;
-      if (hasResultObject()) {
-        if (!getResultObject()
-            .equals(other.getResultObject())) return false;
-      }
       if (method_ != other.method_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1497,10 +1413,6 @@ public final class HooksServiceProto {
       if (hasCustomTemplate()) {
         hash = (37 * hash) + CUSTOM_TEMPLATE_FIELD_NUMBER;
         hash = (53 * hash) + getCustomTemplate().hashCode();
-      }
-      if (hasResultObject()) {
-        hash = (37 * hash) + RESULT_OBJECT_FIELD_NUMBER;
-        hash = (53 * hash) + getResultObject().hashCode();
       }
       hash = (37 * hash) + METHOD_FIELD_NUMBER;
       hash = (53 * hash) + method_;
@@ -1642,7 +1554,6 @@ public final class HooksServiceProto {
           credentialsBuilder_ = null;
         }
         customTemplate_ = "";
-        resultObject_ = "";
         method_ = 0;
         return this;
       }
@@ -1691,10 +1602,6 @@ public final class HooksServiceProto {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.resultObject_ = resultObject_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.method_ = method_;
         }
         result.bitField0_ |= to_bitField0_;
@@ -1723,11 +1630,6 @@ public final class HooksServiceProto {
         if (other.hasCustomTemplate()) {
           customTemplate_ = other.customTemplate_;
           bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.hasResultObject()) {
-          resultObject_ = other.resultObject_;
-          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.method_ != 0) {
@@ -1776,14 +1678,9 @@ public final class HooksServiceProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                resultObject_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
               case 40: {
                 method_ = input.readEnum();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 40
               default: {
@@ -2097,111 +1994,12 @@ public final class HooksServiceProto {
         return this;
       }
 
-      private java.lang.Object resultObject_ = "";
-      /**
-       * <pre>
-       * Optional Project/Collection/Dataset where hooks can upload results.
-       * </pre>
-       *
-       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-       * @return Whether the resultObject field is set.
-       */
-      public boolean hasResultObject() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <pre>
-       * Optional Project/Collection/Dataset where hooks can upload results.
-       * </pre>
-       *
-       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-       * @return The resultObject.
-       */
-      public java.lang.String getResultObject() {
-        java.lang.Object ref = resultObject_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          resultObject_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional Project/Collection/Dataset where hooks can upload results.
-       * </pre>
-       *
-       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-       * @return The bytes for resultObject.
-       */
-      public com.google.protobuf.ByteString
-          getResultObjectBytes() {
-        java.lang.Object ref = resultObject_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          resultObject_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional Project/Collection/Dataset where hooks can upload results.
-       * </pre>
-       *
-       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-       * @param value The resultObject to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResultObject(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        resultObject_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional Project/Collection/Dataset where hooks can upload results.
-       * </pre>
-       *
-       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResultObject() {
-        resultObject_ = getDefaultInstance().getResultObject();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional Project/Collection/Dataset where hooks can upload results.
-       * </pre>
-       *
-       * <code>optional string result_object = 4 [json_name = "resultObject"];</code>
-       * @param value The bytes for resultObject to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResultObjectBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        resultObject_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-
       private int method_ = 0;
       /**
+       * <pre>
+       * TODO: Optional request headers
+       * </pre>
+       *
        * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @return The enum numeric value on the wire for method.
        */
@@ -2209,17 +2007,25 @@ public final class HooksServiceProto {
         return method_;
       }
       /**
+       * <pre>
+       * TODO: Optional request headers
+       * </pre>
+       *
        * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @param value The enum numeric value on the wire for method to set.
        * @return This builder for chaining.
        */
       public Builder setMethodValue(int value) {
         method_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * TODO: Optional request headers
+       * </pre>
+       *
        * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @return The method.
        */
@@ -2229,6 +2035,10 @@ public final class HooksServiceProto {
         return result == null ? com.aruna.api.hooks.services.v2.HooksServiceProto.Method.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * TODO: Optional request headers
+       * </pre>
+       *
        * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @param value The method to set.
        * @return This builder for chaining.
@@ -2237,17 +2047,21 @@ public final class HooksServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         method_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
+       * <pre>
+       * TODO: Optional request headers
+       * </pre>
+       *
        * <code>.aruna.api.hooks.services.v2.Method method = 5 [json_name = "method"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMethod() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         method_ = 0;
         onChanged();
         return this;
@@ -12890,11 +12704,19 @@ public final class HooksServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ADMIN only
+     * </pre>
+     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return The userId.
      */
     java.lang.String getUserId();
     /**
+     * <pre>
+     * ADMIN only
+     * </pre>
+     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return The bytes for userId.
      */
@@ -12941,6 +12763,10 @@ public final class HooksServiceProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object userId_ = "";
     /**
+     * <pre>
+     * ADMIN only
+     * </pre>
+     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return The userId.
      */
@@ -12958,6 +12784,10 @@ public final class HooksServiceProto {
       }
     }
     /**
+     * <pre>
+     * ADMIN only
+     * </pre>
+     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return The bytes for userId.
      */
@@ -13272,6 +13102,10 @@ public final class HooksServiceProto {
 
       private java.lang.Object userId_ = "";
       /**
+       * <pre>
+       * ADMIN only
+       * </pre>
+       *
        * <code>string user_id = 1 [json_name = "userId"];</code>
        * @return The userId.
        */
@@ -13288,6 +13122,10 @@ public final class HooksServiceProto {
         }
       }
       /**
+       * <pre>
+       * ADMIN only
+       * </pre>
+       *
        * <code>string user_id = 1 [json_name = "userId"];</code>
        * @return The bytes for userId.
        */
@@ -13305,6 +13143,10 @@ public final class HooksServiceProto {
         }
       }
       /**
+       * <pre>
+       * ADMIN only
+       * </pre>
+       *
        * <code>string user_id = 1 [json_name = "userId"];</code>
        * @param value The userId to set.
        * @return This builder for chaining.
@@ -13318,6 +13160,10 @@ public final class HooksServiceProto {
         return this;
       }
       /**
+       * <pre>
+       * ADMIN only
+       * </pre>
+       *
        * <code>string user_id = 1 [json_name = "userId"];</code>
        * @return This builder for chaining.
        */
@@ -13328,6 +13174,10 @@ public final class HooksServiceProto {
         return this;
       }
       /**
+       * <pre>
+       * ADMIN only
+       * </pre>
+       *
        * <code>string user_id = 1 [json_name = "userId"];</code>
        * @param value The bytes for userId to set.
        * @return This builder for chaining.
@@ -17624,105 +17474,103 @@ public final class HooksServiceProto {
       "storage/models/v2/models.proto\"~\n\007Trigge" +
       "r\022K\n\014trigger_type\030\001 \001(\0162(.aruna.api.hook" +
       "s.services.v2.TriggerTypeR\013triggerType\022\020" +
-      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\247" +
-      "\002\n\014ExternalHook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013cre" +
+      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\353" +
+      "\001\n\014ExternalHook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013cre" +
       "dentials\030\002 \001(\0132(.aruna.api.hooks.service" +
       "s.v2.CredentialsR\013credentials\022,\n\017custom_" +
-      "template\030\003 \001(\tH\000R\016customTemplate\210\001\001\022(\n\rr" +
-      "esult_object\030\004 \001(\tH\001R\014resultObject\210\001\001\022;\n" +
-      "\006method\030\005 \001(\0162#.aruna.api.hooks.services" +
-      ".v2.MethodR\006methodB\022\n\020_custom_templateB\020" +
-      "\n\016_result_object\"2\n\010AddLabel\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"1\n\007AddHook\022" +
-      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"" +
-      "\366\001\n\014InternalHook\022D\n\tadd_label\030\001 \001(\0132%.ar" +
-      "una.api.hooks.services.v2.AddLabelH\000R\010ad" +
-      "dLabel\022A\n\010add_hook\030\002 \001(\0132$.aruna.api.hoo" +
-      "ks.services.v2.AddHookH\000R\007addHook\022J\n\014add" +
-      "_relation\030\003 \001(\0132%.aruna.api.storage.mode" +
-      "ls.v2.RelationH\000R\013addRelationB\021\n\017interna" +
-      "l_action\"\267\001\n\004Hook\022P\n\rexternal_hook\030\001 \001(\013" +
-      "2).aruna.api.hooks.services.v2.ExternalH" +
-      "ookH\000R\014externalHook\022P\n\rinternal_hook\030\002 \001" +
-      "(\0132).aruna.api.hooks.services.v2.Interna" +
-      "lHookH\000R\014internalHookB\013\n\thook_type\"#\n\013Cr" +
-      "edentials\022\024\n\005token\030\001 \001(\tR\005token\"\373\001\n\021Crea" +
-      "teHookRequest\022\022\n\004name\030\001 \001(\tR\004name\022>\n\007tri" +
-      "gger\030\002 \001(\0132$.aruna.api.hooks.services.v2" +
-      ".TriggerR\007trigger\0225\n\004hook\030\003 \001(\0132!.aruna." +
-      "api.hooks.services.v2.HookR\004hook\022\030\n\007time" +
-      "out\030\004 \001(\004R\007timeout\022\037\n\013project_ids\030\005 \003(\tR" +
-      "\nprojectIds\022 \n\013description\030\006 \001(\tR\013descri" +
-      "ption\"-\n\022CreateHookResponse\022\027\n\007hook_id\030\001" +
-      " \001(\tR\006hookId\",\n\021DeleteHookRequest\022\027\n\007hoo" +
-      "k_id\030\001 \001(\tR\006hookId\"\024\n\022DeleteHookResponse" +
-      "\"\223\002\n\023HookCallbackRequest\022C\n\010finished\030\001 \001" +
-      "(\0132%.aruna.api.hooks.services.v2.Finishe" +
-      "dH\000R\010finished\022:\n\005error\030\002 \001(\0132\".aruna.api" +
-      ".hooks.services.v2.ErrorH\000R\005error\022\026\n\006sec" +
-      "ret\030\003 \001(\tR\006secret\022\027\n\007hook_id\030\004 \001(\tR\006hook" +
-      "Id\022\033\n\tobject_id\030\005 \001(\tR\010objectId\022#\n\rpubke" +
-      "y_serial\030\006 \001(\005R\014pubkeySerialB\010\n\006status\"\252" +
-      "\001\n\010Finished\022K\n\016add_key_values\030\001 \003(\0132%.ar" +
-      "una.api.storage.models.v2.KeyValueR\014addK" +
-      "eyValues\022Q\n\021remove_key_values\030\002 \003(\0132%.ar" +
-      "una.api.storage.models.v2.KeyValueR\017remo" +
-      "veKeyValues\"\035\n\005Error\022\024\n\005error\030\001 \001(\tR\005err" +
-      "or\"\026\n\024HookCallbackResponse\"8\n\027ListProjec" +
-      "tHooksRequest\022\035\n\nproject_id\030\001 \001(\tR\tproje" +
-      "ctId\"0\n\025ListOwnedHooksRequest\022\027\n\007user_id" +
-      "\030\001 \001(\tR\006userId\"\213\002\n\010HookInfo\022\027\n\007hook_id\030\001" +
-      " \001(\tR\006hookId\022\037\n\013project_ids\030\002 \003(\tR\nproje" +
-      "ctIds\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description" +
-      "\030\004 \001(\tR\013description\0225\n\004hook\030\005 \001(\0132!.arun" +
-      "a.api.hooks.services.v2.HookR\004hook\022>\n\007tr" +
-      "igger\030\006 \001(\0132$.aruna.api.hooks.services.v" +
-      "2.TriggerR\007trigger\022\030\n\007timeout\030\007 \001(\004R\007tim" +
-      "eout\"W\n\030ListProjectHooksResponse\022;\n\005info" +
-      "s\030\001 \003(\0132%.aruna.api.hooks.services.v2.Ho" +
-      "okInfoR\005infos\"U\n\026ListOwnedHooksResponse\022" +
-      ";\n\005infos\030\001 \003(\0132%.aruna.api.hooks.service" +
-      "s.v2.HookInfoR\005infos\"T\n\030AddProjectsToHoo" +
-      "kRequest\022\027\n\007hook_id\030\001 \001(\tR\006hookId\022\037\n\013pro" +
-      "ject_ids\030\002 \003(\tR\nprojectIds\"\033\n\031AddProject" +
-      "sToHookResponse*\322\001\n\013TriggerType\022\034\n\030TRIGG" +
-      "ER_TYPE_UNSPECIFIED\020\000\022\033\n\027TRIGGER_TYPE_HO" +
-      "OK_ADDED\020\001\022\037\n\033TRIGGER_TYPE_OBJECT_CREATE" +
-      "D\020\002\022\034\n\030TRIGGER_TYPE_LABEL_ADDED\020\003\022#\n\037TRI" +
-      "GGER_TYPE_STATIC_LABEL_ADDED\020\004\022$\n TRIGGE" +
-      "R_TYPE_HOOK_STATUS_CHANGED\020\005*A\n\006Method\022\026" +
-      "\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_PUT\020\001\022\017" +
-      "\n\013METHOD_POST\020\0022\252\007\n\014HooksService\022\202\001\n\nCre" +
-      "ateHook\022..aruna.api.hooks.services.v2.Cr" +
-      "eateHookRequest\032/.aruna.api.hooks.servic" +
-      "es.v2.CreateHookResponse\"\023\202\323\344\223\002\r\"\010/v2/ho" +
-      "ok:\001*\022\256\001\n\021AddProjectsToHook\0225.aruna.api." +
-      "hooks.services.v2.AddProjectsToHookReque" +
-      "st\0326.aruna.api.hooks.services.v2.AddProj" +
-      "ectsToHookResponse\"*\202\323\344\223\002$\"\037/v2/hook/{ho" +
-      "ok_id}/{project_id}:\001*\022\247\001\n\020ListProjectHo" +
-      "oks\0224.aruna.api.hooks.services.v2.ListPr" +
-      "ojectHooksRequest\0325.aruna.api.hooks.serv" +
-      "ices.v2.ListProjectHooksResponse\"&\202\323\344\223\002 " +
-      "\022\036/v2/hooks/project/{project_id}\022\234\001\n\016Lis" +
-      "tOwnedHooks\0222.aruna.api.hooks.services.v" +
-      "2.ListOwnedHooksRequest\0323.aruna.api.hook" +
-      "s.services.v2.ListOwnedHooksResponse\"!\202\323" +
-      "\344\223\002\033\022\031/v2/hooks/owner/{user_id}\022\211\001\n\nDele" +
-      "teHook\022..aruna.api.hooks.services.v2.Del" +
-      "eteHookRequest\032/.aruna.api.hooks.service" +
-      "s.v2.DeleteHookResponse\"\032\202\323\344\223\002\024*\022/v2/hoo" +
-      "k/{hook_id}\022\216\001\n\014HookCallback\0220.aruna.api" +
-      ".hooks.services.v2.HookCallbackRequest\0321" +
-      ".aruna.api.hooks.services.v2.HookCallbac" +
-      "kResponse\"\031\202\323\344\223\002\023*\021/v2/hook/callbackB\203\002\n" +
-      "\037com.aruna.api.hooks.services.v2B\021HooksS" +
-      "erviceProtoP\000Z<github.com/ArunaStorage/g" +
-      "o-api/aruna/api/storage/services/v2\242\002\004AA" +
-      "HS\252\002\033Aruna.Api.Hooks.Services.V2\312\002\033Aruna" +
-      "\\Api\\Hooks\\Services\\V2\342\002\'Aruna\\Api\\Hooks" +
-      "\\Services\\V2\\GPBMetadata\352\002\037Aruna::Api::H" +
-      "ooks::Services::V2b\006proto3"
+      "template\030\003 \001(\tH\000R\016customTemplate\210\001\001\022;\n\006m" +
+      "ethod\030\005 \001(\0162#.aruna.api.hooks.services.v" +
+      "2.MethodR\006methodB\022\n\020_custom_template\"2\n\010" +
+      "AddLabel\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
+      "\tR\005value\"1\n\007AddHook\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
+      "\005value\030\002 \001(\tR\005value\"\366\001\n\014InternalHook\022D\n\t" +
+      "add_label\030\001 \001(\0132%.aruna.api.hooks.servic" +
+      "es.v2.AddLabelH\000R\010addLabel\022A\n\010add_hook\030\002" +
+      " \001(\0132$.aruna.api.hooks.services.v2.AddHo" +
+      "okH\000R\007addHook\022J\n\014add_relation\030\003 \001(\0132%.ar" +
+      "una.api.storage.models.v2.RelationH\000R\013ad" +
+      "dRelationB\021\n\017internal_action\"\267\001\n\004Hook\022P\n" +
+      "\rexternal_hook\030\001 \001(\0132).aruna.api.hooks.s" +
+      "ervices.v2.ExternalHookH\000R\014externalHook\022" +
+      "P\n\rinternal_hook\030\002 \001(\0132).aruna.api.hooks" +
+      ".services.v2.InternalHookH\000R\014internalHoo" +
+      "kB\013\n\thook_type\"#\n\013Credentials\022\024\n\005token\030\001" +
+      " \001(\tR\005token\"\373\001\n\021CreateHookRequest\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022>\n\007trigger\030\002 \001(\0132$.aruna.a" +
+      "pi.hooks.services.v2.TriggerR\007trigger\0225\n" +
+      "\004hook\030\003 \001(\0132!.aruna.api.hooks.services.v" +
+      "2.HookR\004hook\022\030\n\007timeout\030\004 \001(\004R\007timeout\022\037" +
+      "\n\013project_ids\030\005 \003(\tR\nprojectIds\022 \n\013descr" +
+      "iption\030\006 \001(\tR\013description\"-\n\022CreateHookR" +
+      "esponse\022\027\n\007hook_id\030\001 \001(\tR\006hookId\",\n\021Dele" +
+      "teHookRequest\022\027\n\007hook_id\030\001 \001(\tR\006hookId\"\024" +
+      "\n\022DeleteHookResponse\"\223\002\n\023HookCallbackReq" +
+      "uest\022C\n\010finished\030\001 \001(\0132%.aruna.api.hooks" +
+      ".services.v2.FinishedH\000R\010finished\022:\n\005err" +
+      "or\030\002 \001(\0132\".aruna.api.hooks.services.v2.E" +
+      "rrorH\000R\005error\022\026\n\006secret\030\003 \001(\tR\006secret\022\027\n" +
+      "\007hook_id\030\004 \001(\tR\006hookId\022\033\n\tobject_id\030\005 \001(" +
+      "\tR\010objectId\022#\n\rpubkey_serial\030\006 \001(\005R\014pubk" +
+      "eySerialB\010\n\006status\"\252\001\n\010Finished\022K\n\016add_k" +
+      "ey_values\030\001 \003(\0132%.aruna.api.storage.mode" +
+      "ls.v2.KeyValueR\014addKeyValues\022Q\n\021remove_k" +
+      "ey_values\030\002 \003(\0132%.aruna.api.storage.mode" +
+      "ls.v2.KeyValueR\017removeKeyValues\"\035\n\005Error" +
+      "\022\024\n\005error\030\001 \001(\tR\005error\"\026\n\024HookCallbackRe" +
+      "sponse\"8\n\027ListProjectHooksRequest\022\035\n\npro" +
+      "ject_id\030\001 \001(\tR\tprojectId\"0\n\025ListOwnedHoo" +
+      "ksRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"\213\002\n\010H" +
+      "ookInfo\022\027\n\007hook_id\030\001 \001(\tR\006hookId\022\037\n\013proj" +
+      "ect_ids\030\002 \003(\tR\nprojectIds\022\022\n\004name\030\003 \001(\tR" +
+      "\004name\022 \n\013description\030\004 \001(\tR\013description\022" +
+      "5\n\004hook\030\005 \001(\0132!.aruna.api.hooks.services" +
+      ".v2.HookR\004hook\022>\n\007trigger\030\006 \001(\0132$.aruna." +
+      "api.hooks.services.v2.TriggerR\007trigger\022\030" +
+      "\n\007timeout\030\007 \001(\004R\007timeout\"W\n\030ListProjectH" +
+      "ooksResponse\022;\n\005infos\030\001 \003(\0132%.aruna.api." +
+      "hooks.services.v2.HookInfoR\005infos\"U\n\026Lis" +
+      "tOwnedHooksResponse\022;\n\005infos\030\001 \003(\0132%.aru" +
+      "na.api.hooks.services.v2.HookInfoR\005infos" +
+      "\"T\n\030AddProjectsToHookRequest\022\027\n\007hook_id\030" +
+      "\001 \001(\tR\006hookId\022\037\n\013project_ids\030\002 \003(\tR\nproj" +
+      "ectIds\"\033\n\031AddProjectsToHookResponse*\322\001\n\013" +
+      "TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020" +
+      "\000\022\033\n\027TRIGGER_TYPE_HOOK_ADDED\020\001\022\037\n\033TRIGGE" +
+      "R_TYPE_OBJECT_CREATED\020\002\022\034\n\030TRIGGER_TYPE_" +
+      "LABEL_ADDED\020\003\022#\n\037TRIGGER_TYPE_STATIC_LAB" +
+      "EL_ADDED\020\004\022$\n TRIGGER_TYPE_HOOK_STATUS_C" +
+      "HANGED\020\005*A\n\006Method\022\026\n\022METHOD_UNSPECIFIED" +
+      "\020\000\022\016\n\nMETHOD_PUT\020\001\022\017\n\013METHOD_POST\020\0022\235\007\n\014" +
+      "HooksService\022\202\001\n\nCreateHook\022..aruna.api." +
+      "hooks.services.v2.CreateHookRequest\032/.ar" +
+      "una.api.hooks.services.v2.CreateHookResp" +
+      "onse\"\023\202\323\344\223\002\r\"\010/v2/hook:\001*\022\241\001\n\021AddProject" +
+      "sToHook\0225.aruna.api.hooks.services.v2.Ad" +
+      "dProjectsToHookRequest\0326.aruna.api.hooks" +
+      ".services.v2.AddProjectsToHookResponse\"\035" +
+      "\202\323\344\223\002\027\"\022/v2/hook/{hook_id}:\001*\022\247\001\n\020ListPr" +
+      "ojectHooks\0224.aruna.api.hooks.services.v2" +
+      ".ListProjectHooksRequest\0325.aruna.api.hoo" +
+      "ks.services.v2.ListProjectHooksResponse\"" +
+      "&\202\323\344\223\002 \022\036/v2/hooks/project/{project_id}\022" +
+      "\234\001\n\016ListOwnedHooks\0222.aruna.api.hooks.ser" +
+      "vices.v2.ListOwnedHooksRequest\0323.aruna.a" +
+      "pi.hooks.services.v2.ListOwnedHooksRespo" +
+      "nse\"!\202\323\344\223\002\033\022\031/v2/hooks/owner/{user_id}\022\211" +
+      "\001\n\nDeleteHook\022..aruna.api.hooks.services" +
+      ".v2.DeleteHookRequest\032/.aruna.api.hooks." +
+      "services.v2.DeleteHookResponse\"\032\202\323\344\223\002\024*\022" +
+      "/v2/hook/{hook_id}\022\216\001\n\014HookCallback\0220.ar" +
+      "una.api.hooks.services.v2.HookCallbackRe" +
+      "quest\0321.aruna.api.hooks.services.v2.Hook" +
+      "CallbackResponse\"\031\202\323\344\223\002\023*\021/v2/hook/callb" +
+      "ackB\203\002\n\037com.aruna.api.hooks.services.v2B" +
+      "\021HooksServiceProtoP\000Z<github.com/ArunaSt" +
+      "orage/go-api/aruna/api/storage/services/" +
+      "v2\242\002\004AAHS\252\002\033Aruna.Api.Hooks.Services.V2\312" +
+      "\002\033Aruna\\Api\\Hooks\\Services\\V2\342\002\'Aruna\\Ap" +
+      "i\\Hooks\\Services\\V2\\GPBMetadata\352\002\037Aruna:" +
+      ":Api::Hooks::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17741,7 +17589,7 @@ public final class HooksServiceProto {
     internal_static_aruna_api_hooks_services_v2_ExternalHook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_hooks_services_v2_ExternalHook_descriptor,
-        new java.lang.String[] { "Url", "Credentials", "CustomTemplate", "ResultObject", "Method", "CustomTemplate", "ResultObject", });
+        new java.lang.String[] { "Url", "Credentials", "CustomTemplate", "Method", "CustomTemplate", });
     internal_static_aruna_api_hooks_services_v2_AddLabel_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_aruna_api_hooks_services_v2_AddLabel_fieldAccessorTable = new

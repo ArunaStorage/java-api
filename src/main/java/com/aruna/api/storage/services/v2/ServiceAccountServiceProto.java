@@ -13997,7 +13997,7 @@ public final class ServiceAccountServiceProto {
       "ndpointId\022>\n\007context\030\003 \001(\0132$.aruna.api.s" +
       "torage.models.v2.ContextR\007context\";\n#Get" +
       "DataproxyTokenSvcAccountResponse\022\024\n\005toke" +
-      "n\030\001 \001(\tR\005token2\334\020\n\025ServiceAccountService" +
+      "n\030\001 \001(\tR\005token2\331\020\n\025ServiceAccountService" +
       "\022\257\001\n\024CreateServiceAccount\022:.aruna.api.st" +
       "orage.services.v2.CreateServiceAccountRe" +
       "quest\032;.aruna.api.storage.services.v2.Cr" +
@@ -14045,20 +14045,20 @@ public final class ServiceAccountServiceProto {
       "cAccountRequest\032A.aruna.api.storage.serv" +
       "ices.v2.GetS3CredentialsSvcAccountRespon" +
       "se\";\202\323\344\223\0025\0223/v2/service_account/{svc_acc" +
-      "ount_id}/s3_credentials\022\323\001\n\033GetDataproxy" +
+      "ount_id}/s3_credentials\022\320\001\n\033GetDataproxy" +
       "TokenSvcAccount\022A.aruna.api.storage.serv" +
       "ices.v2.GetDataproxyTokenSvcAccountReque" +
       "st\032B.aruna.api.storage.services.v2.GetDa" +
-      "taproxyTokenSvcAccountResponse\"-\202\323\344\223\002\'\022%" +
-      "/v2/user/{svc_account_id}/proxy_tokenB\226\002" +
-      "\n!com.aruna.api.storage.services.v2B\032Ser" +
-      "viceAccountServiceProtoP\000Z<github.com/Ar" +
-      "unaStorage/go-api/aruna/api/storage/serv" +
-      "ices/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Servi" +
-      "ces.V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002" +
-      ")Aruna\\Api\\Storage\\Services\\V2\\GPBMetada" +
-      "ta\352\002!Aruna::Api::Storage::Services::V2b\006" +
-      "proto3"
+      "taproxyTokenSvcAccountResponse\"*\202\323\344\223\002$\022\"" +
+      "/v2/user/{user_id}/svc_proxy_tokenB\226\002\n!c" +
+      "om.aruna.api.storage.services.v2B\032Servic" +
+      "eAccountServiceProtoP\000Z<github.com/Aruna" +
+      "Storage/go-api/aruna/api/storage/service" +
+      "s/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services" +
+      ".V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Ar" +
+      "una\\Api\\Storage\\Services\\V2\\GPBMetadata\352" +
+      "\002!Aruna::Api::Storage::Services::V2b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

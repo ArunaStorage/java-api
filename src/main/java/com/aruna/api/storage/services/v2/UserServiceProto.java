@@ -153,9 +153,13 @@ public final class UserServiceProto {
      */
     PERSONAL_NOTIFICATION_VARIANT_PERMISSION_REVOKED(3),
     /**
-     * <code>PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT = 4;</code>
+     * <code>PERSONAL_NOTIFICATION_VARIANT_PERMISSION_UPDATED = 4;</code>
      */
-    PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT(4),
+    PERSONAL_NOTIFICATION_VARIANT_PERMISSION_UPDATED(4),
+    /**
+     * <code>PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT = 5;</code>
+     */
+    PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -176,9 +180,13 @@ public final class UserServiceProto {
      */
     public static final int PERSONAL_NOTIFICATION_VARIANT_PERMISSION_REVOKED_VALUE = 3;
     /**
-     * <code>PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT = 4;</code>
+     * <code>PERSONAL_NOTIFICATION_VARIANT_PERMISSION_UPDATED = 4;</code>
      */
-    public static final int PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT_VALUE = 4;
+    public static final int PERSONAL_NOTIFICATION_VARIANT_PERMISSION_UPDATED_VALUE = 4;
+    /**
+     * <code>PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT = 5;</code>
+     */
+    public static final int PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT_VALUE = 5;
 
 
     public final int getNumber() {
@@ -209,7 +217,8 @@ public final class UserServiceProto {
         case 1: return PERSONAL_NOTIFICATION_VARIANT_ACCESS_REQUESTED;
         case 2: return PERSONAL_NOTIFICATION_VARIANT_PERMISSION_GRANTED;
         case 3: return PERSONAL_NOTIFICATION_VARIANT_PERMISSION_REVOKED;
-        case 4: return PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT;
+        case 4: return PERSONAL_NOTIFICATION_VARIANT_PERMISSION_UPDATED;
+        case 5: return PERSONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT;
         default: return null;
       }
     }
@@ -19803,18 +19812,6 @@ public final class UserServiceProto {
   public interface GetPersonalNotificationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetPersonalNotificationsRequest)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return The userId.
-     */
-    java.lang.String getUserId();
-    /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return The bytes for userId.
-     */
-    com.google.protobuf.ByteString
-        getUserIdBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.GetPersonalNotificationsRequest}
@@ -19829,7 +19826,6 @@ public final class UserServiceProto {
       super(builder);
     }
     private GetPersonalNotificationsRequest() {
-      userId_ = "";
     }
 
     @java.lang.Override
@@ -19852,45 +19848,6 @@ public final class UserServiceProto {
               com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.class, com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.Builder.class);
     }
 
-    public static final int USER_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object userId_ = "";
-    /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return The userId.
-     */
-    @java.lang.Override
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string user_id = 1 [json_name = "userId"];</code>
-     * @return The bytes for userId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19905,9 +19862,6 @@ public final class UserServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -19917,9 +19871,6 @@ public final class UserServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19935,8 +19886,6 @@ public final class UserServiceProto {
       }
       com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest other = (com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest) obj;
 
-      if (!getUserId()
-          .equals(other.getUserId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -19948,8 +19897,6 @@ public final class UserServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20080,8 +20027,6 @@ public final class UserServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        userId_ = "";
         return this;
       }
 
@@ -20108,16 +20053,8 @@ public final class UserServiceProto {
       @java.lang.Override
       public com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest buildPartial() {
         com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest result = new com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.userId_ = userId_;
-        }
       }
 
       @java.lang.Override
@@ -20132,11 +20069,6 @@ public final class UserServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest other) {
         if (other == com.aruna.api.storage.services.v2.UserServiceProto.GetPersonalNotificationsRequest.getDefaultInstance()) return this;
-        if (!other.getUserId().isEmpty()) {
-          userId_ = other.userId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -20163,11 +20095,6 @@ public final class UserServiceProto {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                userId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -20181,79 +20108,6 @@ public final class UserServiceProto {
         } finally {
           onChanged();
         } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object userId_ = "";
-      /**
-       * <code>string user_id = 1 [json_name = "userId"];</code>
-       * @return The userId.
-       */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 1 [json_name = "userId"];</code>
-       * @return The bytes for userId.
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 1 [json_name = "userId"];</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        userId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 1 [json_name = "userId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        userId_ = getDefaultInstance().getUserId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 1 [json_name = "userId"];</code>
-       * @param value The bytes for userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        userId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -21075,29 +20929,29 @@ public final class UserServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-     * @return A list containing the notificationId.
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+     * @return A list containing the notificationIds.
      */
     java.util.List<java.lang.String>
-        getNotificationIdList();
+        getNotificationIdsList();
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-     * @return The count of notificationId.
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+     * @return The count of notificationIds.
      */
-    int getNotificationIdCount();
+    int getNotificationIdsCount();
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
      * @param index The index of the element to return.
-     * @return The notificationId at the given index.
+     * @return The notificationIds at the given index.
      */
-    java.lang.String getNotificationId(int index);
+    java.lang.String getNotificationIds(int index);
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the notificationId at the given index.
+     * @return The bytes of the notificationIds at the given index.
      */
     com.google.protobuf.ByteString
-        getNotificationIdBytes(int index);
+        getNotificationIdsBytes(int index);
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.AcknowledgePersonalNotificationsRequest}
@@ -21112,7 +20966,7 @@ public final class UserServiceProto {
       super(builder);
     }
     private AcknowledgePersonalNotificationsRequest() {
-      notificationId_ =
+      notificationIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -21136,41 +20990,41 @@ public final class UserServiceProto {
               com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest.class, com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest.Builder.class);
     }
 
-    public static final int NOTIFICATION_ID_FIELD_NUMBER = 1;
+    public static final int NOTIFICATION_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList notificationId_ =
+    private com.google.protobuf.LazyStringArrayList notificationIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-     * @return A list containing the notificationId.
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+     * @return A list containing the notificationIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getNotificationIdList() {
-      return notificationId_;
+        getNotificationIdsList() {
+      return notificationIds_;
     }
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-     * @return The count of notificationId.
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+     * @return The count of notificationIds.
      */
-    public int getNotificationIdCount() {
-      return notificationId_.size();
+    public int getNotificationIdsCount() {
+      return notificationIds_.size();
     }
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
      * @param index The index of the element to return.
-     * @return The notificationId at the given index.
+     * @return The notificationIds at the given index.
      */
-    public java.lang.String getNotificationId(int index) {
-      return notificationId_.get(index);
+    public java.lang.String getNotificationIds(int index) {
+      return notificationIds_.get(index);
     }
     /**
-     * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+     * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the notificationId at the given index.
+     * @return The bytes of the notificationIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getNotificationIdBytes(int index) {
-      return notificationId_.getByteString(index);
+        getNotificationIdsBytes(int index) {
+      return notificationIds_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -21187,8 +21041,8 @@ public final class UserServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < notificationId_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, notificationId_.getRaw(i));
+      for (int i = 0; i < notificationIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, notificationIds_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -21201,11 +21055,11 @@ public final class UserServiceProto {
       size = 0;
       {
         int dataSize = 0;
-        for (int i = 0; i < notificationId_.size(); i++) {
-          dataSize += computeStringSizeNoTag(notificationId_.getRaw(i));
+        for (int i = 0; i < notificationIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(notificationIds_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getNotificationIdList().size();
+        size += 1 * getNotificationIdsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -21222,8 +21076,8 @@ public final class UserServiceProto {
       }
       com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest other = (com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest) obj;
 
-      if (!getNotificationIdList()
-          .equals(other.getNotificationIdList())) return false;
+      if (!getNotificationIdsList()
+          .equals(other.getNotificationIdsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -21235,9 +21089,9 @@ public final class UserServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getNotificationIdCount() > 0) {
-        hash = (37 * hash) + NOTIFICATION_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getNotificationIdList().hashCode();
+      if (getNotificationIdsCount() > 0) {
+        hash = (37 * hash) + NOTIFICATION_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getNotificationIdsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -21370,7 +21224,7 @@ public final class UserServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        notificationId_ =
+        notificationIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
@@ -21406,8 +21260,8 @@ public final class UserServiceProto {
       private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          notificationId_.makeImmutable();
-          result.notificationId_ = notificationId_;
+          notificationIds_.makeImmutable();
+          result.notificationIds_ = notificationIds_;
         }
       }
 
@@ -21423,13 +21277,13 @@ public final class UserServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest other) {
         if (other == com.aruna.api.storage.services.v2.UserServiceProto.AcknowledgePersonalNotificationsRequest.getDefaultInstance()) return this;
-        if (!other.notificationId_.isEmpty()) {
-          if (notificationId_.isEmpty()) {
-            notificationId_ = other.notificationId_;
+        if (!other.notificationIds_.isEmpty()) {
+          if (notificationIds_.isEmpty()) {
+            notificationIds_ = other.notificationIds_;
             bitField0_ |= 0x00000001;
           } else {
-            ensureNotificationIdIsMutable();
-            notificationId_.addAll(other.notificationId_);
+            ensureNotificationIdsIsMutable();
+            notificationIds_.addAll(other.notificationIds_);
           }
           onChanged();
         }
@@ -21461,8 +21315,8 @@ public final class UserServiceProto {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensureNotificationIdIsMutable();
-                notificationId_.add(s);
+                ensureNotificationIdsIsMutable();
+                notificationIds_.add(s);
                 break;
               } // case 10
               default: {
@@ -21482,112 +21336,112 @@ public final class UserServiceProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringArrayList notificationId_ =
+      private com.google.protobuf.LazyStringArrayList notificationIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureNotificationIdIsMutable() {
-        if (!notificationId_.isModifiable()) {
-          notificationId_ = new com.google.protobuf.LazyStringArrayList(notificationId_);
+      private void ensureNotificationIdsIsMutable() {
+        if (!notificationIds_.isModifiable()) {
+          notificationIds_ = new com.google.protobuf.LazyStringArrayList(notificationIds_);
         }
         bitField0_ |= 0x00000001;
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-       * @return A list containing the notificationId.
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+       * @return A list containing the notificationIds.
        */
       public com.google.protobuf.ProtocolStringList
-          getNotificationIdList() {
-        notificationId_.makeImmutable();
-        return notificationId_;
+          getNotificationIdsList() {
+        notificationIds_.makeImmutable();
+        return notificationIds_;
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-       * @return The count of notificationId.
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+       * @return The count of notificationIds.
        */
-      public int getNotificationIdCount() {
-        return notificationId_.size();
+      public int getNotificationIdsCount() {
+        return notificationIds_.size();
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
        * @param index The index of the element to return.
-       * @return The notificationId at the given index.
+       * @return The notificationIds at the given index.
        */
-      public java.lang.String getNotificationId(int index) {
-        return notificationId_.get(index);
+      public java.lang.String getNotificationIds(int index) {
+        return notificationIds_.get(index);
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
        * @param index The index of the value to return.
-       * @return The bytes of the notificationId at the given index.
+       * @return The bytes of the notificationIds at the given index.
        */
       public com.google.protobuf.ByteString
-          getNotificationIdBytes(int index) {
-        return notificationId_.getByteString(index);
+          getNotificationIdsBytes(int index) {
+        return notificationIds_.getByteString(index);
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
        * @param index The index to set the value at.
-       * @param value The notificationId to set.
+       * @param value The notificationIds to set.
        * @return This builder for chaining.
        */
-      public Builder setNotificationId(
+      public Builder setNotificationIds(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureNotificationIdIsMutable();
-        notificationId_.set(index, value);
+        ensureNotificationIdsIsMutable();
+        notificationIds_.set(index, value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-       * @param value The notificationId to add.
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+       * @param value The notificationIds to add.
        * @return This builder for chaining.
        */
-      public Builder addNotificationId(
+      public Builder addNotificationIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureNotificationIdIsMutable();
-        notificationId_.add(value);
+        ensureNotificationIdsIsMutable();
+        notificationIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-       * @param values The notificationId to add.
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+       * @param values The notificationIds to add.
        * @return This builder for chaining.
        */
-      public Builder addAllNotificationId(
+      public Builder addAllNotificationIds(
           java.lang.Iterable<java.lang.String> values) {
-        ensureNotificationIdIsMutable();
+        ensureNotificationIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, notificationId_);
+            values, notificationIds_);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearNotificationId() {
-        notificationId_ =
+      public Builder clearNotificationIds() {
+        notificationIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string notification_id = 1 [json_name = "notificationId"];</code>
-       * @param value The bytes of the notificationId to add.
+       * <code>repeated string notification_ids = 1 [json_name = "notificationIds"];</code>
+       * @param value The bytes of the notificationIds to add.
        * @return This builder for chaining.
        */
-      public Builder addNotificationIdBytes(
+      public Builder addNotificationIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureNotificationIdIsMutable();
-        notificationId_.add(value);
+        ensureNotificationIdsIsMutable();
+        notificationIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -22021,8 +21875,8 @@ public final class UserServiceProto {
 
   }
 
-  public interface ReferencesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.References)
+  public interface ReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.Reference)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -22038,7 +21892,7 @@ public final class UserServiceProto {
 
     /**
      * <pre>
-     * "User A"
+     * "User A" | file.txt
      * </pre>
      *
      * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22047,7 +21901,7 @@ public final class UserServiceProto {
     java.lang.String getRefName();
     /**
      * <pre>
-     * "User A"
+     * "User A" | file.txt
      * </pre>
      *
      * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22077,18 +21931,18 @@ public final class UserServiceProto {
         getRefValueBytes();
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v2.References}
+   * Protobuf type {@code aruna.api.storage.services.v2.Reference}
    */
-  public static final class References extends
+  public static final class Reference extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.References)
-      ReferencesOrBuilder {
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.Reference)
+      ReferenceOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use References.newBuilder() to construct.
-    private References(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Reference.newBuilder() to construct.
+    private Reference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private References() {
+    private Reference() {
       refType_ = 0;
       refName_ = "";
       refValue_ = "";
@@ -22098,20 +21952,20 @@ public final class UserServiceProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new References();
+      return new Reference();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_descriptor;
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_Reference_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable
+      return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_Reference_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.UserServiceProto.References.class, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder.class);
+              com.aruna.api.storage.services.v2.UserServiceProto.Reference.class, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder.class);
     }
 
     public static final int REF_TYPE_FIELD_NUMBER = 1;
@@ -22137,7 +21991,7 @@ public final class UserServiceProto {
     private volatile java.lang.Object refName_ = "";
     /**
      * <pre>
-     * "User A"
+     * "User A" | file.txt
      * </pre>
      *
      * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22158,7 +22012,7 @@ public final class UserServiceProto {
     }
     /**
      * <pre>
-     * "User A"
+     * "User A" | file.txt
      * </pre>
      *
      * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22278,10 +22132,10 @@ public final class UserServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.References)) {
+      if (!(obj instanceof com.aruna.api.storage.services.v2.UserServiceProto.Reference)) {
         return super.equals(obj);
       }
-      com.aruna.api.storage.services.v2.UserServiceProto.References other = (com.aruna.api.storage.services.v2.UserServiceProto.References) obj;
+      com.aruna.api.storage.services.v2.UserServiceProto.Reference other = (com.aruna.api.storage.services.v2.UserServiceProto.Reference) obj;
 
       if (refType_ != other.refType_) return false;
       if (!getRefName()
@@ -22310,44 +22164,44 @@ public final class UserServiceProto {
       return hash;
     }
 
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(byte[] data)
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22355,26 +22209,26 @@ public final class UserServiceProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseDelimitedFrom(java.io.InputStream input)
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseDelimitedFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References parseFrom(
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22387,7 +22241,7 @@ public final class UserServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.References prototype) {
+    public static Builder newBuilder(com.aruna.api.storage.services.v2.UserServiceProto.Reference prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -22403,26 +22257,26 @@ public final class UserServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code aruna.api.storage.services.v2.References}
+     * Protobuf type {@code aruna.api.storage.services.v2.Reference}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.References)
-        com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder {
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.Reference)
+        com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_descriptor;
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_Reference_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_Reference_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aruna.api.storage.services.v2.UserServiceProto.References.class, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder.class);
+                com.aruna.api.storage.services.v2.UserServiceProto.Reference.class, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder.class);
       }
 
-      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.References.newBuilder()
+      // Construct using com.aruna.api.storage.services.v2.UserServiceProto.Reference.newBuilder()
       private Builder() {
 
       }
@@ -22445,17 +22299,17 @@ public final class UserServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_References_descriptor;
+        return com.aruna.api.storage.services.v2.UserServiceProto.internal_static_aruna_api_storage_services_v2_Reference_descriptor;
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.UserServiceProto.References getDefaultInstanceForType() {
-        return com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance();
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference getDefaultInstanceForType() {
+        return com.aruna.api.storage.services.v2.UserServiceProto.Reference.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.UserServiceProto.References build() {
-        com.aruna.api.storage.services.v2.UserServiceProto.References result = buildPartial();
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference build() {
+        com.aruna.api.storage.services.v2.UserServiceProto.Reference result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -22463,14 +22317,14 @@ public final class UserServiceProto {
       }
 
       @java.lang.Override
-      public com.aruna.api.storage.services.v2.UserServiceProto.References buildPartial() {
-        com.aruna.api.storage.services.v2.UserServiceProto.References result = new com.aruna.api.storage.services.v2.UserServiceProto.References(this);
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference buildPartial() {
+        com.aruna.api.storage.services.v2.UserServiceProto.Reference result = new com.aruna.api.storage.services.v2.UserServiceProto.Reference(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.References result) {
+      private void buildPartial0(com.aruna.api.storage.services.v2.UserServiceProto.Reference result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.refType_ = refType_;
@@ -22485,16 +22339,16 @@ public final class UserServiceProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.References) {
-          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.References)other);
+        if (other instanceof com.aruna.api.storage.services.v2.UserServiceProto.Reference) {
+          return mergeFrom((com.aruna.api.storage.services.v2.UserServiceProto.Reference)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.References other) {
-        if (other == com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aruna.api.storage.services.v2.UserServiceProto.Reference other) {
+        if (other == com.aruna.api.storage.services.v2.UserServiceProto.Reference.getDefaultInstance()) return this;
         if (other.refType_ != 0) {
           setRefTypeValue(other.getRefTypeValue());
         }
@@ -22622,7 +22476,7 @@ public final class UserServiceProto {
       private java.lang.Object refName_ = "";
       /**
        * <pre>
-       * "User A"
+       * "User A" | file.txt
        * </pre>
        *
        * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22642,7 +22496,7 @@ public final class UserServiceProto {
       }
       /**
        * <pre>
-       * "User A"
+       * "User A" | file.txt
        * </pre>
        *
        * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22663,7 +22517,7 @@ public final class UserServiceProto {
       }
       /**
        * <pre>
-       * "User A"
+       * "User A" | file.txt
        * </pre>
        *
        * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22680,7 +22534,7 @@ public final class UserServiceProto {
       }
       /**
        * <pre>
-       * "User A"
+       * "User A" | file.txt
        * </pre>
        *
        * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22694,7 +22548,7 @@ public final class UserServiceProto {
       }
       /**
        * <pre>
-       * "User A"
+       * "User A" | file.txt
        * </pre>
        *
        * <code>string ref_name = 2 [json_name = "refName"];</code>
@@ -22815,23 +22669,23 @@ public final class UserServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.References)
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.Reference)
     }
 
-    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.References)
-    private static final com.aruna.api.storage.services.v2.UserServiceProto.References DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.Reference)
+    private static final com.aruna.api.storage.services.v2.UserServiceProto.Reference DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.References();
+      DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.UserServiceProto.Reference();
     }
 
-    public static com.aruna.api.storage.services.v2.UserServiceProto.References getDefaultInstance() {
+    public static com.aruna.api.storage.services.v2.UserServiceProto.Reference getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<References>
-        PARSER = new com.google.protobuf.AbstractParser<References>() {
+    private static final com.google.protobuf.Parser<Reference>
+        PARSER = new com.google.protobuf.AbstractParser<Reference>() {
       @java.lang.Override
-      public References parsePartialFrom(
+      public Reference parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22850,17 +22704,17 @@ public final class UserServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<References> parser() {
+    public static com.google.protobuf.Parser<Reference> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<References> getParserForType() {
+    public com.google.protobuf.Parser<Reference> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.UserServiceProto.References getDefaultInstanceForType() {
+    public com.aruna.api.storage.services.v2.UserServiceProto.Reference getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22918,24 +22772,24 @@ public final class UserServiceProto {
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
-    java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> 
+    java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.Reference> 
         getRefsList();
     /**
      * <pre>
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
-    com.aruna.api.storage.services.v2.UserServiceProto.References getRefs(int index);
+    com.aruna.api.storage.services.v2.UserServiceProto.Reference getRefs(int index);
     /**
      * <pre>
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
     int getRefsCount();
     /**
@@ -22943,18 +22797,18 @@ public final class UserServiceProto {
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
-    java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+    java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder> 
         getRefsOrBuilderList();
     /**
      * <pre>
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
-    com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder getRefsOrBuilder(
+    com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder getRefsOrBuilder(
         int index);
   }
   /**
@@ -23102,16 +22956,16 @@ public final class UserServiceProto {
 
     public static final int REFS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> refs_;
+    private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.Reference> refs_;
     /**
      * <pre>
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> getRefsList() {
+    public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.Reference> getRefsList() {
       return refs_;
     }
     /**
@@ -23119,10 +22973,10 @@ public final class UserServiceProto {
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+    public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder> 
         getRefsOrBuilderList() {
       return refs_;
     }
@@ -23131,7 +22985,7 @@ public final class UserServiceProto {
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
     @java.lang.Override
     public int getRefsCount() {
@@ -23142,10 +22996,10 @@ public final class UserServiceProto {
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.UserServiceProto.References getRefs(int index) {
+    public com.aruna.api.storage.services.v2.UserServiceProto.Reference getRefs(int index) {
       return refs_.get(index);
     }
     /**
@@ -23153,10 +23007,10 @@ public final class UserServiceProto {
      * References to resource in the "message"
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+     * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder getRefsOrBuilder(
+    public com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder getRefsOrBuilder(
         int index) {
       return refs_.get(index);
     }
@@ -23544,9 +23398,9 @@ public final class UserServiceProto {
                 break;
               } // case 26
               case 34: {
-                com.aruna.api.storage.services.v2.UserServiceProto.References m =
+                com.aruna.api.storage.services.v2.UserServiceProto.Reference m =
                     input.readMessage(
-                        com.aruna.api.storage.services.v2.UserServiceProto.References.parser(),
+                        com.aruna.api.storage.services.v2.UserServiceProto.Reference.parser(),
                         extensionRegistry);
                 if (refsBuilder_ == null) {
                   ensureRefsIsMutable();
@@ -23790,26 +23644,26 @@ public final class UserServiceProto {
         return this;
       }
 
-      private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> refs_ =
+      private java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.Reference> refs_ =
         java.util.Collections.emptyList();
       private void ensureRefsIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
-          refs_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.UserServiceProto.References>(refs_);
+          refs_ = new java.util.ArrayList<com.aruna.api.storage.services.v2.UserServiceProto.Reference>(refs_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.services.v2.UserServiceProto.References, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> refsBuilder_;
+          com.aruna.api.storage.services.v2.UserServiceProto.Reference, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder> refsBuilder_;
 
       /**
        * <pre>
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References> getRefsList() {
+      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.Reference> getRefsList() {
         if (refsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(refs_);
         } else {
@@ -23821,7 +23675,7 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public int getRefsCount() {
         if (refsBuilder_ == null) {
@@ -23835,9 +23689,9 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public com.aruna.api.storage.services.v2.UserServiceProto.References getRefs(int index) {
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference getRefs(int index) {
         if (refsBuilder_ == null) {
           return refs_.get(index);
         } else {
@@ -23849,10 +23703,10 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder setRefs(
-          int index, com.aruna.api.storage.services.v2.UserServiceProto.References value) {
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.Reference value) {
         if (refsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23870,10 +23724,10 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder setRefs(
-          int index, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder builderForValue) {
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder builderForValue) {
         if (refsBuilder_ == null) {
           ensureRefsIsMutable();
           refs_.set(index, builderForValue.build());
@@ -23888,9 +23742,9 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public Builder addRefs(com.aruna.api.storage.services.v2.UserServiceProto.References value) {
+      public Builder addRefs(com.aruna.api.storage.services.v2.UserServiceProto.Reference value) {
         if (refsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23908,10 +23762,10 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder addRefs(
-          int index, com.aruna.api.storage.services.v2.UserServiceProto.References value) {
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.Reference value) {
         if (refsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23929,10 +23783,10 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder addRefs(
-          com.aruna.api.storage.services.v2.UserServiceProto.References.Builder builderForValue) {
+          com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder builderForValue) {
         if (refsBuilder_ == null) {
           ensureRefsIsMutable();
           refs_.add(builderForValue.build());
@@ -23947,10 +23801,10 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder addRefs(
-          int index, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder builderForValue) {
+          int index, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder builderForValue) {
         if (refsBuilder_ == null) {
           ensureRefsIsMutable();
           refs_.add(index, builderForValue.build());
@@ -23965,10 +23819,10 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder addAllRefs(
-          java.lang.Iterable<? extends com.aruna.api.storage.services.v2.UserServiceProto.References> values) {
+          java.lang.Iterable<? extends com.aruna.api.storage.services.v2.UserServiceProto.Reference> values) {
         if (refsBuilder_ == null) {
           ensureRefsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -23984,7 +23838,7 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder clearRefs() {
         if (refsBuilder_ == null) {
@@ -24001,7 +23855,7 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
       public Builder removeRefs(int index) {
         if (refsBuilder_ == null) {
@@ -24018,9 +23872,9 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public com.aruna.api.storage.services.v2.UserServiceProto.References.Builder getRefsBuilder(
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder getRefsBuilder(
           int index) {
         return getRefsFieldBuilder().getBuilder(index);
       }
@@ -24029,9 +23883,9 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder getRefsOrBuilder(
+      public com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder getRefsOrBuilder(
           int index) {
         if (refsBuilder_ == null) {
           return refs_.get(index);  } else {
@@ -24043,9 +23897,9 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+      public java.util.List<? extends com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder> 
            getRefsOrBuilderList() {
         if (refsBuilder_ != null) {
           return refsBuilder_.getMessageOrBuilderList();
@@ -24058,41 +23912,41 @@ public final class UserServiceProto {
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public com.aruna.api.storage.services.v2.UserServiceProto.References.Builder addRefsBuilder() {
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder addRefsBuilder() {
         return getRefsFieldBuilder().addBuilder(
-            com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance());
+            com.aruna.api.storage.services.v2.UserServiceProto.Reference.getDefaultInstance());
       }
       /**
        * <pre>
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public com.aruna.api.storage.services.v2.UserServiceProto.References.Builder addRefsBuilder(
+      public com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder addRefsBuilder(
           int index) {
         return getRefsFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.services.v2.UserServiceProto.References.getDefaultInstance());
+            index, com.aruna.api.storage.services.v2.UserServiceProto.Reference.getDefaultInstance());
       }
       /**
        * <pre>
        * References to resource in the "message"
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.services.v2.References refs = 4 [json_name = "refs"];</code>
+       * <code>repeated .aruna.api.storage.services.v2.Reference refs = 4 [json_name = "refs"];</code>
        */
-      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.References.Builder> 
+      public java.util.List<com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder> 
            getRefsBuilderList() {
         return getRefsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.services.v2.UserServiceProto.References, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder> 
+          com.aruna.api.storage.services.v2.UserServiceProto.Reference, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder> 
           getRefsFieldBuilder() {
         if (refsBuilder_ == null) {
           refsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.services.v2.UserServiceProto.References, com.aruna.api.storage.services.v2.UserServiceProto.References.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferencesOrBuilder>(
+              com.aruna.api.storage.services.v2.UserServiceProto.Reference, com.aruna.api.storage.services.v2.UserServiceProto.Reference.Builder, com.aruna.api.storage.services.v2.UserServiceProto.ReferenceOrBuilder>(
                   refs_,
                   ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
@@ -24346,10 +24200,10 @@ public final class UserServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_AcknowledgePersonalNotificationsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_References_descriptor;
+    internal_static_aruna_api_storage_services_v2_Reference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_Reference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_PersonalNotification_descriptor;
   private static final 
@@ -24424,116 +24278,116 @@ public final class UserServiceProto {
       " \001(\tR\nendpointId\022>\n\007context\030\003 \001(\0132$.arun" +
       "a.api.storage.models.v2.ContextR\007context" +
       "\"5\n\035GetDataproxyTokenUserResponse\022\024\n\005tok" +
-      "en\030\001 \001(\tR\005token\":\n\037GetPersonalNotificati" +
-      "onsRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"}\n G" +
-      "etPersonalNotificationsResponse\022Y\n\rnotif" +
-      "ications\030\001 \003(\01323.aruna.api.storage.servi" +
-      "ces.v2.PersonalNotificationR\rnotificatio" +
-      "ns\"R\n\'AcknowledgePersonalNotificationsRe" +
-      "quest\022\'\n\017notification_id\030\001 \003(\tR\016notifica" +
-      "tionId\"*\n(AcknowledgePersonalNotificatio" +
-      "nsResponse\"\215\001\n\nReferences\022G\n\010ref_type\030\001 " +
-      "\001(\0162,.aruna.api.storage.services.v2.Refe" +
-      "renceTypeR\007refType\022\031\n\010ref_name\030\002 \001(\tR\007re" +
-      "fName\022\033\n\tref_value\030\003 \001(\tR\010refValue\"\325\001\n\024P" +
-      "ersonalNotification\022\016\n\002id\030\001 \001(\tR\002id\022T\n\007v" +
-      "ariant\030\002 \001(\0162:.aruna.api.storage.service" +
-      "s.v2.PersonalNotificationVariantR\007varian" +
-      "t\022\030\n\007message\030\003 \001(\tR\007message\022=\n\004refs\030\004 \003(" +
-      "\0132).aruna.api.storage.services.v2.Refere" +
-      "ncesR\004refs*e\n\rReferenceType\022\036\n\032REFERENCE" +
-      "_TYPE_UNSPECIFIED\020\000\022\027\n\023REFERENCE_TYPE_US" +
-      "ER\020\001\022\033\n\027REFERENCE_TYPE_RESOURCE\020\002*\234\002\n\033Pe" +
-      "rsonalNotificationVariant\022-\n)PERSONAL_NO" +
-      "TIFICATION_VARIANT_UNSPECIFIED\020\000\0222\n.PERS" +
-      "ONAL_NOTIFICATION_VARIANT_ACCESS_REQUEST" +
-      "ED\020\001\0224\n0PERSONAL_NOTIFICATION_VARIANT_PE" +
-      "RMISSION_GRANTED\020\002\0224\n0PERSONAL_NOTIFICAT" +
-      "ION_VARIANT_PERMISSION_REVOKED\020\003\022.\n*PERS" +
-      "ONAL_NOTIFICATION_VARIANT_ANNOUNCEMENT\020\004" +
-      "2\332\027\n\013UserService\022\225\001\n\014RegisterUser\0222.arun" +
-      "a.api.storage.services.v2.RegisterUserRe" +
-      "quest\0323.aruna.api.storage.services.v2.Re" +
-      "gisterUserResponse\"\034\202\323\344\223\002\026\"\021/v2/auth/reg" +
-      "ister:\001*\022\247\001\n\016DeactivateUser\0224.aruna.api." +
-      "storage.services.v2.DeactivateUserReques" +
-      "t\0325.aruna.api.storage.services.v2.Deacti" +
-      "vateUserResponse\"(\202\323\344\223\002\"2\035/v2/user/{user" +
-      "_id}/deactivate:\001*\022\237\001\n\014ActivateUser\0222.ar" +
-      "una.api.storage.services.v2.ActivateUser" +
-      "Request\0323.aruna.api.storage.services.v2." +
-      "ActivateUserResponse\"&\202\323\344\223\002 2\033/v2/user/{" +
-      "user_id}/activate:\001*\022\230\001\n\016CreateAPIToken\022" +
-      "4.aruna.api.storage.services.v2.CreateAP" +
-      "ITokenRequest\0325.aruna.api.storage.servic" +
-      "es.v2.CreateAPITokenResponse\"\031\202\323\344\223\002\023\"\016/v" +
-      "2/auth/token:\001*\022\227\001\n\013GetAPIToken\0221.aruna." +
-      "api.storage.services.v2.GetAPITokenReque" +
-      "st\0322.aruna.api.storage.services.v2.GetAP" +
-      "ITokenResponse\"!\202\323\344\223\002\033\022\031/v2/auth/token/{" +
-      "token_id}\022\220\001\n\014GetAPITokens\0222.aruna.api.s" +
-      "torage.services.v2.GetAPITokensRequest\0323" +
-      ".aruna.api.storage.services.v2.GetAPITok" +
-      "ensResponse\"\027\202\323\344\223\002\021\022\017/v2/auth/tokens\022\240\001\n" +
-      "\016DeleteAPIToken\0224.aruna.api.storage.serv" +
-      "ices.v2.DeleteAPITokenRequest\0325.aruna.ap" +
-      "i.storage.services.v2.DeleteAPITokenResp" +
-      "onse\"!\202\323\344\223\002\033*\031/v2/auth/token/{token_id}\022" +
-      "\231\001\n\017DeleteAPITokens\0225.aruna.api.storage." +
-      "services.v2.DeleteAPITokensRequest\0326.aru" +
-      "na.api.storage.services.v2.DeleteAPIToke" +
-      "nsResponse\"\027\202\323\344\223\002\021*\017/v2/auth/tokens\022z\n\007G" +
-      "etUser\022-.aruna.api.storage.services.v2.G" +
-      "etUserRequest\032..aruna.api.storage.servic" +
-      "es.v2.GetUserResponse\"\020\202\323\344\223\002\n\022\010/v2/user\022" +
-      "\233\001\n\017GetUserRedacted\0225.aruna.api.storage." +
-      "services.v2.GetUserRedactedRequest\0326.aru" +
-      "na.api.storage.services.v2.GetUserRedact" +
-      "edResponse\"\031\202\323\344\223\002\023\022\021/v2/user/redacted\022\276\001" +
-      "\n\025UpdateUserDisplayName\022;.aruna.api.stor" +
-      "age.services.v2.UpdateUserDisplayNameReq" +
-      "uest\032<.aruna.api.storage.services.v2.Upd" +
-      "ateUserDisplayNameResponse\"*\202\323\344\223\002$2\037/v2/" +
-      "user/{user_id}/display_name:\001*\022\245\001\n\017Updat" +
-      "eUserEmail\0225.aruna.api.storage.services." +
-      "v2.UpdateUserEmailRequest\0326.aruna.api.st" +
-      "orage.services.v2.UpdateUserEmailRespons" +
-      "e\"#\202\323\344\223\002\0352\030/v2/user/{user_id}/email:\001*\022\257" +
-      "\001\n\024GetNotActivatedUsers\022:.aruna.api.stor" +
-      "age.services.v2.GetNotActivatedUsersRequ" +
-      "est\032;.aruna.api.storage.services.v2.GetN" +
-      "otActivatedUsersResponse\"\036\202\323\344\223\002\030\022\026/v2/us" +
-      "er/not_activated\022\212\001\n\013GetAllUsers\0221.aruna" +
-      ".api.storage.services.v2.GetAllUsersRequ" +
-      "est\0322.aruna.api.storage.services.v2.GetA" +
-      "llUsersResponse\"\024\202\323\344\223\002\016\022\014/v2/user/all\022\272\001" +
-      "\n\024GetS3CredentialsUser\022:.aruna.api.stora" +
-      "ge.services.v2.GetS3CredentialsUserReque" +
-      "st\032;.aruna.api.storage.services.v2.GetS3" +
-      "CredentialsUserResponse\")\202\323\344\223\002#\022!/v2/use" +
-      "r/{user_id}/s3_credentials\022\272\001\n\025GetDatapr" +
-      "oxyTokenUser\022;.aruna.api.storage.service" +
-      "s.v2.GetDataproxyTokenUserRequest\032<.arun" +
-      "a.api.storage.services.v2.GetDataproxyTo" +
-      "kenUserResponse\"&\202\323\344\223\002 \022\036/v2/user/{user_" +
-      "id}/proxy_token\022\305\001\n\030GetPersonalNotificat" +
-      "ions\022>.aruna.api.storage.services.v2.Get" +
-      "PersonalNotificationsRequest\032?.aruna.api" +
-      ".storage.services.v2.GetPersonalNotifica" +
-      "tionsResponse\"(\202\323\344\223\002\"\022 /v2/user/{user_id" +
-      "}/notifications\022\333\001\n AcknowledgePersonalN" +
-      "otifications\022F.aruna.api.storage.service" +
-      "s.v2.AcknowledgePersonalNotificationsReq" +
-      "uest\032G.aruna.api.storage.services.v2.Ack" +
-      "nowledgePersonalNotificationsResponse\"&\202" +
-      "\323\344\223\002 \022\036/v2/user/{user_id}/acknowledgeB\214\002" +
-      "\n!com.aruna.api.storage.services.v2B\020Use" +
-      "rServiceProtoP\000Z<github.com/ArunaStorage" +
-      "/go-api/aruna/api/storage/services/v2\242\002\004" +
-      "AASS\252\002\035Aruna.Api.Storage.Services.V2\312\002\035A" +
-      "runa\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api" +
-      "\\Storage\\Services\\V2\\GPBMetadata\352\002!Aruna" +
-      "::Api::Storage::Services::V2b\006proto3"
+      "en\030\001 \001(\tR\005token\"!\n\037GetPersonalNotificati" +
+      "onsRequest\"}\n GetPersonalNotificationsRe" +
+      "sponse\022Y\n\rnotifications\030\001 \003(\01323.aruna.ap" +
+      "i.storage.services.v2.PersonalNotificati" +
+      "onR\rnotifications\"T\n\'AcknowledgePersonal" +
+      "NotificationsRequest\022)\n\020notification_ids" +
+      "\030\001 \003(\tR\017notificationIds\"*\n(AcknowledgePe" +
+      "rsonalNotificationsResponse\"\214\001\n\tReferenc" +
+      "e\022G\n\010ref_type\030\001 \001(\0162,.aruna.api.storage." +
+      "services.v2.ReferenceTypeR\007refType\022\031\n\010re" +
+      "f_name\030\002 \001(\tR\007refName\022\033\n\tref_value\030\003 \001(\t" +
+      "R\010refValue\"\324\001\n\024PersonalNotification\022\016\n\002i" +
+      "d\030\001 \001(\tR\002id\022T\n\007variant\030\002 \001(\0162:.aruna.api" +
+      ".storage.services.v2.PersonalNotificatio" +
+      "nVariantR\007variant\022\030\n\007message\030\003 \001(\tR\007mess" +
+      "age\022<\n\004refs\030\004 \003(\0132(.aruna.api.storage.se" +
+      "rvices.v2.ReferenceR\004refs*e\n\rReferenceTy" +
+      "pe\022\036\n\032REFERENCE_TYPE_UNSPECIFIED\020\000\022\027\n\023RE" +
+      "FERENCE_TYPE_USER\020\001\022\033\n\027REFERENCE_TYPE_RE" +
+      "SOURCE\020\002*\322\002\n\033PersonalNotificationVariant" +
+      "\022-\n)PERSONAL_NOTIFICATION_VARIANT_UNSPEC" +
+      "IFIED\020\000\0222\n.PERSONAL_NOTIFICATION_VARIANT" +
+      "_ACCESS_REQUESTED\020\001\0224\n0PERSONAL_NOTIFICA" +
+      "TION_VARIANT_PERMISSION_GRANTED\020\002\0224\n0PER" +
+      "SONAL_NOTIFICATION_VARIANT_PERMISSION_RE" +
+      "VOKED\020\003\0224\n0PERSONAL_NOTIFICATION_VARIANT" +
+      "_PERMISSION_UPDATED\020\004\022.\n*PERSONAL_NOTIFI" +
+      "CATION_VARIANT_ANNOUNCEMENT\020\0052\274\027\n\013UserSe" +
+      "rvice\022\225\001\n\014RegisterUser\0222.aruna.api.stora" +
+      "ge.services.v2.RegisterUserRequest\0323.aru" +
+      "na.api.storage.services.v2.RegisterUserR" +
+      "esponse\"\034\202\323\344\223\002\026\"\021/v2/auth/register:\001*\022\247\001" +
+      "\n\016DeactivateUser\0224.aruna.api.storage.ser" +
+      "vices.v2.DeactivateUserRequest\0325.aruna.a" +
+      "pi.storage.services.v2.DeactivateUserRes" +
+      "ponse\"(\202\323\344\223\002\"2\035/v2/user/{user_id}/deacti" +
+      "vate:\001*\022\237\001\n\014ActivateUser\0222.aruna.api.sto" +
+      "rage.services.v2.ActivateUserRequest\0323.a" +
+      "runa.api.storage.services.v2.ActivateUse" +
+      "rResponse\"&\202\323\344\223\002 2\033/v2/user/{user_id}/ac" +
+      "tivate:\001*\022\230\001\n\016CreateAPIToken\0224.aruna.api" +
+      ".storage.services.v2.CreateAPITokenReque" +
+      "st\0325.aruna.api.storage.services.v2.Creat" +
+      "eAPITokenResponse\"\031\202\323\344\223\002\023\"\016/v2/auth/toke" +
+      "n:\001*\022\227\001\n\013GetAPIToken\0221.aruna.api.storage" +
+      ".services.v2.GetAPITokenRequest\0322.aruna." +
+      "api.storage.services.v2.GetAPITokenRespo" +
+      "nse\"!\202\323\344\223\002\033\022\031/v2/auth/token/{token_id}\022\220" +
+      "\001\n\014GetAPITokens\0222.aruna.api.storage.serv" +
+      "ices.v2.GetAPITokensRequest\0323.aruna.api." +
+      "storage.services.v2.GetAPITokensResponse" +
+      "\"\027\202\323\344\223\002\021\022\017/v2/auth/tokens\022\240\001\n\016DeleteAPIT" +
+      "oken\0224.aruna.api.storage.services.v2.Del" +
+      "eteAPITokenRequest\0325.aruna.api.storage.s" +
+      "ervices.v2.DeleteAPITokenResponse\"!\202\323\344\223\002" +
+      "\033*\031/v2/auth/token/{token_id}\022\231\001\n\017DeleteA" +
+      "PITokens\0225.aruna.api.storage.services.v2" +
+      ".DeleteAPITokensRequest\0326.aruna.api.stor" +
+      "age.services.v2.DeleteAPITokensResponse\"" +
+      "\027\202\323\344\223\002\021*\017/v2/auth/tokens\022z\n\007GetUser\022-.ar" +
+      "una.api.storage.services.v2.GetUserReque" +
+      "st\032..aruna.api.storage.services.v2.GetUs" +
+      "erResponse\"\020\202\323\344\223\002\n\022\010/v2/user\022\233\001\n\017GetUser" +
+      "Redacted\0225.aruna.api.storage.services.v2" +
+      ".GetUserRedactedRequest\0326.aruna.api.stor" +
+      "age.services.v2.GetUserRedactedResponse\"" +
+      "\031\202\323\344\223\002\023\022\021/v2/user/redacted\022\264\001\n\025UpdateUse" +
+      "rDisplayName\022;.aruna.api.storage.service" +
+      "s.v2.UpdateUserDisplayNameRequest\032<.arun" +
+      "a.api.storage.services.v2.UpdateUserDisp" +
+      "layNameResponse\" \202\323\344\223\002\0322\025/v2/user/displa" +
+      "y_name:\001*\022\245\001\n\017UpdateUserEmail\0225.aruna.ap" +
+      "i.storage.services.v2.UpdateUserEmailReq" +
+      "uest\0326.aruna.api.storage.services.v2.Upd" +
+      "ateUserEmailResponse\"#\202\323\344\223\002\0352\030/v2/user/{" +
+      "user_id}/email:\001*\022\257\001\n\024GetNotActivatedUse" +
+      "rs\022:.aruna.api.storage.services.v2.GetNo" +
+      "tActivatedUsersRequest\032;.aruna.api.stora" +
+      "ge.services.v2.GetNotActivatedUsersRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/v2/user/not_activated\022\212\001\n\013" +
+      "GetAllUsers\0221.aruna.api.storage.services" +
+      ".v2.GetAllUsersRequest\0322.aruna.api.stora" +
+      "ge.services.v2.GetAllUsersResponse\"\024\202\323\344\223" +
+      "\002\016\022\014/v2/user/all\022\272\001\n\024GetS3CredentialsUse" +
+      "r\022:.aruna.api.storage.services.v2.GetS3C" +
+      "redentialsUserRequest\032;.aruna.api.storag" +
+      "e.services.v2.GetS3CredentialsUserRespon" +
+      "se\")\202\323\344\223\002#\022!/v2/user/{user_id}/s3_creden" +
+      "tials\022\272\001\n\025GetDataproxyTokenUser\022;.aruna." +
+      "api.storage.services.v2.GetDataproxyToke" +
+      "nUserRequest\032<.aruna.api.storage.service" +
+      "s.v2.GetDataproxyTokenUserResponse\"&\202\323\344\223" +
+      "\002 \022\036/v2/user/{user_id}/proxy_token\022\273\001\n\030G" +
+      "etPersonalNotifications\022>.aruna.api.stor" +
+      "age.services.v2.GetPersonalNotifications" +
+      "Request\032?.aruna.api.storage.services.v2." +
+      "GetPersonalNotificationsResponse\"\036\202\323\344\223\002\030" +
+      "\022\026/v2/user/notifications\022\321\001\n Acknowledge" +
+      "PersonalNotifications\022F.aruna.api.storag" +
+      "e.services.v2.AcknowledgePersonalNotific" +
+      "ationsRequest\032G.aruna.api.storage.servic" +
+      "es.v2.AcknowledgePersonalNotificationsRe" +
+      "sponse\"\034\202\323\344\223\002\026\022\024/v2/user/acknowledgeB\214\002\n" +
+      "!com.aruna.api.storage.services.v2B\020User" +
+      "ServiceProtoP\000Z<github.com/ArunaStorage/" +
+      "go-api/aruna/api/storage/services/v2\242\002\004A" +
+      "ASS\252\002\035Aruna.Api.Storage.Services.V2\312\002\035Ar" +
+      "una\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api\\" +
+      "Storage\\Services\\V2\\GPBMetadata\352\002!Aruna:" +
+      ":Api::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24739,7 +24593,7 @@ public final class UserServiceProto {
     internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsRequest_descriptor,
-        new java.lang.String[] { "UserId", });
+        new java.lang.String[] { });
     internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_aruna_api_storage_services_v2_GetPersonalNotificationsResponse_fieldAccessorTable = new
@@ -24751,18 +24605,18 @@ public final class UserServiceProto {
     internal_static_aruna_api_storage_services_v2_AcknowledgePersonalNotificationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_AcknowledgePersonalNotificationsRequest_descriptor,
-        new java.lang.String[] { "NotificationId", });
+        new java.lang.String[] { "NotificationIds", });
     internal_static_aruna_api_storage_services_v2_AcknowledgePersonalNotificationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(35);
     internal_static_aruna_api_storage_services_v2_AcknowledgePersonalNotificationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_AcknowledgePersonalNotificationsResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_aruna_api_storage_services_v2_References_descriptor =
+    internal_static_aruna_api_storage_services_v2_Reference_descriptor =
       getDescriptor().getMessageTypes().get(36);
-    internal_static_aruna_api_storage_services_v2_References_fieldAccessorTable = new
+    internal_static_aruna_api_storage_services_v2_Reference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_References_descriptor,
+        internal_static_aruna_api_storage_services_v2_Reference_descriptor,
         new java.lang.String[] { "RefType", "RefName", "RefValue", });
     internal_static_aruna_api_storage_services_v2_PersonalNotification_descriptor =
       getDescriptor().getMessageTypes().get(37);

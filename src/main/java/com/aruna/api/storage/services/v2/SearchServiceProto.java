@@ -4988,6 +4988,18 @@ public final class SearchServiceProto {
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
+
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.RequestResourceAccessRequest}
@@ -5003,6 +5015,7 @@ public final class SearchServiceProto {
     }
     private RequestResourceAccessRequest() {
       resourceId_ = "";
+      message_ = "";
     }
 
     @java.lang.Override
@@ -5064,6 +5077,45 @@ public final class SearchServiceProto {
       }
     }
 
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5081,6 +5133,9 @@ public final class SearchServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5092,6 +5147,9 @@ public final class SearchServiceProto {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5110,6 +5168,8 @@ public final class SearchServiceProto {
 
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5123,6 +5183,8 @@ public final class SearchServiceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5255,6 +5317,7 @@ public final class SearchServiceProto {
         super.clear();
         bitField0_ = 0;
         resourceId_ = "";
+        message_ = "";
         return this;
       }
 
@@ -5291,6 +5354,9 @@ public final class SearchServiceProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.resourceId_ = resourceId_;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.message_ = message_;
+        }
       }
 
       @java.lang.Override
@@ -5308,6 +5374,11 @@ public final class SearchServiceProto {
         if (!other.getResourceId().isEmpty()) {
           resourceId_ = other.resourceId_;
           bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5341,6 +5412,11 @@ public final class SearchServiceProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                message_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5426,6 +5502,78 @@ public final class SearchServiceProto {
         checkByteStringIsUtf8(value);
         resourceId_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        message_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        message_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5935,33 +6083,34 @@ public final class SearchServiceProto {
       "urcesRequest\022!\n\014resource_ids\030\001 \003(\tR\013reso" +
       "urceIds\"k\n\024GetResourcesResponse\022S\n\tresou" +
       "rces\030\001 \003(\01325.aruna.api.storage.services." +
-      "v2.ResourceWithPermissionR\tresources\"?\n\034" +
+      "v2.ResourceWithPermissionR\tresources\"Y\n\034" +
       "RequestResourceAccessRequest\022\037\n\013resource" +
-      "_id\030\001 \001(\tR\nresourceId\"\037\n\035RequestResource" +
-      "AccessResponse2\225\005\n\rSearchService\022\227\001\n\017Sea" +
-      "rchResources\0225.aruna.api.storage.service" +
-      "s.v2.SearchResourcesRequest\0326.aruna.api." +
-      "storage.services.v2.SearchResourcesRespo" +
-      "nse\"\025\202\323\344\223\002\017\"\n/v2/search:\001*\022\230\001\n\013GetResour" +
-      "ce\0221.aruna.api.storage.services.v2.GetRe" +
-      "sourceRequest\0322.aruna.api.storage.servic" +
-      "es.v2.GetResourceResponse\"\"\202\323\344\223\002\034\022\032/v2/r" +
-      "esource/{resource_id}\022\216\001\n\014GetResources\0222" +
-      ".aruna.api.storage.services.v2.GetResour" +
-      "cesRequest\0323.aruna.api.storage.services." +
-      "v2.GetResourcesResponse\"\025\202\323\344\223\002\017\022\r/v2/res" +
-      "ources\022\275\001\n\025RequestResourceAccess\022;.aruna" +
-      ".api.storage.services.v2.RequestResource" +
-      "AccessRequest\032<.aruna.api.storage.servic" +
-      "es.v2.RequestResourceAccessResponse\")\202\323\344" +
-      "\223\002#\022!/v2/resource/{resource_id}/accessB\216" +
-      "\002\n!com.aruna.api.storage.services.v2B\022Se" +
-      "archServiceProtoP\000Z<github.com/ArunaStor" +
-      "age/go-api/aruna/api/storage/services/v2" +
-      "\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2\312" +
-      "\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna\\" +
-      "Api\\Storage\\Services\\V2\\GPBMetadata\352\002!Ar" +
-      "una::Api::Storage::Services::V2b\006proto3"
+      "_id\030\001 \001(\tR\nresourceId\022\030\n\007message\030\002 \001(\tR\007" +
+      "message\"\037\n\035RequestResourceAccessResponse" +
+      "2\225\005\n\rSearchService\022\227\001\n\017SearchResources\0225" +
+      ".aruna.api.storage.services.v2.SearchRes" +
+      "ourcesRequest\0326.aruna.api.storage.servic" +
+      "es.v2.SearchResourcesResponse\"\025\202\323\344\223\002\017\"\n/" +
+      "v2/search:\001*\022\230\001\n\013GetResource\0221.aruna.api" +
+      ".storage.services.v2.GetResourceRequest\032" +
+      "2.aruna.api.storage.services.v2.GetResou" +
+      "rceResponse\"\"\202\323\344\223\002\034\022\032/v2/resource/{resou" +
+      "rce_id}\022\216\001\n\014GetResources\0222.aruna.api.sto" +
+      "rage.services.v2.GetResourcesRequest\0323.a" +
+      "runa.api.storage.services.v2.GetResource" +
+      "sResponse\"\025\202\323\344\223\002\017\022\r/v2/resources\022\275\001\n\025Req" +
+      "uestResourceAccess\022;.aruna.api.storage.s" +
+      "ervices.v2.RequestResourceAccessRequest\032" +
+      "<.aruna.api.storage.services.v2.RequestR" +
+      "esourceAccessResponse\")\202\323\344\223\002#\022!/v2/resou" +
+      "rce/{resource_id}/accessB\216\002\n!com.aruna.a" +
+      "pi.storage.services.v2B\022SearchServicePro" +
+      "toP\000Z<github.com/ArunaStorage/go-api/aru" +
+      "na/api/storage/services/v2\242\002\004AASS\252\002\035Arun" +
+      "a.Api.Storage.Services.V2\312\002\035Aruna\\Api\\St" +
+      "orage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Se" +
+      "rvices\\V2\\GPBMetadata\352\002!Aruna::Api::Stor" +
+      "age::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6016,7 +6165,7 @@ public final class SearchServiceProto {
     internal_static_aruna_api_storage_services_v2_RequestResourceAccessRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_RequestResourceAccessRequest_descriptor,
-        new java.lang.String[] { "ResourceId", });
+        new java.lang.String[] { "ResourceId", "Message", });
     internal_static_aruna_api_storage_services_v2_RequestResourceAccessResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_storage_services_v2_RequestResourceAccessResponse_fieldAccessorTable = new

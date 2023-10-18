@@ -2731,19 +2731,19 @@ public final class WorkspaceServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
-     * @return Whether the workspaces field is set.
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
+     * @return Whether the workspace field is set.
      */
-    boolean hasWorkspaces();
+    boolean hasWorkspace();
     /**
-     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
-     * @return The workspaces.
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
+     * @return The workspace.
      */
-    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces();
+    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspace();
     /**
-     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
      */
-    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder();
+    com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspaceOrBuilder();
   }
   /**
    * Protobuf type {@code aruna.api.storage.services.v2.GetWorkspaceTemplateResponse}
@@ -2780,30 +2780,30 @@ public final class WorkspaceServiceProto {
               com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.class, com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.Builder.class);
     }
 
-    public static final int WORKSPACES_FIELD_NUMBER = 1;
-    private com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo workspaces_;
+    public static final int WORKSPACE_FIELD_NUMBER = 1;
+    private com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo workspace_;
     /**
-     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
-     * @return Whether the workspaces field is set.
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
+     * @return Whether the workspace field is set.
      */
     @java.lang.Override
-    public boolean hasWorkspaces() {
-      return workspaces_ != null;
+    public boolean hasWorkspace() {
+      return workspace_ != null;
     }
     /**
-     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
-     * @return The workspaces.
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
+     * @return The workspace.
      */
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces() {
-      return workspaces_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspace() {
+      return workspace_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspace_;
     }
     /**
-     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+     * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder() {
-      return workspaces_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+    public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspaceOrBuilder() {
+      return workspace_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspace_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2820,8 +2820,8 @@ public final class WorkspaceServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (workspaces_ != null) {
-        output.writeMessage(1, getWorkspaces());
+      if (workspace_ != null) {
+        output.writeMessage(1, getWorkspace());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2832,9 +2832,9 @@ public final class WorkspaceServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (workspaces_ != null) {
+      if (workspace_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getWorkspaces());
+          .computeMessageSize(1, getWorkspace());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2851,10 +2851,10 @@ public final class WorkspaceServiceProto {
       }
       com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse other = (com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse) obj;
 
-      if (hasWorkspaces() != other.hasWorkspaces()) return false;
-      if (hasWorkspaces()) {
-        if (!getWorkspaces()
-            .equals(other.getWorkspaces())) return false;
+      if (hasWorkspace() != other.hasWorkspace()) return false;
+      if (hasWorkspace()) {
+        if (!getWorkspace()
+            .equals(other.getWorkspace())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2867,9 +2867,9 @@ public final class WorkspaceServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasWorkspaces()) {
-        hash = (37 * hash) + WORKSPACES_FIELD_NUMBER;
-        hash = (53 * hash) + getWorkspaces().hashCode();
+      if (hasWorkspace()) {
+        hash = (37 * hash) + WORKSPACE_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkspace().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3002,10 +3002,10 @@ public final class WorkspaceServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        workspaces_ = null;
-        if (workspacesBuilder_ != null) {
-          workspacesBuilder_.dispose();
-          workspacesBuilder_ = null;
+        workspace_ = null;
+        if (workspaceBuilder_ != null) {
+          workspaceBuilder_.dispose();
+          workspaceBuilder_ = null;
         }
         return this;
       }
@@ -3041,9 +3041,9 @@ public final class WorkspaceServiceProto {
       private void buildPartial0(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.workspaces_ = workspacesBuilder_ == null
-              ? workspaces_
-              : workspacesBuilder_.build();
+          result.workspace_ = workspaceBuilder_ == null
+              ? workspace_
+              : workspaceBuilder_.build();
         }
       }
 
@@ -3059,8 +3059,8 @@ public final class WorkspaceServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse other) {
         if (other == com.aruna.api.storage.services.v2.WorkspaceServiceProto.GetWorkspaceTemplateResponse.getDefaultInstance()) return this;
-        if (other.hasWorkspaces()) {
-          mergeWorkspaces(other.getWorkspaces());
+        if (other.hasWorkspace()) {
+          mergeWorkspace(other.getWorkspace());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3090,7 +3090,7 @@ public final class WorkspaceServiceProto {
                 break;
               case 10: {
                 input.readMessage(
-                    getWorkspacesFieldBuilder().getBuilder(),
+                    getWorkspaceFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
@@ -3112,123 +3112,123 @@ public final class WorkspaceServiceProto {
       }
       private int bitField0_;
 
-      private com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo workspaces_;
+      private com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo workspace_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> workspacesBuilder_;
+          com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> workspaceBuilder_;
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
-       * @return Whether the workspaces field is set.
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
+       * @return Whether the workspace field is set.
        */
-      public boolean hasWorkspaces() {
+      public boolean hasWorkspace() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
-       * @return The workspaces.
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
+       * @return The workspace.
        */
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspaces() {
-        if (workspacesBuilder_ == null) {
-          return workspaces_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo getWorkspace() {
+        if (workspaceBuilder_ == null) {
+          return workspace_ == null ? com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspace_;
         } else {
-          return workspacesBuilder_.getMessage();
+          return workspaceBuilder_.getMessage();
         }
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
-      public Builder setWorkspaces(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
-        if (workspacesBuilder_ == null) {
+      public Builder setWorkspace(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspaceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          workspaces_ = value;
+          workspace_ = value;
         } else {
-          workspacesBuilder_.setMessage(value);
+          workspaceBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
-      public Builder setWorkspaces(
+      public Builder setWorkspace(
           com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder builderForValue) {
-        if (workspacesBuilder_ == null) {
-          workspaces_ = builderForValue.build();
+        if (workspaceBuilder_ == null) {
+          workspace_ = builderForValue.build();
         } else {
-          workspacesBuilder_.setMessage(builderForValue.build());
+          workspaceBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
-      public Builder mergeWorkspaces(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
-        if (workspacesBuilder_ == null) {
+      public Builder mergeWorkspace(com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo value) {
+        if (workspaceBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
-            workspaces_ != null &&
-            workspaces_ != com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance()) {
-            getWorkspacesBuilder().mergeFrom(value);
+            workspace_ != null &&
+            workspace_ != com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance()) {
+            getWorkspaceBuilder().mergeFrom(value);
           } else {
-            workspaces_ = value;
+            workspace_ = value;
           }
         } else {
-          workspacesBuilder_.mergeFrom(value);
+          workspaceBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
-      public Builder clearWorkspaces() {
+      public Builder clearWorkspace() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        workspaces_ = null;
-        if (workspacesBuilder_ != null) {
-          workspacesBuilder_.dispose();
-          workspacesBuilder_ = null;
+        workspace_ = null;
+        if (workspaceBuilder_ != null) {
+          workspaceBuilder_.dispose();
+          workspaceBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder getWorkspacesBuilder() {
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder getWorkspaceBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
-        return getWorkspacesFieldBuilder().getBuilder();
+        return getWorkspaceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
-      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspacesOrBuilder() {
-        if (workspacesBuilder_ != null) {
-          return workspacesBuilder_.getMessageOrBuilder();
+      public com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder getWorkspaceOrBuilder() {
+        if (workspaceBuilder_ != null) {
+          return workspaceBuilder_.getMessageOrBuilder();
         } else {
-          return workspaces_ == null ?
-              com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspaces_;
+          return workspace_ == null ?
+              com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.getDefaultInstance() : workspace_;
         }
       }
       /**
-       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspaces = 1 [json_name = "workspaces"];</code>
+       * <code>.aruna.api.storage.services.v2.WorkspaceInfo workspace = 1 [json_name = "workspace"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder> 
-          getWorkspacesFieldBuilder() {
-        if (workspacesBuilder_ == null) {
-          workspacesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getWorkspaceFieldBuilder() {
+        if (workspaceBuilder_ == null) {
+          workspaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfo.Builder, com.aruna.api.storage.services.v2.WorkspaceServiceProto.WorkspaceInfoOrBuilder>(
-                  getWorkspaces(),
+                  getWorkspace(),
                   getParentForChildren(),
                   isClean());
-          workspaces_ = null;
+          workspace_ = null;
         }
-        return workspacesBuilder_;
+        return workspaceBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10473,72 +10473,72 @@ public final class WorkspaceServiceProto {
       "CreateWorkspaceTemplateResponse\022\037\n\013templ" +
       "ate_id\030\001 \001(\tR\ntemplateId\">\n\033GetWorkspace" +
       "TemplateRequest\022\037\n\013template_id\030\001 \001(\tR\nte" +
-      "mplateId\"l\n\034GetWorkspaceTemplateResponse" +
-      "\022L\n\nworkspaces\030\001 \001(\0132,.aruna.api.storage" +
-      ".services.v2.WorkspaceInfoR\nworkspaces\"A" +
-      "\n\036DeleteWorkspaceTemplateRequest\022\037\n\013temp" +
-      "late_id\030\001 \001(\tR\ntemplateId\"!\n\037DeleteWorks" +
-      "paceTemplateResponse\"$\n\"ListOwnedWorkspa" +
-      "ceTemplatesRequest\"s\n#ListOwnedWorkspace" +
-      "TemplatesResponse\022L\n\nworkspaces\030\001 \003(\0132,." +
-      "aruna.api.storage.services.v2.WorkspaceI" +
-      "nfoR\nworkspaces\"\324\001\n\rWorkspaceInfo\022!\n\014wor" +
-      "kspace_id\030\001 \001(\tR\013workspaceId\022\022\n\004name\030\002 \001" +
-      "(\tR\004name\022 \n\013description\030\003 \001(\tR\013descripti" +
-      "on\022\024\n\005owner\030\004 \001(\tR\005owner\022\026\n\006prefix\030\005 \001(\t" +
-      "R\006prefix\022\031\n\010hook_ids\030\006 \001(\tR\007hookIds\022!\n\014e" +
-      "ndpoint_ids\030\007 \001(\tR\013endpointIds\"i\n\026Create" +
-      "WorkspaceRequest\022-\n\022workspace_template\030\001" +
-      " \001(\tR\021workspaceTemplate\022 \n\013description\030\002" +
-      " \001(\tR\013description\"\220\001\n\027CreateWorkspaceRes" +
-      "ponse\022!\n\014workspace_id\030\001 \001(\tR\013workspaceId" +
-      "\022\024\n\005token\030\002 \001(\tR\005token\022\035\n\naccess_key\030\003 \001" +
-      "(\tR\taccessKey\022\035\n\nsecret_key\030\004 \001(\tR\tsecre" +
-      "tKey\";\n\026DeleteWorkspaceRequest\022!\n\014worksp" +
-      "ace_id\030\001 \001(\tR\013workspaceId\"\031\n\027DeleteWorks" +
-      "paceResponse\"P\n\025ClaimWorkspaceRequest\022!\n" +
-      "\014workspace_id\030\001 \001(\tR\013workspaceId\022\024\n\005toke" +
-      "n\030\002 \001(\tR\005token\"\030\n\026ClaimWorkspaceResponse" +
-      "2\241\n\n\020WorkspaceService\022\273\001\n\027CreateWorkspac" +
-      "eTemplate\022=.aruna.api.storage.services.v" +
-      "2.CreateWorkspaceTemplateRequest\032>.aruna" +
-      ".api.storage.services.v2.CreateWorkspace" +
-      "TemplateResponse\"!\202\323\344\223\002\033\"\026/v2/workspace/" +
-      "template:\001*\022\300\001\n\024GetWorkspaceTemplate\022:.a" +
-      "runa.api.storage.services.v2.GetWorkspac" +
-      "eTemplateRequest\032;.aruna.api.storage.ser" +
-      "vices.v2.GetWorkspaceTemplateResponse\"/\202" +
-      "\323\344\223\002)\022$/v2/workspace/template/{template_" +
-      "id}:\001*\022\307\001\n\033ListOwnedWorkspaceTemplates\022A" +
-      ".aruna.api.storage.services.v2.ListOwned" +
-      "WorkspaceTemplatesRequest\032B.aruna.api.st" +
-      "orage.services.v2.ListOwnedWorkspaceTemp" +
-      "latesResponse\"!\202\323\344\223\002\033\022\026/v2/workspace/tem" +
-      "plate:\001*\022\311\001\n\027DeleteWorkspaceTemplate\022=.a" +
+      "mplateId\"j\n\034GetWorkspaceTemplateResponse" +
+      "\022J\n\tworkspace\030\001 \001(\0132,.aruna.api.storage." +
+      "services.v2.WorkspaceInfoR\tworkspace\"A\n\036" +
+      "DeleteWorkspaceTemplateRequest\022\037\n\013templa" +
+      "te_id\030\001 \001(\tR\ntemplateId\"!\n\037DeleteWorkspa" +
+      "ceTemplateResponse\"$\n\"ListOwnedWorkspace" +
+      "TemplatesRequest\"s\n#ListOwnedWorkspaceTe" +
+      "mplatesResponse\022L\n\nworkspaces\030\001 \003(\0132,.ar" +
+      "una.api.storage.services.v2.WorkspaceInf" +
+      "oR\nworkspaces\"\324\001\n\rWorkspaceInfo\022!\n\014works" +
+      "pace_id\030\001 \001(\tR\013workspaceId\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\022 \n\013description\030\003 \001(\tR\013description" +
+      "\022\024\n\005owner\030\004 \001(\tR\005owner\022\026\n\006prefix\030\005 \001(\tR\006" +
+      "prefix\022\031\n\010hook_ids\030\006 \001(\tR\007hookIds\022!\n\014end" +
+      "point_ids\030\007 \001(\tR\013endpointIds\"i\n\026CreateWo" +
+      "rkspaceRequest\022-\n\022workspace_template\030\001 \001" +
+      "(\tR\021workspaceTemplate\022 \n\013description\030\002 \001" +
+      "(\tR\013description\"\220\001\n\027CreateWorkspaceRespo" +
+      "nse\022!\n\014workspace_id\030\001 \001(\tR\013workspaceId\022\024" +
+      "\n\005token\030\002 \001(\tR\005token\022\035\n\naccess_key\030\003 \001(\t" +
+      "R\taccessKey\022\035\n\nsecret_key\030\004 \001(\tR\tsecretK" +
+      "ey\";\n\026DeleteWorkspaceRequest\022!\n\014workspac" +
+      "e_id\030\001 \001(\tR\013workspaceId\"\031\n\027DeleteWorkspa" +
+      "ceResponse\"P\n\025ClaimWorkspaceRequest\022!\n\014w" +
+      "orkspace_id\030\001 \001(\tR\013workspaceId\022\024\n\005token\030" +
+      "\002 \001(\tR\005token\"\030\n\026ClaimWorkspaceResponse2\233" +
+      "\n\n\020WorkspaceService\022\273\001\n\027CreateWorkspaceT" +
+      "emplate\022=.aruna.api.storage.services.v2." +
+      "CreateWorkspaceTemplateRequest\032>.aruna.a" +
+      "pi.storage.services.v2.CreateWorkspaceTe" +
+      "mplateResponse\"!\202\323\344\223\002\033\"\026/v2/workspace/te" +
+      "mplate:\001*\022\275\001\n\024GetWorkspaceTemplate\022:.aru" +
+      "na.api.storage.services.v2.GetWorkspaceT" +
+      "emplateRequest\032;.aruna.api.storage.servi" +
+      "ces.v2.GetWorkspaceTemplateResponse\",\202\323\344" +
+      "\223\002&\022$/v2/workspace/template/{template_id" +
+      "}\022\304\001\n\033ListOwnedWorkspaceTemplates\022A.arun" +
+      "a.api.storage.services.v2.ListOwnedWorks" +
+      "paceTemplatesRequest\032B.aruna.api.storage" +
+      ".services.v2.ListOwnedWorkspaceTemplates" +
+      "Response\"\036\202\323\344\223\002\030\022\026/v2/workspace/template" +
+      "\022\311\001\n\027DeleteWorkspaceTemplate\022=.aruna.api" +
+      ".storage.services.v2.DeleteWorkspaceTemp" +
+      "lateRequest\032>.aruna.api.storage.services" +
+      ".v2.DeleteWorkspaceTemplateResponse\"/\202\323\344" +
+      "\223\002)*$/v2/workspace/template/{template_id" +
+      "}:\001*\022\232\001\n\017CreateWorkspace\0225.aruna.api.sto" +
+      "rage.services.v2.CreateWorkspaceRequest\032" +
+      "6.aruna.api.storage.services.v2.CreateWo" +
+      "rkspaceResponse\"\030\202\323\344\223\002\022\"\r/v2/workspace:\001" +
+      "*\022\251\001\n\017DeleteWorkspace\0225.aruna.api.storag" +
+      "e.services.v2.DeleteWorkspaceRequest\0326.a" +
       "runa.api.storage.services.v2.DeleteWorks" +
-      "paceTemplateRequest\032>.aruna.api.storage." +
-      "services.v2.DeleteWorkspaceTemplateRespo" +
-      "nse\"/\202\323\344\223\002)*$/v2/workspace/template/{tem" +
-      "plate_id}:\001*\022\232\001\n\017CreateWorkspace\0225.aruna" +
-      ".api.storage.services.v2.CreateWorkspace" +
-      "Request\0326.aruna.api.storage.services.v2." +
-      "CreateWorkspaceResponse\"\030\202\323\344\223\002\022\"\r/v2/wor" +
-      "kspace:\001*\022\251\001\n\017DeleteWorkspace\0225.aruna.ap" +
-      "i.storage.services.v2.DeleteWorkspaceReq" +
-      "uest\0326.aruna.api.storage.services.v2.Del" +
-      "eteWorkspaceResponse\"\'\202\323\344\223\002!*\034/v2/worksp" +
-      "ace/{workspace_id}:\001*\022\254\001\n\016ClaimWorkspace" +
-      "\0224.aruna.api.storage.services.v2.ClaimWo" +
-      "rkspaceRequest\0325.aruna.api.storage.servi" +
-      "ces.v2.ClaimWorkspaceResponse\"-\202\323\344\223\002\'\"\"/" +
-      "v2/workspace/{workspace_id}/claim:\001*B\221\002\n" +
-      "!com.aruna.api.storage.services.v2B\025Work" +
-      "spaceServiceProtoP\000Z<github.com/ArunaSto" +
-      "rage/go-api/aruna/api/storage/services/v" +
-      "2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2" +
-      "\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna" +
-      "\\Api\\Storage\\Services\\V2\\GPBMetadata\352\002!A" +
-      "runa::Api::Storage::Services::V2b\006proto3"
+      "paceResponse\"\'\202\323\344\223\002!*\034/v2/workspace/{wor" +
+      "kspace_id}:\001*\022\254\001\n\016ClaimWorkspace\0224.aruna" +
+      ".api.storage.services.v2.ClaimWorkspaceR" +
+      "equest\0325.aruna.api.storage.services.v2.C" +
+      "laimWorkspaceResponse\"-\202\323\344\223\002\'\"\"/v2/works" +
+      "pace/{workspace_id}/claim:\001*B\221\002\n!com.aru" +
+      "na.api.storage.services.v2B\025WorkspaceSer" +
+      "viceProtoP\000Z<github.com/ArunaStorage/go-" +
+      "api/aruna/api/storage/services/v2\242\002\004AASS" +
+      "\252\002\035Aruna.Api.Storage.Services.V2\312\002\035Aruna" +
+      "\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api\\Sto" +
+      "rage\\Services\\V2\\GPBMetadata\352\002!Aruna::Ap" +
+      "i::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10568,7 +10568,7 @@ public final class WorkspaceServiceProto {
     internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetWorkspaceTemplateResponse_descriptor,
-        new java.lang.String[] { "Workspaces", });
+        new java.lang.String[] { "Workspace", });
     internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_aruna_api_storage_services_v2_DeleteWorkspaceTemplateRequest_fieldAccessorTable = new

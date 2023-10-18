@@ -1045,12 +1045,24 @@ public final class BundlerServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bundleId.
+     */
+    java.lang.String getBundleId();
+    /**
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bytes for bundleId.
+     */
+    com.google.protobuf.ByteString
+        getBundleIdBytes();
+
+    /**
+     * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
      * @return The bundleUrl.
      */
     java.lang.String getBundleUrl();
     /**
-     * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+     * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
      * @return The bytes for bundleUrl.
      */
     com.google.protobuf.ByteString
@@ -1069,6 +1081,7 @@ public final class BundlerServiceProto {
       super(builder);
     }
     private CreateBundleResponse() {
+      bundleId_ = "";
       bundleUrl_ = "";
     }
 
@@ -1092,11 +1105,50 @@ public final class BundlerServiceProto {
               com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse.class, com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse.Builder.class);
     }
 
-    public static final int BUNDLE_URL_FIELD_NUMBER = 1;
+    public static final int BUNDLE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bundleId_ = "";
+    /**
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bundleId.
+     */
+    @java.lang.Override
+    public java.lang.String getBundleId() {
+      java.lang.Object ref = bundleId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bundleId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+     * @return The bytes for bundleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBundleIdBytes() {
+      java.lang.Object ref = bundleId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bundleId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUNDLE_URL_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object bundleUrl_ = "";
     /**
-     * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+     * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
      * @return The bundleUrl.
      */
     @java.lang.Override
@@ -1113,7 +1165,7 @@ public final class BundlerServiceProto {
       }
     }
     /**
-     * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+     * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
      * @return The bytes for bundleUrl.
      */
     @java.lang.Override
@@ -1145,8 +1197,11 @@ public final class BundlerServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bundleId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleUrl_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bundleUrl_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bundleUrl_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1157,8 +1212,11 @@ public final class BundlerServiceProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bundleId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bundleUrl_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bundleUrl_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bundleUrl_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1175,6 +1233,8 @@ public final class BundlerServiceProto {
       }
       com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse other = (com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse) obj;
 
+      if (!getBundleId()
+          .equals(other.getBundleId())) return false;
       if (!getBundleUrl()
           .equals(other.getBundleUrl())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1188,6 +1248,8 @@ public final class BundlerServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUNDLE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBundleId().hashCode();
       hash = (37 * hash) + BUNDLE_URL_FIELD_NUMBER;
       hash = (53 * hash) + getBundleUrl().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1321,6 +1383,7 @@ public final class BundlerServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        bundleId_ = "";
         bundleUrl_ = "";
         return this;
       }
@@ -1356,6 +1419,9 @@ public final class BundlerServiceProto {
       private void buildPartial0(com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bundleId_ = bundleId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bundleUrl_ = bundleUrl_;
         }
       }
@@ -1372,9 +1438,14 @@ public final class BundlerServiceProto {
 
       public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse other) {
         if (other == com.aruna.api.dataproxy.services.v2.BundlerServiceProto.CreateBundleResponse.getDefaultInstance()) return this;
+        if (!other.getBundleId().isEmpty()) {
+          bundleId_ = other.bundleId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (!other.getBundleUrl().isEmpty()) {
           bundleUrl_ = other.bundleUrl_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1404,10 +1475,15 @@ public final class BundlerServiceProto {
                 done = true;
                 break;
               case 10: {
-                bundleUrl_ = input.readStringRequireUtf8();
+                bundleId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                bundleUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1425,9 +1501,81 @@ public final class BundlerServiceProto {
       }
       private int bitField0_;
 
+      private java.lang.Object bundleId_ = "";
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @return The bundleId.
+       */
+      public java.lang.String getBundleId() {
+        java.lang.Object ref = bundleId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bundleId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @return The bytes for bundleId.
+       */
+      public com.google.protobuf.ByteString
+          getBundleIdBytes() {
+        java.lang.Object ref = bundleId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bundleId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @param value The bundleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBundleId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bundleId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBundleId() {
+        bundleId_ = getDefaultInstance().getBundleId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bundle_id = 1 [json_name = "bundleId"];</code>
+       * @param value The bytes for bundleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBundleIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bundleId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object bundleUrl_ = "";
       /**
-       * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+       * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
        * @return The bundleUrl.
        */
       public java.lang.String getBundleUrl() {
@@ -1443,7 +1591,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+       * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
        * @return The bytes for bundleUrl.
        */
       public com.google.protobuf.ByteString
@@ -1460,7 +1608,7 @@ public final class BundlerServiceProto {
         }
       }
       /**
-       * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+       * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
        * @param value The bundleUrl to set.
        * @return This builder for chaining.
        */
@@ -1468,22 +1616,22 @@ public final class BundlerServiceProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         bundleUrl_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+       * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBundleUrl() {
         bundleUrl_ = getDefaultInstance().getBundleUrl();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string bundle_url = 1 [json_name = "bundleUrl"];</code>
+       * <code>string bundle_url = 2 [json_name = "bundleUrl"];</code>
        * @param value The bytes for bundleUrl to set.
        * @return This builder for chaining.
        */
@@ -1492,7 +1640,7 @@ public final class BundlerServiceProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         bundleUrl_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2481,25 +2629,26 @@ public final class BundlerServiceProto {
       "teBundleRequest\022\037\n\013resource_id\030\001 \003(\tR\nre" +
       "sourceId\022\032\n\010filename\030\002 \001(\tR\010filename\0229\n\n" +
       "expires_at\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tampR\texpiresAt\"5\n\024CreateBundleResponse\022" +
-      "\035\n\nbundle_url\030\001 \001(\tR\tbundleUrl\"2\n\023Delete" +
-      "BundleRequest\022\033\n\tbundle_id\030\001 \001(\tR\010bundle" +
-      "Id\"\026\n\024DeleteBundleResponse2\272\002\n\016BundlerSe" +
-      "rvice\022\222\001\n\014CreateBundle\0224.aruna.api.datap" +
-      "roxy.services.v2.CreateBundleRequest\0325.a" +
-      "runa.api.dataproxy.services.v2.CreateBun" +
-      "dleResponse\"\025\202\323\344\223\002\017\"\n/v2/bundle:\001*\022\222\001\n\014D" +
-      "eleteBundle\0224.aruna.api.dataproxy.servic" +
-      "es.v2.DeleteBundleRequest\0325.aruna.api.da" +
-      "taproxy.services.v2.DeleteBundleResponse" +
-      "\"\025\202\323\344\223\002\017*\n/v2/bundle:\001*B\233\002\n#com.aruna.ap" +
-      "i.dataproxy.services.v2B\023BundlerServiceP" +
-      "rotoP\000Z>github.com/ArunaStorage/go-api/a" +
-      "runa/api/dataproxy/services/v2\242\002\004AADS\252\002\037" +
-      "Aruna.Api.Dataproxy.Services.V2\312\002\037Aruna\\" +
-      "Api\\Dataproxy\\Services\\V2\342\002+Aruna\\Api\\Da" +
-      "taproxy\\Services\\V2\\GPBMetadata\352\002#Aruna:" +
-      ":Api::Dataproxy::Services::V2b\006proto3"
+      "tampR\texpiresAt\"R\n\024CreateBundleResponse\022" +
+      "\033\n\tbundle_id\030\001 \001(\tR\010bundleId\022\035\n\nbundle_u" +
+      "rl\030\002 \001(\tR\tbundleUrl\"2\n\023DeleteBundleReque" +
+      "st\022\033\n\tbundle_id\030\001 \001(\tR\010bundleId\"\026\n\024Delet" +
+      "eBundleResponse2\272\002\n\016BundlerService\022\222\001\n\014C" +
+      "reateBundle\0224.aruna.api.dataproxy.servic" +
+      "es.v2.CreateBundleRequest\0325.aruna.api.da" +
+      "taproxy.services.v2.CreateBundleResponse" +
+      "\"\025\202\323\344\223\002\017\"\n/v2/bundle:\001*\022\222\001\n\014DeleteBundle" +
+      "\0224.aruna.api.dataproxy.services.v2.Delet" +
+      "eBundleRequest\0325.aruna.api.dataproxy.ser" +
+      "vices.v2.DeleteBundleResponse\"\025\202\323\344\223\002\017*\n/" +
+      "v2/bundle:\001*B\233\002\n#com.aruna.api.dataproxy" +
+      ".services.v2B\023BundlerServiceProtoP\000Z>git" +
+      "hub.com/ArunaStorage/go-api/aruna/api/da" +
+      "taproxy/services/v2\242\002\004AADS\252\002\037Aruna.Api.D" +
+      "ataproxy.Services.V2\312\002\037Aruna\\Api\\Datapro" +
+      "xy\\Services\\V2\342\002+Aruna\\Api\\Dataproxy\\Ser" +
+      "vices\\V2\\GPBMetadata\352\002#Aruna::Api::Datap" +
+      "roxy::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2518,7 +2667,7 @@ public final class BundlerServiceProto {
     internal_static_aruna_api_dataproxy_services_v2_CreateBundleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_dataproxy_services_v2_CreateBundleResponse_descriptor,
-        new java.lang.String[] { "BundleUrl", });
+        new java.lang.String[] { "BundleId", "BundleUrl", });
     internal_static_aruna_api_dataproxy_services_v2_DeleteBundleRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_aruna_api_dataproxy_services_v2_DeleteBundleRequest_fieldAccessorTable = new

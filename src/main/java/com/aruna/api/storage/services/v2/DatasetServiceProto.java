@@ -13277,53 +13277,53 @@ public final class DatasetServiceProto {
       "\n\ndataset_id\030\001 \001(\tR\tdatasetId\"Y\n\027Snapsho" +
       "tDatasetResponse\022>\n\007dataset\030\001 \001(\0132$.arun" +
       "a.api.storage.models.v2.DatasetR\007dataset" +
-      "2\253\014\n\016DatasetService\022\222\001\n\rCreateDataset\0223." +
+      "2\252\014\n\016DatasetService\022\222\001\n\rCreateDataset\0223." +
       "aruna.api.storage.services.v2.CreateData" +
       "setRequest\0324.aruna.api.storage.services." +
       "v2.CreateDatasetResponse\"\026\202\323\344\223\002\020\"\013/v2/da" +
       "taset:\001*\022\223\001\n\nGetDataset\0220.aruna.api.stor" +
       "age.services.v2.GetDatasetRequest\0321.arun" +
       "a.api.storage.services.v2.GetDatasetResp" +
-      "onse\" \202\323\344\223\002\032\022\030/v2/dataset/{dataset_id}\022\213" +
+      "onse\" \202\323\344\223\002\032\022\030/v2/dataset/{dataset_id}\022\212" +
       "\001\n\013GetDatasets\0221.aruna.api.storage.servi" +
       "ces.v2.GetDatasetsRequest\0322.aruna.api.st" +
-      "orage.services.v2.GetDatasetsResponse\"\025\202" +
-      "\323\344\223\002\017\022\r/v2/datasets/\022\234\001\n\rDeleteDataset\0223" +
-      ".aruna.api.storage.services.v2.DeleteDat" +
-      "asetRequest\0324.aruna.api.storage.services" +
-      ".v2.DeleteDatasetResponse\" \202\323\344\223\002\032*\030/v2/d" +
-      "ataset/{dataset_id}\022\260\001\n\021UpdateDatasetNam" +
-      "e\0227.aruna.api.storage.services.v2.Update" +
-      "DatasetNameRequest\0328.aruna.api.storage.s" +
-      "ervices.v2.UpdateDatasetNameResponse\"(\202\323" +
-      "\344\223\002\"2\035/v2/dataset/{dataset_id}/name:\001*\022\314" +
-      "\001\n\030UpdateDatasetDescription\022>.aruna.api." +
-      "storage.services.v2.UpdateDatasetDescrip" +
-      "tionRequest\032?.aruna.api.storage.services" +
-      ".v2.UpdateDatasetDescriptionResponse\"/\202\323" +
-      "\344\223\002)2$/v2/dataset/{dataset_id}/descripti" +
-      "on:\001*\022\305\001\n\026UpdateDatasetKeyValues\022<.aruna" +
-      ".api.storage.services.v2.UpdateDatasetKe" +
-      "yValuesRequest\032=.aruna.api.storage.servi" +
-      "ces.v2.UpdateDatasetKeyValuesResponse\".\202" +
-      "\323\344\223\002(2#/v2/dataset/{dataset_id}/key_valu" +
-      "es:\001*\022\305\001\n\026UpdateDatasetDataClass\022<.aruna" +
-      ".api.storage.services.v2.UpdateDatasetDa" +
-      "taClassRequest\032=.aruna.api.storage.servi" +
-      "ces.v2.UpdateDatasetDataClassResponse\".\202" +
-      "\323\344\223\002(2#/v2/dataset/{dataset_id}/data_cla" +
-      "ss:\001*\022\256\001\n\017SnapshotDataset\0225.aruna.api.st" +
-      "orage.services.v2.SnapshotDatasetRequest" +
-      "\0326.aruna.api.storage.services.v2.Snapsho" +
-      "tDatasetResponse\",\202\323\344\223\002&\"!/v2/dataset/{d" +
-      "ataset_id}/snapshot:\001*B\217\002\n!com.aruna.api" +
-      ".storage.services.v2B\023DatasetServiceProt" +
-      "oP\000Z<github.com/ArunaStorage/go-api/arun" +
-      "a/api/storage/services/v2\242\002\004AASS\252\002\035Aruna" +
-      ".Api.Storage.Services.V2\312\002\035Aruna\\Api\\Sto" +
-      "rage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Ser" +
-      "vices\\V2\\GPBMetadata\352\002!Aruna::Api::Stora" +
-      "ge::Services::V2b\006proto3"
+      "orage.services.v2.GetDatasetsResponse\"\024\202" +
+      "\323\344\223\002\016\022\014/v2/datasets\022\234\001\n\rDeleteDataset\0223." +
+      "aruna.api.storage.services.v2.DeleteData" +
+      "setRequest\0324.aruna.api.storage.services." +
+      "v2.DeleteDatasetResponse\" \202\323\344\223\002\032*\030/v2/da" +
+      "taset/{dataset_id}\022\260\001\n\021UpdateDatasetName" +
+      "\0227.aruna.api.storage.services.v2.UpdateD" +
+      "atasetNameRequest\0328.aruna.api.storage.se" +
+      "rvices.v2.UpdateDatasetNameResponse\"(\202\323\344" +
+      "\223\002\"2\035/v2/dataset/{dataset_id}/name:\001*\022\314\001" +
+      "\n\030UpdateDatasetDescription\022>.aruna.api.s" +
+      "torage.services.v2.UpdateDatasetDescript" +
+      "ionRequest\032?.aruna.api.storage.services." +
+      "v2.UpdateDatasetDescriptionResponse\"/\202\323\344" +
+      "\223\002)2$/v2/dataset/{dataset_id}/descriptio" +
+      "n:\001*\022\305\001\n\026UpdateDatasetKeyValues\022<.aruna." +
+      "api.storage.services.v2.UpdateDatasetKey" +
+      "ValuesRequest\032=.aruna.api.storage.servic" +
+      "es.v2.UpdateDatasetKeyValuesResponse\".\202\323" +
+      "\344\223\002(2#/v2/dataset/{dataset_id}/key_value" +
+      "s:\001*\022\305\001\n\026UpdateDatasetDataClass\022<.aruna." +
+      "api.storage.services.v2.UpdateDatasetDat" +
+      "aClassRequest\032=.aruna.api.storage.servic" +
+      "es.v2.UpdateDatasetDataClassResponse\".\202\323" +
+      "\344\223\002(2#/v2/dataset/{dataset_id}/data_clas" +
+      "s:\001*\022\256\001\n\017SnapshotDataset\0225.aruna.api.sto" +
+      "rage.services.v2.SnapshotDatasetRequest\032" +
+      "6.aruna.api.storage.services.v2.Snapshot" +
+      "DatasetResponse\",\202\323\344\223\002&\"!/v2/dataset/{da" +
+      "taset_id}/snapshot:\001*B\217\002\n!com.aruna.api." +
+      "storage.services.v2B\023DatasetServiceProto" +
+      "P\000Z<github.com/ArunaStorage/go-api/aruna" +
+      "/api/storage/services/v2\242\002\004AASS\252\002\035Aruna." +
+      "Api.Storage.Services.V2\312\002\035Aruna\\Api\\Stor" +
+      "age\\Services\\V2\342\002)Aruna\\Api\\Storage\\Serv" +
+      "ices\\V2\\GPBMetadata\352\002!Aruna::Api::Storag" +
+      "e::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

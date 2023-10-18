@@ -13090,7 +13090,7 @@ public final class CollectionServiceProto {
       "\n\rcollection_id\030\001 \001(\tR\014collectionId\"e\n\032S" +
       "napshotCollectionResponse\022G\n\ncollection\030" +
       "\001 \001(\0132\'.aruna.api.storage.models.v2.Coll" +
-      "ectionR\ncollection2\257\r\n\021CollectionService" +
+      "ectionR\ncollection2\256\r\n\021CollectionService" +
       "\022\236\001\n\020CreateCollection\0226.aruna.api.storag" +
       "e.services.v2.CreateCollectionRequest\0327." +
       "aruna.api.storage.services.v2.CreateColl" +
@@ -13099,48 +13099,48 @@ public final class CollectionServiceProto {
       "services.v2.GetCollectionRequest\0324.aruna" +
       ".api.storage.services.v2.GetCollectionRe" +
       "sponse\"&\202\323\344\223\002 \022\036/v2/collection/{collecti" +
-      "on_id}\022\227\001\n\016GetCollections\0224.aruna.api.st" +
+      "on_id}\022\226\001\n\016GetCollections\0224.aruna.api.st" +
       "orage.services.v2.GetCollectionsRequest\032" +
       "5.aruna.api.storage.services.v2.GetColle" +
-      "ctionsResponse\"\030\202\323\344\223\002\022\022\020/v2/collections/" +
-      "\022\253\001\n\020DeleteCollection\0226.aruna.api.storag" +
-      "e.services.v2.DeleteCollectionRequest\0327." +
-      "aruna.api.storage.services.v2.DeleteColl" +
-      "ectionResponse\"&\202\323\344\223\002 *\036/v2/collection/{" +
-      "collection_id}\022\277\001\n\024UpdateCollectionName\022" +
-      ":.aruna.api.storage.services.v2.UpdateCo" +
-      "llectionNameRequest\032;.aruna.api.storage." +
-      "services.v2.UpdateCollectionNameResponse" +
-      "\".\202\323\344\223\002(2#/v2/collection/{collection_id}" +
-      "/name:\001*\022\333\001\n\033UpdateCollectionDescription" +
-      "\022A.aruna.api.storage.services.v2.UpdateC" +
-      "ollectionDescriptionRequest\032B.aruna.api." +
-      "storage.services.v2.UpdateCollectionDesc" +
-      "riptionResponse\"5\202\323\344\223\002/2*/v2/collection/" +
-      "{collection_id}/description:\001*\022\324\001\n\031Updat" +
-      "eCollectionKeyValues\022?.aruna.api.storage" +
-      ".services.v2.UpdateCollectionKeyValuesRe" +
-      "quest\032@.aruna.api.storage.services.v2.Up" +
-      "dateCollectionKeyValuesResponse\"4\202\323\344\223\002.2" +
-      ")/v2/collection/{collection_id}/key_valu" +
-      "es:\001*\022\324\001\n\031UpdateCollectionDataClass\022?.ar" +
-      "una.api.storage.services.v2.UpdateCollec" +
-      "tionDataClassRequest\032@.aruna.api.storage" +
-      ".services.v2.UpdateCollectionDataClassRe" +
-      "sponse\"4\202\323\344\223\002.2)/v2/collection/{collecti" +
-      "on_id}/data_class:\001*\022\275\001\n\022SnapshotCollect" +
-      "ion\0228.aruna.api.storage.services.v2.Snap" +
-      "shotCollectionRequest\0329.aruna.api.storag" +
-      "e.services.v2.SnapshotCollectionResponse" +
-      "\"2\202\323\344\223\002,\"\'/v2/collection/{collection_id}" +
-      "/snapshot:\001*B\222\002\n!com.aruna.api.storage.s" +
-      "ervices.v2B\026CollectionServiceProtoP\000Z<gi" +
-      "thub.com/ArunaStorage/go-api/aruna/api/s" +
-      "torage/services/v2\242\002\004AASS\252\002\035Aruna.Api.St" +
-      "orage.Services.V2\312\002\035Aruna\\Api\\Storage\\Se" +
-      "rvices\\V2\342\002)Aruna\\Api\\Storage\\Services\\V" +
-      "2\\GPBMetadata\352\002!Aruna::Api::Storage::Ser" +
-      "vices::V2b\006proto3"
+      "ctionsResponse\"\027\202\323\344\223\002\021\022\017/v2/collections\022" +
+      "\253\001\n\020DeleteCollection\0226.aruna.api.storage" +
+      ".services.v2.DeleteCollectionRequest\0327.a" +
+      "runa.api.storage.services.v2.DeleteColle" +
+      "ctionResponse\"&\202\323\344\223\002 *\036/v2/collection/{c" +
+      "ollection_id}\022\277\001\n\024UpdateCollectionName\022:" +
+      ".aruna.api.storage.services.v2.UpdateCol" +
+      "lectionNameRequest\032;.aruna.api.storage.s" +
+      "ervices.v2.UpdateCollectionNameResponse\"" +
+      ".\202\323\344\223\002(2#/v2/collection/{collection_id}/" +
+      "name:\001*\022\333\001\n\033UpdateCollectionDescription\022" +
+      "A.aruna.api.storage.services.v2.UpdateCo" +
+      "llectionDescriptionRequest\032B.aruna.api.s" +
+      "torage.services.v2.UpdateCollectionDescr" +
+      "iptionResponse\"5\202\323\344\223\002/2*/v2/collection/{" +
+      "collection_id}/description:\001*\022\324\001\n\031Update" +
+      "CollectionKeyValues\022?.aruna.api.storage." +
+      "services.v2.UpdateCollectionKeyValuesReq" +
+      "uest\032@.aruna.api.storage.services.v2.Upd" +
+      "ateCollectionKeyValuesResponse\"4\202\323\344\223\002.2)" +
+      "/v2/collection/{collection_id}/key_value" +
+      "s:\001*\022\324\001\n\031UpdateCollectionDataClass\022?.aru" +
+      "na.api.storage.services.v2.UpdateCollect" +
+      "ionDataClassRequest\032@.aruna.api.storage." +
+      "services.v2.UpdateCollectionDataClassRes" +
+      "ponse\"4\202\323\344\223\002.2)/v2/collection/{collectio" +
+      "n_id}/data_class:\001*\022\275\001\n\022SnapshotCollecti" +
+      "on\0228.aruna.api.storage.services.v2.Snaps" +
+      "hotCollectionRequest\0329.aruna.api.storage" +
+      ".services.v2.SnapshotCollectionResponse\"" +
+      "2\202\323\344\223\002,\"\'/v2/collection/{collection_id}/" +
+      "snapshot:\001*B\222\002\n!com.aruna.api.storage.se" +
+      "rvices.v2B\026CollectionServiceProtoP\000Z<git" +
+      "hub.com/ArunaStorage/go-api/aruna/api/st" +
+      "orage/services/v2\242\002\004AASS\252\002\035Aruna.Api.Sto" +
+      "rage.Services.V2\312\002\035Aruna\\Api\\Storage\\Ser" +
+      "vices\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2" +
+      "\\GPBMetadata\352\002!Aruna::Api::Storage::Serv" +
+      "ices::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
