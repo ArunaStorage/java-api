@@ -7245,14 +7245,14 @@ public final class AuthorizationServiceProto {
       ".services.v2.UpdateAuthorizationRequest\032" +
       ":.aruna.api.storage.services.v2.UpdateAu" +
       "thorizationResponse\"\023\202\323\344\223\002\r2\010/v2/auth:\001*" +
-      "B\225\002\n!com.aruna.api.storage.services.v2B\031" +
-      "AuthorizationServiceProtoP\000Z<github.com/" +
-      "ArunaStorage/go-api/aruna/api/storage/se" +
-      "rvices/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Ser" +
-      "vices.V2\312\002\035Aruna\\Api\\Storage\\Services\\V2" +
-      "\342\002)Aruna\\Api\\Storage\\Services\\V2\\GPBMeta" +
-      "data\352\002!Aruna::Api::Storage::Services::V2" +
-      "b\006proto3"
+      "B\230\002\n!com.aruna.api.storage.services.v2B\031" +
+      "AuthorizationServiceProtoP\000Z?github.com/" +
+      "ArunaStorage/go-api/v2/aruna/api/storage" +
+      "/services/v2\242\002\004AASS\252\002\035Aruna.Api.Storage." +
+      "Services.V2\312\002\035Aruna\\Api\\Storage\\Services" +
+      "\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GPBM" +
+      "etadata\352\002!Aruna::Api::Storage::Services:" +
+      ":V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -298,6 +298,37 @@ public final class CollectionServiceGrpc {
     return getSnapshotCollectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest,
+      com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse> getUpdateCollectionLicensesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateCollectionLicenses",
+      requestType = com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest.class,
+      responseType = com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest,
+      com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse> getUpdateCollectionLicensesMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest, com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse> getUpdateCollectionLicensesMethod;
+    if ((getUpdateCollectionLicensesMethod = CollectionServiceGrpc.getUpdateCollectionLicensesMethod) == null) {
+      synchronized (CollectionServiceGrpc.class) {
+        if ((getUpdateCollectionLicensesMethod = CollectionServiceGrpc.getUpdateCollectionLicensesMethod) == null) {
+          CollectionServiceGrpc.getUpdateCollectionLicensesMethod = getUpdateCollectionLicensesMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest, com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCollectionLicenses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CollectionServiceMethodDescriptorSupplier("UpdateCollectionLicenses"))
+              .build();
+        }
+      }
+    }
+    return getUpdateCollectionLicensesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -457,6 +488,18 @@ public final class CollectionServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSnapshotCollectionMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the collections metadata license and/or default data license.
+     * </pre>
+     */
+    default void updateCollectionLicenses(com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCollectionLicensesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -610,6 +653,19 @@ public final class CollectionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSnapshotCollectionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the collections metadata license and/or default data license.
+     * </pre>
+     */
+    public void updateCollectionLicenses(com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateCollectionLicensesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -738,6 +794,18 @@ public final class CollectionServiceGrpc {
     public com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionResponse snapshotCollection(com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSnapshotCollectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the collections metadata license and/or default data license.
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse updateCollectionLicenses(com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateCollectionLicensesMethod(), getCallOptions(), request);
     }
   }
 
@@ -877,6 +945,19 @@ public final class CollectionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSnapshotCollectionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the collections metadata license and/or default data license.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse> updateCollectionLicenses(
+        com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateCollectionLicensesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_COLLECTION = 0;
@@ -888,6 +969,7 @@ public final class CollectionServiceGrpc {
   private static final int METHODID_UPDATE_COLLECTION_KEY_VALUES = 6;
   private static final int METHODID_UPDATE_COLLECTION_DATA_CLASS = 7;
   private static final int METHODID_SNAPSHOT_COLLECTION = 8;
+  private static final int METHODID_UPDATE_COLLECTION_LICENSES = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -941,6 +1023,10 @@ public final class CollectionServiceGrpc {
         case METHODID_SNAPSHOT_COLLECTION:
           serviceImpl.snapshotCollection((com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_COLLECTION_LICENSES:
+          serviceImpl.updateCollectionLicenses((com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1023,6 +1109,13 @@ public final class CollectionServiceGrpc {
               com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionRequest,
               com.aruna.api.storage.services.v2.CollectionServiceProto.SnapshotCollectionResponse>(
                 service, METHODID_SNAPSHOT_COLLECTION)))
+        .addMethod(
+          getUpdateCollectionLicensesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesRequest,
+              com.aruna.api.storage.services.v2.CollectionServiceProto.UpdateCollectionLicensesResponse>(
+                service, METHODID_UPDATE_COLLECTION_LICENSES)))
         .build();
   }
 
@@ -1080,6 +1173,7 @@ public final class CollectionServiceGrpc {
               .addMethod(getUpdateCollectionKeyValuesMethod())
               .addMethod(getUpdateCollectionDataClassMethod())
               .addMethod(getSnapshotCollectionMethod())
+              .addMethod(getUpdateCollectionLicensesMethod())
               .build();
         }
       }

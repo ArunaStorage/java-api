@@ -19110,6 +19110,1078 @@ public final class ModelsProto {
 
   }
 
+  public interface LicenseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.License)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * CC-BY-SA-4.0
+     * </pre>
+     *
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    java.lang.String getTag();
+    /**
+     * <pre>
+     * CC-BY-SA-4.0
+     * </pre>
+     *
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+
+    /**
+     * <pre>
+     * Creative Commons Attribution-ShareAlike 4.0 International
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Creative Commons Attribution-ShareAlike 4.0 International
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string text = 3 [json_name = "text"];</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <code>string text = 3 [json_name = "text"];</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * url is optional
+     * </pre>
+     *
+     * <code>string url = 4 [json_name = "url"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <pre>
+     * url is optional
+     * </pre>
+     *
+     * <code>string url = 4 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code aruna.api.storage.models.v2.License}
+   */
+  public static final class License extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aruna.api.storage.models.v2.License)
+      LicenseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use License.newBuilder() to construct.
+    private License(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private License() {
+      tag_ = "";
+      name_ = "";
+      text_ = "";
+      url_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new License();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_License_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_License_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.aruna.api.storage.models.v2.ModelsProto.License.class, com.aruna.api.storage.models.v2.ModelsProto.License.Builder.class);
+    }
+
+    public static final int TAG_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tag_ = "";
+    /**
+     * <pre>
+     * CC-BY-SA-4.0
+     * </pre>
+     *
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    @java.lang.Override
+    public java.lang.String getTag() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * CC-BY-SA-4.0
+     * </pre>
+     *
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Creative Commons Attribution-ShareAlike 4.0 International
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Creative Commons Attribution-ShareAlike 4.0 International
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
+    /**
+     * <code>string text = 3 [json_name = "text"];</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string text = 3 [json_name = "text"];</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object url_ = "";
+    /**
+     * <pre>
+     * url is optional
+     * </pre>
+     *
+     * <code>string url = 4 [json_name = "url"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * url is optional
+     * </pre>
+     *
+     * <code>string url = 4 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, text_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, url_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, text_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, url_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.aruna.api.storage.models.v2.ModelsProto.License)) {
+        return super.equals(obj);
+      }
+      com.aruna.api.storage.models.v2.ModelsProto.License other = (com.aruna.api.storage.models.v2.ModelsProto.License) obj;
+
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getTag().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.aruna.api.storage.models.v2.ModelsProto.License parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.aruna.api.storage.models.v2.ModelsProto.License prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code aruna.api.storage.models.v2.License}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aruna.api.storage.models.v2.License)
+        com.aruna.api.storage.models.v2.ModelsProto.LicenseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_License_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_License_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.aruna.api.storage.models.v2.ModelsProto.License.class, com.aruna.api.storage.models.v2.ModelsProto.License.Builder.class);
+      }
+
+      // Construct using com.aruna.api.storage.models.v2.ModelsProto.License.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tag_ = "";
+        name_ = "";
+        text_ = "";
+        url_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.internal_static_aruna_api_storage_models_v2_License_descriptor;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.License getDefaultInstanceForType() {
+        return com.aruna.api.storage.models.v2.ModelsProto.License.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.License build() {
+        com.aruna.api.storage.models.v2.ModelsProto.License result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.aruna.api.storage.models.v2.ModelsProto.License buildPartial() {
+        com.aruna.api.storage.models.v2.ModelsProto.License result = new com.aruna.api.storage.models.v2.ModelsProto.License(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.aruna.api.storage.models.v2.ModelsProto.License result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tag_ = tag_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.url_ = url_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.aruna.api.storage.models.v2.ModelsProto.License) {
+          return mergeFrom((com.aruna.api.storage.models.v2.ModelsProto.License)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.aruna.api.storage.models.v2.ModelsProto.License other) {
+        if (other == com.aruna.api.storage.models.v2.ModelsProto.License.getDefaultInstance()) return this;
+        if (!other.getTag().isEmpty()) {
+          tag_ = other.tag_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                text_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                url_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object tag_ = "";
+      /**
+       * <pre>
+       * CC-BY-SA-4.0
+       * </pre>
+       *
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @return The tag.
+       */
+      public java.lang.String getTag() {
+        java.lang.Object ref = tag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CC-BY-SA-4.0
+       * </pre>
+       *
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @return The bytes for tag.
+       */
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        java.lang.Object ref = tag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CC-BY-SA-4.0
+       * </pre>
+       *
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tag_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CC-BY-SA-4.0
+       * </pre>
+       *
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTag() {
+        tag_ = getDefaultInstance().getTag();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CC-BY-SA-4.0
+       * </pre>
+       *
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tag_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Creative Commons Attribution-ShareAlike 4.0 International
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Creative Commons Attribution-ShareAlike 4.0 International
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Creative Commons Attribution-ShareAlike 4.0 International
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Creative Commons Attribution-ShareAlike 4.0 International
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Creative Commons Attribution-ShareAlike 4.0 International
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>string text = 3 [json_name = "text"];</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string text = 3 [json_name = "text"];</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string text = 3 [json_name = "text"];</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        text_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 3 [json_name = "text"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 3 [json_name = "text"];</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        text_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <pre>
+       * url is optional
+       * </pre>
+       *
+       * <code>string url = 4 [json_name = "url"];</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * url is optional
+       * </pre>
+       *
+       * <code>string url = 4 [json_name = "url"];</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * url is optional
+       * </pre>
+       *
+       * <code>string url = 4 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        url_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * url is optional
+       * </pre>
+       *
+       * <code>string url = 4 [json_name = "url"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        url_ = getDefaultInstance().getUrl();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * url is optional
+       * </pre>
+       *
+       * <code>string url = 4 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        url_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aruna.api.storage.models.v2.License)
+    }
+
+    // @@protoc_insertion_point(class_scope:aruna.api.storage.models.v2.License)
+    private static final com.aruna.api.storage.models.v2.ModelsProto.License DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.aruna.api.storage.models.v2.ModelsProto.License();
+    }
+
+    public static com.aruna.api.storage.models.v2.ModelsProto.License getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<License>
+        PARSER = new com.google.protobuf.AbstractParser<License>() {
+      @java.lang.Override
+      public License parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<License> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<License> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.ModelsProto.License getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GenericResourceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aruna.api.storage.models.v2.GenericResource)
       com.google.protobuf.MessageOrBuilder {
@@ -20688,6 +21760,30 @@ public final class ModelsProto {
      */
     com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
         int index);
+
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    java.lang.String getMetadataLicenseTag();
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes();
+
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The defaultDataLicenseTag.
+     */
+    java.lang.String getDefaultDataLicenseTag();
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The bytes for defaultDataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getDefaultDataLicenseTagBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Project}
@@ -20711,6 +21807,8 @@ public final class ModelsProto {
       createdBy_ = "";
       status_ = 0;
       endpoints_ = java.util.Collections.emptyList();
+      metadataLicenseTag_ = "";
+      defaultDataLicenseTag_ = "";
     }
 
     @java.lang.Override
@@ -21167,6 +22265,84 @@ public final class ModelsProto {
       return endpoints_.get(index);
     }
 
+    public static final int METADATA_LICENSE_TAG_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metadataLicenseTag_ = "";
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataLicenseTag() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_DATA_LICENSE_TAG_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultDataLicenseTag_ = "";
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The defaultDataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultDataLicenseTag() {
+      java.lang.Object ref = defaultDataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultDataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The bytes for defaultDataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultDataLicenseTagBytes() {
+      java.lang.Object ref = defaultDataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultDataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21216,6 +22392,12 @@ public final class ModelsProto {
       }
       for (int i = 0; i < endpoints_.size(); i++) {
         output.writeMessage(12, endpoints_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, defaultDataLicenseTag_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -21270,6 +22452,12 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, endpoints_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, defaultDataLicenseTag_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21313,6 +22501,10 @@ public final class ModelsProto {
           != other.getDynamic()) return false;
       if (!getEndpointsList()
           .equals(other.getEndpointsList())) return false;
+      if (!getMetadataLicenseTag()
+          .equals(other.getMetadataLicenseTag())) return false;
+      if (!getDefaultDataLicenseTag()
+          .equals(other.getDefaultDataLicenseTag())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -21359,6 +22551,10 @@ public final class ModelsProto {
         hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
         hash = (53 * hash) + getEndpointsList().hashCode();
       }
+      hash = (37 * hash) + METADATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadataLicenseTag().hashCode();
+      hash = (37 * hash) + DEFAULT_DATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultDataLicenseTag().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -21528,6 +22724,8 @@ public final class ModelsProto {
           endpointsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000800);
+        metadataLicenseTag_ = "";
+        defaultDataLicenseTag_ = "";
         return this;
       }
 
@@ -21622,6 +22820,12 @@ public final class ModelsProto {
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.dynamic_ = dynamic_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.metadataLicenseTag_ = metadataLicenseTag_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.defaultDataLicenseTag_ = defaultDataLicenseTag_;
         }
       }
 
@@ -21750,6 +22954,16 @@ public final class ModelsProto {
             }
           }
         }
+        if (!other.getMetadataLicenseTag().isEmpty()) {
+          metadataLicenseTag_ = other.metadataLicenseTag_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        if (!other.getDefaultDataLicenseTag().isEmpty()) {
+          defaultDataLicenseTag_ = other.defaultDataLicenseTag_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -21864,6 +23078,16 @@ public final class ModelsProto {
                 }
                 break;
               } // case 98
+              case 106: {
+                metadataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                defaultDataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -23448,6 +24672,150 @@ public final class ModelsProto {
         }
         return endpointsBuilder_;
       }
+
+      private java.lang.Object metadataLicenseTag_ = "";
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return The metadataLicenseTag.
+       */
+      public java.lang.String getMetadataLicenseTag() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return The bytes for metadataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataLicenseTagBytes() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @param value The metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataLicenseTag() {
+        metadataLicenseTag_ = getDefaultInstance().getMetadataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @param value The bytes for metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultDataLicenseTag_ = "";
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return The defaultDataLicenseTag.
+       */
+      public java.lang.String getDefaultDataLicenseTag() {
+        java.lang.Object ref = defaultDataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultDataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return The bytes for defaultDataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultDataLicenseTagBytes() {
+        java.lang.Object ref = defaultDataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultDataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @param value The defaultDataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        defaultDataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultDataLicenseTag() {
+        defaultDataLicenseTag_ = getDefaultInstance().getDefaultDataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @param value The bytes for defaultDataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        defaultDataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -23757,6 +25125,30 @@ public final class ModelsProto {
      */
     com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
         int index);
+
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    java.lang.String getMetadataLicenseTag();
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes();
+
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The defaultDataLicenseTag.
+     */
+    java.lang.String getDefaultDataLicenseTag();
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The bytes for defaultDataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getDefaultDataLicenseTagBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Collection}
@@ -23780,6 +25172,8 @@ public final class ModelsProto {
       createdBy_ = "";
       status_ = 0;
       endpoints_ = java.util.Collections.emptyList();
+      metadataLicenseTag_ = "";
+      defaultDataLicenseTag_ = "";
     }
 
     @java.lang.Override
@@ -24244,6 +25638,84 @@ public final class ModelsProto {
       return endpoints_.get(index);
     }
 
+    public static final int METADATA_LICENSE_TAG_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metadataLicenseTag_ = "";
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataLicenseTag() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_DATA_LICENSE_TAG_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultDataLicenseTag_ = "";
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The defaultDataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultDataLicenseTag() {
+      java.lang.Object ref = defaultDataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultDataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The bytes for defaultDataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultDataLicenseTagBytes() {
+      java.lang.Object ref = defaultDataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultDataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24293,6 +25765,12 @@ public final class ModelsProto {
       }
       for (int i = 0; i < endpoints_.size(); i++) {
         output.writeMessage(12, endpoints_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, defaultDataLicenseTag_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -24347,6 +25825,12 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, endpoints_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, defaultDataLicenseTag_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -24390,6 +25874,10 @@ public final class ModelsProto {
           != other.getDynamic()) return false;
       if (!getEndpointsList()
           .equals(other.getEndpointsList())) return false;
+      if (!getMetadataLicenseTag()
+          .equals(other.getMetadataLicenseTag())) return false;
+      if (!getDefaultDataLicenseTag()
+          .equals(other.getDefaultDataLicenseTag())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -24436,6 +25924,10 @@ public final class ModelsProto {
         hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
         hash = (53 * hash) + getEndpointsList().hashCode();
       }
+      hash = (37 * hash) + METADATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadataLicenseTag().hashCode();
+      hash = (37 * hash) + DEFAULT_DATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultDataLicenseTag().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24605,6 +26097,8 @@ public final class ModelsProto {
           endpointsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000800);
+        metadataLicenseTag_ = "";
+        defaultDataLicenseTag_ = "";
         return this;
       }
 
@@ -24699,6 +26193,12 @@ public final class ModelsProto {
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.dynamic_ = dynamic_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.metadataLicenseTag_ = metadataLicenseTag_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.defaultDataLicenseTag_ = defaultDataLicenseTag_;
         }
       }
 
@@ -24827,6 +26327,16 @@ public final class ModelsProto {
             }
           }
         }
+        if (!other.getMetadataLicenseTag().isEmpty()) {
+          metadataLicenseTag_ = other.metadataLicenseTag_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        if (!other.getDefaultDataLicenseTag().isEmpty()) {
+          defaultDataLicenseTag_ = other.defaultDataLicenseTag_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -24941,6 +26451,16 @@ public final class ModelsProto {
                 }
                 break;
               } // case 98
+              case 106: {
+                metadataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                defaultDataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -26545,6 +28065,150 @@ public final class ModelsProto {
         }
         return endpointsBuilder_;
       }
+
+      private java.lang.Object metadataLicenseTag_ = "";
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return The metadataLicenseTag.
+       */
+      public java.lang.String getMetadataLicenseTag() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return The bytes for metadataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataLicenseTagBytes() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @param value The metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataLicenseTag() {
+        metadataLicenseTag_ = getDefaultInstance().getMetadataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @param value The bytes for metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultDataLicenseTag_ = "";
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return The defaultDataLicenseTag.
+       */
+      public java.lang.String getDefaultDataLicenseTag() {
+        java.lang.Object ref = defaultDataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultDataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return The bytes for defaultDataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultDataLicenseTagBytes() {
+        java.lang.Object ref = defaultDataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultDataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @param value The defaultDataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        defaultDataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultDataLicenseTag() {
+        defaultDataLicenseTag_ = getDefaultInstance().getDefaultDataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @param value The bytes for defaultDataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        defaultDataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -26830,6 +28494,30 @@ public final class ModelsProto {
      */
     com.aruna.api.storage.models.v2.ModelsProto.DataEndpointOrBuilder getEndpointsOrBuilder(
         int index);
+
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    java.lang.String getMetadataLicenseTag();
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes();
+
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The defaultDataLicenseTag.
+     */
+    java.lang.String getDefaultDataLicenseTag();
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The bytes for defaultDataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getDefaultDataLicenseTagBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Dataset}
@@ -26853,6 +28541,8 @@ public final class ModelsProto {
       createdBy_ = "";
       status_ = 0;
       endpoints_ = java.util.Collections.emptyList();
+      metadataLicenseTag_ = "";
+      defaultDataLicenseTag_ = "";
     }
 
     @java.lang.Override
@@ -27293,6 +28983,84 @@ public final class ModelsProto {
       return endpoints_.get(index);
     }
 
+    public static final int METADATA_LICENSE_TAG_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metadataLicenseTag_ = "";
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataLicenseTag() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_DATA_LICENSE_TAG_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultDataLicenseTag_ = "";
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The defaultDataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultDataLicenseTag() {
+      java.lang.Object ref = defaultDataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultDataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+     * @return The bytes for defaultDataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultDataLicenseTagBytes() {
+      java.lang.Object ref = defaultDataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultDataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -27342,6 +29110,12 @@ public final class ModelsProto {
       }
       for (int i = 0; i < endpoints_.size(); i++) {
         output.writeMessage(12, endpoints_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, defaultDataLicenseTag_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -27396,6 +29170,12 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, endpoints_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, defaultDataLicenseTag_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -27439,6 +29219,10 @@ public final class ModelsProto {
           != other.getDynamic()) return false;
       if (!getEndpointsList()
           .equals(other.getEndpointsList())) return false;
+      if (!getMetadataLicenseTag()
+          .equals(other.getMetadataLicenseTag())) return false;
+      if (!getDefaultDataLicenseTag()
+          .equals(other.getDefaultDataLicenseTag())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -27485,6 +29269,10 @@ public final class ModelsProto {
         hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
         hash = (53 * hash) + getEndpointsList().hashCode();
       }
+      hash = (37 * hash) + METADATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadataLicenseTag().hashCode();
+      hash = (37 * hash) + DEFAULT_DATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultDataLicenseTag().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -27654,6 +29442,8 @@ public final class ModelsProto {
           endpointsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000800);
+        metadataLicenseTag_ = "";
+        defaultDataLicenseTag_ = "";
         return this;
       }
 
@@ -27748,6 +29538,12 @@ public final class ModelsProto {
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.dynamic_ = dynamic_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.metadataLicenseTag_ = metadataLicenseTag_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.defaultDataLicenseTag_ = defaultDataLicenseTag_;
         }
       }
 
@@ -27876,6 +29672,16 @@ public final class ModelsProto {
             }
           }
         }
+        if (!other.getMetadataLicenseTag().isEmpty()) {
+          metadataLicenseTag_ = other.metadataLicenseTag_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        if (!other.getDefaultDataLicenseTag().isEmpty()) {
+          defaultDataLicenseTag_ = other.defaultDataLicenseTag_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -27990,6 +29796,16 @@ public final class ModelsProto {
                 }
                 break;
               } // case 98
+              case 106: {
+                metadataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                defaultDataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -29534,6 +31350,150 @@ public final class ModelsProto {
         }
         return endpointsBuilder_;
       }
+
+      private java.lang.Object metadataLicenseTag_ = "";
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return The metadataLicenseTag.
+       */
+      public java.lang.String getMetadataLicenseTag() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return The bytes for metadataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataLicenseTagBytes() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @param value The metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataLicenseTag() {
+        metadataLicenseTag_ = getDefaultInstance().getMetadataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 13 [json_name = "metadataLicenseTag"];</code>
+       * @param value The bytes for metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultDataLicenseTag_ = "";
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return The defaultDataLicenseTag.
+       */
+      public java.lang.String getDefaultDataLicenseTag() {
+        java.lang.Object ref = defaultDataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultDataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return The bytes for defaultDataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultDataLicenseTagBytes() {
+        java.lang.Object ref = defaultDataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultDataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @param value The defaultDataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        defaultDataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultDataLicenseTag() {
+        defaultDataLicenseTag_ = getDefaultInstance().getDefaultDataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_data_license_tag = 14 [json_name = "defaultDataLicenseTag"];</code>
+       * @param value The bytes for defaultDataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        defaultDataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29858,6 +31818,30 @@ public final class ModelsProto {
      */
     com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
         int index);
+
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    java.lang.String getMetadataLicenseTag();
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes();
+
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The dataLicenseTag.
+     */
+    java.lang.String getDataLicenseTag();
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The bytes for dataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getDataLicenseTagBytes();
   }
   /**
    * Protobuf type {@code aruna.api.storage.models.v2.Object}
@@ -29882,6 +31866,8 @@ public final class ModelsProto {
       status_ = 0;
       endpoints_ = java.util.Collections.emptyList();
       hashes_ = java.util.Collections.emptyList();
+      metadataLicenseTag_ = "";
+      dataLicenseTag_ = "";
     }
 
     @java.lang.Override
@@ -30372,6 +32358,84 @@ public final class ModelsProto {
       return hashes_.get(index);
     }
 
+    public static final int METADATA_LICENSE_TAG_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metadataLicenseTag_ = "";
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataLicenseTag() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_LICENSE_TAG_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataLicenseTag_ = "";
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The dataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getDataLicenseTag() {
+      java.lang.Object ref = dataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The bytes for dataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataLicenseTagBytes() {
+      java.lang.Object ref = dataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -30424,6 +32488,12 @@ public final class ModelsProto {
       }
       for (int i = 0; i < hashes_.size(); i++) {
         output.writeMessage(13, hashes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, dataLicenseTag_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -30482,6 +32552,12 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, hashes_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, dataLicenseTag_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -30524,6 +32600,10 @@ public final class ModelsProto {
           .equals(other.getEndpointsList())) return false;
       if (!getHashesList()
           .equals(other.getHashesList())) return false;
+      if (!getMetadataLicenseTag()
+          .equals(other.getMetadataLicenseTag())) return false;
+      if (!getDataLicenseTag()
+          .equals(other.getDataLicenseTag())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -30573,6 +32653,10 @@ public final class ModelsProto {
         hash = (37 * hash) + HASHES_FIELD_NUMBER;
         hash = (53 * hash) + getHashesList().hashCode();
       }
+      hash = (37 * hash) + METADATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadataLicenseTag().hashCode();
+      hash = (37 * hash) + DATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getDataLicenseTag().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -30745,6 +32829,8 @@ public final class ModelsProto {
           hashesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00001000);
+        metadataLicenseTag_ = "";
+        dataLicenseTag_ = "";
         return this;
       }
 
@@ -30846,6 +32932,12 @@ public final class ModelsProto {
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.dynamic_ = dynamic_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.metadataLicenseTag_ = metadataLicenseTag_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.dataLicenseTag_ = dataLicenseTag_;
         }
       }
 
@@ -31000,6 +33092,16 @@ public final class ModelsProto {
             }
           }
         }
+        if (!other.getMetadataLicenseTag().isEmpty()) {
+          metadataLicenseTag_ = other.metadataLicenseTag_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (!other.getDataLicenseTag().isEmpty()) {
+          dataLicenseTag_ = other.dataLicenseTag_;
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -31125,6 +33227,16 @@ public final class ModelsProto {
                 }
                 break;
               } // case 106
+              case 114: {
+                metadataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                dataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -32906,6 +35018,150 @@ public final class ModelsProto {
         }
         return hashesBuilder_;
       }
+
+      private java.lang.Object metadataLicenseTag_ = "";
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @return The metadataLicenseTag.
+       */
+      public java.lang.String getMetadataLicenseTag() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @return The bytes for metadataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataLicenseTagBytes() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @param value The metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataLicenseTag() {
+        metadataLicenseTag_ = getDefaultInstance().getMetadataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @param value The bytes for metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataLicenseTag_ = "";
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @return The dataLicenseTag.
+       */
+      public java.lang.String getDataLicenseTag() {
+        java.lang.Object ref = dataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @return The bytes for dataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getDataLicenseTagBytes() {
+        java.lang.Object ref = dataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @param value The dataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataLicenseTag_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataLicenseTag() {
+        dataLicenseTag_ = getDefaultInstance().getDataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @param value The bytes for dataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataLicenseTag_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33061,6 +35317,11 @@ public final class ModelsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_models_v2_License_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_models_v2_License_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_models_v2_GenericResource_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -33177,137 +35438,150 @@ public final class ModelsProto {
       "\030\003 \001(\010R\004push\"v\n\007Context\022\'\n\016s3_credential" +
       "s\030\001 \001(\010H\000R\rs3Credentials\0227\n\004copy\030\002 \001(\0132!" +
       ".aruna.api.storage.models.v2.CopyH\000R\004cop" +
-      "yB\t\n\007context\"\253\002\n\017GenericResource\022@\n\007proj" +
-      "ect\030\001 \001(\0132$.aruna.api.storage.models.v2." +
-      "ProjectH\000R\007project\022I\n\ncollection\030\002 \001(\0132\'" +
-      ".aruna.api.storage.models.v2.CollectionH" +
-      "\000R\ncollection\022@\n\007dataset\030\003 \001(\0132$.aruna.a" +
-      "pi.storage.models.v2.DatasetH\000R\007dataset\022" +
-      "=\n\006object\030\004 \001(\0132#.aruna.api.storage.mode" +
-      "ls.v2.ObjectH\000R\006objectB\n\n\010resource\"\325\004\n\007P" +
-      "roject\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004na" +
-      "me\022 \n\013description\030\003 \001(\tR\013description\022D\n\n" +
-      "key_values\030\004 \003(\0132%.aruna.api.storage.mod" +
-      "els.v2.KeyValueR\tkeyValues\022C\n\trelations\030" +
-      "\005 \003(\0132%.aruna.api.storage.models.v2.Rela" +
-      "tionR\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.a" +
-      "pi.storage.models.v2.StatsR\005stats\022E\n\ndat" +
-      "a_class\030\007 \001(\0162&.aruna.api.storage.models" +
-      ".v2.DataClassR\tdataClass\0229\n\ncreated_at\030\010" +
-      " \001(\0132\032.google.protobuf.TimestampR\tcreate" +
-      "dAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006st" +
-      "atus\030\n \001(\0162#.aruna.api.storage.models.v2" +
-      ".StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynami" +
-      "c\022G\n\tendpoints\030\014 \003(\0132).aruna.api.storage" +
-      ".models.v2.DataEndpointR\tendpoints\"\330\004\n\nC" +
-      "ollection\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR" +
-      "\004name\022 \n\013description\030\003 \001(\tR\013description\022" +
-      "D\n\nkey_values\030\004 \003(\0132%.aruna.api.storage." +
-      "models.v2.KeyValueR\tkeyValues\022C\n\trelatio" +
-      "ns\030\005 \003(\0132%.aruna.api.storage.models.v2.R" +
-      "elationR\trelations\0228\n\005stats\030\006 \001(\0132\".arun" +
-      "a.api.storage.models.v2.StatsR\005stats\022E\n\n" +
-      "data_class\030\007 \001(\0162&.aruna.api.storage.mod" +
-      "els.v2.DataClassR\tdataClass\0229\n\ncreated_a" +
-      "t\030\010 \001(\0132\032.google.protobuf.TimestampR\tcre" +
-      "atedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n" +
-      "\006status\030\n \001(\0162#.aruna.api.storage.models" +
-      ".v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dyn" +
-      "amic\022G\n\tendpoints\030\014 \003(\0132).aruna.api.stor" +
-      "age.models.v2.DataEndpointR\tendpoints\"\325\004" +
-      "\n\007Dataset\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR" +
-      "\004name\022 \n\013description\030\003 \001(\tR\013description\022" +
-      "D\n\nkey_values\030\004 \003(\0132%.aruna.api.storage." +
-      "models.v2.KeyValueR\tkeyValues\022C\n\trelatio" +
-      "ns\030\005 \003(\0132%.aruna.api.storage.models.v2.R" +
-      "elationR\trelations\0228\n\005stats\030\006 \001(\0132\".arun" +
-      "a.api.storage.models.v2.StatsR\005stats\022E\n\n" +
-      "data_class\030\007 \001(\0162&.aruna.api.storage.mod" +
-      "els.v2.DataClassR\tdataClass\0229\n\ncreated_a" +
-      "t\030\010 \001(\0132\032.google.protobuf.TimestampR\tcre" +
-      "atedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n" +
-      "\006status\030\n \001(\0162#.aruna.api.storage.models" +
-      ".v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dyn" +
-      "amic\022G\n\tendpoints\030\014 \003(\0132).aruna.api.stor" +
-      "age.models.v2.DataEndpointR\tendpoints\"\366\004" +
-      "\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004" +
-      "name\022 \n\013description\030\003 \001(\tR\013description\022D" +
-      "\n\nkey_values\030\004 \003(\0132%.aruna.api.storage.m" +
-      "odels.v2.KeyValueR\tkeyValues\022C\n\trelation" +
-      "s\030\005 \003(\0132%.aruna.api.storage.models.v2.Re" +
-      "lationR\trelations\022\037\n\013content_len\030\006 \001(\003R\n" +
-      "contentLen\022E\n\ndata_class\030\007 \001(\0162&.aruna.a" +
-      "pi.storage.models.v2.DataClassR\tdataClas" +
-      "s\0229\n\ncreated_at\030\010 \001(\0132\032.google.protobuf." +
-      "TimestampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\t" +
-      "R\tcreatedBy\022;\n\006status\030\n \001(\0162#.aruna.api." +
-      "storage.models.v2.StatusR\006status\022\030\n\007dyna" +
-      "mic\030\013 \001(\010R\007dynamic\022G\n\tendpoints\030\014 \003(\0132)." +
-      "aruna.api.storage.models.v2.DataEndpoint" +
-      "R\tendpoints\0229\n\006hashes\030\r \003(\0132!.aruna.api." +
-      "storage.models.v2.HashR\006hashes*\215\001\n\tDataC" +
-      "lass\022\032\n\026DATA_CLASS_UNSPECIFIED\020\000\022\025\n\021DATA" +
-      "_CLASS_PUBLIC\020\001\022\026\n\022DATA_CLASS_PRIVATE\020\002\022" +
-      "\030\n\024DATA_CLASS_WORKSPACE\020\004\022\033\n\027DATA_CLASS_" +
-      "CONFIDENTIAL\020\005*s\n\017EndpointVariant\022 \n\034END" +
-      "POINT_VARIANT_UNSPECIFIED\020\000\022\037\n\033ENDPOINT_" +
-      "VARIANT_PERSISTENT\020\001\022\035\n\031ENDPOINT_VARIANT" +
-      "_VOLATILE\020\002*z\n\023EndpointHostVariant\022%\n!EN" +
-      "DPOINT_HOST_VARIANT_UNSPECIFIED\020\000\022\036\n\032END" +
-      "POINT_HOST_VARIANT_GRPC\020\001\022\034\n\030ENDPOINT_HO" +
-      "ST_VARIANT_S3\020\002*\276\001\n\017PermissionLevel\022 \n\034P" +
-      "ERMISSION_LEVEL_UNSPECIFIED\020\000\022\031\n\025PERMISS" +
-      "ION_LEVEL_NONE\020\002\022\031\n\025PERMISSION_LEVEL_REA" +
-      "D\020\003\022\033\n\027PERMISSION_LEVEL_APPEND\020\004\022\032\n\026PERM" +
-      "ISSION_LEVEL_WRITE\020\005\022\032\n\026PERMISSION_LEVEL" +
-      "_ADMIN\020\006*\264\001\n\017KeyValueVariant\022!\n\035KEY_VALU" +
-      "E_VARIANT_UNSPECIFIED\020\000\022\033\n\027KEY_VALUE_VAR" +
-      "IANT_LABEL\020\001\022\"\n\036KEY_VALUE_VARIANT_STATIC" +
-      "_LABEL\020\002\022\032\n\026KEY_VALUE_VARIANT_HOOK\020\003\022!\n\035" +
-      "KEY_VALUE_VARIANT_HOOK_STATUS\020\004*\267\001\n\027Exte" +
-      "rnalRelationVariant\022)\n%EXTERNAL_RELATION" +
-      "_VARIANT_UNSPECIFIED\020\000\022!\n\035EXTERNAL_RELAT" +
-      "ION_VARIANT_URL\020\001\022(\n$EXTERNAL_RELATION_V" +
-      "ARIANT_IDENTIFIER\020\002\022$\n EXTERNAL_RELATION" +
-      "_VARIANT_CUSTOM\020\003*\257\002\n\027InternalRelationVa" +
-      "riant\022)\n%INTERNAL_RELATION_VARIANT_UNSPE" +
-      "CIFIED\020\000\022(\n$INTERNAL_RELATION_VARIANT_BE" +
-      "LONGS_TO\020\001\022$\n INTERNAL_RELATION_VARIANT_" +
-      "ORIGIN\020\002\022%\n!INTERNAL_RELATION_VARIANT_VE" +
-      "RSION\020\003\022&\n\"INTERNAL_RELATION_VARIANT_MET" +
-      "ADATA\020\004\022$\n INTERNAL_RELATION_VARIANT_POL" +
-      "ICY\020\005\022$\n INTERNAL_RELATION_VARIANT_CUSTO" +
-      "M\020\006*x\n\021RelationDirection\022\"\n\036RELATION_DIR" +
-      "ECTION_UNSPECIFIED\020\000\022\036\n\032RELATION_DIRECTI" +
-      "ON_INBOUND\020\001\022\037\n\033RELATION_DIRECTION_OUTBO" +
-      "UND\020\002*\273\001\n\016ResourceAction\022\037\n\033RESOURCE_ACT" +
-      "ION_UNSPECIFIED\020\000\022\032\n\026RESOURCE_ACTION_CRE" +
-      "ATE\020\001\022\032\n\026RESOURCE_ACTION_APPEND\020\002\022\032\n\026RES" +
-      "OURCE_ACTION_UPDATE\020\003\022\030\n\024RESOURCE_ACTION" +
-      "_READ\020\004\022\032\n\026RESOURCE_ACTION_DELETE\020\005*\244\001\n\006" +
-      "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\027\n\023STATUS" +
-      "_INITIALIZING\020\001\022\025\n\021STATUS_VALIDATING\020\002\022\024" +
-      "\n\020STATUS_AVAILABLE\020\003\022\026\n\022STATUS_UNAVAILAB" +
-      "LE\020\004\022\020\n\014STATUS_ERROR\020\005\022\022\n\016STATUS_DELETED" +
-      "\020\006*\331\001\n\017ComponentStatus\022 \n\034COMPONENT_STAT" +
-      "US_UNSPECIFIED\020\000\022!\n\035COMPONENT_STATUS_INI" +
-      "TIALIZING\020\001\022\036\n\032COMPONENT_STATUS_AVAILABL" +
-      "E\020\002\022\035\n\031COMPONENT_STATUS_DEGRADED\020\003\022 \n\034CO" +
-      "MPONENT_STATUS_UNAVAILABLE\020\004\022 \n\034COMPONEN" +
-      "T_STATUS_MAINTENANCE\020\005*_\n\rHashalgorithm\022" +
-      "\035\n\031HASHALGORITHM_UNSPECIFIED\020\000\022\025\n\021HASHAL" +
-      "GORITHM_MD5\020\001\022\030\n\024HASHALGORITHM_SHA256\020\002*" +
-      "\255\001\n\017ResourceVariant\022 \n\034RESOURCE_VARIANT_" +
-      "UNSPECIFIED\020\000\022\034\n\030RESOURCE_VARIANT_PROJEC" +
-      "T\020\001\022\037\n\033RESOURCE_VARIANT_COLLECTION\020\002\022\034\n\030" +
-      "RESOURCE_VARIANT_DATASET\020\003\022\033\n\027RESOURCE_V" +
-      "ARIANT_OBJECT\020\004B\371\001\n\037com.aruna.api.storag" +
-      "e.models.v2B\013ModelsProtoZ:github.com/Aru" +
-      "naStorage/go-api/aruna/api/storage/model" +
-      "s/v2\242\002\004AASM\252\002\033Aruna.Api.Storage.Models.V" +
-      "2\312\002\033Aruna\\Api\\Storage\\Models\\V2\342\002\'Aruna\\" +
-      "Api\\Storage\\Models\\V2\\GPBMetadata\352\002\037Arun" +
-      "a::Api::Storage::Models::V2b\006proto3"
+      "yB\t\n\007context\"U\n\007License\022\020\n\003tag\030\001 \001(\tR\003ta" +
+      "g\022\022\n\004name\030\002 \001(\tR\004name\022\022\n\004text\030\003 \001(\tR\004tex" +
+      "t\022\020\n\003url\030\004 \001(\tR\003url\"\253\002\n\017GenericResource\022" +
+      "@\n\007project\030\001 \001(\0132$.aruna.api.storage.mod" +
+      "els.v2.ProjectH\000R\007project\022I\n\ncollection\030" +
+      "\002 \001(\0132\'.aruna.api.storage.models.v2.Coll" +
+      "ectionH\000R\ncollection\022@\n\007dataset\030\003 \001(\0132$." +
+      "aruna.api.storage.models.v2.DatasetH\000R\007d" +
+      "ataset\022=\n\006object\030\004 \001(\0132#.aruna.api.stora" +
+      "ge.models.v2.ObjectH\000R\006objectB\n\n\010resourc" +
+      "e\"\300\005\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 " +
+      "\001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descript" +
+      "ion\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.stor" +
+      "age.models.v2.KeyValueR\tkeyValues\022C\n\trel" +
+      "ations\030\005 \003(\0132%.aruna.api.storage.models." +
+      "v2.RelationR\trelations\0228\n\005stats\030\006 \001(\0132\"." +
+      "aruna.api.storage.models.v2.StatsR\005stats" +
+      "\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.storage" +
+      ".models.v2.DataClassR\tdataClass\0229\n\ncreat" +
+      "ed_at\030\010 \001(\0132\032.google.protobuf.TimestampR" +
+      "\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedB" +
+      "y\022;\n\006status\030\n \001(\0162#.aruna.api.storage.mo" +
+      "dels.v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R" +
+      "\007dynamic\022G\n\tendpoints\030\014 \003(\0132).aruna.api." +
+      "storage.models.v2.DataEndpointR\tendpoint" +
+      "s\0220\n\024metadata_license_tag\030\r \001(\tR\022metadat" +
+      "aLicenseTag\0227\n\030default_data_license_tag\030" +
+      "\016 \001(\tR\025defaultDataLicenseTag\"\303\005\n\nCollect" +
+      "ion\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022" +
+      " \n\013description\030\003 \001(\tR\013description\022D\n\nkey" +
+      "_values\030\004 \003(\0132%.aruna.api.storage.models" +
+      ".v2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003" +
+      "(\0132%.aruna.api.storage.models.v2.Relatio" +
+      "nR\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api." +
+      "storage.models.v2.StatsR\005stats\022E\n\ndata_c" +
+      "lass\030\007 \001(\0162&.aruna.api.storage.models.v2" +
+      ".DataClassR\tdataClass\0229\n\ncreated_at\030\010 \001(" +
+      "\0132\032.google.protobuf.TimestampR\tcreatedAt" +
+      "\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006statu" +
+      "s\030\n \001(\0162#.aruna.api.storage.models.v2.St" +
+      "atusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G" +
+      "\n\tendpoints\030\014 \003(\0132).aruna.api.storage.mo" +
+      "dels.v2.DataEndpointR\tendpoints\0220\n\024metad" +
+      "ata_license_tag\030\r \001(\tR\022metadataLicenseTa" +
+      "g\0227\n\030default_data_license_tag\030\016 \001(\tR\025def" +
+      "aultDataLicenseTag\"\300\005\n\007Dataset\022\016\n\002id\030\001 \001" +
+      "(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descriptio" +
+      "n\030\003 \001(\tR\013description\022D\n\nkey_values\030\004 \003(\013" +
+      "2%.aruna.api.storage.models.v2.KeyValueR" +
+      "\tkeyValues\022C\n\trelations\030\005 \003(\0132%.aruna.ap" +
+      "i.storage.models.v2.RelationR\trelations\022" +
+      "8\n\005stats\030\006 \001(\0132\".aruna.api.storage.model" +
+      "s.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&." +
+      "aruna.api.storage.models.v2.DataClassR\td" +
+      "ataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\tcreatedAt\022\035\n\ncreated_b" +
+      "y\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aru" +
+      "na.api.storage.models.v2.StatusR\006status\022" +
+      "\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpoints\030\014" +
+      " \003(\0132).aruna.api.storage.models.v2.DataE" +
+      "ndpointR\tendpoints\0220\n\024metadata_license_t" +
+      "ag\030\r \001(\tR\022metadataLicenseTag\0227\n\030default_" +
+      "data_license_tag\030\016 \001(\tR\025defaultDataLicen" +
+      "seTag\"\322\005\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
+      "iption\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.s" +
+      "torage.models.v2.KeyValueR\tkeyValues\022C\n\t" +
+      "relations\030\005 \003(\0132%.aruna.api.storage.mode" +
+      "ls.v2.RelationR\trelations\022\037\n\013content_len" +
+      "\030\006 \001(\003R\ncontentLen\022E\n\ndata_class\030\007 \001(\0162&" +
+      ".aruna.api.storage.models.v2.DataClassR\t" +
+      "dataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\tcreatedAt\022\035\n\ncreated_" +
+      "by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.ar" +
+      "una.api.storage.models.v2.StatusR\006status" +
+      "\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpoints\030" +
+      "\014 \003(\0132).aruna.api.storage.models.v2.Data" +
+      "EndpointR\tendpoints\0229\n\006hashes\030\r \003(\0132!.ar" +
+      "una.api.storage.models.v2.HashR\006hashes\0220" +
+      "\n\024metadata_license_tag\030\016 \001(\tR\022metadataLi" +
+      "censeTag\022(\n\020data_license_tag\030\017 \001(\tR\016data" +
+      "LicenseTag*\215\001\n\tDataClass\022\032\n\026DATA_CLASS_U" +
+      "NSPECIFIED\020\000\022\025\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022D" +
+      "ATA_CLASS_PRIVATE\020\002\022\030\n\024DATA_CLASS_WORKSP" +
+      "ACE\020\004\022\033\n\027DATA_CLASS_CONFIDENTIAL\020\005*s\n\017En" +
+      "dpointVariant\022 \n\034ENDPOINT_VARIANT_UNSPEC" +
+      "IFIED\020\000\022\037\n\033ENDPOINT_VARIANT_PERSISTENT\020\001" +
+      "\022\035\n\031ENDPOINT_VARIANT_VOLATILE\020\002*z\n\023Endpo" +
+      "intHostVariant\022%\n!ENDPOINT_HOST_VARIANT_" +
+      "UNSPECIFIED\020\000\022\036\n\032ENDPOINT_HOST_VARIANT_G" +
+      "RPC\020\001\022\034\n\030ENDPOINT_HOST_VARIANT_S3\020\002*\276\001\n\017" +
+      "PermissionLevel\022 \n\034PERMISSION_LEVEL_UNSP" +
+      "ECIFIED\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031\n\025" +
+      "PERMISSION_LEVEL_READ\020\003\022\033\n\027PERMISSION_LE" +
+      "VEL_APPEND\020\004\022\032\n\026PERMISSION_LEVEL_WRITE\020\005" +
+      "\022\032\n\026PERMISSION_LEVEL_ADMIN\020\006*\264\001\n\017KeyValu" +
+      "eVariant\022!\n\035KEY_VALUE_VARIANT_UNSPECIFIE" +
+      "D\020\000\022\033\n\027KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KEY_" +
+      "VALUE_VARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VALU" +
+      "E_VARIANT_HOOK\020\003\022!\n\035KEY_VALUE_VARIANT_HO" +
+      "OK_STATUS\020\004*\267\001\n\027ExternalRelationVariant\022" +
+      ")\n%EXTERNAL_RELATION_VARIANT_UNSPECIFIED" +
+      "\020\000\022!\n\035EXTERNAL_RELATION_VARIANT_URL\020\001\022(\n" +
+      "$EXTERNAL_RELATION_VARIANT_IDENTIFIER\020\002\022" +
+      "$\n EXTERNAL_RELATION_VARIANT_CUSTOM\020\003*\257\002" +
+      "\n\027InternalRelationVariant\022)\n%INTERNAL_RE" +
+      "LATION_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL" +
+      "_RELATION_VARIANT_BELONGS_TO\020\001\022$\n INTERN" +
+      "AL_RELATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL" +
+      "_RELATION_VARIANT_VERSION\020\003\022&\n\"INTERNAL_" +
+      "RELATION_VARIANT_METADATA\020\004\022$\n INTERNAL_" +
+      "RELATION_VARIANT_POLICY\020\005\022$\n INTERNAL_RE" +
+      "LATION_VARIANT_CUSTOM\020\006*x\n\021RelationDirec" +
+      "tion\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000" +
+      "\022\036\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELA" +
+      "TION_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceAc" +
+      "tion\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n" +
+      "\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_AC" +
+      "TION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020" +
+      "\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_" +
+      "ACTION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021S" +
+      "TATUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003" +
+      "\022\026\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR" +
+      "\020\005\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStat" +
+      "us\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035" +
+      "COMPONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPO" +
+      "NENT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STA" +
+      "TUS_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVA" +
+      "ILABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE" +
+      "\020\005*_\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNS" +
+      "PECIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HAS" +
+      "HALGORITHM_SHA256\020\002*\255\001\n\017ResourceVariant\022" +
+      " \n\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034\n\030RES" +
+      "OURCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE_VARI" +
+      "ANT_COLLECTION\020\002\022\034\n\030RESOURCE_VARIANT_DAT" +
+      "ASET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004B\374\001\n\037" +
+      "com.aruna.api.storage.models.v2B\013ModelsP" +
+      "rotoZ=github.com/ArunaStorage/go-api/v2/" +
+      "aruna/api/storage/models/v2\242\002\004AASM\252\002\033Aru" +
+      "na.Api.Storage.Models.V2\312\002\033Aruna\\Api\\Sto" +
+      "rage\\Models\\V2\342\002\'Aruna\\Api\\Storage\\Model" +
+      "s\\V2\\GPBMetadata\352\002\037Aruna::Api::Storage::" +
+      "Models::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -33422,36 +35696,42 @@ public final class ModelsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Context_descriptor,
         new java.lang.String[] { "S3Credentials", "Copy", "Context", });
-    internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
+    internal_static_aruna_api_storage_models_v2_License_descriptor =
       getDescriptor().getMessageTypes().get(18);
+    internal_static_aruna_api_storage_models_v2_License_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_models_v2_License_descriptor,
+        new java.lang.String[] { "Tag", "Name", "Text", "Url", });
+    internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aruna_api_storage_models_v2_GenericResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_GenericResource_descriptor,
         new java.lang.String[] { "Project", "Collection", "Dataset", "Object", "Resource", });
     internal_static_aruna_api_storage_models_v2_Project_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aruna_api_storage_models_v2_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Project_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "MetadataLicenseTag", "DefaultDataLicenseTag", });
     internal_static_aruna_api_storage_models_v2_Collection_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_aruna_api_storage_models_v2_Collection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Collection_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "MetadataLicenseTag", "DefaultDataLicenseTag", });
     internal_static_aruna_api_storage_models_v2_Dataset_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_aruna_api_storage_models_v2_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Dataset_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "MetadataLicenseTag", "DefaultDataLicenseTag", });
     internal_static_aruna_api_storage_models_v2_Object_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_aruna_api_storage_models_v2_Object_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Object_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "ContentLen", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "Hashes", });
+        new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "ContentLen", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "Hashes", "MetadataLicenseTag", "DataLicenseTag", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

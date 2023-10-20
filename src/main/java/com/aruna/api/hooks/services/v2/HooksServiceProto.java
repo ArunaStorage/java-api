@@ -17471,112 +17471,115 @@ public final class HooksServiceProto {
       "\n/aruna/api/hooks/services/v2/hooks_serv" +
       "ice.proto\022\033aruna.api.hooks.services.v2\032\034" +
       "google/api/annotations.proto\032(aruna/api/" +
-      "storage/models/v2/models.proto\"~\n\007Trigge" +
-      "r\022K\n\014trigger_type\030\001 \001(\0162(.aruna.api.hook" +
-      "s.services.v2.TriggerTypeR\013triggerType\022\020" +
-      "\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\"\353" +
-      "\001\n\014ExternalHook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013cre" +
-      "dentials\030\002 \001(\0132(.aruna.api.hooks.service" +
-      "s.v2.CredentialsR\013credentials\022,\n\017custom_" +
-      "template\030\003 \001(\tH\000R\016customTemplate\210\001\001\022;\n\006m" +
-      "ethod\030\005 \001(\0162#.aruna.api.hooks.services.v" +
-      "2.MethodR\006methodB\022\n\020_custom_template\"2\n\010" +
-      "AddLabel\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
-      "\tR\005value\"1\n\007AddHook\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\tR\005value\"\366\001\n\014InternalHook\022D\n\t" +
-      "add_label\030\001 \001(\0132%.aruna.api.hooks.servic" +
-      "es.v2.AddLabelH\000R\010addLabel\022A\n\010add_hook\030\002" +
-      " \001(\0132$.aruna.api.hooks.services.v2.AddHo" +
-      "okH\000R\007addHook\022J\n\014add_relation\030\003 \001(\0132%.ar" +
-      "una.api.storage.models.v2.RelationH\000R\013ad" +
-      "dRelationB\021\n\017internal_action\"\267\001\n\004Hook\022P\n" +
-      "\rexternal_hook\030\001 \001(\0132).aruna.api.hooks.s" +
-      "ervices.v2.ExternalHookH\000R\014externalHook\022" +
-      "P\n\rinternal_hook\030\002 \001(\0132).aruna.api.hooks" +
-      ".services.v2.InternalHookH\000R\014internalHoo" +
-      "kB\013\n\thook_type\"#\n\013Credentials\022\024\n\005token\030\001" +
-      " \001(\tR\005token\"\373\001\n\021CreateHookRequest\022\022\n\004nam" +
-      "e\030\001 \001(\tR\004name\022>\n\007trigger\030\002 \001(\0132$.aruna.a" +
-      "pi.hooks.services.v2.TriggerR\007trigger\0225\n" +
-      "\004hook\030\003 \001(\0132!.aruna.api.hooks.services.v" +
-      "2.HookR\004hook\022\030\n\007timeout\030\004 \001(\004R\007timeout\022\037" +
-      "\n\013project_ids\030\005 \003(\tR\nprojectIds\022 \n\013descr" +
-      "iption\030\006 \001(\tR\013description\"-\n\022CreateHookR" +
-      "esponse\022\027\n\007hook_id\030\001 \001(\tR\006hookId\",\n\021Dele" +
-      "teHookRequest\022\027\n\007hook_id\030\001 \001(\tR\006hookId\"\024" +
-      "\n\022DeleteHookResponse\"\223\002\n\023HookCallbackReq" +
-      "uest\022C\n\010finished\030\001 \001(\0132%.aruna.api.hooks" +
-      ".services.v2.FinishedH\000R\010finished\022:\n\005err" +
-      "or\030\002 \001(\0132\".aruna.api.hooks.services.v2.E" +
-      "rrorH\000R\005error\022\026\n\006secret\030\003 \001(\tR\006secret\022\027\n" +
-      "\007hook_id\030\004 \001(\tR\006hookId\022\033\n\tobject_id\030\005 \001(" +
-      "\tR\010objectId\022#\n\rpubkey_serial\030\006 \001(\005R\014pubk" +
-      "eySerialB\010\n\006status\"\252\001\n\010Finished\022K\n\016add_k" +
-      "ey_values\030\001 \003(\0132%.aruna.api.storage.mode" +
-      "ls.v2.KeyValueR\014addKeyValues\022Q\n\021remove_k" +
-      "ey_values\030\002 \003(\0132%.aruna.api.storage.mode" +
-      "ls.v2.KeyValueR\017removeKeyValues\"\035\n\005Error" +
-      "\022\024\n\005error\030\001 \001(\tR\005error\"\026\n\024HookCallbackRe" +
-      "sponse\"8\n\027ListProjectHooksRequest\022\035\n\npro" +
-      "ject_id\030\001 \001(\tR\tprojectId\"0\n\025ListOwnedHoo" +
-      "ksRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"\213\002\n\010H" +
-      "ookInfo\022\027\n\007hook_id\030\001 \001(\tR\006hookId\022\037\n\013proj" +
-      "ect_ids\030\002 \003(\tR\nprojectIds\022\022\n\004name\030\003 \001(\tR" +
-      "\004name\022 \n\013description\030\004 \001(\tR\013description\022" +
-      "5\n\004hook\030\005 \001(\0132!.aruna.api.hooks.services" +
-      ".v2.HookR\004hook\022>\n\007trigger\030\006 \001(\0132$.aruna." +
-      "api.hooks.services.v2.TriggerR\007trigger\022\030" +
-      "\n\007timeout\030\007 \001(\004R\007timeout\"W\n\030ListProjectH" +
-      "ooksResponse\022;\n\005infos\030\001 \003(\0132%.aruna.api." +
-      "hooks.services.v2.HookInfoR\005infos\"U\n\026Lis" +
-      "tOwnedHooksResponse\022;\n\005infos\030\001 \003(\0132%.aru" +
-      "na.api.hooks.services.v2.HookInfoR\005infos" +
-      "\"T\n\030AddProjectsToHookRequest\022\027\n\007hook_id\030" +
-      "\001 \001(\tR\006hookId\022\037\n\013project_ids\030\002 \003(\tR\nproj" +
-      "ectIds\"\033\n\031AddProjectsToHookResponse*\322\001\n\013" +
-      "TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020" +
-      "\000\022\033\n\027TRIGGER_TYPE_HOOK_ADDED\020\001\022\037\n\033TRIGGE" +
-      "R_TYPE_OBJECT_CREATED\020\002\022\034\n\030TRIGGER_TYPE_" +
-      "LABEL_ADDED\020\003\022#\n\037TRIGGER_TYPE_STATIC_LAB" +
-      "EL_ADDED\020\004\022$\n TRIGGER_TYPE_HOOK_STATUS_C" +
-      "HANGED\020\005*A\n\006Method\022\026\n\022METHOD_UNSPECIFIED" +
-      "\020\000\022\016\n\nMETHOD_PUT\020\001\022\017\n\013METHOD_POST\020\0022\235\007\n\014" +
-      "HooksService\022\202\001\n\nCreateHook\022..aruna.api." +
-      "hooks.services.v2.CreateHookRequest\032/.ar" +
-      "una.api.hooks.services.v2.CreateHookResp" +
-      "onse\"\023\202\323\344\223\002\r\"\010/v2/hook:\001*\022\241\001\n\021AddProject" +
-      "sToHook\0225.aruna.api.hooks.services.v2.Ad" +
-      "dProjectsToHookRequest\0326.aruna.api.hooks" +
-      ".services.v2.AddProjectsToHookResponse\"\035" +
-      "\202\323\344\223\002\027\"\022/v2/hook/{hook_id}:\001*\022\247\001\n\020ListPr" +
-      "ojectHooks\0224.aruna.api.hooks.services.v2" +
-      ".ListProjectHooksRequest\0325.aruna.api.hoo" +
-      "ks.services.v2.ListProjectHooksResponse\"" +
-      "&\202\323\344\223\002 \022\036/v2/hooks/project/{project_id}\022" +
-      "\234\001\n\016ListOwnedHooks\0222.aruna.api.hooks.ser" +
-      "vices.v2.ListOwnedHooksRequest\0323.aruna.a" +
-      "pi.hooks.services.v2.ListOwnedHooksRespo" +
-      "nse\"!\202\323\344\223\002\033\022\031/v2/hooks/owner/{user_id}\022\211" +
-      "\001\n\nDeleteHook\022..aruna.api.hooks.services" +
-      ".v2.DeleteHookRequest\032/.aruna.api.hooks." +
-      "services.v2.DeleteHookResponse\"\032\202\323\344\223\002\024*\022" +
-      "/v2/hook/{hook_id}\022\216\001\n\014HookCallback\0220.ar" +
-      "una.api.hooks.services.v2.HookCallbackRe" +
-      "quest\0321.aruna.api.hooks.services.v2.Hook" +
-      "CallbackResponse\"\031\202\323\344\223\002\023*\021/v2/hook/callb" +
-      "ackB\203\002\n\037com.aruna.api.hooks.services.v2B" +
-      "\021HooksServiceProtoP\000Z<github.com/ArunaSt" +
-      "orage/go-api/aruna/api/storage/services/" +
-      "v2\242\002\004AAHS\252\002\033Aruna.Api.Hooks.Services.V2\312" +
-      "\002\033Aruna\\Api\\Hooks\\Services\\V2\342\002\'Aruna\\Ap" +
-      "i\\Hooks\\Services\\V2\\GPBMetadata\352\002\037Aruna:" +
-      ":Api::Hooks::Services::V2b\006proto3"
+      "storage/models/v2/models.proto\032\033google/a" +
+      "pi/visibility.proto\"~\n\007Trigger\022K\n\014trigge" +
+      "r_type\030\001 \001(\0162(.aruna.api.hooks.services." +
+      "v2.TriggerTypeR\013triggerType\022\020\n\003key\030\002 \001(\t" +
+      "R\003key\022\024\n\005value\030\003 \001(\tR\005value\"\353\001\n\014External" +
+      "Hook\022\020\n\003url\030\001 \001(\tR\003url\022J\n\013credentials\030\002 " +
+      "\001(\0132(.aruna.api.hooks.services.v2.Creden" +
+      "tialsR\013credentials\022,\n\017custom_template\030\003 " +
+      "\001(\tH\000R\016customTemplate\210\001\001\022;\n\006method\030\005 \001(\016" +
+      "2#.aruna.api.hooks.services.v2.MethodR\006m" +
+      "ethodB\022\n\020_custom_template\"2\n\010AddLabel\022\020\n" +
+      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"1\n" +
+      "\007AddHook\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
+      "\tR\005value\"\366\001\n\014InternalHook\022D\n\tadd_label\030\001" +
+      " \001(\0132%.aruna.api.hooks.services.v2.AddLa" +
+      "belH\000R\010addLabel\022A\n\010add_hook\030\002 \001(\0132$.arun" +
+      "a.api.hooks.services.v2.AddHookH\000R\007addHo" +
+      "ok\022J\n\014add_relation\030\003 \001(\0132%.aruna.api.sto" +
+      "rage.models.v2.RelationH\000R\013addRelationB\021" +
+      "\n\017internal_action\"\267\001\n\004Hook\022P\n\rexternal_h" +
+      "ook\030\001 \001(\0132).aruna.api.hooks.services.v2." +
+      "ExternalHookH\000R\014externalHook\022P\n\rinternal" +
+      "_hook\030\002 \001(\0132).aruna.api.hooks.services.v" +
+      "2.InternalHookH\000R\014internalHookB\013\n\thook_t" +
+      "ype\"#\n\013Credentials\022\024\n\005token\030\001 \001(\tR\005token" +
+      "\"\373\001\n\021CreateHookRequest\022\022\n\004name\030\001 \001(\tR\004na" +
+      "me\022>\n\007trigger\030\002 \001(\0132$.aruna.api.hooks.se" +
+      "rvices.v2.TriggerR\007trigger\0225\n\004hook\030\003 \001(\013" +
+      "2!.aruna.api.hooks.services.v2.HookR\004hoo" +
+      "k\022\030\n\007timeout\030\004 \001(\004R\007timeout\022\037\n\013project_i" +
+      "ds\030\005 \003(\tR\nprojectIds\022 \n\013description\030\006 \001(" +
+      "\tR\013description\"-\n\022CreateHookResponse\022\027\n\007" +
+      "hook_id\030\001 \001(\tR\006hookId\",\n\021DeleteHookReque" +
+      "st\022\027\n\007hook_id\030\001 \001(\tR\006hookId\"\024\n\022DeleteHoo" +
+      "kResponse\"\223\002\n\023HookCallbackRequest\022C\n\010fin" +
+      "ished\030\001 \001(\0132%.aruna.api.hooks.services.v" +
+      "2.FinishedH\000R\010finished\022:\n\005error\030\002 \001(\0132\"." +
+      "aruna.api.hooks.services.v2.ErrorH\000R\005err" +
+      "or\022\026\n\006secret\030\003 \001(\tR\006secret\022\027\n\007hook_id\030\004 " +
+      "\001(\tR\006hookId\022\033\n\tobject_id\030\005 \001(\tR\010objectId" +
+      "\022#\n\rpubkey_serial\030\006 \001(\005R\014pubkeySerialB\010\n" +
+      "\006status\"\252\001\n\010Finished\022K\n\016add_key_values\030\001" +
+      " \003(\0132%.aruna.api.storage.models.v2.KeyVa" +
+      "lueR\014addKeyValues\022Q\n\021remove_key_values\030\002" +
+      " \003(\0132%.aruna.api.storage.models.v2.KeyVa" +
+      "lueR\017removeKeyValues\"\035\n\005Error\022\024\n\005error\030\001" +
+      " \001(\tR\005error\"\026\n\024HookCallbackResponse\"8\n\027L" +
+      "istProjectHooksRequest\022\035\n\nproject_id\030\001 \001" +
+      "(\tR\tprojectId\"0\n\025ListOwnedHooksRequest\022\027" +
+      "\n\007user_id\030\001 \001(\tR\006userId\"\213\002\n\010HookInfo\022\027\n\007" +
+      "hook_id\030\001 \001(\tR\006hookId\022\037\n\013project_ids\030\002 \003" +
+      "(\tR\nprojectIds\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013de" +
+      "scription\030\004 \001(\tR\013description\0225\n\004hook\030\005 \001" +
+      "(\0132!.aruna.api.hooks.services.v2.HookR\004h" +
+      "ook\022>\n\007trigger\030\006 \001(\0132$.aruna.api.hooks.s" +
+      "ervices.v2.TriggerR\007trigger\022\030\n\007timeout\030\007" +
+      " \001(\004R\007timeout\"W\n\030ListProjectHooksRespons" +
+      "e\022;\n\005infos\030\001 \003(\0132%.aruna.api.hooks.servi" +
+      "ces.v2.HookInfoR\005infos\"U\n\026ListOwnedHooks" +
+      "Response\022;\n\005infos\030\001 \003(\0132%.aruna.api.hook" +
+      "s.services.v2.HookInfoR\005infos\"T\n\030AddProj" +
+      "ectsToHookRequest\022\027\n\007hook_id\030\001 \001(\tR\006hook" +
+      "Id\022\037\n\013project_ids\030\002 \003(\tR\nprojectIds\"\033\n\031A" +
+      "ddProjectsToHookResponse*\322\001\n\013TriggerType" +
+      "\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\033\n\027TRIGGE" +
+      "R_TYPE_HOOK_ADDED\020\001\022\037\n\033TRIGGER_TYPE_OBJE" +
+      "CT_CREATED\020\002\022\034\n\030TRIGGER_TYPE_LABEL_ADDED" +
+      "\020\003\022#\n\037TRIGGER_TYPE_STATIC_LABEL_ADDED\020\004\022" +
+      "$\n TRIGGER_TYPE_HOOK_STATUS_CHANGED\020\005*A\n" +
+      "\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHO" +
+      "D_PUT\020\001\022\017\n\013METHOD_POST\020\0022\255\007\n\014HooksServic" +
+      "e\022\202\001\n\nCreateHook\022..aruna.api.hooks.servi" +
+      "ces.v2.CreateHookRequest\032/.aruna.api.hoo" +
+      "ks.services.v2.CreateHookResponse\"\023\202\323\344\223\002" +
+      "\r\"\010/v2/hook:\001*\022\241\001\n\021AddProjectsToHook\0225.a" +
+      "runa.api.hooks.services.v2.AddProjectsTo" +
+      "HookRequest\0326.aruna.api.hooks.services.v" +
+      "2.AddProjectsToHookResponse\"\035\202\323\344\223\002\027\"\022/v2" +
+      "/hook/{hook_id}:\001*\022\247\001\n\020ListProjectHooks\022" +
+      "4.aruna.api.hooks.services.v2.ListProjec" +
+      "tHooksRequest\0325.aruna.api.hooks.services" +
+      ".v2.ListProjectHooksResponse\"&\202\323\344\223\002 \022\036/v" +
+      "2/hooks/project/{project_id}\022\234\001\n\016ListOwn" +
+      "edHooks\0222.aruna.api.hooks.services.v2.Li" +
+      "stOwnedHooksRequest\0323.aruna.api.hooks.se" +
+      "rvices.v2.ListOwnedHooksResponse\"!\202\323\344\223\002\033" +
+      "\022\031/v2/hooks/owner/{user_id}\022\211\001\n\nDeleteHo" +
+      "ok\022..aruna.api.hooks.services.v2.DeleteH" +
+      "ookRequest\032/.aruna.api.hooks.services.v2" +
+      ".DeleteHookResponse\"\032\202\323\344\223\002\024*\022/v2/hook/{h" +
+      "ook_id}\022\216\001\n\014HookCallback\0220.aruna.api.hoo" +
+      "ks.services.v2.HookCallbackRequest\0321.aru" +
+      "na.api.hooks.services.v2.HookCallbackRes" +
+      "ponse\"\031\202\323\344\223\002\023*\021/v2/hook/callback\032\016\372\322\344\223\002\010" +
+      "\022\006SERVERB\206\002\n\037com.aruna.api.hooks.service" +
+      "s.v2B\021HooksServiceProtoP\000Z?github.com/Ar" +
+      "unaStorage/go-api/v2/aruna/api/storage/s" +
+      "ervices/v2\242\002\004AAHS\252\002\033Aruna.Api.Hooks.Serv" +
+      "ices.V2\312\002\033Aruna\\Api\\Hooks\\Services\\V2\342\002\'" +
+      "Aruna\\Api\\Hooks\\Services\\V2\\GPBMetadata\352" +
+      "\002\037Aruna::Api::Hooks::Services::V2b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.aruna.api.storage.models.v2.ModelsProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
         });
     internal_static_aruna_api_hooks_services_v2_Trigger_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -17712,11 +17715,13 @@ public final class HooksServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.aruna.api.storage.models.v2.ModelsProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

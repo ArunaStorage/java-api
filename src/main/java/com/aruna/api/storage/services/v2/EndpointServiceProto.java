@@ -8416,14 +8416,14 @@ public final class EndpointServiceProto {
       "\0228.aruna.api.storage.services.v2.GetDefa" +
       "ultEndpointRequest\0329.aruna.api.storage.s" +
       "ervices.v2.GetDefaultEndpointResponse\"\034\202" +
-      "\323\344\223\002\026\022\024/v2/endpoint/defaultB\220\002\n!com.arun" +
+      "\323\344\223\002\026\022\024/v2/endpoint/defaultB\223\002\n!com.arun" +
       "a.api.storage.services.v2B\024EndpointServi" +
-      "ceProtoP\000Z<github.com/ArunaStorage/go-ap" +
-      "i/aruna/api/storage/services/v2\242\002\004AASS\252\002" +
-      "\035Aruna.Api.Storage.Services.V2\312\002\035Aruna\\A" +
-      "pi\\Storage\\Services\\V2\342\002)Aruna\\Api\\Stora" +
-      "ge\\Services\\V2\\GPBMetadata\352\002!Aruna::Api:" +
-      ":Storage::Services::V2b\006proto3"
+      "ceProtoP\000Z?github.com/ArunaStorage/go-ap" +
+      "i/v2/aruna/api/storage/services/v2\242\002\004AAS" +
+      "S\252\002\035Aruna.Api.Storage.Services.V2\312\002\035Arun" +
+      "a\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api\\St" +
+      "orage\\Services\\V2\\GPBMetadata\352\002!Aruna::A" +
+      "pi::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

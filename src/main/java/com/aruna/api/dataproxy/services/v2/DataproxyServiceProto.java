@@ -23075,163 +23075,166 @@ public final class DataproxyServiceProto {
       "\n7aruna/api/dataproxy/services/v2/datapr" +
       "oxy_service.proto\022\037aruna.api.dataproxy.s" +
       "ervices.v2\032\034google/api/annotations.proto" +
-      "\"[\n\rDataProxyInfo\022!\n\014dataproxy_id\030\001 \001(\tR" +
-      "\013dataproxyId\022\'\n\017available_space\030\002 \001(\003R\016a" +
-      "vailableSpace\"\212\001\n\031RequestReplicationRequ" +
-      "est\022B\n\004info\030\001 \001(\0132..aruna.api.dataproxy." +
-      "services.v2.DataProxyInfoR\004info\022)\n\020user_" +
-      "initialized\030\002 \001(\010R\017userInitialized\"\226\001\n\010D" +
-      "ataInfo\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022!\n\014" +
-      "download_url\030\002 \001(\tR\013downloadUrl\022%\n\016encry" +
-      "ption_key\030\003 \001(\tR\rencryptionKey\022#\n\ris_com" +
-      "pressed\030\004 \001(\010R\014isCompressed\"S\n\tDataInfos" +
-      "\022F\n\tdata_info\030\001 \003(\0132).aruna.api.dataprox" +
-      "y.services.v2.DataInfoR\010dataInfo\"\211\001\n\032Req" +
-      "uestReplicationResponse\022K\n\ndata_infos\030\001 " +
-      "\001(\0132*.aruna.api.dataproxy.services.v2.Da" +
-      "taInfosH\000R\tdataInfos\022\022\n\003ack\030\002 \001(\010H\000R\003ack" +
-      "B\n\n\010response\"c\n\026InitReplicationRequest\022I" +
-      "\n\ndata_infos\030\001 \001(\0132*.aruna.api.dataproxy" +
-      ".services.v2.DataInfosR\tdataInfos\"+\n\027Ini" +
-      "tReplicationResponse\022\020\n\003ack\030\001 \001(\010R\003ack\"\027" +
-      "\n\025GetCredentialsRequest\"V\n\026GetCredential" +
-      "sResponse\022\035\n\naccess_key\030\001 \001(\tR\taccessKey" +
-      "\022\035\n\nsecret_key\030\002 \001(\tR\tsecretKey\"2\n\006S3Pat" +
-      "h\022\026\n\006bucket\030\001 \001(\tR\006bucket\022\020\n\003key\030\002 \001(\tR\003" +
-      "key\"\260\001\n\022PushReplicaRequest\022!\n\013resource_i" +
-      "d\030\001 \001(\tH\000R\nresourceId\022B\n\007s3_path\030\002 \001(\0132\'" +
-      ".aruna.api.dataproxy.services.v2.S3PathH" +
-      "\000R\006s3Path\022\'\n\017target_location\030\003 \001(\tR\016targ" +
-      "etLocationB\n\n\010resource\"<\n\023PushReplicaRes" +
-      "ponse\022%\n\016replication_id\030\001 \001(\tR\rreplicati" +
-      "onId\"\207\001\n\022PullReplicaRequest\022!\n\013resource_" +
-      "id\030\001 \001(\tH\000R\nresourceId\022B\n\007s3_path\030\002 \001(\0132" +
-      "\'.aruna.api.dataproxy.services.v2.S3Path" +
-      "H\000R\006s3PathB\n\n\010resource\"<\n\023PullReplicaRes" +
-      "ponse\022%\n\016replication_id\030\001 \001(\tR\rreplicati" +
-      "onId\"A\n\030ReplicationStatusRequest\022%\n\016repl" +
-      "ication_id\030\001 \001(\tR\rreplicationId\"\201\001\n\031Repl" +
-      "icationStatusResponse\022J\n\006status\030\001 \001(\01622." +
-      "aruna.api.dataproxy.services.v2.Replicat" +
-      "ionStatusR\006status\022\030\n\007message\030\002 \001(\tR\007mess" +
-      "age\"~\n\016ObjectLocation\022\026\n\006bucket\030\001 \001(\tR\006b" +
-      "ucket\022\020\n\003key\030\002 \001(\tR\003key\022\033\n\tupload_id\030\003 \001" +
-      "(\tR\010uploadId\022%\n\016content_length\030\004 \001(\tR\rco" +
-      "ntentLength\"s\n\020PutObjectRequest\022K\n\010locat" +
-      "ion\030\001 \001(\0132/.aruna.api.dataproxy.services" +
-      ".v2.ObjectLocationR\010location\022\022\n\004data\030\002 \001" +
-      "(\014R\004data\"\023\n\021PutObjectResponse\"_\n\020GetObje" +
-      "ctRequest\022K\n\010location\030\001 \001(\0132/.aruna.api." +
-      "dataproxy.services.v2.ObjectLocationR\010lo" +
-      "cation\"\'\n\021GetObjectResponse\022\022\n\004data\030\001 \001(" +
-      "\014R\004data\"`\n\021HeadObjectRequest\022K\n\010location" +
-      "\030\001 \001(\0132/.aruna.api.dataproxy.services.v2" +
-      ".ObjectLocationR\010location\"S\n\022HeadObjectR" +
-      "esponse\022%\n\016content_length\030\001 \001(\tR\rcontent" +
-      "Length\022\026\n\006exists\030\002 \001(\010R\006exists\"i\n\032InitMu" +
-      "ltiPartUploadRequest\022K\n\010location\030\001 \001(\0132/" +
+      "\032\033google/api/visibility.proto\"[\n\rDataPro" +
+      "xyInfo\022!\n\014dataproxy_id\030\001 \001(\tR\013dataproxyI" +
+      "d\022\'\n\017available_space\030\002 \001(\003R\016availableSpa" +
+      "ce\"\212\001\n\031RequestReplicationRequest\022B\n\004info" +
+      "\030\001 \001(\0132..aruna.api.dataproxy.services.v2" +
+      ".DataProxyInfoR\004info\022)\n\020user_initialized" +
+      "\030\002 \001(\010R\017userInitialized\"\226\001\n\010DataInfo\022\033\n\t" +
+      "object_id\030\001 \001(\tR\010objectId\022!\n\014download_ur" +
+      "l\030\002 \001(\tR\013downloadUrl\022%\n\016encryption_key\030\003" +
+      " \001(\tR\rencryptionKey\022#\n\ris_compressed\030\004 \001" +
+      "(\010R\014isCompressed\"S\n\tDataInfos\022F\n\tdata_in" +
+      "fo\030\001 \003(\0132).aruna.api.dataproxy.services." +
+      "v2.DataInfoR\010dataInfo\"\211\001\n\032RequestReplica" +
+      "tionResponse\022K\n\ndata_infos\030\001 \001(\0132*.aruna" +
+      ".api.dataproxy.services.v2.DataInfosH\000R\t" +
+      "dataInfos\022\022\n\003ack\030\002 \001(\010H\000R\003ackB\n\n\010respons" +
+      "e\"c\n\026InitReplicationRequest\022I\n\ndata_info" +
+      "s\030\001 \001(\0132*.aruna.api.dataproxy.services.v" +
+      "2.DataInfosR\tdataInfos\"+\n\027InitReplicatio" +
+      "nResponse\022\020\n\003ack\030\001 \001(\010R\003ack\"\027\n\025GetCreden" +
+      "tialsRequest\"V\n\026GetCredentialsResponse\022\035" +
+      "\n\naccess_key\030\001 \001(\tR\taccessKey\022\035\n\nsecret_" +
+      "key\030\002 \001(\tR\tsecretKey\"2\n\006S3Path\022\026\n\006bucket" +
+      "\030\001 \001(\tR\006bucket\022\020\n\003key\030\002 \001(\tR\003key\"\260\001\n\022Pus" +
+      "hReplicaRequest\022!\n\013resource_id\030\001 \001(\tH\000R\n" +
+      "resourceId\022B\n\007s3_path\030\002 \001(\0132\'.aruna.api." +
+      "dataproxy.services.v2.S3PathH\000R\006s3Path\022\'" +
+      "\n\017target_location\030\003 \001(\tR\016targetLocationB" +
+      "\n\n\010resource\"<\n\023PushReplicaResponse\022%\n\016re" +
+      "plication_id\030\001 \001(\tR\rreplicationId\"\207\001\n\022Pu" +
+      "llReplicaRequest\022!\n\013resource_id\030\001 \001(\tH\000R" +
+      "\nresourceId\022B\n\007s3_path\030\002 \001(\0132\'.aruna.api" +
+      ".dataproxy.services.v2.S3PathH\000R\006s3PathB" +
+      "\n\n\010resource\"<\n\023PullReplicaResponse\022%\n\016re" +
+      "plication_id\030\001 \001(\tR\rreplicationId\"A\n\030Rep" +
+      "licationStatusRequest\022%\n\016replication_id\030" +
+      "\001 \001(\tR\rreplicationId\"\201\001\n\031ReplicationStat" +
+      "usResponse\022J\n\006status\030\001 \001(\01622.aruna.api.d" +
+      "ataproxy.services.v2.ReplicationStatusR\006" +
+      "status\022\030\n\007message\030\002 \001(\tR\007message\"~\n\016Obje" +
+      "ctLocation\022\026\n\006bucket\030\001 \001(\tR\006bucket\022\020\n\003ke" +
+      "y\030\002 \001(\tR\003key\022\033\n\tupload_id\030\003 \001(\tR\010uploadI" +
+      "d\022%\n\016content_length\030\004 \001(\tR\rcontentLength" +
+      "\"s\n\020PutObjectRequest\022K\n\010location\030\001 \001(\0132/" +
       ".aruna.api.dataproxy.services.v2.ObjectL" +
-      "ocationR\010location\":\n\033InitMultiPartUpload" +
-      "Response\022\033\n\tupload_id\030\001 \001(\tR\010uploadId\"\225\001" +
-      "\n\021UploadPartRequest\022K\n\010location\030\001 \001(\0132/." +
-      "aruna.api.dataproxy.services.v2.ObjectLo" +
-      "cationR\010location\022\037\n\013part_number\030\003 \001(\005R\np" +
-      "artNumber\022\022\n\004data\030\004 \001(\014R\004data\"(\n\022UploadP" +
-      "artResponse\022\022\n\004etag\030\001 \001(\tR\004etag\"D\n\rCompl" +
-      "etedPart\022\037\n\013part_number\030\001 \001(\005R\npartNumbe" +
-      "r\022\022\n\004etag\030\002 \001(\tR\004etag\"\306\001\n\036CompleteMultiP" +
-      "artUploadRequest\022K\n\010location\030\001 \001(\0132/.aru" +
-      "na.api.dataproxy.services.v2.ObjectLocat" +
-      "ionR\010location\022W\n\017completed_parts\030\002 \003(\0132." +
-      ".aruna.api.dataproxy.services.v2.Complet" +
-      "edPartR\016completedParts\"!\n\037CompleteMultiP" +
-      "artUploadResponse\"-\n\023CreateBucketRequest" +
-      "\022\026\n\006bucket\030\001 \001(\tR\006bucket\"\026\n\024CreateBucket" +
-      "Response\"-\n\023DeleteBucketRequest\022\026\n\006bucke" +
-      "t\030\001 \001(\tR\006bucket\"\026\n\024DeleteBucketResponse\"" +
-      "b\n\023DeleteObjectRequest\022K\n\010location\030\001 \001(\013" +
-      "2/.aruna.api.dataproxy.services.v2.Objec" +
-      "tLocationR\010location\"\026\n\024DeleteObjectRespo" +
-      "nse\"m\n\023InitLocationRequest\022\037\n\013object_nam" +
-      "e\030\001 \001(\tR\nobjectName\022\022\n\004size\030\002 \001(\003R\004size\022" +
-      "!\n\014is_temporary\030\003 \001(\010R\013isTemporary\"c\n\024In" +
-      "itLocationResponse\022K\n\010location\030\001 \001(\0132/.a" +
-      "runa.api.dataproxy.services.v2.ObjectLoc" +
-      "ationR\010location*\266\001\n\021ReplicationStatus\022\"\n" +
-      "\036REPLICATION_STATUS_UNSPECIFIED\020\000\022\036\n\032REP" +
-      "LICATION_STATUS_PENDING\020\001\022\036\n\032REPLICATION" +
-      "_STATUS_RUNNING\020\002\022\037\n\033REPLICATION_STATUS_" +
-      "FINISHED\020\003\022\034\n\030REPLICATION_STATUS_ERROR\020\004" +
-      "2\255\002\n\020DataproxyService\022\217\001\n\022RequestReplica" +
-      "tion\022:.aruna.api.dataproxy.services.v2.R" +
-      "equestReplicationRequest\032;.aruna.api.dat" +
-      "aproxy.services.v2.RequestReplicationRes" +
-      "ponse\"\000\022\206\001\n\017InitReplication\0227.aruna.api." +
-      "dataproxy.services.v2.InitReplicationReq" +
-      "uest\0328.aruna.api.dataproxy.services.v2.I" +
-      "nitReplicationResponse\"\0002\257\n\n\027DataproxyBa" +
-      "ckendService\022v\n\tPutObject\0221.aruna.api.da" +
-      "taproxy.services.v2.PutObjectRequest\0322.a" +
-      "runa.api.dataproxy.services.v2.PutObject" +
-      "Response\"\000(\001\022v\n\tGetObject\0221.aruna.api.da" +
-      "taproxy.services.v2.GetObjectRequest\0322.a" +
-      "runa.api.dataproxy.services.v2.GetObject" +
-      "Response\"\0000\001\022w\n\nHeadObject\0222.aruna.api.d" +
-      "ataproxy.services.v2.HeadObjectRequest\0323" +
-      ".aruna.api.dataproxy.services.v2.HeadObj" +
-      "ectResponse\"\000\022\222\001\n\023InitMultiPartUpload\022;." +
-      "aruna.api.dataproxy.services.v2.InitMult" +
-      "iPartUploadRequest\032<.aruna.api.dataproxy" +
-      ".services.v2.InitMultiPartUploadResponse" +
-      "\"\000\022y\n\nUploadPart\0222.aruna.api.dataproxy.s" +
-      "ervices.v2.UploadPartRequest\0323.aruna.api" +
-      ".dataproxy.services.v2.UploadPartRespons" +
-      "e\"\000(\001\022\236\001\n\027CompleteMultiPartUpload\022?.arun" +
-      "a.api.dataproxy.services.v2.CompleteMult" +
-      "iPartUploadRequest\032@.aruna.api.dataproxy" +
-      ".services.v2.CompleteMultiPartUploadResp" +
-      "onse\"\000\022}\n\014CreateBucket\0224.aruna.api.datap" +
-      "roxy.services.v2.CreateBucketRequest\0325.a" +
-      "runa.api.dataproxy.services.v2.CreateBuc" +
-      "ketResponse\"\000\022}\n\014DeleteBucket\0224.aruna.ap" +
-      "i.dataproxy.services.v2.DeleteBucketRequ" +
-      "est\0325.aruna.api.dataproxy.services.v2.De" +
-      "leteBucketResponse\"\000\022}\n\014DeleteObject\0224.a" +
-      "runa.api.dataproxy.services.v2.DeleteObj" +
-      "ectRequest\0325.aruna.api.dataproxy.service" +
-      "s.v2.DeleteObjectResponse\"\000\022}\n\014InitLocat" +
-      "ion\0224.aruna.api.dataproxy.services.v2.In" +
-      "itLocationRequest\0325.aruna.api.dataproxy." +
-      "services.v2.InitLocationResponse\"\0002\217\005\n\024D" +
-      "ataproxyUserService\022\235\001\n\016GetCredentials\0226" +
-      ".aruna.api.dataproxy.services.v2.GetCred" +
-      "entialsRequest\0327.aruna.api.dataproxy.ser" +
-      "vices.v2.GetCredentialsResponse\"\032\202\323\344\223\002\024\"" +
-      "\017/v2/credentials:\001*\022\225\001\n\013PushReplica\0223.ar" +
-      "una.api.dataproxy.services.v2.PushReplic" +
-      "aRequest\0324.aruna.api.dataproxy.services." +
-      "v2.PushReplicaResponse\"\033\202\323\344\223\002\025\"\020/v2/repl" +
-      "ica/push:\001*\022\225\001\n\013PullReplica\0223.aruna.api." +
-      "dataproxy.services.v2.PullReplicaRequest" +
-      "\0324.aruna.api.dataproxy.services.v2.PullR" +
-      "eplicaResponse\"\033\202\323\344\223\002\025\"\020/v2/replica/pull" +
-      ":\001*\022\246\001\n\021ReplicationStatus\0229.aruna.api.da" +
-      "taproxy.services.v2.ReplicationStatusReq" +
-      "uest\032:.aruna.api.dataproxy.services.v2.R" +
-      "eplicationStatusResponse\"\032\202\323\344\223\002\024\022\022/v2/re" +
-      "plica/statusB\235\002\n#com.aruna.api.dataproxy" +
-      ".services.v2B\025DataproxyServiceProtoP\000Z>g" +
-      "ithub.com/ArunaStorage/go-api/aruna/api/" +
-      "dataproxy/services/v2\242\002\004AADS\252\002\037Aruna.Api" +
-      ".Dataproxy.Services.V2\312\002\037Aruna\\Api\\Datap" +
-      "roxy\\Services\\V2\342\002+Aruna\\Api\\Dataproxy\\S" +
-      "ervices\\V2\\GPBMetadata\352\002#Aruna::Api::Dat" +
-      "aproxy::Services::V2b\006proto3"
+      "ocationR\010location\022\022\n\004data\030\002 \001(\014R\004data\"\023\n" +
+      "\021PutObjectResponse\"_\n\020GetObjectRequest\022K" +
+      "\n\010location\030\001 \001(\0132/.aruna.api.dataproxy.s" +
+      "ervices.v2.ObjectLocationR\010location\"\'\n\021G" +
+      "etObjectResponse\022\022\n\004data\030\001 \001(\014R\004data\"`\n\021" +
+      "HeadObjectRequest\022K\n\010location\030\001 \001(\0132/.ar" +
+      "una.api.dataproxy.services.v2.ObjectLoca" +
+      "tionR\010location\"S\n\022HeadObjectResponse\022%\n\016" +
+      "content_length\030\001 \001(\tR\rcontentLength\022\026\n\006e" +
+      "xists\030\002 \001(\010R\006exists\"i\n\032InitMultiPartUplo" +
+      "adRequest\022K\n\010location\030\001 \001(\0132/.aruna.api." +
+      "dataproxy.services.v2.ObjectLocationR\010lo" +
+      "cation\":\n\033InitMultiPartUploadResponse\022\033\n" +
+      "\tupload_id\030\001 \001(\tR\010uploadId\"\225\001\n\021UploadPar" +
+      "tRequest\022K\n\010location\030\001 \001(\0132/.aruna.api.d" +
+      "ataproxy.services.v2.ObjectLocationR\010loc" +
+      "ation\022\037\n\013part_number\030\003 \001(\005R\npartNumber\022\022" +
+      "\n\004data\030\004 \001(\014R\004data\"(\n\022UploadPartResponse" +
+      "\022\022\n\004etag\030\001 \001(\tR\004etag\"D\n\rCompletedPart\022\037\n" +
+      "\013part_number\030\001 \001(\005R\npartNumber\022\022\n\004etag\030\002" +
+      " \001(\tR\004etag\"\306\001\n\036CompleteMultiPartUploadRe" +
+      "quest\022K\n\010location\030\001 \001(\0132/.aruna.api.data" +
+      "proxy.services.v2.ObjectLocationR\010locati" +
+      "on\022W\n\017completed_parts\030\002 \003(\0132..aruna.api." +
+      "dataproxy.services.v2.CompletedPartR\016com" +
+      "pletedParts\"!\n\037CompleteMultiPartUploadRe" +
+      "sponse\"-\n\023CreateBucketRequest\022\026\n\006bucket\030" +
+      "\001 \001(\tR\006bucket\"\026\n\024CreateBucketResponse\"-\n" +
+      "\023DeleteBucketRequest\022\026\n\006bucket\030\001 \001(\tR\006bu" +
+      "cket\"\026\n\024DeleteBucketResponse\"b\n\023DeleteOb" +
+      "jectRequest\022K\n\010location\030\001 \001(\0132/.aruna.ap" +
+      "i.dataproxy.services.v2.ObjectLocationR\010" +
+      "location\"\026\n\024DeleteObjectResponse\"m\n\023Init" +
+      "LocationRequest\022\037\n\013object_name\030\001 \001(\tR\nob" +
+      "jectName\022\022\n\004size\030\002 \001(\003R\004size\022!\n\014is_tempo" +
+      "rary\030\003 \001(\010R\013isTemporary\"c\n\024InitLocationR" +
+      "esponse\022K\n\010location\030\001 \001(\0132/.aruna.api.da" +
+      "taproxy.services.v2.ObjectLocationR\010loca" +
+      "tion*\266\001\n\021ReplicationStatus\022\"\n\036REPLICATIO" +
+      "N_STATUS_UNSPECIFIED\020\000\022\036\n\032REPLICATION_ST" +
+      "ATUS_PENDING\020\001\022\036\n\032REPLICATION_STATUS_RUN" +
+      "NING\020\002\022\037\n\033REPLICATION_STATUS_FINISHED\020\003\022" +
+      "\034\n\030REPLICATION_STATUS_ERROR\020\0042\274\002\n\020Datapr" +
+      "oxyService\022\217\001\n\022RequestReplication\022:.arun" +
+      "a.api.dataproxy.services.v2.RequestRepli" +
+      "cationRequest\032;.aruna.api.dataproxy.serv" +
+      "ices.v2.RequestReplicationResponse\"\000\022\206\001\n" +
+      "\017InitReplication\0227.aruna.api.dataproxy.s" +
+      "ervices.v2.InitReplicationRequest\0328.arun" +
+      "a.api.dataproxy.services.v2.InitReplicat" +
+      "ionResponse\"\000\032\r\372\322\344\223\002\007\022\005PROXY2\276\n\n\027Datapro" +
+      "xyBackendService\022v\n\tPutObject\0221.aruna.ap" +
+      "i.dataproxy.services.v2.PutObjectRequest" +
+      "\0322.aruna.api.dataproxy.services.v2.PutOb" +
+      "jectResponse\"\000(\001\022v\n\tGetObject\0221.aruna.ap" +
+      "i.dataproxy.services.v2.GetObjectRequest" +
+      "\0322.aruna.api.dataproxy.services.v2.GetOb" +
+      "jectResponse\"\0000\001\022w\n\nHeadObject\0222.aruna.a" +
+      "pi.dataproxy.services.v2.HeadObjectReque" +
+      "st\0323.aruna.api.dataproxy.services.v2.Hea" +
+      "dObjectResponse\"\000\022\222\001\n\023InitMultiPartUploa" +
+      "d\022;.aruna.api.dataproxy.services.v2.Init" +
+      "MultiPartUploadRequest\032<.aruna.api.datap" +
+      "roxy.services.v2.InitMultiPartUploadResp" +
+      "onse\"\000\022y\n\nUploadPart\0222.aruna.api.datapro" +
+      "xy.services.v2.UploadPartRequest\0323.aruna" +
+      ".api.dataproxy.services.v2.UploadPartRes" +
+      "ponse\"\000(\001\022\236\001\n\027CompleteMultiPartUpload\022?." +
+      "aruna.api.dataproxy.services.v2.Complete" +
+      "MultiPartUploadRequest\032@.aruna.api.datap" +
+      "roxy.services.v2.CompleteMultiPartUpload" +
+      "Response\"\000\022}\n\014CreateBucket\0224.aruna.api.d" +
+      "ataproxy.services.v2.CreateBucketRequest" +
+      "\0325.aruna.api.dataproxy.services.v2.Creat" +
+      "eBucketResponse\"\000\022}\n\014DeleteBucket\0224.arun" +
+      "a.api.dataproxy.services.v2.DeleteBucket" +
+      "Request\0325.aruna.api.dataproxy.services.v" +
+      "2.DeleteBucketResponse\"\000\022}\n\014DeleteObject" +
+      "\0224.aruna.api.dataproxy.services.v2.Delet" +
+      "eObjectRequest\0325.aruna.api.dataproxy.ser" +
+      "vices.v2.DeleteObjectResponse\"\000\022}\n\014InitL" +
+      "ocation\0224.aruna.api.dataproxy.services.v" +
+      "2.InitLocationRequest\0325.aruna.api.datapr" +
+      "oxy.services.v2.InitLocationResponse\"\000\032\r" +
+      "\372\322\344\223\002\007\022\005PROXY2\236\005\n\024DataproxyUserService\022\235" +
+      "\001\n\016GetCredentials\0226.aruna.api.dataproxy." +
+      "services.v2.GetCredentialsRequest\0327.arun" +
+      "a.api.dataproxy.services.v2.GetCredentia" +
+      "lsResponse\"\032\202\323\344\223\002\024\"\017/v2/credentials:\001*\022\225" +
+      "\001\n\013PushReplica\0223.aruna.api.dataproxy.ser" +
+      "vices.v2.PushReplicaRequest\0324.aruna.api." +
+      "dataproxy.services.v2.PushReplicaRespons" +
+      "e\"\033\202\323\344\223\002\025\"\020/v2/replica/push:\001*\022\225\001\n\013PullR" +
+      "eplica\0223.aruna.api.dataproxy.services.v2" +
+      ".PullReplicaRequest\0324.aruna.api.dataprox" +
+      "y.services.v2.PullReplicaResponse\"\033\202\323\344\223\002" +
+      "\025\"\020/v2/replica/pull:\001*\022\246\001\n\021ReplicationSt" +
+      "atus\0229.aruna.api.dataproxy.services.v2.R" +
+      "eplicationStatusRequest\032:.aruna.api.data" +
+      "proxy.services.v2.ReplicationStatusRespo" +
+      "nse\"\032\202\323\344\223\002\024\022\022/v2/replica/status\032\r\372\322\344\223\002\007\022" +
+      "\005PROXYB\235\002\n#com.aruna.api.dataproxy.servi" +
+      "ces.v2B\025DataproxyServiceProtoP\000Z>github." +
+      "com/ArunaStorage/go-api/aruna/api/datapr" +
+      "oxy/services/v2\242\002\004AADS\252\002\037Aruna.Api.Datap" +
+      "roxy.Services.V2\312\002\037Aruna\\Api\\Dataproxy\\S" +
+      "ervices\\V2\342\002+Aruna\\Api\\Dataproxy\\Service" +
+      "s\\V2\\GPBMetadata\352\002#Aruna::Api::Dataproxy" +
+      "::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
         });
     internal_static_aruna_api_dataproxy_services_v2_DataProxyInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -23463,10 +23466,12 @@ public final class DataproxyServiceProto {
         new java.lang.String[] { "Location", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

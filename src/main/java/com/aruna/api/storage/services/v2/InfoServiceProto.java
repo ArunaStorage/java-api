@@ -11546,13 +11546,14 @@ public final class InfoServiceProto {
       ".v2.SetAnouncementsRequest\0326.aruna.api.s" +
       "torage.services.v2.SetAnouncementsRespon" +
       "se\"$\202\323\344\223\002\036\"\031/v2/info/anouncements/set:\001*" +
-      "B\214\002\n!com.aruna.api.storage.services.v2B\020" +
-      "InfoServiceProtoP\000Z<github.com/ArunaStor" +
-      "age/go-api/aruna/api/storage/services/v2" +
-      "\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2\312" +
-      "\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna\\" +
-      "Api\\Storage\\Services\\V2\\GPBMetadata\352\002!Ar" +
-      "una::Api::Storage::Services::V2b\006proto3"
+      "B\217\002\n!com.aruna.api.storage.services.v2B\020" +
+      "InfoServiceProtoP\000Z?github.com/ArunaStor" +
+      "age/go-api/v2/aruna/api/storage/services" +
+      "/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services." +
+      "V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aru" +
+      "na\\Api\\Storage\\Services\\V2\\GPBMetadata\352\002" +
+      "!Aruna::Api::Storage::Services::V2b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

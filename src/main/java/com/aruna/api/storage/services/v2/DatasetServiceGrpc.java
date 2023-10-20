@@ -298,6 +298,37 @@ public final class DatasetServiceGrpc {
     return getSnapshotDatasetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest,
+      com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse> getUpdateDatasetLicensesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDatasetLicenses",
+      requestType = com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest.class,
+      responseType = com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest,
+      com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse> getUpdateDatasetLicensesMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest, com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse> getUpdateDatasetLicensesMethod;
+    if ((getUpdateDatasetLicensesMethod = DatasetServiceGrpc.getUpdateDatasetLicensesMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getUpdateDatasetLicensesMethod = DatasetServiceGrpc.getUpdateDatasetLicensesMethod) == null) {
+          DatasetServiceGrpc.getUpdateDatasetLicensesMethod = getUpdateDatasetLicensesMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest, com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDatasetLicenses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("UpdateDatasetLicenses"))
+              .build();
+        }
+      }
+    }
+    return getUpdateDatasetLicensesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -457,6 +488,18 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSnapshotDatasetMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the dataset metadata license and/or default data license.
+     * </pre>
+     */
+    default void updateDatasetLicenses(com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDatasetLicensesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -610,6 +653,19 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSnapshotDatasetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the dataset metadata license and/or default data license.
+     * </pre>
+     */
+    public void updateDatasetLicenses(com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateDatasetLicensesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -738,6 +794,18 @@ public final class DatasetServiceGrpc {
     public com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetResponse snapshotDataset(com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSnapshotDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the dataset metadata license and/or default data license.
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse updateDatasetLicenses(com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateDatasetLicensesMethod(), getCallOptions(), request);
     }
   }
 
@@ -877,6 +945,19 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSnapshotDatasetMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UpdateLicenses
+     * Status: BETA
+     * Updates the dataset metadata license and/or default data license.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse> updateDatasetLicenses(
+        com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateDatasetLicensesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DATASET = 0;
@@ -888,6 +969,7 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_UPDATE_DATASET_KEY_VALUES = 6;
   private static final int METHODID_UPDATE_DATASET_DATA_CLASS = 7;
   private static final int METHODID_SNAPSHOT_DATASET = 8;
+  private static final int METHODID_UPDATE_DATASET_LICENSES = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -941,6 +1023,10 @@ public final class DatasetServiceGrpc {
         case METHODID_SNAPSHOT_DATASET:
           serviceImpl.snapshotDataset((com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_DATASET_LICENSES:
+          serviceImpl.updateDatasetLicenses((com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1023,6 +1109,13 @@ public final class DatasetServiceGrpc {
               com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetRequest,
               com.aruna.api.storage.services.v2.DatasetServiceProto.SnapshotDatasetResponse>(
                 service, METHODID_SNAPSHOT_DATASET)))
+        .addMethod(
+          getUpdateDatasetLicensesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesRequest,
+              com.aruna.api.storage.services.v2.DatasetServiceProto.UpdateDatasetLicensesResponse>(
+                service, METHODID_UPDATE_DATASET_LICENSES)))
         .build();
   }
 
@@ -1080,6 +1173,7 @@ public final class DatasetServiceGrpc {
               .addMethod(getUpdateDatasetKeyValuesMethod())
               .addMethod(getUpdateDatasetDataClassMethod())
               .addMethod(getSnapshotDatasetMethod())
+              .addMethod(getUpdateDatasetLicensesMethod())
               .build();
         }
       }

@@ -2625,35 +2625,37 @@ public final class BundlerServiceProto {
       "\n5aruna/api/dataproxy/services/v2/bundle" +
       "r_service.proto\022\037aruna.api.dataproxy.ser" +
       "vices.v2\032\037google/protobuf/timestamp.prot" +
-      "o\032\034google/api/annotations.proto\"\215\001\n\023Crea" +
-      "teBundleRequest\022\037\n\013resource_id\030\001 \003(\tR\nre" +
-      "sourceId\022\032\n\010filename\030\002 \001(\tR\010filename\0229\n\n" +
-      "expires_at\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tampR\texpiresAt\"R\n\024CreateBundleResponse\022" +
-      "\033\n\tbundle_id\030\001 \001(\tR\010bundleId\022\035\n\nbundle_u" +
-      "rl\030\002 \001(\tR\tbundleUrl\"2\n\023DeleteBundleReque" +
-      "st\022\033\n\tbundle_id\030\001 \001(\tR\010bundleId\"\026\n\024Delet" +
-      "eBundleResponse2\272\002\n\016BundlerService\022\222\001\n\014C" +
-      "reateBundle\0224.aruna.api.dataproxy.servic" +
-      "es.v2.CreateBundleRequest\0325.aruna.api.da" +
-      "taproxy.services.v2.CreateBundleResponse" +
-      "\"\025\202\323\344\223\002\017\"\n/v2/bundle:\001*\022\222\001\n\014DeleteBundle" +
-      "\0224.aruna.api.dataproxy.services.v2.Delet" +
+      "o\032\033google/api/visibility.proto\032\034google/a" +
+      "pi/annotations.proto\"\215\001\n\023CreateBundleReq" +
+      "uest\022\037\n\013resource_id\030\001 \003(\tR\nresourceId\022\032\n" +
+      "\010filename\030\002 \001(\tR\010filename\0229\n\nexpires_at\030" +
+      "\003 \001(\0132\032.google.protobuf.TimestampR\texpir" +
+      "esAt\"R\n\024CreateBundleResponse\022\033\n\tbundle_i" +
+      "d\030\001 \001(\tR\010bundleId\022\035\n\nbundle_url\030\002 \001(\tR\tb" +
+      "undleUrl\"2\n\023DeleteBundleRequest\022\033\n\tbundl" +
+      "e_id\030\001 \001(\tR\010bundleId\"\026\n\024DeleteBundleResp" +
+      "onse2\311\002\n\016BundlerService\022\222\001\n\014CreateBundle" +
+      "\0224.aruna.api.dataproxy.services.v2.Creat" +
       "eBundleRequest\0325.aruna.api.dataproxy.ser" +
-      "vices.v2.DeleteBundleResponse\"\025\202\323\344\223\002\017*\n/" +
-      "v2/bundle:\001*B\233\002\n#com.aruna.api.dataproxy" +
-      ".services.v2B\023BundlerServiceProtoP\000Z>git" +
-      "hub.com/ArunaStorage/go-api/aruna/api/da" +
-      "taproxy/services/v2\242\002\004AADS\252\002\037Aruna.Api.D" +
-      "ataproxy.Services.V2\312\002\037Aruna\\Api\\Datapro" +
-      "xy\\Services\\V2\342\002+Aruna\\Api\\Dataproxy\\Ser" +
-      "vices\\V2\\GPBMetadata\352\002#Aruna::Api::Datap" +
-      "roxy::Services::V2b\006proto3"
+      "vices.v2.CreateBundleResponse\"\025\202\323\344\223\002\017\"\n/" +
+      "v2/bundle:\001*\022\222\001\n\014DeleteBundle\0224.aruna.ap" +
+      "i.dataproxy.services.v2.DeleteBundleRequ" +
+      "est\0325.aruna.api.dataproxy.services.v2.De" +
+      "leteBundleResponse\"\025\202\323\344\223\002\017*\n/v2/bundle:\001" +
+      "*\032\r\372\322\344\223\002\007\022\005PROXYB\233\002\n#com.aruna.api.datap" +
+      "roxy.services.v2B\023BundlerServiceProtoP\000Z" +
+      ">github.com/ArunaStorage/go-api/aruna/ap" +
+      "i/dataproxy/services/v2\242\002\004AADS\252\002\037Aruna.A" +
+      "pi.Dataproxy.Services.V2\312\002\037Aruna\\Api\\Dat" +
+      "aproxy\\Services\\V2\342\002+Aruna\\Api\\Dataproxy" +
+      "\\Services\\V2\\GPBMetadata\352\002#Aruna::Api::D" +
+      "ataproxy::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_aruna_api_dataproxy_services_v2_CreateBundleRequest_descriptor =
@@ -2682,10 +2684,12 @@ public final class BundlerServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

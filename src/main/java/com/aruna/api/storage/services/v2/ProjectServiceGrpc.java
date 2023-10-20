@@ -267,6 +267,37 @@ public final class ProjectServiceGrpc {
     return getUpdateProjectDataClassMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest,
+      com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse> getUpdateProjectLicensesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProjectLicenses",
+      requestType = com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest.class,
+      responseType = com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest,
+      com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse> getUpdateProjectLicensesMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest, com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse> getUpdateProjectLicensesMethod;
+    if ((getUpdateProjectLicensesMethod = ProjectServiceGrpc.getUpdateProjectLicensesMethod) == null) {
+      synchronized (ProjectServiceGrpc.class) {
+        if ((getUpdateProjectLicensesMethod = ProjectServiceGrpc.getUpdateProjectLicensesMethod) == null) {
+          ProjectServiceGrpc.getUpdateProjectLicensesMethod = getUpdateProjectLicensesMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest, com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProjectLicenses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("UpdateProjectLicenses"))
+              .build();
+        }
+      }
+    }
+    return getUpdateProjectLicensesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.ProjectServiceProto.ArchiveProjectRequest,
       com.aruna.api.storage.services.v2.ProjectServiceProto.ArchiveProjectResponse> getArchiveProjectMethod;
 
@@ -450,6 +481,18 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
+     * UpdateLicense
+     * Status: BETA
+     * Updates the project license. All (meta) data will be overwritten.
+     * </pre>
+     */
+    default void updateProjectLicenses(com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProjectLicensesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ArchiveProjectRequest
      * Status: BETA
      * Archives the full project, rendering all downstream relations immutable
@@ -604,6 +647,19 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
+     * UpdateLicense
+     * Status: BETA
+     * Updates the project license. All (meta) data will be overwritten.
+     * </pre>
+     */
+    public void updateProjectLicenses(com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateProjectLicensesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ArchiveProjectRequest
      * Status: BETA
      * Archives the full project, rendering all downstream relations immutable
@@ -732,6 +788,18 @@ public final class ProjectServiceGrpc {
     public com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectDataClassResponse updateProjectDataClass(com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectDataClassRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProjectDataClassMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateLicense
+     * Status: BETA
+     * Updates the project license. All (meta) data will be overwritten.
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse updateProjectLicenses(com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateProjectLicensesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -875,6 +943,19 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
+     * UpdateLicense
+     * Status: BETA
+     * Updates the project license. All (meta) data will be overwritten.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse> updateProjectLicenses(
+        com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateProjectLicensesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ArchiveProjectRequest
      * Status: BETA
      * Archives the full project, rendering all downstream relations immutable
@@ -895,7 +976,8 @@ public final class ProjectServiceGrpc {
   private static final int METHODID_UPDATE_PROJECT_DESCRIPTION = 5;
   private static final int METHODID_UPDATE_PROJECT_KEY_VALUES = 6;
   private static final int METHODID_UPDATE_PROJECT_DATA_CLASS = 7;
-  private static final int METHODID_ARCHIVE_PROJECT = 8;
+  private static final int METHODID_UPDATE_PROJECT_LICENSES = 8;
+  private static final int METHODID_ARCHIVE_PROJECT = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -945,6 +1027,10 @@ public final class ProjectServiceGrpc {
         case METHODID_UPDATE_PROJECT_DATA_CLASS:
           serviceImpl.updateProjectDataClass((com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectDataClassRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectDataClassResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PROJECT_LICENSES:
+          serviceImpl.updateProjectLicenses((com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse>) responseObserver);
           break;
         case METHODID_ARCHIVE_PROJECT:
           serviceImpl.archiveProject((com.aruna.api.storage.services.v2.ProjectServiceProto.ArchiveProjectRequest) request,
@@ -1025,6 +1111,13 @@ public final class ProjectServiceGrpc {
               com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectDataClassResponse>(
                 service, METHODID_UPDATE_PROJECT_DATA_CLASS)))
         .addMethod(
+          getUpdateProjectLicensesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesRequest,
+              com.aruna.api.storage.services.v2.ProjectServiceProto.UpdateProjectLicensesResponse>(
+                service, METHODID_UPDATE_PROJECT_LICENSES)))
+        .addMethod(
           getArchiveProjectMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1087,6 +1180,7 @@ public final class ProjectServiceGrpc {
               .addMethod(getUpdateProjectDescriptionMethod())
               .addMethod(getUpdateProjectKeyValuesMethod())
               .addMethod(getUpdateProjectDataClassMethod())
+              .addMethod(getUpdateProjectLicensesMethod())
               .addMethod(getArchiveProjectMethod())
               .build();
         }

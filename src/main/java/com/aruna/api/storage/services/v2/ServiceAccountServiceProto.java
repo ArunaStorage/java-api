@@ -7299,43 +7299,43 @@ public final class ServiceAccountServiceProto {
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> 
-        getTokenList();
+        getTokensList();
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
-    com.aruna.api.storage.models.v2.ModelsProto.Token getToken(int index);
+    com.aruna.api.storage.models.v2.ModelsProto.Token getTokens(int index);
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
-    int getTokenCount();
+    int getTokensCount();
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder> 
-        getTokenOrBuilderList();
+        getTokensOrBuilderList();
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
-    com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder getTokenOrBuilder(
+    com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder getTokensOrBuilder(
         int index);
   }
   /**
@@ -7351,7 +7351,7 @@ public final class ServiceAccountServiceProto {
       super(builder);
     }
     private GetServiceAccountTokensResponse() {
-      token_ = java.util.Collections.emptyList();
+      tokens_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7374,65 +7374,65 @@ public final class ServiceAccountServiceProto {
               com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse.class, com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse.Builder.class);
     }
 
-    public static final int TOKEN_FIELD_NUMBER = 1;
+    public static final int TOKENS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> token_;
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> tokens_;
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> getTokenList() {
-      return token_;
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> getTokensList() {
+      return tokens_;
     }
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder> 
-        getTokenOrBuilderList() {
-      return token_;
+        getTokensOrBuilderList() {
+      return tokens_;
     }
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     @java.lang.Override
-    public int getTokenCount() {
-      return token_.size();
+    public int getTokensCount() {
+      return tokens_.size();
     }
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.Token getToken(int index) {
-      return token_.get(index);
+    public com.aruna.api.storage.models.v2.ModelsProto.Token getTokens(int index) {
+      return tokens_.get(index);
     }
     /**
      * <pre>
      * This contains only the token description
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder getTokenOrBuilder(
+    public com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder getTokensOrBuilder(
         int index) {
-      return token_.get(index);
+      return tokens_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7449,8 +7449,8 @@ public final class ServiceAccountServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < token_.size(); i++) {
-        output.writeMessage(1, token_.get(i));
+      for (int i = 0; i < tokens_.size(); i++) {
+        output.writeMessage(1, tokens_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -7461,9 +7461,9 @@ public final class ServiceAccountServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < token_.size(); i++) {
+      for (int i = 0; i < tokens_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, token_.get(i));
+          .computeMessageSize(1, tokens_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7480,8 +7480,8 @@ public final class ServiceAccountServiceProto {
       }
       com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse other = (com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse) obj;
 
-      if (!getTokenList()
-          .equals(other.getTokenList())) return false;
+      if (!getTokensList()
+          .equals(other.getTokensList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7493,9 +7493,9 @@ public final class ServiceAccountServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTokenCount() > 0) {
-        hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + getTokenList().hashCode();
+      if (getTokensCount() > 0) {
+        hash = (37 * hash) + TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokensList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -7628,11 +7628,11 @@ public final class ServiceAccountServiceProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        if (tokenBuilder_ == null) {
-          token_ = java.util.Collections.emptyList();
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
         } else {
-          token_ = null;
-          tokenBuilder_.clear();
+          tokens_ = null;
+          tokensBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -7668,14 +7668,14 @@ public final class ServiceAccountServiceProto {
       }
 
       private void buildPartialRepeatedFields(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse result) {
-        if (tokenBuilder_ == null) {
+        if (tokensBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            token_ = java.util.Collections.unmodifiableList(token_);
+            tokens_ = java.util.Collections.unmodifiableList(tokens_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.token_ = token_;
+          result.tokens_ = tokens_;
         } else {
-          result.token_ = tokenBuilder_.build();
+          result.tokens_ = tokensBuilder_.build();
         }
       }
 
@@ -7695,29 +7695,29 @@ public final class ServiceAccountServiceProto {
 
       public Builder mergeFrom(com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse other) {
         if (other == com.aruna.api.storage.services.v2.ServiceAccountServiceProto.GetServiceAccountTokensResponse.getDefaultInstance()) return this;
-        if (tokenBuilder_ == null) {
-          if (!other.token_.isEmpty()) {
-            if (token_.isEmpty()) {
-              token_ = other.token_;
+        if (tokensBuilder_ == null) {
+          if (!other.tokens_.isEmpty()) {
+            if (tokens_.isEmpty()) {
+              tokens_ = other.tokens_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureTokenIsMutable();
-              token_.addAll(other.token_);
+              ensureTokensIsMutable();
+              tokens_.addAll(other.tokens_);
             }
             onChanged();
           }
         } else {
-          if (!other.token_.isEmpty()) {
-            if (tokenBuilder_.isEmpty()) {
-              tokenBuilder_.dispose();
-              tokenBuilder_ = null;
-              token_ = other.token_;
+          if (!other.tokens_.isEmpty()) {
+            if (tokensBuilder_.isEmpty()) {
+              tokensBuilder_.dispose();
+              tokensBuilder_ = null;
+              tokens_ = other.tokens_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              tokenBuilder_ = 
+              tokensBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTokenFieldBuilder() : null;
+                   getTokensFieldBuilder() : null;
             } else {
-              tokenBuilder_.addAllMessages(other.token_);
+              tokensBuilder_.addAllMessages(other.tokens_);
             }
           }
         }
@@ -7752,11 +7752,11 @@ public final class ServiceAccountServiceProto {
                     input.readMessage(
                         com.aruna.api.storage.models.v2.ModelsProto.Token.parser(),
                         extensionRegistry);
-                if (tokenBuilder_ == null) {
-                  ensureTokenIsMutable();
-                  token_.add(m);
+                if (tokensBuilder_ == null) {
+                  ensureTokensIsMutable();
+                  tokens_.add(m);
                 } else {
-                  tokenBuilder_.addMessage(m);
+                  tokensBuilder_.addMessage(m);
                 }
                 break;
               } // case 10
@@ -7777,30 +7777,30 @@ public final class ServiceAccountServiceProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> token_ =
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> tokens_ =
         java.util.Collections.emptyList();
-      private void ensureTokenIsMutable() {
+      private void ensureTokensIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          token_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Token>(token_);
+          tokens_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Token>(tokens_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.Token, com.aruna.api.storage.models.v2.ModelsProto.Token.Builder, com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder> tokenBuilder_;
+          com.aruna.api.storage.models.v2.ModelsProto.Token, com.aruna.api.storage.models.v2.ModelsProto.Token.Builder, com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder> tokensBuilder_;
 
       /**
        * <pre>
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> getTokenList() {
-        if (tokenBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(token_);
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token> getTokensList() {
+        if (tokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokens_);
         } else {
-          return tokenBuilder_.getMessageList();
+          return tokensBuilder_.getMessageList();
         }
       }
       /**
@@ -7808,13 +7808,13 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public int getTokenCount() {
-        if (tokenBuilder_ == null) {
-          return token_.size();
+      public int getTokensCount() {
+        if (tokensBuilder_ == null) {
+          return tokens_.size();
         } else {
-          return tokenBuilder_.getCount();
+          return tokensBuilder_.getCount();
         }
       }
       /**
@@ -7822,13 +7822,13 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.Token getToken(int index) {
-        if (tokenBuilder_ == null) {
-          return token_.get(index);
+      public com.aruna.api.storage.models.v2.ModelsProto.Token getTokens(int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);
         } else {
-          return tokenBuilder_.getMessage(index);
+          return tokensBuilder_.getMessage(index);
         }
       }
       /**
@@ -7836,19 +7836,19 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder setToken(
+      public Builder setTokens(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Token value) {
-        if (tokenBuilder_ == null) {
+        if (tokensBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTokenIsMutable();
-          token_.set(index, value);
+          ensureTokensIsMutable();
+          tokens_.set(index, value);
           onChanged();
         } else {
-          tokenBuilder_.setMessage(index, value);
+          tokensBuilder_.setMessage(index, value);
         }
         return this;
       }
@@ -7857,16 +7857,16 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder setToken(
+      public Builder setTokens(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Token.Builder builderForValue) {
-        if (tokenBuilder_ == null) {
-          ensureTokenIsMutable();
-          token_.set(index, builderForValue.build());
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.set(index, builderForValue.build());
           onChanged();
         } else {
-          tokenBuilder_.setMessage(index, builderForValue.build());
+          tokensBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
@@ -7875,18 +7875,18 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder addToken(com.aruna.api.storage.models.v2.ModelsProto.Token value) {
-        if (tokenBuilder_ == null) {
+      public Builder addTokens(com.aruna.api.storage.models.v2.ModelsProto.Token value) {
+        if (tokensBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTokenIsMutable();
-          token_.add(value);
+          ensureTokensIsMutable();
+          tokens_.add(value);
           onChanged();
         } else {
-          tokenBuilder_.addMessage(value);
+          tokensBuilder_.addMessage(value);
         }
         return this;
       }
@@ -7895,19 +7895,19 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder addToken(
+      public Builder addTokens(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Token value) {
-        if (tokenBuilder_ == null) {
+        if (tokensBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTokenIsMutable();
-          token_.add(index, value);
+          ensureTokensIsMutable();
+          tokens_.add(index, value);
           onChanged();
         } else {
-          tokenBuilder_.addMessage(index, value);
+          tokensBuilder_.addMessage(index, value);
         }
         return this;
       }
@@ -7916,16 +7916,16 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder addToken(
+      public Builder addTokens(
           com.aruna.api.storage.models.v2.ModelsProto.Token.Builder builderForValue) {
-        if (tokenBuilder_ == null) {
-          ensureTokenIsMutable();
-          token_.add(builderForValue.build());
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(builderForValue.build());
           onChanged();
         } else {
-          tokenBuilder_.addMessage(builderForValue.build());
+          tokensBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
@@ -7934,16 +7934,16 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder addToken(
+      public Builder addTokens(
           int index, com.aruna.api.storage.models.v2.ModelsProto.Token.Builder builderForValue) {
-        if (tokenBuilder_ == null) {
-          ensureTokenIsMutable();
-          token_.add(index, builderForValue.build());
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(index, builderForValue.build());
           onChanged();
         } else {
-          tokenBuilder_.addMessage(index, builderForValue.build());
+          tokensBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
@@ -7952,17 +7952,17 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder addAllToken(
+      public Builder addAllTokens(
           java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Token> values) {
-        if (tokenBuilder_ == null) {
-          ensureTokenIsMutable();
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, token_);
+              values, tokens_);
           onChanged();
         } else {
-          tokenBuilder_.addAllMessages(values);
+          tokensBuilder_.addAllMessages(values);
         }
         return this;
       }
@@ -7971,15 +7971,15 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder clearToken() {
-        if (tokenBuilder_ == null) {
-          token_ = java.util.Collections.emptyList();
+      public Builder clearTokens() {
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          tokenBuilder_.clear();
+          tokensBuilder_.clear();
         }
         return this;
       }
@@ -7988,15 +7988,15 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public Builder removeToken(int index) {
-        if (tokenBuilder_ == null) {
-          ensureTokenIsMutable();
-          token_.remove(index);
+      public Builder removeTokens(int index) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.remove(index);
           onChanged();
         } else {
-          tokenBuilder_.remove(index);
+          tokensBuilder_.remove(index);
         }
         return this;
       }
@@ -8005,24 +8005,24 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.Token.Builder getTokenBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Token.Builder getTokensBuilder(
           int index) {
-        return getTokenFieldBuilder().getBuilder(index);
+        return getTokensFieldBuilder().getBuilder(index);
       }
       /**
        * <pre>
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder getTokenOrBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder getTokensOrBuilder(
           int index) {
-        if (tokenBuilder_ == null) {
-          return token_.get(index);  } else {
-          return tokenBuilder_.getMessageOrBuilder(index);
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);  } else {
+          return tokensBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
@@ -8030,14 +8030,14 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
       public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder> 
-           getTokenOrBuilderList() {
-        if (tokenBuilder_ != null) {
-          return tokenBuilder_.getMessageOrBuilderList();
+           getTokensOrBuilderList() {
+        if (tokensBuilder_ != null) {
+          return tokensBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(token_);
+          return java.util.Collections.unmodifiableList(tokens_);
         }
       }
       /**
@@ -8045,10 +8045,10 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.Token.Builder addTokenBuilder() {
-        return getTokenFieldBuilder().addBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Token.Builder addTokensBuilder() {
+        return getTokensFieldBuilder().addBuilder(
             com.aruna.api.storage.models.v2.ModelsProto.Token.getDefaultInstance());
       }
       /**
@@ -8056,11 +8056,11 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.Token.Builder addTokenBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Token.Builder addTokensBuilder(
           int index) {
-        return getTokenFieldBuilder().addBuilder(
+        return getTokensFieldBuilder().addBuilder(
             index, com.aruna.api.storage.models.v2.ModelsProto.Token.getDefaultInstance());
       }
       /**
@@ -8068,25 +8068,25 @@ public final class ServiceAccountServiceProto {
        * This contains only the token description
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.Token token = 1 [json_name = "token"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Token tokens = 1 [json_name = "tokens"];</code>
        */
       public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Token.Builder> 
-           getTokenBuilderList() {
-        return getTokenFieldBuilder().getBuilderList();
+           getTokensBuilderList() {
+        return getTokensFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           com.aruna.api.storage.models.v2.ModelsProto.Token, com.aruna.api.storage.models.v2.ModelsProto.Token.Builder, com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder> 
-          getTokenFieldBuilder() {
-        if (tokenBuilder_ == null) {
-          tokenBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTokensFieldBuilder() {
+        if (tokensBuilder_ == null) {
+          tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.aruna.api.storage.models.v2.ModelsProto.Token, com.aruna.api.storage.models.v2.ModelsProto.Token.Builder, com.aruna.api.storage.models.v2.ModelsProto.TokenOrBuilder>(
-                  token_,
+                  tokens_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          token_ = null;
+          tokens_ = null;
         }
-        return tokenBuilder_;
+        return tokensBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13941,124 +13941,125 @@ public final class ServiceAccountServiceProto {
       "account_service.proto\022\035aruna.api.storage" +
       ".services.v2\032(aruna/api/storage/models/v" +
       "2/models.proto\032\034google/api/annotations.p" +
-      "roto\032\037google/protobuf/timestamp.proto\"z\n" +
-      "\033CreateServiceAccountRequest\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\022G\n\npermission\030\002 \001(\0132\'.aruna.api" +
-      ".storage.models.v2.PermissionR\npermissio" +
-      "n\"\223\001\n\016ServiceAccount\022$\n\016svc_account_id\030\001" +
-      " \001(\tR\014svcAccountId\022\022\n\004name\030\002 \001(\tR\004name\022G" +
-      "\n\npermission\030\003 \001(\0132\'.aruna.api.storage.m" +
-      "odels.v2.PermissionR\npermission\"v\n\034Creat" +
-      "eServiceAccountResponse\022V\n\017service_accou" +
-      "nt\030\001 \001(\0132-.aruna.api.storage.services.v2" +
-      ".ServiceAccountR\016serviceAccount\"\340\001\n Crea" +
-      "teServiceAccountTokenRequest\022$\n\016svc_acco" +
-      "unt_id\030\001 \001(\tR\014svcAccountId\022G\n\npermission" +
-      "\030\002 \001(\0132\'.aruna.api.storage.models.v2.Per" +
-      "missionR\npermission\022\022\n\004name\030\003 \001(\tR\004name\022" +
-      "9\n\nexpires_at\030\004 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\texpiresAt\"\200\001\n!CreateServiceAcco" +
-      "untTokenResponse\0228\n\005token\030\001 \001(\0132\".aruna." +
-      "api.storage.models.v2.TokenR\005token\022!\n\014to" +
-      "ken_secret\030\002 \001(\tR\013tokenSecret\"\223\001\n\"SetSer" +
-      "viceAccountPermissionRequest\022$\n\016svc_acco" +
-      "unt_id\030\001 \001(\tR\014svcAccountId\022G\n\npermission" +
-      "\030\002 \001(\0132\'.aruna.api.storage.models.v2.Per" +
-      "missionR\npermission\"}\n#SetServiceAccount" +
-      "PermissionResponse\022V\n\017service_account\030\001 " +
-      "\001(\0132-.aruna.api.storage.services.v2.Serv" +
-      "iceAccountR\016serviceAccount\"`\n\035GetService" +
-      "AccountTokenRequest\022$\n\016svc_account_id\030\001 " +
-      "\001(\tR\014svcAccountId\022\031\n\010token_id\030\002 \001(\tR\007tok" +
-      "enId\"Z\n\036GetServiceAccountTokenResponse\0228" +
-      "\n\005token\030\001 \001(\0132\".aruna.api.storage.models" +
-      ".v2.TokenR\005token\"F\n\036GetServiceAccountTok" +
-      "ensRequest\022$\n\016svc_account_id\030\001 \001(\tR\014svcA" +
-      "ccountId\"[\n\037GetServiceAccountTokensRespo" +
-      "nse\0228\n\005token\030\001 \003(\0132\".aruna.api.storage.m" +
-      "odels.v2.TokenR\005token\"c\n DeleteServiceAc" +
+      "roto\032\037google/protobuf/timestamp.proto\032\033g" +
+      "oogle/api/visibility.proto\"z\n\033CreateServ" +
+      "iceAccountRequest\022\022\n\004name\030\001 \001(\tR\004name\022G\n" +
+      "\npermission\030\002 \001(\0132\'.aruna.api.storage.mo" +
+      "dels.v2.PermissionR\npermission\"\223\001\n\016Servi" +
+      "ceAccount\022$\n\016svc_account_id\030\001 \001(\tR\014svcAc" +
+      "countId\022\022\n\004name\030\002 \001(\tR\004name\022G\n\npermissio" +
+      "n\030\003 \001(\0132\'.aruna.api.storage.models.v2.Pe" +
+      "rmissionR\npermission\"v\n\034CreateServiceAcc" +
+      "ountResponse\022V\n\017service_account\030\001 \001(\0132-." +
+      "aruna.api.storage.services.v2.ServiceAcc" +
+      "ountR\016serviceAccount\"\340\001\n CreateServiceAc" +
       "countTokenRequest\022$\n\016svc_account_id\030\001 \001(" +
-      "\tR\014svcAccountId\022\031\n\010token_id\030\002 \001(\tR\007token" +
-      "Id\"#\n!DeleteServiceAccountTokenResponse\"" +
-      "I\n!DeleteServiceAccountTokensRequest\022$\n\016" +
-      "svc_account_id\030\001 \001(\tR\014svcAccountId\"$\n\"De" +
-      "leteServiceAccountTokensResponse\"C\n\033Dele" +
-      "teServiceAccountRequest\022$\n\016svc_account_i" +
-      "d\030\001 \001(\tR\014svcAccountId\"\036\n\034DeleteServiceAc" +
-      "countResponse\"j\n!GetS3CredentialsSvcAcco" +
-      "untRequest\022$\n\016svc_account_id\030\001 \001(\tR\014svcA" +
-      "ccountId\022\037\n\013endpoint_id\030\002 \001(\tR\nendpointI" +
-      "d\"\224\001\n\"GetS3CredentialsSvcAccountResponse" +
-      "\022\"\n\rs3_access_key\030\001 \001(\tR\013s3AccessKey\022\"\n\r" +
-      "s3_secret_key\030\002 \001(\tR\013s3SecretKey\022&\n\017s3_e" +
-      "ndpoint_url\030\003 \001(\tR\rs3EndpointUrl\"\236\001\n\"Get" +
-      "DataproxyTokenSvcAccountRequest\022\027\n\007user_" +
-      "id\030\001 \001(\tR\006userId\022\037\n\013endpoint_id\030\002 \001(\tR\ne" +
-      "ndpointId\022>\n\007context\030\003 \001(\0132$.aruna.api.s" +
-      "torage.models.v2.ContextR\007context\";\n#Get" +
-      "DataproxyTokenSvcAccountResponse\022\024\n\005toke" +
-      "n\030\001 \001(\tR\005token2\331\020\n\025ServiceAccountService" +
-      "\022\257\001\n\024CreateServiceAccount\022:.aruna.api.st" +
-      "orage.services.v2.CreateServiceAccountRe" +
-      "quest\032;.aruna.api.storage.services.v2.Cr" +
-      "eateServiceAccountResponse\"\036\202\323\344\223\002\030\"\023/v2/" +
-      "service_account:\001*\022\325\001\n\031CreateServiceAcco" +
-      "untToken\022?.aruna.api.storage.services.v2" +
-      ".CreateServiceAccountTokenRequest\032@.arun" +
-      "a.api.storage.services.v2.CreateServiceA" +
-      "ccountTokenResponse\"5\202\323\344\223\002/\"*/v2/service" +
-      "_account/{svc_account_id}/token:\001*\022\341\001\n\033S" +
-      "etServiceAccountPermission\022A.aruna.api.s" +
-      "torage.services.v2.SetServiceAccountPerm" +
-      "issionRequest\032B.aruna.api.storage.servic" +
-      "es.v2.SetServiceAccountPermissionRespons" +
-      "e\";\202\323\344\223\0025\0320/v2/service_account/{svc_acco" +
-      "unt_id}/permissions:\001*\022\324\001\n\026GetServiceAcc" +
-      "ountToken\022<.aruna.api.storage.services.v" +
-      "2.GetServiceAccountTokenRequest\032=.aruna." +
-      "api.storage.services.v2.GetServiceAccoun" +
-      "tTokenResponse\"=\202\323\344\223\0027\0225/v2/service_acco" +
-      "unt/{svc_account_id}/token/{token_id}\022\315\001" +
-      "\n\027GetServiceAccountTokens\022=.aruna.api.st" +
-      "orage.services.v2.GetServiceAccountToken" +
-      "sRequest\032>.aruna.api.storage.services.v2" +
-      ".GetServiceAccountTokensResponse\"3\202\323\344\223\002-" +
-      "\022+/v2/service_account/{svc_account_id}/t" +
-      "okens\022\335\001\n\031DeleteServiceAccountToken\022?.ar" +
-      "una.api.storage.services.v2.DeleteServic" +
-      "eAccountTokenRequest\032@.aruna.api.storage" +
-      ".services.v2.DeleteServiceAccountTokenRe" +
-      "sponse\"=\202\323\344\223\0027*5/v2/service_account/{svc" +
-      "_account_id}/token/{token_id}\022\326\001\n\032Delete" +
-      "ServiceAccountTokens\022@.aruna.api.storage" +
-      ".services.v2.DeleteServiceAccountTokensR" +
-      "equest\032A.aruna.api.storage.services.v2.D" +
-      "eleteServiceAccountTokensResponse\"3\202\323\344\223\002" +
-      "-*+/v2/service_account/{svc_account_id}/" +
-      "tokens\022\275\001\n\024DeleteServiceAccount\022:.aruna." +
-      "api.storage.services.v2.DeleteServiceAcc" +
-      "ountRequest\032;.aruna.api.storage.services" +
-      ".v2.DeleteServiceAccountResponse\",\202\323\344\223\002&" +
-      "*$/v2/service_account/{svc_account_id}\022\336" +
-      "\001\n\032GetS3CredentialsSvcAccount\022@.aruna.ap" +
-      "i.storage.services.v2.GetS3CredentialsSv" +
-      "cAccountRequest\032A.aruna.api.storage.serv" +
-      "ices.v2.GetS3CredentialsSvcAccountRespon" +
-      "se\";\202\323\344\223\0025\0223/v2/service_account/{svc_acc" +
-      "ount_id}/s3_credentials\022\320\001\n\033GetDataproxy" +
-      "TokenSvcAccount\022A.aruna.api.storage.serv" +
-      "ices.v2.GetDataproxyTokenSvcAccountReque" +
-      "st\032B.aruna.api.storage.services.v2.GetDa" +
-      "taproxyTokenSvcAccountResponse\"*\202\323\344\223\002$\022\"" +
-      "/v2/user/{user_id}/svc_proxy_tokenB\226\002\n!c" +
-      "om.aruna.api.storage.services.v2B\032Servic" +
-      "eAccountServiceProtoP\000Z<github.com/Aruna" +
-      "Storage/go-api/aruna/api/storage/service" +
-      "s/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services" +
-      ".V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Ar" +
-      "una\\Api\\Storage\\Services\\V2\\GPBMetadata\352" +
-      "\002!Aruna::Api::Storage::Services::V2b\006pro" +
-      "to3"
+      "\tR\014svcAccountId\022G\n\npermission\030\002 \001(\0132\'.ar" +
+      "una.api.storage.models.v2.PermissionR\npe" +
+      "rmission\022\022\n\004name\030\003 \001(\tR\004name\0229\n\nexpires_" +
+      "at\030\004 \001(\0132\032.google.protobuf.TimestampR\tex" +
+      "piresAt\"\200\001\n!CreateServiceAccountTokenRes" +
+      "ponse\0228\n\005token\030\001 \001(\0132\".aruna.api.storage" +
+      ".models.v2.TokenR\005token\022!\n\014token_secret\030" +
+      "\002 \001(\tR\013tokenSecret\"\223\001\n\"SetServiceAccount" +
+      "PermissionRequest\022$\n\016svc_account_id\030\001 \001(" +
+      "\tR\014svcAccountId\022G\n\npermission\030\002 \001(\0132\'.ar" +
+      "una.api.storage.models.v2.PermissionR\npe" +
+      "rmission\"}\n#SetServiceAccountPermissionR" +
+      "esponse\022V\n\017service_account\030\001 \001(\0132-.aruna" +
+      ".api.storage.services.v2.ServiceAccountR" +
+      "\016serviceAccount\"`\n\035GetServiceAccountToke" +
+      "nRequest\022$\n\016svc_account_id\030\001 \001(\tR\014svcAcc" +
+      "ountId\022\031\n\010token_id\030\002 \001(\tR\007tokenId\"Z\n\036Get" +
+      "ServiceAccountTokenResponse\0228\n\005token\030\001 \001" +
+      "(\0132\".aruna.api.storage.models.v2.TokenR\005" +
+      "token\"F\n\036GetServiceAccountTokensRequest\022" +
+      "$\n\016svc_account_id\030\001 \001(\tR\014svcAccountId\"]\n" +
+      "\037GetServiceAccountTokensResponse\022:\n\006toke" +
+      "ns\030\001 \003(\0132\".aruna.api.storage.models.v2.T" +
+      "okenR\006tokens\"c\n DeleteServiceAccountToke" +
+      "nRequest\022$\n\016svc_account_id\030\001 \001(\tR\014svcAcc" +
+      "ountId\022\031\n\010token_id\030\002 \001(\tR\007tokenId\"#\n!Del" +
+      "eteServiceAccountTokenResponse\"I\n!Delete" +
+      "ServiceAccountTokensRequest\022$\n\016svc_accou" +
+      "nt_id\030\001 \001(\tR\014svcAccountId\"$\n\"DeleteServi" +
+      "ceAccountTokensResponse\"C\n\033DeleteService" +
+      "AccountRequest\022$\n\016svc_account_id\030\001 \001(\tR\014" +
+      "svcAccountId\"\036\n\034DeleteServiceAccountResp" +
+      "onse\"j\n!GetS3CredentialsSvcAccountReques" +
+      "t\022$\n\016svc_account_id\030\001 \001(\tR\014svcAccountId\022" +
+      "\037\n\013endpoint_id\030\002 \001(\tR\nendpointId\"\224\001\n\"Get" +
+      "S3CredentialsSvcAccountResponse\022\"\n\rs3_ac" +
+      "cess_key\030\001 \001(\tR\013s3AccessKey\022\"\n\rs3_secret" +
+      "_key\030\002 \001(\tR\013s3SecretKey\022&\n\017s3_endpoint_u" +
+      "rl\030\003 \001(\tR\rs3EndpointUrl\"\236\001\n\"GetDataproxy" +
+      "TokenSvcAccountRequest\022\027\n\007user_id\030\001 \001(\tR" +
+      "\006userId\022\037\n\013endpoint_id\030\002 \001(\tR\nendpointId" +
+      "\022>\n\007context\030\003 \001(\0132$.aruna.api.storage.mo" +
+      "dels.v2.ContextR\007context\";\n#GetDataproxy" +
+      "TokenSvcAccountResponse\022\024\n\005token\030\001 \001(\tR\005" +
+      "token2\351\020\n\025ServiceAccountService\022\257\001\n\024Crea" +
+      "teServiceAccount\022:.aruna.api.storage.ser" +
+      "vices.v2.CreateServiceAccountRequest\032;.a" +
+      "runa.api.storage.services.v2.CreateServi" +
+      "ceAccountResponse\"\036\202\323\344\223\002\030\"\023/v2/service_a" +
+      "ccount:\001*\022\325\001\n\031CreateServiceAccountToken\022" +
+      "?.aruna.api.storage.services.v2.CreateSe" +
+      "rviceAccountTokenRequest\032@.aruna.api.sto" +
+      "rage.services.v2.CreateServiceAccountTok" +
+      "enResponse\"5\202\323\344\223\002/\"*/v2/service_account/" +
+      "{svc_account_id}/token:\001*\022\341\001\n\033SetService" +
+      "AccountPermission\022A.aruna.api.storage.se" +
+      "rvices.v2.SetServiceAccountPermissionReq" +
+      "uest\032B.aruna.api.storage.services.v2.Set" +
+      "ServiceAccountPermissionResponse\";\202\323\344\223\0025" +
+      "\0320/v2/service_account/{svc_account_id}/p" +
+      "ermissions:\001*\022\324\001\n\026GetServiceAccountToken" +
+      "\022<.aruna.api.storage.services.v2.GetServ" +
+      "iceAccountTokenRequest\032=.aruna.api.stora" +
+      "ge.services.v2.GetServiceAccountTokenRes" +
+      "ponse\"=\202\323\344\223\0027\0225/v2/service_account/{svc_" +
+      "account_id}/token/{token_id}\022\315\001\n\027GetServ" +
+      "iceAccountTokens\022=.aruna.api.storage.ser" +
+      "vices.v2.GetServiceAccountTokensRequest\032" +
+      ">.aruna.api.storage.services.v2.GetServi" +
+      "ceAccountTokensResponse\"3\202\323\344\223\002-\022+/v2/ser" +
+      "vice_account/{svc_account_id}/tokens\022\335\001\n" +
+      "\031DeleteServiceAccountToken\022?.aruna.api.s" +
+      "torage.services.v2.DeleteServiceAccountT" +
+      "okenRequest\032@.aruna.api.storage.services" +
+      ".v2.DeleteServiceAccountTokenResponse\"=\202" +
+      "\323\344\223\0027*5/v2/service_account/{svc_account_" +
+      "id}/token/{token_id}\022\326\001\n\032DeleteServiceAc" +
+      "countTokens\022@.aruna.api.storage.services" +
+      ".v2.DeleteServiceAccountTokensRequest\032A." +
+      "aruna.api.storage.services.v2.DeleteServ" +
+      "iceAccountTokensResponse\"3\202\323\344\223\002-*+/v2/se" +
+      "rvice_account/{svc_account_id}/tokens\022\275\001" +
+      "\n\024DeleteServiceAccount\022:.aruna.api.stora" +
+      "ge.services.v2.DeleteServiceAccountReque" +
+      "st\032;.aruna.api.storage.services.v2.Delet" +
+      "eServiceAccountResponse\",\202\323\344\223\002&*$/v2/ser" +
+      "vice_account/{svc_account_id}\022\336\001\n\032GetS3C" +
+      "redentialsSvcAccount\022@.aruna.api.storage" +
+      ".services.v2.GetS3CredentialsSvcAccountR" +
+      "equest\032A.aruna.api.storage.services.v2.G" +
+      "etS3CredentialsSvcAccountResponse\";\202\323\344\223\002" +
+      "5\0223/v2/service_account/{svc_account_id}/" +
+      "s3_credentials\022\320\001\n\033GetDataproxyTokenSvcA" +
+      "ccount\022A.aruna.api.storage.services.v2.G" +
+      "etDataproxyTokenSvcAccountRequest\032B.arun" +
+      "a.api.storage.services.v2.GetDataproxyTo" +
+      "kenSvcAccountResponse\"*\202\323\344\223\002$\022\"/v2/user/" +
+      "{user_id}/svc_proxy_token\032\016\372\322\344\223\002\010\022\006SERVE" +
+      "RB\231\002\n!com.aruna.api.storage.services.v2B" +
+      "\032ServiceAccountServiceProtoP\000Z?github.co" +
+      "m/ArunaStorage/go-api/v2/aruna/api/stora" +
+      "ge/services/v2\242\002\004AASS\252\002\035Aruna.Api.Storag" +
+      "e.Services.V2\312\002\035Aruna\\Api\\Storage\\Servic" +
+      "es\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GP" +
+      "BMetadata\352\002!Aruna::Api::Storage::Service" +
+      "s::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14066,6 +14067,7 @@ public final class ServiceAccountServiceProto {
           com.aruna.api.storage.models.v2.ModelsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
         });
     internal_static_aruna_api_storage_services_v2_CreateServiceAccountRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14132,7 +14134,7 @@ public final class ServiceAccountServiceProto {
     internal_static_aruna_api_storage_services_v2_GetServiceAccountTokensResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetServiceAccountTokensResponse_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "Tokens", });
     internal_static_aruna_api_storage_services_v2_DeleteServiceAccountTokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_storage_services_v2_DeleteServiceAccountTokenRequest_fieldAccessorTable = new
@@ -14195,12 +14197,14 @@ public final class ServiceAccountServiceProto {
         new java.lang.String[] { "Token", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.aruna.api.storage.models.v2.ModelsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

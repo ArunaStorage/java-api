@@ -6103,14 +6103,14 @@ public final class SearchServiceProto {
       "ervices.v2.RequestResourceAccessRequest\032" +
       "<.aruna.api.storage.services.v2.RequestR" +
       "esourceAccessResponse\")\202\323\344\223\002#\022!/v2/resou" +
-      "rce/{resource_id}/accessB\216\002\n!com.aruna.a" +
+      "rce/{resource_id}/accessB\221\002\n!com.aruna.a" +
       "pi.storage.services.v2B\022SearchServicePro" +
-      "toP\000Z<github.com/ArunaStorage/go-api/aru" +
-      "na/api/storage/services/v2\242\002\004AASS\252\002\035Arun" +
-      "a.Api.Storage.Services.V2\312\002\035Aruna\\Api\\St" +
-      "orage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Se" +
-      "rvices\\V2\\GPBMetadata\352\002!Aruna::Api::Stor" +
-      "age::Services::V2b\006proto3"
+      "toP\000Z?github.com/ArunaStorage/go-api/v2/" +
+      "aruna/api/storage/services/v2\242\002\004AASS\252\002\035A" +
+      "runa.Api.Storage.Services.V2\312\002\035Aruna\\Api" +
+      "\\Storage\\Services\\V2\342\002)Aruna\\Api\\Storage" +
+      "\\Services\\V2\\GPBMetadata\352\002!Aruna::Api::S" +
+      "torage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

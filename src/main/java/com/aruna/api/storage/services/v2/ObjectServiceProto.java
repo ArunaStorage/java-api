@@ -104,46 +104,46 @@ public final class ObjectServiceProto {
 
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
-    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation> 
-        getExternalRelationsList();
+    java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> 
+        getRelationsList();
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
-    com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation getExternalRelations(int index);
+    com.aruna.api.storage.models.v2.ModelsProto.Relation getRelations(int index);
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
-    int getExternalRelationsCount();
+    int getRelationsCount();
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
-    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder> 
-        getExternalRelationsOrBuilderList();
+    java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
+        getRelationsOrBuilderList();
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
-    com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder getExternalRelationsOrBuilder(
+    com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getRelationsOrBuilder(
         int index);
 
     /**
@@ -240,6 +240,30 @@ public final class ObjectServiceProto {
     com.aruna.api.storage.models.v2.ModelsProto.HashOrBuilder getHashesOrBuilder(
         int index);
 
+    /**
+     * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    java.lang.String getMetadataLicenseTag();
+    /**
+     * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes();
+
+    /**
+     * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+     * @return The dataLicenseTag.
+     */
+    java.lang.String getDataLicenseTag();
+    /**
+     * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+     * @return The bytes for dataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getDataLicenseTagBytes();
+
     com.aruna.api.storage.services.v2.ObjectServiceProto.CreateObjectRequest.ParentCase getParentCase();
   }
   /**
@@ -258,9 +282,11 @@ public final class ObjectServiceProto {
       name_ = "";
       description_ = "";
       keyValues_ = java.util.Collections.emptyList();
-      externalRelations_ = java.util.Collections.emptyList();
+      relations_ = java.util.Collections.emptyList();
       dataClass_ = 0;
       hashes_ = java.util.Collections.emptyList();
+      metadataLicenseTag_ = "";
+      dataLicenseTag_ = "";
     }
 
     @java.lang.Override
@@ -482,65 +508,65 @@ public final class ObjectServiceProto {
       return keyValues_.get(index);
     }
 
-    public static final int EXTERNAL_RELATIONS_FIELD_NUMBER = 4;
+    public static final int RELATIONS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation> externalRelations_;
+    private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> relations_;
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation> getExternalRelationsList() {
-      return externalRelations_;
+    public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> getRelationsList() {
+      return relations_;
     }
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder> 
-        getExternalRelationsOrBuilderList() {
-      return externalRelations_;
+    public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
+        getRelationsOrBuilderList() {
+      return relations_;
     }
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
     @java.lang.Override
-    public int getExternalRelationsCount() {
-      return externalRelations_.size();
+    public int getRelationsCount() {
+      return relations_.size();
     }
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation getExternalRelations(int index) {
-      return externalRelations_.get(index);
+    public com.aruna.api.storage.models.v2.ModelsProto.Relation getRelations(int index) {
+      return relations_.get(index);
     }
     /**
      * <pre>
-     * External relations (URLs / IDs from external sources)
+     * Internal / External relations (URLs / IDs from external sources)
      * </pre>
      *
-     * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+     * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
      */
     @java.lang.Override
-    public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder getExternalRelationsOrBuilder(
+    public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getRelationsOrBuilder(
         int index) {
-      return externalRelations_.get(index);
+      return relations_.get(index);
     }
 
     public static final int DATA_CLASS_FIELD_NUMBER = 5;
@@ -766,6 +792,84 @@ public final class ObjectServiceProto {
       return hashes_.get(index);
     }
 
+    public static final int METADATA_LICENSE_TAG_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metadataLicenseTag_ = "";
+    /**
+     * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataLicenseTag() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_LICENSE_TAG_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataLicenseTag_ = "";
+    /**
+     * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+     * @return The dataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getDataLicenseTag() {
+      java.lang.Object ref = dataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+     * @return The bytes for dataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataLicenseTagBytes() {
+      java.lang.Object ref = dataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -789,8 +893,8 @@ public final class ObjectServiceProto {
       for (int i = 0; i < keyValues_.size(); i++) {
         output.writeMessage(3, keyValues_.get(i));
       }
-      for (int i = 0; i < externalRelations_.size(); i++) {
-        output.writeMessage(4, externalRelations_.get(i));
+      for (int i = 0; i < relations_.size(); i++) {
+        output.writeMessage(4, relations_.get(i));
       }
       if (dataClass_ != com.aruna.api.storage.models.v2.ModelsProto.DataClass.DATA_CLASS_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, dataClass_);
@@ -806,6 +910,12 @@ public final class ObjectServiceProto {
       }
       for (int i = 0; i < hashes_.size(); i++) {
         output.writeMessage(9, hashes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, dataLicenseTag_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -826,9 +936,9 @@ public final class ObjectServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, keyValues_.get(i));
       }
-      for (int i = 0; i < externalRelations_.size(); i++) {
+      for (int i = 0; i < relations_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, externalRelations_.get(i));
+          .computeMessageSize(4, relations_.get(i));
       }
       if (dataClass_ != com.aruna.api.storage.models.v2.ModelsProto.DataClass.DATA_CLASS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -846,6 +956,12 @@ public final class ObjectServiceProto {
       for (int i = 0; i < hashes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, hashes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, dataLicenseTag_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -868,11 +984,15 @@ public final class ObjectServiceProto {
           .equals(other.getDescription())) return false;
       if (!getKeyValuesList()
           .equals(other.getKeyValuesList())) return false;
-      if (!getExternalRelationsList()
-          .equals(other.getExternalRelationsList())) return false;
+      if (!getRelationsList()
+          .equals(other.getRelationsList())) return false;
       if (dataClass_ != other.dataClass_) return false;
       if (!getHashesList()
           .equals(other.getHashesList())) return false;
+      if (!getMetadataLicenseTag()
+          .equals(other.getMetadataLicenseTag())) return false;
+      if (!getDataLicenseTag()
+          .equals(other.getDataLicenseTag())) return false;
       if (!getParentCase().equals(other.getParentCase())) return false;
       switch (parentCase_) {
         case 6:
@@ -909,9 +1029,9 @@ public final class ObjectServiceProto {
         hash = (37 * hash) + KEY_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getKeyValuesList().hashCode();
       }
-      if (getExternalRelationsCount() > 0) {
-        hash = (37 * hash) + EXTERNAL_RELATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getExternalRelationsList().hashCode();
+      if (getRelationsCount() > 0) {
+        hash = (37 * hash) + RELATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRelationsList().hashCode();
       }
       hash = (37 * hash) + DATA_CLASS_FIELD_NUMBER;
       hash = (53 * hash) + dataClass_;
@@ -919,6 +1039,10 @@ public final class ObjectServiceProto {
         hash = (37 * hash) + HASHES_FIELD_NUMBER;
         hash = (53 * hash) + getHashesList().hashCode();
       }
+      hash = (37 * hash) + METADATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadataLicenseTag().hashCode();
+      hash = (37 * hash) + DATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getDataLicenseTag().hashCode();
       switch (parentCase_) {
         case 6:
           hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
@@ -1075,11 +1199,11 @@ public final class ObjectServiceProto {
           keyValuesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (externalRelationsBuilder_ == null) {
-          externalRelations_ = java.util.Collections.emptyList();
+        if (relationsBuilder_ == null) {
+          relations_ = java.util.Collections.emptyList();
         } else {
-          externalRelations_ = null;
-          externalRelationsBuilder_.clear();
+          relations_ = null;
+          relationsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         dataClass_ = 0;
@@ -1090,6 +1214,8 @@ public final class ObjectServiceProto {
           hashesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000100);
+        metadataLicenseTag_ = "";
+        dataLicenseTag_ = "";
         parentCase_ = 0;
         parent_ = null;
         return this;
@@ -1135,14 +1261,14 @@ public final class ObjectServiceProto {
         } else {
           result.keyValues_ = keyValuesBuilder_.build();
         }
-        if (externalRelationsBuilder_ == null) {
+        if (relationsBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0)) {
-            externalRelations_ = java.util.Collections.unmodifiableList(externalRelations_);
+            relations_ = java.util.Collections.unmodifiableList(relations_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
-          result.externalRelations_ = externalRelations_;
+          result.relations_ = relations_;
         } else {
-          result.externalRelations_ = externalRelationsBuilder_.build();
+          result.relations_ = relationsBuilder_.build();
         }
         if (hashesBuilder_ == null) {
           if (((bitField0_ & 0x00000100) != 0)) {
@@ -1165,6 +1291,12 @@ public final class ObjectServiceProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.dataClass_ = dataClass_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.metadataLicenseTag_ = metadataLicenseTag_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.dataLicenseTag_ = dataLicenseTag_;
         }
       }
 
@@ -1221,29 +1353,29 @@ public final class ObjectServiceProto {
             }
           }
         }
-        if (externalRelationsBuilder_ == null) {
-          if (!other.externalRelations_.isEmpty()) {
-            if (externalRelations_.isEmpty()) {
-              externalRelations_ = other.externalRelations_;
+        if (relationsBuilder_ == null) {
+          if (!other.relations_.isEmpty()) {
+            if (relations_.isEmpty()) {
+              relations_ = other.relations_;
               bitField0_ = (bitField0_ & ~0x00000008);
             } else {
-              ensureExternalRelationsIsMutable();
-              externalRelations_.addAll(other.externalRelations_);
+              ensureRelationsIsMutable();
+              relations_.addAll(other.relations_);
             }
             onChanged();
           }
         } else {
-          if (!other.externalRelations_.isEmpty()) {
-            if (externalRelationsBuilder_.isEmpty()) {
-              externalRelationsBuilder_.dispose();
-              externalRelationsBuilder_ = null;
-              externalRelations_ = other.externalRelations_;
+          if (!other.relations_.isEmpty()) {
+            if (relationsBuilder_.isEmpty()) {
+              relationsBuilder_.dispose();
+              relationsBuilder_ = null;
+              relations_ = other.relations_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              externalRelationsBuilder_ = 
+              relationsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getExternalRelationsFieldBuilder() : null;
+                   getRelationsFieldBuilder() : null;
             } else {
-              externalRelationsBuilder_.addAllMessages(other.externalRelations_);
+              relationsBuilder_.addAllMessages(other.relations_);
             }
           }
         }
@@ -1275,6 +1407,16 @@ public final class ObjectServiceProto {
               hashesBuilder_.addAllMessages(other.hashes_);
             }
           }
+        }
+        if (!other.getMetadataLicenseTag().isEmpty()) {
+          metadataLicenseTag_ = other.metadataLicenseTag_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getDataLicenseTag().isEmpty()) {
+          dataLicenseTag_ = other.dataLicenseTag_;
+          bitField0_ |= 0x00000400;
+          onChanged();
         }
         switch (other.getParentCase()) {
           case PROJECT_ID: {
@@ -1349,15 +1491,15 @@ public final class ObjectServiceProto {
                 break;
               } // case 26
               case 34: {
-                com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation m =
+                com.aruna.api.storage.models.v2.ModelsProto.Relation m =
                     input.readMessage(
-                        com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.parser(),
+                        com.aruna.api.storage.models.v2.ModelsProto.Relation.parser(),
                         extensionRegistry);
-                if (externalRelationsBuilder_ == null) {
-                  ensureExternalRelationsIsMutable();
-                  externalRelations_.add(m);
+                if (relationsBuilder_ == null) {
+                  ensureRelationsIsMutable();
+                  relations_.add(m);
                 } else {
-                  externalRelationsBuilder_.addMessage(m);
+                  relationsBuilder_.addMessage(m);
                 }
                 break;
               } // case 34
@@ -1397,6 +1539,16 @@ public final class ObjectServiceProto {
                 }
                 break;
               } // case 74
+              case 82: {
+                metadataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                dataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1925,316 +2077,316 @@ public final class ObjectServiceProto {
         return keyValuesBuilder_;
       }
 
-      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation> externalRelations_ =
+      private java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> relations_ =
         java.util.Collections.emptyList();
-      private void ensureExternalRelationsIsMutable() {
+      private void ensureRelationsIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
-          externalRelations_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation>(externalRelations_);
+          relations_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.ModelsProto.Relation>(relations_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder> externalRelationsBuilder_;
+          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> relationsBuilder_;
 
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation> getExternalRelationsList() {
-        if (externalRelationsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(externalRelations_);
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation> getRelationsList() {
+        if (relationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(relations_);
         } else {
-          return externalRelationsBuilder_.getMessageList();
+          return relationsBuilder_.getMessageList();
         }
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public int getExternalRelationsCount() {
-        if (externalRelationsBuilder_ == null) {
-          return externalRelations_.size();
+      public int getRelationsCount() {
+        if (relationsBuilder_ == null) {
+          return relations_.size();
         } else {
-          return externalRelationsBuilder_.getCount();
+          return relationsBuilder_.getCount();
         }
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation getExternalRelations(int index) {
-        if (externalRelationsBuilder_ == null) {
-          return externalRelations_.get(index);
+      public com.aruna.api.storage.models.v2.ModelsProto.Relation getRelations(int index) {
+        if (relationsBuilder_ == null) {
+          return relations_.get(index);
         } else {
-          return externalRelationsBuilder_.getMessage(index);
+          return relationsBuilder_.getMessage(index);
         }
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder setExternalRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation value) {
-        if (externalRelationsBuilder_ == null) {
+      public Builder setRelations(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
+        if (relationsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureExternalRelationsIsMutable();
-          externalRelations_.set(index, value);
+          ensureRelationsIsMutable();
+          relations_.set(index, value);
           onChanged();
         } else {
-          externalRelationsBuilder_.setMessage(index, value);
+          relationsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder setExternalRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder builderForValue) {
-        if (externalRelationsBuilder_ == null) {
-          ensureExternalRelationsIsMutable();
-          externalRelations_.set(index, builderForValue.build());
+      public Builder setRelations(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
+        if (relationsBuilder_ == null) {
+          ensureRelationsIsMutable();
+          relations_.set(index, builderForValue.build());
           onChanged();
         } else {
-          externalRelationsBuilder_.setMessage(index, builderForValue.build());
+          relationsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder addExternalRelations(com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation value) {
-        if (externalRelationsBuilder_ == null) {
+      public Builder addRelations(com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
+        if (relationsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureExternalRelationsIsMutable();
-          externalRelations_.add(value);
+          ensureRelationsIsMutable();
+          relations_.add(value);
           onChanged();
         } else {
-          externalRelationsBuilder_.addMessage(value);
+          relationsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder addExternalRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation value) {
-        if (externalRelationsBuilder_ == null) {
+      public Builder addRelations(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation value) {
+        if (relationsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureExternalRelationsIsMutable();
-          externalRelations_.add(index, value);
+          ensureRelationsIsMutable();
+          relations_.add(index, value);
           onChanged();
         } else {
-          externalRelationsBuilder_.addMessage(index, value);
+          relationsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder addExternalRelations(
-          com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder builderForValue) {
-        if (externalRelationsBuilder_ == null) {
-          ensureExternalRelationsIsMutable();
-          externalRelations_.add(builderForValue.build());
+      public Builder addRelations(
+          com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
+        if (relationsBuilder_ == null) {
+          ensureRelationsIsMutable();
+          relations_.add(builderForValue.build());
           onChanged();
         } else {
-          externalRelationsBuilder_.addMessage(builderForValue.build());
+          relationsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder addExternalRelations(
-          int index, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder builderForValue) {
-        if (externalRelationsBuilder_ == null) {
-          ensureExternalRelationsIsMutable();
-          externalRelations_.add(index, builderForValue.build());
+      public Builder addRelations(
+          int index, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder builderForValue) {
+        if (relationsBuilder_ == null) {
+          ensureRelationsIsMutable();
+          relations_.add(index, builderForValue.build());
           onChanged();
         } else {
-          externalRelationsBuilder_.addMessage(index, builderForValue.build());
+          relationsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder addAllExternalRelations(
-          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation> values) {
-        if (externalRelationsBuilder_ == null) {
-          ensureExternalRelationsIsMutable();
+      public Builder addAllRelations(
+          java.lang.Iterable<? extends com.aruna.api.storage.models.v2.ModelsProto.Relation> values) {
+        if (relationsBuilder_ == null) {
+          ensureRelationsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, externalRelations_);
+              values, relations_);
           onChanged();
         } else {
-          externalRelationsBuilder_.addAllMessages(values);
+          relationsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder clearExternalRelations() {
-        if (externalRelationsBuilder_ == null) {
-          externalRelations_ = java.util.Collections.emptyList();
+      public Builder clearRelations() {
+        if (relationsBuilder_ == null) {
+          relations_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
-          externalRelationsBuilder_.clear();
+          relationsBuilder_.clear();
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public Builder removeExternalRelations(int index) {
-        if (externalRelationsBuilder_ == null) {
-          ensureExternalRelationsIsMutable();
-          externalRelations_.remove(index);
+      public Builder removeRelations(int index) {
+        if (relationsBuilder_ == null) {
+          ensureRelationsIsMutable();
+          relations_.remove(index);
           onChanged();
         } else {
-          externalRelationsBuilder_.remove(index);
+          relationsBuilder_.remove(index);
         }
         return this;
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder getExternalRelationsBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder getRelationsBuilder(
           int index) {
-        return getExternalRelationsFieldBuilder().getBuilder(index);
+        return getRelationsFieldBuilder().getBuilder(index);
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder getExternalRelationsOrBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder getRelationsOrBuilder(
           int index) {
-        if (externalRelationsBuilder_ == null) {
-          return externalRelations_.get(index);  } else {
-          return externalRelationsBuilder_.getMessageOrBuilder(index);
+        if (relationsBuilder_ == null) {
+          return relations_.get(index);  } else {
+          return relationsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder> 
-           getExternalRelationsOrBuilderList() {
-        if (externalRelationsBuilder_ != null) {
-          return externalRelationsBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
+           getRelationsOrBuilderList() {
+        if (relationsBuilder_ != null) {
+          return relationsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(externalRelations_);
+          return java.util.Collections.unmodifiableList(relations_);
         }
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder addExternalRelationsBuilder() {
-        return getExternalRelationsFieldBuilder().addBuilder(
-            com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.getDefaultInstance());
+      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder addRelationsBuilder() {
+        return getRelationsFieldBuilder().addBuilder(
+            com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance());
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder addExternalRelationsBuilder(
+      public com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder addRelationsBuilder(
           int index) {
-        return getExternalRelationsFieldBuilder().addBuilder(
-            index, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.getDefaultInstance());
+        return getRelationsFieldBuilder().addBuilder(
+            index, com.aruna.api.storage.models.v2.ModelsProto.Relation.getDefaultInstance());
       }
       /**
        * <pre>
-       * External relations (URLs / IDs from external sources)
+       * Internal / External relations (URLs / IDs from external sources)
        * </pre>
        *
-       * <code>repeated .aruna.api.storage.models.v2.ExternalRelation external_relations = 4 [json_name = "externalRelations"];</code>
+       * <code>repeated .aruna.api.storage.models.v2.Relation relations = 4 [json_name = "relations"];</code>
        */
-      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder> 
-           getExternalRelationsBuilderList() {
-        return getExternalRelationsFieldBuilder().getBuilderList();
+      public java.util.List<com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder> 
+           getRelationsBuilderList() {
+        return getRelationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder> 
-          getExternalRelationsFieldBuilder() {
-        if (externalRelationsBuilder_ == null) {
-          externalRelationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelation.Builder, com.aruna.api.storage.models.v2.ModelsProto.ExternalRelationOrBuilder>(
-                  externalRelations_,
+          com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder> 
+          getRelationsFieldBuilder() {
+        if (relationsBuilder_ == null) {
+          relationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.aruna.api.storage.models.v2.ModelsProto.Relation, com.aruna.api.storage.models.v2.ModelsProto.Relation.Builder, com.aruna.api.storage.models.v2.ModelsProto.RelationOrBuilder>(
+                  relations_,
                   ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
-          externalRelations_ = null;
+          relations_ = null;
         }
-        return externalRelationsBuilder_;
+        return relationsBuilder_;
       }
 
       private int dataClass_ = 0;
@@ -2827,6 +2979,150 @@ public final class ObjectServiceProto {
           hashes_ = null;
         }
         return hashesBuilder_;
+      }
+
+      private java.lang.Object metadataLicenseTag_ = "";
+      /**
+       * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+       * @return The metadataLicenseTag.
+       */
+      public java.lang.String getMetadataLicenseTag() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+       * @return The bytes for metadataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataLicenseTagBytes() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+       * @param value The metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataLicenseTag() {
+        metadataLicenseTag_ = getDefaultInstance().getMetadataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 10 [json_name = "metadataLicenseTag"];</code>
+       * @param value The bytes for metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataLicenseTag_ = "";
+      /**
+       * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+       * @return The dataLicenseTag.
+       */
+      public java.lang.String getDataLicenseTag() {
+        java.lang.Object ref = dataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+       * @return The bytes for dataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getDataLicenseTagBytes() {
+        java.lang.Object ref = dataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+       * @param value The dataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataLicenseTag_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataLicenseTag() {
+        dataLicenseTag_ = getDefaultInstance().getDataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_license_tag = 11 [json_name = "dataLicenseTag"];</code>
+       * @param value The bytes for dataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataLicenseTag_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9093,6 +9389,30 @@ public final class ObjectServiceProto {
      */
     boolean getForceRevision();
 
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    java.lang.String getMetadataLicenseTag();
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes();
+
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The dataLicenseTag.
+     */
+    java.lang.String getDataLicenseTag();
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The bytes for dataLicenseTag.
+     */
+    com.google.protobuf.ByteString
+        getDataLicenseTagBytes();
+
     com.aruna.api.storage.services.v2.ObjectServiceProto.UpdateObjectRequest.ParentCase getParentCase();
   }
   /**
@@ -9115,6 +9435,8 @@ public final class ObjectServiceProto {
       removeKeyValues_ = java.util.Collections.emptyList();
       dataClass_ = 0;
       hashes_ = java.util.Collections.emptyList();
+      metadataLicenseTag_ = "";
+      dataLicenseTag_ = "";
     }
 
     @java.lang.Override
@@ -9707,6 +10029,84 @@ public final class ObjectServiceProto {
       return forceRevision_;
     }
 
+    public static final int METADATA_LICENSE_TAG_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metadataLicenseTag_ = "";
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The metadataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataLicenseTag() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+     * @return The bytes for metadataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataLicenseTagBytes() {
+      java.lang.Object ref = metadataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_LICENSE_TAG_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataLicenseTag_ = "";
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The dataLicenseTag.
+     */
+    @java.lang.Override
+    public java.lang.String getDataLicenseTag() {
+      java.lang.Object ref = dataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataLicenseTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+     * @return The bytes for dataLicenseTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataLicenseTagBytes() {
+      java.lang.Object ref = dataLicenseTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataLicenseTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9753,6 +10153,12 @@ public final class ObjectServiceProto {
       }
       if (forceRevision_ != false) {
         output.writeBool(13, forceRevision_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataLicenseTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, dataLicenseTag_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -9801,6 +10207,12 @@ public final class ObjectServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, forceRevision_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, metadataLicenseTag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataLicenseTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, dataLicenseTag_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9837,6 +10249,10 @@ public final class ObjectServiceProto {
           .equals(other.getHashesList())) return false;
       if (getForceRevision()
           != other.getForceRevision()) return false;
+      if (!getMetadataLicenseTag()
+          .equals(other.getMetadataLicenseTag())) return false;
+      if (!getDataLicenseTag()
+          .equals(other.getDataLicenseTag())) return false;
       if (!getParentCase().equals(other.getParentCase())) return false;
       switch (parentCase_) {
         case 8:
@@ -9892,6 +10308,10 @@ public final class ObjectServiceProto {
       hash = (37 * hash) + FORCE_REVISION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getForceRevision());
+      hash = (37 * hash) + METADATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadataLicenseTag().hashCode();
+      hash = (37 * hash) + DATA_LICENSE_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getDataLicenseTag().hashCode();
       switch (parentCase_) {
         case 8:
           hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
@@ -10065,6 +10485,8 @@ public final class ObjectServiceProto {
         }
         bitField0_ = (bitField0_ & ~0x00000200);
         forceRevision_ = false;
+        metadataLicenseTag_ = "";
+        dataLicenseTag_ = "";
         parentCase_ = 0;
         parent_ = null;
         return this;
@@ -10149,6 +10571,12 @@ public final class ObjectServiceProto {
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.forceRevision_ = forceRevision_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.metadataLicenseTag_ = metadataLicenseTag_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.dataLicenseTag_ = dataLicenseTag_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -10268,6 +10696,16 @@ public final class ObjectServiceProto {
         }
         if (other.getForceRevision() != false) {
           setForceRevision(other.getForceRevision());
+        }
+        if (!other.getMetadataLicenseTag().isEmpty()) {
+          metadataLicenseTag_ = other.metadataLicenseTag_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (!other.getDataLicenseTag().isEmpty()) {
+          dataLicenseTag_ = other.dataLicenseTag_;
+          bitField0_ |= 0x00001000;
+          onChanged();
         }
         switch (other.getParentCase()) {
           case PROJECT_ID: {
@@ -10400,6 +10838,16 @@ public final class ObjectServiceProto {
                 bitField0_ |= 0x00000400;
                 break;
               } // case 104
+              case 114: {
+                metadataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 114
+              case 122: {
+                dataLicenseTag_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -11986,6 +12434,150 @@ public final class ObjectServiceProto {
       public Builder clearForceRevision() {
         bitField0_ = (bitField0_ & ~0x00000400);
         forceRevision_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object metadataLicenseTag_ = "";
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @return The metadataLicenseTag.
+       */
+      public java.lang.String getMetadataLicenseTag() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @return The bytes for metadataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataLicenseTagBytes() {
+        java.lang.Object ref = metadataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @param value The metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataLicenseTag() {
+        metadataLicenseTag_ = getDefaultInstance().getMetadataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metadata_license_tag = 14 [json_name = "metadataLicenseTag"];</code>
+       * @param value The bytes for metadataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metadataLicenseTag_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataLicenseTag_ = "";
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @return The dataLicenseTag.
+       */
+      public java.lang.String getDataLicenseTag() {
+        java.lang.Object ref = dataLicenseTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataLicenseTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @return The bytes for dataLicenseTag.
+       */
+      public com.google.protobuf.ByteString
+          getDataLicenseTagBytes() {
+        java.lang.Object ref = dataLicenseTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataLicenseTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @param value The dataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataLicenseTag(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataLicenseTag() {
+        dataLicenseTag_ = getDefaultInstance().getDataLicenseTag();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_license_tag = 15 [json_name = "dataLicenseTag"];</code>
+       * @param value The bytes for dataLicenseTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataLicenseTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataLicenseTag_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -21653,137 +22245,143 @@ public final class ObjectServiceProto {
       "\n2aruna/api/storage/services/v2/object_s" +
       "ervice.proto\022\035aruna.api.storage.services" +
       ".v2\032(aruna/api/storage/models/v2/models." +
-      "proto\032\034google/api/annotations.proto\"\344\003\n\023" +
-      "CreateObjectRequest\022\022\n\004name\030\001 \001(\tR\004name\022" +
-      " \n\013description\030\002 \001(\tR\013description\022D\n\nkey" +
-      "_values\030\003 \003(\0132%.aruna.api.storage.models" +
-      ".v2.KeyValueR\tkeyValues\022\\\n\022external_rela" +
-      "tions\030\004 \003(\0132-.aruna.api.storage.models.v" +
-      "2.ExternalRelationR\021externalRelations\022E\n" +
-      "\ndata_class\030\005 \001(\0162&.aruna.api.storage.mo" +
-      "dels.v2.DataClassR\tdataClass\022\037\n\nproject_" +
-      "id\030\006 \001(\tH\000R\tprojectId\022%\n\rcollection_id\030\007" +
-      " \001(\tH\000R\014collectionId\022\037\n\ndataset_id\030\010 \001(\t" +
-      "H\000R\tdatasetId\0229\n\006hashes\030\t \003(\0132!.aruna.ap" +
-      "i.storage.models.v2.HashR\006hashesB\010\n\006pare" +
-      "nt\"S\n\024CreateObjectResponse\022;\n\006object\030\001 \001" +
-      "(\0132#.aruna.api.storage.models.v2.ObjectR" +
-      "\006object\"q\n\023GetUploadURLRequest\022\033\n\tobject" +
-      "_id\030\001 \001(\tR\010objectId\022\034\n\tmultipart\030\002 \001(\010R\t" +
-      "multipart\022\037\n\013part_number\030\003 \001(\005R\npartNumb" +
-      "er\"(\n\024GetUploadURLResponse\022\020\n\003url\030\001 \001(\tR" +
-      "\003url\"4\n\025GetDownloadURLRequest\022\033\n\tobject_" +
-      "id\030\001 \001(\tR\010objectId\"*\n\026GetDownloadURLResp" +
-      "onse\022\020\n\003url\030\001 \001(\tR\003url\"8\n\016CompletedParts" +
-      "\022\022\n\004etag\030\001 \001(\tR\004etag\022\022\n\004part\030\002 \001(\003R\004part" +
-      "\"\355\001\n\032FinishObjectStagingRequest\022\033\n\tobjec" +
-      "t_id\030\001 \001(\tR\010objectId\022\037\n\013content_len\030\002 \001(" +
-      "\003R\ncontentLen\0229\n\006hashes\030\003 \003(\0132!.aruna.ap" +
-      "i.storage.models.v2.HashR\006hashes\022V\n\017comp" +
-      "leted_parts\030\004 \003(\0132-.aruna.api.storage.se" +
-      "rvices.v2.CompletedPartsR\016completedParts" +
-      "\"Z\n\033FinishObjectStagingResponse\022;\n\006objec" +
-      "t\030\001 \001(\0132#.aruna.api.storage.models.v2.Ob" +
-      "jectR\006object\"\307\004\n\023UpdateObjectRequest\022\033\n\t" +
-      "object_id\030\001 \001(\tR\010objectId\022\027\n\004name\030\002 \001(\tH" +
-      "\001R\004name\210\001\001\022%\n\013description\030\003 \001(\tH\002R\013descr" +
-      "iption\210\001\001\022K\n\016add_key_values\030\004 \003(\0132%.arun" +
-      "a.api.storage.models.v2.KeyValueR\014addKey" +
-      "Values\022Q\n\021remove_key_values\030\005 \003(\0132%.arun" +
-      "a.api.storage.models.v2.KeyValueR\017remove" +
-      "KeyValues\022E\n\ndata_class\030\007 \001(\0162&.aruna.ap" +
-      "i.storage.models.v2.DataClassR\tdataClass" +
-      "\022\037\n\nproject_id\030\010 \001(\tH\000R\tprojectId\022%\n\rcol" +
-      "lection_id\030\t \001(\tH\000R\014collectionId\022\037\n\ndata" +
-      "set_id\030\n \001(\tH\000R\tdatasetId\0229\n\006hashes\030\014 \003(" +
-      "\0132!.aruna.api.storage.models.v2.HashR\006ha" +
-      "shes\022%\n\016force_revision\030\r \001(\010R\rforceRevis" +
-      "ionB\010\n\006parentB\007\n\005_nameB\016\n\014_description\"v" +
-      "\n\024UpdateObjectResponse\022;\n\006object\030\001 \001(\0132#" +
+      "proto\032\034google/api/annotations.proto\032\033goo" +
+      "gle/api/visibility.proto\"\247\004\n\023CreateObjec" +
+      "tRequest\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descript" +
+      "ion\030\002 \001(\tR\013description\022D\n\nkey_values\030\003 \003" +
+      "(\0132%.aruna.api.storage.models.v2.KeyValu" +
+      "eR\tkeyValues\022C\n\trelations\030\004 \003(\0132%.aruna." +
+      "api.storage.models.v2.RelationR\trelation" +
+      "s\022E\n\ndata_class\030\005 \001(\0162&.aruna.api.storag" +
+      "e.models.v2.DataClassR\tdataClass\022\037\n\nproj" +
+      "ect_id\030\006 \001(\tH\000R\tprojectId\022%\n\rcollection_" +
+      "id\030\007 \001(\tH\000R\014collectionId\022\037\n\ndataset_id\030\010" +
+      " \001(\tH\000R\tdatasetId\0229\n\006hashes\030\t \003(\0132!.arun" +
+      "a.api.storage.models.v2.HashR\006hashes\0220\n\024" +
+      "metadata_license_tag\030\n \001(\tR\022metadataLice" +
+      "nseTag\022(\n\020data_license_tag\030\013 \001(\tR\016dataLi" +
+      "censeTagB\010\n\006parent\"S\n\024CreateObjectRespon" +
+      "se\022;\n\006object\030\001 \001(\0132#.aruna.api.storage.m" +
+      "odels.v2.ObjectR\006object\"q\n\023GetUploadURLR" +
+      "equest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\034\n\tm" +
+      "ultipart\030\002 \001(\010R\tmultipart\022\037\n\013part_number" +
+      "\030\003 \001(\005R\npartNumber\"(\n\024GetUploadURLRespon" +
+      "se\022\020\n\003url\030\001 \001(\tR\003url\"4\n\025GetDownloadURLRe" +
+      "quest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"*\n\026Ge" +
+      "tDownloadURLResponse\022\020\n\003url\030\001 \001(\tR\003url\"8" +
+      "\n\016CompletedParts\022\022\n\004etag\030\001 \001(\tR\004etag\022\022\n\004" +
+      "part\030\002 \001(\003R\004part\"\355\001\n\032FinishObjectStaging" +
+      "Request\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\037\n\013" +
+      "content_len\030\002 \001(\003R\ncontentLen\0229\n\006hashes\030" +
+      "\003 \003(\0132!.aruna.api.storage.models.v2.Hash" +
+      "R\006hashes\022V\n\017completed_parts\030\004 \003(\0132-.arun" +
+      "a.api.storage.services.v2.CompletedParts" +
+      "R\016completedParts\"Z\n\033FinishObjectStagingR" +
+      "esponse\022;\n\006object\030\001 \001(\0132#.aruna.api.stor" +
+      "age.models.v2.ObjectR\006object\"\243\005\n\023UpdateO" +
+      "bjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectI" +
+      "d\022\027\n\004name\030\002 \001(\tH\001R\004name\210\001\001\022%\n\013descriptio" +
+      "n\030\003 \001(\tH\002R\013description\210\001\001\022K\n\016add_key_val" +
+      "ues\030\004 \003(\0132%.aruna.api.storage.models.v2." +
+      "KeyValueR\014addKeyValues\022Q\n\021remove_key_val" +
+      "ues\030\005 \003(\0132%.aruna.api.storage.models.v2." +
+      "KeyValueR\017removeKeyValues\022E\n\ndata_class\030" +
+      "\007 \001(\0162&.aruna.api.storage.models.v2.Data" +
+      "ClassR\tdataClass\022\037\n\nproject_id\030\010 \001(\tH\000R\t" +
+      "projectId\022%\n\rcollection_id\030\t \001(\tH\000R\014coll" +
+      "ectionId\022\037\n\ndataset_id\030\n \001(\tH\000R\tdatasetI" +
+      "d\0229\n\006hashes\030\014 \003(\0132!.aruna.api.storage.mo" +
+      "dels.v2.HashR\006hashes\022%\n\016force_revision\030\r" +
+      " \001(\010R\rforceRevision\0220\n\024metadata_license_" +
+      "tag\030\016 \001(\tR\022metadataLicenseTag\022(\n\020data_li" +
+      "cense_tag\030\017 \001(\tR\016dataLicenseTagB\010\n\006paren" +
+      "tB\007\n\005_nameB\016\n\014_description\"v\n\024UpdateObje" +
+      "ctResponse\022;\n\006object\030\001 \001(\0132#.aruna.api.s" +
+      "torage.models.v2.ObjectR\006object\022!\n\014new_r" +
+      "evision\030\002 \001(\010R\013newRevision\"\244\001\n\022CloneObje" +
+      "ctRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\037" +
+      "\n\nproject_id\030\002 \001(\tH\000R\tprojectId\022%\n\rcolle" +
+      "ction_id\030\003 \001(\tH\000R\014collectionId\022\037\n\ndatase" +
+      "t_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006parent\"R\n\023Clo" +
+      "neObjectResponse\022;\n\006object\030\001 \001(\0132#.aruna" +
+      ".api.storage.models.v2.ObjectR\006object\"Y\n" +
+      "\023DeleteObjectRequest\022\033\n\tobject_id\030\001 \001(\tR" +
+      "\010objectId\022%\n\016with_revisions\030\002 \001(\010R\rwithR" +
+      "evisions\"\026\n\024DeleteObjectResponse\"/\n\020GetO" +
+      "bjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectI" +
+      "d\"P\n\021GetObjectResponse\022;\n\006object\030\001 \001(\0132#" +
       ".aruna.api.storage.models.v2.ObjectR\006obj" +
-      "ect\022!\n\014new_revision\030\002 \001(\010R\013newRevision\"\244" +
-      "\001\n\022CloneObjectRequest\022\033\n\tobject_id\030\001 \001(\t" +
-      "R\010objectId\022\037\n\nproject_id\030\002 \001(\tH\000R\tprojec" +
-      "tId\022%\n\rcollection_id\030\003 \001(\tH\000R\014collection" +
-      "Id\022\037\n\ndataset_id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006p" +
-      "arent\"R\n\023CloneObjectResponse\022;\n\006object\030\001" +
-      " \001(\0132#.aruna.api.storage.models.v2.Objec" +
-      "tR\006object\"Y\n\023DeleteObjectRequest\022\033\n\tobje" +
-      "ct_id\030\001 \001(\tR\010objectId\022%\n\016with_revisions\030" +
-      "\002 \001(\010R\rwithRevisions\"\026\n\024DeleteObjectResp" +
-      "onse\"/\n\020GetObjectRequest\022\033\n\tobject_id\030\001 " +
-      "\001(\tR\010objectId\"P\n\021GetObjectResponse\022;\n\006ob" +
-      "ject\030\001 \001(\0132#.aruna.api.storage.models.v2" +
-      ".ObjectR\006object\"2\n\021GetObjectsRequest\022\035\n\n" +
-      "object_ids\030\001 \003(\tR\tobjectIds\"S\n\022GetObject" +
-      "sResponse\022=\n\007objects\030\001 \003(\0132#.aruna.api.s" +
-      "torage.models.v2.ObjectR\007objects\"8\n\031GetO" +
-      "bjectRevisionsRequest\022\033\n\tobject_id\030\002 \001(\t" +
-      "R\010objectId\"[\n\032GetObjectRevisionsResponse" +
-      "\022=\n\007objects\030\001 \003(\0132#.aruna.api.storage.mo" +
-      "dels.v2.ObjectR\007objects\"=\n\036GetLatestObje" +
-      "ctRevisionRequest\022\033\n\tobject_id\030\001 \001(\tR\010ob" +
-      "jectId\"^\n\037GetLatestObjectRevisionRespons" +
-      "e\022;\n\006object\030\001 \001(\0132#.aruna.api.storage.mo" +
-      "dels.v2.ObjectR\006object\"]\n\031GetObjectEndpo" +
-      "intsRequest\022#\n\rcollection_id\030\001 \001(\tR\014coll" +
-      "ectionId\022\033\n\tobject_id\030\002 \001(\tR\010objectId2\220\013" +
-      "\n\rObjectService\022\216\001\n\014CreateObject\0222.aruna" +
-      ".api.storage.services.v2.CreateObjectReq" +
-      "uest\0323.aruna.api.storage.services.v2.Cre" +
-      "ateObjectResponse\"\025\202\323\344\223\002\017\"\n/v2/object:\001*" +
-      "\022\236\001\n\014GetUploadURL\0222.aruna.api.storage.se" +
-      "rvices.v2.GetUploadURLRequest\0323.aruna.ap" +
-      "i.storage.services.v2.GetUploadURLRespon" +
-      "se\"%\202\323\344\223\002\037\022\035/v2/object/{object_id}/uploa" +
-      "d\022\246\001\n\016GetDownloadURL\0224.aruna.api.storage" +
-      ".services.v2.GetDownloadURLRequest\0325.aru" +
-      "na.api.storage.services.v2.GetDownloadUR" +
-      "LResponse\"\'\202\323\344\223\002!\022\037/v2/object/{object_id" +
-      "}/download\022\266\001\n\023FinishObjectStaging\0229.aru" +
-      "na.api.storage.services.v2.FinishObjectS" +
-      "tagingRequest\032:.aruna.api.storage.servic" +
-      "es.v2.FinishObjectStagingResponse\"(\202\323\344\223\002" +
-      "\"2\035/v2/object/{object_id}/finish:\001*\022\232\001\n\014" +
-      "UpdateObject\0222.aruna.api.storage.service" +
-      "s.v2.UpdateObjectRequest\0323.aruna.api.sto" +
-      "rage.services.v2.UpdateObjectResponse\"!\202" +
-      "\323\344\223\002\033\"\026/v2/object/{object_id}:\001*\022\226\001\n\013Clo" +
-      "neObject\0221.aruna.api.storage.services.v2" +
-      ".CloneObjectRequest\0322.aruna.api.storage." +
-      "services.v2.CloneObjectResponse\" \202\323\344\223\002\032\"" +
-      "\025/v2/{object_id}/clone:\001*\022\232\001\n\014DeleteObje" +
-      "ct\0222.aruna.api.storage.services.v2.Delet" +
-      "eObjectRequest\0323.aruna.api.storage.servi" +
-      "ces.v2.DeleteObjectResponse\"!\202\323\344\223\002\033*\026/v2" +
-      "/object/{object_id}:\001*\022\216\001\n\tGetObject\022/.a" +
-      "runa.api.storage.services.v2.GetObjectRe" +
-      "quest\0320.aruna.api.storage.services.v2.Ge" +
-      "tObjectResponse\"\036\202\323\344\223\002\030\022\026/v2/object/{obj" +
-      "ect_id}\022\206\001\n\nGetObjects\0220.aruna.api.stora" +
-      "ge.services.v2.GetObjectsRequest\0321.aruna" +
-      ".api.storage.services.v2.GetObjectsRespo" +
-      "nse\"\023\202\323\344\223\002\r\022\013/v2/objectsB\216\002\n!com.aruna.a" +
-      "pi.storage.services.v2B\022ObjectServicePro" +
-      "toP\000Z<github.com/ArunaStorage/go-api/aru" +
-      "na/api/storage/services/v2\242\002\004AASS\252\002\035Arun" +
-      "a.Api.Storage.Services.V2\312\002\035Aruna\\Api\\St" +
-      "orage\\Services\\V2\342\002)Aruna\\Api\\Storage\\Se" +
-      "rvices\\V2\\GPBMetadata\352\002!Aruna::Api::Stor" +
-      "age::Services::V2b\006proto3"
+      "ect\"2\n\021GetObjectsRequest\022\035\n\nobject_ids\030\001" +
+      " \003(\tR\tobjectIds\"S\n\022GetObjectsResponse\022=\n" +
+      "\007objects\030\001 \003(\0132#.aruna.api.storage.model" +
+      "s.v2.ObjectR\007objects\"8\n\031GetObjectRevisio" +
+      "nsRequest\022\033\n\tobject_id\030\002 \001(\tR\010objectId\"[" +
+      "\n\032GetObjectRevisionsResponse\022=\n\007objects\030" +
+      "\001 \003(\0132#.aruna.api.storage.models.v2.Obje" +
+      "ctR\007objects\"=\n\036GetLatestObjectRevisionRe" +
+      "quest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"^\n\037Ge" +
+      "tLatestObjectRevisionResponse\022;\n\006object\030" +
+      "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
+      "ctR\006object\"]\n\031GetObjectEndpointsRequest\022" +
+      "#\n\rcollection_id\030\001 \001(\tR\014collectionId\022\033\n\t" +
+      "object_id\030\002 \001(\tR\010objectId2\240\013\n\rObjectServ" +
+      "ice\022\216\001\n\014CreateObject\0222.aruna.api.storage" +
+      ".services.v2.CreateObjectRequest\0323.aruna" +
+      ".api.storage.services.v2.CreateObjectRes" +
+      "ponse\"\025\202\323\344\223\002\017\"\n/v2/object:\001*\022\236\001\n\014GetUplo" +
+      "adURL\0222.aruna.api.storage.services.v2.Ge" +
+      "tUploadURLRequest\0323.aruna.api.storage.se" +
+      "rvices.v2.GetUploadURLResponse\"%\202\323\344\223\002\037\022\035" +
+      "/v2/object/{object_id}/upload\022\246\001\n\016GetDow" +
+      "nloadURL\0224.aruna.api.storage.services.v2" +
+      ".GetDownloadURLRequest\0325.aruna.api.stora" +
+      "ge.services.v2.GetDownloadURLResponse\"\'\202" +
+      "\323\344\223\002!\022\037/v2/object/{object_id}/download\022\266" +
+      "\001\n\023FinishObjectStaging\0229.aruna.api.stora" +
+      "ge.services.v2.FinishObjectStagingReques" +
+      "t\032:.aruna.api.storage.services.v2.Finish" +
+      "ObjectStagingResponse\"(\202\323\344\223\002\"2\035/v2/objec" +
+      "t/{object_id}/finish:\001*\022\232\001\n\014UpdateObject" +
+      "\0222.aruna.api.storage.services.v2.UpdateO" +
+      "bjectRequest\0323.aruna.api.storage.service" +
+      "s.v2.UpdateObjectResponse\"!\202\323\344\223\002\033\"\026/v2/o" +
+      "bject/{object_id}:\001*\022\226\001\n\013CloneObject\0221.a" +
+      "runa.api.storage.services.v2.CloneObject" +
+      "Request\0322.aruna.api.storage.services.v2." +
+      "CloneObjectResponse\" \202\323\344\223\002\032\"\025/v2/{object" +
+      "_id}/clone:\001*\022\232\001\n\014DeleteObject\0222.aruna.a" +
+      "pi.storage.services.v2.DeleteObjectReque" +
+      "st\0323.aruna.api.storage.services.v2.Delet" +
+      "eObjectResponse\"!\202\323\344\223\002\033*\026/v2/object/{obj" +
+      "ect_id}:\001*\022\216\001\n\tGetObject\022/.aruna.api.sto" +
+      "rage.services.v2.GetObjectRequest\0320.arun" +
+      "a.api.storage.services.v2.GetObjectRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/v2/object/{object_id}\022\206\001\n\n" +
+      "GetObjects\0220.aruna.api.storage.services." +
+      "v2.GetObjectsRequest\0321.aruna.api.storage" +
+      ".services.v2.GetObjectsResponse\"\023\202\323\344\223\002\r\022" +
+      "\013/v2/objects\032\016\372\322\344\223\002\010\022\006SERVERB\221\002\n!com.aru" +
+      "na.api.storage.services.v2B\022ObjectServic" +
+      "eProtoP\000Z?github.com/ArunaStorage/go-api" +
+      "/v2/aruna/api/storage/services/v2\242\002\004AASS" +
+      "\252\002\035Aruna.Api.Storage.Services.V2\312\002\035Aruna" +
+      "\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api\\Sto" +
+      "rage\\Services\\V2\\GPBMetadata\352\002!Aruna::Ap" +
+      "i::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.aruna.api.storage.models.v2.ModelsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
         });
     internal_static_aruna_api_storage_services_v2_CreateObjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_aruna_api_storage_services_v2_CreateObjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_CreateObjectRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", "KeyValues", "ExternalRelations", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "Parent", });
+        new java.lang.String[] { "Name", "Description", "KeyValues", "Relations", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "MetadataLicenseTag", "DataLicenseTag", "Parent", });
     internal_static_aruna_api_storage_services_v2_CreateObjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_services_v2_CreateObjectResponse_fieldAccessorTable = new
@@ -21837,7 +22435,7 @@ public final class ObjectServiceProto {
     internal_static_aruna_api_storage_services_v2_UpdateObjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_UpdateObjectRequest_descriptor,
-        new java.lang.String[] { "ObjectId", "Name", "Description", "AddKeyValues", "RemoveKeyValues", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "ForceRevision", "Parent", "Name", "Description", });
+        new java.lang.String[] { "ObjectId", "Name", "Description", "AddKeyValues", "RemoveKeyValues", "DataClass", "ProjectId", "CollectionId", "DatasetId", "Hashes", "ForceRevision", "MetadataLicenseTag", "DataLicenseTag", "Parent", "Name", "Description", });
     internal_static_aruna_api_storage_services_v2_UpdateObjectResponse_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_services_v2_UpdateObjectResponse_fieldAccessorTable = new
@@ -21924,11 +22522,13 @@ public final class ObjectServiceProto {
         new java.lang.String[] { "CollectionId", "ObjectId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.aruna.api.storage.models.v2.ModelsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

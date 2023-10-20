@@ -18000,132 +18000,142 @@ public final class NotificationServiceProto {
       "\n=aruna/api/notification/services/v2/not" +
       "ification_service.proto\022\"aruna.api.notif" +
       "ication.services.v2\032\037google/protobuf/tim" +
-      "estamp.proto\032(aruna/api/storage/models/v" +
-      "2/models.proto\"\326\001\n\010Resource\022\037\n\013resource_" +
-      "id\030\001 \001(\tR\nresourceId\0224\n\026persistent_resou" +
-      "rce_id\030\002 \001(\010R\024persistentResourceId\022\032\n\010ch" +
-      "ecksum\030\003 \001(\tR\010checksum\022W\n\020resource_varia" +
-      "nt\030\004 \001(\0162,.aruna.api.storage.models.v2.R" +
-      "esourceVariantR\017resourceVariant\"\212\001\n\016Reso" +
-      "urceTarget\022\037\n\013resource_id\030\001 \001(\tR\nresourc" +
-      "eId\022W\n\020resource_variant\030\002 \001(\0162,.aruna.ap" +
-      "i.storage.models.v2.ResourceVariantR\017res" +
-      "ourceVariant\"\247\004\n\033CreateStreamConsumerReq" +
-      "uest\022P\n\010resource\030\001 \001(\01322.aruna.api.notif" +
-      "ication.services.v2.ResourceTargetH\000R\010re" +
-      "source\022\024\n\004user\030\002 \001(\tH\000R\004user\022$\n\014anouncem" +
-      "ents\030\003 \001(\010H\000R\014anouncements\022\022\n\003all\030\004 \001(\010H" +
-      "\000R\003all\0221\n\024include_subresources\030\005 \001(\010R\023in" +
-      "cludeSubresources\022N\n\nstream_all\030\006 \001(\0132-." +
-      "aruna.api.notification.services.v2.Strea" +
-      "mAllH\001R\tstreamAll\022^\n\020stream_from_date\030\007 " +
-      "\001(\01322.aruna.api.notification.services.v2" +
-      ".StreamFromDateH\001R\016streamFromDate\022j\n\024str" +
-      "eam_from_sequence\030\010 \001(\01326.aruna.api.noti" +
-      "fication.services.v2.StreamFromSequenceH" +
-      "\001R\022streamFromSequenceB\010\n\006targetB\r\n\013strea" +
-      "m_type\"G\n\034CreateStreamConsumerResponse\022\'" +
-      "\n\017stream_consumer\030\001 \001(\tR\016streamConsumer\"" +
-      "e\n\033GetEventMessageBatchRequest\022\'\n\017stream" +
-      "_consumer\030\001 \001(\tR\016streamConsumer\022\035\n\nbatch" +
-      "_size\030\002 \001(\rR\tbatchSize\"l\n\034GetEventMessag" +
-      "eBatchResponse\022L\n\010messages\030\001 \003(\01320.aruna" +
-      ".api.notification.services.v2.EventMessa" +
-      "geR\010messages\"G\n\034GetEventMessageStreamReq" +
-      "uest\022\'\n\017stream_consumer\030\001 \001(\tR\016streamCon" +
-      "sumer\"k\n\035GetEventMessageStreamResponse\022J" +
-      "\n\007message\030\001 \001(\01320.aruna.api.notification" +
-      ".services.v2.EventMessageR\007message\"e\n\036Ac" +
-      "knowledgeMessageBatchRequest\022C\n\007replies\030" +
-      "\001 \003(\0132).aruna.api.notification.services." +
-      "v2.ReplyR\007replies\"!\n\037AcknowledgeMessageB" +
-      "atchResponse\"F\n\033DeleteStreamConsumerRequ" +
-      "est\022\'\n\017stream_consumer\030\001 \001(\tR\016streamCons" +
-      "umer\"\036\n\034DeleteStreamConsumerResponse\"0\n\022" +
-      "StreamFromSequence\022\032\n\010sequence\030\001 \001(\004R\010se" +
-      "quence\"J\n\016StreamFromDate\0228\n\ttimestamp\030\001 " +
-      "\001(\0132\032.google.protobuf.TimestampR\ttimesta" +
-      "mp\"\013\n\tStreamAll\"\264\002\n\014EventMessage\022Z\n\016reso" +
-      "urce_event\030\001 \001(\01321.aruna.api.notificatio" +
-      "n.services.v2.ResourceEventH\000R\rresourceE" +
-      "vent\022N\n\nuser_event\030\002 \001(\0132-.aruna.api.not" +
-      "ification.services.v2.UserEventH\000R\tuserE" +
-      "vent\022e\n\022announcement_event\030\003 \001(\01324.aruna" +
-      ".api.notification.services.v2.Anouncemen" +
-      "tEventH\000R\021announcementEventB\021\n\017message_v" +
-      "ariant\"\361\001\n\rResourceEvent\022H\n\010resource\030\001 \001" +
-      "(\0132,.aruna.api.notification.services.v2." +
-      "ResourceR\010resource\022U\n\revent_variant\030\002 \001(" +
-      "\01620.aruna.api.notification.services.v2.E" +
-      "ventVariantR\014eventVariant\022?\n\005reply\030\003 \001(\013" +
-      "2).aruna.api.notification.services.v2.Re" +
-      "plyR\005reply\"\330\001\n\tUserEvent\022\027\n\007user_id\030\001 \001(" +
-      "\tR\006userId\022U\n\revent_variant\030\002 \001(\01620.aruna" +
-      ".api.notification.services.v2.EventVaria" +
-      "ntR\014eventVariant\022\032\n\010checksum\030\003 \001(\tR\010chec" +
-      "ksum\022?\n\005reply\030\004 \001(\0132).aruna.api.notifica" +
-      "tion.services.v2.ReplyR\005reply\"E\n\005Reply\022\024" +
-      "\n\005reply\030\001 \001(\tR\005reply\022\022\n\004salt\030\002 \001(\tR\004salt" +
-      "\022\022\n\004hmac\030\003 \001(\tR\004hmac\"\251\001\n\021ScheduledDownti" +
-      "me\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tcompon" +
-      "ent\030\002 \001(\tR\tcomponent\022.\n\004from\030\003 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\004from\022*\n\002to\030\004 \001(\013" +
-      "2\032.google.protobuf.TimestampR\002to\"g\n\nNewV" +
-      "ersion\022\032\n\010location\030\001 \001(\tR\010location\022\034\n\tco" +
-      "mponent\030\002 \001(\tR\tcomponent\022\037\n\013new_version\030" +
-      "\003 \001(\tR\nnewVersion\"#\n\tNewPubkey\022\026\n\006pubkey" +
-      "\030\001 \001(\tR\006pubkey\"\340\003\n\020AnouncementEvent\022+\n\021n" +
-      "ew_data_proxy_id\030\001 \001(\tH\000R\016newDataProxyId" +
-      "\0221\n\024remove_data_proxy_id\030\002 \001(\tH\000R\021remove" +
-      "DataProxyId\0221\n\024update_data_proxy_id\030\003 \001(" +
-      "\tH\000R\021updateDataProxyId\022\037\n\nnew_pubkey\030\004 \001" +
-      "(\005H\000R\tnewPubkey\022%\n\rremove_pubkey\030\005 \001(\005H\000" +
-      "R\014removePubkey\022S\n\010downtime\030\006 \001(\01325.aruna" +
-      ".api.notification.services.v2.ScheduledD" +
-      "owntimeH\000R\010downtime\022J\n\007version\030\007 \001(\0132..a" +
-      "runa.api.notification.services.v2.NewVer" +
-      "sionH\000R\007version\022?\n\005reply\030\010 \001(\0132).aruna.a" +
-      "pi.notification.services.v2.ReplyR\005reply" +
-      "B\017\n\revent_variant*\272\001\n\014EventVariant\022\035\n\031EV" +
-      "ENT_VARIANT_UNSPECIFIED\020\000\022\031\n\025EVENT_VARIA" +
-      "NT_CREATED\020\001\022\033\n\027EVENT_VARIANT_AVAILABLE\020" +
-      "\002\022\031\n\025EVENT_VARIANT_UPDATED\020\003\022\031\n\025EVENT_VA" +
-      "RIANT_DELETED\020\004\022\035\n\031EVENT_VARIANT_SNAPSHO" +
-      "TTED\020\0052\276\006\n\030EventNotificationService\022\233\001\n\024" +
-      "CreateStreamConsumer\022?.aruna.api.notific" +
-      "ation.services.v2.CreateStreamConsumerRe" +
-      "quest\032@.aruna.api.notification.services." +
-      "v2.CreateStreamConsumerResponse\"\000\022\233\001\n\024Ge" +
-      "tEventMessageBatch\022?.aruna.api.notificat" +
-      "ion.services.v2.GetEventMessageBatchRequ" +
-      "est\032@.aruna.api.notification.services.v2" +
-      ".GetEventMessageBatchResponse\"\000\022\240\001\n\025GetE" +
-      "ventMessageStream\022@.aruna.api.notificati" +
-      "on.services.v2.GetEventMessageStreamRequ" +
-      "est\032A.aruna.api.notification.services.v2" +
-      ".GetEventMessageStreamResponse\"\0000\001\022\244\001\n\027A" +
-      "cknowledgeMessageBatch\022B.aruna.api.notif" +
-      "ication.services.v2.AcknowledgeMessageBa" +
-      "tchRequest\032C.aruna.api.notification.serv" +
-      "ices.v2.AcknowledgeMessageBatchResponse\"" +
-      "\000\022\233\001\n\024DeleteStreamConsumer\022?.aruna.api.n" +
-      "otification.services.v2.DeleteStreamCons" +
-      "umerRequest\032@.aruna.api.notification.ser" +
-      "vices.v2.DeleteStreamConsumerResponse\"\000B" +
-      "\262\002\n&com.aruna.api.notification.services." +
-      "v2B\030NotificationServiceProtoP\000ZAgithub.c" +
-      "om/ArunaStorage/go-api/aruna/api/notific" +
-      "ation/services/v2\242\002\004AANS\252\002\"Aruna.Api.Not" +
-      "ification.Services.V2\312\002\"Aruna\\Api\\Notifi" +
-      "cation\\Services\\V2\342\002.Aruna\\Api\\Notificat" +
-      "ion\\Services\\V2\\GPBMetadata\352\002&Aruna::Api" +
-      "::Notification::Services::V2b\006proto3"
+      "estamp.proto\032\034google/api/annotations.pro" +
+      "to\032(aruna/api/storage/models/v2/models.p" +
+      "roto\032\033google/api/visibility.proto\"\326\001\n\010Re" +
+      "source\022\037\n\013resource_id\030\001 \001(\tR\nresourceId\022" +
+      "4\n\026persistent_resource_id\030\002 \001(\010R\024persist" +
+      "entResourceId\022\032\n\010checksum\030\003 \001(\tR\010checksu" +
+      "m\022W\n\020resource_variant\030\004 \001(\0162,.aruna.api." +
+      "storage.models.v2.ResourceVariantR\017resou" +
+      "rceVariant\"\212\001\n\016ResourceTarget\022\037\n\013resourc" +
+      "e_id\030\001 \001(\tR\nresourceId\022W\n\020resource_varia" +
+      "nt\030\002 \001(\0162,.aruna.api.storage.models.v2.R" +
+      "esourceVariantR\017resourceVariant\"\247\004\n\033Crea" +
+      "teStreamConsumerRequest\022P\n\010resource\030\001 \001(" +
+      "\01322.aruna.api.notification.services.v2.R" +
+      "esourceTargetH\000R\010resource\022\024\n\004user\030\002 \001(\tH" +
+      "\000R\004user\022$\n\014anouncements\030\003 \001(\010H\000R\014anounce" +
+      "ments\022\022\n\003all\030\004 \001(\010H\000R\003all\0221\n\024include_sub" +
+      "resources\030\005 \001(\010R\023includeSubresources\022N\n\n" +
+      "stream_all\030\006 \001(\0132-.aruna.api.notificatio" +
+      "n.services.v2.StreamAllH\001R\tstreamAll\022^\n\020" +
+      "stream_from_date\030\007 \001(\01322.aruna.api.notif" +
+      "ication.services.v2.StreamFromDateH\001R\016st" +
+      "reamFromDate\022j\n\024stream_from_sequence\030\010 \001" +
+      "(\01326.aruna.api.notification.services.v2." +
+      "StreamFromSequenceH\001R\022streamFromSequence" +
+      "B\010\n\006targetB\r\n\013stream_type\"G\n\034CreateStrea" +
+      "mConsumerResponse\022\'\n\017stream_consumer\030\001 \001" +
+      "(\tR\016streamConsumer\"e\n\033GetEventMessageBat" +
+      "chRequest\022\'\n\017stream_consumer\030\001 \001(\tR\016stre" +
+      "amConsumer\022\035\n\nbatch_size\030\002 \001(\rR\tbatchSiz" +
+      "e\"l\n\034GetEventMessageBatchResponse\022L\n\010mes" +
+      "sages\030\001 \003(\01320.aruna.api.notification.ser" +
+      "vices.v2.EventMessageR\010messages\"G\n\034GetEv" +
+      "entMessageStreamRequest\022\'\n\017stream_consum" +
+      "er\030\001 \001(\tR\016streamConsumer\"k\n\035GetEventMess" +
+      "ageStreamResponse\022J\n\007message\030\001 \001(\01320.aru" +
+      "na.api.notification.services.v2.EventMes" +
+      "sageR\007message\"e\n\036AcknowledgeMessageBatch" +
+      "Request\022C\n\007replies\030\001 \003(\0132).aruna.api.not" +
+      "ification.services.v2.ReplyR\007replies\"!\n\037" +
+      "AcknowledgeMessageBatchResponse\"F\n\033Delet" +
+      "eStreamConsumerRequest\022\'\n\017stream_consume" +
+      "r\030\001 \001(\tR\016streamConsumer\"\036\n\034DeleteStreamC" +
+      "onsumerResponse\"0\n\022StreamFromSequence\022\032\n" +
+      "\010sequence\030\001 \001(\004R\010sequence\"J\n\016StreamFromD" +
+      "ate\0228\n\ttimestamp\030\001 \001(\0132\032.google.protobuf" +
+      ".TimestampR\ttimestamp\"\013\n\tStreamAll\"\264\002\n\014E" +
+      "ventMessage\022Z\n\016resource_event\030\001 \001(\01321.ar" +
+      "una.api.notification.services.v2.Resourc" +
+      "eEventH\000R\rresourceEvent\022N\n\nuser_event\030\002 " +
+      "\001(\0132-.aruna.api.notification.services.v2" +
+      ".UserEventH\000R\tuserEvent\022e\n\022announcement_" +
+      "event\030\003 \001(\01324.aruna.api.notification.ser" +
+      "vices.v2.AnouncementEventH\000R\021announcemen" +
+      "tEventB\021\n\017message_variant\"\361\001\n\rResourceEv" +
+      "ent\022H\n\010resource\030\001 \001(\0132,.aruna.api.notifi" +
+      "cation.services.v2.ResourceR\010resource\022U\n" +
+      "\revent_variant\030\002 \001(\01620.aruna.api.notific" +
+      "ation.services.v2.EventVariantR\014eventVar" +
+      "iant\022?\n\005reply\030\003 \001(\0132).aruna.api.notifica" +
+      "tion.services.v2.ReplyR\005reply\"\330\001\n\tUserEv" +
+      "ent\022\027\n\007user_id\030\001 \001(\tR\006userId\022U\n\revent_va" +
+      "riant\030\002 \001(\01620.aruna.api.notification.ser" +
+      "vices.v2.EventVariantR\014eventVariant\022\032\n\010c" +
+      "hecksum\030\003 \001(\tR\010checksum\022?\n\005reply\030\004 \001(\0132)" +
+      ".aruna.api.notification.services.v2.Repl" +
+      "yR\005reply\"E\n\005Reply\022\024\n\005reply\030\001 \001(\tR\005reply\022" +
+      "\022\n\004salt\030\002 \001(\tR\004salt\022\022\n\004hmac\030\003 \001(\tR\004hmac\"" +
+      "\251\001\n\021ScheduledDowntime\022\032\n\010location\030\001 \001(\tR" +
+      "\010location\022\034\n\tcomponent\030\002 \001(\tR\tcomponent\022" +
+      ".\n\004from\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\004from\022*\n\002to\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\002to\"g\n\nNewVersion\022\032\n\010location\030\001 " +
+      "\001(\tR\010location\022\034\n\tcomponent\030\002 \001(\tR\tcompon" +
+      "ent\022\037\n\013new_version\030\003 \001(\tR\nnewVersion\"#\n\t" +
+      "NewPubkey\022\026\n\006pubkey\030\001 \001(\tR\006pubkey\"\340\003\n\020An" +
+      "ouncementEvent\022+\n\021new_data_proxy_id\030\001 \001(" +
+      "\tH\000R\016newDataProxyId\0221\n\024remove_data_proxy" +
+      "_id\030\002 \001(\tH\000R\021removeDataProxyId\0221\n\024update" +
+      "_data_proxy_id\030\003 \001(\tH\000R\021updateDataProxyI" +
+      "d\022\037\n\nnew_pubkey\030\004 \001(\005H\000R\tnewPubkey\022%\n\rre" +
+      "move_pubkey\030\005 \001(\005H\000R\014removePubkey\022S\n\010dow" +
+      "ntime\030\006 \001(\01325.aruna.api.notification.ser" +
+      "vices.v2.ScheduledDowntimeH\000R\010downtime\022J" +
+      "\n\007version\030\007 \001(\0132..aruna.api.notification" +
+      ".services.v2.NewVersionH\000R\007version\022?\n\005re" +
+      "ply\030\010 \001(\0132).aruna.api.notification.servi" +
+      "ces.v2.ReplyR\005replyB\017\n\revent_variant*\272\001\n" +
+      "\014EventVariant\022\035\n\031EVENT_VARIANT_UNSPECIFI" +
+      "ED\020\000\022\031\n\025EVENT_VARIANT_CREATED\020\001\022\033\n\027EVENT" +
+      "_VARIANT_AVAILABLE\020\002\022\031\n\025EVENT_VARIANT_UP" +
+      "DATED\020\003\022\031\n\025EVENT_VARIANT_DELETED\020\004\022\035\n\031EV" +
+      "ENT_VARIANT_SNAPSHOTTED\020\0052\263\010\n\030EventNotif" +
+      "icationService\022\300\001\n\024CreateStreamConsumer\022" +
+      "?.aruna.api.notification.services.v2.Cre" +
+      "ateStreamConsumerRequest\032@.aruna.api.not" +
+      "ification.services.v2.CreateStreamConsum" +
+      "erResponse\"%\202\323\344\223\002\037\"\032/v2/notifications/co" +
+      "nsumer:\001*\022\314\001\n\024GetEventMessageBatch\022?.aru" +
+      "na.api.notification.services.v2.GetEvent" +
+      "MessageBatchRequest\032@.aruna.api.notifica" +
+      "tion.services.v2.GetEventMessageBatchRes" +
+      "ponse\"1\202\323\344\223\002+\022)/v2/notifications/{stream" +
+      "_consumer}/batch\022\322\001\n\025GetEventMessageStre" +
+      "am\022@.aruna.api.notification.services.v2." +
+      "GetEventMessageStreamRequest\032A.aruna.api" +
+      ".notification.services.v2.GetEventMessag" +
+      "eStreamResponse\"2\202\323\344\223\002,\022*/v2/notificatio" +
+      "ns/{stream_consumer}/stream0\001\022\326\001\n\027Acknow" +
+      "ledgeMessageBatch\022B.aruna.api.notificati" +
+      "on.services.v2.AcknowledgeMessageBatchRe" +
+      "quest\032C.aruna.api.notification.services." +
+      "v2.AcknowledgeMessageBatchResponse\"2\202\323\344\223" +
+      "\002,2\'/v2/notifications/{stream_consumer}/" +
+      "ack:\001*\022\306\001\n\024DeleteStreamConsumer\022?.aruna." +
+      "api.notification.services.v2.DeleteStrea" +
+      "mConsumerRequest\032@.aruna.api.notificatio" +
+      "n.services.v2.DeleteStreamConsumerRespon" +
+      "se\"+\202\323\344\223\002%*#/v2/notifications/{stream_co" +
+      "nsumer}\032\016\372\322\344\223\002\010\022\006SERVERB\265\002\n&com.aruna.ap" +
+      "i.notification.services.v2B\030Notification" +
+      "ServiceProtoP\000ZDgithub.com/ArunaStorage/" +
+      "go-api/v2/aruna/api/notification/service" +
+      "s/v2\242\002\004AANS\252\002\"Aruna.Api.Notification.Ser" +
+      "vices.V2\312\002\"Aruna\\Api\\Notification\\Servic" +
+      "es\\V2\342\002.Aruna\\Api\\Notification\\Services\\" +
+      "V2\\GPBMetadata\352\002&Aruna::Api::Notificatio" +
+      "n::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.aruna.api.storage.models.v2.ModelsProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
         });
     internal_static_aruna_api_notification_services_v2_Resource_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -18265,8 +18275,16 @@ public final class NotificationServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_notification_services_v2_AnouncementEvent_descriptor,
         new java.lang.String[] { "NewDataProxyId", "RemoveDataProxyId", "UpdateDataProxyId", "NewPubkey", "RemovePubkey", "Downtime", "Version", "Reply", "EventVariant", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
     com.aruna.api.storage.models.v2.ModelsProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

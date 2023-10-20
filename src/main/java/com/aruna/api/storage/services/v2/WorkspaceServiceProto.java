@@ -10464,86 +10464,88 @@ public final class WorkspaceServiceProto {
     java.lang.String[] descriptorData = {
       "\n5aruna/api/storage/services/v2/workspac" +
       "e_service.proto\022\035aruna.api.storage.servi" +
-      "ces.v2\032\034google/api/annotations.proto\"\305\001\n" +
-      "\036CreateWorkspaceTemplateRequest\022\031\n\010owner" +
-      "_id\030\001 \001(\tR\007ownerId\022\026\n\006prefix\030\002 \001(\tR\006pref" +
-      "ix\022\022\n\004name\030\003 \001(\tR\004name\022\031\n\010hook_ids\030\005 \003(\t" +
-      "R\007hookIds\022 \n\013description\030\006 \001(\tR\013descript" +
-      "ion\022\037\n\013endpoint_id\030\007 \003(\tR\nendpointId\"B\n\037" +
-      "CreateWorkspaceTemplateResponse\022\037\n\013templ" +
-      "ate_id\030\001 \001(\tR\ntemplateId\">\n\033GetWorkspace" +
-      "TemplateRequest\022\037\n\013template_id\030\001 \001(\tR\nte" +
-      "mplateId\"j\n\034GetWorkspaceTemplateResponse" +
-      "\022J\n\tworkspace\030\001 \001(\0132,.aruna.api.storage." +
-      "services.v2.WorkspaceInfoR\tworkspace\"A\n\036" +
-      "DeleteWorkspaceTemplateRequest\022\037\n\013templa" +
-      "te_id\030\001 \001(\tR\ntemplateId\"!\n\037DeleteWorkspa" +
-      "ceTemplateResponse\"$\n\"ListOwnedWorkspace" +
-      "TemplatesRequest\"s\n#ListOwnedWorkspaceTe" +
-      "mplatesResponse\022L\n\nworkspaces\030\001 \003(\0132,.ar" +
-      "una.api.storage.services.v2.WorkspaceInf" +
-      "oR\nworkspaces\"\324\001\n\rWorkspaceInfo\022!\n\014works" +
-      "pace_id\030\001 \001(\tR\013workspaceId\022\022\n\004name\030\002 \001(\t" +
-      "R\004name\022 \n\013description\030\003 \001(\tR\013description" +
-      "\022\024\n\005owner\030\004 \001(\tR\005owner\022\026\n\006prefix\030\005 \001(\tR\006" +
-      "prefix\022\031\n\010hook_ids\030\006 \001(\tR\007hookIds\022!\n\014end" +
-      "point_ids\030\007 \001(\tR\013endpointIds\"i\n\026CreateWo" +
-      "rkspaceRequest\022-\n\022workspace_template\030\001 \001" +
-      "(\tR\021workspaceTemplate\022 \n\013description\030\002 \001" +
-      "(\tR\013description\"\220\001\n\027CreateWorkspaceRespo" +
-      "nse\022!\n\014workspace_id\030\001 \001(\tR\013workspaceId\022\024" +
-      "\n\005token\030\002 \001(\tR\005token\022\035\n\naccess_key\030\003 \001(\t" +
-      "R\taccessKey\022\035\n\nsecret_key\030\004 \001(\tR\tsecretK" +
-      "ey\";\n\026DeleteWorkspaceRequest\022!\n\014workspac" +
-      "e_id\030\001 \001(\tR\013workspaceId\"\031\n\027DeleteWorkspa" +
-      "ceResponse\"P\n\025ClaimWorkspaceRequest\022!\n\014w" +
-      "orkspace_id\030\001 \001(\tR\013workspaceId\022\024\n\005token\030" +
-      "\002 \001(\tR\005token\"\030\n\026ClaimWorkspaceResponse2\233" +
-      "\n\n\020WorkspaceService\022\273\001\n\027CreateWorkspaceT" +
-      "emplate\022=.aruna.api.storage.services.v2." +
-      "CreateWorkspaceTemplateRequest\032>.aruna.a" +
-      "pi.storage.services.v2.CreateWorkspaceTe" +
-      "mplateResponse\"!\202\323\344\223\002\033\"\026/v2/workspace/te" +
-      "mplate:\001*\022\275\001\n\024GetWorkspaceTemplate\022:.aru" +
-      "na.api.storage.services.v2.GetWorkspaceT" +
-      "emplateRequest\032;.aruna.api.storage.servi" +
-      "ces.v2.GetWorkspaceTemplateResponse\",\202\323\344" +
-      "\223\002&\022$/v2/workspace/template/{template_id" +
-      "}\022\304\001\n\033ListOwnedWorkspaceTemplates\022A.arun" +
-      "a.api.storage.services.v2.ListOwnedWorks" +
-      "paceTemplatesRequest\032B.aruna.api.storage" +
-      ".services.v2.ListOwnedWorkspaceTemplates" +
-      "Response\"\036\202\323\344\223\002\030\022\026/v2/workspace/template" +
-      "\022\311\001\n\027DeleteWorkspaceTemplate\022=.aruna.api" +
-      ".storage.services.v2.DeleteWorkspaceTemp" +
-      "lateRequest\032>.aruna.api.storage.services" +
-      ".v2.DeleteWorkspaceTemplateResponse\"/\202\323\344" +
-      "\223\002)*$/v2/workspace/template/{template_id" +
-      "}:\001*\022\232\001\n\017CreateWorkspace\0225.aruna.api.sto" +
-      "rage.services.v2.CreateWorkspaceRequest\032" +
-      "6.aruna.api.storage.services.v2.CreateWo" +
-      "rkspaceResponse\"\030\202\323\344\223\002\022\"\r/v2/workspace:\001" +
-      "*\022\251\001\n\017DeleteWorkspace\0225.aruna.api.storag" +
-      "e.services.v2.DeleteWorkspaceRequest\0326.a" +
-      "runa.api.storage.services.v2.DeleteWorks" +
-      "paceResponse\"\'\202\323\344\223\002!*\034/v2/workspace/{wor" +
-      "kspace_id}:\001*\022\254\001\n\016ClaimWorkspace\0224.aruna" +
-      ".api.storage.services.v2.ClaimWorkspaceR" +
-      "equest\0325.aruna.api.storage.services.v2.C" +
-      "laimWorkspaceResponse\"-\202\323\344\223\002\'\"\"/v2/works" +
-      "pace/{workspace_id}/claim:\001*B\221\002\n!com.aru" +
-      "na.api.storage.services.v2B\025WorkspaceSer" +
-      "viceProtoP\000Z<github.com/ArunaStorage/go-" +
-      "api/aruna/api/storage/services/v2\242\002\004AASS" +
-      "\252\002\035Aruna.Api.Storage.Services.V2\312\002\035Aruna" +
-      "\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api\\Sto" +
-      "rage\\Services\\V2\\GPBMetadata\352\002!Aruna::Ap" +
-      "i::Storage::Services::V2b\006proto3"
+      "ces.v2\032\034google/api/annotations.proto\032\033go" +
+      "ogle/api/visibility.proto\"\305\001\n\036CreateWork" +
+      "spaceTemplateRequest\022\031\n\010owner_id\030\001 \001(\tR\007" +
+      "ownerId\022\026\n\006prefix\030\002 \001(\tR\006prefix\022\022\n\004name\030" +
+      "\003 \001(\tR\004name\022\031\n\010hook_ids\030\005 \003(\tR\007hookIds\022 " +
+      "\n\013description\030\006 \001(\tR\013description\022\037\n\013endp" +
+      "oint_id\030\007 \003(\tR\nendpointId\"B\n\037CreateWorks" +
+      "paceTemplateResponse\022\037\n\013template_id\030\001 \001(" +
+      "\tR\ntemplateId\">\n\033GetWorkspaceTemplateReq" +
+      "uest\022\037\n\013template_id\030\001 \001(\tR\ntemplateId\"j\n" +
+      "\034GetWorkspaceTemplateResponse\022J\n\tworkspa" +
+      "ce\030\001 \001(\0132,.aruna.api.storage.services.v2" +
+      ".WorkspaceInfoR\tworkspace\"A\n\036DeleteWorks" +
+      "paceTemplateRequest\022\037\n\013template_id\030\001 \001(\t" +
+      "R\ntemplateId\"!\n\037DeleteWorkspaceTemplateR" +
+      "esponse\"$\n\"ListOwnedWorkspaceTemplatesRe" +
+      "quest\"s\n#ListOwnedWorkspaceTemplatesResp" +
+      "onse\022L\n\nworkspaces\030\001 \003(\0132,.aruna.api.sto" +
+      "rage.services.v2.WorkspaceInfoR\nworkspac" +
+      "es\"\324\001\n\rWorkspaceInfo\022!\n\014workspace_id\030\001 \001" +
+      "(\tR\013workspaceId\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013d" +
+      "escription\030\003 \001(\tR\013description\022\024\n\005owner\030\004" +
+      " \001(\tR\005owner\022\026\n\006prefix\030\005 \001(\tR\006prefix\022\031\n\010h" +
+      "ook_ids\030\006 \001(\tR\007hookIds\022!\n\014endpoint_ids\030\007" +
+      " \001(\tR\013endpointIds\"i\n\026CreateWorkspaceRequ" +
+      "est\022-\n\022workspace_template\030\001 \001(\tR\021workspa" +
+      "ceTemplate\022 \n\013description\030\002 \001(\tR\013descrip" +
+      "tion\"\220\001\n\027CreateWorkspaceResponse\022!\n\014work" +
+      "space_id\030\001 \001(\tR\013workspaceId\022\024\n\005token\030\002 \001" +
+      "(\tR\005token\022\035\n\naccess_key\030\003 \001(\tR\taccessKey" +
+      "\022\035\n\nsecret_key\030\004 \001(\tR\tsecretKey\";\n\026Delet" +
+      "eWorkspaceRequest\022!\n\014workspace_id\030\001 \001(\tR" +
+      "\013workspaceId\"\031\n\027DeleteWorkspaceResponse\"" +
+      "P\n\025ClaimWorkspaceRequest\022!\n\014workspace_id" +
+      "\030\001 \001(\tR\013workspaceId\022\024\n\005token\030\002 \001(\tR\005toke" +
+      "n\"\030\n\026ClaimWorkspaceResponse2\253\n\n\020Workspac" +
+      "eService\022\273\001\n\027CreateWorkspaceTemplate\022=.a" +
+      "runa.api.storage.services.v2.CreateWorks" +
+      "paceTemplateRequest\032>.aruna.api.storage." +
+      "services.v2.CreateWorkspaceTemplateRespo" +
+      "nse\"!\202\323\344\223\002\033\"\026/v2/workspace/template:\001*\022\275" +
+      "\001\n\024GetWorkspaceTemplate\022:.aruna.api.stor" +
+      "age.services.v2.GetWorkspaceTemplateRequ" +
+      "est\032;.aruna.api.storage.services.v2.GetW" +
+      "orkspaceTemplateResponse\",\202\323\344\223\002&\022$/v2/wo" +
+      "rkspace/template/{template_id}\022\304\001\n\033ListO" +
+      "wnedWorkspaceTemplates\022A.aruna.api.stora" +
+      "ge.services.v2.ListOwnedWorkspaceTemplat" +
+      "esRequest\032B.aruna.api.storage.services.v" +
+      "2.ListOwnedWorkspaceTemplatesResponse\"\036\202" +
+      "\323\344\223\002\030\022\026/v2/workspace/template\022\311\001\n\027Delete" +
+      "WorkspaceTemplate\022=.aruna.api.storage.se" +
+      "rvices.v2.DeleteWorkspaceTemplateRequest" +
+      "\032>.aruna.api.storage.services.v2.DeleteW" +
+      "orkspaceTemplateResponse\"/\202\323\344\223\002)*$/v2/wo" +
+      "rkspace/template/{template_id}:\001*\022\232\001\n\017Cr" +
+      "eateWorkspace\0225.aruna.api.storage.servic" +
+      "es.v2.CreateWorkspaceRequest\0326.aruna.api" +
+      ".storage.services.v2.CreateWorkspaceResp" +
+      "onse\"\030\202\323\344\223\002\022\"\r/v2/workspace:\001*\022\251\001\n\017Delet" +
+      "eWorkspace\0225.aruna.api.storage.services." +
+      "v2.DeleteWorkspaceRequest\0326.aruna.api.st" +
+      "orage.services.v2.DeleteWorkspaceRespons" +
+      "e\"\'\202\323\344\223\002!*\034/v2/workspace/{workspace_id}:" +
+      "\001*\022\254\001\n\016ClaimWorkspace\0224.aruna.api.storag" +
+      "e.services.v2.ClaimWorkspaceRequest\0325.ar" +
+      "una.api.storage.services.v2.ClaimWorkspa" +
+      "ceResponse\"-\202\323\344\223\002\'\"\"/v2/workspace/{works" +
+      "pace_id}/claim:\001*\032\016\372\322\344\223\002\010\022\006SERVERB\224\002\n!co" +
+      "m.aruna.api.storage.services.v2B\025Workspa" +
+      "ceServiceProtoP\000Z?github.com/ArunaStorag" +
+      "e/go-api/v2/aruna/api/storage/services/v" +
+      "2\242\002\004AASS\252\002\035Aruna.Api.Storage.Services.V2" +
+      "\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002)Aruna" +
+      "\\Api\\Storage\\Services\\V2\\GPBMetadata\352\002!A" +
+      "runa::Api::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
         });
     internal_static_aruna_api_storage_services_v2_CreateWorkspaceTemplateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10637,10 +10639,12 @@ public final class WorkspaceServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.VisibilityProto.apiVisibility);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
