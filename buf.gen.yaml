@@ -1,14 +1,10 @@
-# buf.gen.yaml
 version: v1
-
 managed:
   enabled: true
-  java_multiple_files: false
-
+  optimize_for: SPEED
+  java_multiple_files: true
 plugins:
-  - plugin: buf.build/grpc/java:v1.55.1
+  - plugin: buf.build/grpc/java:v1.59.0
     out: src/main/java
-
-  # dependencies
-  - plugin: buf.build/protocolbuffers/java:v23.1
+  - plugin: buf.build/protocolbuffers/java
     out: src/main/java
