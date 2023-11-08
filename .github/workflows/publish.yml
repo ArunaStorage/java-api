@@ -42,7 +42,7 @@ jobs:
 
       - name: Update version in pom.xml
         run: | 
-          sed -i '1,/<version>/ s/<version>.*<\/version>/<version>${{ $TAG_NAME }}<\/version>/g' ./pom.xml
+          sed -i "1,/<version>/ s/<version>.*<\/version>/<version>$TAG_NAME<\/version>/g" ./pom.xml
 
       - name: Commit files
         run: |
