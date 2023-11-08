@@ -42,7 +42,8 @@ jobs:
 
       - name: Update version in pom.xml
         run: |
-          sed -i "1,/<version>/ s/<version>.*<\/version>/<version>${{echo $TAG_NAME | sed -e 's/^v//'}}<\/version>/g" ./pom.xml
+          VERSIONLESS=$(echo $TAG_NAME | sed -e 's/^v//')
+          sed -i "1,/<version>/ s/<version>.*<\/version>/<version>$VERSIONLESS<\/version>/g" ./pom.xml
       - name: Commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
