@@ -50,7 +50,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add -A
           git diff-index --quiet HEAD || git commit -m "Update version to $TAG_NAME" -a
-          git tag -a $TAG_NAME" -m "Published new version: $TAG_NAME", see API for detailed changelog."
+          git tag -a $TAG_NAME" -m "Published new version: $TAG_NAME, see API for detailed changelog."
 
       - name: Push changes
         uses: ad-m/github-push-action@master
