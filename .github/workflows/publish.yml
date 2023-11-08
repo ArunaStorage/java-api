@@ -41,8 +41,9 @@ jobs:
           echo RELEASE_BODY=$(gh release view --repo https://github.com/ArunaStorage/ArunaAPI --json body | jq .body -r) >> $GITHUB_ENV
 
       - name: Update version in pom.xml
-        run: | 
-          sed -i "1,/<version>/ s/<version>.*<\/version>/<version>$TAG_NAME<\/version>/g" ./pom.xml
+        run: |
+
+          sed -i "1,/<version>/ s/<version>.*<\/version>/<version>${{sed TAG_NAME}}<\/version>/g" ./pom.xml
 
       - name: Commit files
         run: |
@@ -60,7 +61,7 @@ jobs:
           force: true
 
       - name: Try delete (old) release if exists
-        run: gh release delete v${{ github.event.client_payload.version }}
+        run: gh release delete $RELEASE_NAME
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
