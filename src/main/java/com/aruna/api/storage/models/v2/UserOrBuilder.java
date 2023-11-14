@@ -30,26 +30,6 @@ public interface UserOrBuilder extends
 
   /**
    * <pre>
-   * Oidc subject ID
-   * </pre>
-   *
-   * <code>string external_id = 2 [json_name = "externalId"];</code>
-   * @return The externalId.
-   */
-  java.lang.String getExternalId();
-  /**
-   * <pre>
-   * Oidc subject ID
-   * </pre>
-   *
-   * <code>string external_id = 2 [json_name = "externalId"];</code>
-   * @return The bytes for externalId.
-   */
-  com.google.protobuf.ByteString
-      getExternalIdBytes();
-
-  /**
-   * <pre>
    * (optional) User display_name
    * </pre>
    *

@@ -578,6 +578,68 @@ public final class UserServiceGrpc {
     return getAcknowledgePersonalNotificationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest,
+      com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProvierMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddOidcProvier",
+      requestType = com.aruna.api.storage.services.v2.AddOidcProviderRequest.class,
+      responseType = com.aruna.api.storage.services.v2.AddOidcProviderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest,
+      com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProvierMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest, com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProvierMethod;
+    if ((getAddOidcProvierMethod = UserServiceGrpc.getAddOidcProvierMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getAddOidcProvierMethod = UserServiceGrpc.getAddOidcProvierMethod) == null) {
+          UserServiceGrpc.getAddOidcProvierMethod = getAddOidcProvierMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AddOidcProviderRequest, com.aruna.api.storage.services.v2.AddOidcProviderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddOidcProvier"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddOidcProviderRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddOidcProviderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AddOidcProvier"))
+              .build();
+        }
+      }
+    }
+    return getAddOidcProvierMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveOidcProviderRequest,
+      com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> getRemoveOidcProviderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveOidcProvider",
+      requestType = com.aruna.api.storage.services.v2.RemoveOidcProviderRequest.class,
+      responseType = com.aruna.api.storage.services.v2.RemoveOidcProviderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveOidcProviderRequest,
+      com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> getRemoveOidcProviderMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveOidcProviderRequest, com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> getRemoveOidcProviderMethod;
+    if ((getRemoveOidcProviderMethod = UserServiceGrpc.getRemoveOidcProviderMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getRemoveOidcProviderMethod = UserServiceGrpc.getRemoveOidcProviderMethod) == null) {
+          UserServiceGrpc.getRemoveOidcProviderMethod = getRemoveOidcProviderMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.RemoveOidcProviderRequest, com.aruna.api.storage.services.v2.RemoveOidcProviderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveOidcProvider"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.RemoveOidcProviderRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.RemoveOidcProviderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("RemoveOidcProvider"))
+              .build();
+        }
+      }
+    }
+    return getRemoveOidcProviderMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -848,6 +910,20 @@ public final class UserServiceGrpc {
     default void acknowledgePersonalNotifications(com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAcknowledgePersonalNotificationsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void addOidcProvier(com.aruna.api.storage.services.v2.AddOidcProviderRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddOidcProviderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOidcProvierMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveOidcProviderMethod(), responseObserver);
     }
   }
 
@@ -1124,6 +1200,22 @@ public final class UserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAcknowledgePersonalNotificationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void addOidcProvier(com.aruna.api.storage.services.v2.AddOidcProviderRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddOidcProviderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddOidcProvierMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveOidcProviderMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1364,6 +1456,20 @@ public final class UserServiceGrpc {
     public com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsResponse acknowledgePersonalNotifications(com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAcknowledgePersonalNotificationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.storage.services.v2.AddOidcProviderResponse addOidcProvier(com.aruna.api.storage.services.v2.AddOidcProviderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddOidcProvierMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.aruna.api.storage.services.v2.RemoveOidcProviderResponse removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveOidcProviderMethod(), getCallOptions(), request);
     }
   }
 
@@ -1624,6 +1730,22 @@ public final class UserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAcknowledgePersonalNotificationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AddOidcProviderResponse> addOidcProvier(
+        com.aruna.api.storage.services.v2.AddOidcProviderRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddOidcProvierMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> removeOidcProvider(
+        com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveOidcProviderMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_USER = 0;
@@ -1644,6 +1766,8 @@ public final class UserServiceGrpc {
   private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 15;
   private static final int METHODID_GET_PERSONAL_NOTIFICATIONS = 16;
   private static final int METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS = 17;
+  private static final int METHODID_ADD_OIDC_PROVIER = 18;
+  private static final int METHODID_REMOVE_OIDC_PROVIDER = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1733,6 +1857,14 @@ public final class UserServiceGrpc {
         case METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS:
           serviceImpl.acknowledgePersonalNotifications((com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsResponse>) responseObserver);
+          break;
+        case METHODID_ADD_OIDC_PROVIER:
+          serviceImpl.addOidcProvier((com.aruna.api.storage.services.v2.AddOidcProviderRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddOidcProviderResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_OIDC_PROVIDER:
+          serviceImpl.removeOidcProvider((com.aruna.api.storage.services.v2.RemoveOidcProviderRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1878,6 +2010,20 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsRequest,
               com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsResponse>(
                 service, METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS)))
+        .addMethod(
+          getAddOidcProvierMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.AddOidcProviderRequest,
+              com.aruna.api.storage.services.v2.AddOidcProviderResponse>(
+                service, METHODID_ADD_OIDC_PROVIER)))
+        .addMethod(
+          getRemoveOidcProviderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.RemoveOidcProviderRequest,
+              com.aruna.api.storage.services.v2.RemoveOidcProviderResponse>(
+                service, METHODID_REMOVE_OIDC_PROVIDER)))
         .build();
   }
 
@@ -1944,6 +2090,8 @@ public final class UserServiceGrpc {
               .addMethod(getGetDataproxyTokenUserMethod())
               .addMethod(getGetPersonalNotificationsMethod())
               .addMethod(getAcknowledgePersonalNotificationsMethod())
+              .addMethod(getAddOidcProvierMethod())
+              .addMethod(getRemoveOidcProviderMethod())
               .build();
         }
       }

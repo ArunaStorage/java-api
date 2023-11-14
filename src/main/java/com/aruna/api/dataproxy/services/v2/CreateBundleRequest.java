@@ -17,7 +17,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateBundleRequest() {
-    resourceId_ =
+    resourceIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     filename_ = "";
   }
@@ -43,41 +43,41 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+  public static final int RESOURCE_IDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList resourceId_ =
+  private com.google.protobuf.LazyStringArrayList resourceIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-   * @return A list containing the resourceId.
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+   * @return A list containing the resourceIds.
    */
   public com.google.protobuf.ProtocolStringList
-      getResourceIdList() {
-    return resourceId_;
+      getResourceIdsList() {
+    return resourceIds_;
   }
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-   * @return The count of resourceId.
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+   * @return The count of resourceIds.
    */
-  public int getResourceIdCount() {
-    return resourceId_.size();
+  public int getResourceIdsCount() {
+    return resourceIds_.size();
   }
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
    * @param index The index of the element to return.
-   * @return The resourceId at the given index.
+   * @return The resourceIds at the given index.
    */
-  public java.lang.String getResourceId(int index) {
-    return resourceId_.get(index);
+  public java.lang.String getResourceIds(int index) {
+    return resourceIds_.get(index);
   }
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the resourceId at the given index.
+   * @return The bytes of the resourceIds at the given index.
    */
   public com.google.protobuf.ByteString
-      getResourceIdBytes(int index) {
-    return resourceId_.getByteString(index);
+      getResourceIdsBytes(int index) {
+    return resourceIds_.getByteString(index);
   }
 
   public static final int FILENAME_FIELD_NUMBER = 2;
@@ -179,8 +179,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < resourceId_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_.getRaw(i));
+    for (int i = 0; i < resourceIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceIds_.getRaw(i));
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filename_);
@@ -199,11 +199,11 @@ private static final long serialVersionUID = 0L;
     size = 0;
     {
       int dataSize = 0;
-      for (int i = 0; i < resourceId_.size(); i++) {
-        dataSize += computeStringSizeNoTag(resourceId_.getRaw(i));
+      for (int i = 0; i < resourceIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(resourceIds_.getRaw(i));
       }
       size += dataSize;
-      size += 1 * getResourceIdList().size();
+      size += 1 * getResourceIdsList().size();
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filename_);
@@ -227,8 +227,8 @@ private static final long serialVersionUID = 0L;
     }
     com.aruna.api.dataproxy.services.v2.CreateBundleRequest other = (com.aruna.api.dataproxy.services.v2.CreateBundleRequest) obj;
 
-    if (!getResourceIdList()
-        .equals(other.getResourceIdList())) return false;
+    if (!getResourceIdsList()
+        .equals(other.getResourceIdsList())) return false;
     if (!getFilename()
         .equals(other.getFilename())) return false;
     if (hasExpiresAt() != other.hasExpiresAt()) return false;
@@ -247,9 +247,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getResourceIdCount() > 0) {
-      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getResourceIdList().hashCode();
+    if (getResourceIdsCount() > 0) {
+      hash = (37 * hash) + RESOURCE_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceIdsList().hashCode();
     }
     hash = (37 * hash) + FILENAME_FIELD_NUMBER;
     hash = (53 * hash) + getFilename().hashCode();
@@ -394,7 +394,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      resourceId_ =
+      resourceIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       filename_ = "";
       expiresAt_ = null;
@@ -436,8 +436,8 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.aruna.api.dataproxy.services.v2.CreateBundleRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        resourceId_.makeImmutable();
-        result.resourceId_ = resourceId_;
+        resourceIds_.makeImmutable();
+        result.resourceIds_ = resourceIds_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.filename_ = filename_;
@@ -496,13 +496,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.CreateBundleRequest other) {
       if (other == com.aruna.api.dataproxy.services.v2.CreateBundleRequest.getDefaultInstance()) return this;
-      if (!other.resourceId_.isEmpty()) {
-        if (resourceId_.isEmpty()) {
-          resourceId_ = other.resourceId_;
+      if (!other.resourceIds_.isEmpty()) {
+        if (resourceIds_.isEmpty()) {
+          resourceIds_ = other.resourceIds_;
           bitField0_ |= 0x00000001;
         } else {
-          ensureResourceIdIsMutable();
-          resourceId_.addAll(other.resourceId_);
+          ensureResourceIdsIsMutable();
+          resourceIds_.addAll(other.resourceIds_);
         }
         onChanged();
       }
@@ -542,8 +542,8 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              ensureResourceIdIsMutable();
-              resourceId_.add(s);
+              ensureResourceIdsIsMutable();
+              resourceIds_.add(s);
               break;
             } // case 10
             case 18: {
@@ -575,112 +575,112 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList resourceId_ =
+    private com.google.protobuf.LazyStringArrayList resourceIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureResourceIdIsMutable() {
-      if (!resourceId_.isModifiable()) {
-        resourceId_ = new com.google.protobuf.LazyStringArrayList(resourceId_);
+    private void ensureResourceIdsIsMutable() {
+      if (!resourceIds_.isModifiable()) {
+        resourceIds_ = new com.google.protobuf.LazyStringArrayList(resourceIds_);
       }
       bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-     * @return A list containing the resourceId.
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+     * @return A list containing the resourceIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getResourceIdList() {
-      resourceId_.makeImmutable();
-      return resourceId_;
+        getResourceIdsList() {
+      resourceIds_.makeImmutable();
+      return resourceIds_;
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-     * @return The count of resourceId.
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+     * @return The count of resourceIds.
      */
-    public int getResourceIdCount() {
-      return resourceId_.size();
+    public int getResourceIdsCount() {
+      return resourceIds_.size();
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
      * @param index The index of the element to return.
-     * @return The resourceId at the given index.
+     * @return The resourceIds at the given index.
      */
-    public java.lang.String getResourceId(int index) {
-      return resourceId_.get(index);
+    public java.lang.String getResourceIds(int index) {
+      return resourceIds_.get(index);
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the resourceId at the given index.
+     * @return The bytes of the resourceIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getResourceIdBytes(int index) {
-      return resourceId_.getByteString(index);
+        getResourceIdsBytes(int index) {
+      return resourceIds_.getByteString(index);
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
      * @param index The index to set the value at.
-     * @param value The resourceId to set.
+     * @param value The resourceIds to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceId(
+    public Builder setResourceIds(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureResourceIdIsMutable();
-      resourceId_.set(index, value);
+      ensureResourceIdsIsMutable();
+      resourceIds_.set(index, value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-     * @param value The resourceId to add.
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+     * @param value The resourceIds to add.
      * @return This builder for chaining.
      */
-    public Builder addResourceId(
+    public Builder addResourceIds(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureResourceIdIsMutable();
-      resourceId_.add(value);
+      ensureResourceIdsIsMutable();
+      resourceIds_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-     * @param values The resourceId to add.
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+     * @param values The resourceIds to add.
      * @return This builder for chaining.
      */
-    public Builder addAllResourceId(
+    public Builder addAllResourceIds(
         java.lang.Iterable<java.lang.String> values) {
-      ensureResourceIdIsMutable();
+      ensureResourceIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, resourceId_);
+          values, resourceIds_);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearResourceId() {
-      resourceId_ =
+    public Builder clearResourceIds() {
+      resourceIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-     * @param value The bytes of the resourceId to add.
+     * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+     * @param value The bytes of the resourceIds to add.
      * @return This builder for chaining.
      */
-    public Builder addResourceIdBytes(
+    public Builder addResourceIdsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureResourceIdIsMutable();
-      resourceId_.add(value);
+      ensureResourceIdsIsMutable();
+      resourceIds_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

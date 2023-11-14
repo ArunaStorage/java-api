@@ -41,6 +41,11 @@ public final class ModelsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_models_v2_CustomAttributes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_models_v2_OidcMapping_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_models_v2_OidcMapping_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -146,231 +151,234 @@ public final class ModelsProto {
     java.lang.String[] descriptorData = {
       "\n(aruna/api/storage/models/v2/models.pro" +
       "to\022\033aruna.api.storage.models.v2\032\037google/" +
-      "protobuf/timestamp.proto\"\325\001\n\004User\022\016\n\002id\030" +
-      "\001 \001(\tR\002id\022\037\n\013external_id\030\002 \001(\tR\nexternal" +
-      "Id\022!\n\014display_name\030\003 \001(\tR\013displayName\022\026\n" +
-      "\006active\030\004 \001(\010R\006active\022\024\n\005email\030\005 \001(\tR\005em" +
-      "ail\022K\n\nattributes\030\006 \001(\0132+.aruna.api.stor" +
-      "age.models.v2.UserAttributesR\nattributes" +
-      "\"\374\001\n\nPermission\022\037\n\nproject_id\030\001 \001(\tH\000R\tp" +
-      "rojectId\022%\n\rcollection_id\030\002 \001(\tH\000R\014colle" +
-      "ctionId\022\037\n\ndataset_id\030\003 \001(\tH\000R\tdatasetId" +
-      "\022\035\n\tobject_id\030\004 \001(\tH\000R\010objectId\022W\n\020permi" +
-      "ssion_level\030\006 \001(\0162,.aruna.api.storage.mo" +
-      "dels.v2.PermissionLevelR\017permissionLevel" +
-      "B\r\n\013resource_id\"\352\001\n\005Token\022\016\n\002id\030\001 \001(\tR\002i" +
-      "d\022\022\n\004name\030\002 \001(\tR\004name\0229\n\ncreated_at\030\003 \001(" +
-      "\0132\032.google.protobuf.TimestampR\tcreatedAt" +
-      "\0229\n\nexpires_at\030\004 \001(\0132\032.google.protobuf.T" +
-      "imestampR\texpiresAt\022G\n\npermission\030\005 \001(\0132" +
-      "\'.aruna.api.storage.models.v2.Permission" +
-      "R\npermission\"F\n\006Pubkey\022\016\n\002id\030\001 \001(\005R\002id\022\020" +
-      "\n\003key\030\002 \001(\tR\003key\022\032\n\010location\030\003 \001(\tR\010loca" +
-      "tion\"b\n\020CustomAttributes\022%\n\016attribute_na" +
-      "me\030\001 \001(\tR\rattributeName\022\'\n\017attribute_val" +
-      "ue\030\002 \001(\tR\016attributeValue\"\375\002\n\016UserAttribu" +
-      "tes\022!\n\014global_admin\030\001 \001(\010R\013globalAdmin\022\'" +
-      "\n\017service_account\030\002 \001(\010R\016serviceAccount\022" +
-      ":\n\006tokens\030\003 \003(\0132\".aruna.api.storage.mode" +
-      "ls.v2.TokenR\006tokens\022+\n\021trusted_endpoints" +
-      "\030\004 \003(\tR\020trustedEndpoints\022Z\n\021custom_attri" +
-      "butes\030\005 \003(\0132-.aruna.api.storage.models.v" +
-      "2.CustomAttributesR\020customAttributes\022Z\n\024" +
-      "personal_permissions\030\006 \003(\0132\'.aruna.api.s" +
-      "torage.models.v2.PermissionR\023personalPer" +
-      "missions\"z\n\010KeyValue\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
-      "\n\005value\030\002 \001(\tR\005value\022F\n\007variant\030\003 \001(\0162,." +
-      "aruna.api.storage.models.v2.KeyValueVari" +
-      "antR\007variant\"\260\001\n\010Relation\022K\n\010external\030\001 " +
-      "\001(\0132-.aruna.api.storage.models.v2.Extern" +
-      "alRelationH\000R\010external\022K\n\010internal\030\002 \001(\013" +
-      "2-.aruna.api.storage.models.v2.InternalR" +
-      "elationH\000R\010internalB\n\n\010relation\"\320\001\n\020Exte" +
-      "rnalRelation\022\036\n\nidentifier\030\001 \001(\tR\nidenti" +
-      "fier\022]\n\017defined_variant\030\002 \001(\01624.aruna.ap" +
-      "i.storage.models.v2.ExternalRelationVari" +
-      "antR\016definedVariant\022*\n\016custom_variant\030\003 " +
-      "\001(\tH\000R\rcustomVariant\210\001\001B\021\n\017_custom_varia" +
-      "nt\"\370\002\n\020InternalRelation\022\037\n\013resource_id\030\001" +
-      " \001(\tR\nresourceId\022W\n\020resource_variant\030\002 \001" +
-      "(\0162,.aruna.api.storage.models.v2.Resourc" +
-      "eVariantR\017resourceVariant\022]\n\017defined_var" +
-      "iant\030\003 \001(\01624.aruna.api.storage.models.v2" +
-      ".InternalRelationVariantR\016definedVariant" +
-      "\022*\n\016custom_variant\030\004 \001(\tH\000R\rcustomVarian" +
-      "t\210\001\001\022L\n\tdirection\030\005 \001(\0162..aruna.api.stor" +
-      "age.models.v2.RelationDirectionR\tdirecti" +
-      "onB\021\n\017_custom_variant\"K\n\013PageRequest\022\037\n\013" +
-      "start_after\030\001 \001(\tR\nstartAfter\022\033\n\tpage_si" +
-      "ze\030\002 \001(\003R\010pageSize\"p\n\005Stats\022\024\n\005count\030\001 \001" +
-      "(\003R\005count\022\022\n\004size\030\002 \001(\003R\004size\022=\n\014last_up" +
-      "dated\030\003 \001(\0132\032.google.protobuf.TimestampR" +
-      "\013lastUpdated\"X\n\004Hash\022<\n\003alg\030\001 \001(\0162*.arun" +
-      "a.api.storage.models.v2.HashalgorithmR\003a" +
-      "lg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n\022EndpointHostC" +
-      "onfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n\nis_primary\030\002 " +
-      "\001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(\010R\003ssl\022\026\n\006publ" +
-      "ic\030\004 \001(\010R\006public\022S\n\014host_variant\030\005 \001(\01620" +
-      ".aruna.api.storage.models.v2.EndpointHos" +
-      "tVariantR\013hostVariant\"\262\002\n\010Endpoint\022\016\n\002id" +
-      "\030\001 \001(\tR\002id\022K\n\nep_variant\030\002 \001(\0162,.aruna.a" +
-      "pi.storage.models.v2.EndpointVariantR\tep" +
-      "Variant\022\022\n\004name\030\003 \001(\tR\004name\022\033\n\tis_public" +
-      "\030\004 \001(\010R\010isPublic\022D\n\006status\030\005 \001(\0162,.aruna" +
-      ".api.storage.models.v2.ComponentStatusR\006" +
-      "status\022R\n\014host_configs\030\006 \003(\0132/.aruna.api" +
-      ".storage.models.v2.EndpointHostConfigR\013h" +
-      "ostConfigs\"?\n\014DataEndpoint\022\016\n\002id\030\001 \001(\tR\002" +
-      "id\022\037\n\013full_synced\030\002 \001(\010R\nfullSynced\"_\n\004C" +
-      "opy\022\032\n\010resource\030\001 \001(\tR\010resource\022\'\n\017targe" +
-      "t_endpoint\030\002 \001(\tR\016targetEndpoint\022\022\n\004push" +
-      "\030\003 \001(\010R\004push\"v\n\007Context\022\'\n\016s3_credential" +
-      "s\030\001 \001(\010H\000R\rs3Credentials\0227\n\004copy\030\002 \001(\0132!" +
-      ".aruna.api.storage.models.v2.CopyH\000R\004cop" +
-      "yB\t\n\007context\"U\n\007License\022\020\n\003tag\030\001 \001(\tR\003ta" +
-      "g\022\022\n\004name\030\002 \001(\tR\004name\022\022\n\004text\030\003 \001(\tR\004tex" +
-      "t\022\020\n\003url\030\004 \001(\tR\003url\"\253\002\n\017GenericResource\022" +
-      "@\n\007project\030\001 \001(\0132$.aruna.api.storage.mod" +
-      "els.v2.ProjectH\000R\007project\022I\n\ncollection\030" +
-      "\002 \001(\0132\'.aruna.api.storage.models.v2.Coll" +
-      "ectionH\000R\ncollection\022@\n\007dataset\030\003 \001(\0132$." +
-      "aruna.api.storage.models.v2.DatasetH\000R\007d" +
-      "ataset\022=\n\006object\030\004 \001(\0132#.aruna.api.stora" +
-      "ge.models.v2.ObjectH\000R\006objectB\n\n\010resourc" +
-      "e\"\300\005\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 " +
-      "\001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descript" +
-      "ion\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.stor" +
-      "age.models.v2.KeyValueR\tkeyValues\022C\n\trel" +
-      "ations\030\005 \003(\0132%.aruna.api.storage.models." +
-      "v2.RelationR\trelations\0228\n\005stats\030\006 \001(\0132\"." +
-      "aruna.api.storage.models.v2.StatsR\005stats" +
-      "\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.storage" +
-      ".models.v2.DataClassR\tdataClass\0229\n\ncreat" +
-      "ed_at\030\010 \001(\0132\032.google.protobuf.TimestampR" +
-      "\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedB" +
-      "y\022;\n\006status\030\n \001(\0162#.aruna.api.storage.mo" +
-      "dels.v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R" +
-      "\007dynamic\022G\n\tendpoints\030\014 \003(\0132).aruna.api." +
-      "storage.models.v2.DataEndpointR\tendpoint" +
-      "s\0220\n\024metadata_license_tag\030\r \001(\tR\022metadat" +
-      "aLicenseTag\0227\n\030default_data_license_tag\030" +
-      "\016 \001(\tR\025defaultDataLicenseTag\"\303\005\n\nCollect" +
-      "ion\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022" +
-      " \n\013description\030\003 \001(\tR\013description\022D\n\nkey" +
-      "_values\030\004 \003(\0132%.aruna.api.storage.models" +
-      ".v2.KeyValueR\tkeyValues\022C\n\trelations\030\005 \003" +
-      "(\0132%.aruna.api.storage.models.v2.Relatio" +
-      "nR\trelations\0228\n\005stats\030\006 \001(\0132\".aruna.api." +
-      "storage.models.v2.StatsR\005stats\022E\n\ndata_c" +
-      "lass\030\007 \001(\0162&.aruna.api.storage.models.v2" +
-      ".DataClassR\tdataClass\0229\n\ncreated_at\030\010 \001(" +
-      "\0132\032.google.protobuf.TimestampR\tcreatedAt" +
-      "\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006statu" +
-      "s\030\n \001(\0162#.aruna.api.storage.models.v2.St" +
-      "atusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G" +
-      "\n\tendpoints\030\014 \003(\0132).aruna.api.storage.mo" +
-      "dels.v2.DataEndpointR\tendpoints\0220\n\024metad" +
-      "ata_license_tag\030\r \001(\tR\022metadataLicenseTa" +
-      "g\0227\n\030default_data_license_tag\030\016 \001(\tR\025def" +
-      "aultDataLicenseTag\"\300\005\n\007Dataset\022\016\n\002id\030\001 \001" +
-      "(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descriptio" +
-      "n\030\003 \001(\tR\013description\022D\n\nkey_values\030\004 \003(\013" +
-      "2%.aruna.api.storage.models.v2.KeyValueR" +
-      "\tkeyValues\022C\n\trelations\030\005 \003(\0132%.aruna.ap" +
-      "i.storage.models.v2.RelationR\trelations\022" +
-      "8\n\005stats\030\006 \001(\0132\".aruna.api.storage.model" +
-      "s.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001(\0162&." +
-      "aruna.api.storage.models.v2.DataClassR\td" +
-      "ataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\tcreatedAt\022\035\n\ncreated_b" +
-      "y\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.aru" +
-      "na.api.storage.models.v2.StatusR\006status\022" +
-      "\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpoints\030\014" +
-      " \003(\0132).aruna.api.storage.models.v2.DataE" +
-      "ndpointR\tendpoints\0220\n\024metadata_license_t" +
-      "ag\030\r \001(\tR\022metadataLicenseTag\0227\n\030default_" +
-      "data_license_tag\030\016 \001(\tR\025defaultDataLicen" +
-      "seTag\"\322\005\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
-      "iption\022D\n\nkey_values\030\004 \003(\0132%.aruna.api.s" +
-      "torage.models.v2.KeyValueR\tkeyValues\022C\n\t" +
-      "relations\030\005 \003(\0132%.aruna.api.storage.mode" +
-      "ls.v2.RelationR\trelations\022\037\n\013content_len" +
-      "\030\006 \001(\003R\ncontentLen\022E\n\ndata_class\030\007 \001(\0162&" +
-      ".aruna.api.storage.models.v2.DataClassR\t" +
-      "dataClass\0229\n\ncreated_at\030\010 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tcreatedAt\022\035\n\ncreated_" +
-      "by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162#.ar" +
-      "una.api.storage.models.v2.StatusR\006status" +
-      "\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpoints\030" +
-      "\014 \003(\0132).aruna.api.storage.models.v2.Data" +
-      "EndpointR\tendpoints\0229\n\006hashes\030\r \003(\0132!.ar" +
-      "una.api.storage.models.v2.HashR\006hashes\0220" +
-      "\n\024metadata_license_tag\030\016 \001(\tR\022metadataLi" +
-      "censeTag\022(\n\020data_license_tag\030\017 \001(\tR\016data" +
-      "LicenseTag*\215\001\n\tDataClass\022\032\n\026DATA_CLASS_U" +
-      "NSPECIFIED\020\000\022\025\n\021DATA_CLASS_PUBLIC\020\001\022\026\n\022D" +
-      "ATA_CLASS_PRIVATE\020\002\022\030\n\024DATA_CLASS_WORKSP" +
-      "ACE\020\004\022\033\n\027DATA_CLASS_CONFIDENTIAL\020\005*s\n\017En" +
-      "dpointVariant\022 \n\034ENDPOINT_VARIANT_UNSPEC" +
-      "IFIED\020\000\022\037\n\033ENDPOINT_VARIANT_PERSISTENT\020\001" +
-      "\022\035\n\031ENDPOINT_VARIANT_VOLATILE\020\002*z\n\023Endpo" +
-      "intHostVariant\022%\n!ENDPOINT_HOST_VARIANT_" +
-      "UNSPECIFIED\020\000\022\036\n\032ENDPOINT_HOST_VARIANT_G" +
-      "RPC\020\001\022\034\n\030ENDPOINT_HOST_VARIANT_S3\020\002*\276\001\n\017" +
-      "PermissionLevel\022 \n\034PERMISSION_LEVEL_UNSP" +
-      "ECIFIED\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020\002\022\031\n\025" +
-      "PERMISSION_LEVEL_READ\020\003\022\033\n\027PERMISSION_LE" +
-      "VEL_APPEND\020\004\022\032\n\026PERMISSION_LEVEL_WRITE\020\005" +
-      "\022\032\n\026PERMISSION_LEVEL_ADMIN\020\006*\264\001\n\017KeyValu" +
-      "eVariant\022!\n\035KEY_VALUE_VARIANT_UNSPECIFIE" +
-      "D\020\000\022\033\n\027KEY_VALUE_VARIANT_LABEL\020\001\022\"\n\036KEY_" +
-      "VALUE_VARIANT_STATIC_LABEL\020\002\022\032\n\026KEY_VALU" +
-      "E_VARIANT_HOOK\020\003\022!\n\035KEY_VALUE_VARIANT_HO" +
-      "OK_STATUS\020\004*\267\001\n\027ExternalRelationVariant\022" +
-      ")\n%EXTERNAL_RELATION_VARIANT_UNSPECIFIED" +
-      "\020\000\022!\n\035EXTERNAL_RELATION_VARIANT_URL\020\001\022(\n" +
-      "$EXTERNAL_RELATION_VARIANT_IDENTIFIER\020\002\022" +
-      "$\n EXTERNAL_RELATION_VARIANT_CUSTOM\020\003*\257\002" +
-      "\n\027InternalRelationVariant\022)\n%INTERNAL_RE" +
-      "LATION_VARIANT_UNSPECIFIED\020\000\022(\n$INTERNAL" +
-      "_RELATION_VARIANT_BELONGS_TO\020\001\022$\n INTERN" +
-      "AL_RELATION_VARIANT_ORIGIN\020\002\022%\n!INTERNAL" +
-      "_RELATION_VARIANT_VERSION\020\003\022&\n\"INTERNAL_" +
-      "RELATION_VARIANT_METADATA\020\004\022$\n INTERNAL_" +
-      "RELATION_VARIANT_POLICY\020\005\022$\n INTERNAL_RE" +
-      "LATION_VARIANT_CUSTOM\020\006*x\n\021RelationDirec" +
-      "tion\022\"\n\036RELATION_DIRECTION_UNSPECIFIED\020\000" +
-      "\022\036\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n\033RELA" +
-      "TION_DIRECTION_OUTBOUND\020\002*\273\001\n\016ResourceAc" +
-      "tion\022\037\n\033RESOURCE_ACTION_UNSPECIFIED\020\000\022\032\n" +
-      "\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOURCE_AC" +
-      "TION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UPDATE\020" +
-      "\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESOURCE_" +
-      "ACTION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001\022\025\n\021S" +
-      "TATUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILABLE\020\003" +
-      "\022\026\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_ERROR" +
-      "\020\005\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017ComponentStat" +
-      "us\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020\000\022!\n\035" +
-      "COMPONENT_STATUS_INITIALIZING\020\001\022\036\n\032COMPO" +
-      "NENT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONENT_STA" +
-      "TUS_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_UNAVA" +
-      "ILABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTENANCE" +
-      "\020\005*_\n\rHashalgorithm\022\035\n\031HASHALGORITHM_UNS" +
-      "PECIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030\n\024HAS" +
-      "HALGORITHM_SHA256\020\002*\255\001\n\017ResourceVariant\022" +
-      " \n\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034\n\030RES" +
-      "OURCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE_VARI" +
-      "ANT_COLLECTION\020\002\022\034\n\030RESOURCE_VARIANT_DAT" +
-      "ASET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004B\376\001\n\037" +
-      "com.aruna.api.storage.models.v2B\013ModelsP" +
-      "rotoP\001Z=github.com/ArunaStorage/go-api/v" +
-      "2/aruna/api/storage/models/v2\242\002\004AASM\252\002\033A" +
-      "runa.Api.Storage.Models.V2\312\002\033Aruna\\Api\\S" +
-      "torage\\Models\\V2\342\002\'Aruna\\Api\\Storage\\Mod" +
-      "els\\V2\\GPBMetadata\352\002\037Aruna::Api::Storage" +
-      "::Models::V2b\006proto3"
+      "protobuf/timestamp.proto\"\272\001\n\004User\022\016\n\002id\030" +
+      "\001 \001(\tR\002id\022!\n\014display_name\030\003 \001(\tR\013display" +
+      "Name\022\026\n\006active\030\004 \001(\010R\006active\022\024\n\005email\030\005 " +
+      "\001(\tR\005email\022K\n\nattributes\030\006 \001(\0132+.aruna.a" +
+      "pi.storage.models.v2.UserAttributesR\natt" +
+      "ributesJ\004\010\002\020\003\"\374\001\n\nPermission\022\037\n\nproject_" +
+      "id\030\001 \001(\tH\000R\tprojectId\022%\n\rcollection_id\030\002" +
+      " \001(\tH\000R\014collectionId\022\037\n\ndataset_id\030\003 \001(\t" +
+      "H\000R\tdatasetId\022\035\n\tobject_id\030\004 \001(\tH\000R\010obje" +
+      "ctId\022W\n\020permission_level\030\006 \001(\0162,.aruna.a" +
+      "pi.storage.models.v2.PermissionLevelR\017pe" +
+      "rmissionLevelB\r\n\013resource_id\"\352\001\n\005Token\022\016" +
+      "\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\0229\n\ncr" +
+      "eated_at\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\tcreatedAt\0229\n\nexpires_at\030\004 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\texpiresAt\022G\n\nperm" +
+      "ission\030\005 \001(\0132\'.aruna.api.storage.models." +
+      "v2.PermissionR\npermission\"F\n\006Pubkey\022\016\n\002i" +
+      "d\030\001 \001(\005R\002id\022\020\n\003key\030\002 \001(\tR\003key\022\032\n\010locatio" +
+      "n\030\003 \001(\tR\010location\"b\n\020CustomAttributes\022%\n" +
+      "\016attribute_name\030\001 \001(\tR\rattributeName\022\'\n\017" +
+      "attribute_value\030\002 \001(\tR\016attributeValue\"I\n" +
+      "\013OidcMapping\022\037\n\013external_id\030\001 \001(\tR\nexter" +
+      "nalId\022\031\n\010oidc_url\030\002 \001(\tR\007oidcUrl\"\312\003\n\016Use" +
+      "rAttributes\022!\n\014global_admin\030\001 \001(\010R\013globa" +
+      "lAdmin\022\'\n\017service_account\030\002 \001(\010R\016service" +
+      "Account\022:\n\006tokens\030\003 \003(\0132\".aruna.api.stor" +
+      "age.models.v2.TokenR\006tokens\022+\n\021trusted_e" +
+      "ndpoints\030\004 \003(\tR\020trustedEndpoints\022Z\n\021cust" +
+      "om_attributes\030\005 \003(\0132-.aruna.api.storage." +
+      "models.v2.CustomAttributesR\020customAttrib" +
+      "utes\022Z\n\024personal_permissions\030\006 \003(\0132\'.aru" +
+      "na.api.storage.models.v2.PermissionR\023per" +
+      "sonalPermissions\022K\n\014external_ids\030\007 \003(\0132(" +
+      ".aruna.api.storage.models.v2.OidcMapping" +
+      "R\013externalIds\"z\n\010KeyValue\022\020\n\003key\030\001 \001(\tR\003" +
+      "key\022\024\n\005value\030\002 \001(\tR\005value\022F\n\007variant\030\003 \001" +
+      "(\0162,.aruna.api.storage.models.v2.KeyValu" +
+      "eVariantR\007variant\"\260\001\n\010Relation\022K\n\010extern" +
+      "al\030\001 \001(\0132-.aruna.api.storage.models.v2.E" +
+      "xternalRelationH\000R\010external\022K\n\010internal\030" +
+      "\002 \001(\0132-.aruna.api.storage.models.v2.Inte" +
+      "rnalRelationH\000R\010internalB\n\n\010relation\"\320\001\n" +
+      "\020ExternalRelation\022\036\n\nidentifier\030\001 \001(\tR\ni" +
+      "dentifier\022]\n\017defined_variant\030\002 \001(\01624.aru" +
+      "na.api.storage.models.v2.ExternalRelatio" +
+      "nVariantR\016definedVariant\022*\n\016custom_varia" +
+      "nt\030\003 \001(\tH\000R\rcustomVariant\210\001\001B\021\n\017_custom_" +
+      "variant\"\370\002\n\020InternalRelation\022\037\n\013resource" +
+      "_id\030\001 \001(\tR\nresourceId\022W\n\020resource_varian" +
+      "t\030\002 \001(\0162,.aruna.api.storage.models.v2.Re" +
+      "sourceVariantR\017resourceVariant\022]\n\017define" +
+      "d_variant\030\003 \001(\01624.aruna.api.storage.mode" +
+      "ls.v2.InternalRelationVariantR\016definedVa" +
+      "riant\022*\n\016custom_variant\030\004 \001(\tH\000R\rcustomV" +
+      "ariant\210\001\001\022L\n\tdirection\030\005 \001(\0162..aruna.api" +
+      ".storage.models.v2.RelationDirectionR\tdi" +
+      "rectionB\021\n\017_custom_variant\"K\n\013PageReques" +
+      "t\022\037\n\013start_after\030\001 \001(\tR\nstartAfter\022\033\n\tpa" +
+      "ge_size\030\002 \001(\003R\010pageSize\"p\n\005Stats\022\024\n\005coun" +
+      "t\030\001 \001(\003R\005count\022\022\n\004size\030\002 \001(\003R\004size\022=\n\014la" +
+      "st_updated\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tampR\013lastUpdated\"X\n\004Hash\022<\n\003alg\030\001 \001(\0162*" +
+      ".aruna.api.storage.models.v2.Hashalgorit" +
+      "hmR\003alg\022\022\n\004hash\030\002 \001(\tR\004hash\"\304\001\n\022Endpoint" +
+      "HostConfig\022\020\n\003url\030\001 \001(\tR\003url\022\035\n\nis_prima" +
+      "ry\030\002 \001(\010R\tisPrimary\022\020\n\003ssl\030\003 \001(\010R\003ssl\022\026\n" +
+      "\006public\030\004 \001(\010R\006public\022S\n\014host_variant\030\005 " +
+      "\001(\01620.aruna.api.storage.models.v2.Endpoi" +
+      "ntHostVariantR\013hostVariant\"\262\002\n\010Endpoint\022" +
+      "\016\n\002id\030\001 \001(\tR\002id\022K\n\nep_variant\030\002 \001(\0162,.ar" +
+      "una.api.storage.models.v2.EndpointVarian" +
+      "tR\tepVariant\022\022\n\004name\030\003 \001(\tR\004name\022\033\n\tis_p" +
+      "ublic\030\004 \001(\010R\010isPublic\022D\n\006status\030\005 \001(\0162,." +
+      "aruna.api.storage.models.v2.ComponentSta" +
+      "tusR\006status\022R\n\014host_configs\030\006 \003(\0132/.arun" +
+      "a.api.storage.models.v2.EndpointHostConf" +
+      "igR\013hostConfigs\"?\n\014DataEndpoint\022\016\n\002id\030\001 " +
+      "\001(\tR\002id\022\037\n\013full_synced\030\002 \001(\010R\nfullSynced" +
+      "\"_\n\004Copy\022\032\n\010resource\030\001 \001(\tR\010resource\022\'\n\017" +
+      "target_endpoint\030\002 \001(\tR\016targetEndpoint\022\022\n" +
+      "\004push\030\003 \001(\010R\004push\"v\n\007Context\022\'\n\016s3_crede" +
+      "ntials\030\001 \001(\010H\000R\rs3Credentials\0227\n\004copy\030\002 " +
+      "\001(\0132!.aruna.api.storage.models.v2.CopyH\000" +
+      "R\004copyB\t\n\007context\"U\n\007License\022\020\n\003tag\030\001 \001(" +
+      "\tR\003tag\022\022\n\004name\030\002 \001(\tR\004name\022\022\n\004text\030\003 \001(\t" +
+      "R\004text\022\020\n\003url\030\004 \001(\tR\003url\"\253\002\n\017GenericReso" +
+      "urce\022@\n\007project\030\001 \001(\0132$.aruna.api.storag" +
+      "e.models.v2.ProjectH\000R\007project\022I\n\ncollec" +
+      "tion\030\002 \001(\0132\'.aruna.api.storage.models.v2" +
+      ".CollectionH\000R\ncollection\022@\n\007dataset\030\003 \001" +
+      "(\0132$.aruna.api.storage.models.v2.Dataset" +
+      "H\000R\007dataset\022=\n\006object\030\004 \001(\0132#.aruna.api." +
+      "storage.models.v2.ObjectH\000R\006objectB\n\n\010re" +
+      "source\"\300\005\n\007Project\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004na" +
+      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
+      "cription\022D\n\nkey_values\030\004 \003(\0132%.aruna.api" +
+      ".storage.models.v2.KeyValueR\tkeyValues\022C" +
+      "\n\trelations\030\005 \003(\0132%.aruna.api.storage.mo" +
+      "dels.v2.RelationR\trelations\0228\n\005stats\030\006 \001" +
+      "(\0132\".aruna.api.storage.models.v2.StatsR\005" +
+      "stats\022E\n\ndata_class\030\007 \001(\0162&.aruna.api.st" +
+      "orage.models.v2.DataClassR\tdataClass\0229\n\n" +
+      "created_at\030\010 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tcreatedAt\022\035\n\ncreated_by\030\t \001(\tR\tcre" +
+      "atedBy\022;\n\006status\030\n \001(\0162#.aruna.api.stora" +
+      "ge.models.v2.StatusR\006status\022\030\n\007dynamic\030\013" +
+      " \001(\010R\007dynamic\022G\n\tendpoints\030\014 \003(\0132).aruna" +
+      ".api.storage.models.v2.DataEndpointR\tend" +
+      "points\0220\n\024metadata_license_tag\030\r \001(\tR\022me" +
+      "tadataLicenseTag\0227\n\030default_data_license" +
+      "_tag\030\016 \001(\tR\025defaultDataLicenseTag\"\303\005\n\nCo" +
+      "llection\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004" +
+      "name\022 \n\013description\030\003 \001(\tR\013description\022D" +
+      "\n\nkey_values\030\004 \003(\0132%.aruna.api.storage.m" +
+      "odels.v2.KeyValueR\tkeyValues\022C\n\trelation" +
+      "s\030\005 \003(\0132%.aruna.api.storage.models.v2.Re" +
+      "lationR\trelations\0228\n\005stats\030\006 \001(\0132\".aruna" +
+      ".api.storage.models.v2.StatsR\005stats\022E\n\nd" +
+      "ata_class\030\007 \001(\0162&.aruna.api.storage.mode" +
+      "ls.v2.DataClassR\tdataClass\0229\n\ncreated_at" +
+      "\030\010 \001(\0132\032.google.protobuf.TimestampR\tcrea" +
+      "tedAt\022\035\n\ncreated_by\030\t \001(\tR\tcreatedBy\022;\n\006" +
+      "status\030\n \001(\0162#.aruna.api.storage.models." +
+      "v2.StatusR\006status\022\030\n\007dynamic\030\013 \001(\010R\007dyna" +
+      "mic\022G\n\tendpoints\030\014 \003(\0132).aruna.api.stora" +
+      "ge.models.v2.DataEndpointR\tendpoints\0220\n\024" +
+      "metadata_license_tag\030\r \001(\tR\022metadataLice" +
+      "nseTag\0227\n\030default_data_license_tag\030\016 \001(\t" +
+      "R\025defaultDataLicenseTag\"\300\005\n\007Dataset\022\016\n\002i" +
+      "d\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descr" +
+      "iption\030\003 \001(\tR\013description\022D\n\nkey_values\030" +
+      "\004 \003(\0132%.aruna.api.storage.models.v2.KeyV" +
+      "alueR\tkeyValues\022C\n\trelations\030\005 \003(\0132%.aru" +
+      "na.api.storage.models.v2.RelationR\trelat" +
+      "ions\0228\n\005stats\030\006 \001(\0132\".aruna.api.storage." +
+      "models.v2.StatsR\005stats\022E\n\ndata_class\030\007 \001" +
+      "(\0162&.aruna.api.storage.models.v2.DataCla" +
+      "ssR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\tcreatedAt\022\035\n\ncrea" +
+      "ted_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\0162" +
+      "#.aruna.api.storage.models.v2.StatusR\006st" +
+      "atus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpoi" +
+      "nts\030\014 \003(\0132).aruna.api.storage.models.v2." +
+      "DataEndpointR\tendpoints\0220\n\024metadata_lice" +
+      "nse_tag\030\r \001(\tR\022metadataLicenseTag\0227\n\030def" +
+      "ault_data_license_tag\030\016 \001(\tR\025defaultData" +
+      "LicenseTag\"\322\005\n\006Object\022\016\n\002id\030\001 \001(\tR\002id\022\022\n" +
+      "\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013" +
+      "description\022D\n\nkey_values\030\004 \003(\0132%.aruna." +
+      "api.storage.models.v2.KeyValueR\tkeyValue" +
+      "s\022C\n\trelations\030\005 \003(\0132%.aruna.api.storage" +
+      ".models.v2.RelationR\trelations\022\037\n\013conten" +
+      "t_len\030\006 \001(\003R\ncontentLen\022E\n\ndata_class\030\007 " +
+      "\001(\0162&.aruna.api.storage.models.v2.DataCl" +
+      "assR\tdataClass\0229\n\ncreated_at\030\010 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\tcreatedAt\022\035\n\ncre" +
+      "ated_by\030\t \001(\tR\tcreatedBy\022;\n\006status\030\n \001(\016" +
+      "2#.aruna.api.storage.models.v2.StatusR\006s" +
+      "tatus\022\030\n\007dynamic\030\013 \001(\010R\007dynamic\022G\n\tendpo" +
+      "ints\030\014 \003(\0132).aruna.api.storage.models.v2" +
+      ".DataEndpointR\tendpoints\0229\n\006hashes\030\r \003(\013" +
+      "2!.aruna.api.storage.models.v2.HashR\006has" +
+      "hes\0220\n\024metadata_license_tag\030\016 \001(\tR\022metad" +
+      "ataLicenseTag\022(\n\020data_license_tag\030\017 \001(\tR" +
+      "\016dataLicenseTag*\215\001\n\tDataClass\022\032\n\026DATA_CL" +
+      "ASS_UNSPECIFIED\020\000\022\025\n\021DATA_CLASS_PUBLIC\020\001" +
+      "\022\026\n\022DATA_CLASS_PRIVATE\020\002\022\030\n\024DATA_CLASS_W" +
+      "ORKSPACE\020\004\022\033\n\027DATA_CLASS_CONFIDENTIAL\020\005*" +
+      "s\n\017EndpointVariant\022 \n\034ENDPOINT_VARIANT_U" +
+      "NSPECIFIED\020\000\022\037\n\033ENDPOINT_VARIANT_PERSIST" +
+      "ENT\020\001\022\035\n\031ENDPOINT_VARIANT_VOLATILE\020\002*z\n\023" +
+      "EndpointHostVariant\022%\n!ENDPOINT_HOST_VAR" +
+      "IANT_UNSPECIFIED\020\000\022\036\n\032ENDPOINT_HOST_VARI" +
+      "ANT_GRPC\020\001\022\034\n\030ENDPOINT_HOST_VARIANT_S3\020\002" +
+      "*\276\001\n\017PermissionLevel\022 \n\034PERMISSION_LEVEL" +
+      "_UNSPECIFIED\020\000\022\031\n\025PERMISSION_LEVEL_NONE\020" +
+      "\002\022\031\n\025PERMISSION_LEVEL_READ\020\003\022\033\n\027PERMISSI" +
+      "ON_LEVEL_APPEND\020\004\022\032\n\026PERMISSION_LEVEL_WR" +
+      "ITE\020\005\022\032\n\026PERMISSION_LEVEL_ADMIN\020\006*\264\001\n\017Ke" +
+      "yValueVariant\022!\n\035KEY_VALUE_VARIANT_UNSPE" +
+      "CIFIED\020\000\022\033\n\027KEY_VALUE_VARIANT_LABEL\020\001\022\"\n" +
+      "\036KEY_VALUE_VARIANT_STATIC_LABEL\020\002\022\032\n\026KEY" +
+      "_VALUE_VARIANT_HOOK\020\003\022!\n\035KEY_VALUE_VARIA" +
+      "NT_HOOK_STATUS\020\004*\267\001\n\027ExternalRelationVar" +
+      "iant\022)\n%EXTERNAL_RELATION_VARIANT_UNSPEC" +
+      "IFIED\020\000\022!\n\035EXTERNAL_RELATION_VARIANT_URL" +
+      "\020\001\022(\n$EXTERNAL_RELATION_VARIANT_IDENTIFI" +
+      "ER\020\002\022$\n EXTERNAL_RELATION_VARIANT_CUSTOM" +
+      "\020\003*\257\002\n\027InternalRelationVariant\022)\n%INTERN" +
+      "AL_RELATION_VARIANT_UNSPECIFIED\020\000\022(\n$INT" +
+      "ERNAL_RELATION_VARIANT_BELONGS_TO\020\001\022$\n I" +
+      "NTERNAL_RELATION_VARIANT_ORIGIN\020\002\022%\n!INT" +
+      "ERNAL_RELATION_VARIANT_VERSION\020\003\022&\n\"INTE" +
+      "RNAL_RELATION_VARIANT_METADATA\020\004\022$\n INTE" +
+      "RNAL_RELATION_VARIANT_POLICY\020\005\022$\n INTERN" +
+      "AL_RELATION_VARIANT_CUSTOM\020\006*x\n\021Relation" +
+      "Direction\022\"\n\036RELATION_DIRECTION_UNSPECIF" +
+      "IED\020\000\022\036\n\032RELATION_DIRECTION_INBOUND\020\001\022\037\n" +
+      "\033RELATION_DIRECTION_OUTBOUND\020\002*\273\001\n\016Resou" +
+      "rceAction\022\037\n\033RESOURCE_ACTION_UNSPECIFIED" +
+      "\020\000\022\032\n\026RESOURCE_ACTION_CREATE\020\001\022\032\n\026RESOUR" +
+      "CE_ACTION_APPEND\020\002\022\032\n\026RESOURCE_ACTION_UP" +
+      "DATE\020\003\022\030\n\024RESOURCE_ACTION_READ\020\004\022\032\n\026RESO" +
+      "URCE_ACTION_DELETE\020\005*\244\001\n\006Status\022\026\n\022STATU" +
+      "S_UNSPECIFIED\020\000\022\027\n\023STATUS_INITIALIZING\020\001" +
+      "\022\025\n\021STATUS_VALIDATING\020\002\022\024\n\020STATUS_AVAILA" +
+      "BLE\020\003\022\026\n\022STATUS_UNAVAILABLE\020\004\022\020\n\014STATUS_" +
+      "ERROR\020\005\022\022\n\016STATUS_DELETED\020\006*\331\001\n\017Componen" +
+      "tStatus\022 \n\034COMPONENT_STATUS_UNSPECIFIED\020" +
+      "\000\022!\n\035COMPONENT_STATUS_INITIALIZING\020\001\022\036\n\032" +
+      "COMPONENT_STATUS_AVAILABLE\020\002\022\035\n\031COMPONEN" +
+      "T_STATUS_DEGRADED\020\003\022 \n\034COMPONENT_STATUS_" +
+      "UNAVAILABLE\020\004\022 \n\034COMPONENT_STATUS_MAINTE" +
+      "NANCE\020\005*_\n\rHashalgorithm\022\035\n\031HASHALGORITH" +
+      "M_UNSPECIFIED\020\000\022\025\n\021HASHALGORITHM_MD5\020\001\022\030" +
+      "\n\024HASHALGORITHM_SHA256\020\002*\255\001\n\017ResourceVar" +
+      "iant\022 \n\034RESOURCE_VARIANT_UNSPECIFIED\020\000\022\034" +
+      "\n\030RESOURCE_VARIANT_PROJECT\020\001\022\037\n\033RESOURCE" +
+      "_VARIANT_COLLECTION\020\002\022\034\n\030RESOURCE_VARIAN" +
+      "T_DATASET\020\003\022\033\n\027RESOURCE_VARIANT_OBJECT\020\004" +
+      "B\376\001\n\037com.aruna.api.storage.models.v2B\013Mo" +
+      "delsProtoP\001Z=github.com/ArunaStorage/go-" +
+      "api/v2/aruna/api/storage/models/v2\242\002\004AAS" +
+      "M\252\002\033Aruna.Api.Storage.Models.V2\312\002\033Aruna\\" +
+      "Api\\Storage\\Models\\V2\342\002\'Aruna\\Api\\Storag" +
+      "e\\Models\\V2\\GPBMetadata\352\002\037Aruna::Api::St" +
+      "orage::Models::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -382,7 +390,7 @@ public final class ModelsProto {
     internal_static_aruna_api_storage_models_v2_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_User_descriptor,
-        new java.lang.String[] { "Id", "ExternalId", "DisplayName", "Active", "Email", "Attributes", });
+        new java.lang.String[] { "Id", "DisplayName", "Active", "Email", "Attributes", });
     internal_static_aruna_api_storage_models_v2_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_aruna_api_storage_models_v2_Permission_fieldAccessorTable = new
@@ -407,116 +415,122 @@ public final class ModelsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_CustomAttributes_descriptor,
         new java.lang.String[] { "AttributeName", "AttributeValue", });
-    internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor =
+    internal_static_aruna_api_storage_models_v2_OidcMapping_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_aruna_api_storage_models_v2_OidcMapping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_models_v2_OidcMapping_descriptor,
+        new java.lang.String[] { "ExternalId", "OidcUrl", });
+    internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_aruna_api_storage_models_v2_UserAttributes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_UserAttributes_descriptor,
-        new java.lang.String[] { "GlobalAdmin", "ServiceAccount", "Tokens", "TrustedEndpoints", "CustomAttributes", "PersonalPermissions", });
+        new java.lang.String[] { "GlobalAdmin", "ServiceAccount", "Tokens", "TrustedEndpoints", "CustomAttributes", "PersonalPermissions", "ExternalIds", });
     internal_static_aruna_api_storage_models_v2_KeyValue_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_aruna_api_storage_models_v2_KeyValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_KeyValue_descriptor,
         new java.lang.String[] { "Key", "Value", "Variant", });
     internal_static_aruna_api_storage_models_v2_Relation_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_aruna_api_storage_models_v2_Relation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Relation_descriptor,
         new java.lang.String[] { "External", "Internal", "Relation", });
     internal_static_aruna_api_storage_models_v2_ExternalRelation_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_aruna_api_storage_models_v2_ExternalRelation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_ExternalRelation_descriptor,
         new java.lang.String[] { "Identifier", "DefinedVariant", "CustomVariant", });
     internal_static_aruna_api_storage_models_v2_InternalRelation_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aruna_api_storage_models_v2_InternalRelation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_InternalRelation_descriptor,
         new java.lang.String[] { "ResourceId", "ResourceVariant", "DefinedVariant", "CustomVariant", "Direction", });
     internal_static_aruna_api_storage_models_v2_PageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_aruna_api_storage_models_v2_PageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_PageRequest_descriptor,
         new java.lang.String[] { "StartAfter", "PageSize", });
     internal_static_aruna_api_storage_models_v2_Stats_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aruna_api_storage_models_v2_Stats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Stats_descriptor,
         new java.lang.String[] { "Count", "Size", "LastUpdated", });
     internal_static_aruna_api_storage_models_v2_Hash_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_storage_models_v2_Hash_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Hash_descriptor,
         new java.lang.String[] { "Alg", "Hash", });
     internal_static_aruna_api_storage_models_v2_EndpointHostConfig_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_aruna_api_storage_models_v2_EndpointHostConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_EndpointHostConfig_descriptor,
         new java.lang.String[] { "Url", "IsPrimary", "Ssl", "Public", "HostVariant", });
     internal_static_aruna_api_storage_models_v2_Endpoint_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_aruna_api_storage_models_v2_Endpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Endpoint_descriptor,
         new java.lang.String[] { "Id", "EpVariant", "Name", "IsPublic", "Status", "HostConfigs", });
     internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aruna_api_storage_models_v2_DataEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_DataEndpoint_descriptor,
         new java.lang.String[] { "Id", "FullSynced", });
     internal_static_aruna_api_storage_models_v2_Copy_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aruna_api_storage_models_v2_Copy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Copy_descriptor,
         new java.lang.String[] { "Resource", "TargetEndpoint", "Push", });
     internal_static_aruna_api_storage_models_v2_Context_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aruna_api_storage_models_v2_Context_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Context_descriptor,
         new java.lang.String[] { "S3Credentials", "Copy", "Context", });
     internal_static_aruna_api_storage_models_v2_License_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aruna_api_storage_models_v2_License_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_License_descriptor,
         new java.lang.String[] { "Tag", "Name", "Text", "Url", });
     internal_static_aruna_api_storage_models_v2_GenericResource_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aruna_api_storage_models_v2_GenericResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_GenericResource_descriptor,
         new java.lang.String[] { "Project", "Collection", "Dataset", "Object", "Resource", });
     internal_static_aruna_api_storage_models_v2_Project_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_aruna_api_storage_models_v2_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Project_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "MetadataLicenseTag", "DefaultDataLicenseTag", });
     internal_static_aruna_api_storage_models_v2_Collection_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_aruna_api_storage_models_v2_Collection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Collection_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "MetadataLicenseTag", "DefaultDataLicenseTag", });
     internal_static_aruna_api_storage_models_v2_Dataset_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_aruna_api_storage_models_v2_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Dataset_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "KeyValues", "Relations", "Stats", "DataClass", "CreatedAt", "CreatedBy", "Status", "Dynamic", "Endpoints", "MetadataLicenseTag", "DefaultDataLicenseTag", });
     internal_static_aruna_api_storage_models_v2_Object_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_aruna_api_storage_models_v2_Object_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_models_v2_Object_descriptor,

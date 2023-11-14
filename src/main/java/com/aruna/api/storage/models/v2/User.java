@@ -22,7 +22,6 @@ private static final long serialVersionUID = 0L;
   }
   private User() {
     id_ = "";
-    externalId_ = "";
     displayName_ = "";
     email_ = "";
   }
@@ -89,53 +88,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       id_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int EXTERNAL_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object externalId_ = "";
-  /**
-   * <pre>
-   * Oidc subject ID
-   * </pre>
-   *
-   * <code>string external_id = 2 [json_name = "externalId"];</code>
-   * @return The externalId.
-   */
-  @java.lang.Override
-  public java.lang.String getExternalId() {
-    java.lang.Object ref = externalId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      externalId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Oidc subject ID
-   * </pre>
-   *
-   * <code>string external_id = 2 [json_name = "externalId"];</code>
-   * @return The bytes for externalId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getExternalIdBytes() {
-    java.lang.Object ref = externalId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      externalId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -306,9 +258,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, displayName_);
     }
@@ -332,9 +281,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, displayName_);
@@ -367,8 +313,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getId()
         .equals(other.getId())) return false;
-    if (!getExternalId()
-        .equals(other.getExternalId())) return false;
     if (!getDisplayName()
         .equals(other.getDisplayName())) return false;
     if (getActive()
@@ -393,8 +337,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getExternalId().hashCode();
     hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getDisplayName().hashCode();
     hash = (37 * hash) + ACTIVE_FIELD_NUMBER;
@@ -548,7 +490,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       id_ = "";
-      externalId_ = "";
       displayName_ = "";
       active_ = false;
       email_ = "";
@@ -594,19 +535,16 @@ private static final long serialVersionUID = 0L;
         result.id_ = id_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.externalId_ = externalId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.displayName_ = displayName_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.active_ = active_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.email_ = email_;
       }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.attributes_ = attributesBuilder_ == null
             ? attributes_
             : attributesBuilder_.build();
@@ -664,14 +602,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getExternalId().isEmpty()) {
-        externalId_ = other.externalId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getActive() != false) {
@@ -679,7 +612,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasAttributes()) {
@@ -716,31 +649,26 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              externalId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             case 26: {
               displayName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             case 32: {
               active_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 32
             case 42: {
               email_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               input.readMessage(
                   getAttributesFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             default: {
@@ -852,98 +780,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object externalId_ = "";
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>string external_id = 2 [json_name = "externalId"];</code>
-     * @return The externalId.
-     */
-    public java.lang.String getExternalId() {
-      java.lang.Object ref = externalId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        externalId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>string external_id = 2 [json_name = "externalId"];</code>
-     * @return The bytes for externalId.
-     */
-    public com.google.protobuf.ByteString
-        getExternalIdBytes() {
-      java.lang.Object ref = externalId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        externalId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>string external_id = 2 [json_name = "externalId"];</code>
-     * @param value The externalId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExternalId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      externalId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>string external_id = 2 [json_name = "externalId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearExternalId() {
-      externalId_ = getDefaultInstance().getExternalId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Oidc subject ID
-     * </pre>
-     *
-     * <code>string external_id = 2 [json_name = "externalId"];</code>
-     * @param value The bytes for externalId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExternalIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      externalId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object displayName_ = "";
     /**
      * <pre>
@@ -999,7 +835,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       displayName_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1013,7 +849,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDisplayName() {
       displayName_ = getDefaultInstance().getDisplayName();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1031,7 +867,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       displayName_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1061,7 +897,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActive(boolean value) {
 
       active_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1074,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActive() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       active_ = false;
       onChanged();
       return this;
@@ -1135,7 +971,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       email_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1149,7 +985,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEmail() {
       email_ = getDefaultInstance().getEmail();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1167,7 +1003,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       email_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1184,7 +1020,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the attributes field is set.
      */
     public boolean hasAttributes() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1217,7 +1053,7 @@ private static final long serialVersionUID = 0L;
       } else {
         attributesBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1235,7 +1071,7 @@ private static final long serialVersionUID = 0L;
       } else {
         attributesBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1248,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAttributes(com.aruna.api.storage.models.v2.UserAttributes value) {
       if (attributesBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           attributes_ != null &&
           attributes_ != com.aruna.api.storage.models.v2.UserAttributes.getDefaultInstance()) {
           getAttributesBuilder().mergeFrom(value);
@@ -1259,7 +1095,7 @@ private static final long serialVersionUID = 0L;
         attributesBuilder_.mergeFrom(value);
       }
       if (attributes_ != null) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       return this;
@@ -1272,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aruna.api.storage.models.v2.UserAttributes attributes = 6 [json_name = "attributes"];</code>
      */
     public Builder clearAttributes() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       attributes_ = null;
       if (attributesBuilder_ != null) {
         attributesBuilder_.dispose();
@@ -1289,7 +1125,7 @@ private static final long serialVersionUID = 0L;
      * <code>.aruna.api.storage.models.v2.UserAttributes attributes = 6 [json_name = "attributes"];</code>
      */
     public com.aruna.api.storage.models.v2.UserAttributes.Builder getAttributesBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getAttributesFieldBuilder().getBuilder();
     }

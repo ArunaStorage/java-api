@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     customAttributes_ = java.util.Collections.emptyList();
     personalPermissions_ = java.util.Collections.emptyList();
+    externalIds_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -226,6 +227,47 @@ private static final long serialVersionUID = 0L;
     return personalPermissions_.get(index);
   }
 
+  public static final int EXTERNAL_IDS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<com.aruna.api.storage.models.v2.OidcMapping> externalIds_;
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.aruna.api.storage.models.v2.OidcMapping> getExternalIdsList() {
+    return externalIds_;
+  }
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.aruna.api.storage.models.v2.OidcMappingOrBuilder> 
+      getExternalIdsOrBuilderList() {
+    return externalIds_;
+  }
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  @java.lang.Override
+  public int getExternalIdsCount() {
+    return externalIds_.size();
+  }
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  @java.lang.Override
+  public com.aruna.api.storage.models.v2.OidcMapping getExternalIds(int index) {
+    return externalIds_.get(index);
+  }
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  @java.lang.Override
+  public com.aruna.api.storage.models.v2.OidcMappingOrBuilder getExternalIdsOrBuilder(
+      int index) {
+    return externalIds_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -257,6 +299,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < personalPermissions_.size(); i++) {
       output.writeMessage(6, personalPermissions_.get(i));
+    }
+    for (int i = 0; i < externalIds_.size(); i++) {
+      output.writeMessage(7, externalIds_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -295,6 +340,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, personalPermissions_.get(i));
     }
+    for (int i = 0; i < externalIds_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, externalIds_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -322,6 +371,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCustomAttributesList())) return false;
     if (!getPersonalPermissionsList()
         .equals(other.getPersonalPermissionsList())) return false;
+    if (!getExternalIdsList()
+        .equals(other.getExternalIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -354,6 +405,10 @@ private static final long serialVersionUID = 0L;
     if (getPersonalPermissionsCount() > 0) {
       hash = (37 * hash) + PERSONAL_PERMISSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getPersonalPermissionsList().hashCode();
+    }
+    if (getExternalIdsCount() > 0) {
+      hash = (37 * hash) + EXTERNAL_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalIdsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -511,6 +566,13 @@ private static final long serialVersionUID = 0L;
         personalPermissionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      if (externalIdsBuilder_ == null) {
+        externalIds_ = java.util.Collections.emptyList();
+      } else {
+        externalIds_ = null;
+        externalIdsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -570,6 +632,15 @@ private static final long serialVersionUID = 0L;
         result.personalPermissions_ = personalPermissions_;
       } else {
         result.personalPermissions_ = personalPermissionsBuilder_.build();
+      }
+      if (externalIdsBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          externalIds_ = java.util.Collections.unmodifiableList(externalIds_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.externalIds_ = externalIds_;
+      } else {
+        result.externalIds_ = externalIdsBuilder_.build();
       }
     }
 
@@ -725,6 +796,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (externalIdsBuilder_ == null) {
+        if (!other.externalIds_.isEmpty()) {
+          if (externalIds_.isEmpty()) {
+            externalIds_ = other.externalIds_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureExternalIdsIsMutable();
+            externalIds_.addAll(other.externalIds_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.externalIds_.isEmpty()) {
+          if (externalIdsBuilder_.isEmpty()) {
+            externalIdsBuilder_.dispose();
+            externalIdsBuilder_ = null;
+            externalIds_ = other.externalIds_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            externalIdsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getExternalIdsFieldBuilder() : null;
+          } else {
+            externalIdsBuilder_.addAllMessages(other.externalIds_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -806,6 +903,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 58: {
+              com.aruna.api.storage.models.v2.OidcMapping m =
+                  input.readMessage(
+                      com.aruna.api.storage.models.v2.OidcMapping.parser(),
+                      extensionRegistry);
+              if (externalIdsBuilder_ == null) {
+                ensureExternalIdsIsMutable();
+                externalIds_.add(m);
+              } else {
+                externalIdsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1716,6 +1826,246 @@ private static final long serialVersionUID = 0L;
         personalPermissions_ = null;
       }
       return personalPermissionsBuilder_;
+    }
+
+    private java.util.List<com.aruna.api.storage.models.v2.OidcMapping> externalIds_ =
+      java.util.Collections.emptyList();
+    private void ensureExternalIdsIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        externalIds_ = new java.util.ArrayList<com.aruna.api.storage.models.v2.OidcMapping>(externalIds_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.aruna.api.storage.models.v2.OidcMapping, com.aruna.api.storage.models.v2.OidcMapping.Builder, com.aruna.api.storage.models.v2.OidcMappingOrBuilder> externalIdsBuilder_;
+
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public java.util.List<com.aruna.api.storage.models.v2.OidcMapping> getExternalIdsList() {
+      if (externalIdsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(externalIds_);
+      } else {
+        return externalIdsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public int getExternalIdsCount() {
+      if (externalIdsBuilder_ == null) {
+        return externalIds_.size();
+      } else {
+        return externalIdsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public com.aruna.api.storage.models.v2.OidcMapping getExternalIds(int index) {
+      if (externalIdsBuilder_ == null) {
+        return externalIds_.get(index);
+      } else {
+        return externalIdsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder setExternalIds(
+        int index, com.aruna.api.storage.models.v2.OidcMapping value) {
+      if (externalIdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExternalIdsIsMutable();
+        externalIds_.set(index, value);
+        onChanged();
+      } else {
+        externalIdsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder setExternalIds(
+        int index, com.aruna.api.storage.models.v2.OidcMapping.Builder builderForValue) {
+      if (externalIdsBuilder_ == null) {
+        ensureExternalIdsIsMutable();
+        externalIds_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        externalIdsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder addExternalIds(com.aruna.api.storage.models.v2.OidcMapping value) {
+      if (externalIdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExternalIdsIsMutable();
+        externalIds_.add(value);
+        onChanged();
+      } else {
+        externalIdsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder addExternalIds(
+        int index, com.aruna.api.storage.models.v2.OidcMapping value) {
+      if (externalIdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExternalIdsIsMutable();
+        externalIds_.add(index, value);
+        onChanged();
+      } else {
+        externalIdsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder addExternalIds(
+        com.aruna.api.storage.models.v2.OidcMapping.Builder builderForValue) {
+      if (externalIdsBuilder_ == null) {
+        ensureExternalIdsIsMutable();
+        externalIds_.add(builderForValue.build());
+        onChanged();
+      } else {
+        externalIdsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder addExternalIds(
+        int index, com.aruna.api.storage.models.v2.OidcMapping.Builder builderForValue) {
+      if (externalIdsBuilder_ == null) {
+        ensureExternalIdsIsMutable();
+        externalIds_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        externalIdsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder addAllExternalIds(
+        java.lang.Iterable<? extends com.aruna.api.storage.models.v2.OidcMapping> values) {
+      if (externalIdsBuilder_ == null) {
+        ensureExternalIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, externalIds_);
+        onChanged();
+      } else {
+        externalIdsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder clearExternalIds() {
+      if (externalIdsBuilder_ == null) {
+        externalIds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        externalIdsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public Builder removeExternalIds(int index) {
+      if (externalIdsBuilder_ == null) {
+        ensureExternalIdsIsMutable();
+        externalIds_.remove(index);
+        onChanged();
+      } else {
+        externalIdsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public com.aruna.api.storage.models.v2.OidcMapping.Builder getExternalIdsBuilder(
+        int index) {
+      return getExternalIdsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public com.aruna.api.storage.models.v2.OidcMappingOrBuilder getExternalIdsOrBuilder(
+        int index) {
+      if (externalIdsBuilder_ == null) {
+        return externalIds_.get(index);  } else {
+        return externalIdsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public java.util.List<? extends com.aruna.api.storage.models.v2.OidcMappingOrBuilder> 
+         getExternalIdsOrBuilderList() {
+      if (externalIdsBuilder_ != null) {
+        return externalIdsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(externalIds_);
+      }
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public com.aruna.api.storage.models.v2.OidcMapping.Builder addExternalIdsBuilder() {
+      return getExternalIdsFieldBuilder().addBuilder(
+          com.aruna.api.storage.models.v2.OidcMapping.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public com.aruna.api.storage.models.v2.OidcMapping.Builder addExternalIdsBuilder(
+        int index) {
+      return getExternalIdsFieldBuilder().addBuilder(
+          index, com.aruna.api.storage.models.v2.OidcMapping.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+     */
+    public java.util.List<com.aruna.api.storage.models.v2.OidcMapping.Builder> 
+         getExternalIdsBuilderList() {
+      return getExternalIdsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.aruna.api.storage.models.v2.OidcMapping, com.aruna.api.storage.models.v2.OidcMapping.Builder, com.aruna.api.storage.models.v2.OidcMappingOrBuilder> 
+        getExternalIdsFieldBuilder() {
+      if (externalIdsBuilder_ == null) {
+        externalIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.aruna.api.storage.models.v2.OidcMapping, com.aruna.api.storage.models.v2.OidcMapping.Builder, com.aruna.api.storage.models.v2.OidcMappingOrBuilder>(
+                externalIds_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        externalIds_ = null;
+      }
+      return externalIdsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

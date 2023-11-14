@@ -205,6 +205,26 @@ public final class UserServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_PersonalNotification_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_AddOidcProviderRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_AddOidcProviderRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_AddOidcProviderResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_AddOidcProviderResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_RemoveOidcProviderRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_RemoveOidcProviderRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_RemoveOidcProviderResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_RemoveOidcProviderResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -291,101 +311,117 @@ public final class UserServiceProto {
       "services.v2.PersonalNotificationVariantR" +
       "\007variant\022\030\n\007message\030\003 \001(\tR\007message\022<\n\004re" +
       "fs\030\004 \003(\0132(.aruna.api.storage.services.v2" +
-      ".ReferenceR\004refs*e\n\rReferenceType\022\036\n\032REF" +
-      "ERENCE_TYPE_UNSPECIFIED\020\000\022\027\n\023REFERENCE_T" +
-      "YPE_USER\020\001\022\033\n\027REFERENCE_TYPE_RESOURCE\020\002*" +
-      "\322\002\n\033PersonalNotificationVariant\022-\n)PERSO" +
-      "NAL_NOTIFICATION_VARIANT_UNSPECIFIED\020\000\0222" +
-      "\n.PERSONAL_NOTIFICATION_VARIANT_ACCESS_R" +
-      "EQUESTED\020\001\0224\n0PERSONAL_NOTIFICATION_VARI" +
-      "ANT_PERMISSION_GRANTED\020\002\0224\n0PERSONAL_NOT" +
-      "IFICATION_VARIANT_PERMISSION_REVOKED\020\003\0224" +
-      "\n0PERSONAL_NOTIFICATION_VARIANT_PERMISSI" +
-      "ON_UPDATED\020\004\022.\n*PERSONAL_NOTIFICATION_VA" +
-      "RIANT_ANNOUNCEMENT\020\0052\343\027\n\013UserService\022\225\001\n" +
-      "\014RegisterUser\0222.aruna.api.storage.servic" +
-      "es.v2.RegisterUserRequest\0323.aruna.api.st" +
-      "orage.services.v2.RegisterUserResponse\"\034" +
-      "\202\323\344\223\002\026\"\021/v2/user/register:\001*\022\247\001\n\016Deactiv" +
-      "ateUser\0224.aruna.api.storage.services.v2." +
-      "DeactivateUserRequest\0325.aruna.api.storag" +
-      "e.services.v2.DeactivateUserResponse\"(\202\323" +
-      "\344\223\002\"2\035/v2/user/{user_id}/deactivate:\001*\022\237" +
-      "\001\n\014ActivateUser\0222.aruna.api.storage.serv" +
-      "ices.v2.ActivateUserRequest\0323.aruna.api." +
-      "storage.services.v2.ActivateUserResponse" +
-      "\"&\202\323\344\223\002 2\033/v2/user/{user_id}/activate:\001*" +
-      "\022\231\001\n\016CreateAPIToken\0224.aruna.api.storage." +
-      "services.v2.CreateAPITokenRequest\0325.arun" +
-      "a.api.storage.services.v2.CreateAPIToken" +
-      "Response\"\032\202\323\344\223\002\024\"\017/v2/user/tokens:\001*\022\230\001\n" +
-      "\013GetAPIToken\0221.aruna.api.storage.service" +
-      "s.v2.GetAPITokenRequest\0322.aruna.api.stor" +
-      "age.services.v2.GetAPITokenResponse\"\"\202\323\344" +
-      "\223\002\034\022\032/v2/user/tokens/{token_id}\022\220\001\n\014GetA" +
-      "PITokens\0222.aruna.api.storage.services.v2" +
-      ".GetAPITokensRequest\0323.aruna.api.storage" +
-      ".services.v2.GetAPITokensResponse\"\027\202\323\344\223\002" +
-      "\021\022\017/v2/user/tokens\022\241\001\n\016DeleteAPIToken\0224." +
-      "aruna.api.storage.services.v2.DeleteAPIT" +
-      "okenRequest\0325.aruna.api.storage.services" +
-      ".v2.DeleteAPITokenResponse\"\"\202\323\344\223\002\034*\032/v2/" +
-      "user/tokens/{token_id}\022\231\001\n\017DeleteAPIToke" +
-      "ns\0225.aruna.api.storage.services.v2.Delet" +
-      "eAPITokensRequest\0326.aruna.api.storage.se" +
-      "rvices.v2.DeleteAPITokensResponse\"\027\202\323\344\223\002" +
-      "\021*\017/v2/user/tokens\022z\n\007GetUser\022-.aruna.ap" +
-      "i.storage.services.v2.GetUserRequest\032..a" +
-      "runa.api.storage.services.v2.GetUserResp" +
-      "onse\"\020\202\323\344\223\002\n\022\010/v2/user\022\245\001\n\017GetUserRedact" +
-      "ed\0225.aruna.api.storage.services.v2.GetUs" +
-      "erRedactedRequest\0326.aruna.api.storage.se" +
-      "rvices.v2.GetUserRedactedResponse\"#\202\323\344\223\002" +
-      "\035\022\033/v2/user/{user_id}/redacted\022\264\001\n\025Updat" +
-      "eUserDisplayName\022;.aruna.api.storage.ser" +
-      "vices.v2.UpdateUserDisplayNameRequest\032<." +
-      "aruna.api.storage.services.v2.UpdateUser" +
-      "DisplayNameResponse\" \202\323\344\223\002\0322\025/v2/user/di" +
-      "splay_name:\001*\022\233\001\n\017UpdateUserEmail\0225.arun" +
-      "a.api.storage.services.v2.UpdateUserEmai" +
-      "lRequest\0326.aruna.api.storage.services.v2" +
-      ".UpdateUserEmailResponse\"\031\202\323\344\223\002\0232\016/v2/us" +
-      "er/email:\001*\022\264\001\n\024GetNotActivatedUsers\022:.a" +
-      "runa.api.storage.services.v2.GetNotActiv" +
-      "atedUsersRequest\032;.aruna.api.storage.ser" +
-      "vices.v2.GetNotActivatedUsersResponse\"#\202" +
-      "\323\344\223\002\035\022\033/v2/user/list/not_activated\022\213\001\n\013G" +
-      "etAllUsers\0221.aruna.api.storage.services." +
-      "v2.GetAllUsersRequest\0322.aruna.api.storag" +
-      "e.services.v2.GetAllUsersResponse\"\025\202\323\344\223\002" +
-      "\017\022\r/v2/user/list\022\272\001\n\024GetS3CredentialsUse" +
-      "r\022:.aruna.api.storage.services.v2.GetS3C" +
-      "redentialsUserRequest\032;.aruna.api.storag" +
-      "e.services.v2.GetS3CredentialsUserRespon" +
-      "se\")\202\323\344\223\002#\022!/v2/user/{user_id}/s3_creden" +
-      "tials\022\272\001\n\025GetDataproxyTokenUser\022;.aruna." +
+      ".ReferenceR\004refs\"B\n\026AddOidcProviderReque" +
+      "st\022(\n\020new_access_token\030\001 \001(\tR\016newAccessT" +
+      "oken\"P\n\027AddOidcProviderResponse\0225\n\004user\030" +
+      "\001 \001(\0132!.aruna.api.storage.models.v2.User" +
+      "R\004user\">\n\031RemoveOidcProviderRequest\022!\n\014p" +
+      "rovider_url\030\001 \001(\tR\013providerUrl\"S\n\032Remove" +
+      "OidcProviderResponse\0225\n\004user\030\001 \001(\0132!.aru" +
+      "na.api.storage.models.v2.UserR\004user*e\n\rR" +
+      "eferenceType\022\036\n\032REFERENCE_TYPE_UNSPECIFI" +
+      "ED\020\000\022\027\n\023REFERENCE_TYPE_USER\020\001\022\033\n\027REFEREN" +
+      "CE_TYPE_RESOURCE\020\002*\322\002\n\033PersonalNotificat" +
+      "ionVariant\022-\n)PERSONAL_NOTIFICATION_VARI" +
+      "ANT_UNSPECIFIED\020\000\0222\n.PERSONAL_NOTIFICATI" +
+      "ON_VARIANT_ACCESS_REQUESTED\020\001\0224\n0PERSONA" +
+      "L_NOTIFICATION_VARIANT_PERMISSION_GRANTE" +
+      "D\020\002\0224\n0PERSONAL_NOTIFICATION_VARIANT_PER" +
+      "MISSION_REVOKED\020\003\0224\n0PERSONAL_NOTIFICATI" +
+      "ON_VARIANT_PERMISSION_UPDATED\020\004\022.\n*PERSO" +
+      "NAL_NOTIFICATION_VARIANT_ANNOUNCEMENT\020\0052" +
+      "\260\032\n\013UserService\022\225\001\n\014RegisterUser\0222.aruna" +
+      ".api.storage.services.v2.RegisterUserReq" +
+      "uest\0323.aruna.api.storage.services.v2.Reg" +
+      "isterUserResponse\"\034\202\323\344\223\002\026\"\021/v2/user/regi" +
+      "ster:\001*\022\247\001\n\016DeactivateUser\0224.aruna.api.s" +
+      "torage.services.v2.DeactivateUserRequest" +
+      "\0325.aruna.api.storage.services.v2.Deactiv" +
+      "ateUserResponse\"(\202\323\344\223\002\"2\035/v2/user/{user_" +
+      "id}/deactivate:\001*\022\237\001\n\014ActivateUser\0222.aru" +
+      "na.api.storage.services.v2.ActivateUserR" +
+      "equest\0323.aruna.api.storage.services.v2.A" +
+      "ctivateUserResponse\"&\202\323\344\223\002 2\033/v2/user/{u" +
+      "ser_id}/activate:\001*\022\231\001\n\016CreateAPIToken\0224" +
+      ".aruna.api.storage.services.v2.CreateAPI" +
+      "TokenRequest\0325.aruna.api.storage.service" +
+      "s.v2.CreateAPITokenResponse\"\032\202\323\344\223\002\024\"\017/v2" +
+      "/user/tokens:\001*\022\230\001\n\013GetAPIToken\0221.aruna." +
+      "api.storage.services.v2.GetAPITokenReque" +
+      "st\0322.aruna.api.storage.services.v2.GetAP" +
+      "ITokenResponse\"\"\202\323\344\223\002\034\022\032/v2/user/tokens/" +
+      "{token_id}\022\220\001\n\014GetAPITokens\0222.aruna.api." +
+      "storage.services.v2.GetAPITokensRequest\032" +
+      "3.aruna.api.storage.services.v2.GetAPITo" +
+      "kensResponse\"\027\202\323\344\223\002\021\022\017/v2/user/tokens\022\241\001" +
+      "\n\016DeleteAPIToken\0224.aruna.api.storage.ser" +
+      "vices.v2.DeleteAPITokenRequest\0325.aruna.a" +
+      "pi.storage.services.v2.DeleteAPITokenRes" +
+      "ponse\"\"\202\323\344\223\002\034*\032/v2/user/tokens/{token_id" +
+      "}\022\231\001\n\017DeleteAPITokens\0225.aruna.api.storag" +
+      "e.services.v2.DeleteAPITokensRequest\0326.a" +
+      "runa.api.storage.services.v2.DeleteAPITo" +
+      "kensResponse\"\027\202\323\344\223\002\021*\017/v2/user/tokens\022z\n" +
+      "\007GetUser\022-.aruna.api.storage.services.v2" +
+      ".GetUserRequest\032..aruna.api.storage.serv" +
+      "ices.v2.GetUserResponse\"\020\202\323\344\223\002\n\022\010/v2/use" +
+      "r\022\245\001\n\017GetUserRedacted\0225.aruna.api.storag" +
+      "e.services.v2.GetUserRedactedRequest\0326.a" +
+      "runa.api.storage.services.v2.GetUserReda" +
+      "ctedResponse\"#\202\323\344\223\002\035\022\033/v2/user/{user_id}" +
+      "/redacted\022\264\001\n\025UpdateUserDisplayName\022;.ar" +
+      "una.api.storage.services.v2.UpdateUserDi" +
+      "splayNameRequest\032<.aruna.api.storage.ser" +
+      "vices.v2.UpdateUserDisplayNameResponse\" " +
+      "\202\323\344\223\002\0322\025/v2/user/display_name:\001*\022\233\001\n\017Upd" +
+      "ateUserEmail\0225.aruna.api.storage.service" +
+      "s.v2.UpdateUserEmailRequest\0326.aruna.api." +
+      "storage.services.v2.UpdateUserEmailRespo" +
+      "nse\"\031\202\323\344\223\002\0232\016/v2/user/email:\001*\022\264\001\n\024GetNo" +
+      "tActivatedUsers\022:.aruna.api.storage.serv" +
+      "ices.v2.GetNotActivatedUsersRequest\032;.ar" +
+      "una.api.storage.services.v2.GetNotActiva" +
+      "tedUsersResponse\"#\202\323\344\223\002\035\022\033/v2/user/list/" +
+      "not_activated\022\213\001\n\013GetAllUsers\0221.aruna.ap" +
+      "i.storage.services.v2.GetAllUsersRequest" +
+      "\0322.aruna.api.storage.services.v2.GetAllU" +
+      "sersResponse\"\025\202\323\344\223\002\017\022\r/v2/user/list\022\272\001\n\024" +
+      "GetS3CredentialsUser\022:.aruna.api.storage" +
+      ".services.v2.GetS3CredentialsUserRequest" +
+      "\032;.aruna.api.storage.services.v2.GetS3Cr" +
+      "edentialsUserResponse\")\202\323\344\223\002#\022!/v2/user/" +
+      "{user_id}/s3_credentials\022\272\001\n\025GetDataprox" +
+      "yTokenUser\022;.aruna.api.storage.services." +
+      "v2.GetDataproxyTokenUserRequest\032<.aruna." +
       "api.storage.services.v2.GetDataproxyToke" +
-      "nUserRequest\032<.aruna.api.storage.service" +
-      "s.v2.GetDataproxyTokenUserResponse\"&\202\323\344\223" +
-      "\002 \022\036/v2/user/{user_id}/proxy_token\022\273\001\n\030G" +
-      "etPersonalNotifications\022>.aruna.api.stor" +
-      "age.services.v2.GetPersonalNotifications" +
-      "Request\032?.aruna.api.storage.services.v2." +
-      "GetPersonalNotificationsResponse\"\036\202\323\344\223\002\030" +
-      "\022\026/v2/user/notifications\022\337\001\n Acknowledge" +
-      "PersonalNotifications\022F.aruna.api.storag" +
-      "e.services.v2.AcknowledgePersonalNotific" +
-      "ationsRequest\032G.aruna.api.storage.servic" +
-      "es.v2.AcknowledgePersonalNotificationsRe" +
-      "sponse\"*\202\323\344\223\002$\022\"/v2/user/notifications/a" +
-      "cknowledge\032\016\372\322\344\223\002\010\022\006SERVERB\217\002\n!com.aruna" +
-      ".api.storage.services.v2B\020UserServicePro" +
-      "toP\001Z?github.com/ArunaStorage/go-api/v2/" +
-      "aruna/api/storage/services/v2\242\002\004AASS\252\002\035A" +
-      "runa.Api.Storage.Services.V2\312\002\035Aruna\\Api" +
-      "\\Storage\\Services\\V2\342\002)Aruna\\Api\\Storage" +
-      "\\Services\\V2\\GPBMetadata\352\002!Aruna::Api::S" +
-      "torage::Services::V2b\006proto3"
+      "nUserResponse\"&\202\323\344\223\002 \022\036/v2/user/{user_id" +
+      "}/proxy_token\022\273\001\n\030GetPersonalNotificatio" +
+      "ns\022>.aruna.api.storage.services.v2.GetPe" +
+      "rsonalNotificationsRequest\032?.aruna.api.s" +
+      "torage.services.v2.GetPersonalNotificati" +
+      "onsResponse\"\036\202\323\344\223\002\030\022\026/v2/user/notificati" +
+      "ons\022\337\001\n AcknowledgePersonalNotifications" +
+      "\022F.aruna.api.storage.services.v2.Acknowl" +
+      "edgePersonalNotificationsRequest\032G.aruna" +
+      ".api.storage.services.v2.AcknowledgePers" +
+      "onalNotificationsResponse\"*\202\323\344\223\002$\022\"/v2/u" +
+      "ser/notifications/acknowledge\022\235\001\n\016AddOid" +
+      "cProvier\0225.aruna.api.storage.services.v2" +
+      ".AddOidcProviderRequest\0326.aruna.api.stor" +
+      "age.services.v2.AddOidcProviderResponse\"" +
+      "\034\202\323\344\223\002\0262\021/v2/user/add_oidc:\001*\022\252\001\n\022Remove" +
+      "OidcProvider\0228.aruna.api.storage.service" +
+      "s.v2.RemoveOidcProviderRequest\0329.aruna.a" +
+      "pi.storage.services.v2.RemoveOidcProvide" +
+      "rResponse\"\037\202\323\344\223\002\0312\024/v2/user/remove_oidc:" +
+      "\001*\032\016\372\322\344\223\002\010\022\006SERVERB\217\002\n!com.aruna.api.sto" +
+      "rage.services.v2B\020UserServiceProtoP\001Z?gi" +
+      "thub.com/ArunaStorage/go-api/v2/aruna/ap" +
+      "i/storage/services/v2\242\002\004AASS\252\002\035Aruna.Api" +
+      ".Storage.Services.V2\312\002\035Aruna\\Api\\Storage" +
+      "\\Services\\V2\342\002)Aruna\\Api\\Storage\\Service" +
+      "s\\V2\\GPBMetadata\352\002!Aruna::Api::Storage::" +
+      "Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -623,6 +659,30 @@ public final class UserServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_PersonalNotification_descriptor,
         new java.lang.String[] { "Id", "Variant", "Message", "Refs", });
+    internal_static_aruna_api_storage_services_v2_AddOidcProviderRequest_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_aruna_api_storage_services_v2_AddOidcProviderRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_AddOidcProviderRequest_descriptor,
+        new java.lang.String[] { "NewAccessToken", });
+    internal_static_aruna_api_storage_services_v2_AddOidcProviderResponse_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_aruna_api_storage_services_v2_AddOidcProviderResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_AddOidcProviderResponse_descriptor,
+        new java.lang.String[] { "User", });
+    internal_static_aruna_api_storage_services_v2_RemoveOidcProviderRequest_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_aruna_api_storage_services_v2_RemoveOidcProviderRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_RemoveOidcProviderRequest_descriptor,
+        new java.lang.String[] { "ProviderUrl", });
+    internal_static_aruna_api_storage_services_v2_RemoveOidcProviderResponse_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_aruna_api_storage_services_v2_RemoveOidcProviderResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_RemoveOidcProviderResponse_descriptor,
+        new java.lang.String[] { "User", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.VisibilityProto.apiVisibility);

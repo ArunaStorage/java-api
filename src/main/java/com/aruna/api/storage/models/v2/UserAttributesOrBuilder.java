@@ -116,4 +116,28 @@ public interface UserAttributesOrBuilder extends
    */
   com.aruna.api.storage.models.v2.PermissionOrBuilder getPersonalPermissionsOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  java.util.List<com.aruna.api.storage.models.v2.OidcMapping> 
+      getExternalIdsList();
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  com.aruna.api.storage.models.v2.OidcMapping getExternalIds(int index);
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  int getExternalIdsCount();
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  java.util.List<? extends com.aruna.api.storage.models.v2.OidcMappingOrBuilder> 
+      getExternalIdsOrBuilderList();
+  /**
+   * <code>repeated .aruna.api.storage.models.v2.OidcMapping external_ids = 7 [json_name = "externalIds"];</code>
+   */
+  com.aruna.api.storage.models.v2.OidcMappingOrBuilder getExternalIdsOrBuilder(
+      int index);
 }

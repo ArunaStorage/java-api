@@ -9,29 +9,29 @@ public interface CreateBundleRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-   * @return A list containing the resourceId.
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+   * @return A list containing the resourceIds.
    */
   java.util.List<java.lang.String>
-      getResourceIdList();
+      getResourceIdsList();
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
-   * @return The count of resourceId.
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
+   * @return The count of resourceIds.
    */
-  int getResourceIdCount();
+  int getResourceIdsCount();
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
    * @param index The index of the element to return.
-   * @return The resourceId at the given index.
+   * @return The resourceIds at the given index.
    */
-  java.lang.String getResourceId(int index);
+  java.lang.String getResourceIds(int index);
   /**
-   * <code>repeated string resource_id = 1 [json_name = "resourceId"];</code>
+   * <code>repeated string resource_ids = 1 [json_name = "resourceIds"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the resourceId at the given index.
+   * @return The bytes of the resourceIds at the given index.
    */
   com.google.protobuf.ByteString
-      getResourceIdBytes(int index);
+      getResourceIdsBytes(int index);
 
   /**
    * <pre>
