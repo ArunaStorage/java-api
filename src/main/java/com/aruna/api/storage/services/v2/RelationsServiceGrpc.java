@@ -5,6 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * RelationsService
+ * Status: BETA
  * Contains all methods to edit and change resource relations
  * </pre>
  */
@@ -128,6 +129,7 @@ public final class RelationsServiceGrpc {
   /**
    * <pre>
    * RelationsService
+   * Status: BETA
    * Contains all methods to edit and change resource relations
    * </pre>
    */
@@ -137,7 +139,8 @@ public final class RelationsServiceGrpc {
      * <pre>
      * ModifyRelation
      * Status: BETA
-     * Modifys all relations to / from a resource
+     * Add/Remove/Modifies all relation types to / from a resource
+     * Works for internal and external relations
      * </pre>
      */
     default void modifyRelations(com.aruna.api.storage.services.v2.ModifyRelationsRequest request,
@@ -150,6 +153,7 @@ public final class RelationsServiceGrpc {
      * GetHierachy
      * Status: BETA
      * Gets all downstream hierarchy relations from a resource
+     * results in a tree structure
      * </pre>
      */
     default void getHierarchy(com.aruna.api.storage.services.v2.GetHierarchyRequest request,
@@ -162,6 +166,7 @@ public final class RelationsServiceGrpc {
    * Base class for the server implementation of the service RelationsService.
    * <pre>
    * RelationsService
+   * Status: BETA
    * Contains all methods to edit and change resource relations
    * </pre>
    */
@@ -177,6 +182,7 @@ public final class RelationsServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service RelationsService.
    * <pre>
    * RelationsService
+   * Status: BETA
    * Contains all methods to edit and change resource relations
    * </pre>
    */
@@ -197,7 +203,8 @@ public final class RelationsServiceGrpc {
      * <pre>
      * ModifyRelation
      * Status: BETA
-     * Modifys all relations to / from a resource
+     * Add/Remove/Modifies all relation types to / from a resource
+     * Works for internal and external relations
      * </pre>
      */
     public void modifyRelations(com.aruna.api.storage.services.v2.ModifyRelationsRequest request,
@@ -211,6 +218,7 @@ public final class RelationsServiceGrpc {
      * GetHierachy
      * Status: BETA
      * Gets all downstream hierarchy relations from a resource
+     * results in a tree structure
      * </pre>
      */
     public void getHierarchy(com.aruna.api.storage.services.v2.GetHierarchyRequest request,
@@ -224,6 +232,7 @@ public final class RelationsServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service RelationsService.
    * <pre>
    * RelationsService
+   * Status: BETA
    * Contains all methods to edit and change resource relations
    * </pre>
    */
@@ -244,7 +253,8 @@ public final class RelationsServiceGrpc {
      * <pre>
      * ModifyRelation
      * Status: BETA
-     * Modifys all relations to / from a resource
+     * Add/Remove/Modifies all relation types to / from a resource
+     * Works for internal and external relations
      * </pre>
      */
     public com.aruna.api.storage.services.v2.ModifyRelationsResponse modifyRelations(com.aruna.api.storage.services.v2.ModifyRelationsRequest request) {
@@ -257,6 +267,7 @@ public final class RelationsServiceGrpc {
      * GetHierachy
      * Status: BETA
      * Gets all downstream hierarchy relations from a resource
+     * results in a tree structure
      * </pre>
      */
     public com.aruna.api.storage.services.v2.GetHierarchyResponse getHierarchy(com.aruna.api.storage.services.v2.GetHierarchyRequest request) {
@@ -269,6 +280,7 @@ public final class RelationsServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service RelationsService.
    * <pre>
    * RelationsService
+   * Status: BETA
    * Contains all methods to edit and change resource relations
    * </pre>
    */
@@ -289,7 +301,8 @@ public final class RelationsServiceGrpc {
      * <pre>
      * ModifyRelation
      * Status: BETA
-     * Modifys all relations to / from a resource
+     * Add/Remove/Modifies all relation types to / from a resource
+     * Works for internal and external relations
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.ModifyRelationsResponse> modifyRelations(
@@ -303,6 +316,7 @@ public final class RelationsServiceGrpc {
      * GetHierachy
      * Status: BETA
      * Gets all downstream hierarchy relations from a resource
+     * results in a tree structure
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetHierarchyResponse> getHierarchy(

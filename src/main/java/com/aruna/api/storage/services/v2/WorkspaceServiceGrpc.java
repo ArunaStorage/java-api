@@ -4,7 +4,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Service to manage "special" anonymous collections / workspaces 
+ * WorkspaceService
+ * Status: BETA
+ * Service to manage anonymous "scratch" projects / workspaces 
  * </pre>
  */
 @javax.annotation.Generated(
@@ -281,7 +283,9 @@ public final class WorkspaceServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage "special" anonymous collections / workspaces 
+   * WorkspaceService
+   * Status: BETA
+   * Service to manage anonymous "scratch" projects / workspaces 
    * </pre>
    */
   public interface AsyncService {
@@ -341,7 +345,7 @@ public final class WorkspaceServiceGrpc {
      * <pre>
      * CreateWorkspace
      * Status: ALPHA
-     * A new request to create a personal anonymous workspace
+     * Create a personal anonymous workspace
      * </pre>
      */
     default void createWorkspace(com.aruna.api.storage.services.v2.CreateWorkspaceRequest request,
@@ -377,7 +381,9 @@ public final class WorkspaceServiceGrpc {
   /**
    * Base class for the server implementation of the service WorkspaceService.
    * <pre>
-   * Service to manage "special" anonymous collections / workspaces 
+   * WorkspaceService
+   * Status: BETA
+   * Service to manage anonymous "scratch" projects / workspaces 
    * </pre>
    */
   public static abstract class WorkspaceServiceImplBase
@@ -391,7 +397,9 @@ public final class WorkspaceServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service WorkspaceService.
    * <pre>
-   * Service to manage "special" anonymous collections / workspaces 
+   * WorkspaceService
+   * Status: BETA
+   * Service to manage anonymous "scratch" projects / workspaces 
    * </pre>
    */
   public static final class WorkspaceServiceStub
@@ -466,7 +474,7 @@ public final class WorkspaceServiceGrpc {
      * <pre>
      * CreateWorkspace
      * Status: ALPHA
-     * A new request to create a personal anonymous workspace
+     * Create a personal anonymous workspace
      * </pre>
      */
     public void createWorkspace(com.aruna.api.storage.services.v2.CreateWorkspaceRequest request,
@@ -505,7 +513,9 @@ public final class WorkspaceServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service WorkspaceService.
    * <pre>
-   * Service to manage "special" anonymous collections / workspaces 
+   * WorkspaceService
+   * Status: BETA
+   * Service to manage anonymous "scratch" projects / workspaces 
    * </pre>
    */
   public static final class WorkspaceServiceBlockingStub
@@ -576,7 +586,7 @@ public final class WorkspaceServiceGrpc {
      * <pre>
      * CreateWorkspace
      * Status: ALPHA
-     * A new request to create a personal anonymous workspace
+     * Create a personal anonymous workspace
      * </pre>
      */
     public com.aruna.api.storage.services.v2.CreateWorkspaceResponse createWorkspace(com.aruna.api.storage.services.v2.CreateWorkspaceRequest request) {
@@ -612,7 +622,9 @@ public final class WorkspaceServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service WorkspaceService.
    * <pre>
-   * Service to manage "special" anonymous collections / workspaces 
+   * WorkspaceService
+   * Status: BETA
+   * Service to manage anonymous "scratch" projects / workspaces 
    * </pre>
    */
   public static final class WorkspaceServiceFutureStub
@@ -687,7 +699,7 @@ public final class WorkspaceServiceGrpc {
      * <pre>
      * CreateWorkspace
      * Status: ALPHA
-     * A new request to create a personal anonymous workspace
+     * Create a personal anonymous workspace
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.CreateWorkspaceResponse> createWorkspace(

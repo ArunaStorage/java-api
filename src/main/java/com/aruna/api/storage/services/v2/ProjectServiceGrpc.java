@@ -5,6 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * ProjectService
+ * Status: BETA
  * Contains all methods that get/create or update Projects and associated resources
  * </pre>
  */
@@ -376,6 +377,7 @@ public final class ProjectServiceGrpc {
   /**
    * <pre>
    * ProjectService
+   * Status: BETA
    * Contains all methods that get/create or update Projects and associated resources
    * </pre>
    */
@@ -508,6 +510,7 @@ public final class ProjectServiceGrpc {
    * Base class for the server implementation of the service ProjectService.
    * <pre>
    * ProjectService
+   * Status: BETA
    * Contains all methods that get/create or update Projects and associated resources
    * </pre>
    */
@@ -523,6 +526,7 @@ public final class ProjectServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service ProjectService.
    * <pre>
    * ProjectService
+   * Status: BETA
    * Contains all methods that get/create or update Projects and associated resources
    * </pre>
    */
@@ -676,6 +680,7 @@ public final class ProjectServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service ProjectService.
    * <pre>
    * ProjectService
+   * Status: BETA
    * Contains all methods that get/create or update Projects and associated resources
    * </pre>
    */
@@ -819,6 +824,7 @@ public final class ProjectServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ProjectService.
    * <pre>
    * ProjectService
+   * Status: BETA
    * Contains all methods that get/create or update Projects and associated resources
    * </pre>
    */

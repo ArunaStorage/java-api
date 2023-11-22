@@ -3,6 +3,11 @@ package com.aruna.api.dataproxy.services.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * BundlerService
+ * Status: ALPHA
+ * Dataproxy specific service for creating and deleting bundles.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.59.0)",
@@ -122,10 +127,20 @@ public final class BundlerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * BundlerService
+   * Status: ALPHA
+   * Dataproxy specific service for creating and deleting bundles.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * CreateBundle
+     * Status: ALPHA
+     * Creates a bundle with multiple resources, dataproxy only.
+     * </pre>
      */
     default void createBundle(com.aruna.api.dataproxy.services.v2.CreateBundleRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.CreateBundleResponse> responseObserver) {
@@ -133,6 +148,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteBundle
+     * Status: ALPHA
+     * Delete an existing bundle, dataproxy only.
+     * </pre>
      */
     default void deleteBundle(com.aruna.api.dataproxy.services.v2.DeleteBundleRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.DeleteBundleResponse> responseObserver) {
@@ -142,6 +162,11 @@ public final class BundlerServiceGrpc {
 
   /**
    * Base class for the server implementation of the service BundlerService.
+   * <pre>
+   * BundlerService
+   * Status: ALPHA
+   * Dataproxy specific service for creating and deleting bundles.
+   * </pre>
    */
   public static abstract class BundlerServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -153,6 +178,11 @@ public final class BundlerServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service BundlerService.
+   * <pre>
+   * BundlerService
+   * Status: ALPHA
+   * Dataproxy specific service for creating and deleting bundles.
+   * </pre>
    */
   public static final class BundlerServiceStub
       extends io.grpc.stub.AbstractAsyncStub<BundlerServiceStub> {
@@ -168,6 +198,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * CreateBundle
+     * Status: ALPHA
+     * Creates a bundle with multiple resources, dataproxy only.
+     * </pre>
      */
     public void createBundle(com.aruna.api.dataproxy.services.v2.CreateBundleRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.CreateBundleResponse> responseObserver) {
@@ -176,6 +211,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteBundle
+     * Status: ALPHA
+     * Delete an existing bundle, dataproxy only.
+     * </pre>
      */
     public void deleteBundle(com.aruna.api.dataproxy.services.v2.DeleteBundleRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.DeleteBundleResponse> responseObserver) {
@@ -186,6 +226,11 @@ public final class BundlerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BundlerService.
+   * <pre>
+   * BundlerService
+   * Status: ALPHA
+   * Dataproxy specific service for creating and deleting bundles.
+   * </pre>
    */
   public static final class BundlerServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<BundlerServiceBlockingStub> {
@@ -201,6 +246,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * CreateBundle
+     * Status: ALPHA
+     * Creates a bundle with multiple resources, dataproxy only.
+     * </pre>
      */
     public com.aruna.api.dataproxy.services.v2.CreateBundleResponse createBundle(com.aruna.api.dataproxy.services.v2.CreateBundleRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -208,6 +258,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteBundle
+     * Status: ALPHA
+     * Delete an existing bundle, dataproxy only.
+     * </pre>
      */
     public com.aruna.api.dataproxy.services.v2.DeleteBundleResponse deleteBundle(com.aruna.api.dataproxy.services.v2.DeleteBundleRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -217,6 +272,11 @@ public final class BundlerServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service BundlerService.
+   * <pre>
+   * BundlerService
+   * Status: ALPHA
+   * Dataproxy specific service for creating and deleting bundles.
+   * </pre>
    */
   public static final class BundlerServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<BundlerServiceFutureStub> {
@@ -232,6 +292,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * CreateBundle
+     * Status: ALPHA
+     * Creates a bundle with multiple resources, dataproxy only.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.dataproxy.services.v2.CreateBundleResponse> createBundle(
         com.aruna.api.dataproxy.services.v2.CreateBundleRequest request) {
@@ -240,6 +305,11 @@ public final class BundlerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteBundle
+     * Status: ALPHA
+     * Delete an existing bundle, dataproxy only.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.dataproxy.services.v2.DeleteBundleResponse> deleteBundle(
         com.aruna.api.dataproxy.services.v2.DeleteBundleRequest request) {

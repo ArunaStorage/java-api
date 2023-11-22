@@ -3,6 +3,11 @@ package com.aruna.api.dataproxy.services.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * DataproxyService
+ * Status: ALPHA
+ * Service for data replication between data-proxies
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.59.0)",
@@ -122,13 +127,18 @@ public final class DataproxyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * DataproxyService
+   * Status: ALPHA
+   * Service for data replication between data-proxies
+   * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
      * RequestReplication
-     * Status: BETA
+     * Status: ALPHA
      * Creates a replication request
      * </pre>
      */
@@ -140,7 +150,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: BETA
+     * Status: ALPHA
      * Provides the necessary url to init replication
      * </pre>
      */
@@ -152,6 +162,11 @@ public final class DataproxyServiceGrpc {
 
   /**
    * Base class for the server implementation of the service DataproxyService.
+   * <pre>
+   * DataproxyService
+   * Status: ALPHA
+   * Service for data replication between data-proxies
+   * </pre>
    */
   public static abstract class DataproxyServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -163,6 +178,11 @@ public final class DataproxyServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service DataproxyService.
+   * <pre>
+   * DataproxyService
+   * Status: ALPHA
+   * Service for data replication between data-proxies
+   * </pre>
    */
   public static final class DataproxyServiceStub
       extends io.grpc.stub.AbstractAsyncStub<DataproxyServiceStub> {
@@ -180,7 +200,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * RequestReplication
-     * Status: BETA
+     * Status: ALPHA
      * Creates a replication request
      * </pre>
      */
@@ -193,7 +213,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: BETA
+     * Status: ALPHA
      * Provides the necessary url to init replication
      * </pre>
      */
@@ -206,6 +226,11 @@ public final class DataproxyServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataproxyService.
+   * <pre>
+   * DataproxyService
+   * Status: ALPHA
+   * Service for data replication between data-proxies
+   * </pre>
    */
   public static final class DataproxyServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DataproxyServiceBlockingStub> {
@@ -223,7 +248,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * RequestReplication
-     * Status: BETA
+     * Status: ALPHA
      * Creates a replication request
      * </pre>
      */
@@ -235,7 +260,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: BETA
+     * Status: ALPHA
      * Provides the necessary url to init replication
      * </pre>
      */
@@ -247,6 +272,11 @@ public final class DataproxyServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service DataproxyService.
+   * <pre>
+   * DataproxyService
+   * Status: ALPHA
+   * Service for data replication between data-proxies
+   * </pre>
    */
   public static final class DataproxyServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<DataproxyServiceFutureStub> {
@@ -264,7 +294,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * RequestReplication
-     * Status: BETA
+     * Status: ALPHA
      * Creates a replication request
      * </pre>
      */
@@ -277,7 +307,7 @@ public final class DataproxyServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: BETA
+     * Status: ALPHA
      * Provides the necessary url to init replication
      * </pre>
      */

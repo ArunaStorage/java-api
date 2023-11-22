@@ -5,7 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * EndpointService
- * Contains all methods that get/create or update Endpoint and associated resources
+ * Status: BETA
+ * Contains all methods that get/create or update Endpoint (Dataproxies) and associated resources
  * </pre>
  */
 @javax.annotation.Generated(
@@ -79,6 +80,37 @@ public final class EndpointServiceGrpc {
       }
     }
     return getFullSyncEndpointMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetEndpointStatusRequest,
+      com.aruna.api.storage.services.v2.SetEndpointStatusResponse> getSetEndpointStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetEndpointStatus",
+      requestType = com.aruna.api.storage.services.v2.SetEndpointStatusRequest.class,
+      responseType = com.aruna.api.storage.services.v2.SetEndpointStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetEndpointStatusRequest,
+      com.aruna.api.storage.services.v2.SetEndpointStatusResponse> getSetEndpointStatusMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetEndpointStatusRequest, com.aruna.api.storage.services.v2.SetEndpointStatusResponse> getSetEndpointStatusMethod;
+    if ((getSetEndpointStatusMethod = EndpointServiceGrpc.getSetEndpointStatusMethod) == null) {
+      synchronized (EndpointServiceGrpc.class) {
+        if ((getSetEndpointStatusMethod = EndpointServiceGrpc.getSetEndpointStatusMethod) == null) {
+          EndpointServiceGrpc.getSetEndpointStatusMethod = getSetEndpointStatusMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.SetEndpointStatusRequest, com.aruna.api.storage.services.v2.SetEndpointStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetEndpointStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SetEndpointStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SetEndpointStatusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EndpointServiceMethodDescriptorSupplier("SetEndpointStatus"))
+              .build();
+        }
+      }
+    }
+    return getSetEndpointStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetEndpointRequest,
@@ -252,7 +284,8 @@ public final class EndpointServiceGrpc {
   /**
    * <pre>
    * EndpointService
-   * Contains all methods that get/create or update Endpoint and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update Endpoint (Dataproxies) and associated resources
    * </pre>
    */
   public interface AsyncService {
@@ -262,7 +295,7 @@ public final class EndpointServiceGrpc {
      * CreateEndpoint
      * Status: BETA
      * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * requires admin permissions
      * </pre>
      */
     default void createEndpoint(com.aruna.api.storage.services.v2.CreateEndpointRequest request,
@@ -280,6 +313,18 @@ public final class EndpointServiceGrpc {
     default void fullSyncEndpoint(com.aruna.api.storage.services.v2.FullSyncEndpointRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.FullSyncEndpointResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFullSyncEndpointMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetEndpointStatus
+     * Status: BETA
+     * This request sets the status of a specific Endpoint
+     * </pre>
+     */
+    default void setEndpointStatus(com.aruna.api.storage.services.v2.SetEndpointStatusRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetEndpointStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetEndpointStatusMethod(), responseObserver);
     }
 
     /**
@@ -338,7 +383,8 @@ public final class EndpointServiceGrpc {
    * Base class for the server implementation of the service EndpointService.
    * <pre>
    * EndpointService
-   * Contains all methods that get/create or update Endpoint and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update Endpoint (Dataproxies) and associated resources
    * </pre>
    */
   public static abstract class EndpointServiceImplBase
@@ -353,7 +399,8 @@ public final class EndpointServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service EndpointService.
    * <pre>
    * EndpointService
-   * Contains all methods that get/create or update Endpoint and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update Endpoint (Dataproxies) and associated resources
    * </pre>
    */
   public static final class EndpointServiceStub
@@ -374,7 +421,7 @@ public final class EndpointServiceGrpc {
      * CreateEndpoint
      * Status: BETA
      * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * requires admin permissions
      * </pre>
      */
     public void createEndpoint(com.aruna.api.storage.services.v2.CreateEndpointRequest request,
@@ -394,6 +441,19 @@ public final class EndpointServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.FullSyncEndpointResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getFullSyncEndpointMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetEndpointStatus
+     * Status: BETA
+     * This request sets the status of a specific Endpoint
+     * </pre>
+     */
+    public void setEndpointStatus(com.aruna.api.storage.services.v2.SetEndpointStatusRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetEndpointStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetEndpointStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -456,7 +516,8 @@ public final class EndpointServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service EndpointService.
    * <pre>
    * EndpointService
-   * Contains all methods that get/create or update Endpoint and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update Endpoint (Dataproxies) and associated resources
    * </pre>
    */
   public static final class EndpointServiceBlockingStub
@@ -477,7 +538,7 @@ public final class EndpointServiceGrpc {
      * CreateEndpoint
      * Status: BETA
      * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * requires admin permissions
      * </pre>
      */
     public com.aruna.api.storage.services.v2.CreateEndpointResponse createEndpoint(com.aruna.api.storage.services.v2.CreateEndpointRequest request) {
@@ -496,6 +557,18 @@ public final class EndpointServiceGrpc {
         com.aruna.api.storage.services.v2.FullSyncEndpointRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getFullSyncEndpointMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetEndpointStatus
+     * Status: BETA
+     * This request sets the status of a specific Endpoint
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.SetEndpointStatusResponse setEndpointStatus(com.aruna.api.storage.services.v2.SetEndpointStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetEndpointStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -554,7 +627,8 @@ public final class EndpointServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service EndpointService.
    * <pre>
    * EndpointService
-   * Contains all methods that get/create or update Endpoint and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update Endpoint (Dataproxies) and associated resources
    * </pre>
    */
   public static final class EndpointServiceFutureStub
@@ -575,13 +649,26 @@ public final class EndpointServiceGrpc {
      * CreateEndpoint
      * Status: BETA
      * Registers a new Endpoint (Aruna DataProxy) to the server
-     * Needs admin permissions
+     * requires admin permissions
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.CreateEndpointResponse> createEndpoint(
         com.aruna.api.storage.services.v2.CreateEndpointRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateEndpointMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetEndpointStatus
+     * Status: BETA
+     * This request sets the status of a specific Endpoint
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.SetEndpointStatusResponse> setEndpointStatus(
+        com.aruna.api.storage.services.v2.SetEndpointStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetEndpointStatusMethod(), getCallOptions()), request);
     }
 
     /**
@@ -642,10 +729,11 @@ public final class EndpointServiceGrpc {
 
   private static final int METHODID_CREATE_ENDPOINT = 0;
   private static final int METHODID_FULL_SYNC_ENDPOINT = 1;
-  private static final int METHODID_GET_ENDPOINT = 2;
-  private static final int METHODID_GET_ENDPOINTS = 3;
-  private static final int METHODID_DELETE_ENDPOINT = 4;
-  private static final int METHODID_GET_DEFAULT_ENDPOINT = 5;
+  private static final int METHODID_SET_ENDPOINT_STATUS = 2;
+  private static final int METHODID_GET_ENDPOINT = 3;
+  private static final int METHODID_GET_ENDPOINTS = 4;
+  private static final int METHODID_DELETE_ENDPOINT = 5;
+  private static final int METHODID_GET_DEFAULT_ENDPOINT = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -671,6 +759,10 @@ public final class EndpointServiceGrpc {
         case METHODID_FULL_SYNC_ENDPOINT:
           serviceImpl.fullSyncEndpoint((com.aruna.api.storage.services.v2.FullSyncEndpointRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.FullSyncEndpointResponse>) responseObserver);
+          break;
+        case METHODID_SET_ENDPOINT_STATUS:
+          serviceImpl.setEndpointStatus((com.aruna.api.storage.services.v2.SetEndpointStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetEndpointStatusResponse>) responseObserver);
           break;
         case METHODID_GET_ENDPOINT:
           serviceImpl.getEndpoint((com.aruna.api.storage.services.v2.GetEndpointRequest) request,
@@ -720,6 +812,13 @@ public final class EndpointServiceGrpc {
               com.aruna.api.storage.services.v2.FullSyncEndpointRequest,
               com.aruna.api.storage.services.v2.FullSyncEndpointResponse>(
                 service, METHODID_FULL_SYNC_ENDPOINT)))
+        .addMethod(
+          getSetEndpointStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.SetEndpointStatusRequest,
+              com.aruna.api.storage.services.v2.SetEndpointStatusResponse>(
+                service, METHODID_SET_ENDPOINT_STATUS)))
         .addMethod(
           getGetEndpointMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -798,6 +897,7 @@ public final class EndpointServiceGrpc {
               .setSchemaDescriptor(new EndpointServiceFileDescriptorSupplier())
               .addMethod(getCreateEndpointMethod())
               .addMethod(getFullSyncEndpointMethod())
+              .addMethod(getSetEndpointStatusMethod())
               .addMethod(getGetEndpointMethod())
               .addMethod(getGetEndpointsMethod())
               .addMethod(getDeleteEndpointMethod())

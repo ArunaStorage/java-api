@@ -5,9 +5,10 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * ServiceAccountService
- * Service that contains all methods for service_accounts, these are Accounts that are
- * project specific (or global) and can be used for automation. 
- * Service account users will always contain (bot) behind their name
+ * Status: BETA
+ * 
+ * Service that contains CRUD operations for service_accounts.
+ * Service accounts are project specific accounts that can be used for automation. 
  * </pre>
  */
 @javax.annotation.Generated(
@@ -378,9 +379,10 @@ public final class ServiceAccountServiceGrpc {
   /**
    * <pre>
    * ServiceAccountService
-   * Service that contains all methods for service_accounts, these are Accounts that are
-   * project specific (or global) and can be used for automation. 
-   * Service account users will always contain (bot) behind their name
+   * Status: BETA
+   * 
+   * Service that contains CRUD operations for service_accounts.
+   * Service accounts are project specific accounts that can be used for automation. 
    * </pre>
    */
   public interface AsyncService {
@@ -406,7 +408,7 @@ public final class ServiceAccountServiceGrpc {
      * Status: BETA
      * Creates a token for a service account
      * Each service account can only have one permission -&gt; The token will have the same permission as the
-     * service account
+     * service account or a subset of it.
      * </pre>
      */
     default void createServiceAccountToken(com.aruna.api.storage.services.v2.CreateServiceAccountTokenRequest request,
@@ -517,9 +519,10 @@ public final class ServiceAccountServiceGrpc {
    * Base class for the server implementation of the service ServiceAccountService.
    * <pre>
    * ServiceAccountService
-   * Service that contains all methods for service_accounts, these are Accounts that are
-   * project specific (or global) and can be used for automation. 
-   * Service account users will always contain (bot) behind their name
+   * Status: BETA
+   * 
+   * Service that contains CRUD operations for service_accounts.
+   * Service accounts are project specific accounts that can be used for automation. 
    * </pre>
    */
   public static abstract class ServiceAccountServiceImplBase
@@ -534,9 +537,10 @@ public final class ServiceAccountServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service ServiceAccountService.
    * <pre>
    * ServiceAccountService
-   * Service that contains all methods for service_accounts, these are Accounts that are
-   * project specific (or global) and can be used for automation. 
-   * Service account users will always contain (bot) behind their name
+   * Status: BETA
+   * 
+   * Service that contains CRUD operations for service_accounts.
+   * Service accounts are project specific accounts that can be used for automation. 
    * </pre>
    */
   public static final class ServiceAccountServiceStub
@@ -574,7 +578,7 @@ public final class ServiceAccountServiceGrpc {
      * Status: BETA
      * Creates a token for a service account
      * Each service account can only have one permission -&gt; The token will have the same permission as the
-     * service account
+     * service account or a subset of it.
      * </pre>
      */
     public void createServiceAccountToken(com.aruna.api.storage.services.v2.CreateServiceAccountTokenRequest request,
@@ -694,9 +698,10 @@ public final class ServiceAccountServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service ServiceAccountService.
    * <pre>
    * ServiceAccountService
-   * Service that contains all methods for service_accounts, these are Accounts that are
-   * project specific (or global) and can be used for automation. 
-   * Service account users will always contain (bot) behind their name
+   * Status: BETA
+   * 
+   * Service that contains CRUD operations for service_accounts.
+   * Service accounts are project specific accounts that can be used for automation. 
    * </pre>
    */
   public static final class ServiceAccountServiceBlockingStub
@@ -733,7 +738,7 @@ public final class ServiceAccountServiceGrpc {
      * Status: BETA
      * Creates a token for a service account
      * Each service account can only have one permission -&gt; The token will have the same permission as the
-     * service account
+     * service account or a subset of it.
      * </pre>
      */
     public com.aruna.api.storage.services.v2.CreateServiceAccountTokenResponse createServiceAccountToken(com.aruna.api.storage.services.v2.CreateServiceAccountTokenRequest request) {
@@ -844,9 +849,10 @@ public final class ServiceAccountServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ServiceAccountService.
    * <pre>
    * ServiceAccountService
-   * Service that contains all methods for service_accounts, these are Accounts that are
-   * project specific (or global) and can be used for automation. 
-   * Service account users will always contain (bot) behind their name
+   * Status: BETA
+   * 
+   * Service that contains CRUD operations for service_accounts.
+   * Service accounts are project specific accounts that can be used for automation. 
    * </pre>
    */
   public static final class ServiceAccountServiceFutureStub
@@ -884,7 +890,7 @@ public final class ServiceAccountServiceGrpc {
      * Status: BETA
      * Creates a token for a service account
      * Each service account can only have one permission -&gt; The token will have the same permission as the
-     * service account
+     * service account or a subset of it.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.CreateServiceAccountTokenResponse> createServiceAccountToken(

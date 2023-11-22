@@ -261,7 +261,10 @@ public final class HooksServiceGrpc {
 
     /**
      * <pre>
-     * Created Hooks are always associated with the owner that creates the hook
+     * CreateHook
+     * Status: ALPHA
+     * Creates a replication request
+     * Hooks are always associated with the owner that created the hook
      * </pre>
      */
     default void createHook(com.aruna.api.hooks.services.v2.CreateHookRequest request,
@@ -270,6 +273,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddProjectsToHook
+     * Status: ALPHA
+     * Assigns a hook to a project
+     * </pre>
      */
     default void addProjectsToHook(com.aruna.api.hooks.services.v2.AddProjectsToHookRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.AddProjectsToHookResponse> responseObserver) {
@@ -277,6 +285,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListProjectHooks
+     * Status: ALPHA
+     * List all hooks assigned to a project
+     * </pre>
      */
     default void listProjectHooks(com.aruna.api.hooks.services.v2.ListProjectHooksRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.ListProjectHooksResponse> responseObserver) {
@@ -284,6 +297,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListOwnedHooks
+     * Status: ALPHA
+     * List all hooks created by a user
+     * </pre>
      */
     default void listOwnedHooks(com.aruna.api.hooks.services.v2.ListOwnedHooksRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.ListOwnedHooksResponse> responseObserver) {
@@ -291,6 +309,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHook
+     * Status: ALPHA
+     * Delete a hook by id
+     * </pre>
      */
     default void deleteHook(com.aruna.api.hooks.services.v2.DeleteHookRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.DeleteHookResponse> responseObserver) {
@@ -298,6 +321,12 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Callback API
+     * Status: ALPHA
+     * Externally triggered hooks should respond to this endpoint to
+     * signal completion or failure and to provide additional flags for the object
+     * </pre>
      */
     default void hookCallback(com.aruna.api.hooks.services.v2.HookCallbackRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.HookCallbackResponse> responseObserver) {
@@ -344,7 +373,10 @@ public final class HooksServiceGrpc {
 
     /**
      * <pre>
-     * Created Hooks are always associated with the owner that creates the hook
+     * CreateHook
+     * Status: ALPHA
+     * Creates a replication request
+     * Hooks are always associated with the owner that created the hook
      * </pre>
      */
     public void createHook(com.aruna.api.hooks.services.v2.CreateHookRequest request,
@@ -354,6 +386,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddProjectsToHook
+     * Status: ALPHA
+     * Assigns a hook to a project
+     * </pre>
      */
     public void addProjectsToHook(com.aruna.api.hooks.services.v2.AddProjectsToHookRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.AddProjectsToHookResponse> responseObserver) {
@@ -362,6 +399,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListProjectHooks
+     * Status: ALPHA
+     * List all hooks assigned to a project
+     * </pre>
      */
     public void listProjectHooks(com.aruna.api.hooks.services.v2.ListProjectHooksRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.ListProjectHooksResponse> responseObserver) {
@@ -370,6 +412,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListOwnedHooks
+     * Status: ALPHA
+     * List all hooks created by a user
+     * </pre>
      */
     public void listOwnedHooks(com.aruna.api.hooks.services.v2.ListOwnedHooksRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.ListOwnedHooksResponse> responseObserver) {
@@ -378,6 +425,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHook
+     * Status: ALPHA
+     * Delete a hook by id
+     * </pre>
      */
     public void deleteHook(com.aruna.api.hooks.services.v2.DeleteHookRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.DeleteHookResponse> responseObserver) {
@@ -386,6 +438,12 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Callback API
+     * Status: ALPHA
+     * Externally triggered hooks should respond to this endpoint to
+     * signal completion or failure and to provide additional flags for the object
+     * </pre>
      */
     public void hookCallback(com.aruna.api.hooks.services.v2.HookCallbackRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.hooks.services.v2.HookCallbackResponse> responseObserver) {
@@ -417,7 +475,10 @@ public final class HooksServiceGrpc {
 
     /**
      * <pre>
-     * Created Hooks are always associated with the owner that creates the hook
+     * CreateHook
+     * Status: ALPHA
+     * Creates a replication request
+     * Hooks are always associated with the owner that created the hook
      * </pre>
      */
     public com.aruna.api.hooks.services.v2.CreateHookResponse createHook(com.aruna.api.hooks.services.v2.CreateHookRequest request) {
@@ -426,6 +487,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddProjectsToHook
+     * Status: ALPHA
+     * Assigns a hook to a project
+     * </pre>
      */
     public com.aruna.api.hooks.services.v2.AddProjectsToHookResponse addProjectsToHook(com.aruna.api.hooks.services.v2.AddProjectsToHookRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -433,6 +499,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListProjectHooks
+     * Status: ALPHA
+     * List all hooks assigned to a project
+     * </pre>
      */
     public com.aruna.api.hooks.services.v2.ListProjectHooksResponse listProjectHooks(com.aruna.api.hooks.services.v2.ListProjectHooksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -440,6 +511,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListOwnedHooks
+     * Status: ALPHA
+     * List all hooks created by a user
+     * </pre>
      */
     public com.aruna.api.hooks.services.v2.ListOwnedHooksResponse listOwnedHooks(com.aruna.api.hooks.services.v2.ListOwnedHooksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -447,6 +523,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHook
+     * Status: ALPHA
+     * Delete a hook by id
+     * </pre>
      */
     public com.aruna.api.hooks.services.v2.DeleteHookResponse deleteHook(com.aruna.api.hooks.services.v2.DeleteHookRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -454,6 +535,12 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Callback API
+     * Status: ALPHA
+     * Externally triggered hooks should respond to this endpoint to
+     * signal completion or failure and to provide additional flags for the object
+     * </pre>
      */
     public com.aruna.api.hooks.services.v2.HookCallbackResponse hookCallback(com.aruna.api.hooks.services.v2.HookCallbackRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -484,7 +571,10 @@ public final class HooksServiceGrpc {
 
     /**
      * <pre>
-     * Created Hooks are always associated with the owner that creates the hook
+     * CreateHook
+     * Status: ALPHA
+     * Creates a replication request
+     * Hooks are always associated with the owner that created the hook
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.hooks.services.v2.CreateHookResponse> createHook(
@@ -494,6 +584,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddProjectsToHook
+     * Status: ALPHA
+     * Assigns a hook to a project
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.hooks.services.v2.AddProjectsToHookResponse> addProjectsToHook(
         com.aruna.api.hooks.services.v2.AddProjectsToHookRequest request) {
@@ -502,6 +597,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListProjectHooks
+     * Status: ALPHA
+     * List all hooks assigned to a project
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.hooks.services.v2.ListProjectHooksResponse> listProjectHooks(
         com.aruna.api.hooks.services.v2.ListProjectHooksRequest request) {
@@ -510,6 +610,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListOwnedHooks
+     * Status: ALPHA
+     * List all hooks created by a user
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.hooks.services.v2.ListOwnedHooksResponse> listOwnedHooks(
         com.aruna.api.hooks.services.v2.ListOwnedHooksRequest request) {
@@ -518,6 +623,11 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteHook
+     * Status: ALPHA
+     * Delete a hook by id
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.hooks.services.v2.DeleteHookResponse> deleteHook(
         com.aruna.api.hooks.services.v2.DeleteHookRequest request) {
@@ -526,6 +636,12 @@ public final class HooksServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Callback API
+     * Status: ALPHA
+     * Externally triggered hooks should respond to this endpoint to
+     * signal completion or failure and to provide additional flags for the object
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.hooks.services.v2.HookCallbackResponse> hookCallback(
         com.aruna.api.hooks.services.v2.HookCallbackRequest request) {

@@ -5,9 +5,10 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * StorageStatusService
+ * Status: BETA
  * This is a generic service that contains utility functions 
  * these functions are used to query additional meta-information
- * about the status of the overall storage architecture
+ * about the status of storage components
  * </pre>
  */
 @javax.annotation.Generated(
@@ -223,9 +224,10 @@ public final class StorageStatusServiceGrpc {
   /**
    * <pre>
    * StorageStatusService
+   * Status: BETA
    * This is a generic service that contains utility functions 
    * these functions are used to query additional meta-information
-   * about the status of the overall storage architecture
+   * about the status of storage components
    * </pre>
    */
   public interface AsyncService {
@@ -256,6 +258,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPubkeys
+     * Status: BETA
+     * Get all public keys of all storage components
+     * </pre>
      */
     default void getPubkeys(com.aruna.api.storage.services.v2.GetPubkeysRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetPubkeysResponse> responseObserver) {
@@ -263,6 +270,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetAnnouncements
+     * Status: BETA
+     * Query global announcements
+     * </pre>
      */
     default void getAnnouncements(com.aruna.api.storage.services.v2.GetAnnouncementsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsResponse> responseObserver) {
@@ -270,6 +282,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * SetAnnouncements
+     * Status: BETA
+     * Update / add global announcements
+     * </pre>
      */
     default void setAnnouncements(com.aruna.api.storage.services.v2.SetAnnouncementsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetAnnouncementsResponse> responseObserver) {
@@ -281,9 +298,10 @@ public final class StorageStatusServiceGrpc {
    * Base class for the server implementation of the service StorageStatusService.
    * <pre>
    * StorageStatusService
+   * Status: BETA
    * This is a generic service that contains utility functions 
    * these functions are used to query additional meta-information
-   * about the status of the overall storage architecture
+   * about the status of storage components
    * </pre>
    */
   public static abstract class StorageStatusServiceImplBase
@@ -298,9 +316,10 @@ public final class StorageStatusServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service StorageStatusService.
    * <pre>
    * StorageStatusService
+   * Status: BETA
    * This is a generic service that contains utility functions 
    * these functions are used to query additional meta-information
-   * about the status of the overall storage architecture
+   * about the status of storage components
    * </pre>
    */
   public static final class StorageStatusServiceStub
@@ -344,6 +363,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPubkeys
+     * Status: BETA
+     * Get all public keys of all storage components
+     * </pre>
      */
     public void getPubkeys(com.aruna.api.storage.services.v2.GetPubkeysRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetPubkeysResponse> responseObserver) {
@@ -352,6 +376,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetAnnouncements
+     * Status: BETA
+     * Query global announcements
+     * </pre>
      */
     public void getAnnouncements(com.aruna.api.storage.services.v2.GetAnnouncementsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsResponse> responseObserver) {
@@ -360,6 +389,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * SetAnnouncements
+     * Status: BETA
+     * Update / add global announcements
+     * </pre>
      */
     public void setAnnouncements(com.aruna.api.storage.services.v2.SetAnnouncementsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetAnnouncementsResponse> responseObserver) {
@@ -372,9 +406,10 @@ public final class StorageStatusServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service StorageStatusService.
    * <pre>
    * StorageStatusService
+   * Status: BETA
    * This is a generic service that contains utility functions 
    * these functions are used to query additional meta-information
-   * about the status of the overall storage architecture
+   * about the status of storage components
    * </pre>
    */
   public static final class StorageStatusServiceBlockingStub
@@ -416,6 +451,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPubkeys
+     * Status: BETA
+     * Get all public keys of all storage components
+     * </pre>
      */
     public com.aruna.api.storage.services.v2.GetPubkeysResponse getPubkeys(com.aruna.api.storage.services.v2.GetPubkeysRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -423,6 +463,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetAnnouncements
+     * Status: BETA
+     * Query global announcements
+     * </pre>
      */
     public com.aruna.api.storage.services.v2.GetAnnouncementsResponse getAnnouncements(com.aruna.api.storage.services.v2.GetAnnouncementsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -430,6 +475,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * SetAnnouncements
+     * Status: BETA
+     * Update / add global announcements
+     * </pre>
      */
     public com.aruna.api.storage.services.v2.SetAnnouncementsResponse setAnnouncements(com.aruna.api.storage.services.v2.SetAnnouncementsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -441,9 +491,10 @@ public final class StorageStatusServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service StorageStatusService.
    * <pre>
    * StorageStatusService
+   * Status: BETA
    * This is a generic service that contains utility functions 
    * these functions are used to query additional meta-information
-   * about the status of the overall storage architecture
+   * about the status of storage components
    * </pre>
    */
   public static final class StorageStatusServiceFutureStub
@@ -487,6 +538,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetPubkeys
+     * Status: BETA
+     * Get all public keys of all storage components
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetPubkeysResponse> getPubkeys(
         com.aruna.api.storage.services.v2.GetPubkeysRequest request) {
@@ -495,6 +551,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * GetAnnouncements
+     * Status: BETA
+     * Query global announcements
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetAnnouncementsResponse> getAnnouncements(
         com.aruna.api.storage.services.v2.GetAnnouncementsRequest request) {
@@ -503,6 +564,11 @@ public final class StorageStatusServiceGrpc {
     }
 
     /**
+     * <pre>
+     * SetAnnouncements
+     * Status: BETA
+     * Update / add global announcements
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.SetAnnouncementsResponse> setAnnouncements(
         com.aruna.api.storage.services.v2.SetAnnouncementsRequest request) {

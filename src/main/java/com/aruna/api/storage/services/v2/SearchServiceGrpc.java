@@ -3,6 +3,11 @@ package com.aruna.api.storage.services.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * SearchService
+ * Status: BETA
+ * SearchService is used to query resources in the index and get a public view of them.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.59.0)",
@@ -184,6 +189,11 @@ public final class SearchServiceGrpc {
   }
 
   /**
+   * <pre>
+   * SearchService
+   * Status: BETA
+   * SearchService is used to query resources in the index and get a public view of them.
+   * </pre>
    */
   public interface AsyncService {
 
@@ -239,6 +249,11 @@ public final class SearchServiceGrpc {
 
   /**
    * Base class for the server implementation of the service SearchService.
+   * <pre>
+   * SearchService
+   * Status: BETA
+   * SearchService is used to query resources in the index and get a public view of them.
+   * </pre>
    */
   public static abstract class SearchServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -250,6 +265,11 @@ public final class SearchServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service SearchService.
+   * <pre>
+   * SearchService
+   * Status: BETA
+   * SearchService is used to query resources in the index and get a public view of them.
+   * </pre>
    */
   public static final class SearchServiceStub
       extends io.grpc.stub.AbstractAsyncStub<SearchServiceStub> {
@@ -320,6 +340,11 @@ public final class SearchServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SearchService.
+   * <pre>
+   * SearchService
+   * Status: BETA
+   * SearchService is used to query resources in the index and get a public view of them.
+   * </pre>
    */
   public static final class SearchServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<SearchServiceBlockingStub> {
@@ -386,6 +411,11 @@ public final class SearchServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service SearchService.
+   * <pre>
+   * SearchService
+   * Status: BETA
+   * SearchService is used to query resources in the index and get a public view of them.
+   * </pre>
    */
   public static final class SearchServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<SearchServiceFutureStub> {

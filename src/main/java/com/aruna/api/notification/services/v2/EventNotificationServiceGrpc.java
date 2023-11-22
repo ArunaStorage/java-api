@@ -5,7 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * EventNotificationService
- * A service to receive events in the AOS storage
+ * Status: BETA
+ * A service to receive events for CRUD operations on resources (users, resources etc.)
  * </pre>
  */
 @javax.annotation.Generated(
@@ -221,7 +222,8 @@ public final class EventNotificationServiceGrpc {
   /**
    * <pre>
    * EventNotificationService
-   * A service to receive events in the AOS storage
+   * Status: BETA
+   * A service to receive events for CRUD operations on resources (users, resources etc.)
    * </pre>
    */
   public interface AsyncService {
@@ -229,6 +231,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * CreateStreamConsumer
+     * Status: BETA
      * Creates a new event stream consumer.
      * </pre>
      */
@@ -240,6 +243,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Reads a set of messages from a given stream group 
      * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -253,6 +257,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Opens a stream which pushes each received notification individual and just-in-time.
      * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -266,6 +271,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * AcknowledgeMessageBatch
+     * Status: BETA
      * List of messages to acknowledge
      * Each reply is protected by a salt and and hmac that verifies the message
      * </pre>
@@ -278,6 +284,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
+     * Status: BETA
      * Deletes an existing event stream consumer by ID.
      * </pre>
      */
@@ -291,7 +298,8 @@ public final class EventNotificationServiceGrpc {
    * Base class for the server implementation of the service EventNotificationService.
    * <pre>
    * EventNotificationService
-   * A service to receive events in the AOS storage
+   * Status: BETA
+   * A service to receive events for CRUD operations on resources (users, resources etc.)
    * </pre>
    */
   public static abstract class EventNotificationServiceImplBase
@@ -306,7 +314,8 @@ public final class EventNotificationServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service EventNotificationService.
    * <pre>
    * EventNotificationService
-   * A service to receive events in the AOS storage
+   * Status: BETA
+   * A service to receive events for CRUD operations on resources (users, resources etc.)
    * </pre>
    */
   public static final class EventNotificationServiceStub
@@ -325,6 +334,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * CreateStreamConsumer
+     * Status: BETA
      * Creates a new event stream consumer.
      * </pre>
      */
@@ -337,6 +347,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Reads a set of messages from a given stream group 
      * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -351,6 +362,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Opens a stream which pushes each received notification individual and just-in-time.
      * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -365,6 +377,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * AcknowledgeMessageBatch
+     * Status: BETA
      * List of messages to acknowledge
      * Each reply is protected by a salt and and hmac that verifies the message
      * </pre>
@@ -378,6 +391,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
+     * Status: BETA
      * Deletes an existing event stream consumer by ID.
      * </pre>
      */
@@ -392,7 +406,8 @@ public final class EventNotificationServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service EventNotificationService.
    * <pre>
    * EventNotificationService
-   * A service to receive events in the AOS storage
+   * Status: BETA
+   * A service to receive events for CRUD operations on resources (users, resources etc.)
    * </pre>
    */
   public static final class EventNotificationServiceBlockingStub
@@ -411,6 +426,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * CreateStreamConsumer
+     * Status: BETA
      * Creates a new event stream consumer.
      * </pre>
      */
@@ -422,6 +438,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Reads a set of messages from a given stream group 
      * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -435,6 +452,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Opens a stream which pushes each received notification individual and just-in-time.
      * Each message contains a separate acknowledgement message that is protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -449,6 +467,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * AcknowledgeMessageBatch
+     * Status: BETA
      * List of messages to acknowledge
      * Each reply is protected by a salt and and hmac that verifies the message
      * </pre>
@@ -461,6 +480,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
+     * Status: BETA
      * Deletes an existing event stream consumer by ID.
      * </pre>
      */
@@ -474,7 +494,8 @@ public final class EventNotificationServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service EventNotificationService.
    * <pre>
    * EventNotificationService
-   * A service to receive events in the AOS storage
+   * Status: BETA
+   * A service to receive events for CRUD operations on resources (users, resources etc.)
    * </pre>
    */
   public static final class EventNotificationServiceFutureStub
@@ -493,6 +514,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * CreateStreamConsumer
+     * Status: BETA
      * Creates a new event stream consumer.
      * </pre>
      */
@@ -505,6 +527,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * GetEventMessageBatch
+     * Status: BETA
      * Reads a set of messages from a given stream group 
      * Each message contains a separate acknowledgement message thatis protected by a salt and an hmac for verification.
      * The message can be send directly through the AcknowledgeMessageBatch call to acknowledge the message.
@@ -519,6 +542,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * AcknowledgeMessageBatch
+     * Status: BETA
      * List of messages to acknowledge
      * Each reply is protected by a salt and and hmac that verifies the message
      * </pre>
@@ -532,6 +556,7 @@ public final class EventNotificationServiceGrpc {
     /**
      * <pre>
      * DeleteEventStreamingGroup
+     * Status: BETA
      * Deletes an existing event stream consumer by ID.
      * </pre>
      */

@@ -5,8 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * UserService
- * Contains all methods that get/create or update Users and associated resource
- * including all autorization methods
+ * Status: BETA
+ * Contains all CRUD methods for users and associated resource
  * </pre>
  */
 @javax.annotation.Generated(
@@ -579,34 +579,34 @@ public final class UserServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest,
-      com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProvierMethod;
+      com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProviderMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddOidcProvier",
+      fullMethodName = SERVICE_NAME + '/' + "AddOidcProvider",
       requestType = com.aruna.api.storage.services.v2.AddOidcProviderRequest.class,
       responseType = com.aruna.api.storage.services.v2.AddOidcProviderResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest,
-      com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProvierMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest, com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProvierMethod;
-    if ((getAddOidcProvierMethod = UserServiceGrpc.getAddOidcProvierMethod) == null) {
+      com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProviderMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddOidcProviderRequest, com.aruna.api.storage.services.v2.AddOidcProviderResponse> getAddOidcProviderMethod;
+    if ((getAddOidcProviderMethod = UserServiceGrpc.getAddOidcProviderMethod) == null) {
       synchronized (UserServiceGrpc.class) {
-        if ((getAddOidcProvierMethod = UserServiceGrpc.getAddOidcProvierMethod) == null) {
-          UserServiceGrpc.getAddOidcProvierMethod = getAddOidcProvierMethod =
+        if ((getAddOidcProviderMethod = UserServiceGrpc.getAddOidcProviderMethod) == null) {
+          UserServiceGrpc.getAddOidcProviderMethod = getAddOidcProviderMethod =
               io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AddOidcProviderRequest, com.aruna.api.storage.services.v2.AddOidcProviderResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddOidcProvier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddOidcProvider"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.aruna.api.storage.services.v2.AddOidcProviderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.aruna.api.storage.services.v2.AddOidcProviderResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AddOidcProvier"))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AddOidcProvider"))
               .build();
         }
       }
     }
-    return getAddOidcProvierMethod;
+    return getAddOidcProviderMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveOidcProviderRequest,
@@ -687,8 +687,8 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * UserService
-   * Contains all methods that get/create or update Users and associated resource
-   * including all autorization methods
+   * Status: BETA
+   * Contains all CRUD methods for users and associated resource
    * </pre>
    */
   public interface AsyncService {
@@ -913,13 +913,24 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddOidcProvider
+     * Status: BETA
+     * Add alternative oidc login method for user
+     * </pre>
      */
-    default void addOidcProvier(com.aruna.api.storage.services.v2.AddOidcProviderRequest request,
+    default void addOidcProvider(com.aruna.api.storage.services.v2.AddOidcProviderRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddOidcProviderResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOidcProvierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOidcProviderMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * RemoveOidcProvider
+     * Status: BETA
+     * Remove alternative oidc login method from user
+     * (Only works if user has more than one oidc provider)
+     * </pre>
      */
     default void removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> responseObserver) {
@@ -931,8 +942,8 @@ public final class UserServiceGrpc {
    * Base class for the server implementation of the service UserService.
    * <pre>
    * UserService
-   * Contains all methods that get/create or update Users and associated resource
-   * including all autorization methods
+   * Status: BETA
+   * Contains all CRUD methods for users and associated resource
    * </pre>
    */
   public static abstract class UserServiceImplBase
@@ -947,8 +958,8 @@ public final class UserServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service UserService.
    * <pre>
    * UserService
-   * Contains all methods that get/create or update Users and associated resource
-   * including all autorization methods
+   * Status: BETA
+   * Contains all CRUD methods for users and associated resource
    * </pre>
    */
   public static final class UserServiceStub
@@ -1202,14 +1213,25 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddOidcProvider
+     * Status: BETA
+     * Add alternative oidc login method for user
+     * </pre>
      */
-    public void addOidcProvier(com.aruna.api.storage.services.v2.AddOidcProviderRequest request,
+    public void addOidcProvider(com.aruna.api.storage.services.v2.AddOidcProviderRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddOidcProviderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAddOidcProvierMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddOidcProviderMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     * <pre>
+     * RemoveOidcProvider
+     * Status: BETA
+     * Remove alternative oidc login method from user
+     * (Only works if user has more than one oidc provider)
+     * </pre>
      */
     public void removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> responseObserver) {
@@ -1222,8 +1244,8 @@ public final class UserServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service UserService.
    * <pre>
    * UserService
-   * Contains all methods that get/create or update Users and associated resource
-   * including all autorization methods
+   * Status: BETA
+   * Contains all CRUD methods for users and associated resource
    * </pre>
    */
   public static final class UserServiceBlockingStub
@@ -1459,13 +1481,24 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddOidcProvider
+     * Status: BETA
+     * Add alternative oidc login method for user
+     * </pre>
      */
-    public com.aruna.api.storage.services.v2.AddOidcProviderResponse addOidcProvier(com.aruna.api.storage.services.v2.AddOidcProviderRequest request) {
+    public com.aruna.api.storage.services.v2.AddOidcProviderResponse addOidcProvider(com.aruna.api.storage.services.v2.AddOidcProviderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAddOidcProvierMethod(), getCallOptions(), request);
+          getChannel(), getAddOidcProviderMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * RemoveOidcProvider
+     * Status: BETA
+     * Remove alternative oidc login method from user
+     * (Only works if user has more than one oidc provider)
+     * </pre>
      */
     public com.aruna.api.storage.services.v2.RemoveOidcProviderResponse removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1477,8 +1510,8 @@ public final class UserServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service UserService.
    * <pre>
    * UserService
-   * Contains all methods that get/create or update Users and associated resource
-   * including all autorization methods
+   * Status: BETA
+   * Contains all CRUD methods for users and associated resource
    * </pre>
    */
   public static final class UserServiceFutureStub
@@ -1732,14 +1765,25 @@ public final class UserServiceGrpc {
     }
 
     /**
+     * <pre>
+     * AddOidcProvider
+     * Status: BETA
+     * Add alternative oidc login method for user
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AddOidcProviderResponse> addOidcProvier(
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AddOidcProviderResponse> addOidcProvider(
         com.aruna.api.storage.services.v2.AddOidcProviderRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAddOidcProvierMethod(), getCallOptions()), request);
+          getChannel().newCall(getAddOidcProviderMethod(), getCallOptions()), request);
     }
 
     /**
+     * <pre>
+     * RemoveOidcProvider
+     * Status: BETA
+     * Remove alternative oidc login method from user
+     * (Only works if user has more than one oidc provider)
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> removeOidcProvider(
         com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request) {
@@ -1766,7 +1810,7 @@ public final class UserServiceGrpc {
   private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 15;
   private static final int METHODID_GET_PERSONAL_NOTIFICATIONS = 16;
   private static final int METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS = 17;
-  private static final int METHODID_ADD_OIDC_PROVIER = 18;
+  private static final int METHODID_ADD_OIDC_PROVIDER = 18;
   private static final int METHODID_REMOVE_OIDC_PROVIDER = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
@@ -1858,8 +1902,8 @@ public final class UserServiceGrpc {
           serviceImpl.acknowledgePersonalNotifications((com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsResponse>) responseObserver);
           break;
-        case METHODID_ADD_OIDC_PROVIER:
-          serviceImpl.addOidcProvier((com.aruna.api.storage.services.v2.AddOidcProviderRequest) request,
+        case METHODID_ADD_OIDC_PROVIDER:
+          serviceImpl.addOidcProvider((com.aruna.api.storage.services.v2.AddOidcProviderRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddOidcProviderResponse>) responseObserver);
           break;
         case METHODID_REMOVE_OIDC_PROVIDER:
@@ -2011,12 +2055,12 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.AcknowledgePersonalNotificationsResponse>(
                 service, METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS)))
         .addMethod(
-          getAddOidcProvierMethod(),
+          getAddOidcProviderMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.aruna.api.storage.services.v2.AddOidcProviderRequest,
               com.aruna.api.storage.services.v2.AddOidcProviderResponse>(
-                service, METHODID_ADD_OIDC_PROVIER)))
+                service, METHODID_ADD_OIDC_PROVIDER)))
         .addMethod(
           getRemoveOidcProviderMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2090,7 +2134,7 @@ public final class UserServiceGrpc {
               .addMethod(getGetDataproxyTokenUserMethod())
               .addMethod(getGetPersonalNotificationsMethod())
               .addMethod(getAcknowledgePersonalNotificationsMethod())
-              .addMethod(getAddOidcProvierMethod())
+              .addMethod(getAddOidcProviderMethod())
               .addMethod(getRemoveOidcProviderMethod())
               .build();
         }

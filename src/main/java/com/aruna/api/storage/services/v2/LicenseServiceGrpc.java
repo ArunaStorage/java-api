@@ -5,7 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * LicenseService
- * Contains all methods to add, get or list licenses
+ * Status: BETA
+ * Contains all methods to add, get or list (custom) licenses
  * </pre>
  */
 @javax.annotation.Generated(
@@ -159,7 +160,8 @@ public final class LicenseServiceGrpc {
   /**
    * <pre>
    * LicenseService
-   * Contains all methods to add, get or list licenses
+   * Status: BETA
+   * Contains all methods to add, get or list (custom) licenses
    * </pre>
    */
   public interface AsyncService {
@@ -205,7 +207,8 @@ public final class LicenseServiceGrpc {
    * Base class for the server implementation of the service LicenseService.
    * <pre>
    * LicenseService
-   * Contains all methods to add, get or list licenses
+   * Status: BETA
+   * Contains all methods to add, get or list (custom) licenses
    * </pre>
    */
   public static abstract class LicenseServiceImplBase
@@ -220,7 +223,8 @@ public final class LicenseServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service LicenseService.
    * <pre>
    * LicenseService
-   * Contains all methods to add, get or list licenses
+   * Status: BETA
+   * Contains all methods to add, get or list (custom) licenses
    * </pre>
    */
   public static final class LicenseServiceStub
@@ -280,7 +284,8 @@ public final class LicenseServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service LicenseService.
    * <pre>
    * LicenseService
-   * Contains all methods to add, get or list licenses
+   * Status: BETA
+   * Contains all methods to add, get or list (custom) licenses
    * </pre>
    */
   public static final class LicenseServiceBlockingStub
@@ -337,7 +342,8 @@ public final class LicenseServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service LicenseService.
    * <pre>
    * LicenseService
-   * Contains all methods to add, get or list licenses
+   * Status: BETA
+   * Contains all methods to add, get or list (custom) licenses
    * </pre>
    */
   public static final class LicenseServiceFutureStub

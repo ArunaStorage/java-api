@@ -5,6 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * CollectionService
+ * Status: BETA
  * Contains all methods that get/create or update Collection and associated resources
  * </pre>
  */
@@ -376,6 +377,7 @@ public final class CollectionServiceGrpc {
   /**
    * <pre>
    * CollectionService
+   * Status: BETA
    * Contains all methods that get/create or update Collection and associated resources
    * </pre>
    */
@@ -506,6 +508,7 @@ public final class CollectionServiceGrpc {
    * Base class for the server implementation of the service CollectionService.
    * <pre>
    * CollectionService
+   * Status: BETA
    * Contains all methods that get/create or update Collection and associated resources
    * </pre>
    */
@@ -521,6 +524,7 @@ public final class CollectionServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service CollectionService.
    * <pre>
    * CollectionService
+   * Status: BETA
    * Contains all methods that get/create or update Collection and associated resources
    * </pre>
    */
@@ -672,6 +676,7 @@ public final class CollectionServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service CollectionService.
    * <pre>
    * CollectionService
+   * Status: BETA
    * Contains all methods that get/create or update Collection and associated resources
    * </pre>
    */
@@ -813,6 +818,7 @@ public final class CollectionServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service CollectionService.
    * <pre>
    * CollectionService
+   * Status: BETA
    * Contains all methods that get/create or update Collection and associated resources
    * </pre>
    */

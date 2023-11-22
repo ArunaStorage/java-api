@@ -5,7 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * ObjectService
- * Contains all methods that get/create or update Objects and associated resources
+ * Status: BETA
+ * Contains all methods that get/create or update objects and associated resources
  * </pre>
  */
 @javax.annotation.Generated(
@@ -345,7 +346,8 @@ public final class ObjectServiceGrpc {
   /**
    * <pre>
    * ObjectService
-   * Contains all methods that get/create or update Objects and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update objects and associated resources
    * </pre>
    */
   public interface AsyncService {
@@ -354,8 +356,9 @@ public final class ObjectServiceGrpc {
      * <pre>
      * CreateObject
      * Status: BETA
-     * This creates a new object
-     * Initializing an object will put it in a staging area.
+     * This creates a new object and puts it in a staging area.
+     * Staging objects have an "INITIALIZING" status
+     * and need to be finished either manually or by uploading data.
      * </pre>
      */
     default void createObject(com.aruna.api.storage.services.v2.CreateObjectRequest request,
@@ -479,7 +482,8 @@ public final class ObjectServiceGrpc {
    * Base class for the server implementation of the service ObjectService.
    * <pre>
    * ObjectService
-   * Contains all methods that get/create or update Objects and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update objects and associated resources
    * </pre>
    */
   public static abstract class ObjectServiceImplBase
@@ -494,7 +498,8 @@ public final class ObjectServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service ObjectService.
    * <pre>
    * ObjectService
-   * Contains all methods that get/create or update Objects and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update objects and associated resources
    * </pre>
    */
   public static final class ObjectServiceStub
@@ -514,8 +519,9 @@ public final class ObjectServiceGrpc {
      * <pre>
      * CreateObject
      * Status: BETA
-     * This creates a new object
-     * Initializing an object will put it in a staging area.
+     * This creates a new object and puts it in a staging area.
+     * Staging objects have an "INITIALIZING" status
+     * and need to be finished either manually or by uploading data.
      * </pre>
      */
     public void createObject(com.aruna.api.storage.services.v2.CreateObjectRequest request,
@@ -648,7 +654,8 @@ public final class ObjectServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service ObjectService.
    * <pre>
    * ObjectService
-   * Contains all methods that get/create or update Objects and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update objects and associated resources
    * </pre>
    */
   public static final class ObjectServiceBlockingStub
@@ -668,8 +675,9 @@ public final class ObjectServiceGrpc {
      * <pre>
      * CreateObject
      * Status: BETA
-     * This creates a new object
-     * Initializing an object will put it in a staging area.
+     * This creates a new object and puts it in a staging area.
+     * Staging objects have an "INITIALIZING" status
+     * and need to be finished either manually or by uploading data.
      * </pre>
      */
     public com.aruna.api.storage.services.v2.CreateObjectResponse createObject(com.aruna.api.storage.services.v2.CreateObjectRequest request) {
@@ -793,7 +801,8 @@ public final class ObjectServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ObjectService.
    * <pre>
    * ObjectService
-   * Contains all methods that get/create or update Objects and associated resources
+   * Status: BETA
+   * Contains all methods that get/create or update objects and associated resources
    * </pre>
    */
   public static final class ObjectServiceFutureStub
@@ -813,8 +822,9 @@ public final class ObjectServiceGrpc {
      * <pre>
      * CreateObject
      * Status: BETA
-     * This creates a new object
-     * Initializing an object will put it in a staging area.
+     * This creates a new object and puts it in a staging area.
+     * Staging objects have an "INITIALIZING" status
+     * and need to be finished either manually or by uploading data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.CreateObjectResponse> createObject(
