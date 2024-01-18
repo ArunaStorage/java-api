@@ -4,7 +4,7 @@ managed:
   optimize_for: SPEED
   java_multiple_files: true
 plugins:
-  - plugin: buf.build/grpc/java:v1.59.0
+  - plugin: buf.build/grpc/java:v1.61.0
     out: src/main/java
   - plugin: buf.build/protocolbuffers/java
     out: src/main/java
