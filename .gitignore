@@ -1,3 +1,10 @@
+# IDE meta
+/.idea
+/.vscode
+
+# Target directory
+/target
+
 # Compiled class file
 *.class
 
