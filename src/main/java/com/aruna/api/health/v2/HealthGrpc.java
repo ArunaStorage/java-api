@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.59.0)",
+    value = "by gRPC proto compiler (version 1.61.0)",
     comments = "Source: aruna/api/health/v2/health.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class HealthGrpc {

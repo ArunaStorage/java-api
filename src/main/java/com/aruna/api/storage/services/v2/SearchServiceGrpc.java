@@ -10,7 +10,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.59.0)",
+    value = "by gRPC proto compiler (version 1.61.0)",
     comments = "Source: aruna/api/storage/services/v2/search_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SearchServiceGrpc {
