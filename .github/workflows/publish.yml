@@ -23,6 +23,9 @@ jobs:
           git submodule update --init --recursive
           git submodule update --remote --recursive
 
+      - name: Clean generated stubs
+        run: rm -r ./src/main/java/*
+
       - name: Setup buf
         uses: bufbuild/buf-setup-action@v1
 
