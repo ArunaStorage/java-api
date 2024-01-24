@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int PARTIAL_SYNC_FIELD_NUMBER = 3;
   /**
-   * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+   * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
    * @return Whether the partialSync field is set.
    */
   @java.lang.Override
@@ -164,25 +164,15 @@ private static final long serialVersionUID = 0L;
     return variantCase_ == 3;
   }
   /**
-   * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+   * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
    * @return The partialSync.
    */
   @java.lang.Override
-  public com.aruna.api.storage.models.v2.PartialSync getPartialSync() {
+  public boolean getPartialSync() {
     if (variantCase_ == 3) {
-       return (com.aruna.api.storage.models.v2.PartialSync) variant_;
+      return (java.lang.Boolean) variant_;
     }
-    return com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance();
-  }
-  /**
-   * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-   */
-  @java.lang.Override
-  public com.aruna.api.storage.models.v2.PartialSyncOrBuilder getPartialSyncOrBuilder() {
-    if (variantCase_ == 3) {
-       return (com.aruna.api.storage.models.v2.PartialSync) variant_;
-    }
-    return com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance();
+    return false;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
@@ -231,7 +221,8 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(2, (com.aruna.api.storage.models.v2.FullSync) variant_);
     }
     if (variantCase_ == 3) {
-      output.writeMessage(3, (com.aruna.api.storage.models.v2.PartialSync) variant_);
+      output.writeBool(
+          3, (boolean)((java.lang.Boolean) variant_));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeEnum(4, status_);
@@ -254,7 +245,8 @@ private static final long serialVersionUID = 0L;
     }
     if (variantCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (com.aruna.api.storage.models.v2.PartialSync) variant_);
+        .computeBoolSize(
+            3, (boolean)((java.lang.Boolean) variant_));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -288,8 +280,8 @@ private static final long serialVersionUID = 0L;
             .equals(other.getFullSync())) return false;
         break;
       case 3:
-        if (!getPartialSync()
-            .equals(other.getPartialSync())) return false;
+        if (getPartialSync()
+            != other.getPartialSync()) return false;
         break;
       case 0:
       default:
@@ -318,7 +310,8 @@ private static final long serialVersionUID = 0L;
         break;
       case 3:
         hash = (37 * hash) + PARTIAL_SYNC_FIELD_NUMBER;
-        hash = (53 * hash) + getPartialSync().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPartialSync());
         break;
       case 0:
       default:
@@ -458,9 +451,6 @@ private static final long serialVersionUID = 0L;
       if (fullSyncBuilder_ != null) {
         fullSyncBuilder_.clear();
       }
-      if (partialSyncBuilder_ != null) {
-        partialSyncBuilder_.clear();
-      }
       status_ = 0;
       variantCase_ = 0;
       variant_ = null;
@@ -515,10 +505,6 @@ private static final long serialVersionUID = 0L;
       if (variantCase_ == 2 &&
           fullSyncBuilder_ != null) {
         result.variant_ = fullSyncBuilder_.build();
-      }
-      if (variantCase_ == 3 &&
-          partialSyncBuilder_ != null) {
-        result.variant_ = partialSyncBuilder_.build();
       }
     }
 
@@ -580,7 +566,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
         case PARTIAL_SYNC: {
-          mergePartialSync(other.getPartialSync());
+          setPartialSync(other.getPartialSync());
           break;
         }
         case VARIANT_NOT_SET: {
@@ -625,13 +611,11 @@ private static final long serialVersionUID = 0L;
               variantCase_ = 2;
               break;
             } // case 18
-            case 26: {
-              input.readMessage(
-                  getPartialSyncFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 24: {
+              variant_ = input.readBool();
               variantCase_ = 3;
               break;
-            } // case 26
+            } // case 24
             case 32: {
               status_ = input.readEnum();
               bitField0_ |= 0x00000008;
@@ -883,146 +867,46 @@ private static final long serialVersionUID = 0L;
       return fullSyncBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.aruna.api.storage.models.v2.PartialSync, com.aruna.api.storage.models.v2.PartialSync.Builder, com.aruna.api.storage.models.v2.PartialSyncOrBuilder> partialSyncBuilder_;
     /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+     * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
      * @return Whether the partialSync field is set.
      */
-    @java.lang.Override
     public boolean hasPartialSync() {
       return variantCase_ == 3;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+     * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
      * @return The partialSync.
      */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.PartialSync getPartialSync() {
-      if (partialSyncBuilder_ == null) {
-        if (variantCase_ == 3) {
-          return (com.aruna.api.storage.models.v2.PartialSync) variant_;
-        }
-        return com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance();
-      } else {
-        if (variantCase_ == 3) {
-          return partialSyncBuilder_.getMessage();
-        }
-        return com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance();
+    public boolean getPartialSync() {
+      if (variantCase_ == 3) {
+        return (java.lang.Boolean) variant_;
       }
+      return false;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+     * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
+     * @param value The partialSync to set.
+     * @return This builder for chaining.
      */
-    public Builder setPartialSync(com.aruna.api.storage.models.v2.PartialSync value) {
-      if (partialSyncBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        variant_ = value;
-        onChanged();
-      } else {
-        partialSyncBuilder_.setMessage(value);
-      }
+    public Builder setPartialSync(boolean value) {
+
       variantCase_ = 3;
+      variant_ = value;
+      onChanged();
       return this;
     }
     /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-     */
-    public Builder setPartialSync(
-        com.aruna.api.storage.models.v2.PartialSync.Builder builderForValue) {
-      if (partialSyncBuilder_ == null) {
-        variant_ = builderForValue.build();
-        onChanged();
-      } else {
-        partialSyncBuilder_.setMessage(builderForValue.build());
-      }
-      variantCase_ = 3;
-      return this;
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-     */
-    public Builder mergePartialSync(com.aruna.api.storage.models.v2.PartialSync value) {
-      if (partialSyncBuilder_ == null) {
-        if (variantCase_ == 3 &&
-            variant_ != com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance()) {
-          variant_ = com.aruna.api.storage.models.v2.PartialSync.newBuilder((com.aruna.api.storage.models.v2.PartialSync) variant_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          variant_ = value;
-        }
-        onChanged();
-      } else {
-        if (variantCase_ == 3) {
-          partialSyncBuilder_.mergeFrom(value);
-        } else {
-          partialSyncBuilder_.setMessage(value);
-        }
-      }
-      variantCase_ = 3;
-      return this;
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+     * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPartialSync() {
-      if (partialSyncBuilder_ == null) {
-        if (variantCase_ == 3) {
-          variantCase_ = 0;
-          variant_ = null;
-          onChanged();
-        }
-      } else {
-        if (variantCase_ == 3) {
-          variantCase_ = 0;
-          variant_ = null;
-        }
-        partialSyncBuilder_.clear();
+      if (variantCase_ == 3) {
+        variantCase_ = 0;
+        variant_ = null;
+        onChanged();
       }
       return this;
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-     */
-    public com.aruna.api.storage.models.v2.PartialSync.Builder getPartialSyncBuilder() {
-      return getPartialSyncFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-     */
-    @java.lang.Override
-    public com.aruna.api.storage.models.v2.PartialSyncOrBuilder getPartialSyncOrBuilder() {
-      if ((variantCase_ == 3) && (partialSyncBuilder_ != null)) {
-        return partialSyncBuilder_.getMessageOrBuilder();
-      } else {
-        if (variantCase_ == 3) {
-          return (com.aruna.api.storage.models.v2.PartialSync) variant_;
-        }
-        return com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.aruna.api.storage.models.v2.PartialSync, com.aruna.api.storage.models.v2.PartialSync.Builder, com.aruna.api.storage.models.v2.PartialSyncOrBuilder> 
-        getPartialSyncFieldBuilder() {
-      if (partialSyncBuilder_ == null) {
-        if (!(variantCase_ == 3)) {
-          variant_ = com.aruna.api.storage.models.v2.PartialSync.getDefaultInstance();
-        }
-        partialSyncBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.aruna.api.storage.models.v2.PartialSync, com.aruna.api.storage.models.v2.PartialSync.Builder, com.aruna.api.storage.models.v2.PartialSyncOrBuilder>(
-                (com.aruna.api.storage.models.v2.PartialSync) variant_,
-                getParentForChildren(),
-                isClean());
-        variant_ = null;
-      }
-      variantCase_ = 3;
-      onChanged();
-      return partialSyncBuilder_;
     }
 
     private int status_ = 0;

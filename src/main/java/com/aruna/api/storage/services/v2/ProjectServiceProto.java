@@ -239,7 +239,7 @@ public final class ProjectServiceProto {
       "rage\\Services\\V2\\GPBMetadata\352\002!Aruna::Ap" +
       "i::Storage::Services::V2\222A\324\001\0224\n#Aruna Ob" +
       "ject Storage (AOS) REST API2\r2.0.0-beta." +
-      "10*\001\0022\020application/json:\020application/jso" +
+      "11*\001\0022\020application/json:\020application/jso" +
       "nZ`\n^\n\rAccessKeyAuth\022M\010\002\0228Authentication" +
       " token, prefixed by Bearer: Bearer <toke" +
       "n>\032\rAuthorization \002b\023\n\021\n\rAccessKeyAuth\022\000" +

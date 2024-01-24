@@ -36,19 +36,15 @@ public interface DataEndpointOrBuilder extends
   com.aruna.api.storage.models.v2.FullSyncOrBuilder getFullSyncOrBuilder();
 
   /**
-   * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+   * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
    * @return Whether the partialSync field is set.
    */
   boolean hasPartialSync();
   /**
-   * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
+   * <code>bool partial_sync = 3 [json_name = "partialSync"];</code>
    * @return The partialSync.
    */
-  com.aruna.api.storage.models.v2.PartialSync getPartialSync();
-  /**
-   * <code>.aruna.api.storage.models.v2.PartialSync partial_sync = 3 [json_name = "partialSync"];</code>
-   */
-  com.aruna.api.storage.models.v2.PartialSyncOrBuilder getPartialSyncOrBuilder();
+  boolean getPartialSync();
 
   /**
    * <code>optional .aruna.api.storage.models.v2.ReplicationStatus status = 4 [json_name = "status"];</code>
