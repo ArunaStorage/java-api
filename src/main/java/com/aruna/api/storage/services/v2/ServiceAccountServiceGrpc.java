@@ -12,7 +12,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.61.0)",
+    value = "by gRPC proto compiler (version 1.62.2)",
     comments = "Source: aruna/api/storage/services/v2/service_account_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ServiceAccountServiceGrpc {
