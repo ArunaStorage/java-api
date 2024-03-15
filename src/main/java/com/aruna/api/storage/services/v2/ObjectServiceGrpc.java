@@ -299,6 +299,99 @@ public final class ObjectServiceGrpc {
     return getGetObjectsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateObjectTitleRequest,
+      com.aruna.api.storage.services.v2.UpdateObjectTitleResponse> getUpdateObjectTitleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateObjectTitle",
+      requestType = com.aruna.api.storage.services.v2.UpdateObjectTitleRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UpdateObjectTitleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateObjectTitleRequest,
+      com.aruna.api.storage.services.v2.UpdateObjectTitleResponse> getUpdateObjectTitleMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateObjectTitleRequest, com.aruna.api.storage.services.v2.UpdateObjectTitleResponse> getUpdateObjectTitleMethod;
+    if ((getUpdateObjectTitleMethod = ObjectServiceGrpc.getUpdateObjectTitleMethod) == null) {
+      synchronized (ObjectServiceGrpc.class) {
+        if ((getUpdateObjectTitleMethod = ObjectServiceGrpc.getUpdateObjectTitleMethod) == null) {
+          ObjectServiceGrpc.getUpdateObjectTitleMethod = getUpdateObjectTitleMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UpdateObjectTitleRequest, com.aruna.api.storage.services.v2.UpdateObjectTitleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateObjectTitle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateObjectTitleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateObjectTitleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ObjectServiceMethodDescriptorSupplier("UpdateObjectTitle"))
+              .build();
+        }
+      }
+    }
+    return getUpdateObjectTitleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest,
+      com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse> getUpdateObjectAuthorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateObjectAuthors",
+      requestType = com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest,
+      com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse> getUpdateObjectAuthorsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest, com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse> getUpdateObjectAuthorsMethod;
+    if ((getUpdateObjectAuthorsMethod = ObjectServiceGrpc.getUpdateObjectAuthorsMethod) == null) {
+      synchronized (ObjectServiceGrpc.class) {
+        if ((getUpdateObjectAuthorsMethod = ObjectServiceGrpc.getUpdateObjectAuthorsMethod) == null) {
+          ObjectServiceGrpc.getUpdateObjectAuthorsMethod = getUpdateObjectAuthorsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest, com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateObjectAuthors"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ObjectServiceMethodDescriptorSupplier("UpdateObjectAuthors"))
+              .build();
+        }
+      }
+    }
+    return getUpdateObjectAuthorsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetObjectHashesRequest,
+      com.aruna.api.storage.services.v2.SetObjectHashesResponse> getSetObjectHashesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetObjectHashes",
+      requestType = com.aruna.api.storage.services.v2.SetObjectHashesRequest.class,
+      responseType = com.aruna.api.storage.services.v2.SetObjectHashesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetObjectHashesRequest,
+      com.aruna.api.storage.services.v2.SetObjectHashesResponse> getSetObjectHashesMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetObjectHashesRequest, com.aruna.api.storage.services.v2.SetObjectHashesResponse> getSetObjectHashesMethod;
+    if ((getSetObjectHashesMethod = ObjectServiceGrpc.getSetObjectHashesMethod) == null) {
+      synchronized (ObjectServiceGrpc.class) {
+        if ((getSetObjectHashesMethod = ObjectServiceGrpc.getSetObjectHashesMethod) == null) {
+          ObjectServiceGrpc.getSetObjectHashesMethod = getSetObjectHashesMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.SetObjectHashesRequest, com.aruna.api.storage.services.v2.SetObjectHashesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetObjectHashes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SetObjectHashesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.SetObjectHashesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ObjectServiceMethodDescriptorSupplier("SetObjectHashes"))
+              .build();
+        }
+      }
+    }
+    return getSetObjectHashesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -476,6 +569,44 @@ public final class ObjectServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetObjectsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of an object
+     * </pre>
+     */
+    default void updateObjectTitle(com.aruna.api.storage.services.v2.UpdateObjectTitleRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateObjectTitleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateObjectTitleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    default void updateObjectAuthors(com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateObjectAuthorsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetObjectHashes
+     * Status: ALPHA
+     * This method sets the object hashes if not already set
+     * if a hash is already set, it will be compared to the new hash and
+     * set the status to ERROR if they do not match
+     * </pre>
+     */
+    default void setObjectHashes(com.aruna.api.storage.services.v2.SetObjectHashesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetObjectHashesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetObjectHashesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -648,6 +779,47 @@ public final class ObjectServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetObjectsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of an object
+     * </pre>
+     */
+    public void updateObjectTitle(com.aruna.api.storage.services.v2.UpdateObjectTitleRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateObjectTitleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateObjectTitleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    public void updateObjectAuthors(com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateObjectAuthorsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetObjectHashes
+     * Status: ALPHA
+     * This method sets the object hashes if not already set
+     * if a hash is already set, it will be compared to the new hash and
+     * set the status to ERROR if they do not match
+     * </pre>
+     */
+    public void setObjectHashes(com.aruna.api.storage.services.v2.SetObjectHashesRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetObjectHashesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetObjectHashesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -794,6 +966,44 @@ public final class ObjectServiceGrpc {
     public com.aruna.api.storage.services.v2.GetObjectsResponse getObjects(com.aruna.api.storage.services.v2.GetObjectsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of an object
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UpdateObjectTitleResponse updateObjectTitle(com.aruna.api.storage.services.v2.UpdateObjectTitleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateObjectTitleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse updateObjectAuthors(com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateObjectAuthorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetObjectHashes
+     * Status: ALPHA
+     * This method sets the object hashes if not already set
+     * if a hash is already set, it will be compared to the new hash and
+     * set the status to ERROR if they do not match
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.SetObjectHashesResponse setObjectHashes(com.aruna.api.storage.services.v2.SetObjectHashesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetObjectHashesMethod(), getCallOptions(), request);
     }
   }
 
@@ -951,6 +1161,47 @@ public final class ObjectServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetObjectsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of an object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UpdateObjectTitleResponse> updateObjectTitle(
+        com.aruna.api.storage.services.v2.UpdateObjectTitleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateObjectTitleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse> updateObjectAuthors(
+        com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateObjectAuthorsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetObjectHashes
+     * Status: ALPHA
+     * This method sets the object hashes if not already set
+     * if a hash is already set, it will be compared to the new hash and
+     * set the status to ERROR if they do not match
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.SetObjectHashesResponse> setObjectHashes(
+        com.aruna.api.storage.services.v2.SetObjectHashesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetObjectHashesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_OBJECT = 0;
@@ -962,6 +1213,9 @@ public final class ObjectServiceGrpc {
   private static final int METHODID_DELETE_OBJECT = 6;
   private static final int METHODID_GET_OBJECT = 7;
   private static final int METHODID_GET_OBJECTS = 8;
+  private static final int METHODID_UPDATE_OBJECT_TITLE = 9;
+  private static final int METHODID_UPDATE_OBJECT_AUTHORS = 10;
+  private static final int METHODID_SET_OBJECT_HASHES = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1015,6 +1269,18 @@ public final class ObjectServiceGrpc {
         case METHODID_GET_OBJECTS:
           serviceImpl.getObjects((com.aruna.api.storage.services.v2.GetObjectsRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetObjectsResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_OBJECT_TITLE:
+          serviceImpl.updateObjectTitle((com.aruna.api.storage.services.v2.UpdateObjectTitleRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateObjectTitleResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_OBJECT_AUTHORS:
+          serviceImpl.updateObjectAuthors((com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse>) responseObserver);
+          break;
+        case METHODID_SET_OBJECT_HASHES:
+          serviceImpl.setObjectHashes((com.aruna.api.storage.services.v2.SetObjectHashesRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.SetObjectHashesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1097,6 +1363,27 @@ public final class ObjectServiceGrpc {
               com.aruna.api.storage.services.v2.GetObjectsRequest,
               com.aruna.api.storage.services.v2.GetObjectsResponse>(
                 service, METHODID_GET_OBJECTS)))
+        .addMethod(
+          getUpdateObjectTitleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UpdateObjectTitleRequest,
+              com.aruna.api.storage.services.v2.UpdateObjectTitleResponse>(
+                service, METHODID_UPDATE_OBJECT_TITLE)))
+        .addMethod(
+          getUpdateObjectAuthorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UpdateObjectAuthorsRequest,
+              com.aruna.api.storage.services.v2.UpdateObjectAuthorsResponse>(
+                service, METHODID_UPDATE_OBJECT_AUTHORS)))
+        .addMethod(
+          getSetObjectHashesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.SetObjectHashesRequest,
+              com.aruna.api.storage.services.v2.SetObjectHashesResponse>(
+                service, METHODID_SET_OBJECT_HASHES)))
         .build();
   }
 
@@ -1154,6 +1441,9 @@ public final class ObjectServiceGrpc {
               .addMethod(getDeleteObjectMethod())
               .addMethod(getGetObjectMethod())
               .addMethod(getGetObjectsMethod())
+              .addMethod(getUpdateObjectTitleMethod())
+              .addMethod(getUpdateObjectAuthorsMethod())
+              .addMethod(getSetObjectHashesMethod())
               .build();
         }
       }

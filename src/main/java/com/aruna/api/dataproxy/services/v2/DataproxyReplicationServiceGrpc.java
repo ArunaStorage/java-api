@@ -150,7 +150,7 @@ public final class DataproxyReplicationServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: ALPHA
+     * Status: UNIMPLEMENTED
      * Provides the necessary url to init replication
      * </pre>
      */
@@ -213,7 +213,7 @@ public final class DataproxyReplicationServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: ALPHA
+     * Status: UNIMPLEMENTED
      * Provides the necessary url to init replication
      * </pre>
      */
@@ -248,7 +248,7 @@ public final class DataproxyReplicationServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: ALPHA
+     * Status: UNIMPLEMENTED
      * Provides the necessary url to init replication
      * </pre>
      */
@@ -282,7 +282,7 @@ public final class DataproxyReplicationServiceGrpc {
     /**
      * <pre>
      * InitReplication
-     * Status: ALPHA
+     * Status: UNIMPLEMENTED
      * Provides the necessary url to init replication
      * </pre>
      */

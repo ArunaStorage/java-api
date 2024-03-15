@@ -46,6 +46,68 @@ public final class DataproxyUserServiceGrpc {
     return getGetCredentialsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest,
+      com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse> getCreateOrUpdateCredentialsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOrUpdateCredentials",
+      requestType = com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest.class,
+      responseType = com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest,
+      com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse> getCreateOrUpdateCredentialsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest, com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse> getCreateOrUpdateCredentialsMethod;
+    if ((getCreateOrUpdateCredentialsMethod = DataproxyUserServiceGrpc.getCreateOrUpdateCredentialsMethod) == null) {
+      synchronized (DataproxyUserServiceGrpc.class) {
+        if ((getCreateOrUpdateCredentialsMethod = DataproxyUserServiceGrpc.getCreateOrUpdateCredentialsMethod) == null) {
+          DataproxyUserServiceGrpc.getCreateOrUpdateCredentialsMethod = getCreateOrUpdateCredentialsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest, com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrUpdateCredentials"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataproxyUserServiceMethodDescriptorSupplier("CreateOrUpdateCredentials"))
+              .build();
+        }
+      }
+    }
+    return getCreateOrUpdateCredentialsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest,
+      com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse> getRevokeCredentialsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RevokeCredentials",
+      requestType = com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest.class,
+      responseType = com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest,
+      com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse> getRevokeCredentialsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest, com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse> getRevokeCredentialsMethod;
+    if ((getRevokeCredentialsMethod = DataproxyUserServiceGrpc.getRevokeCredentialsMethod) == null) {
+      synchronized (DataproxyUserServiceGrpc.class) {
+        if ((getRevokeCredentialsMethod = DataproxyUserServiceGrpc.getRevokeCredentialsMethod) == null) {
+          DataproxyUserServiceGrpc.getRevokeCredentialsMethod = getRevokeCredentialsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest, com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeCredentials"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataproxyUserServiceMethodDescriptorSupplier("RevokeCredentials"))
+              .build();
+        }
+      }
+    }
+    return getRevokeCredentialsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.dataproxy.services.v2.PushReplicaRequest,
       com.aruna.api.dataproxy.services.v2.PushReplicaResponse> getPushReplicaMethod;
 
@@ -202,8 +264,34 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PushReplica
+     * CreateOrUpdateCredentials
      * Status: BETA
+     * Authorized method that needs a aruna-token to exchange for dataproxy
+     * specific S3AccessKey and S3SecretKey
+     * </pre>
+     */
+    default void createOrUpdateCredentials(com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrUpdateCredentialsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RevokeCredentials
+     * Status: BETA
+     * Authorized method that needs a aruna-token
+     * Revokes the current credentials
+     * </pre>
+     */
+    default void revokeCredentials(com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeCredentialsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * PushReplica
+     * Status: UNIMPLEMENTED
      * Manually transfers a replica to another data-proxy
      * </pre>
      */
@@ -215,7 +303,7 @@ public final class DataproxyUserServiceGrpc {
     /**
      * <pre>
      * PullReplica
-     * Status: BETA
+     * Status: UNIMPLEMENTED
      * Manually request data to be transferred to this data-proxy
      * </pre>
      */
@@ -226,8 +314,8 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PullReplica
-     * Status: BETA
+     * ReplicationStatus
+     * Status: UNIMPLEMENTED
      * Status of the previous replication request
      * </pre>
      */
@@ -280,8 +368,36 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PushReplica
+     * CreateOrUpdateCredentials
      * Status: BETA
+     * Authorized method that needs a aruna-token to exchange for dataproxy
+     * specific S3AccessKey and S3SecretKey
+     * </pre>
+     */
+    public void createOrUpdateCredentials(com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateOrUpdateCredentialsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RevokeCredentials
+     * Status: BETA
+     * Authorized method that needs a aruna-token
+     * Revokes the current credentials
+     * </pre>
+     */
+    public void revokeCredentials(com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRevokeCredentialsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * PushReplica
+     * Status: UNIMPLEMENTED
      * Manually transfers a replica to another data-proxy
      * </pre>
      */
@@ -294,7 +410,7 @@ public final class DataproxyUserServiceGrpc {
     /**
      * <pre>
      * PullReplica
-     * Status: BETA
+     * Status: UNIMPLEMENTED
      * Manually request data to be transferred to this data-proxy
      * </pre>
      */
@@ -306,8 +422,8 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PullReplica
-     * Status: BETA
+     * ReplicationStatus
+     * Status: UNIMPLEMENTED
      * Status of the previous replication request
      * </pre>
      */
@@ -349,8 +465,34 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PushReplica
+     * CreateOrUpdateCredentials
      * Status: BETA
+     * Authorized method that needs a aruna-token to exchange for dataproxy
+     * specific S3AccessKey and S3SecretKey
+     * </pre>
+     */
+    public com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse createOrUpdateCredentials(com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrUpdateCredentialsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RevokeCredentials
+     * Status: BETA
+     * Authorized method that needs a aruna-token
+     * Revokes the current credentials
+     * </pre>
+     */
+    public com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse revokeCredentials(com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRevokeCredentialsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * PushReplica
+     * Status: UNIMPLEMENTED
      * Manually transfers a replica to another data-proxy
      * </pre>
      */
@@ -362,7 +504,7 @@ public final class DataproxyUserServiceGrpc {
     /**
      * <pre>
      * PullReplica
-     * Status: BETA
+     * Status: UNIMPLEMENTED
      * Manually request data to be transferred to this data-proxy
      * </pre>
      */
@@ -373,8 +515,8 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PullReplica
-     * Status: BETA
+     * ReplicationStatus
+     * Status: UNIMPLEMENTED
      * Status of the previous replication request
      * </pre>
      */
@@ -416,8 +558,36 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PushReplica
+     * CreateOrUpdateCredentials
      * Status: BETA
+     * Authorized method that needs a aruna-token to exchange for dataproxy
+     * specific S3AccessKey and S3SecretKey
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse> createOrUpdateCredentials(
+        com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateOrUpdateCredentialsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RevokeCredentials
+     * Status: BETA
+     * Authorized method that needs a aruna-token
+     * Revokes the current credentials
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse> revokeCredentials(
+        com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRevokeCredentialsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * PushReplica
+     * Status: UNIMPLEMENTED
      * Manually transfers a replica to another data-proxy
      * </pre>
      */
@@ -430,7 +600,7 @@ public final class DataproxyUserServiceGrpc {
     /**
      * <pre>
      * PullReplica
-     * Status: BETA
+     * Status: UNIMPLEMENTED
      * Manually request data to be transferred to this data-proxy
      * </pre>
      */
@@ -442,8 +612,8 @@ public final class DataproxyUserServiceGrpc {
 
     /**
      * <pre>
-     * PullReplica
-     * Status: BETA
+     * ReplicationStatus
+     * Status: UNIMPLEMENTED
      * Status of the previous replication request
      * </pre>
      */
@@ -455,9 +625,11 @@ public final class DataproxyUserServiceGrpc {
   }
 
   private static final int METHODID_GET_CREDENTIALS = 0;
-  private static final int METHODID_PUSH_REPLICA = 1;
-  private static final int METHODID_PULL_REPLICA = 2;
-  private static final int METHODID_REPLICATION_STATUS = 3;
+  private static final int METHODID_CREATE_OR_UPDATE_CREDENTIALS = 1;
+  private static final int METHODID_REVOKE_CREDENTIALS = 2;
+  private static final int METHODID_PUSH_REPLICA = 3;
+  private static final int METHODID_PULL_REPLICA = 4;
+  private static final int METHODID_REPLICATION_STATUS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -479,6 +651,14 @@ public final class DataproxyUserServiceGrpc {
         case METHODID_GET_CREDENTIALS:
           serviceImpl.getCredentials((com.aruna.api.dataproxy.services.v2.GetCredentialsRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.GetCredentialsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_OR_UPDATE_CREDENTIALS:
+          serviceImpl.createOrUpdateCredentials((com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse>) responseObserver);
+          break;
+        case METHODID_REVOKE_CREDENTIALS:
+          serviceImpl.revokeCredentials((com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse>) responseObserver);
           break;
         case METHODID_PUSH_REPLICA:
           serviceImpl.pushReplica((com.aruna.api.dataproxy.services.v2.PushReplicaRequest) request,
@@ -517,6 +697,20 @@ public final class DataproxyUserServiceGrpc {
               com.aruna.api.dataproxy.services.v2.GetCredentialsRequest,
               com.aruna.api.dataproxy.services.v2.GetCredentialsResponse>(
                 service, METHODID_GET_CREDENTIALS)))
+        .addMethod(
+          getCreateOrUpdateCredentialsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsRequest,
+              com.aruna.api.dataproxy.services.v2.CreateOrUpdateCredentialsResponse>(
+                service, METHODID_CREATE_OR_UPDATE_CREDENTIALS)))
+        .addMethod(
+          getRevokeCredentialsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.dataproxy.services.v2.RevokeCredentialsRequest,
+              com.aruna.api.dataproxy.services.v2.RevokeCredentialsResponse>(
+                service, METHODID_REVOKE_CREDENTIALS)))
         .addMethod(
           getPushReplicaMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -587,6 +781,8 @@ public final class DataproxyUserServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DataproxyUserServiceFileDescriptorSupplier())
               .addMethod(getGetCredentialsMethod())
+              .addMethod(getCreateOrUpdateCredentialsMethod())
+              .addMethod(getRevokeCredentialsMethod())
               .addMethod(getPushReplicaMethod())
               .addMethod(getPullReplicaMethod())
               .addMethod(getReplicationStatusMethod())

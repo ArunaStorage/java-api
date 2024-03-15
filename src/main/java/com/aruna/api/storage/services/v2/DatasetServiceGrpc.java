@@ -329,6 +329,68 @@ public final class DatasetServiceGrpc {
     return getUpdateDatasetLicensesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest,
+      com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse> getUpdateDatasetTitleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDatasetTitle",
+      requestType = com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest,
+      com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse> getUpdateDatasetTitleMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest, com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse> getUpdateDatasetTitleMethod;
+    if ((getUpdateDatasetTitleMethod = DatasetServiceGrpc.getUpdateDatasetTitleMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getUpdateDatasetTitleMethod = DatasetServiceGrpc.getUpdateDatasetTitleMethod) == null) {
+          DatasetServiceGrpc.getUpdateDatasetTitleMethod = getUpdateDatasetTitleMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest, com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDatasetTitle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("UpdateDatasetTitle"))
+              .build();
+        }
+      }
+    }
+    return getUpdateDatasetTitleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest,
+      com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse> getUpdateDatasetAuthorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDatasetAuthors",
+      requestType = com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest,
+      com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse> getUpdateDatasetAuthorsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest, com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse> getUpdateDatasetAuthorsMethod;
+    if ((getUpdateDatasetAuthorsMethod = DatasetServiceGrpc.getUpdateDatasetAuthorsMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getUpdateDatasetAuthorsMethod = DatasetServiceGrpc.getUpdateDatasetAuthorsMethod) == null) {
+          DatasetServiceGrpc.getUpdateDatasetAuthorsMethod = getUpdateDatasetAuthorsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest, com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDatasetAuthors"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("UpdateDatasetAuthors"))
+              .build();
+        }
+      }
+    }
+    return getUpdateDatasetAuthorsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -500,6 +562,30 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetLicensesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDatasetLicensesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    default void updateDatasetTitle(com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDatasetTitleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    default void updateDatasetAuthors(com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDatasetAuthorsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -666,6 +752,32 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateDatasetLicensesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    public void updateDatasetTitle(com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateDatasetTitleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    public void updateDatasetAuthors(com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateDatasetAuthorsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -806,6 +918,30 @@ public final class DatasetServiceGrpc {
     public com.aruna.api.storage.services.v2.UpdateDatasetLicensesResponse updateDatasetLicenses(com.aruna.api.storage.services.v2.UpdateDatasetLicensesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateDatasetLicensesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse updateDatasetTitle(com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateDatasetTitleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse updateDatasetAuthors(com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateDatasetAuthorsMethod(), getCallOptions(), request);
     }
   }
 
@@ -958,6 +1094,32 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateDatasetLicensesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse> updateDatasetTitle(
+        com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateDatasetTitleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * Updates the datasets metadata title.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse> updateDatasetAuthors(
+        com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateDatasetAuthorsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DATASET = 0;
@@ -970,6 +1132,8 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_UPDATE_DATASET_DATA_CLASS = 7;
   private static final int METHODID_SNAPSHOT_DATASET = 8;
   private static final int METHODID_UPDATE_DATASET_LICENSES = 9;
+  private static final int METHODID_UPDATE_DATASET_TITLE = 10;
+  private static final int METHODID_UPDATE_DATASET_AUTHORS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1027,6 +1191,14 @@ public final class DatasetServiceGrpc {
         case METHODID_UPDATE_DATASET_LICENSES:
           serviceImpl.updateDatasetLicenses((com.aruna.api.storage.services.v2.UpdateDatasetLicensesRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetLicensesResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_DATASET_TITLE:
+          serviceImpl.updateDatasetTitle((com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_DATASET_AUTHORS:
+          serviceImpl.updateDatasetAuthors((com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1116,6 +1288,20 @@ public final class DatasetServiceGrpc {
               com.aruna.api.storage.services.v2.UpdateDatasetLicensesRequest,
               com.aruna.api.storage.services.v2.UpdateDatasetLicensesResponse>(
                 service, METHODID_UPDATE_DATASET_LICENSES)))
+        .addMethod(
+          getUpdateDatasetTitleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UpdateDatasetTitleRequest,
+              com.aruna.api.storage.services.v2.UpdateDatasetTitleResponse>(
+                service, METHODID_UPDATE_DATASET_TITLE)))
+        .addMethod(
+          getUpdateDatasetAuthorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UpdateDatasetAuthorsRequest,
+              com.aruna.api.storage.services.v2.UpdateDatasetAuthorsResponse>(
+                service, METHODID_UPDATE_DATASET_AUTHORS)))
         .build();
   }
 
@@ -1174,6 +1360,8 @@ public final class DatasetServiceGrpc {
               .addMethod(getUpdateDatasetDataClassMethod())
               .addMethod(getSnapshotDatasetMethod())
               .addMethod(getUpdateDatasetLicensesMethod())
+              .addMethod(getUpdateDatasetTitleMethod())
+              .addMethod(getUpdateDatasetAuthorsMethod())
               .build();
         }
       }

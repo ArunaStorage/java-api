@@ -330,6 +330,68 @@ public final class ProjectServiceGrpc {
     return getArchiveProjectMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateProjectTitleRequest,
+      com.aruna.api.storage.services.v2.UpdateProjectTitleResponse> getUpdateProjectTitleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProjectTitle",
+      requestType = com.aruna.api.storage.services.v2.UpdateProjectTitleRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UpdateProjectTitleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateProjectTitleRequest,
+      com.aruna.api.storage.services.v2.UpdateProjectTitleResponse> getUpdateProjectTitleMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateProjectTitleRequest, com.aruna.api.storage.services.v2.UpdateProjectTitleResponse> getUpdateProjectTitleMethod;
+    if ((getUpdateProjectTitleMethod = ProjectServiceGrpc.getUpdateProjectTitleMethod) == null) {
+      synchronized (ProjectServiceGrpc.class) {
+        if ((getUpdateProjectTitleMethod = ProjectServiceGrpc.getUpdateProjectTitleMethod) == null) {
+          ProjectServiceGrpc.getUpdateProjectTitleMethod = getUpdateProjectTitleMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UpdateProjectTitleRequest, com.aruna.api.storage.services.v2.UpdateProjectTitleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProjectTitle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateProjectTitleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateProjectTitleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("UpdateProjectTitle"))
+              .build();
+        }
+      }
+    }
+    return getUpdateProjectTitleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest,
+      com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse> getUpdateProjectAuthorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProjectAuthors",
+      requestType = com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest.class,
+      responseType = com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest,
+      com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse> getUpdateProjectAuthorsMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest, com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse> getUpdateProjectAuthorsMethod;
+    if ((getUpdateProjectAuthorsMethod = ProjectServiceGrpc.getUpdateProjectAuthorsMethod) == null) {
+      synchronized (ProjectServiceGrpc.class) {
+        if ((getUpdateProjectAuthorsMethod = ProjectServiceGrpc.getUpdateProjectAuthorsMethod) == null) {
+          ProjectServiceGrpc.getUpdateProjectAuthorsMethod = getUpdateProjectAuthorsMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest, com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProjectAuthors"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("UpdateProjectAuthors"))
+              .build();
+        }
+      }
+    }
+    return getUpdateProjectAuthorsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -504,6 +566,30 @@ public final class ProjectServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ArchiveProjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArchiveProjectMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of a project
+     * </pre>
+     */
+    default void updateProjectTitle(com.aruna.api.storage.services.v2.UpdateProjectTitleRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateProjectTitleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProjectTitleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    default void updateProjectAuthors(com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProjectAuthorsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -674,6 +760,32 @@ public final class ProjectServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getArchiveProjectMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of a project
+     * </pre>
+     */
+    public void updateProjectTitle(com.aruna.api.storage.services.v2.UpdateProjectTitleRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateProjectTitleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateProjectTitleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    public void updateProjectAuthors(com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateProjectAuthorsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -817,6 +929,30 @@ public final class ProjectServiceGrpc {
     public com.aruna.api.storage.services.v2.ArchiveProjectResponse archiveProject(com.aruna.api.storage.services.v2.ArchiveProjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getArchiveProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of a project
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UpdateProjectTitleResponse updateProjectTitle(com.aruna.api.storage.services.v2.UpdateProjectTitleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateProjectTitleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse updateProjectAuthors(com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateProjectAuthorsMethod(), getCallOptions(), request);
     }
   }
 
@@ -972,6 +1108,32 @@ public final class ProjectServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getArchiveProjectMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UpdateTitle
+     * Status: ALPHA
+     * This method updates the title of a project
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UpdateProjectTitleResponse> updateProjectTitle(
+        com.aruna.api.storage.services.v2.UpdateProjectTitleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateProjectTitleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateAuthors
+     * Status: ALPHA
+     * This method updates the authors of an object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse> updateProjectAuthors(
+        com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateProjectAuthorsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_PROJECT = 0;
@@ -984,6 +1146,8 @@ public final class ProjectServiceGrpc {
   private static final int METHODID_UPDATE_PROJECT_DATA_CLASS = 7;
   private static final int METHODID_UPDATE_PROJECT_LICENSES = 8;
   private static final int METHODID_ARCHIVE_PROJECT = 9;
+  private static final int METHODID_UPDATE_PROJECT_TITLE = 10;
+  private static final int METHODID_UPDATE_PROJECT_AUTHORS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1041,6 +1205,14 @@ public final class ProjectServiceGrpc {
         case METHODID_ARCHIVE_PROJECT:
           serviceImpl.archiveProject((com.aruna.api.storage.services.v2.ArchiveProjectRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.ArchiveProjectResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PROJECT_TITLE:
+          serviceImpl.updateProjectTitle((com.aruna.api.storage.services.v2.UpdateProjectTitleRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateProjectTitleResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PROJECT_AUTHORS:
+          serviceImpl.updateProjectAuthors((com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1130,6 +1302,20 @@ public final class ProjectServiceGrpc {
               com.aruna.api.storage.services.v2.ArchiveProjectRequest,
               com.aruna.api.storage.services.v2.ArchiveProjectResponse>(
                 service, METHODID_ARCHIVE_PROJECT)))
+        .addMethod(
+          getUpdateProjectTitleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UpdateProjectTitleRequest,
+              com.aruna.api.storage.services.v2.UpdateProjectTitleResponse>(
+                service, METHODID_UPDATE_PROJECT_TITLE)))
+        .addMethod(
+          getUpdateProjectAuthorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.UpdateProjectAuthorsRequest,
+              com.aruna.api.storage.services.v2.UpdateProjectAuthorsResponse>(
+                service, METHODID_UPDATE_PROJECT_AUTHORS)))
         .build();
   }
 
@@ -1188,6 +1374,8 @@ public final class ProjectServiceGrpc {
               .addMethod(getUpdateProjectDataClassMethod())
               .addMethod(getUpdateProjectLicensesMethod())
               .addMethod(getArchiveProjectMethod())
+              .addMethod(getUpdateProjectTitleMethod())
+              .addMethod(getUpdateProjectAuthorsMethod())
               .build();
         }
       }

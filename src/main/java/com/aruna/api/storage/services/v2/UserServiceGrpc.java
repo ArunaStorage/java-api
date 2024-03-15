@@ -454,35 +454,97 @@ public final class UserServiceGrpc {
     return getGetAllUsersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest,
-      com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse> getGetS3CredentialsUserMethod;
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest,
+      com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse> getCreateS3CredentialsUserTokenMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetS3CredentialsUser",
-      requestType = com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest.class,
-      responseType = com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "CreateS3CredentialsUserToken",
+      requestType = com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest.class,
+      responseType = com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest,
-      com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse> getGetS3CredentialsUserMethod() {
-    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest, com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse> getGetS3CredentialsUserMethod;
-    if ((getGetS3CredentialsUserMethod = UserServiceGrpc.getGetS3CredentialsUserMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest,
+      com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse> getCreateS3CredentialsUserTokenMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest, com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse> getCreateS3CredentialsUserTokenMethod;
+    if ((getCreateS3CredentialsUserTokenMethod = UserServiceGrpc.getCreateS3CredentialsUserTokenMethod) == null) {
       synchronized (UserServiceGrpc.class) {
-        if ((getGetS3CredentialsUserMethod = UserServiceGrpc.getGetS3CredentialsUserMethod) == null) {
-          UserServiceGrpc.getGetS3CredentialsUserMethod = getGetS3CredentialsUserMethod =
-              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest, com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse>newBuilder()
+        if ((getCreateS3CredentialsUserTokenMethod = UserServiceGrpc.getCreateS3CredentialsUserTokenMethod) == null) {
+          UserServiceGrpc.getCreateS3CredentialsUserTokenMethod = getCreateS3CredentialsUserTokenMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest, com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetS3CredentialsUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateS3CredentialsUserToken"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest.getDefaultInstance()))
+                  com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetS3CredentialsUser"))
+                  com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("CreateS3CredentialsUserToken"))
               .build();
         }
       }
     }
-    return getGetS3CredentialsUserMethod;
+    return getCreateS3CredentialsUserTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest,
+      com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse> getGetS3CredentialsUserTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetS3CredentialsUserToken",
+      requestType = com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest.class,
+      responseType = com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest,
+      com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse> getGetS3CredentialsUserTokenMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest, com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse> getGetS3CredentialsUserTokenMethod;
+    if ((getGetS3CredentialsUserTokenMethod = UserServiceGrpc.getGetS3CredentialsUserTokenMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getGetS3CredentialsUserTokenMethod = UserServiceGrpc.getGetS3CredentialsUserTokenMethod) == null) {
+          UserServiceGrpc.getGetS3CredentialsUserTokenMethod = getGetS3CredentialsUserTokenMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest, com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetS3CredentialsUserToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("GetS3CredentialsUserToken"))
+              .build();
+        }
+      }
+    }
+    return getGetS3CredentialsUserTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest,
+      com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse> getDeleteS3CredentialsUserTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteS3CredentialsUserToken",
+      requestType = com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest.class,
+      responseType = com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest,
+      com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse> getDeleteS3CredentialsUserTokenMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest, com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse> getDeleteS3CredentialsUserTokenMethod;
+    if ((getDeleteS3CredentialsUserTokenMethod = UserServiceGrpc.getDeleteS3CredentialsUserTokenMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getDeleteS3CredentialsUserTokenMethod = UserServiceGrpc.getDeleteS3CredentialsUserTokenMethod) == null) {
+          UserServiceGrpc.getDeleteS3CredentialsUserTokenMethod = getDeleteS3CredentialsUserTokenMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest, com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteS3CredentialsUserToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("DeleteS3CredentialsUserToken"))
+              .build();
+        }
+      }
+    }
+    return getDeleteS3CredentialsUserTokenMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetDataproxyTokenUserRequest,
@@ -638,6 +700,161 @@ public final class UserServiceGrpc {
       }
     }
     return getRemoveOidcProviderMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddPubkeyUserRequest,
+      com.aruna.api.storage.services.v2.AddPubkeyUserResponse> getAddPubkeyUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddPubkeyUser",
+      requestType = com.aruna.api.storage.services.v2.AddPubkeyUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.AddPubkeyUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddPubkeyUserRequest,
+      com.aruna.api.storage.services.v2.AddPubkeyUserResponse> getAddPubkeyUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddPubkeyUserRequest, com.aruna.api.storage.services.v2.AddPubkeyUserResponse> getAddPubkeyUserMethod;
+    if ((getAddPubkeyUserMethod = UserServiceGrpc.getAddPubkeyUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getAddPubkeyUserMethod = UserServiceGrpc.getAddPubkeyUserMethod) == null) {
+          UserServiceGrpc.getAddPubkeyUserMethod = getAddPubkeyUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AddPubkeyUserRequest, com.aruna.api.storage.services.v2.AddPubkeyUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPubkeyUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddPubkeyUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddPubkeyUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AddPubkeyUser"))
+              .build();
+        }
+      }
+    }
+    return getAddPubkeyUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest,
+      com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse> getAddTrustedEndpointsUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddTrustedEndpointsUser",
+      requestType = com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest,
+      com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse> getAddTrustedEndpointsUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest, com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse> getAddTrustedEndpointsUserMethod;
+    if ((getAddTrustedEndpointsUserMethod = UserServiceGrpc.getAddTrustedEndpointsUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getAddTrustedEndpointsUserMethod = UserServiceGrpc.getAddTrustedEndpointsUserMethod) == null) {
+          UserServiceGrpc.getAddTrustedEndpointsUserMethod = getAddTrustedEndpointsUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest, com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddTrustedEndpointsUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AddTrustedEndpointsUser"))
+              .build();
+        }
+      }
+    }
+    return getAddTrustedEndpointsUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest,
+      com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse> getRemoveTrustedEndpointsUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveTrustedEndpointsUser",
+      requestType = com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest,
+      com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse> getRemoveTrustedEndpointsUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest, com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse> getRemoveTrustedEndpointsUserMethod;
+    if ((getRemoveTrustedEndpointsUserMethod = UserServiceGrpc.getRemoveTrustedEndpointsUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getRemoveTrustedEndpointsUserMethod = UserServiceGrpc.getRemoveTrustedEndpointsUserMethod) == null) {
+          UserServiceGrpc.getRemoveTrustedEndpointsUserMethod = getRemoveTrustedEndpointsUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest, com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTrustedEndpointsUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("RemoveTrustedEndpointsUser"))
+              .build();
+        }
+      }
+    }
+    return getRemoveTrustedEndpointsUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest,
+      com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse> getAddDataProxyAttributeUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddDataProxyAttributeUser",
+      requestType = com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest,
+      com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse> getAddDataProxyAttributeUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest, com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse> getAddDataProxyAttributeUserMethod;
+    if ((getAddDataProxyAttributeUserMethod = UserServiceGrpc.getAddDataProxyAttributeUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getAddDataProxyAttributeUserMethod = UserServiceGrpc.getAddDataProxyAttributeUserMethod) == null) {
+          UserServiceGrpc.getAddDataProxyAttributeUserMethod = getAddDataProxyAttributeUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest, com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddDataProxyAttributeUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("AddDataProxyAttributeUser"))
+              .build();
+        }
+      }
+    }
+    return getAddDataProxyAttributeUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest,
+      com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse> getRemoveDataProxyAttributeUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveDataProxyAttributeUser",
+      requestType = com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest.class,
+      responseType = com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest,
+      com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse> getRemoveDataProxyAttributeUserMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest, com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse> getRemoveDataProxyAttributeUserMethod;
+    if ((getRemoveDataProxyAttributeUserMethod = UserServiceGrpc.getRemoveDataProxyAttributeUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getRemoveDataProxyAttributeUserMethod = UserServiceGrpc.getRemoveDataProxyAttributeUserMethod) == null) {
+          UserServiceGrpc.getRemoveDataProxyAttributeUserMethod = getRemoveDataProxyAttributeUserMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest, com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveDataProxyAttributeUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("RemoveDataProxyAttributeUser"))
+              .build();
+        }
+      }
+    }
+    return getRemoveDataProxyAttributeUserMethod;
   }
 
   /**
@@ -866,14 +1083,38 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * GetS3Credentials
+     * CreateS3CredentialsUserToken
      * Status: ALPHA
-     * Gets s3 credentials for a specific user and data_proxy
+     * Creates or updates S3 credentials for a specific user and data_proxy
      * </pre>
      */
-    default void getS3CredentialsUser(com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetS3CredentialsUserMethod(), responseObserver);
+    default void createS3CredentialsUserToken(com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateS3CredentialsUserTokenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetS3CredentialsUserToken
+     * Status: ALPHA
+     * Gets S3 credentials for a specific token and data_proxy
+     * </pre>
+     */
+    default void getS3CredentialsUserToken(com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetS3CredentialsUserTokenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteS3CredentialsUserToken
+     * Status: ALPHA
+     * Revokes existing S3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    default void deleteS3CredentialsUserToken(com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteS3CredentialsUserTokenMethod(), responseObserver);
     }
 
     /**
@@ -935,6 +1176,66 @@ public final class UserServiceGrpc {
     default void removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveOidcProviderMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddPubkeyUser
+     * Status: ALPHA
+     * Adds an ED25519 public key for the user
+     * </pre>
+     */
+    default void addPubkeyUser(com.aruna.api.storage.services.v2.AddPubkeyUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddPubkeyUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddPubkeyUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddTrustedEndpointsUser
+     * Status: ALPHA
+     * Adds an endpoint to the trusted endpoints list of the user
+     * </pre>
+     */
+    default void addTrustedEndpointsUser(com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddTrustedEndpointsUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveTrustedEndpointsUser
+     * Status: ALPHA
+     * Removes an endpoint from the trusted endpoints list of the user
+     * </pre>
+     */
+    default void removeTrustedEndpointsUser(com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTrustedEndpointsUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddDataProxyAttributeUser
+     * Status: ALPHA
+     * Adds an data proxy specific attribute to the user
+     * </pre>
+     */
+    default void addDataProxyAttributeUser(com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddDataProxyAttributeUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveDataProxyAttributeUser
+     * Status: ALPHA
+     * Removes an data proxy specific attribute from the user
+     * </pre>
+     */
+    default void removeDataProxyAttributeUser(com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveDataProxyAttributeUserMethod(), responseObserver);
     }
   }
 
@@ -1162,15 +1463,41 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * GetS3Credentials
+     * CreateS3CredentialsUserToken
      * Status: ALPHA
-     * Gets s3 credentials for a specific user and data_proxy
+     * Creates or updates S3 credentials for a specific user and data_proxy
      * </pre>
      */
-    public void getS3CredentialsUser(com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest request,
-        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse> responseObserver) {
+    public void createS3CredentialsUserToken(com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetS3CredentialsUserMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateS3CredentialsUserTokenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetS3CredentialsUserToken
+     * Status: ALPHA
+     * Gets S3 credentials for a specific token and data_proxy
+     * </pre>
+     */
+    public void getS3CredentialsUserToken(com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetS3CredentialsUserTokenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteS3CredentialsUserToken
+     * Status: ALPHA
+     * Revokes existing S3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    public void deleteS3CredentialsUserToken(com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteS3CredentialsUserTokenMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1237,6 +1564,71 @@ public final class UserServiceGrpc {
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveOidcProviderMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddPubkeyUser
+     * Status: ALPHA
+     * Adds an ED25519 public key for the user
+     * </pre>
+     */
+    public void addPubkeyUser(com.aruna.api.storage.services.v2.AddPubkeyUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddPubkeyUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddPubkeyUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddTrustedEndpointsUser
+     * Status: ALPHA
+     * Adds an endpoint to the trusted endpoints list of the user
+     * </pre>
+     */
+    public void addTrustedEndpointsUser(com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddTrustedEndpointsUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveTrustedEndpointsUser
+     * Status: ALPHA
+     * Removes an endpoint from the trusted endpoints list of the user
+     * </pre>
+     */
+    public void removeTrustedEndpointsUser(com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveTrustedEndpointsUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddDataProxyAttributeUser
+     * Status: ALPHA
+     * Adds an data proxy specific attribute to the user
+     * </pre>
+     */
+    public void addDataProxyAttributeUser(com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddDataProxyAttributeUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveDataProxyAttributeUser
+     * Status: ALPHA
+     * Removes an data proxy specific attribute from the user
+     * </pre>
+     */
+    public void removeDataProxyAttributeUser(com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveDataProxyAttributeUserMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1434,14 +1826,38 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * GetS3Credentials
+     * CreateS3CredentialsUserToken
      * Status: ALPHA
-     * Gets s3 credentials for a specific user and data_proxy
+     * Creates or updates S3 credentials for a specific user and data_proxy
      * </pre>
      */
-    public com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse getS3CredentialsUser(com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest request) {
+    public com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse createS3CredentialsUserToken(com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetS3CredentialsUserMethod(), getCallOptions(), request);
+          getChannel(), getCreateS3CredentialsUserTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetS3CredentialsUserToken
+     * Status: ALPHA
+     * Gets S3 credentials for a specific token and data_proxy
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse getS3CredentialsUserToken(com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetS3CredentialsUserTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteS3CredentialsUserToken
+     * Status: ALPHA
+     * Revokes existing S3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse deleteS3CredentialsUserToken(com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteS3CredentialsUserTokenMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1503,6 +1919,66 @@ public final class UserServiceGrpc {
     public com.aruna.api.storage.services.v2.RemoveOidcProviderResponse removeOidcProvider(com.aruna.api.storage.services.v2.RemoveOidcProviderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveOidcProviderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddPubkeyUser
+     * Status: ALPHA
+     * Adds an ED25519 public key for the user
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.AddPubkeyUserResponse addPubkeyUser(com.aruna.api.storage.services.v2.AddPubkeyUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddPubkeyUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddTrustedEndpointsUser
+     * Status: ALPHA
+     * Adds an endpoint to the trusted endpoints list of the user
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse addTrustedEndpointsUser(com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddTrustedEndpointsUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveTrustedEndpointsUser
+     * Status: ALPHA
+     * Removes an endpoint from the trusted endpoints list of the user
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse removeTrustedEndpointsUser(com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveTrustedEndpointsUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddDataProxyAttributeUser
+     * Status: ALPHA
+     * Adds an data proxy specific attribute to the user
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse addDataProxyAttributeUser(com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddDataProxyAttributeUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveDataProxyAttributeUser
+     * Status: ALPHA
+     * Removes an data proxy specific attribute from the user
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse removeDataProxyAttributeUser(com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveDataProxyAttributeUserMethod(), getCallOptions(), request);
     }
   }
 
@@ -1714,15 +2190,41 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * GetS3Credentials
+     * CreateS3CredentialsUserToken
      * Status: ALPHA
-     * Gets s3 credentials for a specific user and data_proxy
+     * Creates or updates S3 credentials for a specific user and data_proxy
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse> getS3CredentialsUser(
-        com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse> createS3CredentialsUserToken(
+        com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetS3CredentialsUserMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateS3CredentialsUserTokenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetS3CredentialsUserToken
+     * Status: ALPHA
+     * Gets S3 credentials for a specific token and data_proxy
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse> getS3CredentialsUserToken(
+        com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetS3CredentialsUserTokenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteS3CredentialsUserToken
+     * Status: ALPHA
+     * Revokes existing S3 credentials for a specific user and data_proxy
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse> deleteS3CredentialsUserToken(
+        com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteS3CredentialsUserTokenMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1790,6 +2292,71 @@ public final class UserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveOidcProviderMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AddPubkeyUser
+     * Status: ALPHA
+     * Adds an ED25519 public key for the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AddPubkeyUserResponse> addPubkeyUser(
+        com.aruna.api.storage.services.v2.AddPubkeyUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddPubkeyUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AddTrustedEndpointsUser
+     * Status: ALPHA
+     * Adds an endpoint to the trusted endpoints list of the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse> addTrustedEndpointsUser(
+        com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddTrustedEndpointsUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveTrustedEndpointsUser
+     * Status: ALPHA
+     * Removes an endpoint from the trusted endpoints list of the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse> removeTrustedEndpointsUser(
+        com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveTrustedEndpointsUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AddDataProxyAttributeUser
+     * Status: ALPHA
+     * Adds an data proxy specific attribute to the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse> addDataProxyAttributeUser(
+        com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddDataProxyAttributeUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveDataProxyAttributeUser
+     * Status: ALPHA
+     * Removes an data proxy specific attribute from the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse> removeDataProxyAttributeUser(
+        com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveDataProxyAttributeUserMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_USER = 0;
@@ -1806,12 +2373,19 @@ public final class UserServiceGrpc {
   private static final int METHODID_UPDATE_USER_EMAIL = 11;
   private static final int METHODID_GET_NOT_ACTIVATED_USERS = 12;
   private static final int METHODID_GET_ALL_USERS = 13;
-  private static final int METHODID_GET_S3CREDENTIALS_USER = 14;
-  private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 15;
-  private static final int METHODID_GET_PERSONAL_NOTIFICATIONS = 16;
-  private static final int METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS = 17;
-  private static final int METHODID_ADD_OIDC_PROVIDER = 18;
-  private static final int METHODID_REMOVE_OIDC_PROVIDER = 19;
+  private static final int METHODID_CREATE_S3CREDENTIALS_USER_TOKEN = 14;
+  private static final int METHODID_GET_S3CREDENTIALS_USER_TOKEN = 15;
+  private static final int METHODID_DELETE_S3CREDENTIALS_USER_TOKEN = 16;
+  private static final int METHODID_GET_DATAPROXY_TOKEN_USER = 17;
+  private static final int METHODID_GET_PERSONAL_NOTIFICATIONS = 18;
+  private static final int METHODID_ACKNOWLEDGE_PERSONAL_NOTIFICATIONS = 19;
+  private static final int METHODID_ADD_OIDC_PROVIDER = 20;
+  private static final int METHODID_REMOVE_OIDC_PROVIDER = 21;
+  private static final int METHODID_ADD_PUBKEY_USER = 22;
+  private static final int METHODID_ADD_TRUSTED_ENDPOINTS_USER = 23;
+  private static final int METHODID_REMOVE_TRUSTED_ENDPOINTS_USER = 24;
+  private static final int METHODID_ADD_DATA_PROXY_ATTRIBUTE_USER = 25;
+  private static final int METHODID_REMOVE_DATA_PROXY_ATTRIBUTE_USER = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1886,9 +2460,17 @@ public final class UserServiceGrpc {
           serviceImpl.getAllUsers((com.aruna.api.storage.services.v2.GetAllUsersRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAllUsersResponse>) responseObserver);
           break;
-        case METHODID_GET_S3CREDENTIALS_USER:
-          serviceImpl.getS3CredentialsUser((com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest) request,
-              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse>) responseObserver);
+        case METHODID_CREATE_S3CREDENTIALS_USER_TOKEN:
+          serviceImpl.createS3CredentialsUserToken((com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse>) responseObserver);
+          break;
+        case METHODID_GET_S3CREDENTIALS_USER_TOKEN:
+          serviceImpl.getS3CredentialsUserToken((com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_S3CREDENTIALS_USER_TOKEN:
+          serviceImpl.deleteS3CredentialsUserToken((com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse>) responseObserver);
           break;
         case METHODID_GET_DATAPROXY_TOKEN_USER:
           serviceImpl.getDataproxyTokenUser((com.aruna.api.storage.services.v2.GetDataproxyTokenUserRequest) request,
@@ -1909,6 +2491,26 @@ public final class UserServiceGrpc {
         case METHODID_REMOVE_OIDC_PROVIDER:
           serviceImpl.removeOidcProvider((com.aruna.api.storage.services.v2.RemoveOidcProviderRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveOidcProviderResponse>) responseObserver);
+          break;
+        case METHODID_ADD_PUBKEY_USER:
+          serviceImpl.addPubkeyUser((com.aruna.api.storage.services.v2.AddPubkeyUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddPubkeyUserResponse>) responseObserver);
+          break;
+        case METHODID_ADD_TRUSTED_ENDPOINTS_USER:
+          serviceImpl.addTrustedEndpointsUser((com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_TRUSTED_ENDPOINTS_USER:
+          serviceImpl.removeTrustedEndpointsUser((com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse>) responseObserver);
+          break;
+        case METHODID_ADD_DATA_PROXY_ATTRIBUTE_USER:
+          serviceImpl.addDataProxyAttributeUser((com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_DATA_PROXY_ATTRIBUTE_USER:
+          serviceImpl.removeDataProxyAttributeUser((com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2027,12 +2629,26 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.GetAllUsersResponse>(
                 service, METHODID_GET_ALL_USERS)))
         .addMethod(
-          getGetS3CredentialsUserMethod(),
+          getCreateS3CredentialsUserTokenMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.aruna.api.storage.services.v2.GetS3CredentialsUserRequest,
-              com.aruna.api.storage.services.v2.GetS3CredentialsUserResponse>(
-                service, METHODID_GET_S3CREDENTIALS_USER)))
+              com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenRequest,
+              com.aruna.api.storage.services.v2.CreateS3CredentialsUserTokenResponse>(
+                service, METHODID_CREATE_S3CREDENTIALS_USER_TOKEN)))
+        .addMethod(
+          getGetS3CredentialsUserTokenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenRequest,
+              com.aruna.api.storage.services.v2.GetS3CredentialsUserTokenResponse>(
+                service, METHODID_GET_S3CREDENTIALS_USER_TOKEN)))
+        .addMethod(
+          getDeleteS3CredentialsUserTokenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.DeleteS3CredentialsUserTokenRequest,
+              com.aruna.api.storage.services.v2.DeleteS3CredentialsUserResponse>(
+                service, METHODID_DELETE_S3CREDENTIALS_USER_TOKEN)))
         .addMethod(
           getGetDataproxyTokenUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2068,6 +2684,41 @@ public final class UserServiceGrpc {
               com.aruna.api.storage.services.v2.RemoveOidcProviderRequest,
               com.aruna.api.storage.services.v2.RemoveOidcProviderResponse>(
                 service, METHODID_REMOVE_OIDC_PROVIDER)))
+        .addMethod(
+          getAddPubkeyUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.AddPubkeyUserRequest,
+              com.aruna.api.storage.services.v2.AddPubkeyUserResponse>(
+                service, METHODID_ADD_PUBKEY_USER)))
+        .addMethod(
+          getAddTrustedEndpointsUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.AddTrustedEndpointsUserRequest,
+              com.aruna.api.storage.services.v2.AddTrustedEndpointsUserResponse>(
+                service, METHODID_ADD_TRUSTED_ENDPOINTS_USER)))
+        .addMethod(
+          getRemoveTrustedEndpointsUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserRequest,
+              com.aruna.api.storage.services.v2.RemoveTrustedEndpointsUserResponse>(
+                service, METHODID_REMOVE_TRUSTED_ENDPOINTS_USER)))
+        .addMethod(
+          getAddDataProxyAttributeUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.AddDataProxyAttributeUserRequest,
+              com.aruna.api.storage.services.v2.AddDataProxyAttributeUserResponse>(
+                service, METHODID_ADD_DATA_PROXY_ATTRIBUTE_USER)))
+        .addMethod(
+          getRemoveDataProxyAttributeUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserRequest,
+              com.aruna.api.storage.services.v2.RemoveDataProxyAttributeUserResponse>(
+                service, METHODID_REMOVE_DATA_PROXY_ATTRIBUTE_USER)))
         .build();
   }
 
@@ -2130,12 +2781,19 @@ public final class UserServiceGrpc {
               .addMethod(getUpdateUserEmailMethod())
               .addMethod(getGetNotActivatedUsersMethod())
               .addMethod(getGetAllUsersMethod())
-              .addMethod(getGetS3CredentialsUserMethod())
+              .addMethod(getCreateS3CredentialsUserTokenMethod())
+              .addMethod(getGetS3CredentialsUserTokenMethod())
+              .addMethod(getDeleteS3CredentialsUserTokenMethod())
               .addMethod(getGetDataproxyTokenUserMethod())
               .addMethod(getGetPersonalNotificationsMethod())
               .addMethod(getAcknowledgePersonalNotificationsMethod())
               .addMethod(getAddOidcProviderMethod())
               .addMethod(getRemoveOidcProviderMethod())
+              .addMethod(getAddPubkeyUserMethod())
+              .addMethod(getAddTrustedEndpointsUserMethod())
+              .addMethod(getRemoveTrustedEndpointsUserMethod())
+              .addMethod(getAddDataProxyAttributeUserMethod())
+              .addMethod(getRemoveDataProxyAttributeUserMethod())
               .build();
         }
       }
