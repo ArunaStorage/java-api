@@ -45,9 +45,11 @@ private static final long serialVersionUID = 0L;
   public enum MessageCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    HANDSHAKE(5),
     OBJECT_INFO(1),
     CHUNK(2),
     FINISH_MESSAGE(3),
+    SKIP(4),
     MESSAGE_NOT_SET(0);
     private final int value;
     private MessageCase(int value) {
@@ -65,9 +67,11 @@ private static final long serialVersionUID = 0L;
 
     public static MessageCase forNumber(int value) {
       switch (value) {
+        case 5: return HANDSHAKE;
         case 1: return OBJECT_INFO;
         case 2: return CHUNK;
         case 3: return FINISH_MESSAGE;
+        case 4: return SKIP;
         case 0: return MESSAGE_NOT_SET;
         default: return null;
       }
@@ -81,6 +85,37 @@ private static final long serialVersionUID = 0L;
   getMessageCase() {
     return MessageCase.forNumber(
         messageCase_);
+  }
+
+  public static final int HANDSHAKE_FIELD_NUMBER = 5;
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+   * @return Whether the handshake field is set.
+   */
+  @java.lang.Override
+  public boolean hasHandshake() {
+    return messageCase_ == 5;
+  }
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+   * @return The handshake.
+   */
+  @java.lang.Override
+  public com.aruna.api.dataproxy.services.v2.Handshake getHandshake() {
+    if (messageCase_ == 5) {
+       return (com.aruna.api.dataproxy.services.v2.Handshake) message_;
+    }
+    return com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance();
+  }
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+   */
+  @java.lang.Override
+  public com.aruna.api.dataproxy.services.v2.HandshakeOrBuilder getHandshakeOrBuilder() {
+    if (messageCase_ == 5) {
+       return (com.aruna.api.dataproxy.services.v2.Handshake) message_;
+    }
+    return com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance();
   }
 
   public static final int OBJECT_INFO_FIELD_NUMBER = 1;
@@ -188,6 +223,37 @@ private static final long serialVersionUID = 0L;
     return com.aruna.api.dataproxy.services.v2.Empty.getDefaultInstance();
   }
 
+  public static final int SKIP_FIELD_NUMBER = 4;
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+   * @return Whether the skip field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkip() {
+    return messageCase_ == 4;
+  }
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+   * @return The skip.
+   */
+  @java.lang.Override
+  public com.aruna.api.dataproxy.services.v2.Skip getSkip() {
+    if (messageCase_ == 4) {
+       return (com.aruna.api.dataproxy.services.v2.Skip) message_;
+    }
+    return com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance();
+  }
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+   */
+  @java.lang.Override
+  public com.aruna.api.dataproxy.services.v2.SkipOrBuilder getSkipOrBuilder() {
+    if (messageCase_ == 4) {
+       return (com.aruna.api.dataproxy.services.v2.Skip) message_;
+    }
+    return com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -211,6 +277,12 @@ private static final long serialVersionUID = 0L;
     if (messageCase_ == 3) {
       output.writeMessage(3, (com.aruna.api.dataproxy.services.v2.Empty) message_);
     }
+    if (messageCase_ == 4) {
+      output.writeMessage(4, (com.aruna.api.dataproxy.services.v2.Skip) message_);
+    }
+    if (messageCase_ == 5) {
+      output.writeMessage(5, (com.aruna.api.dataproxy.services.v2.Handshake) message_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -232,6 +304,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.aruna.api.dataproxy.services.v2.Empty) message_);
     }
+    if (messageCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.aruna.api.dataproxy.services.v2.Skip) message_);
+    }
+    if (messageCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.aruna.api.dataproxy.services.v2.Handshake) message_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -249,6 +329,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getMessageCase().equals(other.getMessageCase())) return false;
     switch (messageCase_) {
+      case 5:
+        if (!getHandshake()
+            .equals(other.getHandshake())) return false;
+        break;
       case 1:
         if (!getObjectInfo()
             .equals(other.getObjectInfo())) return false;
@@ -260,6 +344,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         if (!getFinishMessage()
             .equals(other.getFinishMessage())) return false;
+        break;
+      case 4:
+        if (!getSkip()
+            .equals(other.getSkip())) return false;
         break;
       case 0:
       default:
@@ -276,6 +364,10 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     switch (messageCase_) {
+      case 5:
+        hash = (37 * hash) + HANDSHAKE_FIELD_NUMBER;
+        hash = (53 * hash) + getHandshake().hashCode();
+        break;
       case 1:
         hash = (37 * hash) + OBJECT_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getObjectInfo().hashCode();
@@ -287,6 +379,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + FINISH_MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getFinishMessage().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + SKIP_FIELD_NUMBER;
+        hash = (53 * hash) + getSkip().hashCode();
         break;
       case 0:
       default:
@@ -422,6 +518,9 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      if (handshakeBuilder_ != null) {
+        handshakeBuilder_.clear();
+      }
       if (objectInfoBuilder_ != null) {
         objectInfoBuilder_.clear();
       }
@@ -430,6 +529,9 @@ private static final long serialVersionUID = 0L;
       }
       if (finishMessageBuilder_ != null) {
         finishMessageBuilder_.clear();
+      }
+      if (skipBuilder_ != null) {
+        skipBuilder_.clear();
       }
       messageCase_ = 0;
       message_ = null;
@@ -472,6 +574,10 @@ private static final long serialVersionUID = 0L;
     private void buildPartialOneofs(com.aruna.api.dataproxy.services.v2.PullReplicationResponse result) {
       result.messageCase_ = messageCase_;
       result.message_ = this.message_;
+      if (messageCase_ == 5 &&
+          handshakeBuilder_ != null) {
+        result.message_ = handshakeBuilder_.build();
+      }
       if (messageCase_ == 1 &&
           objectInfoBuilder_ != null) {
         result.message_ = objectInfoBuilder_.build();
@@ -483,6 +589,10 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 3 &&
           finishMessageBuilder_ != null) {
         result.message_ = finishMessageBuilder_.build();
+      }
+      if (messageCase_ == 4 &&
+          skipBuilder_ != null) {
+        result.message_ = skipBuilder_.build();
       }
     }
 
@@ -531,6 +641,10 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.aruna.api.dataproxy.services.v2.PullReplicationResponse other) {
       if (other == com.aruna.api.dataproxy.services.v2.PullReplicationResponse.getDefaultInstance()) return this;
       switch (other.getMessageCase()) {
+        case HANDSHAKE: {
+          mergeHandshake(other.getHandshake());
+          break;
+        }
         case OBJECT_INFO: {
           mergeObjectInfo(other.getObjectInfo());
           break;
@@ -541,6 +655,10 @@ private static final long serialVersionUID = 0L;
         }
         case FINISH_MESSAGE: {
           mergeFinishMessage(other.getFinishMessage());
+          break;
+        }
+        case SKIP: {
+          mergeSkip(other.getSkip());
           break;
         }
         case MESSAGE_NOT_SET: {
@@ -594,6 +712,20 @@ private static final long serialVersionUID = 0L;
               messageCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getSkipFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              messageCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getHandshakeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              messageCase_ = 5;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -625,6 +757,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aruna.api.dataproxy.services.v2.Handshake, com.aruna.api.dataproxy.services.v2.Handshake.Builder, com.aruna.api.dataproxy.services.v2.HandshakeOrBuilder> handshakeBuilder_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     * @return Whether the handshake field is set.
+     */
+    @java.lang.Override
+    public boolean hasHandshake() {
+      return messageCase_ == 5;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     * @return The handshake.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.Handshake getHandshake() {
+      if (handshakeBuilder_ == null) {
+        if (messageCase_ == 5) {
+          return (com.aruna.api.dataproxy.services.v2.Handshake) message_;
+        }
+        return com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance();
+      } else {
+        if (messageCase_ == 5) {
+          return handshakeBuilder_.getMessage();
+        }
+        return com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    public Builder setHandshake(com.aruna.api.dataproxy.services.v2.Handshake value) {
+      if (handshakeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        message_ = value;
+        onChanged();
+      } else {
+        handshakeBuilder_.setMessage(value);
+      }
+      messageCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    public Builder setHandshake(
+        com.aruna.api.dataproxy.services.v2.Handshake.Builder builderForValue) {
+      if (handshakeBuilder_ == null) {
+        message_ = builderForValue.build();
+        onChanged();
+      } else {
+        handshakeBuilder_.setMessage(builderForValue.build());
+      }
+      messageCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    public Builder mergeHandshake(com.aruna.api.dataproxy.services.v2.Handshake value) {
+      if (handshakeBuilder_ == null) {
+        if (messageCase_ == 5 &&
+            message_ != com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance()) {
+          message_ = com.aruna.api.dataproxy.services.v2.Handshake.newBuilder((com.aruna.api.dataproxy.services.v2.Handshake) message_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          message_ = value;
+        }
+        onChanged();
+      } else {
+        if (messageCase_ == 5) {
+          handshakeBuilder_.mergeFrom(value);
+        } else {
+          handshakeBuilder_.setMessage(value);
+        }
+      }
+      messageCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    public Builder clearHandshake() {
+      if (handshakeBuilder_ == null) {
+        if (messageCase_ == 5) {
+          messageCase_ = 0;
+          message_ = null;
+          onChanged();
+        }
+      } else {
+        if (messageCase_ == 5) {
+          messageCase_ = 0;
+          message_ = null;
+        }
+        handshakeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    public com.aruna.api.dataproxy.services.v2.Handshake.Builder getHandshakeBuilder() {
+      return getHandshakeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.HandshakeOrBuilder getHandshakeOrBuilder() {
+      if ((messageCase_ == 5) && (handshakeBuilder_ != null)) {
+        return handshakeBuilder_.getMessageOrBuilder();
+      } else {
+        if (messageCase_ == 5) {
+          return (com.aruna.api.dataproxy.services.v2.Handshake) message_;
+        }
+        return com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aruna.api.dataproxy.services.v2.Handshake, com.aruna.api.dataproxy.services.v2.Handshake.Builder, com.aruna.api.dataproxy.services.v2.HandshakeOrBuilder> 
+        getHandshakeFieldBuilder() {
+      if (handshakeBuilder_ == null) {
+        if (!(messageCase_ == 5)) {
+          message_ = com.aruna.api.dataproxy.services.v2.Handshake.getDefaultInstance();
+        }
+        handshakeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.aruna.api.dataproxy.services.v2.Handshake, com.aruna.api.dataproxy.services.v2.Handshake.Builder, com.aruna.api.dataproxy.services.v2.HandshakeOrBuilder>(
+                (com.aruna.api.dataproxy.services.v2.Handshake) message_,
+                getParentForChildren(),
+                isClean());
+        message_ = null;
+      }
+      messageCase_ = 5;
+      onChanged();
+      return handshakeBuilder_;
+    }
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.aruna.api.dataproxy.services.v2.ObjectInfo, com.aruna.api.dataproxy.services.v2.ObjectInfo.Builder, com.aruna.api.dataproxy.services.v2.ObjectInfoOrBuilder> objectInfoBuilder_;
@@ -1086,6 +1360,148 @@ private static final long serialVersionUID = 0L;
       messageCase_ = 3;
       onChanged();
       return finishMessageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aruna.api.dataproxy.services.v2.Skip, com.aruna.api.dataproxy.services.v2.Skip.Builder, com.aruna.api.dataproxy.services.v2.SkipOrBuilder> skipBuilder_;
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     * @return Whether the skip field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkip() {
+      return messageCase_ == 4;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     * @return The skip.
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.Skip getSkip() {
+      if (skipBuilder_ == null) {
+        if (messageCase_ == 4) {
+          return (com.aruna.api.dataproxy.services.v2.Skip) message_;
+        }
+        return com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance();
+      } else {
+        if (messageCase_ == 4) {
+          return skipBuilder_.getMessage();
+        }
+        return com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    public Builder setSkip(com.aruna.api.dataproxy.services.v2.Skip value) {
+      if (skipBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        message_ = value;
+        onChanged();
+      } else {
+        skipBuilder_.setMessage(value);
+      }
+      messageCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    public Builder setSkip(
+        com.aruna.api.dataproxy.services.v2.Skip.Builder builderForValue) {
+      if (skipBuilder_ == null) {
+        message_ = builderForValue.build();
+        onChanged();
+      } else {
+        skipBuilder_.setMessage(builderForValue.build());
+      }
+      messageCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    public Builder mergeSkip(com.aruna.api.dataproxy.services.v2.Skip value) {
+      if (skipBuilder_ == null) {
+        if (messageCase_ == 4 &&
+            message_ != com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance()) {
+          message_ = com.aruna.api.dataproxy.services.v2.Skip.newBuilder((com.aruna.api.dataproxy.services.v2.Skip) message_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          message_ = value;
+        }
+        onChanged();
+      } else {
+        if (messageCase_ == 4) {
+          skipBuilder_.mergeFrom(value);
+        } else {
+          skipBuilder_.setMessage(value);
+        }
+      }
+      messageCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    public Builder clearSkip() {
+      if (skipBuilder_ == null) {
+        if (messageCase_ == 4) {
+          messageCase_ = 0;
+          message_ = null;
+          onChanged();
+        }
+      } else {
+        if (messageCase_ == 4) {
+          messageCase_ = 0;
+          message_ = null;
+        }
+        skipBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    public com.aruna.api.dataproxy.services.v2.Skip.Builder getSkipBuilder() {
+      return getSkipFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    @java.lang.Override
+    public com.aruna.api.dataproxy.services.v2.SkipOrBuilder getSkipOrBuilder() {
+      if ((messageCase_ == 4) && (skipBuilder_ != null)) {
+        return skipBuilder_.getMessageOrBuilder();
+      } else {
+        if (messageCase_ == 4) {
+          return (com.aruna.api.dataproxy.services.v2.Skip) message_;
+        }
+        return com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.aruna.api.dataproxy.services.v2.Skip, com.aruna.api.dataproxy.services.v2.Skip.Builder, com.aruna.api.dataproxy.services.v2.SkipOrBuilder> 
+        getSkipFieldBuilder() {
+      if (skipBuilder_ == null) {
+        if (!(messageCase_ == 4)) {
+          message_ = com.aruna.api.dataproxy.services.v2.Skip.getDefaultInstance();
+        }
+        skipBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.aruna.api.dataproxy.services.v2.Skip, com.aruna.api.dataproxy.services.v2.Skip.Builder, com.aruna.api.dataproxy.services.v2.SkipOrBuilder>(
+                (com.aruna.api.dataproxy.services.v2.Skip) message_,
+                getParentForChildren(),
+                isClean());
+        message_ = null;
+      }
+      messageCase_ = 4;
+      onChanged();
+      return skipBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

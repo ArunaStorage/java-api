@@ -5,10 +5,6 @@
 package com.aruna.api.dataproxy.services.v2;
 
 /**
- * <pre>
- * Messages (responses) from PROXY A
- * </pre>
- *
  * Protobuf type {@code aruna.api.dataproxy.services.v2.ObjectInfo}
  */
 public final class ObjectInfo extends
@@ -389,10 +385,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Messages (responses) from PROXY A
-   * </pre>
-   *
    * Protobuf type {@code aruna.api.dataproxy.services.v2.ObjectInfo}
    */
   public static final class Builder extends

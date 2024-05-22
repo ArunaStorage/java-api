@@ -9,6 +9,21 @@ public interface PullReplicationResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+   * @return Whether the handshake field is set.
+   */
+  boolean hasHandshake();
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+   * @return The handshake.
+   */
+  com.aruna.api.dataproxy.services.v2.Handshake getHandshake();
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Handshake handshake = 5 [json_name = "handshake"];</code>
+   */
+  com.aruna.api.dataproxy.services.v2.HandshakeOrBuilder getHandshakeOrBuilder();
+
+  /**
    * <code>.aruna.api.dataproxy.services.v2.ObjectInfo object_info = 1 [json_name = "objectInfo"];</code>
    * @return Whether the objectInfo field is set.
    */
@@ -64,6 +79,21 @@ public interface PullReplicationResponseOrBuilder extends
    * <code>.aruna.api.dataproxy.services.v2.Empty finish_message = 3 [json_name = "finishMessage"];</code>
    */
   com.aruna.api.dataproxy.services.v2.EmptyOrBuilder getFinishMessageOrBuilder();
+
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+   * @return Whether the skip field is set.
+   */
+  boolean hasSkip();
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+   * @return The skip.
+   */
+  com.aruna.api.dataproxy.services.v2.Skip getSkip();
+  /**
+   * <code>.aruna.api.dataproxy.services.v2.Skip skip = 4 [json_name = "skip"];</code>
+   */
+  com.aruna.api.dataproxy.services.v2.SkipOrBuilder getSkipOrBuilder();
 
   com.aruna.api.dataproxy.services.v2.PullReplicationResponse.MessageCase getMessageCase();
 }
