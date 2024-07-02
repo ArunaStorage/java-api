@@ -125,7 +125,7 @@ public enum KeyValueVariant
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(4);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(5);
   }
 
   private static final KeyValueVariant[] VALUES = values();

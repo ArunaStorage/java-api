@@ -113,7 +113,7 @@ public enum ReplicationStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(13);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(14);
   }
 
   private static final ReplicationStatus[] VALUES = values();

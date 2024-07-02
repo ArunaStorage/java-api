@@ -108,7 +108,7 @@ public enum ExternalRelationVariant
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(5);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(6);
   }
 
   private static final ExternalRelationVariant[] VALUES = values();

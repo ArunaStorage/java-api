@@ -126,7 +126,7 @@ public enum ComponentStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(10);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(11);
   }
 
   private static final ComponentStatus[] VALUES = values();

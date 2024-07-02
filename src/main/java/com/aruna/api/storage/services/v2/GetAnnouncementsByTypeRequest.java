@@ -5,78 +5,58 @@
 package com.aruna.api.storage.services.v2;
 
 /**
- * Protobuf type {@code aruna.api.storage.services.v2.GetAnnouncementsRequest}
+ * Protobuf type {@code aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest}
  */
-public final class GetAnnouncementsRequest extends
+public final class GetAnnouncementsByTypeRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetAnnouncementsRequest)
-    GetAnnouncementsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest)
+    GetAnnouncementsByTypeRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetAnnouncementsRequest.newBuilder() to construct.
-  private GetAnnouncementsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetAnnouncementsByTypeRequest.newBuilder() to construct.
+  private GetAnnouncementsByTypeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetAnnouncementsRequest() {
-    announcementIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+  private GetAnnouncementsByTypeRequest() {
+    announcementType_ = 0;
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetAnnouncementsRequest();
+    return new GetAnnouncementsByTypeRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor;
+    return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_fieldAccessorTable
+    return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.aruna.api.storage.services.v2.GetAnnouncementsRequest.class, com.aruna.api.storage.services.v2.GetAnnouncementsRequest.Builder.class);
+            com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.class, com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.Builder.class);
   }
 
   private int bitField0_;
-  public static final int ANNOUNCEMENT_IDS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList announcementIds_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  public static final int ANNOUNCEMENT_TYPE_FIELD_NUMBER = 1;
+  private int announcementType_ = 0;
   /**
-   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-   * @return A list containing the announcementIds.
+   * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
+   * @return The enum numeric value on the wire for announcementType.
    */
-  public com.google.protobuf.ProtocolStringList
-      getAnnouncementIdsList() {
-    return announcementIds_;
+  @java.lang.Override public int getAnnouncementTypeValue() {
+    return announcementType_;
   }
   /**
-   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-   * @return The count of announcementIds.
+   * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
+   * @return The announcementType.
    */
-  public int getAnnouncementIdsCount() {
-    return announcementIds_.size();
-  }
-  /**
-   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-   * @param index The index of the element to return.
-   * @return The announcementIds at the given index.
-   */
-  public java.lang.String getAnnouncementIds(int index) {
-    return announcementIds_.get(index);
-  }
-  /**
-   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the announcementIds at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getAnnouncementIdsBytes(int index) {
-    return announcementIds_.getByteString(index);
+  @java.lang.Override public com.aruna.api.storage.models.v2.AnnouncementType getAnnouncementType() {
+    com.aruna.api.storage.models.v2.AnnouncementType result = com.aruna.api.storage.models.v2.AnnouncementType.forNumber(announcementType_);
+    return result == null ? com.aruna.api.storage.models.v2.AnnouncementType.UNRECOGNIZED : result;
   }
 
   public static final int PAGE_FIELD_NUMBER = 2;
@@ -119,8 +99,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < announcementIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, announcementIds_.getRaw(i));
+    if (announcementType_ != com.aruna.api.storage.models.v2.AnnouncementType.ANNOUNCEMENT_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(1, announcementType_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getPage());
@@ -134,13 +114,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    {
-      int dataSize = 0;
-      for (int i = 0; i < announcementIds_.size(); i++) {
-        dataSize += computeStringSizeNoTag(announcementIds_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getAnnouncementIdsList().size();
+    if (announcementType_ != com.aruna.api.storage.models.v2.AnnouncementType.ANNOUNCEMENT_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, announcementType_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -156,13 +132,12 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.aruna.api.storage.services.v2.GetAnnouncementsRequest)) {
+    if (!(obj instanceof com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest)) {
       return super.equals(obj);
     }
-    com.aruna.api.storage.services.v2.GetAnnouncementsRequest other = (com.aruna.api.storage.services.v2.GetAnnouncementsRequest) obj;
+    com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest other = (com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest) obj;
 
-    if (!getAnnouncementIdsList()
-        .equals(other.getAnnouncementIdsList())) return false;
+    if (announcementType_ != other.announcementType_) return false;
     if (hasPage() != other.hasPage()) return false;
     if (hasPage()) {
       if (!getPage()
@@ -179,10 +154,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getAnnouncementIdsCount() > 0) {
-      hash = (37 * hash) + ANNOUNCEMENT_IDS_FIELD_NUMBER;
-      hash = (53 * hash) + getAnnouncementIdsList().hashCode();
-    }
+    hash = (37 * hash) + ANNOUNCEMENT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + announcementType_;
     if (hasPage()) {
       hash = (37 * hash) + PAGE_FIELD_NUMBER;
       hash = (53 * hash) + getPage().hashCode();
@@ -192,44 +165,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(byte[] data)
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(java.io.InputStream input)
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -237,26 +210,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseDelimitedFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest parseFrom(
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -269,7 +242,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.aruna.api.storage.services.v2.GetAnnouncementsRequest prototype) {
+  public static Builder newBuilder(com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -285,26 +258,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code aruna.api.storage.services.v2.GetAnnouncementsRequest}
+   * Protobuf type {@code aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetAnnouncementsRequest)
-      com.aruna.api.storage.services.v2.GetAnnouncementsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest)
+      com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor;
+      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_fieldAccessorTable
+      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aruna.api.storage.services.v2.GetAnnouncementsRequest.class, com.aruna.api.storage.services.v2.GetAnnouncementsRequest.Builder.class);
+              com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.class, com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.Builder.class);
     }
 
-    // Construct using com.aruna.api.storage.services.v2.GetAnnouncementsRequest.newBuilder()
+    // Construct using com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -324,8 +297,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      announcementIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      announcementType_ = 0;
       page_ = null;
       if (pageBuilder_ != null) {
         pageBuilder_.dispose();
@@ -337,17 +309,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor;
+      return com.aruna.api.storage.services.v2.InfoServiceProto.internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.GetAnnouncementsRequest getDefaultInstanceForType() {
-      return com.aruna.api.storage.services.v2.GetAnnouncementsRequest.getDefaultInstance();
+    public com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest getDefaultInstanceForType() {
+      return com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.GetAnnouncementsRequest build() {
-      com.aruna.api.storage.services.v2.GetAnnouncementsRequest result = buildPartial();
+    public com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest build() {
+      com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -355,18 +327,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.aruna.api.storage.services.v2.GetAnnouncementsRequest buildPartial() {
-      com.aruna.api.storage.services.v2.GetAnnouncementsRequest result = new com.aruna.api.storage.services.v2.GetAnnouncementsRequest(this);
+    public com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest buildPartial() {
+      com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest result = new com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.aruna.api.storage.services.v2.GetAnnouncementsRequest result) {
+    private void buildPartial0(com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        announcementIds_.makeImmutable();
-        result.announcementIds_ = announcementIds_;
+        result.announcementType_ = announcementType_;
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
@@ -412,25 +383,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.aruna.api.storage.services.v2.GetAnnouncementsRequest) {
-        return mergeFrom((com.aruna.api.storage.services.v2.GetAnnouncementsRequest)other);
+      if (other instanceof com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest) {
+        return mergeFrom((com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.aruna.api.storage.services.v2.GetAnnouncementsRequest other) {
-      if (other == com.aruna.api.storage.services.v2.GetAnnouncementsRequest.getDefaultInstance()) return this;
-      if (!other.announcementIds_.isEmpty()) {
-        if (announcementIds_.isEmpty()) {
-          announcementIds_ = other.announcementIds_;
-          bitField0_ |= 0x00000001;
-        } else {
-          ensureAnnouncementIdsIsMutable();
-          announcementIds_.addAll(other.announcementIds_);
-        }
-        onChanged();
+    public Builder mergeFrom(com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest other) {
+      if (other == com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.getDefaultInstance()) return this;
+      if (other.announcementType_ != 0) {
+        setAnnouncementTypeValue(other.getAnnouncementTypeValue());
       }
       if (other.hasPage()) {
         mergePage(other.getPage());
@@ -461,12 +425,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureAnnouncementIdsIsMutable();
-              announcementIds_.add(s);
+            case 8: {
+              announcementType_ = input.readEnum();
+              bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             case 18: {
               input.readMessage(
                   getPageFieldBuilder().getBuilder(),
@@ -491,113 +454,55 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList announcementIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureAnnouncementIdsIsMutable() {
-      if (!announcementIds_.isModifiable()) {
-        announcementIds_ = new com.google.protobuf.LazyStringArrayList(announcementIds_);
+    private int announcementType_ = 0;
+    /**
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
+     * @return The enum numeric value on the wire for announcementType.
+     */
+    @java.lang.Override public int getAnnouncementTypeValue() {
+      return announcementType_;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
+     * @param value The enum numeric value on the wire for announcementType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAnnouncementTypeValue(int value) {
+      announcementType_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
+     * @return The announcementType.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.AnnouncementType getAnnouncementType() {
+      com.aruna.api.storage.models.v2.AnnouncementType result = com.aruna.api.storage.models.v2.AnnouncementType.forNumber(announcementType_);
+      return result == null ? com.aruna.api.storage.models.v2.AnnouncementType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
+     * @param value The announcementType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAnnouncementType(com.aruna.api.storage.models.v2.AnnouncementType value) {
+      if (value == null) {
+        throw new NullPointerException();
       }
       bitField0_ |= 0x00000001;
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @return A list containing the announcementIds.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getAnnouncementIdsList() {
-      announcementIds_.makeImmutable();
-      return announcementIds_;
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @return The count of announcementIds.
-     */
-    public int getAnnouncementIdsCount() {
-      return announcementIds_.size();
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @param index The index of the element to return.
-     * @return The announcementIds at the given index.
-     */
-    public java.lang.String getAnnouncementIds(int index) {
-      return announcementIds_.get(index);
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the announcementIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getAnnouncementIdsBytes(int index) {
-      return announcementIds_.getByteString(index);
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @param index The index to set the value at.
-     * @param value The announcementIds to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAnnouncementIds(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAnnouncementIdsIsMutable();
-      announcementIds_.set(index, value);
-      bitField0_ |= 0x00000001;
+      announcementType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @param value The announcementIds to add.
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 1 [json_name = "announcementType"];</code>
      * @return This builder for chaining.
      */
-    public Builder addAnnouncementIds(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAnnouncementIdsIsMutable();
-      announcementIds_.add(value);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @param values The announcementIds to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllAnnouncementIds(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureAnnouncementIdsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, announcementIds_);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAnnouncementIds() {
-      announcementIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
-     * @param value The bytes of the announcementIds to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAnnouncementIdsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureAnnouncementIdsIsMutable();
-      announcementIds_.add(value);
-      bitField0_ |= 0x00000001;
+    public Builder clearAnnouncementType() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      announcementType_ = 0;
       onChanged();
       return this;
     }
@@ -735,23 +640,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetAnnouncementsRequest)
+    // @@protoc_insertion_point(builder_scope:aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetAnnouncementsRequest)
-  private static final com.aruna.api.storage.services.v2.GetAnnouncementsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest)
+  private static final com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.GetAnnouncementsRequest();
+    DEFAULT_INSTANCE = new com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest();
   }
 
-  public static com.aruna.api.storage.services.v2.GetAnnouncementsRequest getDefaultInstance() {
+  public static com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetAnnouncementsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<GetAnnouncementsRequest>() {
+  private static final com.google.protobuf.Parser<GetAnnouncementsByTypeRequest>
+      PARSER = new com.google.protobuf.AbstractParser<GetAnnouncementsByTypeRequest>() {
     @java.lang.Override
-    public GetAnnouncementsRequest parsePartialFrom(
+    public GetAnnouncementsByTypeRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -770,17 +675,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetAnnouncementsRequest> parser() {
+  public static com.google.protobuf.Parser<GetAnnouncementsByTypeRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetAnnouncementsRequest> getParserForType() {
+  public com.google.protobuf.Parser<GetAnnouncementsByTypeRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.aruna.api.storage.services.v2.GetAnnouncementsRequest getDefaultInstanceForType() {
+  public com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

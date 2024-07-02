@@ -146,6 +146,68 @@ public final class StorageStatusServiceGrpc {
     return getGetAnnouncementsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest,
+      com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse> getGetAnnouncementsByTypeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAnnouncementsByType",
+      requestType = com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.class,
+      responseType = com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest,
+      com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse> getGetAnnouncementsByTypeMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest, com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse> getGetAnnouncementsByTypeMethod;
+    if ((getGetAnnouncementsByTypeMethod = StorageStatusServiceGrpc.getGetAnnouncementsByTypeMethod) == null) {
+      synchronized (StorageStatusServiceGrpc.class) {
+        if ((getGetAnnouncementsByTypeMethod = StorageStatusServiceGrpc.getGetAnnouncementsByTypeMethod) == null) {
+          StorageStatusServiceGrpc.getGetAnnouncementsByTypeMethod = getGetAnnouncementsByTypeMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest, com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAnnouncementsByType"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StorageStatusServiceMethodDescriptorSupplier("GetAnnouncementsByType"))
+              .build();
+        }
+      }
+    }
+    return getGetAnnouncementsByTypeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetAnnouncementRequest,
+      com.aruna.api.storage.services.v2.GetAnnouncementResponse> getGetAnnouncementMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAnnouncement",
+      requestType = com.aruna.api.storage.services.v2.GetAnnouncementRequest.class,
+      responseType = com.aruna.api.storage.services.v2.GetAnnouncementResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetAnnouncementRequest,
+      com.aruna.api.storage.services.v2.GetAnnouncementResponse> getGetAnnouncementMethod() {
+    io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.GetAnnouncementRequest, com.aruna.api.storage.services.v2.GetAnnouncementResponse> getGetAnnouncementMethod;
+    if ((getGetAnnouncementMethod = StorageStatusServiceGrpc.getGetAnnouncementMethod) == null) {
+      synchronized (StorageStatusServiceGrpc.class) {
+        if ((getGetAnnouncementMethod = StorageStatusServiceGrpc.getGetAnnouncementMethod) == null) {
+          StorageStatusServiceGrpc.getGetAnnouncementMethod = getGetAnnouncementMethod =
+              io.grpc.MethodDescriptor.<com.aruna.api.storage.services.v2.GetAnnouncementRequest, com.aruna.api.storage.services.v2.GetAnnouncementResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAnnouncement"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.GetAnnouncementRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.aruna.api.storage.services.v2.GetAnnouncementResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StorageStatusServiceMethodDescriptorSupplier("GetAnnouncement"))
+              .build();
+        }
+      }
+    }
+    return getGetAnnouncementMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.aruna.api.storage.services.v2.SetAnnouncementsRequest,
       com.aruna.api.storage.services.v2.SetAnnouncementsResponse> getSetAnnouncementsMethod;
 
@@ -271,14 +333,40 @@ public final class StorageStatusServiceGrpc {
 
     /**
      * <pre>
-     * GetAnnouncements
+     * Get Announcements
      * Status: BETA
-     * Query global announcements
+     * Query global announcements optionally filtered by specific ids. 
+     *  - Returns all announcements if no ids are provided
+     *  - Returns only the specific announcements if ids are provided
      * </pre>
      */
     default void getAnnouncements(com.aruna.api.storage.services.v2.GetAnnouncementsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnnouncementsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetAnnouncementsByType
+     * Status: BETA
+     * Query global announcements by type
+     * </pre>
+     */
+    default void getAnnouncementsByType(com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnnouncementsByTypeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a specific Announcement
+     * Status: BETA
+     * Query a specific global announcement by its id
+     * </pre>
+     */
+    default void getAnnouncement(com.aruna.api.storage.services.v2.GetAnnouncementRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnnouncementMethod(), responseObserver);
     }
 
     /**
@@ -377,15 +465,43 @@ public final class StorageStatusServiceGrpc {
 
     /**
      * <pre>
-     * GetAnnouncements
+     * Get Announcements
      * Status: BETA
-     * Query global announcements
+     * Query global announcements optionally filtered by specific ids. 
+     *  - Returns all announcements if no ids are provided
+     *  - Returns only the specific announcements if ids are provided
      * </pre>
      */
     public void getAnnouncements(com.aruna.api.storage.services.v2.GetAnnouncementsRequest request,
         io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnnouncementsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetAnnouncementsByType
+     * Status: BETA
+     * Query global announcements by type
+     * </pre>
+     */
+    public void getAnnouncementsByType(com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAnnouncementsByTypeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a specific Announcement
+     * Status: BETA
+     * Query a specific global announcement by its id
+     * </pre>
+     */
+    public void getAnnouncement(com.aruna.api.storage.services.v2.GetAnnouncementRequest request,
+        io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAnnouncementMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -464,14 +580,40 @@ public final class StorageStatusServiceGrpc {
 
     /**
      * <pre>
-     * GetAnnouncements
+     * Get Announcements
      * Status: BETA
-     * Query global announcements
+     * Query global announcements optionally filtered by specific ids. 
+     *  - Returns all announcements if no ids are provided
+     *  - Returns only the specific announcements if ids are provided
      * </pre>
      */
     public com.aruna.api.storage.services.v2.GetAnnouncementsResponse getAnnouncements(com.aruna.api.storage.services.v2.GetAnnouncementsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnnouncementsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetAnnouncementsByType
+     * Status: BETA
+     * Query global announcements by type
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse getAnnouncementsByType(com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAnnouncementsByTypeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a specific Announcement
+     * Status: BETA
+     * Query a specific global announcement by its id
+     * </pre>
+     */
+    public com.aruna.api.storage.services.v2.GetAnnouncementResponse getAnnouncement(com.aruna.api.storage.services.v2.GetAnnouncementRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAnnouncementMethod(), getCallOptions(), request);
     }
 
     /**
@@ -552,15 +694,43 @@ public final class StorageStatusServiceGrpc {
 
     /**
      * <pre>
-     * GetAnnouncements
+     * Get Announcements
      * Status: BETA
-     * Query global announcements
+     * Query global announcements optionally filtered by specific ids. 
+     *  - Returns all announcements if no ids are provided
+     *  - Returns only the specific announcements if ids are provided
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetAnnouncementsResponse> getAnnouncements(
         com.aruna.api.storage.services.v2.GetAnnouncementsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnnouncementsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetAnnouncementsByType
+     * Status: BETA
+     * Query global announcements by type
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse> getAnnouncementsByType(
+        com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAnnouncementsByTypeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get a specific Announcement
+     * Status: BETA
+     * Query a specific global announcement by its id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.aruna.api.storage.services.v2.GetAnnouncementResponse> getAnnouncement(
+        com.aruna.api.storage.services.v2.GetAnnouncementRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAnnouncementMethod(), getCallOptions()), request);
     }
 
     /**
@@ -581,7 +751,9 @@ public final class StorageStatusServiceGrpc {
   private static final int METHODID_GET_STORAGE_STATUS = 1;
   private static final int METHODID_GET_PUBKEYS = 2;
   private static final int METHODID_GET_ANNOUNCEMENTS = 3;
-  private static final int METHODID_SET_ANNOUNCEMENTS = 4;
+  private static final int METHODID_GET_ANNOUNCEMENTS_BY_TYPE = 4;
+  private static final int METHODID_GET_ANNOUNCEMENT = 5;
+  private static final int METHODID_SET_ANNOUNCEMENTS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -615,6 +787,14 @@ public final class StorageStatusServiceGrpc {
         case METHODID_GET_ANNOUNCEMENTS:
           serviceImpl.getAnnouncements((com.aruna.api.storage.services.v2.GetAnnouncementsRequest) request,
               (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsResponse>) responseObserver);
+          break;
+        case METHODID_GET_ANNOUNCEMENTS_BY_TYPE:
+          serviceImpl.getAnnouncementsByType((com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse>) responseObserver);
+          break;
+        case METHODID_GET_ANNOUNCEMENT:
+          serviceImpl.getAnnouncement((com.aruna.api.storage.services.v2.GetAnnouncementRequest) request,
+              (io.grpc.stub.StreamObserver<com.aruna.api.storage.services.v2.GetAnnouncementResponse>) responseObserver);
           break;
         case METHODID_SET_ANNOUNCEMENTS:
           serviceImpl.setAnnouncements((com.aruna.api.storage.services.v2.SetAnnouncementsRequest) request,
@@ -666,6 +846,20 @@ public final class StorageStatusServiceGrpc {
               com.aruna.api.storage.services.v2.GetAnnouncementsRequest,
               com.aruna.api.storage.services.v2.GetAnnouncementsResponse>(
                 service, METHODID_GET_ANNOUNCEMENTS)))
+        .addMethod(
+          getGetAnnouncementsByTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.GetAnnouncementsByTypeRequest,
+              com.aruna.api.storage.services.v2.GetAnnouncementsByTypeResponse>(
+                service, METHODID_GET_ANNOUNCEMENTS_BY_TYPE)))
+        .addMethod(
+          getGetAnnouncementMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.aruna.api.storage.services.v2.GetAnnouncementRequest,
+              com.aruna.api.storage.services.v2.GetAnnouncementResponse>(
+                service, METHODID_GET_ANNOUNCEMENT)))
         .addMethod(
           getSetAnnouncementsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -725,6 +919,8 @@ public final class StorageStatusServiceGrpc {
               .addMethod(getGetStorageStatusMethod())
               .addMethod(getGetPubkeysMethod())
               .addMethod(getGetAnnouncementsMethod())
+              .addMethod(getGetAnnouncementsByTypeMethod())
+              .addMethod(getGetAnnouncementMethod())
               .addMethod(getSetAnnouncementsMethod())
               .build();
         }

@@ -113,7 +113,7 @@ public enum ResourceVariant
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(12);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(13);
   }
 
   private static final ResourceVariant[] VALUES = values();

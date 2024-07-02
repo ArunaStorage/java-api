@@ -76,6 +76,16 @@ public final class InfoServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_Announcement_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -86,15 +96,25 @@ public final class InfoServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_descriptor;
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_descriptor;
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_fieldAccessorTable;
+      internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetAnnouncementRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aruna_api_storage_services_v2_GetAnnouncementResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -134,48 +154,80 @@ public final class InfoServiceProto {
       "ocationStatusR\016locationStatus\"\023\n\021GetPubk" +
       "eysRequest\"S\n\022GetPubkeysResponse\022=\n\007pubk" +
       "eys\030\001 \003(\0132#.aruna.api.storage.models.v2." +
-      "PubkeyR\007pubkeys\"s\n\014Announcement\022\016\n\002id\030\001 " +
-      "\001(\tR\002id\022\030\n\007content\030\002 \001(\tR\007content\0229\n\ncre" +
-      "ated_at\030\003 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\tcreatedAt\"\031\n\027GetAnnouncementsRequest\"" +
-      "m\n\030GetAnnouncementsResponse\022Q\n\rannouncem" +
-      "ents\030\001 \003(\0132+.aruna.api.storage.services." +
-      "v2.AnnouncementR\rannouncements\"\254\001\n\027SetAn" +
-      "nouncementsRequest\022^\n\024announcements_upse" +
-      "rt\030\001 \003(\0132+.aruna.api.storage.services.v2" +
-      ".AnnouncementR\023announcementsUpsert\0221\n\024an" +
-      "nouncements_delete\030\002 \003(\tR\023announcementsD" +
-      "elete\"m\n\030SetAnnouncementsResponse\022Q\n\rann" +
-      "ouncements\030\001 \003(\0132+.aruna.api.storage.ser" +
-      "vices.v2.AnnouncementR\rannouncements2\271\006\n" +
-      "\024StorageStatusService\022\240\001\n\021GetStorageVers" +
-      "ion\0227.aruna.api.storage.services.v2.GetS" +
-      "torageVersionRequest\0328.aruna.api.storage" +
-      ".services.v2.GetStorageVersionResponse\"\030" +
-      "\202\323\344\223\002\022\022\020/v2/info/version\022\234\001\n\020GetStorageS" +
-      "tatus\0226.aruna.api.storage.services.v2.Ge" +
-      "tStorageStatusRequest\0327.aruna.api.storag" +
-      "e.services.v2.GetStorageStatusResponse\"\027" +
-      "\202\323\344\223\002\021\022\017/v2/info/status\022\213\001\n\nGetPubkeys\0220" +
-      ".aruna.api.storage.services.v2.GetPubkey" +
-      "sRequest\0321.aruna.api.storage.services.v2" +
-      ".GetPubkeysResponse\"\030\202\323\344\223\002\022\022\020/v2/info/pu" +
-      "bkeys\022\243\001\n\020GetAnnouncements\0226.aruna.api.s" +
-      "torage.services.v2.GetAnnouncementsReque" +
-      "st\0327.aruna.api.storage.services.v2.GetAn" +
-      "nouncementsResponse\"\036\202\323\344\223\002\030\022\026/v2/info/an" +
-      "nouncements\022\252\001\n\020SetAnnouncements\0226.aruna" +
-      ".api.storage.services.v2.SetAnnouncement" +
-      "sRequest\0327.aruna.api.storage.services.v2" +
-      ".SetAnnouncementsResponse\"%\202\323\344\223\002\037\"\032/v2/i" +
-      "nfo/announcements/set:\001*B\217\002\n!com.aruna.a" +
-      "pi.storage.services.v2B\020InfoServiceProto" +
-      "P\001Z?github.com/ArunaStorage/go-api/v2/ar" +
-      "una/api/storage/services/v2\242\002\004AASS\252\002\035Aru" +
-      "na.Api.Storage.Services.V2\312\002\035Aruna\\Api\\S" +
-      "torage\\Services\\V2\342\002)Aruna\\Api\\Storage\\S" +
-      "ervices\\V2\\GPBMetadata\352\002!Aruna::Api::Sto" +
-      "rage::Services::V2b\006proto3"
+      "PubkeyR\007pubkeys\"\260\003\n\014Announcement\022\'\n\017anno" +
+      "uncement_id\030\001 \001(\tR\016announcementId\022Z\n\021ann" +
+      "ouncement_type\030\002 \001(\0162-.aruna.api.storage" +
+      ".models.v2.AnnouncementTypeR\020announcemen" +
+      "tType\022\024\n\005title\030\003 \001(\tR\005title\022\026\n\006teaser\030\004 " +
+      "\001(\tR\006teaser\022\033\n\timage_url\030\005 \001(\tR\010imageUrl" +
+      "\022\030\n\007content\030\006 \001(\tR\007content\022\035\n\ncreated_by" +
+      "\030\007 \001(\tR\tcreatedBy\0229\n\ncreated_at\030\010 \001(\0132\032." +
+      "google.protobuf.TimestampR\tcreatedAt\022\037\n\013" +
+      "modified_by\030\t \001(\tR\nmodifiedBy\022;\n\013modifie" +
+      "d_at\030\n \001(\0132\032.google.protobuf.TimestampR\n" +
+      "modifiedAt\"\254\001\n\027SetAnnouncementsRequest\022^" +
+      "\n\024announcements_upsert\030\001 \003(\0132+.aruna.api" +
+      ".storage.services.v2.AnnouncementR\023annou" +
+      "ncementsUpsert\0221\n\024announcements_delete\030\002" +
+      " \003(\tR\023announcementsDelete\"m\n\030SetAnnounce" +
+      "mentsResponse\022Q\n\rannouncements\030\001 \003(\0132+.a" +
+      "runa.api.storage.services.v2.Announcemen" +
+      "tR\rannouncements\"\202\001\n\027GetAnnouncementsReq" +
+      "uest\022)\n\020announcement_ids\030\001 \003(\tR\017announce" +
+      "mentIds\022<\n\004page\030\002 \001(\0132(.aruna.api.storag" +
+      "e.models.v2.PageRequestR\004page\"m\n\030GetAnno" +
+      "uncementsResponse\022Q\n\rannouncements\030\001 \003(\013" +
+      "2+.aruna.api.storage.services.v2.Announc" +
+      "ementR\rannouncements\"\271\001\n\035GetAnnouncement" +
+      "sByTypeRequest\022Z\n\021announcement_type\030\001 \001(" +
+      "\0162-.aruna.api.storage.models.v2.Announce" +
+      "mentTypeR\020announcementType\022<\n\004page\030\002 \001(\013" +
+      "2(.aruna.api.storage.models.v2.PageReque" +
+      "stR\004page\"s\n\036GetAnnouncementsByTypeRespon" +
+      "se\022Q\n\rannouncements\030\001 \003(\0132+.aruna.api.st" +
+      "orage.services.v2.AnnouncementR\rannounce" +
+      "ments\"A\n\026GetAnnouncementRequest\022\'\n\017annou" +
+      "ncement_id\030\001 \001(\tR\016announcementId\"j\n\027GetA" +
+      "nnouncementResponse\022O\n\014announcement\030\001 \001(" +
+      "\0132+.aruna.api.storage.services.v2.Announ" +
+      "cementR\014announcement2\272\t\n\024StorageStatusSe" +
+      "rvice\022\240\001\n\021GetStorageVersion\0227.aruna.api." +
+      "storage.services.v2.GetStorageVersionReq" +
+      "uest\0328.aruna.api.storage.services.v2.Get" +
+      "StorageVersionResponse\"\030\202\323\344\223\002\022\022\020/v2/info" +
+      "/version\022\234\001\n\020GetStorageStatus\0226.aruna.ap" +
+      "i.storage.services.v2.GetStorageStatusRe" +
+      "quest\0327.aruna.api.storage.services.v2.Ge" +
+      "tStorageStatusResponse\"\027\202\323\344\223\002\021\022\017/v2/info" +
+      "/status\022\213\001\n\nGetPubkeys\0220.aruna.api.stora" +
+      "ge.services.v2.GetPubkeysRequest\0321.aruna" +
+      ".api.storage.services.v2.GetPubkeysRespo" +
+      "nse\"\030\202\323\344\223\002\022\022\020/v2/info/pubkeys\022\243\001\n\020GetAnn" +
+      "ouncements\0226.aruna.api.storage.services." +
+      "v2.GetAnnouncementsRequest\0327.aruna.api.s" +
+      "torage.services.v2.GetAnnouncementsRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/v2/info/announcements\022\311\001\n\026" +
+      "GetAnnouncementsByType\022<.aruna.api.stora" +
+      "ge.services.v2.GetAnnouncementsByTypeReq" +
+      "uest\032=.aruna.api.storage.services.v2.Get" +
+      "AnnouncementsByTypeResponse\"2\202\323\344\223\002,\022*/v2" +
+      "/info/announcements/{announcement_type}\022" +
+      "\262\001\n\017GetAnnouncement\0225.aruna.api.storage." +
+      "services.v2.GetAnnouncementRequest\0326.aru" +
+      "na.api.storage.services.v2.GetAnnounceme" +
+      "ntResponse\"0\202\323\344\223\002*\022(/v2/info/announcemen" +
+      "ts/{announcement_id}\022\252\001\n\020SetAnnouncement" +
+      "s\0226.aruna.api.storage.services.v2.SetAnn" +
+      "ouncementsRequest\0327.aruna.api.storage.se" +
+      "rvices.v2.SetAnnouncementsResponse\"%\202\323\344\223" +
+      "\002\037\"\032/v2/info/announcements/set:\001*B\217\002\n!co" +
+      "m.aruna.api.storage.services.v2B\020InfoSer" +
+      "viceProtoP\001Z?github.com/ArunaStorage/go-" +
+      "api/v2/aruna/api/storage/services/v2\242\002\004A" +
+      "ASS\252\002\035Aruna.Api.Storage.Services.V2\312\002\035Ar" +
+      "una\\Api\\Storage\\Services\\V2\342\002)Aruna\\Api\\" +
+      "Storage\\Services\\V2\\GPBMetadata\352\002!Aruna:" +
+      ":Api::Storage::Services::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -255,31 +307,55 @@ public final class InfoServiceProto {
     internal_static_aruna_api_storage_services_v2_Announcement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_Announcement_descriptor,
-        new java.lang.String[] { "Id", "Content", "CreatedAt", });
-    internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_descriptor,
-        new java.lang.String[] { "Announcements", });
+        new java.lang.String[] { "AnnouncementId", "AnnouncementType", "Title", "Teaser", "ImageUrl", "Content", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", });
     internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_SetAnnouncementsRequest_descriptor,
         new java.lang.String[] { "AnnouncementsUpsert", "AnnouncementsDelete", });
     internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_SetAnnouncementsResponse_descriptor,
         new java.lang.String[] { "Announcements", });
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetAnnouncementsRequest_descriptor,
+        new java.lang.String[] { "AnnouncementIds", "Page", });
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetAnnouncementsResponse_descriptor,
+        new java.lang.String[] { "Announcements", });
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeRequest_descriptor,
+        new java.lang.String[] { "AnnouncementType", "Page", });
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetAnnouncementsByTypeResponse_descriptor,
+        new java.lang.String[] { "Announcements", });
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetAnnouncementRequest_descriptor,
+        new java.lang.String[] { "AnnouncementId", });
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_aruna_api_storage_services_v2_GetAnnouncementResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aruna_api_storage_services_v2_GetAnnouncementResponse_descriptor,
+        new java.lang.String[] { "Announcement", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

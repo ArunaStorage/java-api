@@ -99,7 +99,7 @@ public enum EndpointHostVariant
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(2);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(3);
   }
 
   private static final EndpointHostVariant[] VALUES = values();

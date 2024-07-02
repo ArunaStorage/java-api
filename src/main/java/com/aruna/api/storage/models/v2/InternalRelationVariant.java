@@ -144,7 +144,7 @@ public enum InternalRelationVariant
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(6);
+    return com.aruna.api.storage.models.v2.ModelsProto.getDescriptor().getEnumTypes().get(7);
   }
 
   private static final InternalRelationVariant[] VALUES = values();

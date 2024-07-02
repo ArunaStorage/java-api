@@ -5,6 +5,10 @@
 package com.aruna.api.storage.services.v2;
 
 /**
+ * <pre>
+ * -------------------------------------
+ * </pre>
+ *
  * Protobuf type {@code aruna.api.storage.services.v2.Announcement}
  */
 public final class Announcement extends
@@ -17,8 +21,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Announcement() {
-    id_ = "";
+    announcementId_ = "";
+    announcementType_ = 0;
+    title_ = "";
+    teaser_ = "";
+    imageUrl_ = "";
     content_ = "";
+    createdBy_ = "";
+    modifiedBy_ = "";
   }
 
   @java.lang.Override
@@ -42,50 +52,229 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int ID_FIELD_NUMBER = 1;
+  public static final int ANNOUNCEMENT_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
+  private volatile java.lang.Object announcementId_ = "";
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <pre>
+   * Announcement id
+   * </pre>
+   *
+   * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
+   * @return The announcementId.
    */
   @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
+  public java.lang.String getAnnouncementId() {
+    java.lang.Object ref = announcementId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      id_ = s;
+      announcementId_ = s;
       return s;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <pre>
+   * Announcement id
+   * </pre>
+   *
+   * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
+   * @return The bytes for announcementId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
+      getAnnouncementIdBytes() {
+    java.lang.Object ref = announcementId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      id_ = b;
+      announcementId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CONTENT_FIELD_NUMBER = 2;
+  public static final int ANNOUNCEMENT_TYPE_FIELD_NUMBER = 2;
+  private int announcementType_ = 0;
+  /**
+   * <pre>
+   * Announcement type
+   * </pre>
+   *
+   * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+   * @return The enum numeric value on the wire for announcementType.
+   */
+  @java.lang.Override public int getAnnouncementTypeValue() {
+    return announcementType_;
+  }
+  /**
+   * <pre>
+   * Announcement type
+   * </pre>
+   *
+   * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+   * @return The announcementType.
+   */
+  @java.lang.Override public com.aruna.api.storage.models.v2.AnnouncementType getAnnouncementType() {
+    com.aruna.api.storage.models.v2.AnnouncementType result = com.aruna.api.storage.models.v2.AnnouncementType.forNumber(announcementType_);
+    return result == null ? com.aruna.api.storage.models.v2.AnnouncementType.UNRECOGNIZED : result;
+  }
+
+  public static final int TITLE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
+  /**
+   * <pre>
+   * Announcement title
+   * </pre>
+   *
+   * <code>string title = 3 [json_name = "title"];</code>
+   * @return The title.
+   */
+  @java.lang.Override
+  public java.lang.String getTitle() {
+    java.lang.Object ref = title_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      title_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Announcement title
+   * </pre>
+   *
+   * <code>string title = 3 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTitleBytes() {
+    java.lang.Object ref = title_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      title_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEASER_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object teaser_ = "";
+  /**
+   * <pre>
+   * Short announcement summary
+   * </pre>
+   *
+   * <code>string teaser = 4 [json_name = "teaser"];</code>
+   * @return The teaser.
+   */
+  @java.lang.Override
+  public java.lang.String getTeaser() {
+    java.lang.Object ref = teaser_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      teaser_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Short announcement summary
+   * </pre>
+   *
+   * <code>string teaser = 4 [json_name = "teaser"];</code>
+   * @return The bytes for teaser.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTeaserBytes() {
+    java.lang.Object ref = teaser_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      teaser_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int IMAGE_URL_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object imageUrl_ = "";
+  /**
+   * <pre>
+   * URL for announcement preview image
+   * </pre>
+   *
+   * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+   * @return The imageUrl.
+   */
+  @java.lang.Override
+  public java.lang.String getImageUrl() {
+    java.lang.Object ref = imageUrl_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      imageUrl_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * URL for announcement preview image
+   * </pre>
+   *
+   * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+   * @return The bytes for imageUrl.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getImageUrlBytes() {
+    java.lang.Object ref = imageUrl_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      imageUrl_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CONTENT_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object content_ = "";
   /**
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <pre>
+   * Announcement content text
+   * </pre>
+   *
+   * <code>string content = 6 [json_name = "content"];</code>
    * @return The content.
    */
   @java.lang.Override
@@ -102,7 +291,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <pre>
+   * Announcement content text
+   * </pre>
+   *
+   * <code>string content = 6 [json_name = "content"];</code>
    * @return The bytes for content.
    */
   @java.lang.Override
@@ -120,10 +313,61 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CREATED_AT_FIELD_NUMBER = 3;
+  public static final int CREATED_BY_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object createdBy_ = "";
+  /**
+   * <pre>
+   * Initial announcement author
+   * </pre>
+   *
+   * <code>string created_by = 7 [json_name = "createdBy"];</code>
+   * @return The createdBy.
+   */
+  @java.lang.Override
+  public java.lang.String getCreatedBy() {
+    java.lang.Object ref = createdBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      createdBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Initial announcement author
+   * </pre>
+   *
+   * <code>string created_by = 7 [json_name = "createdBy"];</code>
+   * @return The bytes for createdBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCreatedByBytes() {
+    java.lang.Object ref = createdBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      createdBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CREATED_AT_FIELD_NUMBER = 8;
   private com.google.protobuf.Timestamp createdAt_;
   /**
-   * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+   * <pre>
+   * Initial creation timestamp
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
    * @return Whether the createdAt field is set.
    */
   @java.lang.Override
@@ -131,7 +375,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+   * <pre>
+   * Initial creation timestamp
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
    * @return The createdAt.
    */
   @java.lang.Override
@@ -139,11 +387,100 @@ private static final long serialVersionUID = 0L;
     return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
   }
   /**
-   * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+   * <pre>
+   * Initial creation timestamp
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
     return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+  }
+
+  public static final int MODIFIED_BY_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object modifiedBy_ = "";
+  /**
+   * <pre>
+   * Author responsible for the last modification
+   * </pre>
+   *
+   * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+   * @return The modifiedBy.
+   */
+  @java.lang.Override
+  public java.lang.String getModifiedBy() {
+    java.lang.Object ref = modifiedBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      modifiedBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Author responsible for the last modification
+   * </pre>
+   *
+   * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+   * @return The bytes for modifiedBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getModifiedByBytes() {
+    java.lang.Object ref = modifiedBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      modifiedBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MODIFIED_AT_FIELD_NUMBER = 10;
+  private com.google.protobuf.Timestamp modifiedAt_;
+  /**
+   * <pre>
+   * Last modification timestamp
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+   * @return Whether the modifiedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasModifiedAt() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Last modification timestamp
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+   * @return The modifiedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getModifiedAt() {
+    return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+  }
+  /**
+   * <pre>
+   * Last modification timestamp
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
+    return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -160,14 +497,35 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(announcementId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, announcementId_);
+    }
+    if (announcementType_ != com.aruna.api.storage.models.v2.AnnouncementType.ANNOUNCEMENT_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(2, announcementType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, title_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teaser_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, teaser_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, imageUrl_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, content_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, createdBy_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(3, getCreatedAt());
+      output.writeMessage(8, getCreatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modifiedBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, modifiedBy_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(10, getModifiedAt());
     }
     getUnknownFields().writeTo(output);
   }
@@ -178,15 +536,38 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(announcementId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, announcementId_);
+    }
+    if (announcementType_ != com.aruna.api.storage.models.v2.AnnouncementType.ANNOUNCEMENT_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, announcementType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, title_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teaser_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, teaser_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, imageUrl_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, content_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, createdBy_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getCreatedAt());
+        .computeMessageSize(8, getCreatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modifiedBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, modifiedBy_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getModifiedAt());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -203,14 +584,30 @@ private static final long serialVersionUID = 0L;
     }
     com.aruna.api.storage.services.v2.Announcement other = (com.aruna.api.storage.services.v2.Announcement) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
+    if (!getAnnouncementId()
+        .equals(other.getAnnouncementId())) return false;
+    if (announcementType_ != other.announcementType_) return false;
+    if (!getTitle()
+        .equals(other.getTitle())) return false;
+    if (!getTeaser()
+        .equals(other.getTeaser())) return false;
+    if (!getImageUrl()
+        .equals(other.getImageUrl())) return false;
     if (!getContent()
         .equals(other.getContent())) return false;
+    if (!getCreatedBy()
+        .equals(other.getCreatedBy())) return false;
     if (hasCreatedAt() != other.hasCreatedAt()) return false;
     if (hasCreatedAt()) {
       if (!getCreatedAt()
           .equals(other.getCreatedAt())) return false;
+    }
+    if (!getModifiedBy()
+        .equals(other.getModifiedBy())) return false;
+    if (hasModifiedAt() != other.hasModifiedAt()) return false;
+    if (hasModifiedAt()) {
+      if (!getModifiedAt()
+          .equals(other.getModifiedAt())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -223,13 +620,29 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
+    hash = (37 * hash) + ANNOUNCEMENT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getAnnouncementId().hashCode();
+    hash = (37 * hash) + ANNOUNCEMENT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + announcementType_;
+    hash = (37 * hash) + TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getTitle().hashCode();
+    hash = (37 * hash) + TEASER_FIELD_NUMBER;
+    hash = (53 * hash) + getTeaser().hashCode();
+    hash = (37 * hash) + IMAGE_URL_FIELD_NUMBER;
+    hash = (53 * hash) + getImageUrl().hashCode();
     hash = (37 * hash) + CONTENT_FIELD_NUMBER;
     hash = (53 * hash) + getContent().hashCode();
+    hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getCreatedBy().hashCode();
     if (hasCreatedAt()) {
       hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
       hash = (53 * hash) + getCreatedAt().hashCode();
+    }
+    hash = (37 * hash) + MODIFIED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getModifiedBy().hashCode();
+    if (hasModifiedAt()) {
+      hash = (37 * hash) + MODIFIED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getModifiedAt().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -329,6 +742,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * -------------------------------------
+   * </pre>
+   *
    * Protobuf type {@code aruna.api.storage.services.v2.Announcement}
    */
   public static final class Builder extends
@@ -362,18 +779,30 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getCreatedAtFieldBuilder();
+        getModifiedAtFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      id_ = "";
+      announcementId_ = "";
+      announcementType_ = 0;
+      title_ = "";
+      teaser_ = "";
+      imageUrl_ = "";
       content_ = "";
+      createdBy_ = "";
       createdAt_ = null;
       if (createdAtBuilder_ != null) {
         createdAtBuilder_.dispose();
         createdAtBuilder_ = null;
+      }
+      modifiedBy_ = "";
+      modifiedAt_ = null;
+      if (modifiedAtBuilder_ != null) {
+        modifiedAtBuilder_.dispose();
+        modifiedAtBuilder_ = null;
       }
       return this;
     }
@@ -409,17 +838,41 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.aruna.api.storage.services.v2.Announcement result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
+        result.announcementId_ = announcementId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.announcementType_ = announcementType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.teaser_ = teaser_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.imageUrl_ = imageUrl_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.content_ = content_;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.createdBy_ = createdBy_;
+      }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.modifiedBy_ = modifiedBy_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.modifiedAt_ = modifiedAtBuilder_ == null
+            ? modifiedAt_
+            : modifiedAtBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -468,18 +921,49 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.aruna.api.storage.services.v2.Announcement other) {
       if (other == com.aruna.api.storage.services.v2.Announcement.getDefaultInstance()) return this;
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
+      if (!other.getAnnouncementId().isEmpty()) {
+        announcementId_ = other.announcementId_;
         bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.announcementType_ != 0) {
+        setAnnouncementTypeValue(other.getAnnouncementTypeValue());
+      }
+      if (!other.getTitle().isEmpty()) {
+        title_ = other.title_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getTeaser().isEmpty()) {
+        teaser_ = other.teaser_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getImageUrl().isEmpty()) {
+        imageUrl_ = other.imageUrl_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getContent().isEmpty()) {
         content_ = other.content_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (!other.getCreatedBy().isEmpty()) {
+        createdBy_ = other.createdBy_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasCreatedAt()) {
         mergeCreatedAt(other.getCreatedAt());
+      }
+      if (!other.getModifiedBy().isEmpty()) {
+        modifiedBy_ = other.modifiedBy_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (other.hasModifiedAt()) {
+        mergeModifiedAt(other.getModifiedAt());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -508,22 +992,59 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              id_ = input.readStringRequireUtf8();
+              announcementId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              content_ = input.readStringRequireUtf8();
+            case 16: {
+              announcementType_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
-              input.readMessage(
-                  getCreatedAtFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              title_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              teaser_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              imageUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              content_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              createdBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getCreatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              modifiedBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getModifiedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -541,81 +1062,454 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object id_ = "";
+    private java.lang.Object announcementId_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <pre>
+     * Announcement id
+     * </pre>
+     *
+     * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
+     * @return The announcementId.
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getAnnouncementId() {
+      java.lang.Object ref = announcementId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        announcementId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <pre>
+     * Announcement id
+     * </pre>
+     *
+     * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
+     * @return The bytes for announcementId.
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getAnnouncementIdBytes() {
+      java.lang.Object ref = announcementId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        announcementId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
+     * <pre>
+     * Announcement id
+     * </pre>
+     *
+     * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
+     * @param value The announcementId to set.
      * @return This builder for chaining.
      */
-    public Builder setId(
+    public Builder setAnnouncementId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      id_ = value;
+      announcementId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <pre>
+     * Announcement id
+     * </pre>
+     *
+     * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearId() {
-      id_ = getDefaultInstance().getId();
+    public Builder clearAnnouncementId() {
+      announcementId_ = getDefaultInstance().getAnnouncementId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
+     * <pre>
+     * Announcement id
+     * </pre>
+     *
+     * <code>string announcement_id = 1 [json_name = "announcementId"];</code>
+     * @param value The bytes for announcementId to set.
      * @return This builder for chaining.
      */
-    public Builder setIdBytes(
+    public Builder setAnnouncementIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      id_ = value;
+      announcementId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private int announcementType_ = 0;
+    /**
+     * <pre>
+     * Announcement type
+     * </pre>
+     *
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+     * @return The enum numeric value on the wire for announcementType.
+     */
+    @java.lang.Override public int getAnnouncementTypeValue() {
+      return announcementType_;
+    }
+    /**
+     * <pre>
+     * Announcement type
+     * </pre>
+     *
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+     * @param value The enum numeric value on the wire for announcementType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAnnouncementTypeValue(int value) {
+      announcementType_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Announcement type
+     * </pre>
+     *
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+     * @return The announcementType.
+     */
+    @java.lang.Override
+    public com.aruna.api.storage.models.v2.AnnouncementType getAnnouncementType() {
+      com.aruna.api.storage.models.v2.AnnouncementType result = com.aruna.api.storage.models.v2.AnnouncementType.forNumber(announcementType_);
+      return result == null ? com.aruna.api.storage.models.v2.AnnouncementType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Announcement type
+     * </pre>
+     *
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+     * @param value The announcementType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAnnouncementType(com.aruna.api.storage.models.v2.AnnouncementType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      announcementType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Announcement type
+     * </pre>
+     *
+     * <code>.aruna.api.storage.models.v2.AnnouncementType announcement_type = 2 [json_name = "announcementType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAnnouncementType() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      announcementType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * Announcement title
+     * </pre>
+     *
+     * <code>string title = 3 [json_name = "title"];</code>
+     * @return The title.
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Announcement title
+     * </pre>
+     *
+     * <code>string title = 3 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Announcement title
+     * </pre>
+     *
+     * <code>string title = 3 [json_name = "title"];</code>
+     * @param value The title to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTitle(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      title_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Announcement title
+     * </pre>
+     *
+     * <code>string title = 3 [json_name = "title"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTitle() {
+      title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Announcement title
+     * </pre>
+     *
+     * <code>string title = 3 [json_name = "title"];</code>
+     * @param value The bytes for title to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      title_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object teaser_ = "";
+    /**
+     * <pre>
+     * Short announcement summary
+     * </pre>
+     *
+     * <code>string teaser = 4 [json_name = "teaser"];</code>
+     * @return The teaser.
+     */
+    public java.lang.String getTeaser() {
+      java.lang.Object ref = teaser_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        teaser_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Short announcement summary
+     * </pre>
+     *
+     * <code>string teaser = 4 [json_name = "teaser"];</code>
+     * @return The bytes for teaser.
+     */
+    public com.google.protobuf.ByteString
+        getTeaserBytes() {
+      java.lang.Object ref = teaser_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        teaser_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Short announcement summary
+     * </pre>
+     *
+     * <code>string teaser = 4 [json_name = "teaser"];</code>
+     * @param value The teaser to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTeaser(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      teaser_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Short announcement summary
+     * </pre>
+     *
+     * <code>string teaser = 4 [json_name = "teaser"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTeaser() {
+      teaser_ = getDefaultInstance().getTeaser();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Short announcement summary
+     * </pre>
+     *
+     * <code>string teaser = 4 [json_name = "teaser"];</code>
+     * @param value The bytes for teaser to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTeaserBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      teaser_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object imageUrl_ = "";
+    /**
+     * <pre>
+     * URL for announcement preview image
+     * </pre>
+     *
+     * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+     * @return The imageUrl.
+     */
+    public java.lang.String getImageUrl() {
+      java.lang.Object ref = imageUrl_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imageUrl_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * URL for announcement preview image
+     * </pre>
+     *
+     * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+     * @return The bytes for imageUrl.
+     */
+    public com.google.protobuf.ByteString
+        getImageUrlBytes() {
+      java.lang.Object ref = imageUrl_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imageUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * URL for announcement preview image
+     * </pre>
+     *
+     * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+     * @param value The imageUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageUrl(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      imageUrl_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * URL for announcement preview image
+     * </pre>
+     *
+     * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImageUrl() {
+      imageUrl_ = getDefaultInstance().getImageUrl();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * URL for announcement preview image
+     * </pre>
+     *
+     * <code>string image_url = 5 [json_name = "imageUrl"];</code>
+     * @param value The bytes for imageUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageUrlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      imageUrl_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
 
     private java.lang.Object content_ = "";
     /**
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <pre>
+     * Announcement content text
+     * </pre>
+     *
+     * <code>string content = 6 [json_name = "content"];</code>
      * @return The content.
      */
     public java.lang.String getContent() {
@@ -631,7 +1525,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <pre>
+     * Announcement content text
+     * </pre>
+     *
+     * <code>string content = 6 [json_name = "content"];</code>
      * @return The bytes for content.
      */
     public com.google.protobuf.ByteString
@@ -648,7 +1546,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <pre>
+     * Announcement content text
+     * </pre>
+     *
+     * <code>string content = 6 [json_name = "content"];</code>
      * @param value The content to set.
      * @return This builder for chaining.
      */
@@ -656,22 +1558,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       content_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <pre>
+     * Announcement content text
+     * </pre>
+     *
+     * <code>string content = 6 [json_name = "content"];</code>
      * @return This builder for chaining.
      */
     public Builder clearContent() {
       content_ = getDefaultInstance().getContent();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <pre>
+     * Announcement content text
+     * </pre>
+     *
+     * <code>string content = 6 [json_name = "content"];</code>
      * @param value The bytes for content to set.
      * @return This builder for chaining.
      */
@@ -680,7 +1590,99 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       content_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object createdBy_ = "";
+    /**
+     * <pre>
+     * Initial announcement author
+     * </pre>
+     *
+     * <code>string created_by = 7 [json_name = "createdBy"];</code>
+     * @return The createdBy.
+     */
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Initial announcement author
+     * </pre>
+     *
+     * <code>string created_by = 7 [json_name = "createdBy"];</code>
+     * @return The bytes for createdBy.
+     */
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Initial announcement author
+     * </pre>
+     *
+     * <code>string created_by = 7 [json_name = "createdBy"];</code>
+     * @param value The createdBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      createdBy_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Initial announcement author
+     * </pre>
+     *
+     * <code>string created_by = 7 [json_name = "createdBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreatedBy() {
+      createdBy_ = getDefaultInstance().getCreatedBy();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Initial announcement author
+     * </pre>
+     *
+     * <code>string created_by = 7 [json_name = "createdBy"];</code>
+     * @param value The bytes for createdBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      createdBy_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -689,14 +1691,22 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
@@ -707,7 +1717,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
       if (createdAtBuilder_ == null) {
@@ -718,12 +1732,16 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     public Builder setCreatedAt(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -732,16 +1750,20 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
       if (createdAtBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           createdAt_ != null &&
           createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedAtBuilder().mergeFrom(value);
@@ -752,16 +1774,20 @@ private static final long serialVersionUID = 0L;
         createdAtBuilder_.mergeFrom(value);
       }
       if (createdAt_ != null) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     public Builder clearCreatedAt() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000080);
       createdAt_ = null;
       if (createdAtBuilder_ != null) {
         createdAtBuilder_.dispose();
@@ -771,15 +1797,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getCreatedAtFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       if (createdAtBuilder_ != null) {
@@ -790,7 +1824,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt"];</code>
+     * <pre>
+     * Initial creation timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -804,6 +1842,255 @@ private static final long serialVersionUID = 0L;
         createdAt_ = null;
       }
       return createdAtBuilder_;
+    }
+
+    private java.lang.Object modifiedBy_ = "";
+    /**
+     * <pre>
+     * Author responsible for the last modification
+     * </pre>
+     *
+     * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+     * @return The modifiedBy.
+     */
+    public java.lang.String getModifiedBy() {
+      java.lang.Object ref = modifiedBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modifiedBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Author responsible for the last modification
+     * </pre>
+     *
+     * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+     * @return The bytes for modifiedBy.
+     */
+    public com.google.protobuf.ByteString
+        getModifiedByBytes() {
+      java.lang.Object ref = modifiedBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modifiedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Author responsible for the last modification
+     * </pre>
+     *
+     * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+     * @param value The modifiedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModifiedBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      modifiedBy_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Author responsible for the last modification
+     * </pre>
+     *
+     * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModifiedBy() {
+      modifiedBy_ = getDefaultInstance().getModifiedBy();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Author responsible for the last modification
+     * </pre>
+     *
+     * <code>string modified_by = 9 [json_name = "modifiedBy"];</code>
+     * @param value The bytes for modifiedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModifiedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      modifiedBy_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp modifiedAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifiedAtBuilder_;
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     * @return Whether the modifiedAt field is set.
+     */
+    public boolean hasModifiedAt() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     * @return The modifiedAt.
+     */
+    public com.google.protobuf.Timestamp getModifiedAt() {
+      if (modifiedAtBuilder_ == null) {
+        return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+      } else {
+        return modifiedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    public Builder setModifiedAt(com.google.protobuf.Timestamp value) {
+      if (modifiedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        modifiedAt_ = value;
+      } else {
+        modifiedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    public Builder setModifiedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (modifiedAtBuilder_ == null) {
+        modifiedAt_ = builderForValue.build();
+      } else {
+        modifiedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    public Builder mergeModifiedAt(com.google.protobuf.Timestamp value) {
+      if (modifiedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          modifiedAt_ != null &&
+          modifiedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getModifiedAtBuilder().mergeFrom(value);
+        } else {
+          modifiedAt_ = value;
+        }
+      } else {
+        modifiedAtBuilder_.mergeFrom(value);
+      }
+      if (modifiedAt_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    public Builder clearModifiedAt() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      modifiedAt_ = null;
+      if (modifiedAtBuilder_ != null) {
+        modifiedAtBuilder_.dispose();
+        modifiedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getModifiedAtBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getModifiedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
+      if (modifiedAtBuilder_ != null) {
+        return modifiedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return modifiedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * Last modification timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 10 [json_name = "modifiedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getModifiedAtFieldBuilder() {
+      if (modifiedAtBuilder_ == null) {
+        modifiedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getModifiedAt(),
+                getParentForChildren(),
+                isClean());
+        modifiedAt_ = null;
+      }
+      return modifiedAtBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

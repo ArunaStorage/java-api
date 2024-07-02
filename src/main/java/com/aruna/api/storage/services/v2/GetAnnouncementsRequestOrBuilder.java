@@ -7,4 +7,44 @@ package com.aruna.api.storage.services.v2;
 public interface GetAnnouncementsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:aruna.api.storage.services.v2.GetAnnouncementsRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
+   * @return A list containing the announcementIds.
+   */
+  java.util.List<java.lang.String>
+      getAnnouncementIdsList();
+  /**
+   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
+   * @return The count of announcementIds.
+   */
+  int getAnnouncementIdsCount();
+  /**
+   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
+   * @param index The index of the element to return.
+   * @return The announcementIds at the given index.
+   */
+  java.lang.String getAnnouncementIds(int index);
+  /**
+   * <code>repeated string announcement_ids = 1 [json_name = "announcementIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the announcementIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getAnnouncementIdsBytes(int index);
+
+  /**
+   * <code>.aruna.api.storage.models.v2.PageRequest page = 2 [json_name = "page"];</code>
+   * @return Whether the page field is set.
+   */
+  boolean hasPage();
+  /**
+   * <code>.aruna.api.storage.models.v2.PageRequest page = 2 [json_name = "page"];</code>
+   * @return The page.
+   */
+  com.aruna.api.storage.models.v2.PageRequest getPage();
+  /**
+   * <code>.aruna.api.storage.models.v2.PageRequest page = 2 [json_name = "page"];</code>
+   */
+  com.aruna.api.storage.models.v2.PageRequestOrBuilder getPageOrBuilder();
 }
