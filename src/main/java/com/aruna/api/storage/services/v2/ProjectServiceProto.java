@@ -282,7 +282,7 @@ public final class ProjectServiceProto {
       "s\\V2\342\002)Aruna\\Api\\Storage\\Services\\V2\\GPB" +
       "Metadata\352\002!Aruna::Api::Storage::Services" +
       "::V2\222A\314\001\022,\n#Aruna Object Storage (AOS) R" +
-      "EST API2\0052.0.0*\001\0022\020application/json:\020app" +
+      "EST API2\0052.0.1*\001\0022\020application/json:\020app" +
       "lication/jsonZ`\n^\n\rAccessKeyAuth\022M\010\002\0228Au" +
       "thentication token, prefixed by Bearer: " +
       "Bearer <token>\032\rAuthorization \002b\023\n\021\n\rAcc" +

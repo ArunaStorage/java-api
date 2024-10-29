@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetUploadURLResponse() {
     url_ = "";
+    uploadId_ = "";
   }
 
   @java.lang.Override
@@ -87,6 +88,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int UPLOAD_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uploadId_ = "";
+  /**
+   * <pre>
+   * Upload Id (can be ignored with single part uploads)
+   * </pre>
+   *
+   * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+   * @return The uploadId.
+   */
+  @java.lang.Override
+  public java.lang.String getUploadId() {
+    java.lang.Object ref = uploadId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      uploadId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Upload Id (can be ignored with single part uploads)
+   * </pre>
+   *
+   * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+   * @return The bytes for uploadId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUploadIdBytes() {
+    java.lang.Object ref = uploadId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      uploadId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -104,6 +152,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uploadId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uploadId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -115,6 +166,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uploadId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uploadId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -133,6 +187,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getUrl()
         .equals(other.getUrl())) return false;
+    if (!getUploadId()
+        .equals(other.getUploadId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -146,6 +202,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + URL_FIELD_NUMBER;
     hash = (53 * hash) + getUrl().hashCode();
+    hash = (37 * hash) + UPLOAD_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUploadId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -278,6 +336,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       url_ = "";
+      uploadId_ = "";
       return this;
     }
 
@@ -313,6 +372,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.url_ = url_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.uploadId_ = uploadId_;
       }
     }
 
@@ -365,6 +427,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getUploadId().isEmpty()) {
+        uploadId_ = other.uploadId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -396,6 +463,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              uploadId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -501,6 +573,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       url_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object uploadId_ = "";
+    /**
+     * <pre>
+     * Upload Id (can be ignored with single part uploads)
+     * </pre>
+     *
+     * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+     * @return The uploadId.
+     */
+    public java.lang.String getUploadId() {
+      java.lang.Object ref = uploadId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uploadId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Upload Id (can be ignored with single part uploads)
+     * </pre>
+     *
+     * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+     * @return The bytes for uploadId.
+     */
+    public com.google.protobuf.ByteString
+        getUploadIdBytes() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Upload Id (can be ignored with single part uploads)
+     * </pre>
+     *
+     * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+     * @param value The uploadId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUploadId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      uploadId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Upload Id (can be ignored with single part uploads)
+     * </pre>
+     *
+     * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUploadId() {
+      uploadId_ = getDefaultInstance().getUploadId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Upload Id (can be ignored with single part uploads)
+     * </pre>
+     *
+     * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+     * @param value The bytes for uploadId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUploadIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      uploadId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

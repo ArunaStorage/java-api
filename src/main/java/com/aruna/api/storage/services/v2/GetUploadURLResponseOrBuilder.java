@@ -27,4 +27,24 @@ public interface GetUploadURLResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUrlBytes();
+
+  /**
+   * <pre>
+   * Upload Id (can be ignored with single part uploads)
+   * </pre>
+   *
+   * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+   * @return The uploadId.
+   */
+  java.lang.String getUploadId();
+  /**
+   * <pre>
+   * Upload Id (can be ignored with single part uploads)
+   * </pre>
+   *
+   * <code>string upload_id = 2 [json_name = "uploadId"];</code>
+   * @return The bytes for uploadId.
+   */
+  com.google.protobuf.ByteString
+      getUploadIdBytes();
 }

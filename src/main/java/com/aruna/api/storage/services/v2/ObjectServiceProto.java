@@ -196,144 +196,146 @@ public final class ObjectServiceProto {
       "s\030\r \003(\0132#.aruna.api.storage.models.v2.Au" +
       "thorR\007authorsB\010\n\006parent\"S\n\024CreateObjectR" +
       "esponse\022;\n\006object\030\001 \001(\0132#.aruna.api.stor" +
-      "age.models.v2.ObjectR\006object\"q\n\023GetUploa" +
-      "dURLRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId" +
-      "\022\034\n\tmultipart\030\002 \001(\010R\tmultipart\022\037\n\013part_n" +
-      "umber\030\003 \001(\005R\npartNumber\"(\n\024GetUploadURLR" +
-      "esponse\022\020\n\003url\030\001 \001(\tR\003url\"4\n\025GetDownload" +
-      "URLRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"" +
-      "*\n\026GetDownloadURLResponse\022\020\n\003url\030\001 \001(\tR\003" +
-      "url\"7\n\rCompletedPart\022\022\n\004etag\030\001 \001(\tR\004etag" +
-      "\022\022\n\004part\030\002 \001(\003R\004part\"\354\001\n\032FinishObjectSta" +
-      "gingRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId" +
-      "\022\037\n\013content_len\030\002 \001(\003R\ncontentLen\0229\n\006has" +
-      "hes\030\003 \003(\0132!.aruna.api.storage.models.v2." +
-      "HashR\006hashes\022U\n\017completed_parts\030\004 \003(\0132,." +
-      "aruna.api.storage.services.v2.CompletedP" +
-      "artR\016completedParts\"Z\n\033FinishObjectStagi" +
-      "ngResponse\022;\n\006object\030\001 \001(\0132#.aruna.api.s" +
-      "torage.models.v2.ObjectR\006object\"\333\005\n\023Upda" +
-      "teObjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010obje" +
-      "ctId\022\027\n\004name\030\002 \001(\tH\001R\004name\210\001\001\022%\n\013descrip" +
-      "tion\030\003 \001(\tH\002R\013description\210\001\001\022K\n\016add_key_" +
-      "values\030\004 \003(\0132%.aruna.api.storage.models." +
-      "v2.KeyValueR\014addKeyValues\022Q\n\021remove_key_" +
-      "values\030\005 \003(\0132%.aruna.api.storage.models." +
-      "v2.KeyValueR\017removeKeyValues\022E\n\ndata_cla" +
-      "ss\030\007 \001(\0162&.aruna.api.storage.models.v2.D" +
-      "ataClassR\tdataClass\022\037\n\nproject_id\030\010 \001(\tH" +
-      "\000R\tprojectId\022%\n\rcollection_id\030\t \001(\tH\000R\014c" +
-      "ollectionId\022\037\n\ndataset_id\030\n \001(\tH\000R\tdatas" +
-      "etId\0229\n\006hashes\030\014 \003(\0132!.aruna.api.storage" +
-      ".models.v2.HashR\006hashes\022%\n\016force_revisio" +
-      "n\030\r \001(\010R\rforceRevision\0225\n\024metadata_licen" +
-      "se_tag\030\016 \001(\tH\003R\022metadataLicenseTag\210\001\001\022-\n" +
-      "\020data_license_tag\030\017 \001(\tH\004R\016dataLicenseTa" +
-      "g\210\001\001B\010\n\006parentB\007\n\005_nameB\016\n\014_descriptionB" +
-      "\027\n\025_metadata_license_tagB\023\n\021_data_licens" +
-      "e_tag\"v\n\024UpdateObjectResponse\022;\n\006object\030" +
+      "age.models.v2.ObjectR\006object\"\216\001\n\023GetUplo" +
+      "adURLRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectI" +
+      "d\022\034\n\tmultipart\030\002 \001(\010R\tmultipart\022\037\n\013part_" +
+      "number\030\003 \001(\005R\npartNumber\022\033\n\tupload_id\030\004 " +
+      "\001(\tR\010uploadId\"E\n\024GetUploadURLResponse\022\020\n" +
+      "\003url\030\001 \001(\tR\003url\022\033\n\tupload_id\030\002 \001(\tR\010uplo" +
+      "adId\"4\n\025GetDownloadURLRequest\022\033\n\tobject_" +
+      "id\030\001 \001(\tR\010objectId\"*\n\026GetDownloadURLResp" +
+      "onse\022\020\n\003url\030\001 \001(\tR\003url\"7\n\rCompletedPart\022" +
+      "\022\n\004etag\030\001 \001(\tR\004etag\022\022\n\004part\030\002 \001(\003R\004part\"" +
+      "\354\001\n\032FinishObjectStagingRequest\022\033\n\tobject" +
+      "_id\030\001 \001(\tR\010objectId\022\037\n\013content_len\030\002 \001(\003" +
+      "R\ncontentLen\0229\n\006hashes\030\003 \003(\0132!.aruna.api" +
+      ".storage.models.v2.HashR\006hashes\022U\n\017compl" +
+      "eted_parts\030\004 \003(\0132,.aruna.api.storage.ser" +
+      "vices.v2.CompletedPartR\016completedParts\"Z" +
+      "\n\033FinishObjectStagingResponse\022;\n\006object\030" +
       "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
-      "ctR\006object\022!\n\014new_revision\030\002 \001(\010R\013newRev" +
-      "ision\"\244\001\n\022CloneObjectRequest\022\033\n\tobject_i" +
-      "d\030\001 \001(\tR\010objectId\022\037\n\nproject_id\030\002 \001(\tH\000R" +
-      "\tprojectId\022%\n\rcollection_id\030\003 \001(\tH\000R\014col" +
-      "lectionId\022\037\n\ndataset_id\030\004 \001(\tH\000R\tdataset" +
-      "IdB\010\n\006parent\"R\n\023CloneObjectResponse\022;\n\006o" +
-      "bject\030\001 \001(\0132#.aruna.api.storage.models.v" +
-      "2.ObjectR\006object\"Y\n\023DeleteObjectRequest\022" +
-      "\033\n\tobject_id\030\001 \001(\tR\010objectId\022%\n\016with_rev" +
-      "isions\030\002 \001(\010R\rwithRevisions\"\026\n\024DeleteObj" +
-      "ectResponse\"/\n\020GetObjectRequest\022\033\n\tobjec" +
-      "t_id\030\001 \001(\tR\010objectId\"P\n\021GetObjectRespons" +
-      "e\022;\n\006object\030\001 \001(\0132#.aruna.api.storage.mo" +
-      "dels.v2.ObjectR\006object\"2\n\021GetObjectsRequ" +
-      "est\022\035\n\nobject_ids\030\001 \003(\tR\tobjectIds\"S\n\022Ge" +
-      "tObjectsResponse\022=\n\007objects\030\001 \003(\0132#.arun" +
-      "a.api.storage.models.v2.ObjectR\007objects\"" +
-      "8\n\031GetObjectRevisionsRequest\022\033\n\tobject_i" +
-      "d\030\002 \001(\tR\010objectId\"[\n\032GetObjectRevisionsR" +
-      "esponse\022=\n\007objects\030\001 \003(\0132#.aruna.api.sto" +
-      "rage.models.v2.ObjectR\007objects\"=\n\036GetLat" +
-      "estObjectRevisionRequest\022\033\n\tobject_id\030\001 " +
-      "\001(\tR\010objectId\"^\n\037GetLatestObjectRevision" +
+      "ctR\006object\"\333\005\n\023UpdateObjectRequest\022\033\n\tob" +
+      "ject_id\030\001 \001(\tR\010objectId\022\027\n\004name\030\002 \001(\tH\001R" +
+      "\004name\210\001\001\022%\n\013description\030\003 \001(\tH\002R\013descrip" +
+      "tion\210\001\001\022K\n\016add_key_values\030\004 \003(\0132%.aruna." +
+      "api.storage.models.v2.KeyValueR\014addKeyVa" +
+      "lues\022Q\n\021remove_key_values\030\005 \003(\0132%.aruna." +
+      "api.storage.models.v2.KeyValueR\017removeKe" +
+      "yValues\022E\n\ndata_class\030\007 \001(\0162&.aruna.api." +
+      "storage.models.v2.DataClassR\tdataClass\022\037" +
+      "\n\nproject_id\030\010 \001(\tH\000R\tprojectId\022%\n\rcolle" +
+      "ction_id\030\t \001(\tH\000R\014collectionId\022\037\n\ndatase" +
+      "t_id\030\n \001(\tH\000R\tdatasetId\0229\n\006hashes\030\014 \003(\0132" +
+      "!.aruna.api.storage.models.v2.HashR\006hash" +
+      "es\022%\n\016force_revision\030\r \001(\010R\rforceRevisio" +
+      "n\0225\n\024metadata_license_tag\030\016 \001(\tH\003R\022metad" +
+      "ataLicenseTag\210\001\001\022-\n\020data_license_tag\030\017 \001" +
+      "(\tH\004R\016dataLicenseTag\210\001\001B\010\n\006parentB\007\n\005_na" +
+      "meB\016\n\014_descriptionB\027\n\025_metadata_license_" +
+      "tagB\023\n\021_data_license_tag\"v\n\024UpdateObject" +
       "Response\022;\n\006object\030\001 \001(\0132#.aruna.api.sto" +
-      "rage.models.v2.ObjectR\006object\"]\n\031GetObje" +
-      "ctEndpointsRequest\022#\n\rcollection_id\030\001 \001(" +
-      "\tR\014collectionId\022\033\n\tobject_id\030\002 \001(\tR\010obje" +
-      "ctId\"M\n\030UpdateObjectTitleRequest\022\033\n\tobje" +
-      "ct_id\030\001 \001(\tR\010objectId\022\024\n\005title\030\002 \001(\tR\005ti" +
-      "tle\"X\n\031UpdateObjectTitleResponse\022;\n\006obje" +
-      "ct\030\001 \001(\0132#.aruna.api.storage.models.v2.O" +
-      "bjectR\006object\"\313\001\n\032UpdateObjectAuthorsReq" +
-      "uest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022D\n\013add" +
-      "_authors\030\002 \003(\0132#.aruna.api.storage.model" +
-      "s.v2.AuthorR\naddAuthors\022J\n\016remove_author" +
-      "s\030\003 \003(\0132#.aruna.api.storage.models.v2.Au" +
-      "thorR\rremoveAuthors\"Z\n\033UpdateObjectAutho" +
-      "rsResponse\022;\n\006object\030\001 \001(\0132#.aruna.api.s" +
-      "torage.models.v2.ObjectR\006object\"p\n\026SetOb" +
-      "jectHashesRequest\022\033\n\tobject_id\030\001 \001(\tR\010ob" +
-      "jectId\0229\n\006hashes\030\002 \003(\0132!.aruna.api.stora" +
-      "ge.models.v2.HashR\006hashes\"V\n\027SetObjectHa" +
-      "shesResponse\022;\n\006object\030\001 \001(\0132#.aruna.api" +
-      ".storage.models.v2.ObjectR\006object2\303\017\n\rOb" +
-      "jectService\022\217\001\n\014CreateObject\0222.aruna.api" +
-      ".storage.services.v2.CreateObjectRequest" +
-      "\0323.aruna.api.storage.services.v2.CreateO" +
-      "bjectResponse\"\026\202\323\344\223\002\020\"\013/v2/objects:\001*\022\237\001" +
-      "\n\014GetUploadURL\0222.aruna.api.storage.servi" +
-      "ces.v2.GetUploadURLRequest\0323.aruna.api.s" +
-      "torage.services.v2.GetUploadURLResponse\"" +
-      "&\202\323\344\223\002 \022\036/v2/objects/{object_id}/upload\022" +
-      "\247\001\n\016GetDownloadURL\0224.aruna.api.storage.s" +
-      "ervices.v2.GetDownloadURLRequest\0325.aruna" +
-      ".api.storage.services.v2.GetDownloadURLR" +
-      "esponse\"(\202\323\344\223\002\"\022 /v2/objects/{object_id}" +
-      "/download\022\267\001\n\023FinishObjectStaging\0229.arun" +
-      "a.api.storage.services.v2.FinishObjectSt" +
-      "agingRequest\032:.aruna.api.storage.service" +
-      "s.v2.FinishObjectStagingResponse\")\202\323\344\223\002#" +
-      "2\036/v2/objects/{object_id}/finish:\001*\022\233\001\n\014" +
-      "UpdateObject\0222.aruna.api.storage.service" +
-      "s.v2.UpdateObjectRequest\0323.aruna.api.sto" +
-      "rage.services.v2.UpdateObjectResponse\"\"\202" +
-      "\323\344\223\002\034\"\027/v2/objects/{object_id}:\001*\022\226\001\n\013Cl" +
-      "oneObject\0221.aruna.api.storage.services.v" +
-      "2.CloneObjectRequest\0322.aruna.api.storage" +
-      ".services.v2.CloneObjectResponse\" \202\323\344\223\002\032" +
-      "\"\025/v2/{object_id}/clone:\001*\022\233\001\n\014DeleteObj" +
-      "ect\0222.aruna.api.storage.services.v2.Dele" +
-      "teObjectRequest\0323.aruna.api.storage.serv" +
-      "ices.v2.DeleteObjectResponse\"\"\202\323\344\223\002\034*\027/v" +
-      "2/objects/{object_id}:\001*\022\217\001\n\tGetObject\022/" +
-      ".aruna.api.storage.services.v2.GetObject" +
-      "Request\0320.aruna.api.storage.services.v2." +
-      "GetObjectResponse\"\037\202\323\344\223\002\031\022\027/v2/objects/{" +
-      "object_id}\022\206\001\n\nGetObjects\0220.aruna.api.st" +
-      "orage.services.v2.GetObjectsRequest\0321.ar" +
-      "una.api.storage.services.v2.GetObjectsRe" +
-      "sponse\"\023\202\323\344\223\002\r\022\013/v2/objects\022\260\001\n\021UpdateOb" +
-      "jectTitle\0227.aruna.api.storage.services.v" +
-      "2.UpdateObjectTitleRequest\0328.aruna.api.s" +
-      "torage.services.v2.UpdateObjectTitleResp" +
-      "onse\"(\202\323\344\223\002\"\"\035/v2/objects/{object_id}/ti" +
-      "tle:\001*\022\270\001\n\023UpdateObjectAuthors\0229.aruna.a" +
-      "pi.storage.services.v2.UpdateObjectAutho" +
-      "rsRequest\032:.aruna.api.storage.services.v" +
-      "2.UpdateObjectAuthorsResponse\"*\202\323\344\223\002$\"\037/" +
-      "v2/objects/{object_id}/authors:\001*\022\253\001\n\017Se" +
-      "tObjectHashes\0225.aruna.api.storage.servic" +
-      "es.v2.SetObjectHashesRequest\0326.aruna.api" +
-      ".storage.services.v2.SetObjectHashesResp" +
-      "onse\")\202\323\344\223\002#\"\036/v2/objects/{object_id}/ha" +
-      "shes:\001*\032\016\372\322\344\223\002\010\022\006SERVERB\221\002\n!com.aruna.ap" +
-      "i.storage.services.v2B\022ObjectServiceProt" +
-      "oP\001Z?github.com/ArunaStorage/go-api/v2/a" +
-      "runa/api/storage/services/v2\242\002\004AASS\252\002\035Ar" +
-      "una.Api.Storage.Services.V2\312\002\035Aruna\\Api\\" +
-      "Storage\\Services\\V2\342\002)Aruna\\Api\\Storage\\" +
-      "Services\\V2\\GPBMetadata\352\002!Aruna::Api::St" +
-      "orage::Services::V2b\006proto3"
+      "rage.models.v2.ObjectR\006object\022!\n\014new_rev" +
+      "ision\030\002 \001(\010R\013newRevision\"\244\001\n\022CloneObject" +
+      "Request\022\033\n\tobject_id\030\001 \001(\tR\010objectId\022\037\n\n" +
+      "project_id\030\002 \001(\tH\000R\tprojectId\022%\n\rcollect" +
+      "ion_id\030\003 \001(\tH\000R\014collectionId\022\037\n\ndataset_" +
+      "id\030\004 \001(\tH\000R\tdatasetIdB\010\n\006parent\"R\n\023Clone" +
+      "ObjectResponse\022;\n\006object\030\001 \001(\0132#.aruna.a" +
+      "pi.storage.models.v2.ObjectR\006object\"Y\n\023D" +
+      "eleteObjectRequest\022\033\n\tobject_id\030\001 \001(\tR\010o" +
+      "bjectId\022%\n\016with_revisions\030\002 \001(\010R\rwithRev" +
+      "isions\"\026\n\024DeleteObjectResponse\"/\n\020GetObj" +
+      "ectRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"" +
+      "P\n\021GetObjectResponse\022;\n\006object\030\001 \001(\0132#.a" +
+      "runa.api.storage.models.v2.ObjectR\006objec" +
+      "t\"2\n\021GetObjectsRequest\022\035\n\nobject_ids\030\001 \003" +
+      "(\tR\tobjectIds\"S\n\022GetObjectsResponse\022=\n\007o" +
+      "bjects\030\001 \003(\0132#.aruna.api.storage.models." +
+      "v2.ObjectR\007objects\"8\n\031GetObjectRevisions" +
+      "Request\022\033\n\tobject_id\030\002 \001(\tR\010objectId\"[\n\032" +
+      "GetObjectRevisionsResponse\022=\n\007objects\030\001 " +
+      "\003(\0132#.aruna.api.storage.models.v2.Object" +
+      "R\007objects\"=\n\036GetLatestObjectRevisionRequ" +
+      "est\022\033\n\tobject_id\030\001 \001(\tR\010objectId\"^\n\037GetL" +
+      "atestObjectRevisionResponse\022;\n\006object\030\001 " +
+      "\001(\0132#.aruna.api.storage.models.v2.Object" +
+      "R\006object\"]\n\031GetObjectEndpointsRequest\022#\n" +
+      "\rcollection_id\030\001 \001(\tR\014collectionId\022\033\n\tob" +
+      "ject_id\030\002 \001(\tR\010objectId\"M\n\030UpdateObjectT" +
+      "itleRequest\022\033\n\tobject_id\030\001 \001(\tR\010objectId" +
+      "\022\024\n\005title\030\002 \001(\tR\005title\"X\n\031UpdateObjectTi" +
+      "tleResponse\022;\n\006object\030\001 \001(\0132#.aruna.api." +
+      "storage.models.v2.ObjectR\006object\"\313\001\n\032Upd" +
+      "ateObjectAuthorsRequest\022\033\n\tobject_id\030\001 \001" +
+      "(\tR\010objectId\022D\n\013add_authors\030\002 \003(\0132#.arun" +
+      "a.api.storage.models.v2.AuthorR\naddAutho" +
+      "rs\022J\n\016remove_authors\030\003 \003(\0132#.aruna.api.s" +
+      "torage.models.v2.AuthorR\rremoveAuthors\"Z" +
+      "\n\033UpdateObjectAuthorsResponse\022;\n\006object\030" +
+      "\001 \001(\0132#.aruna.api.storage.models.v2.Obje" +
+      "ctR\006object\"p\n\026SetObjectHashesRequest\022\033\n\t" +
+      "object_id\030\001 \001(\tR\010objectId\0229\n\006hashes\030\002 \003(" +
+      "\0132!.aruna.api.storage.models.v2.HashR\006ha" +
+      "shes\"V\n\027SetObjectHashesResponse\022;\n\006objec" +
+      "t\030\001 \001(\0132#.aruna.api.storage.models.v2.Ob" +
+      "jectR\006object2\303\017\n\rObjectService\022\217\001\n\014Creat" +
+      "eObject\0222.aruna.api.storage.services.v2." +
+      "CreateObjectRequest\0323.aruna.api.storage." +
+      "services.v2.CreateObjectResponse\"\026\202\323\344\223\002\020" +
+      "\"\013/v2/objects:\001*\022\237\001\n\014GetUploadURL\0222.arun" +
+      "a.api.storage.services.v2.GetUploadURLRe" +
+      "quest\0323.aruna.api.storage.services.v2.Ge" +
+      "tUploadURLResponse\"&\202\323\344\223\002 \022\036/v2/objects/" +
+      "{object_id}/upload\022\247\001\n\016GetDownloadURL\0224." +
+      "aruna.api.storage.services.v2.GetDownloa" +
+      "dURLRequest\0325.aruna.api.storage.services" +
+      ".v2.GetDownloadURLResponse\"(\202\323\344\223\002\"\022 /v2/" +
+      "objects/{object_id}/download\022\267\001\n\023FinishO" +
+      "bjectStaging\0229.aruna.api.storage.service" +
+      "s.v2.FinishObjectStagingRequest\032:.aruna." +
+      "api.storage.services.v2.FinishObjectStag" +
+      "ingResponse\")\202\323\344\223\002#2\036/v2/objects/{object" +
+      "_id}/finish:\001*\022\233\001\n\014UpdateObject\0222.aruna." +
+      "api.storage.services.v2.UpdateObjectRequ" +
+      "est\0323.aruna.api.storage.services.v2.Upda" +
+      "teObjectResponse\"\"\202\323\344\223\002\034\"\027/v2/objects/{o" +
+      "bject_id}:\001*\022\226\001\n\013CloneObject\0221.aruna.api" +
+      ".storage.services.v2.CloneObjectRequest\032" +
+      "2.aruna.api.storage.services.v2.CloneObj" +
+      "ectResponse\" \202\323\344\223\002\032\"\025/v2/{object_id}/clo" +
+      "ne:\001*\022\233\001\n\014DeleteObject\0222.aruna.api.stora" +
+      "ge.services.v2.DeleteObjectRequest\0323.aru" +
+      "na.api.storage.services.v2.DeleteObjectR" +
+      "esponse\"\"\202\323\344\223\002\034*\027/v2/objects/{object_id}" +
+      ":\001*\022\217\001\n\tGetObject\022/.aruna.api.storage.se" +
+      "rvices.v2.GetObjectRequest\0320.aruna.api.s" +
+      "torage.services.v2.GetObjectResponse\"\037\202\323" +
+      "\344\223\002\031\022\027/v2/objects/{object_id}\022\206\001\n\nGetObj" +
+      "ects\0220.aruna.api.storage.services.v2.Get" +
+      "ObjectsRequest\0321.aruna.api.storage.servi" +
+      "ces.v2.GetObjectsResponse\"\023\202\323\344\223\002\r\022\013/v2/o" +
+      "bjects\022\260\001\n\021UpdateObjectTitle\0227.aruna.api" +
+      ".storage.services.v2.UpdateObjectTitleRe" +
+      "quest\0328.aruna.api.storage.services.v2.Up" +
+      "dateObjectTitleResponse\"(\202\323\344\223\002\"\"\035/v2/obj" +
+      "ects/{object_id}/title:\001*\022\270\001\n\023UpdateObje" +
+      "ctAuthors\0229.aruna.api.storage.services.v" +
+      "2.UpdateObjectAuthorsRequest\032:.aruna.api" +
+      ".storage.services.v2.UpdateObjectAuthors" +
+      "Response\"*\202\323\344\223\002$\"\037/v2/objects/{object_id" +
+      "}/authors:\001*\022\253\001\n\017SetObjectHashes\0225.aruna" +
+      ".api.storage.services.v2.SetObjectHashes" +
+      "Request\0326.aruna.api.storage.services.v2." +
+      "SetObjectHashesResponse\")\202\323\344\223\002#\"\036/v2/obj" +
+      "ects/{object_id}/hashes:\001*\032\016\372\322\344\223\002\010\022\006SERV" +
+      "ERB\221\002\n!com.aruna.api.storage.services.v2" +
+      "B\022ObjectServiceProtoP\001Z?github.com/Aruna" +
+      "Storage/go-api/v2/aruna/api/storage/serv" +
+      "ices/v2\242\002\004AASS\252\002\035Aruna.Api.Storage.Servi" +
+      "ces.V2\312\002\035Aruna\\Api\\Storage\\Services\\V2\342\002" +
+      ")Aruna\\Api\\Storage\\Services\\V2\\GPBMetada" +
+      "ta\352\002!Aruna::Api::Storage::Services::V2b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -359,13 +361,13 @@ public final class ObjectServiceProto {
     internal_static_aruna_api_storage_services_v2_GetUploadURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetUploadURLRequest_descriptor,
-        new java.lang.String[] { "ObjectId", "Multipart", "PartNumber", });
+        new java.lang.String[] { "ObjectId", "Multipart", "PartNumber", "UploadId", });
     internal_static_aruna_api_storage_services_v2_GetUploadURLResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_aruna_api_storage_services_v2_GetUploadURLResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aruna_api_storage_services_v2_GetUploadURLResponse_descriptor,
-        new java.lang.String[] { "Url", });
+        new java.lang.String[] { "Url", "UploadId", });
     internal_static_aruna_api_storage_services_v2_GetDownloadURLRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_aruna_api_storage_services_v2_GetDownloadURLRequest_fieldAccessorTable = new

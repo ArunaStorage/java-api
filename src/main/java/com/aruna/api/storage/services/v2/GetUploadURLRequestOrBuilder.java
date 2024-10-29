@@ -47,4 +47,24 @@ public interface GetUploadURLRequestOrBuilder extends
    * @return The partNumber.
    */
   int getPartNumber();
+
+  /**
+   * <pre>
+   * (optional) if part_number &gt; 1 and multipart = true
+   * </pre>
+   *
+   * <code>string upload_id = 4 [json_name = "uploadId"];</code>
+   * @return The uploadId.
+   */
+  java.lang.String getUploadId();
+  /**
+   * <pre>
+   * (optional) if part_number &gt; 1 and multipart = true
+   * </pre>
+   *
+   * <code>string upload_id = 4 [json_name = "uploadId"];</code>
+   * @return The bytes for uploadId.
+   */
+  com.google.protobuf.ByteString
+      getUploadIdBytes();
 }
